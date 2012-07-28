@@ -24,6 +24,7 @@ body_fooccubus
 	[BP:VAG:vagina:vaginas][EMBEDDED][APERTURE][CON:LB][CATEGORY:VAGINA]
 		[DEFAULT_RELSIZE:50]
 
+// Utile pour certains monstres peut etre
 [BODY:FEMALE_6TIT]
 	[BP:1UBRB:1st right breast:right breasts][RIGHT][CON:UB][CATEGORY:BOOBS]
 		[DEFAULT_RELSIZE:50]
@@ -94,6 +95,10 @@ body_fooccubus
 	// TODO Decider du futur, le garder en NSFW ou le supprimer
 	[BP:ANUS:anus:anuses:STP][SMALL][EMBEDDED][APERTURE][CON:LB][CATEGORY:ANUS]
 		[DEFAULT_RELSIZE:10]
+	[BP:UBRB:right buttock:right buttocks][RIGHT][CON:LB][CATEGORY:ACHEEK]
+		[DEFAULT_RELSIZE:50]
+	[BP:UBLB:left buttock:left buttocks][LEFT][CON:LB][CATEGORY:ACHEEK]
+		[DEFAULT_RELSIZE:50]
 
 		// TODO C'est quoi ? garder ?
 	[BP:APPEND:appendix:appendixes:STP][CONTYPE:LOWERBODY][INTERNAL][SMALL][CATEGORY:SPLEEN]
