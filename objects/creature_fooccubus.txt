@@ -19,6 +19,7 @@ creature_fooccubus
 	[POPULATION_NUMBER:50:100]
 	[CLUSTER_NUMBER:1:4]
 	[MILKABLE]
+	[BODY:HUMANOID_HOOF:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE]
 	
 	// Personality
 	[PERSONALITY:IMMODERATION:50:75:100]
@@ -27,9 +28,8 @@ creature_fooccubus
 	[PERSONALITY:LIBERALISM:50:75:100]
 	
 	// Body and description
-	[BODY:HUMANOID_HOOF:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE]
 	[CASTE:FEMALE]
-		[DESCRIPTION:A female lust demon of artistic and hedonistic interests.]
+		[DESCRIPTION:A female lust demon of hedonistic interests.]
 		[FEMALE]
 		[POP_RATIO:90]
 		[MULTIPLE_LITTER_RARE]
@@ -42,15 +42,14 @@ creature_fooccubus
 		[BABYNAME:succuus baby:succubus babies]
 		[CHILDNAME:succubus girl:succubus girls]
 	[CASTE:MALE]
-		[DESCRIPTION:A male lust demon of artistic and hedonistic interests.]
+		[DESCRIPTION:A male lust demon of hedonistic interests.]
 		[MALE]
 		[POP_RATIO:10]
 		[CASTE_NAME:incubus:incubi:incubus]
 		[CASTE_TILE:'i'][COLOR:3:0:0]
 		[PREFSTRING:manly chest]
-		-[PREFSTRING:stinging dickslap]-
 		[PREFSTRING:paralyzing lick]
-		[BODY:MALEGRASP:NEUTRAL]
+		[BODY:MALE:NEUTRAL]
 		[BABYNAME:incubus baby:incubus babies]
 		[CHILDNAME:incubus boy:incubus boys]
 		
