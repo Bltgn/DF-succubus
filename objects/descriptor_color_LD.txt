@@ -58,14 +58,6 @@ descriptor_color_LD
 	[NAME:chunky]
 	[RGB:255:0:0]
 
-[COLOR:ASS_HAIRY]
-	[NAME:hairy]
-	[RGB:255:0:0]
-
-[COLOR:ASS_SLAMMIN]
-	[NAME:slammin']
-	[RGB:255:0:0]
-
 [COLOR:ASS_CALIWHATNOW]
 	[NAME:callipygian]
 	[RGB:255:0:0]
