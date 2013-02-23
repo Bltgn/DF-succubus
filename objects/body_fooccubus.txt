@@ -2,29 +2,18 @@ body_fooccubus
 
 [OBJECT:BODY]
 
-[BODY:MALE]
-	[BP:DI:penis:penises][CON:LB][CATEGORY:DICK]
-		[DEFAULT_RELSIZE:100]
-
 [BODY:FEMALE]
-	// L'embed peut etre
-	[BP:UBRB:right breast:right breasts][RIGHT][CON:UB][CATEGORY:BOOBS]
+	[BP:UBRB:right breast:right breasts][EMBEDDED][RIGHT][CON:UB][CATEGORY:BOOBS]
 		[DEFAULT_RELSIZE:200]
-	[BP:UBLB:left breast:left breasts][LEFT][CON:UB][CATEGORY:BOOBS]
+	[BP:UBLB:left breast:left breasts][EMBEDDED][LEFT][CON:UB][CATEGORY:BOOBS]
 		[DEFAULT_RELSIZE:200]
-	[BP:RBRN:right nipple:right nipples][RIGHT][SMALL][CON:UBRB][CATEGORY:TEET]
-		[DEFAULT_RELSIZE:10]
-	[BP:LBLN:left nipple:left nipples][LEFT][SMALL][CON:UBLB][CATEGORY:TEET]
-		[DEFAULT_RELSIZE:10]
-	[BP:VAG:vagina:vaginas][EMBEDDED][APERTURE][CON:LB][CATEGORY:VAGINA]
-		[DEFAULT_RELSIZE:50]
 
 [BODY:NEUTRAL]
 	[BP:TONG:tongue:tongues:STP][CON:MOUTH][CATEGORY:TONGUE][SMALL][EMBEDDED]
 		[DEFAULT_RELSIZE:6]
-	[BP:UBRB:right buttock:right buttocks][RIGHT][CON:LB][CATEGORY:ACHEEK]
+	[BP:UBRB:right buttock:right buttocks][EMBEDDED][RIGHT][CON:LB][CATEGORY:ACHEEK]
 		[DEFAULT_RELSIZE:50]
-	[BP:UBLB:left buttock:left buttocks][LEFT][CON:LB][CATEGORY:ACHEEK]
+	[BP:UBLB:left buttock:left buttocks][EMBEDDED][LEFT][CON:LB][CATEGORY:ACHEEK]
 		[DEFAULT_RELSIZE:50]
 
 [BODY:LOTS_OF_TENTACLES]
