@@ -28,7 +28,7 @@ creature_fooccubus
 	[PERSONALITY:LIBERALISM:50:75:100]
 	
 	// Skills
-	[SKILL_LEARN_RATE:MECHANICS:50]
+	[SKILL_LEARN_RATE:MECHANICS:25]
 	
 	// Body and description
 	[CASTE:FEMALE]
