@@ -1531,7 +1531,7 @@ entity_default
 	[GEM_SHAPE:POINT_CUT_GEM]
 
 	/* fooccubus
-	[COMMON_DOMESTIC_PULL]
+	[COMMON_DOMESTIC_PACK]
 	*/
 
 [ENTITY:SKULKING]
