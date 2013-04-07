@@ -37,11 +37,6 @@ TODO : Fix the 'nothing' notification
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:IMP_FIRE]
 				[SYN_CLASS:NONE]
-			[SYN_CLASS:\COMMAND] // autosyndrome start
-				[SYN_CLASS:\LOCATION]
-				[SYN_CLASS:\UNIT_ID]
-				[SYN_CLASS:tweak]
-				[SYN_CLASS:makeown]
 
 [INTERACTION:ACTIVATE_TENTACLE_MONSTER] // Resurrection + True transfrom
 	[I_SOURCE:CREATURE_ACTION]
@@ -58,8 +53,3 @@ TODO : Fix the 'nothing' notification
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:TENTACLE_MONSTER]
 				[SYN_CLASS:MALE]
-			[SYN_CLASS:\COMMAND] // autosyndrome start
-				[SYN_CLASS:\LOCATION]
-				[SYN_CLASS:\UNIT_ID]
-				[SYN_CLASS:tweak]
-				[SYN_CLASS:makeown]
