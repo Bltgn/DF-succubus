@@ -423,6 +423,7 @@ creature_fooccubus
 	[CASTE_NAME:tentacle monster:tentacle monsters:tentacle monster]
 	[CREATURE_TILE:'&'][COLOR:2:0:0]
 	[GLOWTILE:'"'][GLOWCOLOR:2:0:1]
+	[MALE]
 	[PETVALUE:200]
 	[POPULATION_NUMBER:5:20]
 	[LARGE_ROAMING]
@@ -485,7 +486,7 @@ creature_fooccubus
 	[ATTACK:BITE:BODYPART:BY_CATEGORY:MOUTH]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:lick:licks]
-		[ATTACK_CONTACT_PERC:100]
+		[ATTACK_CONTACT_PERC:50]
 		[ATTACK_PENETRATION_PERC:100]
 		[ATTACK_FLAG_EDGE]
 		[ATTACK_PRIORITY:SECOND]
@@ -502,7 +503,6 @@ creature_fooccubus
 	[SELECT_MATERIAL:ALL]
 		[MULTIPLY_VALUE:5]
 	[CASTE:MALE]
-		[MALE]
 
 [CREATURE:GIANT_TENTACLE_MONSTER]
 	[DESCRIPTION:A giant terrifying demon with many tentacles and corrupt intentions.]
@@ -520,8 +520,9 @@ creature_fooccubus
 	[EVIL]
 	[PET_EXOTIC]
 	[TRAINABLE]
+	[MALE]
 	[PREFSTRING:corrupt intentions]
-	[CHILD:6][CHILDNAME:tentacle baby:tentacle babies]
+	[CHILD:6][CHILDNAME:young tentacle demon:young tentacle demons]
 	[BODY:BASIC_1PARTBODY:BASIC_HEAD:STANCE_TENTACLES:ARM_TENTACLES:FACE_TENTACLES:TAIL_TENTACLE:LOTS_OF_TENTACLES:2EYESTALKS:2LUNGS:HEART:GUTS:ORGANS:SPINE:BRAIN:MOUTH]
 	[BODYGLOSS:MAW]
 	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
@@ -588,7 +589,6 @@ creature_fooccubus
 	[SELECT_MATERIAL:ALL]
 		[MULTIPLY_VALUE:5]
 	[CASTE:MALE]
-		[MALE]
 
 [CREATURE:SUMMONED_SOUL] // summoning dummy
 	[CREATURE_CLASS:ALL_CREATURES]
@@ -622,29 +622,28 @@ creature_fooccubus
 	[IMMOBILE]
 	[SPEED:2900]
 	[BODY_SIZE:0:0:50000]
-	[MAXAGE:1:1]
 	[ALL_ACTIVE]
 	[NO_DIZZINESS]
 	[CASTE:GENERIC]
 
 @todo the body and more flavor stuff
-@todo reproduction
+@todo asexual reproduction
+@test Are they brought by caravans ?
 [CREATURE:SOUL_WISP] // creature used in summons
 	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people. A summoner typically use their energy to summon monsters.]
 	[NAME:soul wisp:soul wisps:soul wisp]
 	[CASTE_NAME:soul wisp:soul wisps:soul wisp]
+	[CHILDNAME:immature soul wisp:immature soul wisps]
 	[CREATURE_TILE:'o'][COLOR:7:0:1]
 	[GLOWTILE:'`'][GLOWCOLOR:7:0:1]
-	[CHILD:1][BABY:1
+	[CHILD:1][BABY:0]
 	[BIOME:SUBTERRANEAN_CHASM]
 	[UNDERGROUND_DEPTH:1:3]
-	[LARGE_ROAMING][DIFFICULTY:2]
-	[POPULATION_NUMBER:5:10] // @todo what part of this make that thing selectable during embark !?
-	[BUILDINGDESTROYER:2]
-	[LIKES_FIGHTING]
-	[LARGE_PREDATOR]
-	[CAN_LEARN][SLOW_LEARNER]
+	[LARGE_ROAMING]
+	[POPULATION_NUMBER:10:20]
 	[EVIL]
+	[PET]
+	[PETVALUE:40]
 	[NO_EAT]
 	[NO_DRINK]
 	[NO_SLEEP]
