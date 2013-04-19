@@ -609,7 +609,6 @@ creature_fooccubus
 [CREATURE:SOUL_WISP] // creature used in summons
 	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people. A summoner typically use their energy to summon monsters.]
 	[NAME:soul wisp:soul wisps:soul wisp]
-	[CASTE_NAME:soul wisp:soul wisps:soul wisp]
 	[CHILDNAME:immature soul wisp:immature soul wisps]
 	[CREATURE_TILE:'o'][COLOR:7:0:1]
 	[GLOWTILE:'`'][GLOWCOLOR:7:0:1]
@@ -653,8 +652,10 @@ creature_fooccubus
 	[MAXAGE:10:15]
 	[CASTE:MALE]
 		[MALE]
+		[CASTE_NAME:soul wisp (male):soul wisps (male):soul wisp (male)]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[CASTE_NAME:soul wisp (female):soul wisps (female):soul wisp (female)]
 
 [CREATURE:SINFUL_SERPENT] // summon, egs + vermin hunting
 	[DESCRIPTION:A medium-sized snake that lives underground. It displays more intelligence in comparison to their surface cousins.]
@@ -740,7 +741,6 @@ creature_fooccubus
 			[TL_COLOR_MODIFIER:BLACK:1]
 				[TLCM_NOUN:eyes:PLURAL]
 
-@todo mane on males
 [CREATURE:HELLHOUND] // summon, dogs
 	[CREATURE_CLASS:ALL_CREATURES]
 	[DESCRIPTION:A medium sized vicious dog. Courageous trainers can teach it various tasks.]
