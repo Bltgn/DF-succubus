@@ -613,6 +613,7 @@ creature_fooccubus
 	[CREATURE_TILE:'o'][COLOR:7:0:1]
 	[GLOWTILE:'`'][GLOWCOLOR:7:0:1]
 	[CHILD:1][BABY:0]
+	[CASTE_NAME:soul wisp:soul wisps:soul wisp]
 	[BIOME:SUBTERRANEAN_CHASM]
 	[UNDERGROUND_DEPTH:1:3]
 	[LARGE_ROAMING]
@@ -652,10 +653,8 @@ creature_fooccubus
 	[MAXAGE:10:15]
 	[CASTE:MALE]
 		[MALE]
-		[CASTE_NAME:soul wisp (male):soul wisps (male):soul wisp (male)]
 	[CASTE:FEMALE]
 		[FEMALE]
-		[CASTE_NAME:soul wisp (female):soul wisps (female):soul wisp (female)]
 
 [CREATURE:SINFUL_SERPENT] // summon, egs + vermin hunting
 	[DESCRIPTION:A medium-sized snake that lives underground. It displays more intelligence in comparison to their surface cousins.]
