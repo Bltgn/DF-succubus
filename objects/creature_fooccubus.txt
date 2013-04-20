@@ -54,8 +54,9 @@ creature_fooccubus
 		[CASTE_PROFESSION_NAME:MACEMAN:macesuccubus:macesuccubi]
 		[CASTE_PROFESSION_NAME:PIKEMAN:pikesuccubus:pikesuccubi]
 		[CASTE_PROFESSION_NAME:BOWMAN:bowsuccubus:bowsuccubi]
-		[CASTE_PROFESSION_NAME:MASTER_CROSSBOWMAN:Elite Marksuccubus:Elite Marksuccubi]
-		[CASTE_PROFESSION_NAME:MASTER_BOWMAN:Elite Bowsuccubus:Elite Bowsuccubi]
+		[CASTE_PROFESSION_NAME:MASTER_CROSSBOWMAN:elite marksuccubus:elite marksuccubi]
+		[CASTE_PROFESSION_NAME:MASTER_BOWMAN:elite Bowsuccubus:elite Bowsuccubi]
+		[CASTE_PROFESSION_NAME:ALCHEMIST:witch:witches]
 	[CASTE:MALE]
 		[DESCRIPTION:A male lust demon of hedonistic interests.]
 		[MALE]
@@ -78,6 +79,7 @@ creature_fooccubus
 		[CASTE_PROFESSION_NAME:BOWMAN:bowincubus:bowincubi]
 		[CASTE_PROFESSION_NAME:MASTER_CROSSBOWMAN:Elite Marksincubus:Elite Marksincubi]
 		[CASTE_PROFESSION_NAME:MASTER_BOWMAN:Elite Bowincubus:Elite Bowincubi]
+		[CASTE_PROFESSION_NAME:ALCHEMIST:warlock:warlocks]
 		
 	// Body plan
 	[SELECT_CASTE:ALL]
@@ -621,6 +623,7 @@ creature_fooccubus
 	[UNDERGROUND_DEPTH:1:3]
 	[LARGE_ROAMING]
 	[POPULATION_NUMBER:10:20]
+	[EXTRAVISION]
 	[EVIL]
 	[PET]
 	[PETVALUE:40]
