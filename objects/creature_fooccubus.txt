@@ -406,6 +406,7 @@ creature_fooccubus
 			[ATTACK_FLAG_EDGE]
 			[ATTACK_PRIORITY:SECOND]
 
+@todo buff
 [CREATURE:TENTACLE_MONSTER] // Summon, war + buffing bodyguard
 	[DESCRIPTION:A terrifying creature with many tentacles and corrupt intentions. It has glowing green eyes.]
 	[NAME:tentacle monster:tentacle monsters:tentacle monster]
@@ -493,6 +494,7 @@ creature_fooccubus
 		[MULTIPLY_VALUE:5]
 	[CASTE:MALE]
 
+@todo debuff
 [CREATURE:GIANT_TENTACLE_MONSTER]
 	[DESCRIPTION:A giant terrifying demon with many tentacles and corrupt intentions.]
 	[NAME:tentacle demon:tentacle demons:tentacle demon]
@@ -611,6 +613,8 @@ creature_fooccubus
 	[NO_DIZZINESS]
 	[CASTE:GENERIC]
 
+@todo color description, to help determining gender
+@todo sound
 [CREATURE:SOUL_WISP] // creature used in summons
 	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people. A summoner typically use their energy to summon monsters.]
 	[NAME:soul wisp:soul wisps:soul wisp]
@@ -624,6 +628,7 @@ creature_fooccubus
 	[LARGE_ROAMING]
 	[POPULATION_NUMBER:10:20]
 	[EXTRAVISION]
+	[NOT_BUTCHERABLE]
 	[EVIL]
 	[PET]
 	[PETVALUE:40]
@@ -661,10 +666,11 @@ creature_fooccubus
 	[CASTE:FEMALE]
 		[FEMALE]
 
-[CREATURE:SINFUL_SERPENT] // summon, egs + vermin hunting
-	[DESCRIPTION:A medium-sized snake that lives underground. It displays more intelligence in comparison to their surface cousins.]
-	[NAME:sinful serpent:sinful serpents:sinful serpent]
-	[CASTE_NAME:sinful serpent:sinful serpents:sinful serpent]
+@todo sound whisper
+[CREATURE:NAHASH] // summon, egs + vermin hunting
+	[DESCRIPTION:A medium-sized snake that displays more intelligence then its mundane cousins. Its can whisper simple sentences, tempting creatures to adopt and protect it.]
+	[NAME:nahash:nahashes:nahash]
+	[CASTE_NAME:nahash:nahashes:nahash]
 	[CREATURE_TILE:'s'][COLOR:2:0:1]
 	[CREATURE_CLASS:GENERAL_POISON]
 	[PETVALUE:200]
@@ -677,14 +683,16 @@ creature_fooccubus
 	[HUNTS_VERMIN]
 	[ADOPTS_OWNER]
 	[EVIL]
+	[CAN_SPEAK]
+	[LISP]
 	[NATURAL_SKILL:DODGING:2]
 	[NATURAL_SKILL:WRESTLING:2]
-	[BIOME:SUBTERRANEAN_CHASM]
-	[UNDERGROUND_DEPTH:2:3]
+	[BIOME:GRASSLAND_TEMPERATE]
+	[BIOME:SAVANNA_TEMPERATE]
 	[POPULATION_NUMBER:10:25]
 	[CLUSTER_NUMBER:1:6]
 	[PREFSTRING:constrictions]
-	[PREFSTRING:undulating movements]
+	[PREFSTRING:strange whispers]
 	[BODY:BASIC_1PARTBODY:BASIC_HEAD:TAIL:2EYES:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:GENERIC_TEETH_WITH_FANGS:RIBCAGE]
 	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
 		[REMOVE_MATERIAL:SKIN]
@@ -746,6 +754,7 @@ creature_fooccubus
 			[TL_COLOR_MODIFIER:BLACK:1]
 				[TLCM_NOUN:eyes:PLURAL]
 
+@todo bark
 [CREATURE:HELLHOUND] // summon, dogs
 	[CREATURE_CLASS:ALL_CREATURES]
 	[DESCRIPTION:A medium sized vicious dog. Courageous trainers can teach it various tasks.]
@@ -1054,9 +1063,9 @@ creature_fooccubus
 		[MELTING_POINT:10000]
 	[CASTE:GENERIC]
 
-@todo factorise with soul wisps to give them the same body
+@todo sounds cry pain
 [CREATURE:PAIN_ELEMENTAL] // summon, explosive suicidal bomber
-	[DESCRIPTION:A floating creature that has been fed the thoughts of the suffering. It is very unstable and will explode if someone frighten it.]
+	[DESCRIPTION:A soul wisp that has been fed the thoughts of the suffering. It is very unstable and will explode if someone frighten it.]
 	[NAME:pain elemental:pain elementals:pain elemental]
 	[CASTE_NAME:pain elemental:pain elementals:pain elemental]
 	[CHILDNAME:immature pain elemental:immature pain elementals]
