@@ -9,7 +9,6 @@ entity_fooccubus
 	[ADVENTURE_TIER:4]
 	[CIV_CONTROLLABLE]
 	[INDIV_CONTROLLABLE]
-	// ITEM_THIEF Causes caravan to be stolen (???)
 	[BABYSNATCHER]
 	[AMBUSHER]
 	[WANDERER]

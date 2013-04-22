@@ -406,7 +406,6 @@ creature_fooccubus
 			[ATTACK_FLAG_EDGE]
 			[ATTACK_PRIORITY:SECOND]
 
-@todo buff
 [CREATURE:TENTACLE_MONSTER] // Summon, war + buffing bodyguard
 	[DESCRIPTION:A terrifying creature with many tentacles and corrupt intentions. It has glowing green eyes.]
 	[NAME:tentacle monster:tentacle monsters:tentacle monster]
@@ -492,9 +491,18 @@ creature_fooccubus
 	[SWIMS_INNATE][SWIM_SPEED:500]
 	[SELECT_MATERIAL:ALL]
 		[MULTIPLY_VALUE:5]
+	[CAN_DO_INTERACTION:TENTACLE_CLEAN]
+		[CDI:ADV_NAME:Clean a friendly creature]
+		[CDI:USAGE_HINT:CLEAN_FRIEND]
+		[CDI:BP_REQUIRED:BY_CATEGORY:TENTACLE]
+		[CDI:TARGET:A:TOUCHABLE]
+		[CDI:TARGET_RANGE:A:1]
+		[CDI:MAX_TARGET_NUMBER:A:1]
+		[CDI:WAIT_PERIOD:300]
+		[CDI:VERB:caress:caress]
+		[CDI:TARGET_VERB:gasp:gasps]
 	[CASTE:MALE]
 
-@todo debuff
 [CREATURE:GIANT_TENTACLE_MONSTER]
 	[DESCRIPTION:A giant terrifying demon with many tentacles and corrupt intentions.]
 	[NAME:tentacle demon:tentacle demons:tentacle demon]
@@ -613,8 +621,6 @@ creature_fooccubus
 	[NO_DIZZINESS]
 	[CASTE:GENERIC]
 
-@todo color description, to help determining gender
-@todo sound
 [CREATURE:SOUL_WISP] // creature used in summons
 	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people. A summoner typically use their energy to summon monsters.]
 	[NAME:soul wisp:soul wisps:soul wisp]
@@ -661,14 +667,16 @@ creature_fooccubus
 	[SPEED:800]
 	[BODY_SIZE:0:0:500]
 	[MAXAGE:10:15]
+	[SET_TL_GROUP:BY_CATEGORY:ALL:JELLY]
+		[TL_COLOR_MODIFIER:WHITE:1:GREY:1]
+		[TLCM_NOUN:light:SINGULAR]
 	[CASTE:MALE]
 		[MALE]
 	[CASTE:FEMALE]
 		[FEMALE]
 
-@todo sound whisper
 [CREATURE:NAHASH] // summon, egs + vermin hunting
-	[DESCRIPTION:A medium-sized snake that displays more intelligence then its mundane cousins. Its can whisper simple sentences, tempting creatures to adopt and protect it.]
+	[DESCRIPTION:A medium-sized snake that displays more intelligence then its mundane cousins. Its can whisper simple sentences, tempting other creatures into protecting it.]
 	[NAME:nahash:nahashes:nahash]
 	[CASTE_NAME:nahash:nahashes:nahash]
 	[CREATURE_TILE:'s'][COLOR:2:0:1]
@@ -693,6 +701,8 @@ creature_fooccubus
 	[CLUSTER_NUMBER:1:6]
 	[PREFSTRING:constrictions]
 	[PREFSTRING:strange whispers]
+	[SOUND:ALERT:20:200:VOCALIZATION:hiss:hisses:a whistle]
+	[SOUND:PEACEFUL_INTERMITTENT:10:100:VOCALIZATION:whisper:whisper:a strange whisper]
 	[BODY:BASIC_1PARTBODY:BASIC_HEAD:TAIL:2EYES:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:GENERIC_TEETH_WITH_FANGS:RIBCAGE]
 	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
 		[REMOVE_MATERIAL:SKIN]
@@ -754,7 +764,6 @@ creature_fooccubus
 			[TL_COLOR_MODIFIER:BLACK:1]
 				[TLCM_NOUN:eyes:PLURAL]
 
-@todo bark
 [CREATURE:HELLHOUND] // summon, dogs
 	[CREATURE_CLASS:ALL_CREATURES]
 	[DESCRIPTION:A medium sized vicious dog. Courageous trainers can teach it various tasks.]
@@ -783,6 +792,8 @@ creature_fooccubus
 	[PETVALUE:200]
 	[PREFSTRING:barks]
 	[PREFSTRING:agressive behavior]
+	[SOUND:ALERT:100:1000:VOCALIZATION:bark:barks:a loud bark]
+	[SOUND:PEACEFUL_INTERMITTENT:25:10000:VOCALIZATION:grunt:grunts:a grunt]
 	[MAXAGE:100:125]
 	[BODY:QUADRUPED:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:4TOES_FQ_REG:4TOES_RQ_REG:MOUTH:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE]
 	[BODYGLOSS:PAW]
@@ -1063,7 +1074,6 @@ creature_fooccubus
 		[MELTING_POINT:10000]
 	[CASTE:GENERIC]
 
-@todo sounds cry pain
 [CREATURE:PAIN_ELEMENTAL] // summon, explosive suicidal bomber
 	[DESCRIPTION:A soul wisp that has been fed the thoughts of the suffering. It is very unstable and will explode if someone frighten it.]
 	[NAME:pain elemental:pain elementals:pain elemental]
@@ -1082,6 +1092,8 @@ creature_fooccubus
 	[NOEXERT]
 	[PREFSTRING:warm glow]
 	[PREFSTRING:spectacular death]
+	[SOUND:ALERT:200:2000:VOCALIZATION:emit a chorus of painful cries:emit a chorus of painful cries:a chorus of painful cries]
+	[SOUND:PEACEFUL_INTERMITTENT:10:100:VOCALIZATION:emit a painful cry:emit a painful cry:a cry of pain]
 	[ALL_ACTIVE]
 	[BODY:BASIC_1PARTBODY:BASIC_HEAD:BRAIN]
 	[TISSUE:JELLY]
