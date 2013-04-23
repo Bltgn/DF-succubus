@@ -2,7 +2,7 @@ interaction_fooccubus
 
 [OBJECT:INTERACTION]
 
-// Creation interation
+// CREATURE interation
 [INTERACTION:PAIN_ELEMENTAL_EXPLOSION]
 	[I_SOURCE:CREATURE_ACTION]
 	[I_TARGET:A:MATERIAL]
@@ -42,6 +42,20 @@ interaction_fooccubus
 		[IE_TARGET:E]
 		[IE_IMMEDIATE]
 
+[INTERACTION:TENTACLE_CLEAN]
+	[I_SOURCE:CREATURE_ACTION]
+	[I_TARGET:A:CREATURE]
+		[IT_LOCATION:CONTEXT_CREATURE]
+		[IT_AFFECTED_CREATURE:FOOCCUBUS:ALL]
+	[I_EFFECT:CONTACT]
+	[I_EFFECT:CLEAN]
+		[IE_GRIME_LEVEL:2]
+	[I_EFFECT:ADD_SYNDROME]
+		[IE_TARGET:A]
+		[IE_IMMEDIATE]
+		[SYNDROME]
+			[CE_SPEED_CHANGE:SPEED_PERC:110:START:0:END:1500]
+
 // Summons
 [INTERACTION:SUMMON_TENTACLE_MONSTER]
 	[I_SOURCE:CREATURE_ACTION]
@@ -59,8 +73,6 @@ interaction_fooccubus
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:TENTACLE_MONSTER]
 				[SYN_CLASS:MALE]
-				[CDI:VERB:concentrate:concentrates:NA]
-				[CDI:TARGET_VERB:explode in a burst of energy]
 
 [INTERACTION:SUMMON_NAHASH_MALE]
 	[I_SOURCE:CREATURE_ACTION]
@@ -78,8 +90,6 @@ interaction_fooccubus
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:NAHASH]
 				[SYN_CLASS:MALE]
-				[CDI:VERB:concentrate:concentrates:NA]
-				[CDI:TARGET_VERB:explode in a burst of energy]
 
 [INTERACTION:SUMMON_NAHASH_FEMALE]
 	[I_SOURCE:CREATURE_ACTION]
@@ -97,8 +107,6 @@ interaction_fooccubus
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:NAHASH]
 				[SYN_CLASS:FEMALE]
-				[CDI:VERB:concentrate:concentrates:NA]
-				[CDI:TARGET_VERB:explode in a burst of energy]
 
 [INTERACTION:SUMMON_HELLHOUND_MALE]
 	[I_SOURCE:CREATURE_ACTION]
@@ -116,8 +124,6 @@ interaction_fooccubus
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:HELLHOUND]
 				[SYN_CLASS:MALE]
-				[CDI:VERB:concentrate:concentrates:NA]
-				[CDI:TARGET_VERB:explode in a burst of energy]
 
 [INTERACTION:SUMMON_HELLHOUND_FEMALE]
 	[I_SOURCE:CREATURE_ACTION]
@@ -135,8 +141,6 @@ interaction_fooccubus
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:HELLHOUND]
 				[SYN_CLASS:FEMALE]
-				[CDI:VERB:concentrate:concentrates:NA]
-				[CDI:TARGET_VERB:explode in a burst of energy]
 
 [INTERACTION:SUMMON_NIGHTMARE_MALE]
 	[I_SOURCE:CREATURE_ACTION]
@@ -154,8 +158,6 @@ interaction_fooccubus
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:NIGHTMARE]
 				[SYN_CLASS:MALE]
-				[CDI:VERB:concentrate:concentrates:NA]
-				[CDI:TARGET_VERB:explode in a burst of energy]
 
 [INTERACTION:SUMMON_NIGHTMARE_FEMALE]
 	[I_SOURCE:CREATURE_ACTION]
@@ -173,8 +175,6 @@ interaction_fooccubus
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:NIGHTMARE]
 				[SYN_CLASS:FEMALE]
-				[CDI:VERB:concentrate:concentrates:NA]
-				[CDI:TARGET_VERB:explode in a burst of energy]
 
 [INTERACTION:SUMMON_IMP_FIRE]
 	[I_SOURCE:CREATURE_ACTION]
@@ -192,8 +192,6 @@ interaction_fooccubus
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:IMP_FIRE_SUMMON]
 				[SYN_CLASS:GENERIC]
-				[CDI:VERB:concentrate:concentrates:NA]
-				[CDI:TARGET_VERB:explode in a burst of energy]
 
 [INTERACTION:SUMMON_PAIN_ELEMENTAL]
 	[I_SOURCE:CREATURE_ACTION]
@@ -211,5 +209,3 @@ interaction_fooccubus
 				[SYN_CLASS:\PERMANENT]
 				[SYN_CLASS:PAIN_ELEMENTAL]
 				[SYN_CLASS:GENERIC]
-				[CDI:VERB:concentrate:concentrates:NA]
-				[CDI:TARGET_VERB:vibrates]
