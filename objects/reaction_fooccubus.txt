@@ -82,7 +82,7 @@ reaction_fooccubus
 	[NAME:summon fire imps]
 	[BUILDING:SUMMONING_CIRCLE:CUSTOM_F]
 	//blood
-	//liquid fire
+	//fire safe buckler
 	[REAGENT:large gem:1:GEM:NONE:NONE:NONE]
 	[FUEL]
 	[PRODUCT:100:1:BOULDER:NONE:INORGANIC:SUMMONING_IMP_FIRE]
