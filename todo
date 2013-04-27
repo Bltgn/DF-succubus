@@ -1,0 +1,31 @@
+todo
+
+Workshop
+@Couleur du rocher utilisé
+
+Sprites
+@animated summons
+@vetements pour défault
+
+Tentacle
++ Milk pour le slime
++ Smile comestible cru, cuit ou en boisson
++ Savon à base de slime
+@corriger interaction verb
+
+Summons tier 2
++ Behemoth, énorme, tondre pour de la laine
++ Pit fiend, guerrier
++ Arachne, lance toiles
++ Cacodemon, fire imp boosté (a décider)
+
+IDs
++ Ajouter SUMONING_RITUAL avec sprite
++ Changer fumée an WISP_SMOKE "Lost thoughts"
+
+Arts
++ Toy : Card set, tarot card set
++ Toy : board set (trouver nom pour les dames + chess)
++ Instrument : Violin
++ Vetement : Corset
++ Vetement : long glove (déjà fait ?)
