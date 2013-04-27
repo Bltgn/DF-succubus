@@ -775,7 +775,7 @@ creature_fooccubus
 	[DESCRIPTION:A medium sized vicious dog. Courageous trainers can teach it various tasks.]
 	[NAME:hell hound:hell hounds:hell hounds]
 	[CASTE_NAME:hell hound:hell hounds:hell hound]
-	[CREATURE_TILE:'d'][COLOR:6:8:0]
+	[CREATURE_TILE:'d'][COLOR:6:0:0]
 	[CREATURE_CLASS:GENERAL_POISON]
 	[LARGE_ROAMING]
 	[EVIL]

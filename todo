@@ -1,8 +1,5 @@
 todo
 
-Workshop
-@Couleur du rocher utilisé
-
 Sprites
 @skeleton summons
 @summoned creature dummy
@@ -21,7 +18,7 @@ Summons tier 2
 
 IDs
 + Ajouter SUMONING_RITUAL avec sprite
-+ Changer fumée an WISP_SMOKE "Lost thoughts"
++ Changer fumée en WISP_SMOKE "Lost thoughts"
 
 Arts
 + Toy : Card set, tarot card set
