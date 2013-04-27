@@ -4,12 +4,12 @@ Workshop
 @Couleur du rocher utilisé
 
 Sprites
-@animated summons
-@vetements pour défault
+@skeleton summons
+@summoned creature dummy
 
 Tentacle
 + Milk pour le slime
-+ Smile comestible cru, cuit ou en boisson
++ Smile comestible en boisson
 + Savon à base de slime
 @corriger interaction verb
 
@@ -29,3 +29,12 @@ Arts
 + Instrument : Violin
 + Vetement : Corset
 + Vetement : long glove (déjà fait ?)
++ Vetement : Chapeaux à plume (trouver noms)
++ Arme : Epée
++ Arme : Matraque (très faible pour les guardes)
+
+!! Tester !!
+Les caravanes
+Les summons avec du sang, ichor et extraits
+Passer peut être soul wisp en common
+Oeufs de nahash
