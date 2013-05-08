@@ -1,0 +1,48 @@
+# Succubus Dungeon : Changelog #
+
+2.2
+- Moved the changelog in a txt file.
+- Added a readme file.
+- Fixed the blood and ichor based reagents.
+- Nahashes will no longer die of thirst.
+- Reduced the number of eggs a nahash can produce.
+- Raised the grazer value of nightmares so they survive with less grass.
+- Summoning a creature will transform all wisps in a range of 5, regardless of the line of sight.
+- Increase the transformation timing of the summoning jobs.
+- Sprite update : Added metal workers, engineers, stone workers and animal caretaker.
+
+2.1
+- Added an immobile transformation to the summoning jobs. This should fix the issue with the worker leaving without completing the process.
+- Fixed the child sprites and a few colors.
+- Male and female tags has been added to the soul wisps to make pasturing easier.
+- Butchering a soul wisp now return nothing instead of an unknown substance.
+- Sprite update : Added Nightmare foal, Summoned creature, and undead versions of nahash, tentacle monster, nightmare and hellhound. Gave peasants something to wear.
+
+2.0
+- *dfhack r3 is required from now on.*
+- New workshop : Summoning Circle
+- 6 creatures to summon : Nahash, Hellhound, Nightmare, Fire imp, Pain elemental, Tentacle monster
+- New sprite sheet for the summoned monsters
+- New creature : Soul wisp, it can be selected on the embark screen
+- GENERAL_POISON class has been added to the succubi and several pets.
+- Simplified the succubus and tentacle monster venom, it will now reduce your foes speed.
+- Tentacle monsters will clean contaminants from nearby succubi
+- Licks are now edged attacks.
+- Minor tweaks to the labels and descriptions.
+
+1.3
+- Removed the protector position as promotion to warlord caused issues
+- Boosted the skills linked to military demonstration
+
+1.2
+- Changed the creatures tiles, added glowtiles
+- Added several jobs descriptors
+- Hooves, nails and nerves will now heal slowly
+- Mechanics skill rate is back to 100%
+- Sprite update : Added the army masters
+
+1.1
+- Sprite update : Added the medical and fishery worker basic sprites
+
+1.0
+- A new playable civ with modified default entities
