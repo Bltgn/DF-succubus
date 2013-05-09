@@ -1,5 +1,10 @@
 # Succubus Dungeon : Changelog #
 
+2.3
+- World map will now mention 'succubus' instead of 'lust demon'.
+- Removed common clothings, in order to make compatibility issues easier to fix.
+- Added a compat.txt file with instruction about fixing issues related ot other mods.
+
 2.2
 - Moved the changelog in a txt file.
 - Added a readme file.

@@ -1,0 +1,13 @@
+# Known issues with other mods and how to fix those #
+
+Here are the issues related to other mods and how to fix that.
+
+## Accelerated DF ##
+You will have no clothes or anvils.
+
+* Open entity_fooccubus.txt and add the following lines at the end :
+[PERMITTED_REACTION:PIG_IRON_MAKING]
+[PERMITTED_REACTION:STEEL_MAKING]
+[PANTS:ITEM_PANTS_PANTS:COMMON]
+[SHOES:ITEM_SHOES_SHOES:COMMON]
+[ARMOR:ITEM_ARMOR_SHIRT:COMMON]

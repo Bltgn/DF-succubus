@@ -3,7 +3,7 @@ creature_fooccubus
 [OBJECT:CREATURE]
 
 [CREATURE:FOOCCUBUS]
-	[NAME:lust demon:lust demons:lust demon]
+	[NAME:succubus:succubi:succubus]
 	[BABY:0]
 	[CHILD:15]
 	[CAN_SPEAK]
