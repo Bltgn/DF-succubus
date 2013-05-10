@@ -7,26 +7,26 @@ item_fooccubus
 [NAME:chess game:chess games]
 [HARD_MAT]
 
-[ITEM_TOY:ITEM_TOY_CARD_SET]
-[NAME:card set:card sets]
+[ITEM_TOY:ITEM_TOY_CARD_GAME]
+[NAME:card game:card games]
 
 [ITEM_TOY:ITEM_TOY_DIE]
 [NAME:die:dice]
 [HARD_MAT]
 
-++
+[ITEM_TOY:ITEM_TOY_QUOIT]
+[NAME:quoit:quoits]
+
+[ITEM_TOY:ITEM_BOARD_GAME]
+[NAME:board game:board games]
+[HARD_MAT]
+
+handcuff
 
 // Instrument
 [ITEM_INSTRUMENT:ITEM_INSTRUMENT_VIOLIN]
 [NAME:violin:violins]
 [HARD_MAT]
-
-++
-
-// Food
-croissant
-pates
-++
 
 // Clothing
 [ITEM_ARMOR:ITEM_ARMOR_CORSET]
@@ -45,8 +45,8 @@ pates
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
 [METAL_ARMOR_LEVELS]
 
-[ITEM_SHOES:ITEM_SHOES_THIGHT]
-[NAME:thight:thights]
+[ITEM_SHOES:ITEM_SHOES_STOCKING]
+[NAME:stocking:stockings]
 [UPSTEP:3]
 [LAYER:UNDER]
 [COVERAGE:100]
@@ -57,25 +57,26 @@ pates
 [LEATHER]
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
 
-++
+[ITEM_SHOES:ITEM_PANTS_THIGHT]
+[NAME:thight:tights]
+[LBSTEP:2]
+[LAYER:UNDER]
+[COVERAGE:100]
+[LAYER_SIZE:5]
+[LAYER_PERMIT:100]
+[MATERIAL_SIZE:1]
+[SOFT]
+[LEATHER]
+[STRUCTURAL_ELASTICITY_WOVEN_THREAD]
 
-// Armor
-Besoin ou pas 
+hat
+circlet
 
-// Tool
-
-++
-
-// Trap comp
-
-++
 
 // Weapon
-Epee
-
 [ITEM_WEAPON:ITEM_WEAPON_PITCHFORK]
 [NAME:Pitchfork:pitchforks]
-[SIZE:600]
+[SIZE:900]
 [SKILL:PIKE]
 [TWO_HANDED:57500]
 [MINIMUM_SIZE:52500]

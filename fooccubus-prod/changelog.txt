@@ -1,9 +1,12 @@
 # Succubus Dungeon : Changelog #
 
-2.3
-- World map will now mention 'succubus' instead of 'lust demon'.
-- Removed common clothings, in order to make compatibility issues easier to fix.
-- Added a compat.txt file with instruction about fixing issues related ot other mods.
+3.0
+- World map settlements will now mention 'succubus' instead of 'lust demon'.
+- The mod is now compatible with accelerated DF.
+- Adjusted the clothing choices to make way for the new items.
+- Added specific items : clothes, instruments, toys and weapons.
+- New material : Stygian Bronze, made from a bar of bronze and flux stone at a smelter. It is similar to bronze but much lighter and can be used for armors and anvils.
+- New summons : Behemoth, pit fiend, arachne and [??]
 
 2.2
 - Moved the changelog in a txt file.
