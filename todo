@@ -1,12 +1,15 @@
 todo
 
++ Faire des recherches
+
 Sprites
 @skeleton summons
-@summoned creature dummy
+@summoning ritual
+@Refaire pike master
 
 Tentacle
 + Milk pour le slime
-+ Smile comestible en boisson
++ Smile comestible
 + Savon à base de slime
 @corriger interaction verb
 
@@ -14,7 +17,7 @@ Summons tier 2
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, guerrier
 + Arachne, lance toiles
-+ Cacodemon, fire imp boosté (a décider)
++ Un butcher pour du metal plus fort
 
 IDs
 + Ajouter SUMONING_RITUAL avec sprite
@@ -23,11 +26,14 @@ IDs
 Arts
 + Toy : Card set, tarot card set
 + Toy : board set (trouver nom pour les dames + chess)
-+ Instrument : Violin
 + Vetement : Corset
 + Vetement : long glove (déjà fait ?)
 + Vetement : Chapeaux à plume (trouver noms)
 + Arme : Epée
 
+Materiaux
++ Composite bronze : bronze léger et un peu plus dur, en plaques
+
 FIXME!
 Summons qui demandent du liquide mais marche avec lye.
+Oeufs de nahash qui devraient etre commestibles.
