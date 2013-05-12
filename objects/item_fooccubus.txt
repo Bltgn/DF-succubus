@@ -3,10 +3,6 @@ item_fooccubus
 [OBJECT:ITEM]
 
 // Toy
-[ITEM_TOY:ITEM_TOY_CHESS_GAME]
-[NAME:chess game:chess games]
-[HARD_MAT]
-
 [ITEM_TOY:ITEM_TOY_CARD_GAME]
 [NAME:card game:card games]
 
