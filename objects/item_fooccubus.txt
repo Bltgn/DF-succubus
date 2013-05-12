@@ -3,9 +3,8 @@ item_fooccubus
 [OBJECT:ITEM]
 
 // Toy
-[ITEM_TOY:ITEM_TOY_CHECKERS_SET]
-	[NAME:checkers set:checkers sets]
-	[HARD_MAT]
+[ITEM_TOY:ITEM_TOY_CARD_GAME]
+[NAME:card game:card games]
 
 [ITEM_TOY:ITEM_TOY_DIE]
 	[NAME:die:dices]
@@ -64,7 +63,7 @@ item_fooccubus
 	[LEATHER]
 	[STRUCTURAL_ELASTICITY_WOVEN_THREAD]
 
-[ITEM_SHOES:ITEM_PANTS_THIGHT]
+[ITEM_PANTS:ITEM_PANTS_THIGHT]
 	[NAME:thight:tights]
 	[LBSTEP:1]
 	[LAYER:UNDER]

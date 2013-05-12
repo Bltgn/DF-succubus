@@ -1,11 +1,11 @@
 todo
 
-+ Faire des recherches
-
 Sprites
 @skeleton summons
 @summoning ritual
 @Refaire pike master
++ Summoning ritual
++ Witch
 
 Tentacle
 + Milk pour le slime
@@ -20,18 +20,19 @@ Summons tier 2
 + Un butcher pour du metal plus fort
 
 IDs
-+ Ajouter SUMONING_RITUAL avec sprite
 + Changer fumée en WISP_SMOKE "Lost thoughts"
-
-Materiaux
-+ Composite bronze : bronze léger et un peu plus dur, en plaques
 
 Arts
 + Plus de formes pour l'art, le limiter aux succubes
 
+Test
+Stygian bronze making and use
+Orichalcum
+Stygian bronze cause un saignement non fatal
+Oeufs de nahash qui devraient etre commestibles. Tester les œufs de poulet.
+
 FIXME!
 Summons qui demandent du liquide mais marchent avec lye.
-Oeufs de nahash qui devraient etre commestibles.
 
 Test
 Instruments dans accelerated
