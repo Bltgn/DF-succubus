@@ -10,8 +10,8 @@ item_fooccubus
 	[NAME:die:dices]
 	[HARD_MAT]
 
-[ITEM_TOY:ITEM_TOY_CARD_SET]
-[NAME:card set:card sets]
+[ITEM_TOY:ITEM_TOY_CHESS_SET]
+	[NAME:card set:chess sets]
 
 [ITEM_TOY:ITEM_TOY_HANDCUFF]
 	[NAME:handcuff:handcuffs]

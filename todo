@@ -7,29 +7,26 @@ Sprites
 + Witch
 + Refaire wisp
 
-Tentacle
-+ Milk pour le slime
-+ Smile comestible
-+ Savon à base de slime
-@corriger interaction verb
-
 Summons tier 2
-+ Behemoth, énorme, tondre pour de la laine
+++ Behemoth, énorme, tondre pour de la laine
 + Pit fiend, guerrier
-+ Arachne, lance toiles
-+ Un butcher pour du metal plus fort
+++ Arachne, lance toiles
++ Basilisk, 6 legs, poison breath, shearable horn
 
 IDs
 + Changer fumée en WISP_SMOKE "Lost thoughts"
 
 Arts
-+ Plus de formes pour l'art, le limiter aux succubes
+* Plus de formes pour l'art, le limiter aux succubes (impossible ?)
 
 Test
 Stygian bronze making and use
-Orichalcum
+Orichalcum (nouveau nom)
 Stygian bronze cause un saignement non fatal
-Oeufs de nahash qui devraient etre commestibles. Tester les œufs de poulet.
+Oeufs de nahash qui devraient etre comestibles. Tester les œufs de poulet.
+Tentcle milking > slime
+Tentacle slime > cooked
+Tentacle cleaning
 
 FIXME!
 Summons qui demandent du liquide mais marchent avec lye.
