@@ -8,16 +8,15 @@ Sprites
 + Refaire wisp
 
 Summons tier 2
-++ Behemoth, énorme, tondre pour de la laine
 + Pit fiend, guerrier
++ Basilisk, 8 legs, poison breath, shearable horn
+
+Summons tier 3
 ++ Arachne, lance toiles
-+ Basilisk, 6 legs, poison breath, shearable horn
+++ Behemoth, énorme, tondre pour de la laine
 
 IDs
 + Changer fumée en WISP_SMOKE "Lost thoughts"
-
-Arts
-* Plus de formes pour l'art, le limiter aux succubes (impossible ?)
 
 Test
 Stygian bronze making and use
@@ -29,6 +28,7 @@ Tentacle cleaning
 Basilisk horns used as is
 Basilisk smelting
 Instruments dans accelerated
+Gravures
 
 FIXME!
 Summons qui demandent du liquide mais marchent avec lye.
