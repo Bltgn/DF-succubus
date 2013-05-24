@@ -22,14 +22,6 @@ item_fooccubus
 	[NAME:violin:violins]
 	[HARD_MAT]
 
-[ITEM_INSTRUMENT:ITEM_INSTRUMENT_ORGANETTO]
-	[NAME:organetto:organettos]
-	[HARD_MAT]
-
-[ITEM_INSTRUMENT:ITEM_INSTRUMENT_DULCIMER]
-	[NAME:dulcimer:dulcimers]
-	[HARD_MAT]
-
 [ITEM_INSTRUMENT:ITEM_INSTRUMENT_GUITAR]
 	[NAME:guitar:guitars]
 	[HARD_MAT]
