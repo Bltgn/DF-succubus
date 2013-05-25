@@ -6,13 +6,13 @@ Sprites
 @Refaire pike master
 + Witch
 + Refaire wisp
-+ Pit fiend
 + Fire imp
 + Basilisk
 
 Summons tier 3
-+ Arachne, lance toiles
++ Arachne, lance toiles (?)
 + Behemoth, énorme, tondre pour de la laine
++ Pit fiend, weapon user
 
 Split civ
 + Anarchic succubi
@@ -22,19 +22,15 @@ Test
 Stygian bronze making and use
 Stygian bronze cause un saignement non fatal
 Oeufs de nahash qui devraient etre comestibles. Tester les œufs de poulet.
-Tentacle milking > slime
-Tentacle slime > cooked
-Tentacle slime > soap
 Tentacle cleaning
-Basilisk summoning
 Basilisk horns used as is
 Basilisk smelting
-Basilisk breath attach
-Pit fiend milking
-Pit fiend equipment
-Instruments dans accelerated
+Basilisk breath attack
+Instruments reageants dans accelerated
 Gravures
+Reagents for basilisk
 
 FIXME!
-Summons qui demandent du liquide et marchent avec n'importe quoi
-Pit fiend avec un menu de labor
+Summons qui demandent du liquide et marchent avec n'importe quoi (remplacer les liquides)
+Natural skill n'es tpas appliqué aux summons
+Supprimer la réaction avec le slime
