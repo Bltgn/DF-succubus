@@ -1,5 +1,7 @@
 todo
 
+reaction pour changer stygian iron horn vers barre
+
 Sprites
 @skeleton summons
 @summoning ritual
@@ -7,7 +9,7 @@ Sprites
 + Witch
 + Refaire wisp
 + Fire imp
-+ Basilisk
++ Basilisk variants
 
 Summons tier 3
 + Arachne, lance toiles (?)
@@ -25,10 +27,9 @@ Oeufs de nahash qui devraient etre comestibles. Tester les œufs de poulet.
 Tentacle cleaning
 Basilisk horns used as is
 Basilisk smelting
-Basilisk breath attack
 Instruments reageants dans accelerated
 Gravures
 Reagents for basilisk
 
 FIXME!
-Natural skill n'est pas appliqué aux summons
+Natural skill n'est pas appliqué aux summons (dfhack surement)
