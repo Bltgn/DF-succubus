@@ -721,7 +721,7 @@ creature_fooccubus
 	[DESCRIPTION:A medium sized vicious dog. Courageous trainers can teach it various tasks.]
 	[NAME:hell hound:hell hounds:hell hounds]
 	[CASTE_NAME:hell hound:hell hounds:hell hound]
-	[CHILD_NAME:hell hound pup:hell hounds pup:hell hound pup]
+	[CHILDNAME:hell hound pup:hell hounds pup:hell hound pup]
 	[CREATURE_TILE:'d'][COLOR:6:0:0]
 	[CREATURE_CLASS:GENERAL_POISON]
 	[LARGE_ROAMING]
@@ -1174,7 +1174,7 @@ creature_fooccubus
 		[IS_METAL]
 	[SET_TL_GROUP:BY_CATEGORY:ALL:HORN]
 		[TISSUE_LAYER_APPEARANCE_MODIFIER:LENGTH:0:0:0:0:0:0:0]
-			[APP_MOD_RATE:2:DAILY:0:300:0:0:NO_END]
+			[APP_MOD_RATE:100:DAILY:0:300:0:0:NO_END] //debug
 			[APP_MOD_DESC_RANGE:10:50:100:150:200:300]
 			[APP_MOD_NOUN:horn:SINGULAR]
 		[SHEARABLE_TISSUE_LAYER:LENGTH:300]
