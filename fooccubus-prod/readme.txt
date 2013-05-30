@@ -5,6 +5,7 @@ Succubus Dungeon is a mod for vanilla Dwarf Fortress featuring a new 'evil' civ.
 # Features #
 * A new race to play with in both fort and adventurer mode.
 * A workshop : Summoning circle where you can call on various beasts.
+* 2 new metals : Stygian Bronze and Orichalcum
 * The ablity to build whips.
 * Dwarven sieges.
 
@@ -45,12 +46,15 @@ If this conflict with another mod, you can add the tags manually :
 * Nightmare : A tireless grazer, can be milked or trained for war. Beware of its powerful kick.
 * Fire imp : A small humanoid surrounded by fire they can hurl at their enemies.
 * Pain elemental : A weak creature that will explode in an orgy of fire when attacked.
+* Basilisk : A large reptile breathing poisonous vapors. Its horn can be sheared for orichalcum.
+
+## New materials ##
+* Stygian bronze : Made from bronze, flux stone and a secret ingredient. It is much lighter then regular bronze.
+* Oricalchum : A light and very solid metal. Can be made at a smelter using basilisk horns.
 
 # Known issues #
 * Upon leaving, traders will treat pets in their stocks as "kidnapped", this has little incidence unless you trade an owned pet.
 * Sold creatures does not count towards the export values.
-* Sumonning jobs will require 'liquid', the containers shown below will tell you what liquid you need.
-* Summoners sometimes subsitute blood with lye, the job will still be a success.
 
 # Contact #
 If you have trouble using this mod, please post a message on the mod thread in the Bay 12 forum :

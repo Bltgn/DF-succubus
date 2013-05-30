@@ -1,7 +1,5 @@
 todo
 
-reaction pour changer stygian iron horn vers barre
-
 Sprites
 @skeleton summons
 @summoning ritual
@@ -27,15 +25,12 @@ Split civ
 + New entity
 
 Test
-Stygian bronze making and use
-Stygian bronze cause un saignement non fatal
 Oeufs de nahash qui devraient etre comestibles. Tester les œufs de poulet.
-Tentacle cleaning -
-Basilisk horns used as is +
-Basilisk smelting +
-Instruments reageants dans accelerated -
-Gravures -
+Tentacle cleaning
+Instruments reageants dans accelerated
+Gravures
 
 FIXME!
 Natural skill n'est pas appliqué aux summons (dfhack surement)
 Pas de sang sur le sol en faisant des stygian bronze
+Tous les orichalcum entrent dans le smelter, corrige rpour ne prendre que cet extrait de corne

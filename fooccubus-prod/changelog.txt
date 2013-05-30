@@ -1,12 +1,21 @@
 # Succubus Dungeon : Changelog #
 
-3.0
+3.0 -- Arts
 - World map settlements will now mention 'succubus' instead of 'lust demon'.
 - The mod is now compatible with accelerated DF.
-- Adjusted the clothing choices to make way for the new items.
-- Added specific items : clothes, instruments, toys and weapons.
-- New material : Stygian Bronze, made from a bar of bronze and flux stone at a smelter. It is similar to bronze but much lighter and can be used for armors and anvils.
-- New summons : Behemoth, pit fiend, arachne and [??]
+- Added specific items : clothes, instruments, toys.
+- Adjusted the clothing and weapon choices to make way for the new items.
+- Tentacle monsters can now be milked for their slimes.
+- Tentacle slime can be used alone to make soap, otherwise it can be cooked or used as a remplacement for rock nut oil.
+- Removed giant tentacle monsters, who served little purpose.
+- New weapon : Pitchfork, uses the pike skill.
+- New material : Stygian Bronze, made from a bar of bronze and flux stone at a smelter. Lighter then regular bronze.
+- New material orichalcum : A metal as solid as steel, but much lighter.
+- New summon : Basilisk, a large reptile breahting poisonous gas. Its horn can be sheared for Orichalcum.
+- New shapes has been added for engraving.
+- Sprite update : Added summoning rituals, adult basilisk, adjusted pikesuccubus.
+- Speeches has been added for NPCs in adv mode taking pride in killing the succubi.
+- Dropped all the blood and ichor reagents from reactions, some of them as been replaced.
 
 2.2
 - Moved the changelog in a txt file.
@@ -26,7 +35,7 @@
 - Butchering a soul wisp now return nothing instead of an unknown substance.
 - Sprite update : Added Nightmare foal, Summoned creature, and undead versions of nahash, tentacle monster, nightmare and hellhound. Gave peasants something to wear.
 
-2.0
+2.0 -- Summoning
 - *dfhack r3 is required from now on.*
 - New workshop : Summoning Circle
 - 6 creatures to summon : Nahash, Hellhound, Nightmare, Fire imp, Pain elemental, Tentacle monster
