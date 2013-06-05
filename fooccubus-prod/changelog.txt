@@ -5,7 +5,7 @@
 - Soul wisps will only have one child at a time to prevent a 'wispslosion'.
 - Capitalized professions and positions names.
 - Made succubi civs more likely to pick one certain spheres.
-- Nahash and basilisk eggs are now edible.
+- Nahash and basilisk eggs are now edible when cooked.
 
 3.0 -- Arts
 - World map settlements will now mention 'succubus' instead of 'lust demon'.
