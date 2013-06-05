@@ -4,7 +4,8 @@ item_fooccubus
 
 // Toy
 [ITEM_TOY:ITEM_TOY_CARD_GAME]
-[NAME:card game:card games]
+	[NAME:card game:card games]
+	[HARD_MAT]
 
 [ITEM_TOY:ITEM_TOY_DIE]
 	[NAME:die:dices]
@@ -12,6 +13,7 @@ item_fooccubus
 
 [ITEM_TOY:ITEM_TOY_CHESS_SET]
 	[NAME:card set:chess sets]
+	[HARD_MAT]
 
 [ITEM_TOY:ITEM_TOY_HANDCUFF]
 	[NAME:handcuff:handcuffs]

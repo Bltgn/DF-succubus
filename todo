@@ -5,15 +5,26 @@ Sprites
 @summoning ritual
 @Refaire pike master
 + Witch
-+ Refaire wisp
 + Fire imp
 + Basilisk variants
 
-Language
-Reperer les noms long et remplacer (new world 1st)
+3.1
+---
 
-Pour v4
--------
+Reperer les noms longs et remplacer par des courts
+
+Maj readme avec un pb de temperature OFF
+Maj changelog
+
+Limiter naissance soul wisp
+
+Sprites 
++ Witch
++ Fire imp
++ Basilisk variants
+
+4.0
+---
 
 Summons tier 3
 + Arachne, lance toiles (?)
@@ -25,12 +36,12 @@ Split civ
 + New entity
 
 Test
-Oeufs de nahash qui devraient etre comestibles. Tester les œufs de poulet.
 Tentacle cleaning
 Instruments reageants dans accelerated
-Gravures
+Gravures + gem
+Orichalcum avec la corne only
+Rendre les oeufs de nahash comestible
 
 FIXME!
 Natural skill n'est pas appliqué aux summons (dfhack surement)
-Pas de sang sur le sol en faisant des stygian bronze
-Tous les orichalcum entrent dans le smelter, corrige rpour ne prendre que cet extrait de corne
+Pas de sang sur le sol en faisant des stygian bronzes
