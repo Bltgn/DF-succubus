@@ -1,5 +1,12 @@
 # Succubus Dungeon : Changelog #
 
+3.1
+- Soul wisps have no head anymore, and will die quicker upon attack.
+- Soul wisps will only have one child at a time to prevent a 'wispslosion'.
+- Capitalized professions and positions names.
+- Made succubi civs more likely to pick one certain spheres.
+- Nahash and basilisk eggs are now edible.
+
 3.0 -- Arts
 - World map settlements will now mention 'succubus' instead of 'lust demon'.
 - The mod is now compatible with accelerated DF.

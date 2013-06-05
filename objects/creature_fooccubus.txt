@@ -572,6 +572,7 @@ creature_fooccubus
 	[CREATURE_TILE:'o'][COLOR:7:0:1]
 	[GLOWTILE:'`'][GLOWCOLOR:7:0:1]
 	[CHILD:1]
+	[LITTERSIZE:1:1]
 	[CHILDNAME:immature soul wisp:immature soul wisps]
 	[CASTE_NAME:soul wisp:soul wisps:soul wisp]
 	[BIOME:SUBTERRANEAN_CHASM]

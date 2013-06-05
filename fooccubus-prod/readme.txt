@@ -13,6 +13,7 @@ Succubus Dungeon is a mod for vanilla Dwarf Fortress featuring a new 'evil' civ.
 * Install dfhack r3 if you do not have it already (available at : http://www.bay12forums.com/smf/index.php?topic=91166.0)
 * Extract the archive in your DF folder, preserving the folder structure.
 * Overwrite the entity_default file in the optional folder with the one provided to add dwarven sieges (see below).
+* Make sure the temperature feature is activated. It should be by default on most versions of DF.
 * Generate a new world and select a succubus civilization to start playing.
 * To uninstall, simply delete the *_fooccubus files from your raws folder.
 
@@ -41,11 +42,11 @@ If this conflict with another mod, you can add the tags manually :
 
 ## Available creatures ##
 * Nahash : Vermin hunting snake. It can be bred for its eggs.
-* Tentacle monster : Excellent wrestler. Will also clean nearby succubi, leaving them with a speed buff. 
+* Tentacle monster : Excellent wrestler. Can be milked for slime.
 * Hellhound :  An aggressive cousin of the dog, can be trained to serve as a bodyguard.
 * Nightmare : A tireless grazer, can be milked or trained for war. Beware of its powerful kick.
 * Fire imp : A small humanoid surrounded by fire they can hurl at their enemies.
-* Pain elemental : A weak creature that will explode in an orgy of fire when attacked.
+* Pain elemental : A weak creature that will explode when attacked.
 * Basilisk : A large reptile breathing poisonous vapors. Its horn can be sheared for orichalcum.
 
 ## New materials ##
