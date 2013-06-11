@@ -1,4 +1,10 @@
 # Succubus Dungeon : Changelog #
+3.2
+- Sprite update : Darkened the outlines on succubi.
+- Sprite update : Added farmers and basilisk child.
+- Soul wisps no longer report as being blind in the health screen.
+- The summoning circle has a more explicit middle tile.
+- Made a few names shorter and more memorable.
 
 3.1
 - Soul wisps have no head anymore, and will die quicker upon attack.
