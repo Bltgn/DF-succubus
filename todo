@@ -6,39 +6,46 @@ Sprites
 + Fire imp
 + Basilisk variants
 
-3.2
----
-
-circle color
-
-
-3.3
+4.0
 ---
 
 Sprites 
 + Witch
 + Fire imp
-+ Basilisk variants
++ Basilisk zombie
 + Skeletons
 
-4.0
----
-
 Summons tier 3
-+ Arachne, lance toiles (?)
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user
 
+Script apply natural skill
+
 Split civ
-+ Anarchic succubi
++ deep succubi
 + New entity
++ New creatures
+
+Summon deep
++ 2 Cthulu stuff
+
+5.0
+---
+
+Script makeown + clothfix
+Conversion workshop
+
+Royalist
++ Make own prisonners
+
+Deeo
++ Transform prisonners into caste
+
 
 Test
 Tentacle cleaning
 Instruments reageants dans accelerated
 Gravures + gem
-Orichalcum avec la corne only
-Rendre les oeufs de nahash comestible
 
 FIXME!
 Natural skill n'est pas appliqué aux summons (dfhack surement)
