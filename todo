@@ -2,8 +2,6 @@ todo
 
 Sprites
 @skeleton summons
-@summoning ritual
-@Refaire pike master
 + Witch
 + Fire imp
 + Basilisk variants
@@ -11,11 +9,17 @@ Sprites
 3.2
 ---
 
+circle color
+
+
+3.3
+---
+
 Sprites 
 + Witch
 + Fire imp
 + Basilisk variants
-+ Farmers
++ Skeletons
 
 4.0
 ---
