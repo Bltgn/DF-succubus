@@ -1,7 +1,7 @@
 # Succubus Dungeon : Changelog #
 3.3
 - Added the missing eye tissues to the creatures.
-- Enhanced the stats of orichalcum and stygian bronze.
+- Enhanced the weaponry stats of stygian bronze.
 - Boosted the pitchforks damage.
 - Increased the alchemy skill gains.
 3.2
