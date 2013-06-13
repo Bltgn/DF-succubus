@@ -4,6 +4,7 @@
 - Enhanced the weaponry stats of stygian bronze.
 - Boosted the pitchforks damage.
 - Increased the alchemy skill gains.
+
 3.2
 - Sprite update : Darkened the outlines on succubi.
 - Sprite update : Added farmers and basilisk child.
