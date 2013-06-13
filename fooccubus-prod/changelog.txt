@@ -1,8 +1,9 @@
 # Succubus Dungeon : Changelog #
 3.3
-- Added the missing eye tissues to the wisps.
-- Enhanced the stats of stygian bronze and orichalcum to help weapon smithing.
-- Enhanced the pitchfork stats.
+- Added the missing eye tissues to the creatures.
+- Enhanced the stats of orichalcum and stygian bronze.
+- Boosted the pitchforks damage.
+- Increased the alchemy skill gains.
 3.2
 - Sprite update : Darkened the outlines on succubi.
 - Sprite update : Added farmers and basilisk child.
