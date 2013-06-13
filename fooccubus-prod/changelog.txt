@@ -1,10 +1,14 @@
 # Succubus Dungeon : Changelog #
+3.3
+- Added the missing eye tissues to the wisps.
+- Enhanced the stats of stygian bronze and orichalcum to help weapon smithing.
+- Enhanced the pitchfork stats.
 3.2
 - Sprite update : Darkened the outlines on succubi.
 - Sprite update : Added farmers and basilisk child.
 - Soul wisps no longer report as being blind in the health screen.
 - The summoning circle has a more explicit middle tile.
-- Made a few names shorter and more memorable.
+- Made a few names shorter.
 
 3.1
 - Soul wisps have no head anymore, and will die quicker upon attack.

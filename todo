@@ -6,14 +6,22 @@ Sprites
 + Fire imp
 + Basilisk variants
 
-4.0
+3.3
 ---
 
 Sprites 
 + Witch
-+ Fire imp
 + Basilisk zombie
+
+300% alchemy skill
+
+4.0
+---
+
+Sprites 
++ Fire imp
 + Skeletons
++ Deep temp
 
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
@@ -29,6 +37,10 @@ Split civ
 Summon deep
 + 2 Cthulu stuff
 
+Material
++ Renommer soul_jelly en soul_jelly_template
++ Soul wisp doit pouvoir bruler
+
 5.0
 ---
 
@@ -38,7 +50,7 @@ Conversion workshop
 Royalist
 + Make own prisonners
 
-Deeo
+Deep
 + Transform prisonners into caste
 
 
