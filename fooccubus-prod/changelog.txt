@@ -1,4 +1,8 @@
 # Succubus Dungeon : Changelog #
+4.0
+- Halved the growth rate of basilisk horns.
+- Summoning basilisks only require one bar of each type instead of four.
+
 3.3
 - Added the missing eye tissues to the creatures.
 - Enhanced the weaponry stats of stygian bronze.
