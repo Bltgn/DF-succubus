@@ -1,5 +1,12 @@
 # Succubus Dungeon : Changelog #
 4.0
++ New civ ! Deep succubi.
+- The deep succubi has no access to trading.
+- Summoning is also limited
+- The deep succubi is at war with everyone.
+- The sprite sheet is temporary.
+
++ Other fixes
 - Halved the growth rate of basilisk horns.
 - Summoning basilisks only require one bar of each type instead of four.
 - Orichalcum making will properly select a basilisk horn.

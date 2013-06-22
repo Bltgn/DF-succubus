@@ -6,29 +6,18 @@ todo
 Sprites 
 + Fire imp
 + Skeletons
-+ Deep temp
 + Witch
 + Basilisk zombie
 
-Corriger shapes
-
-
-Summons tier 3
-+ Behemoth, énorme, tondre pour de la laine
-+ Pit fiend, weapon user
+Altar of nightmares
++ Call migrants
 
 Script apply natural skill
-
-Split civ
-+ deep succubi
-+ New entity
-+ New creatures
 
 Summon deep
 + 2 Cthulu stuff
 
 Material
-+ Renommer soul_jelly en soul_jelly_template
 + Soul wisp doit pouvoir bruler
 
 5.0
@@ -43,11 +32,14 @@ Royalist
 Deep
 + Transform prisonners into caste
 
+Summons tier 3
++ Behemoth, énorme, tondre pour de la laine
++ Pit fiend, weapon user
+
 
 Test
 Tentacle cleaning
 Instruments reageants dans accelerated
-Gravures + gem
 
 FIXME!
 Natural skill n'est pas appliqué aux summons (dfhack surement)
