@@ -6,30 +6,12 @@ todo
 Sprites 
 + Fire imp
 + Skeletons
-+ Deep temp
 + Witch
 + Basilisk zombie
 
-Corriger shapes
-
-
-Summons tier 3
-+ Behemoth, énorme, tondre pour de la laine
-+ Pit fiend, weapon user
-
-Script apply natural skill
-
-Split civ
-+ deep succubi
-+ New entity
-+ New creatures
-
 Summon deep
-+ 2 Cthulu stuff
++ 1 Cthulu stuff
 
-Material
-+ Renommer soul_jelly en soul_jelly_template
-+ Soul wisp doit pouvoir bruler
 
 5.0
 ---
@@ -37,18 +19,29 @@ Material
 Script makeown + clothfix
 Conversion workshop
 
+Script apply natural skill
+
 Royalist
 + Make own prisonners
 
 Deep
 + Transform prisonners into caste
 
+Summons tier 3
++ Behemoth, énorme, tondre pour de la laine
++ Pit fiend, weapon user
+
+Altar of nightmares
++ Call migrants
 
 Test
 Tentacle cleaning
 Instruments reageants dans accelerated
-Gravures + gem
+Licking, kissing + venom
+Creatures inccubi and succubi and deep
 
 FIXME!
 Natural skill n'est pas appliqué aux summons (dfhack surement)
+Soul wisp doit pouvoir bruler
 Pas de sang sur le sol en faisant des stygian bronzes
+boobs and acheek should appaer at 12, plus growth

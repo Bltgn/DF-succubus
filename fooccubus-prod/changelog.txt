@@ -1,9 +1,18 @@
 # Succubus Dungeon : Changelog #
 4.0
++ New civ ! Deep succubi.
+- The deep succubi has no access to trading.
+- Summoning is also limited
+- The deep succubi is at war with everyone.
+- The sprite sheet is temporary.
+
++ Other fixes
 - Halved the growth rate of basilisk horns.
 - Summoning basilisks only require one bar of each type instead of four.
 - Orichalcum making will properly select a basilisk horn.
-- Added river and ocean products to the succubus civ.
+- Gave missing tongues to the creatures.
+- Incubis have now the same attacks as succubi.
+- Various venoms now act faster and are more effective.
 
 3.3
 - Added the missing eye tissues to the creatures.
