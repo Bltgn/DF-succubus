@@ -2,10 +2,10 @@ creature_fooccubus_deep
 
 [OBJECT:CREATURE]
 
-[CREATURE:FOOCCUBUS_deep]
+[CREATURE:FOOCCUBUS_DEEP]
 	[NAME:deep succubus:deep succubi:deep succubus]
 	[BABY:0]
-	[CHILD:15]
+	[CHILD:12]
 	[CAN_SPEAK]
 	[CAN_LEARN]
 	[EVIL]
@@ -40,7 +40,7 @@ creature_fooccubus_deep
 		[FEMALE]
 		[POP_RATIO:90]
 		[MULTIPLE_LITTER_RARE]
-		[NAME:deep succubus:deep succubi:deep succubus]
+		[CASTE_NAME:deep succubus:deep succubi:deep succubus]
 		[PREFSTRING:tantalizing figure]
 		[PREFSTRING:paralyzing kiss]
 		(BODY:FEMALE:NEUTRAL)
@@ -63,7 +63,7 @@ creature_fooccubus_deep
 		[DESCRIPTION:A male lust demon dedicated to the worship of immortal horrors.]
 		[MALE]
 		[POP_RATIO:10]
-		[NAME:deep inccubus:deep inccubi:deep inccubus]
+		[CASTE_NAME:deep inccubus:deep inccubi:deep inccubus]
 		[PREFSTRING:manly chest]
 		[PREFSTRING:paralyzing lick]
 		(BODY:NEUTRAL)

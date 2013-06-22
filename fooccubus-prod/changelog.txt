@@ -2,6 +2,8 @@
 4.0
 - Halved the growth rate of basilisk horns.
 - Summoning basilisks only require one bar of each type instead of four.
+- Orichalcum making will properly select a basilisk horn.
+- Added river and ocean products to the succubus civ.
 
 3.3
 - Added the missing eye tissues to the creatures.
