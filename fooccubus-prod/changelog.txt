@@ -11,8 +11,9 @@
 - Summoning basilisks only require one bar of each type instead of four.
 - Orichalcum making will properly select a basilisk horn.
 - Gave missing tongues to the creatures.
-- Incubis have now the same attacks as succubi.
+- The incubi have now the same attacks as the succubi.
 - Various venoms now act faster and are more effective.
+- Gave succubi names a more unique feeling.
 
 3.3
 - Added the missing eye tissues to the creatures.
