@@ -2,8 +2,9 @@
 4.0
 + New civ ! Deep succubi.
 - The deep succubi has no access to trading.
-- Summoning is also limited
+- Summoning is also limited.
 - The deep succubi is at war with everyone.
+- From other races perspective, they act as a skulking civ.
 - The sprite sheet is temporary.
 
 + Other fixes
@@ -11,8 +12,9 @@
 - Summoning basilisks only require one bar of each type instead of four.
 - Orichalcum making will properly select a basilisk horn.
 - Gave missing tongues to the creatures.
-- Incubis have now the same attacks as succubi.
+- The incubi have now the same attacks as the succubi.
 - Various venoms now act faster and are more effective.
+- Gave the civilization more names to choose from.
 
 3.3
 - Added the missing eye tissues to the creatures.
