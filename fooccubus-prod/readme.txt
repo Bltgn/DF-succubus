@@ -3,7 +3,8 @@
 Succubus Dungeon is a mod for vanilla Dwarf Fortress featuring a new 'evil' civ.
 
 # Features #
-* A new race to play with in both fort and adventurer mode.
+* A new race.
+* 2 new civilizations play with in both fort and adventurer mode.
 * A workshop : Summoning circle where you can call on various beasts.
 * 2 new metals : Stygian Bronze and Orichalcum
 * The ablity to build whips.
@@ -36,18 +37,20 @@ If this conflict with another mod, you can add the tags manually :
 # Summoning a creature #
 * You can embark with Soul Wisps, those pets are used as a fodder for summoning.
 * Migrants and caravans will bring additional wisps.
-* In order to summon a creature, you install a summoning circle and a pasture next to each other.
+* In order to summon a creature, you must install a summoning circle and a pasture next to each other.
 * Pasture one or more soul wisp next to the circle.
 * The soul wisp will be replaced with the target creature.
 
-## Available creatures ##
-* Nahash : Vermin hunting snake. It can be bred for its eggs.
-* Tentacle monster : Excellent wrestler. Can be milked for slime.
+## Regular succubi summons ##
 * Hellhound :  An aggressive cousin of the dog, can be trained to serve as a bodyguard.
 * Nightmare : A tireless grazer, can be milked or trained for war. Beware of its powerful kick.
 * Fire imp : A small humanoid surrounded by fire they can hurl at their enemies.
 * Pain elemental : A weak creature that will explode when attacked.
 * Basilisk : A large reptile breathing poisonous vapors. Its horn can be sheared for orichalcum.
+
+## Summons for both civs ##
+* Nahash : Vermin hunting snake. It can be bred for its eggs.
+* Tentacle monster : Excellent wrestler. Can be milked for slime.
 
 ## New materials ##
 * Stygian bronze : Made from bronze, flux stone and a secret ingredient. It is much lighter then regular bronze.

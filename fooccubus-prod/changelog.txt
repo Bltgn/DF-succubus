@@ -2,15 +2,8 @@
 4.0
 + New civ ! Deep succubi.
 - The deep succubi has no access to trading.
-<<<<<<< HEAD
-- Summoning is also limited.
 - The deep succubi is at war with everyone.
 - From other races perspective, they act as a skulking civ.
-=======
-- Summoning is also limited
-- The deep succubi is at war with everyone.
->>>>>>> f04e06151bf29e933d8476bef71172a94d839694
-- The sprite sheet is temporary.
 
 + Other fixes
 - Halved the growth rate of basilisk horns.
