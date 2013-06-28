@@ -1,7 +1,6 @@
 todo
 
-
-5.0
+4.1
 ---
 
 Sprites 
@@ -10,12 +9,18 @@ Sprites
 + Witch
 + Basilisk zombie
 
+Civ
+Add tissue style
+Racourcir des noms
+
+Fire imp : Utiliser un fire snake et non un extract
+Pas de sang sur le sol en faisant des stygian bronzes
+
+5.0
+---
 
 Summon deep
 + 1 Cthulu stuff
-
-Material
-+ Soul wisp doit pouvoir bruler
 
 Altar of nightmares
 + Call migrants
@@ -33,6 +38,10 @@ Royalist
 Deep
 + Transform prisonners into caste
 
+
+Sans tag
+--------
+
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user
@@ -43,11 +52,10 @@ Altar of nightmares
 Test
 Tentacle cleaning
 Instruments reageants dans accelerated
-Licking, kissing + venom
 
 FIXME!
 Natural skill n'est pas appliqué aux summons (dfhack surement)
 Soul wisp doit pouvoir bruler
 Pas de sang sur le sol en faisant des stygian bronzes
-boobs and acheek should appaer at 12, plus growth
+boobs and acheek should appear at 12, plus growth
 Fire imp : Utiliser un fire snake et non un extract
