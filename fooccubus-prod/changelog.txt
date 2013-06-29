@@ -1,4 +1,7 @@
 # Succubus Dungeon : Changelog #
+5.0
+- Civilized succubi now use nightmares for mounting, packing and pulling.
+
 4.0
 + New civ ! Deep succubi.
 - The deep succubi has no access to trading.
