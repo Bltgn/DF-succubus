@@ -410,7 +410,7 @@ entity_fooccubus_deep
 		[DUTY_BOUND]
 		[REQUIRED_OFFICE:100]
 	[POSITION:MAYOR]
-		[NAME_FEMALE:Priestess:Priestesses]
+		[NAME_FEMALE:Priestress:Priestresses]
 		[NAME_MALE:Priest:Priests]
 		[SITE]
 		[NUMBER:1]
