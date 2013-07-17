@@ -747,7 +747,7 @@ entity_fooccubus
 		[DUTY_BOUND]
 		[DEMAND_MAX:1]
 	[POSITION:WHIPER] // Executor
-		[NAME:Whiper:Whipers]
+		[NAME:Whipper:Whippers]
 		[SITE]
 		[NUMBER:1]
 		[RESPONSIBILITY:EXECUTIONS]

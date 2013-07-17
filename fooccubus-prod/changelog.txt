@@ -1,6 +1,9 @@
 # Succubus Dungeon : Changelog #
-5.0
-- Civilized succubi now use nightmares for mounting, packing and pulling.
+4.1
+- Sprite update: Added fishery workers, crafters, medics, jewelers and rangers
+- Fixed a couple of typos in the civs positions
+- Deep succubi should no longer receive the visit of an outpost liaison.
+- Deep succubi should no longer send thieves or attack your fort.
 
 4.0
 + New civ ! Deep succubi.
