@@ -224,7 +224,7 @@ creature_fooccubus_deep
 			[APP_MOD_RATE:1:DAILY:0:200:1:0:14:0]
 	[HOMEOTHERM:10070]
 	[SWIMS_LEARNED]
-	[SWIM_SPEED:2000]
+	[SWIM_SPEED:1000]
 	
 	// Description stuff
 	[MANNERISM_FINGERS:finger:fingers]
