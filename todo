@@ -1,6 +1,6 @@
 todo
 
-4.1
+4.2
 ---
 
 Sprites 
@@ -18,13 +18,6 @@ Pas de sang sur le sol en faisant des stygian bronzes
 
 5.0
 ---
-
-Factoriser
-+ Su ccubi et deep succubi
-+ Les entities
-+ Les réactions
-
-Supprimer des descriptors
 
 Creature
 
@@ -55,16 +48,13 @@ Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user
 
-Altar of nightmares
-+ Call migrants et random siege
-
 Test
 Tentacle cleaning
 Instruments reageants dans accelerated
+Les interactions doivent donner un sexe aléatoire
 
 FIXME!
 Natural skill n'est pas appliqué aux summons (dfhack surement)
 Soul wisp doit pouvoir bruler
 Pas de sang sur le sol en faisant des stygian bronzes
 boobs and acheek should appear at 12, plus growth
-Fire imp : Utiliser un fire snake et non un extract
