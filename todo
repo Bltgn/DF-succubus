@@ -1,19 +1,34 @@
 todo
 
+4.3
+---
+
+Sprites 
++ Fire imp + zombie
++ Nobles
+
+Fire imp : Utiliser un fire snake et non un extract
+
+Civ
+Add tissue style
+
 4.2
 ---
 
 Sprites 
 + Fire imp
-+ Skeletons
-+ Witch
 + Basilisk zombie
++ Nobles
+
+Scripts
+- Untame soul wisp LOS
+- Cancel reaction, no soul wisp LOS
+- Natural skills
 
 Civ
-Add tissue style
-Racourcir des noms
++ Racourcir des noms
 
-Fire imp : Utiliser un fire snake et non un extract
+Bugfix
 Pas de sang sur le sol en faisant des stygian bronzes
 
 5.0
@@ -23,19 +38,21 @@ Creature
 
 Summon deep
 + 1 Cthulu stuff
++ Interact => pourrissement
++ Interact => crazed
 
 Altar of nightmares
 + Call migrants
++ Call evil weather
++ Provoquer siege
 
-Script apply natural skill
-
-Script makeown + clothfix
 Conversion workshop
-
-Script apply natural skill
++ Intégrer makeown dans un script
++ Ajouter castes pour deep
 
 Royalist
 + Make own prisonners
++ Tester un fix pour les souls, pour pousser les convertis à bosser
 
 Deep
 + Transform prisonners into caste
@@ -46,15 +63,12 @@ Sans tag
 
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
-+ Pit fiend, weapon user
++ Pit fiend, weapon user sentient
 
 Test
 Tentacle cleaning
 Instruments reageants dans accelerated
-Les interactions doivent donner un sexe aléatoire
 
 FIXME!
-Natural skill n'est pas appliqué aux summons (dfhack surement)
 Soul wisp doit pouvoir bruler
-Pas de sang sur le sol en faisant des stygian bronzes
 boobs and acheek should appear at 12, plus growth
