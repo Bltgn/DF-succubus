@@ -12,6 +12,9 @@ Fire imp : Utiliser un fire snake et non un extract
 Civ
 Add tissue style
 
+Scripts
+- Cancel reaction, no soul wisp LOS
+
 4.2
 ---
 
@@ -22,7 +25,6 @@ Sprites
 
 Scripts
 - Untame soul wisp LOS
-- Cancel reaction, no soul wisp LOS
 - Natural skills
 
 Civ
@@ -56,6 +58,9 @@ Royalist
 
 Deep
 + Transform prisonners into caste
+
+Plants
++ Evil biomes : Roses (et vin) + 1 underground (blood worm?)
 
 
 Sans tag
