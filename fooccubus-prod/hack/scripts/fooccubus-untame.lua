@@ -46,6 +46,8 @@ end
 function untame(unit)
 	unit.flags1.tame = false
 end
+
+print(...)
  
 unit = findUnit(unitId)
 if not unit then qerror('Unit not found.') end
