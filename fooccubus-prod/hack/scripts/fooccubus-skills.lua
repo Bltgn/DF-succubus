@@ -7,8 +7,14 @@ if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 local utils = require 'utils'
  
 -- The list of creatures supported by this script
-local validUnit = {'DOG', 'BASILISK', 'NIGHTMARE', 'HELLHOUND'} --debug, remove DOG afterwards
- 
+local validUnit = {
+	'BASILISK',
+	'NIGHTMARE', 
+	'HELLHOUND', 
+	'TENTACLE_MONSTER',
+	'NAHASH'
+} 
+
 -- Scan the units table for targeted creatures
 function naturalSkills()
 	local unitList = df.global.world.units.active
@@ -34,29 +40,6 @@ function isSumonnedCreature(unit)
 	end
  
 end
- 
--- Dump the natural skills to the terminal
-function inspect(raw) --debug
- 
-	print('-- id')
-	for k, skill in ipairs(raw.natural_skill_id) do
-		print(k)
-		print(skill)
-	end
- 
-	print('-- exp')
-	for k, skill in ipairs(raw.natural_skill_exp) do
-		print(k)
-		print(skill)
-	end
- 
-	print('-- lvl')
-	for k, skill in ipairs(raw.natural_skill_lvl) do
-		print(k)
-		print(skill)
-	end
- 
-end
 
 -- Check if the unit has the skill and its rating high enough
 function hasSkill(unit, skillId, rating)
@@ -64,7 +47,7 @@ function hasSkill(unit, skillId, rating)
 
 	for k, skill in ipairs(unit.status.current_soul.skills) do
 
-		if rowSkill.id == skillId then
+		if skill.id == skillId then
 			currentSkill = skill
 			break
 		end
@@ -84,8 +67,6 @@ function fixSkills(unit)
 	local raw = df.global.world.raws.creatures.all[unit.race].caste[unit.caste]
 	local k, skill, rating
  
-	--inspect(raw) --debug
- 
 	for k, skill in ipairs(raw.natural_skill_id) do
 		rating = raw.natural_skill_lvl[k]
  
@@ -95,10 +76,9 @@ function fixSkills(unit)
 			newSkill['experience'] = raw.natural_skill_exp[k]
 			newSkill['rating'] = rating
  
-			utils.insert_or_update(unit.status.current_soul.skills, newSkill, 'id') --debug
+			utils.insert_or_update(unit.status.current_soul.skills, newSkill, 'id')
 		end
 	end
 end
  
---dfhack.timeout('100','ticks',naturalSkills())
-naturalSkills()
+dfhack.timeout('1000', 'ticks', function() naturalSkills() end)

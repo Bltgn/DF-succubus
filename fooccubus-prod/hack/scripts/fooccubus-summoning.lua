@@ -5,22 +5,9 @@ if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 if not ... then qerror('Missing parameters.') end
 
 local args = {...}
-local unitId = args[0]
+local unitId = args[1]
 
--- Finding the source unit
-function findUnit(searchId)
-	local k, _
- 
-	for k, _ in ipairs(unitList) do
-		if unitList[k].id == searchId then
-			return unitList[k]
-		end
-	end
- 
-	return nil
-end
-
-
+-- Loop through the args and call for other scripts as needed
 function runCommands()
 	local k, command
 
@@ -28,7 +15,7 @@ function runCommands()
 
 		if command == 'untame' then
 			dfhack.run_script('fooccubus-untame', unitId)
-		else if command == 'skills' then
+		elseif command == 'skills' then
 			dfhack.run_script('fooccubus-skills')
 		end
 
