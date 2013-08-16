@@ -1,4 +1,10 @@
 -- Remove the tame flag from soul wisps within LOS
+--[[
+	
+	This script is called when a summoning job completes
+	@author Boltgun
+
+]]
 local fov = require 'fov'
 local utils = require 'utils'
 

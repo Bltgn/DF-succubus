@@ -1,5 +1,10 @@
 -- Wrapper script for commands used in summoning reactions
--- First parameter is the worker id, then a serie of commands
+--[[
+
+	First parameter is the worker id, then a serie of commands
+	@author Boltgun
+
+]]
 
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 if not ... then qerror('Missing parameters.') end
@@ -16,7 +21,7 @@ function runCommands()
 		if command == 'untame' then
 			dfhack.run_script('fooccubus-untame', unitId)
 		elseif command == 'skills' then
-			dfhack.run_script('fooccubus-skills')
+			dfhack.run_script('fooccubus-skills', '1000')
 		end
 
 	end
