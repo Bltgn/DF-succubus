@@ -1,5 +1,17 @@
 todo
 
+4.2
+---
+
+Civ
++ Racourcir des noms
+
+Bugfix
+Pas de sang sur le sol en faisant des stygian bronzes
+
+PHP -> fixer les commandes nahash
+Revoir les sprites
+
 4.3
 ---
 
@@ -11,27 +23,10 @@ Fire imp : Utiliser un fire snake et non un extract
 
 Civ
 Add tissue style
++ Racourcir des noms
 
 Scripts
 - Cancel reaction, no soul wisp LOS
-
-4.2
----
-
-Sprites 
-+ Fire imp
-+ Basilisk zombie
-+ Nobles
-
-Scripts
-- Untame soul wisp LOS
-- Natural skills
-
-Civ
-+ Racourcir des noms
-
-Bugfix
-Pas de sang sur le sol en faisant des stygian bronzes
 
 5.0
 ---

@@ -1,6 +1,12 @@
 # Succubus Dungeon : Changelog #
 4.2
-- Sprite update : Added drunk, merchant, warlord, champion, alchemist
+- Sprite update : Added drunk, merchant, warlord, champion, alchemist, zombie basilisk
+
++ Sumoning changes
+- Monsters now receives their natural skills when summoned
+- Several monsters are not longer tame upon sumonning, but they remain friendly
+- In order to train a monster, you must first assign it in a cage and tame it.
+
 4.1
 - Sprite update: Added fishery workers, crafters, medics, jewelers and rangers
 - Fixed a couple of typos in the civs positions
