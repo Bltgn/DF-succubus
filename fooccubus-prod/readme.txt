@@ -4,8 +4,8 @@ Succubus Dungeon is a mod for vanilla Dwarf Fortress featuring a new 'evil' civ.
 
 # Features #
 * A new race.
-* 2 new civilizations play with in both fort and adventurer mode.
-* A workshop : Summoning circle where you can call on various beasts.
+* 2 new civilizations to play with in both fort and adventurer mode.
+* A workshop, the summoning circle, where you can call on various beasts.
 * 2 new metals : Stygian Bronze and Orichalcum
 * The ablity to build whips.
 * Dwarven sieges.
@@ -57,7 +57,7 @@ If this conflict with another mod, you can add the tags manually :
 * Oricalchum : A light and very solid metal. Can be made at a smelter using basilisk horns.
 
 # Known issues #
-* Upon leaving, traders will treat pets in their stocks as "kidnapped", this has little incidence unless you trade an owned pet.
+* Upon leaving, traders will "kidnap" their own pets, this has little incidence to your fort.
 * Sold creatures does not count towards the export values.
 
 # Contact #

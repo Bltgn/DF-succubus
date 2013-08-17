@@ -5,7 +5,8 @@
 + Sumoning changes
 - Monsters now receives their natural skills when summoned
 - Several monsters are not longer tame upon sumonning, but they remain friendly
-- In order to train a monster, you must first assign it in a cage and tame it.
+- In order to train a monster, you must first assign it to a trainer and tame it.
+- Succubi had their animal training skill increased as a compensation.
 
 4.1
 - Sprite update: Added fishery workers, crafters, medics, jewelers and rangers
@@ -16,7 +17,7 @@
 4.0
 + New civ ! Deep succubi.
 - The deep succubi has no access to trading.
-- The deep succubi is at war with everyone.
+- The deep succubi are at war with everyone.
 - From other races perspective, they act as a skulking civ.
 
 + Other fixes
