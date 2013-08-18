@@ -3,14 +3,8 @@ todo
 4.2
 ---
 
-Civ
-+ Racourcir des noms
 
-Bugfix
-Pas de sang sur le sol en faisant des stygian bronzes
-
-PHP -> fixer les commandes nahash
-PHP -> changer le token vers ANIMALTRAIN
+PHP -> ajouter deep_succubus dans les affected de grim smoke
 Revoir les sprites
 
 4.3
@@ -28,6 +22,9 @@ Add tissue style
 
 Scripts
 - Cancel reaction, no soul wisp LOS
+
+Bugfix
+Pas de sang sur le sol en faisant des stygian bronzes
 
 5.0
 ---
