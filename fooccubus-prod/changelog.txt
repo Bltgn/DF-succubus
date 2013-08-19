@@ -1,12 +1,15 @@
 # Succubus Dungeon : Changelog #
 4.2
-- Sprite update : Added drunk, merchant, warlord, champion, alchemist, zombie basilisk
-
 + Sumoning changes
-- Monsters now receives their natural skills when summoned
-- Several monsters are not longer tame upon sumonning, but they remain friendly
+- Monsters now receives their natural skills when summoned.
+- Natural skills are also provided when the saved game is loaded.
+- Several monsters are not longer tame upon sumonning, but they keep their friendly behavior.
+- Untame summons can still be assigned to pastures and cages.
 - In order to train a monster, you must first assign it to a trainer and tame it.
 - Succubi had their animal training skill increased as a compensation.
+
++ Others
+- Sprite update : Added drunk, merchant, warlord, champion, alchemist, zombie basilisk
 
 4.1
 - Sprite update: Added fishery workers, crafters, medics, jewelers and rangers
