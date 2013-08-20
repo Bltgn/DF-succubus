@@ -9,20 +9,22 @@ Sprites
 
 Fire imp : Utiliser un fire snake et non un extract
 
-Civ
-Add tissue style
-+ Racourcir des noms
-
 Scripts
 - Cancel reaction, no soul wisp LOS
 
 Bugfix
 Pas de sang sur le sol en faisant des stygian bronzes
 
+
+
 5.0
 ---
 
-Creature
+CAdd tissue style
++ Racourcir des noms
+
+Summon non deep
++ Pit fiend
 
 Summon deep
 + 1 Cthulu stuff
@@ -47,6 +49,11 @@ Deep
 
 Plants
 + Evil biomes : Roses (et vin) + 1 underground (blood worm?)
+
+PHP
+- Passer le gem coeur dans l'entity
+- Ajuster les shapes (ajouter lover dans art modifier)
+- AJouter la barbe et moustache pour les incubi, et des styles dans l'entity
 
 5.1
 ---

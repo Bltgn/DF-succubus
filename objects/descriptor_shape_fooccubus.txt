@@ -63,6 +63,7 @@ descriptor_shape_fooccubus
 
 [SHAPE:PENTAGRAM]
 	[NAME:pentagram:pentagrams]
+	[WORD:EVIL]
 	[ADJ:burning]
 	[ADJ:large]
 	[ADJ:inverted]
@@ -90,6 +91,13 @@ descriptor_shape_fooccubus
 
 [SHAPE:FLAME]
 	[NAME:flame:flames]
+	[WORD:FLAME]
 	[ADJ:rising]
 	[ADJ:twisted]
 	[TILE:12]
+
+[SHAPE:HEART_CUT_GEM]
+	[NAME:gem:gems]
+	[ADJ:heart cut]
+	[GEMS_USE_ADJ]
+	[TILE:4]
