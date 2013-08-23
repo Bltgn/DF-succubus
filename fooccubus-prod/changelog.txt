@@ -5,6 +5,8 @@
 - Sprite update : added slave, prisonner, whipper, thief.
 - Hair descriptions now include styling.
 - A new gem shape has been added.
+- Removed the 'map is not loaded' error on the embark screen.
+- The deep succubi should have their own graphics, for now it is the same with a blue background.
 
 4.2
 + Sumoning changes
