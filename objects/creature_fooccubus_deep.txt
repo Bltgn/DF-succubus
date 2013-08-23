@@ -84,7 +84,6 @@ creature_fooccubus_deep
 		[CASTE_PROFESSION_NAME:MASTER_CROSSBOWMAN:Elite Marksincubus:Elite Marksincubi]
 		[CASTE_PROFESSION_NAME:MASTER_BOWMAN:Elite Bowincubus:Elite Bowincubi]
 		[CASTE_PROFESSION_NAME:ALCHEMIST:Cultist:Cultists]
-		[BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
 			
 	// Body plan
 	[SELECT_CASTE:ALL]

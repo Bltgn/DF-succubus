@@ -2,10 +2,9 @@
 5.0
 
 + Other changes
-- Sprite update : added slave, prisonner, whipper.
+- Sprite update : added slave, prisonner, whipper, thief.
 - Hair descriptions now include styling.
-- The incubi can now grow moustaches and beards.
-- A new game shape has been added.
+- A new gem shape has been added.
 
 4.2
 + Sumoning changes
