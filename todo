@@ -32,20 +32,14 @@ Summon deep
 + Interact => crazed
 
 Altar of nightmares
-+ Call migrants
 + Call evil weather
-+ Provoquer siege
 
 Conversion workshop
 + Intégrer makeown dans un script
-+ Ajouter castes pour deep
 
 Royalist
 + Make own prisonners
 + Tester un fix pour les souls, pour pousser les convertis à bosser
-
-Deep
-+ Transform prisonners into caste
 
 Plants
 + Evil biomes : Roses (et vin) + 1 underground (blood worm?)
@@ -54,6 +48,8 @@ PHP
 - Passer le gem coeur dans l'entity
 - Ajuster les shapes (ajouter lover dans art modifier)
 - AJouter la barbe et moustache pour les incubi, et des styles dans l'entity
+
+- Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
 
 5.1
 ---

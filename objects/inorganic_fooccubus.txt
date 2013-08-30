@@ -474,12 +474,12 @@ inorganic_fooccubus
 		TODO
 
 // dens
-[INORGANIC:CHARM_PRISONNERS] // makeown prisonners
+[INORGANIC:CHARM_PRISONERS] // makeown prisonners
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
 	[STATE_COLOR:GAS:WHITE]
 	[STATE_COLOR:ALL_SOLID:WHITE]
-	[STATE_NAME_ADJ:ALL_SOLID:Charm nearby prisonners to your side]
+	[STATE_NAME_ADJ:ALL_SOLID:Charm nearby prisoners to your side]
 	[STATE_NAME_ADJ:LIQUID:liquid]
 	[STATE_NAME_ADJ:GAS:smoke]
 	[DISPLAY_COLOR:6:0:1][TILE:'*']
@@ -493,12 +493,12 @@ inorganic_fooccubus
 		[SYN_CLASS:\COMMAND]
 		TODO
 		
-[INORGANIC:CORRUPT_PRISONNERS] // transform prisonners
+[INORGANIC:CORRUPT_PRISONERS] // transform prisonners
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
 	[STATE_COLOR:GAS:WHITE]
 	[STATE_COLOR:ALL_SOLID:WHITE]
-	[STATE_NAME_ADJ:ALL_SOLID:Transform nearby prisonners into succubi]
+	[STATE_NAME_ADJ:ALL_SOLID:Transform nearby prisoners into succubi]
 	[STATE_NAME_ADJ:LIQUID:liquid]
 	[STATE_NAME_ADJ:GAS:smoke]
 	[DISPLAY_COLOR:6:0:1][TILE:'*']
@@ -509,6 +509,16 @@ inorganic_fooccubus
 		[SYN_CLASS:\WORKER_ONLY]
 		[SYN_AFFECTED_CREATURE:FOOCCUBUS:ALL]
 		[SYN_AFFECTED_CREATURE:FOOCCUBUS_DEEP:ALL]
+		[CE_BODY_TRANSFORMATION:PROB:100:START:0:END:1000]
+		[CE:CREATURE:SUMMONING_RITUAL:GENERIC]
 		[SYN_CLASS:\COMMAND]
-		TODO
+		[CE_CAN_DO_INTERACTION:START:5:END:1100]
+			[CDI:INTERACTION:CORRUPT_PRISONERS]
+			[CDI:ADV_NAME:Transform A nearby prisoner into succubi]
+			[CDI:TARGET:LINE_OF_SIGHT]
+			[CDI:TARGET_RANGE:A:5]
+			[CDI:WAIT_PERIOD:1]
+			[CDI:FREE_ACTION]
+			[CDI:VERB:concentrate:concentrates:NA]
+			[CDI:TARGET_VERB:screams as a transformation takes effect]
 

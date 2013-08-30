@@ -7,6 +7,8 @@
 - A new gem shape has been added.
 - Removed the 'map is not loaded' error on the embark screen.
 - The deep succubi should have their own graphics, for now it is the same with a blue background.
+- Incubi may now grow beards, if they want to.
+- Fixed wrong immunities being applied to creatures
 
 4.2
 + Sumoning changes
