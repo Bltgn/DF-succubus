@@ -1,27 +1,12 @@
 todo
 
-4.3
----
-
-Sprites 
-+ Fire imp + zombie
-+ Nobles
-
-Fire imp : Utiliser un fire snake et non un extract
-
-Scripts
-- Cancel reaction, no soul wisp LOS
-
-Bugfix
-Pas de sang sur le sol en faisant des stygian bronzes
-Error de id dans tentacle clean
-
-
 5.0
 ---
 
 CAdd tissue style
 + Racourcir des noms
+
+Fire imp : Utiliser un fire snake et non un extract
 
 Summon non deep
 + Pit fiend
@@ -46,16 +31,25 @@ Plants
 
 PHP
 - Ajuster les shapes (ajouter lover dans art modifier)
-
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
 
 5.1
 ---
 
+Sprites 
++ Fire imp + zombie
++ Nobles
+
+Scripts
+- Cancel reaction, no soul wisp LOS
+
 Civ
 Add tissue style
 
 Commencer sprite deep
+
+Bugfix
+Pas de sang sur le sol en faisant des stygian bronzes
 
 6.0
 ---
