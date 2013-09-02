@@ -23,9 +23,6 @@ Error de id dans tentacle clean
 CAdd tissue style
 + Racourcir des noms
 
-Summon non deep
-+ Pit fiend
-
 Summon deep
 + 1 Cthulu stuff
 + Interact => pourrissement
@@ -45,9 +42,7 @@ Plants
 + Evil biomes : Roses (et vin) + 1 underground (blood worm?)
 
 PHP
-- Passer le gem coeur dans l'entity
 - Ajuster les shapes (ajouter lover dans art modifier)
-- AJouter la barbe et moustache pour les incubi, et des styles dans l'entity
 
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
 

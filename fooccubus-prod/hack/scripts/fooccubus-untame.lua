@@ -1,6 +1,6 @@
 -- Remove the tame flag from soul wisps within LOS
 --[[
-	
+
 	This script is called when a summoning job completes
 	@author Boltgun
 
@@ -14,20 +14,7 @@ if not ... then qerror('Please enter a creature ID.') end
 local unit = nil
 local unitList = df.global.world.units.active
 local unitId = tonumber(...)
- 
--- Finding the source unit
-function findUnit(searchId)
-	local k, _
- 
-	for k, _ in ipairs(unitList) do
-		if unitList[k].id == searchId then
-			return unitList[k]
-		end
-	end
- 
-	return nil
-end
- 
+
 -- Check if the unit is seen and valid
 function isSelected(unit, view)
 	local unitRaw = df.global.world.raws.creatures.all[unitTarget.race]
@@ -58,12 +45,12 @@ function validateCoords(pos, view)
 end
 
 
- 
+
 -- Find soul wisps within the LOS of the creature
 function findLos(unitSource)
 	local view = fov.get_fov(5, unitSource.pos)
 	local i
-	
+
 	-- Check through the list for the right units
 	for i = #unitList - 1, 0, -1 do
 		unitTarget = unitList[i]
@@ -77,7 +64,7 @@ function untame(unit)
 	unit.flags1.tame = false
 end
 
-unit = findUnit(unitId)
+unit = df.unit.find(unitId)
 if not unit then qerror('Unit not found.') end
- 
+
 findLos(unit)
