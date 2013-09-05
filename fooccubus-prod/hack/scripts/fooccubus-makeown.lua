@@ -64,13 +64,13 @@ unit = df.unit.find(tonumber(args[1]))
 if not unit then qerror('Unit not found.') end
 
 -- Return the set of affected units
-if not args[2] then qerror('Please enter a creature set.')
+if not args[2] then qerror('Please enter a creature set.') end
 if args[2] == 'invaders-deep' then
-	creatureSet = {'HUMAN' = true, 'KOBOLD' = true, 'ELF' = true, 'DWARF' = true, 'GOBLIN' = true, 'FOOCCUBUS' = true}
+	creatureSet = {['HUMAN'] = true, ['KOBOLD'] = true, ['ELF'] = true, ['DWARF'] = true, ['GOBLIN'] = true, ['FOOCCUBUS'] = true}
 elseif args[2] == 'invaders' then
-	creatureSet = {'HUMAN' = true, 'KOBOLD' = true, 'ELF' = true, 'DWARF' = true, 'GOBLIN' = true, 'FOOCCUBUS_DEEP' = true}
+	creatureSet = {['HUMAN'] = true, ['KOBOLD'] = true, ['ELF'] = true, ['DWARF'] = true, ['GOBLIN'] = true, ['FOOCCUBUS_DEEP'] = true}
 elseif args[2] == 'minotaur' then
-	creatureSet = {'MINOTAUR' = true}
+	creatureSet = {['MINOTAUR'] = true}
 else
 	qerror('Unsupported creature set.')
 end
