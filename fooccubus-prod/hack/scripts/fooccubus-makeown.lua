@@ -20,7 +20,7 @@ function isSelected(unit, view)
 	local creatureId = df.global.world.raws.creatures.all[unitTarget.race].creature_id
 	local pos = unit.pos
 
-	if creatureSet[creature_id] and
+	if creatureSet[creatureId] and
 		not dfhack.units.isDead(unit) and
 		not dfhack.units.isOpposedToLife(unit) then
 			return validateCoords(pos, view)
@@ -46,7 +46,7 @@ end
 
 -- Find soul wisps within the LOS of the creature
 function findLos(unitSource)
-	local view = fov.get_fov(5, unitSource.pos)
+	local view = fov.get_fov(10, unitSource.pos)
 	local i
 	local unitList = df.global.world.units.active
 
@@ -54,6 +54,18 @@ function findLos(unitSource)
 	for i = #unitList - 1, 0, -1 do
 		unitTarget = unitList[i]
 		if isSelected(unitTarget, view) then
+			-- Taking down all the hostility flags
+			unit.flags1.marauder = false
+			unit.flags1.active_invader = false
+			unit.flags1.hidden_in_ambush = false
+			unit.flags1.hidden_ambusher = false
+			unit.flags1.invades = false
+			unit.flags1.coward = false
+			unit.flags1.invader_origin = false
+			unit.flags2.underworld = false
+			unit.flags2.visitor_uninvited = false
+			unit.invasion_id = -1
+
 			mo.make_own(unitTarget)
 		end
 	end
