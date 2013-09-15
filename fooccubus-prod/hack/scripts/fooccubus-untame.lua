@@ -6,7 +6,6 @@
 
 ]]
 local fov = require 'fov'
-local utils = require 'utils'
 
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 if not ... then qerror('Please enter a creature ID.') end
@@ -18,30 +17,29 @@ local unitId = tonumber(...)
 -- Check if the unit is seen and valid
 function isSelected(unit, view)
 	local unitRaw = df.global.world.raws.creatures.all[unitTarget.race]
-	local pos = unit.pos
 
 	if unitRaw.creature_id == "SOUL_WISP" and
 		not dfhack.units.isDead(unit) and
 		not dfhack.units.isOpposedToLife(unit) then
-			return validateCoords(pos, view)
+			return validateCoords(unit, view)
 	end
 
 	return false
 end
 
 -- Check boundaries and field of view
-function validateCoords(pos, view)
+function validateCoords(unit, view)
+	local pos = {dfhack.units.getPosition(unit)}
 
-	if pos.x < view.xmin or pos.x > view.xmax then
+	if pos[1] < view.xmin or pos[1] > view.xmax then
 		return false
 	end
 
-	if pos.y < view.ymin or pos.y > view.ymax then
+	if pos[2] < view.ymin or pos[2] > view.ymax then
 		return false
 	end
 
-	return view.z == pos.z and view[pos.y][pos.x] > 0
-
+	return view.z == pos[3] and view[pos[2]][pos[1]] > 0
 end
 
 
