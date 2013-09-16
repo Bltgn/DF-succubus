@@ -3,47 +3,45 @@ todo
 5.0
 ---
 
-CAdd tissue style
 + Racourcir des noms
+
 Summon deep
 + 1 Cthulu stuff
 + Interact => pourrissement
 + Interact => crazed
 
-Altar of nightmares
-+ Call evil weather
-
-Conversion workshop
-+ Intégrer makeown dans un script
-
 Royalist
-+ Make own prisonners
+! Make own prisonners
 + Tester un fix pour les souls, pour pousser les convertis à bosser
 
-Plants
-+ Evil biomes : Roses (et vin) + 1 underground (blood worm?)
++ Reagents
++ Refaire visual altar
 
-PHP
-- Ajuster les shapes (ajouter lover dans art modifier)
-- Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
++ corriger sprite knife user
++ retirer les gouttes de wax worker + couleur flamme
 
 5.1
 ---
 
 Sprites
-+ Fire imp + zombie
 + Nobles
++ Manager
+
+Den
++ Charm minotaur
 
 Scripts
 - Cancel reaction, no soul wisp LOS
-
-Civ
-Add tissue style
+- Cancel reaction, no invader
 
 Commencer sprite deep
 
 Bugfix
 Pas de sang sur le sol en faisant des stygian bronzes
+
+PHP
+- Ajuster les shapes (ajouter lover dans art modifier)
+- Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
 
 6.0
 ---
@@ -53,14 +51,20 @@ Summons tier 3
 + Pit fiend, weapon user sentient
 + 2 cthulu mythos
 
+Altar of nightmare
++ call evil weather
++ call fire weather
++ visit dreams (effet ?)
+
 
 Sans tag
 --------
 
-Test
++ Test
 Tentacle cleaning
 Instruments reageants dans accelerated
+Evil plants + drinks
 
-FIXME!
++ FIXME!
 Soul wisp doit pouvoir bruler
 boobs and acheek should appear at 12, plus growth

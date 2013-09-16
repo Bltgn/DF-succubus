@@ -1,14 +1,19 @@
 # Succubus Dungeon : Changelog #
 5.0
++ Corruption anf charming
 
 + Other changes
 - Sprite update : added slave, prisonner, whipper, thief.
+- Regular succubi will now use nightmares as mounts and wagon pullers.
+- Regular succubi have no longer access ot horses, mules and other vanilla pack animals.
+- Goblins may now trade with wagons.
 - Hair descriptions now include styling.
 - A new gem shape has been added.
 - Removed the 'map is not loaded' error on the embark screen.
-- The deep succubi should have their own graphics, for now it is the same with a blue background.
+- The deep succubi should have their own graphics, currently the same with a blue background.
 - Incubi may now grow beards, if they want to.
 - Fixed wrong immunities being applied to creatures
+- Summoning fire imps now use the vanilla creature (you should see no difference)
 
 4.2
 + Sumoning changes
