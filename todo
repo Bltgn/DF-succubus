@@ -6,9 +6,8 @@ todo
 + Racourcir des noms
 
 Summon deep
-+ 1 Cthulu stuff
-+ Interact => pourrissement
-+ Interact => crazed
+! 1 Cthulu stuff
+! Interact => crazed
 
 Royalist
 ! Make own prisonners
@@ -16,9 +15,6 @@ Royalist
 
 + Reagents
 + Refaire visual altar
-
-+ corriger sprite knife user
-+ retirer les gouttes de wax worker + couleur flamme
 
 5.1
 ---
@@ -29,6 +25,7 @@ Sprites
 
 Den
 + Charm minotaur
++ Tester un fix pour les souls, pour pousser les convertis à bosser
 
 Scripts
 - Cancel reaction, no soul wisp LOS
@@ -43,8 +40,15 @@ PHP
 - Ajuster les shapes (ajouter lover dans art modifier)
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
 
++ corriger sprite knife user
++ retirer les gouttes de wax worker + couleur flamme
+
 6.0
 ---
+
+
+Altar of nightmares
++ Call evil weather
 
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
