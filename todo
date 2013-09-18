@@ -3,18 +3,13 @@ todo
 5.0
 ---
 
-CAdd tissue style
 + Racourcir des noms
+
 Summon deep
 + 1 Cthulu stuff
 + Interact => pourrissement
 + Interact => crazed
-
-Altar of nightmares
-+ Call evil weather
-
-Conversion workshop
-+ Intégrer makeown dans un script
++ Supprimer imp en trop
 
 Royalist
 + Make own prisonners
@@ -26,6 +21,12 @@ Plants
 PHP
 - Ajuster les shapes (ajouter lover dans art modifier)
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
+-- Corriger l'orthographe CORRUPT_PRISONNERS !
+-- corrupt => range 10
+
+corrup :
+pb avec les cages - chercher caged + position cage ?
+
 
 5.1
 ---
@@ -47,6 +48,10 @@ Pas de sang sur le sol en faisant des stygian bronzes
 
 6.0
 ---
+
+
+Altar of nightmares
++ Call evil weather
 
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
