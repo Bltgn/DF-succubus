@@ -37,7 +37,7 @@ If this conflict with another mod, you can add the tags manually :
 # The civilizations #
 * Royalist Succubi
 A caste of demons that escaped hell and fell in love with the surface. They value crafting and arts above anything else. Their
-ties with hell allow them to summon various creatures to their help and infuse bronze with unnatural properties. Even prisonners
+ties with hell allow them to summon various creatures to their help and infuse bronze with unnatural properties. Even prisoners
 will be tempted to embrace their ways.
 
 * Deep succubi
@@ -49,7 +49,7 @@ races into half breed to strengthen their numbers.
 * You can embark with Soul Wisps, those pets are used as a fodder for summoning.
 * Migrants and caravans will bring additional wisps.
 * In order to summon a creature, you must install a summoning circle and a pasture next to each other.
-* Pasture one or more soul wisp next to the circle.
+* Pasture one or more soul wisps next to the circle.
 * The soul wisp will be replaced with the target creature.
 * When possible, the resulting gender will be choosen randomly.
 
@@ -58,7 +58,7 @@ races into half breed to strengthen their numbers.
 * Tentacle monster : Excellent wrestler. Can be milked for slime.
 
 ## Royalist succubi summons ##
-* Hellhound :  An aggressive cousin of the dog, can be trained to serve as a bodyguard.
+* Hellhound : An aggressive cousin of the dog, can be trained to serve as a bodyguard.
 * Nightmare : A tireless grazer, can be milked or trained for war. Beware of its powerful kick.
 * Fire imp : A small humanoid surrounded by fire they can hurl at their enemies.
 * Pain elemental : A weak creature that will explode when attacked.
@@ -67,18 +67,18 @@ races into half breed to strengthen their numbers.
 ## Deep succubi summon ##
 * Sothoth spawn : An huge monster that will turn itself invisible to its enemies. Its slime will turn non succubi victim crazy.
 
-# Turning prisonners in you side #
+# Turning prisoners in you side #
 Both civs have access to a special building allowing them to turn citizen of other civilization to your fort.
-* The deep succubi variant is more powerful as it also tranform them into your own race and will act as full citizen.
-* To turn prisonners, install their cages near the building then execute the charm/corrupt prionner job.
+* The deep succubi variant is more powerful as it also transform prisoners who will act as full citizens.
+* To turn prisoners, install their cages near the den of iniquity or torture chamber then execute the charm/corrupt prisoner job.
 * These jobs use the alchemy labor.
-* Prisonners withing line of sight will be made member of your civilization.
+* Prisoners within line of sight will be made member of your civilization.
 
-The deep succubi will also transform prisonners into half breed :
-* Humans and elf become cambions : They are more enduring and have a beter animal training skill.
+The deep succubi will also transform prisoners into half breeds :
+* Humans and elf become cambions : They are more enduring and have a better animal training skill.
 * Dwarves become devils : They can enter martial trances and have good mechanics skill. They are however, shorter.
 * Goblins become hellions : They are more enduring and do not need to eat.
-* Kobolds become imps : THey are unfortunatly small but are great at dodging and using knives.
+* Kobolds become imps : They are unfortunately small but are great at dodging and using knives.
 
 ## New materials ##
 * Stygian bronze : Made from bronze, flux stone and a secret ingredient. It is much lighter then regular bronze.

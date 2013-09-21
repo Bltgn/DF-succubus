@@ -3,10 +3,10 @@
 + Corruption and charming
 - It is now possible to turn caged invaders to your side !
 - The deep succubi can build a torture chamber.
-- Executing the corrupt prisonners job will turn nearby prisonners into succubi.
-- These prisonners keep a few traits from their former race.
+- Executing the corrupt prisoners job will turn nearby prisoners into succubi.
+- These prisoners keep a few traits from their former race.
 - Regular succubi have access to a lesser version : The Den of iniquity
-- The Den of iniquity turn prisonners to your side without transformations.
+- The Den of iniquity turn prisoners to your side without transformations.
 
 + New building : Altar of nightmare
 - An exclusive building for the deep succubi.
@@ -17,15 +17,15 @@
 - Added a cheat 'pacify' script that render invaders friendly.
 - Deep succubi are now bad at mechanics, but deep devils are good at this job.
 - New summon : Shothoth spawn, an huge monster that will ambush enemies.
-- Sprite update : added slave, prisonner, whipper, thief.
+- Sprite update : added slave, prisoner, whipper, thief.
 - Regular succubi will now use nightmares as mounts and wagon pullers.
 - Regular succubi have no longer access ot horses, mules and other vanilla pack animals.
 - Goblins may now trade with wagons, if they have the right animals.
-- Hair descriptions now include styling. Beard has been added to inccubi, if they let it grow.
+- Hair descriptions now include styling. Beard has been added to incubi, if they let it grow.
 - A new gem shape has been added.
 - Removed the 'map is not loaded' error on the embark screen.
 - The deep succubi have now a blue background, this is temporary until they receive their own sprites.
-- Fixed wrong immunities being applied to creatures.
+- Fixed wrong syndrome classes being applied to creatures.
 - Summoning fire imps now use the vanilla creature (you should see no difference).
 - A few placeholders as been added for the future updates.
 
