@@ -14,6 +14,7 @@ Royalist
 5.1
 ---
 
+
 Sprites
 + Nobles
 + Manager
@@ -35,6 +36,7 @@ Pas de sang sur le sol en faisant des stygian bronzes
 PHP
 - Ajuster les shapes (ajouter lover dans art modifier)
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
+- Fixer les body des castes de deeep succubi
 
 + corriger sprite knife user
 + retirer les gouttes de wax worker + couleur flamme

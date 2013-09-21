@@ -19,8 +19,8 @@ Succubus Dungeon is a mod for vanilla Dwarf Fortress featuring a new 'evil' civ.
 * To uninstall, simply delete the *_fooccubus files from your raws folder.
 
 ## Dwarves and goblins ##
-These two entities lack the tags needed to interact with you in fortress mode. To have them pay a visit, replace the entity_default 
-with the one included in the 'optional' folder of the archive. The changes will not affect your play as a dwarf civ.
+These two entities lack the tags needed to interact with you in fortress mode. To have them pay a visit, replace the
+entity_default with the one included in the 'optional' folder of the archive. The changes will not affect your play as a dwarf civ.
 
 If this conflict with another mod, you can add the tags manually :
 * Add the following to the MOUNTAIN entity :
@@ -34,23 +34,51 @@ If this conflict with another mod, you can add the tags manually :
 * Add the following to the EVIL entity :
 [COMMON_DOMESTIC_PACK]
 
+# The civilizations #
+* Royalist Succubi
+A caste of demons that escaped hell and fell in love with the surface. They value crafting and arts above anything else. Their
+ties with hell allow them to summon various creatures to their help and infuse bronze with unnatural properties. Even prisonners
+will be tempted to embrace their ways.
+
+* Deep succubi
+Small cults of succubi who believe that the world is doomed and must be prepared for the return of the ancient gods. Each cult
+must survive on its own against all the other civilizations. As a result they rely on their dark powers to turn members of other
+races into half breed to strengthen their numbers.
+
 # Summoning a creature #
 * You can embark with Soul Wisps, those pets are used as a fodder for summoning.
 * Migrants and caravans will bring additional wisps.
 * In order to summon a creature, you must install a summoning circle and a pasture next to each other.
 * Pasture one or more soul wisp next to the circle.
 * The soul wisp will be replaced with the target creature.
+* When possible, the resulting gender will be choosen randomly.
 
-## Regular succubi summons ##
+## Summons for both civs ##
+* Nahash : Vermin hunting snake. It can be bred for its eggs.
+* Tentacle monster : Excellent wrestler. Can be milked for slime.
+
+## Royalist succubi summons ##
 * Hellhound :  An aggressive cousin of the dog, can be trained to serve as a bodyguard.
 * Nightmare : A tireless grazer, can be milked or trained for war. Beware of its powerful kick.
 * Fire imp : A small humanoid surrounded by fire they can hurl at their enemies.
 * Pain elemental : A weak creature that will explode when attacked.
 * Basilisk : A large reptile breathing poisonous vapors. Its horn can be sheared for orichalcum.
 
-## Summons for both civs ##
-* Nahash : Vermin hunting snake. It can be bred for its eggs.
-* Tentacle monster : Excellent wrestler. Can be milked for slime.
+## Deep succubi summon ##
+* Sothoth spawn : An huge monster that will turn itself invisible to its enemies. Its slime will turn non succubi victim crazy.
+
+# Turning prisonners in you side #
+Both civs have access to a special building allowing them to turn citizen of other civilization to your fort.
+* The deep succubi variant is more powerful as it also tranform them into your own race and will act as full citizen.
+* To turn prisonners, install their cages near the building then execute the charm/corrupt prionner job.
+* These jobs use the alchemy labor.
+* Prisonners withing line of sight will be made member of your civilization.
+
+The deep succubi will also transform prisonners into half breed :
+* Humans and elf become cambions : They are more enduring and have a beter animal training skill.
+* Dwarves become devils : They can enter martial trances and have good mechanics skill. They are however, shorter.
+* Goblins become hellions : They are more enduring and do not need to eat.
+* Kobolds become imps : THey are unfortunatly small but are great at dodging and using knives.
 
 ## New materials ##
 * Stygian bronze : Made from bronze, flux stone and a secret ingredient. It is much lighter then regular bronze.

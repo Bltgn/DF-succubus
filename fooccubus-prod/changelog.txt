@@ -1,19 +1,33 @@
 # Succubus Dungeon : Changelog #
 5.0
-+ Corruption anf charming
++ Corruption and charming
+- It is now possible to turn caged invaders to your side !
+- The deep succubi can build a torture chamber.
+- Executing the corrupt prisonners job will turn nearby prisonners into succubi.
+- These prisonners keep a few traits from their former race.
+- Regular succubi have access to a lesser version : The Den of iniquity
+- The Den of iniquity turn prisonners to your side without transformations.
+
++ New building : Altar of nightmare
+- An exclusive building for the deep succubi.
+- Allow to provoke a siege.
+- One civilization is randomly chosen to attack you.
 
 + Other changes
+- Added a cheat 'pacify' script that render invaders friendly.
+- Deep succubi are now bad at mechanics, but deep devils are good at this job.
+- New summon : Shothoth spawn, an huge monster that will ambush enemies.
 - Sprite update : added slave, prisonner, whipper, thief.
 - Regular succubi will now use nightmares as mounts and wagon pullers.
 - Regular succubi have no longer access ot horses, mules and other vanilla pack animals.
-- Goblins may now trade with wagons.
-- Hair descriptions now include styling.
+- Goblins may now trade with wagons, if they have the right animals.
+- Hair descriptions now include styling. Beard has been added to inccubi, if they let it grow.
 - A new gem shape has been added.
 - Removed the 'map is not loaded' error on the embark screen.
-- The deep succubi should have their own graphics, currently the same with a blue background.
-- Incubi may now grow beards, if they want to.
-- Fixed wrong immunities being applied to creatures
-- Summoning fire imps now use the vanilla creature (you should see no difference)
+- The deep succubi have now a blue background, this is temporary until they receive their own sprites.
+- Fixed wrong immunities being applied to creatures.
+- Summoning fire imps now use the vanilla creature (you should see no difference).
+- A few placeholders as been added for the future updates.
 
 4.2
 + Sumoning changes
