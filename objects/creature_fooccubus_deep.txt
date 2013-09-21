@@ -104,8 +104,6 @@ creature_fooccubus_deep
 		[CASTE_NAME:deep cambion:deep cambions:deep cambion]
 		[BABYNAME:deep cambion baby:deep cambion babies]
 		[CHILDNAME:deep cambion girl:deep cambion girls]
-		[BODY:5TOES]
-		[BODYGLOSS:HOOF:FOOT]
 		[SKILL_LEARN_RATE:ANIMALTRAIN:300]
 		[PHYS_ATT_RANGE:ENDURANCE:700:1200:1400:1500:1600:1800:2500]
 	[SELECT_CASTE:CAMBION_MALE]

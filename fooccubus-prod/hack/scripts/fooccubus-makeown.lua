@@ -17,31 +17,30 @@ local args = {...}
 
 -- Check if the unit is seen and valid
 function isSelected(unit, view)
-	local creatureId = df.global.world.raws.creatures.all[unitTarget.race].creature_id
-	local pos = unit.pos
+	local creatureId = df.global.world.raws.creatures.all[unit.race].creature_id
 
 	if creatureSet[creatureId] and
 		not dfhack.units.isDead(unit) and
 		not dfhack.units.isOpposedToLife(unit) then
-			return validateCoords(pos, view)
+			return validateCoords(unit, view)
 	end
 
 	return false
 end
 
 -- Check boundaries and field of view
-function validateCoords(pos, view)
+function validateCoords(unit, view)
+	local pos = {dfhack.units.getPosition(unit)}
 
-	if pos.x < view.xmin or pos.x > view.xmax then
+	if pos[1] < view.xmin or pos[1] > view.xmax then
 		return false
 	end
 
-	if pos.y < view.ymin or pos.y > view.ymax then
+	if pos[2] < view.ymin or pos[2] > view.ymax then
 		return false
 	end
 
-	return view.z == pos.z and view[pos.y][pos.x] > 0
-
+	return view.z == pos[3] and view[pos[2]][pos[1]] > 0
 end
 
 -- Find soul wisps within the LOS of the creature
@@ -54,19 +53,19 @@ function findLos(unitSource)
 	for i = #unitList - 1, 0, -1 do
 		unitTarget = unitList[i]
 		if isSelected(unitTarget, view) then
-			-- Taking down all the hostility flags
-			unit.flags1.marauder = false
-			unit.flags1.active_invader = false
-			unit.flags1.hidden_in_ambush = false
-			unit.flags1.hidden_ambusher = false
-			unit.flags1.invades = false
-			unit.flags1.coward = false
-			unit.flags1.invader_origin = false
-			unit.flags2.underworld = false
-			unit.flags2.visitor_uninvited = false
-			unit.invasion_id = -1
-
 			mo.make_own(unitTarget)
+
+			-- Taking down all the hostility flags
+			unitTarget.flags1.marauder = false
+			unitTarget.flags1.active_invader = false
+			unitTarget.flags1.hidden_in_ambush = false
+			unitTarget.flags1.hidden_ambusher = false
+			unitTarget.flags1.invades = false
+			unitTarget.flags1.coward = false
+			unitTarget.flags1.invader_origin = false
+			unitTarget.flags2.underworld = false
+			unitTarget.flags2.visitor_uninvited = false
+			unitTarget.invasion_id = -1
 		end
 	end
 end
@@ -87,4 +86,5 @@ else
 	qerror('Unsupported creature set.')
 end
 
+print("makeown")
 findLos(unit)

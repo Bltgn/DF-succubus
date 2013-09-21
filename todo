@@ -5,67 +5,74 @@ todo
 
 + Racourcir des noms
 
-Summon deep
-+ 1 Cthulu stuff
-+ Interact => pourrissement
-+ Interact => crazed
-+ Supprimer imp en trop
-
 Royalist
-+ Make own prisonners
-+ Tester un fix pour les souls, pour pousser les convertis à bosser
+! Make own prisonners
 
-Plants
-+ Evil biomes : Roses (et vin) + 1 underground (blood worm?)
-
-PHP
-- Ajuster les shapes (ajouter lover dans art modifier)
-- Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
--- Corriger l'orthographe CORRUPT_PRISONNERS !
--- corrupt => range 10
-
-corrup :
-pb avec les cages - chercher caged + position cage ?
-
+! Reagents
++ Refaire visual altar
 
 5.1
 ---
 
 Sprites
-+ Fire imp + zombie
 + Nobles
++ Manager
++ Outpost liaison
+
+Den
++ Charm minotaur
++ Tester un fix pour les souls, pour pousser les convertis à bosser
 
 Scripts
 - Cancel reaction, no soul wisp LOS
-
-Civ
-Add tissue style
+- Cancel reaction, no invader
 
 Commencer sprite deep
 
 Bugfix
 Pas de sang sur le sol en faisant des stygian bronzes
 
+PHP
+- Ajuster les shapes (ajouter lover dans art modifier)
+- Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
+
++ corriger sprite knife user
++ retirer les gouttes de wax worker + couleur flamme
+
 6.0
 ---
-
-
-Altar of nightmares
-+ Call evil weather
 
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient
 + 2 cthulu mythos
 
+Altar of nightmare
++ call evil weather
++ call fire weather
++ visit dreams (effet ajout de valeur pour la migration ?)
+
+Summoning circle
++ Sacrify (tranform en monstre)
++ Essayer placeunit
+
+Pouvoirs
++ Gehenna fire + fireimmune
++ Spread pheromones (cave adapt ?)
++ Gaze of loss (inconscient)
++ Gaze of madness (deep, crazed)
++ Dimensional rub (deep, necrose)
++ Caresses (royal, soin alliés + nettoyage)
++ Torrid kiss (royal, feu au contact + fireimmune)
 
 Sans tag
 --------
 
-Test
++ Test
 Tentacle cleaning
 Instruments reageants dans accelerated
+Evil plants + drinks
 
-FIXME!
++ FIXME!
 Soul wisp doit pouvoir bruler
 boobs and acheek should appear at 12, plus growth
