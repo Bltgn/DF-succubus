@@ -7,9 +7,8 @@ todo
 
 Royalist
 ! Make own prisonners
-+ Tester un fix pour les souls, pour pousser les convertis à bosser
 
-+ Reagents
+! Reagents
 + Refaire visual altar
 
 5.1
@@ -18,6 +17,7 @@ Royalist
 Sprites
 + Nobles
 + Manager
++ Outpost liaison
 
 Den
 + Charm minotaur
@@ -42,10 +42,6 @@ PHP
 6.0
 ---
 
-
-Altar of nightmares
-+ Call evil weather
-
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient
@@ -54,8 +50,20 @@ Summons tier 3
 Altar of nightmare
 + call evil weather
 + call fire weather
-+ visit dreams (effet ?)
++ visit dreams (effet ajout de valeur pour la migration ?)
 
+Summoning circle
++ Sacrify (tranform en monstre)
++ Essayer placeunit
+
+Pouvoirs
++ Gehenna fire + fireimmune
++ Spread pheromones (cave adapt ?)
++ Gaze of loss (inconscient)
++ Gaze of madness (deep, crazed)
++ Dimensional rub (deep, necrose)
++ Caresses (royal, soin alliés + nettoyage)
++ Torrid kiss (royal, feu au contact + fireimmune)
 
 Sans tag
 --------
