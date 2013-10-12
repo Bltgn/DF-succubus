@@ -5,6 +5,7 @@
 + You can now charm minotaurs at the Den of iniquity.
 + Added new descriptors to shothoth spawns and adjusted their bodies to reflect their original material better.
 + Shothoth spawns now take 6 years to reach full size instead of 3.
++ Fixed issues with the makeown scripts that caused converted citizens to act as enemies.
 
 5.0
 + Corruption and charming
