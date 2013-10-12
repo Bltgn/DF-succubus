@@ -1,28 +1,25 @@
-todo
-
-5.1
+5.2
 ---
 
 Sprites
 + Nobles
 + Manager
 + Outpost liaison
++ Foreign
++ Terminer
 
 Den
-+ Charm minotaur
 + Tester un fix pour les souls, pour pousser les convertis à bosser
 
 Scripts
 - Cancel reaction, no soul wisp LOS
 - Cancel reaction, no invader
 
-Commencer sprite deep
-
-Bugfix
-Pas de sang sur le sol en faisant des stygian bronzes
++ Charm minotaur => charm megabeast
++ Commencer sprite deep
++ Modifier body des castes
 
 PHP
-- Ajuster les shapes (ajouter lover dans art modifier)
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
 - Fixer les body des castes de deeep succubi
 
@@ -35,7 +32,7 @@ PHP
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient
-+ 2 cthulu mythos
++ 1 cthulu mythos
 
 Altar of nightmare
 + call evil weather
@@ -62,6 +59,7 @@ Sans tag
 Tentacle cleaning
 Instruments reageants dans accelerated
 Evil plants + drinks
+Charm minotaur
 
 + FIXME!
 Soul wisp doit pouvoir bruler
