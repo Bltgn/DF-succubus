@@ -1,4 +1,9 @@
 # Succubus Dungeon : Changelog #
+5.1
++ Charm prisoners should now work.
++ Added sprites for Shothoth spawns in normal and animated variants.
++ You can now charm minotaurs at the Den of iniquity.
+
 5.0
 + Corruption and charming
 - It is now possible to turn caged invaders to your side !
