@@ -3,6 +3,8 @@
 + Charm prisoners should now work.
 + Added sprites for Shothoth spawns in normal and animated variants.
 + You can now charm minotaurs at the Den of iniquity.
++ Added new descriptors to shothoth spawns and adjusted their bodies to reflect their original material better.
++ Shothoth spawns now take 6 years to reach full size instead of 3.
 
 5.0
 + Corruption and charming
