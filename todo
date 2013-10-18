@@ -22,8 +22,11 @@ PHP
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
 - Fixer les body des castes de deeep succubi
 
-+ corriger sprite knife user
-+ retirer les gouttes de wax worker + couleur flamme
++ Pb line of sight charm interaction, marche a travers le sol
++ Error avec pos
++ Revoir le slime des tentacles, moins mortel et immuser les autres summons
++ Soin des nerfs en plus des tendons
++ retirer les todo dans l'inorganic + le nom dans charm minotaur
 
 6.0
 ---
