@@ -1,8 +1,11 @@
 # Succubus Dungeon : Changelog #
 5.2
 + Tentacle slime will no longer affect deep succubi as well as the other summoned creatures.
-+ Tentacle slime's syndrome will no longer be applied when eaten, its paralysis has been made less powerful.
-+ Summoning and charming interactions should no longer work through floors.
++ Tentacle slime's syndrome has been made less powerfull and will no longer be effective when eaten.
++ Summoning and charming interactions should no longer spread through floors.
++ Reduced the skill rust rates of all the summoned creatures.
++ Sprite update : Added foreign general, foreign hammerer, manager
++ Sprite update : Added baron, count and consorts
 
 5.1
 + Charm prisoners should now work.

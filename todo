@@ -3,17 +3,18 @@
 
 Sprites
 + Nobles
-+ Manager
 + Outpost liaison
-+ Foreign
-+ Terminer
 
-+ Error avec pos
-+ Soin des nerfs en plus des tendons
 + Fixer les body des castes de deep succubi
 
 5.3
 ---
+
+Sprites
++ Finir foreign (religieux, forced admin, faire un tour sur elfs et humans)
++ Prowler, priestess, cultists, faire un tour sur les adventure stuff, overlord
++ Master thief
++ Ajouter les références aux deep succubi
 
 Scripts
 - Cancel reaction, no soul wisp LOS
@@ -24,6 +25,10 @@ Den
 
 6.0
 ---
+
+Sprites
++ Commencer deep
++ Réduire la taille de royalist
 
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
