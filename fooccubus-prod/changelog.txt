@@ -1,4 +1,9 @@
 # Succubus Dungeon : Changelog #
+5.2
++ Tentacle slime will no longer affect deep succubi as well as the other summoned creatures.
++ Tentacle slime's syndrome will no longer be applied when eaten, its paralysis has been made less powerful.
++ Summoning and charming interactions should no longer work through floors.
+
 5.1
 + Charm prisoners should now work.
 + Added sprites for Shothoth spawns in normal and animated variants.

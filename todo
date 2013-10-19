@@ -8,25 +8,19 @@ Sprites
 + Foreign
 + Terminer
 
-Den
-+ Tester un fix pour les souls, pour pousser les convertis à bosser
++ Error avec pos
++ Soin des nerfs en plus des tendons
++ Fixer les body des castes de deep succubi
+
+5.3
+---
 
 Scripts
 - Cancel reaction, no soul wisp LOS
-- Cancel reaction, no invader
+- Cancel reaction, no invader/minotaur
 
-+ Commencer sprite deep
-+ Modifier body des castes
-
-PHP
-- Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
-- Fixer les body des castes de deeep succubi
-
-+ Pb line of sight charm interaction, marche a travers le sol
-+ Error avec pos
-+ Revoir le slime des tentacles, moins mortel et immuser les autres summons
-+ Soin des nerfs en plus des tendons
-+ retirer les todo dans l'inorganic + le nom dans charm minotaur
+Den
++ Tester un fix pour les souls, pour pousser les convertis à bosser
 
 6.0
 ---
@@ -34,9 +28,11 @@ PHP
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient
-+ 1 cthulu mythos
++ 1 cthulu mythos (deep one)
 
-+ Charm minotaur => charm megabeast
++ Commencer sprite deep
+
++ Charm minotaur => charm megabeast (+ cyclops, giant, ...?)
 
 Altar of nightmare
 + call evil weather
@@ -56,6 +52,8 @@ Pouvoirs
 + Caresses (royal, soin alliés + nettoyage)
 + Torrid kiss (royal, feu au contact + fireimmune)
 
+PHP
+- Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
 Sans tag
 --------
 
