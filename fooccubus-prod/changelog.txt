@@ -6,6 +6,7 @@
 + Reduced the skill rust rates of all the summoned creatures.
 + Sprite update : Added foreign general, foreign hammerer, manager
 + Sprite update : Added baron, count and consorts
++ Deep half breeds now have feet instead of hooves and will not spawn with redundant limbs.
 
 5.1
 + Charm prisoners should now work.
