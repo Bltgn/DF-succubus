@@ -6,6 +6,7 @@ Succubus Dungeon is a mod for vanilla Dwarf Fortress featuring a new 'evil' civ.
 * A new race.
 * 2 new civilizations to play with in both fort and adventurer mode.
 * A workshop, the summoning circle, where you can call on various beasts.
+* Converting your caged prisoners to your side.
 * 2 new metals : Stygian Bronze and Orichalcum
 * The ablity to build whips.
 * Dwarven sieges.
@@ -16,7 +17,7 @@ Succubus Dungeon is a mod for vanilla Dwarf Fortress featuring a new 'evil' civ.
 * Overwrite the entity_default file in the optional folder with the one provided to add dwarven sieges (see below).
 * Make sure the temperature feature is activated. It should be by default on most versions of DF.
 * Generate a new world and select a succubus civilization to start playing.
-* To uninstall, simply delete the *_fooccubus files from your raws folder.
+* To uninstall, simply delete the *_fooccubus files from your raws folder and the fooccubus-* files from your script folder.
 
 ## Dwarves and goblins ##
 These two entities lack the tags needed to interact with you in fortress mode. To have them pay a visit, replace the
@@ -65,12 +66,12 @@ races into half breed to strengthen their numbers.
 * Basilisk : A large reptile breathing poisonous vapors. Its horn can be sheared for orichalcum.
 
 ## Deep succubi summon ##
-* Sothoth spawn : An huge monster that will turn itself invisible to its enemies. Its slime will turn non succubi victim crazy.
+* Sothoth spawn : An huge monster that will turn itself invisible to its enemies. Its slime will turn its victims crazy.
 
 # Turning prisoners in you side #
 Both civs have access to a special building allowing them to turn citizen of other civilization to your fort.
 * The deep succubi variant is more powerful as it also transform prisoners who will act as full citizens.
-* To turn prisoners, install their cages near the den of iniquity or torture chamber then execute the charm/corrupt prisoner job.
+* To turn prisoners, install their cages near a den of iniquity or a torture chamber then execute the charm/corrupt prisoner job.
 * These jobs use the alchemy labor.
 * Prisoners within line of sight will be made member of your civilization.
 

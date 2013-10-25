@@ -4,8 +4,7 @@
 + Tentacle slime's syndrome has been made less powerfull and will no longer be effective when eaten.
 + Summoning and charming interactions should no longer spread through floors.
 + Reduced the skill rust rates of all the summoned creatures.
-+ Sprite update : Added foreign general, foreign hammerer, manager, diplomat
-+ Sprite update : Added baron, count and consorts
++ Sprite update : Added foreign general, foreign hammerer, manager, diplomat and nobles.
 + Deep half breeds now have feet instead of hooves and will not spawn with redundant limbs.
 
 5.1
