@@ -1,6 +1,19 @@
 5.3
 ---
 
++ Modifier les descriptions des réactions et des unités invoquées pour plus d'aide
+
++ Retirer un reagent par invocation
+
++ Faire un patch MW, renommer orichalcum
+
++ Mettre en casse toutes les créatures pours - de modifs à faire sur les syndromes
+
++ Rendre les soul wisps utils
+
+5.4
+---
+
 Sprites
 + Finir foreign (religieux, forced admin, faire un tour sur elfs et humans)
 + Prowler, priestess, cultists, faire un tour sur les adventure stuff, overlord
@@ -8,14 +21,21 @@ Sprites
 + Ajouter les références aux deep succubi
 
 Scripts
-- Cancel reaction, no soul wisp LOS
 - Cancel reaction, no invader/minotaur
 
 Den
 + Tester un fix pour les souls, pour pousser les convertis à bosser
 
+
 6.0
 ---
+
+Summon
++ Retirer les interactions, inutiles (ou virer les scripts pour les remplacer par des syndrometarget si ça marche)
++ Nettoyer phpraw car des paramètres sont inutiles maintenant
++ Retirer les castes 'generic', remplacer par default pour pain elemental
++ Ajouter un summon pour soul wisp, ou les supprimer
++ 
 
 Sprites
 + Commencer deep

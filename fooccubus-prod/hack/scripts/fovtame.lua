@@ -1,7 +1,10 @@
--- Remove the tame flag from soul wisps within LOS
+-- Add the tame flag from a specified creature within LOS of the source unit
 --[[
 
-	This script is called when a summoning job completes
+	usage fovuntame <sourceUnit> <creatureRaw>
+	* sourceUnit : The unit's id in the current site (ie: 128)
+	* creatureRaw : The creature raw id (ie: DOG)
+
 	@author Boltgun
 
 ]]
@@ -10,15 +13,16 @@ local fov = require 'fov'
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 if not ... then qerror('Please enter a creature ID.') end
 
+local args = {...}
 local unit = nil
 local unitList = df.global.world.units.active
-local unitId = tonumber(...)
+local unitId = args[1]
 
 -- Check if the unit is seen and valid
 function isSelected(unit, view)
 	local unitRaw = df.global.world.raws.creatures.all[unitTarget.race]
 
-	if unitRaw.creature_id == "SOUL_WISP" and
+	if unitRaw.creature_id == args[2] and
 		not dfhack.units.isDead(unit) and
 		not dfhack.units.isOpposedToLife(unit) then
 			return validateCoords(unit, view)
@@ -59,7 +63,8 @@ function findLos(unitSource)
 end
 
 function untame(unit)
-	unit.flags1.tame = false
+	unit.flags1.tame = true
+	unit.training_level = df.animal_training_level.Domesticated
 end
 
 unit = df.unit.find(unitId)

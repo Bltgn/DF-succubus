@@ -1,4 +1,8 @@
 # Succubus Dungeon : Changelog #
+5.3
++ Summoning no longer require soul wisps near the summoning circle
++ Summoning now spawn one creature at a time
+
 5.2
 + Tentacle slime will no longer affect deep succubi as well as the other summoned creatures.
 + Tentacle slime's syndrome has been made less powerfull and will no longer be effective when eaten.

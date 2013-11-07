@@ -43,11 +43,6 @@ local delay
 
 -- The list of creatures supported by this script, ignored if left empty
 local validUnit = {
-	'BASILISK',
-	'NIGHTMARE', 
-	'HELLHOUND', 
-	'TENTACLE_MONSTER',
-	'NAHASH'
 }  
 
 -- Scan the units table for targeted creatures
