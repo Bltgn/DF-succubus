@@ -2,6 +2,7 @@
 5.3
 + Summoning no longer require soul wisps near the summoning circle
 + Summoning now spawn one creature at a time
++ Most summoning jobs now require less or cheaper materials
 
 5.2
 + Tentacle slime will no longer affect deep succubi as well as the other summoned creatures.
