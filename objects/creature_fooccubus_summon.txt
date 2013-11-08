@@ -3,7 +3,7 @@ creature_fooccubus
 [OBJECT:CREATURE]
 
 [CREATURE:TENTACLE_MONSTER] // Summon, war + buffing bodyguard, can be milked for food or soap
-	[DESCRIPTION:A terrifying creature with many tentacles and corrupt intentions. Their slime is known to cause strange feelings of euphoria on most creatures. Those are often kept as pets by the succubi who enjoy milking them for various purposes.]
+	[DESCRIPTION:A terrifying creature with many tentacles and corrupt intentions. Their slime is known to cause strange feelings of euphoria on most creatures. Tentacle monsters are often kept as pets by the succubi who enjoy milking them for various purposes.]
 	[NAME:tentacle monster:tentacle monsters:tentacle monster]
 	[CASTE_NAME:tentacle monster:tentacle monsters:tentacle monster]
 	[CREATURE_TILE:'&'][COLOR:2:0:0]
@@ -110,6 +110,12 @@ creature_fooccubus
 		[CDI:MAX_TARGET_NUMBER:A:1]
 		[CDI:WAIT_PERIOD:300]
 		[CDI:VERB:reach out:reach out]
+	[SET_TL_GROUP:BY_CATEGORY:EYE:EYE]
+		[TL_COLOR_MODIFIER:GREEN:1:EMERALD:1:YELLOW:1]
+		[TLCM_NOUN:eyes:PLURAL]
+	[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
+		[TL_COLOR_MODIFIER:PURPLE:1:MAUVE:1:INDIGO:1]
+		[TLCM_NOUN:skin:SINGULAR]
 	[CASTE:MALE]
 		[MILKABLE:LOCAL_CREATURE_MAT:SLIME:20000]
 
