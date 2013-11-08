@@ -1,8 +1,14 @@
 # Succubus Dungeon : Changelog #
 5.3
-+ Summoning no longer require soul wisps near the summoning circle
-+ Summoning now spawn one creature at a time
-+ Most summoning jobs now require less or cheaper materials
++ Summoning no longer require soul wisps near the summoning circle.
++ Summoning now spawn one creature at a time.
++ Most summoning jobs now require less or cheaper materials.
++ Tentacle slime paralysis has been replaced by a short term stun and fever.
++ Shothoth spawn slime now cause a severe necrosis.
++ Madness caused by shothoth spawn will be displayed with a blinking '!'
++ Nahashes and tentacle monsters are now immune from shothoth slime effects.
++ Basilisk breath is now a vapor flow and will leave spatters.
++ All summoned creatures are now immune to the basilisk's breat.
 
 5.2
 + Tentacle slime will no longer affect deep succubi as well as the other summoned creatures.

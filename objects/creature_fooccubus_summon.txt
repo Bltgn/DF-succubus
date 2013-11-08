@@ -2,8 +2,8 @@ creature_fooccubus
 
 [OBJECT:CREATURE]
 
-[CREATURE:TENTACLE_MONSTER] // Summon, war + buffing bodyguard
-	[DESCRIPTION:A terrifying creature with many tentacles and corrupt intentions. It has glowing green eyes.]
+[CREATURE:TENTACLE_MONSTER] // Summon, war + buffing bodyguard, can be milked for food or soap
+	[DESCRIPTION:A terrifying creature with many tentacles and corrupt intentions. Their slime is known to cause strange feelings of euphoria on most creatures. Those are often kept as pets by the succubi who enjoy milking them for various purposes.]
 	[NAME:tentacle monster:tentacle monsters:tentacle monster]
 	[CASTE_NAME:tentacle monster:tentacle monsters:tentacle monster]
 	[CREATURE_TILE:'&'][COLOR:2:0:0]
@@ -74,8 +74,8 @@ creature_fooccubus
 			[SYN_INJECTED]
 			[SYN_CONTACT]
 				[CE_DIZZINESS:SEV:100:PROB:100:RESISTABLE:SIZE_DILUTES:START:0:PEAK:1:END:200]
-				[CE_DROWSINESS:SEV:100:PROB:100:RESISTABLE:SIZE_DILUTES:START:0:PEAK:1:END:200]
-				[CE_PARALYSIS:SEV:90:PROB:100:RESISTABLE:LOCALIZED:SIZE_DILUTES:START:0:PEAK:50:END:200]
+				[CE_FEVER:SEV:100:PROB:100:RESISTABLE:SIZE_DILUTES:START:0:PEAK:1:END:200]
+				[CE_UNCONSCIOUSNESS:SEV:90:PROB:100:RESISTABLE:LOCALIZED:SIZE_DILUTES:START:0:PEAK:1:END:50]
 				[CE_SPEED_CHANGE:SPEED_PERC:50:START:0:END:300]
 	[SECRETION:LOCAL_CREATURE_MAT:SLIME:LIQUID:BY_CATEGORY:TENTACLE:SKIN]
 	[BODY_SIZE:0:0:80000]
@@ -115,8 +115,8 @@ creature_fooccubus
 
 [CREATURE:SUMMONING_RITUAL] // dummy
 	[DESCRIPTION:This creature entered into a trance, dancing and chanting a sinister song.]
-	[NAME:summoning ritual:summoning rituals:summoning ritual]
-	[CASTE_NAME:summoning ritual:summoning rituals:summoning ritual]
+	[NAME:unholy ritual:unholy rituals:unholy ritual]
+	[CASTE_NAME:unholy ritual:unholy rituals:unholy ritual]
 	[CREATURE_TILE:'*'][COLOR:4:0:1]
 	[NOT_BUTCHERABLE]
 	[ARENA_RESTRICTED]
@@ -174,7 +174,7 @@ creature_fooccubus
 	[CASTE:GENERIC]
 
 [CREATURE:SOUL_WISP] // creature used in summons
-	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people. A summoner typically use their energy to summon monsters.]
+	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people.]
 	[NAME:soul wisp:soul wisps:soul wisp]
 	[CREATURE_TILE:'o'][COLOR:7:0:1]
 	[GLOWTILE:'`'][GLOWCOLOR:7:0:1]
@@ -322,7 +322,7 @@ creature_fooccubus
 
 [CREATURE:HELLHOUND] // dogs
 	[CREATURE_CLASS:ALL_CREATURES]
-	[DESCRIPTION:A medium sized vicious dog. Courageous trainers can teach it various tasks.]
+	[DESCRIPTION:A medium sized vicious dog coming for the darkest pits. Courageous trainers can teach it various tasks.]
 	[NAME:hell hound:hell hounds:hell hounds]
 	[CASTE_NAME:hell hound:hell hounds:hell hound]
 	[CHILDNAME:hell hound pup:hell hounds pup:hell hound pup]
@@ -579,7 +579,7 @@ creature_fooccubus
 	[CASTE:GENERIC]
 
 [CREATURE:BASILISK] // orichalcum + piercing + debuff breath
-	[DESCRIPTION:A large, height legged, reptile that can breath poisonous vapors. Its particular diet for minerals allow it to grow a metallic horn.]
+	[DESCRIPTION:A large, height legged, reptile that can breath poisonous vapors. Its particular diet for minerals allow it to grow a specific horn that can be sheared then smelted by specialist into a lightweight but solid metal.]
 	[NAME:basilisk:basilisks:basilisk]
 	[CASTE_NAME:basilisk:basilisks:basilisk]
 	[CHILD:3][GENERAL_CHILD_NAME:basilisk hatchling:basilisk hatchlings:basilisk hatchling]
@@ -689,9 +689,14 @@ creature_fooccubus
 		[SYNDROME]
 			[SYN_NAME:stone disease]
 			[SYN_AFFECTED_CLASS:GENERAL_POISON]
+			[SYN_IMMUNE_CREATURE:TENTACLE_MONSTER:ALL]
 			[SYN_IMMUNE_CREATURE:FOOCCUBUS:ALL]
-			[SYN_IMMUNE_CREATURE:DEEP_FOOCCUBUS:ALL]
-			[SYN_IMMUNE_CREATURE:BASILISK:ALL]
+			[SYN_IMMUNE_CREATURE:FOOCCUBUS_DEEP:ALL]
+			[SYN_IMMUNE_CREATURE:NAHASH:ALL]
+			[SYN_IMMUNE_CREATURE:HELLHOUND:ALL]
+			[SYN_IMMUNE_CREATURE:NIGHTMARE:ALL]
+			[SYN_IMMUNE_CREATURE:SHOTHOTH_SPAWN:ALL]
+			[SYN_IMMUNE_CREATURE:IMP_FIRE:ALL]
 			[SYN_INHALED]
 			[SYN_CONTACT]
 			[CE_NUMBNESS:SEV:100:PROB:100:RESISTABLE:SIZE_DILUTES:LOCALIZED:START:0:PEAK:1:END:200]
@@ -704,7 +709,7 @@ creature_fooccubus
 		[CDI:ADV_NAME:Breath poisonous vapor]
 		[CDI:USAGE_HINT:ATTACK]
 		[CDI:BP_REQUIRED:BY_CATEGORY:MOUTH]
-		[CDI:MATERIAL:LOCAL_CREATURE_MAT:BASILISK_BREATH:TRAILING_GAS_FLOW]
+		[CDI:MATERIAL:LOCAL_CREATURE_MAT:BASILISK_BREATH:TRAILING_VAPOR_FLOW]
 		[CDI:TARGET:C:LINE_OF_SIGHT]
 		[CDI:TARGET_RANGE:C:5]
 		[CDI:MAX_TARGET_NUMBER:C:1]
@@ -726,7 +731,7 @@ creature_fooccubus
 // todo review this later on, will need a shell, and make a body
 // ugly secretions causes syndrome
 [CREATURE:SHOTHOTH_SPAWN] // Large creature, causes syndromes, can hide
-	[DESCRIPTION:An hideous monster, resulting from the union of a succubus and an ancient demon. It can turn itself invisible before attacking its foes and secretes a slime whose horrible stench can drive mortal creatures mad.]
+	[DESCRIPTION:An hideous monster, resulting from the union of a succubus and an ancient demon. It can turn itself invisible before attacking its foes and secretes a slime whose horrible stench can 'erase' mortal creatures from existence.]
 	[NAME:shothoth spawn:shothoth spawns:shothoth spawn]
 	[CASTE_NAME:shothoth spawn:shothoth spawns:shothoth spawn]
 	[CHILD:3][GENERAL_CHILD_NAME:young shothoth spawn:young shothoth spawns:young shothoth spawn]
@@ -834,11 +839,15 @@ creature_fooccubus
 			[SYN_IMMUNE_CREATURE:SHOTHOTH_SPAWN:ALL]
 			[SYN_IMMUNE_CREATURE:FOOCCUBUS:ALL]
 			[SYN_IMMUNE_CREATURE:DEEP_FOOCCUBUS:ALL]
+			[SYN_IMMUNE_CREATURE:NAHASH:ALL]
+			[SYN_IMMUNE_CREATURE:TENTACLE_MONSTER:ALL]
 			[SYN_INJECTED]
 			[SYN_CONTACT]
 			[SYN_INGESTED]
 				[CE_DIZZINESS:SEV:100:PROB:100:RESISTABLE:SIZE_DILUTES:START:0:PEAK:1:END:200]
+				[CE_NECROSIS:SEV:100:PROB:100:BP:BY_CATEGORY:ALL:ALL:START:0:PEAK:1:END:500]
 				[CE_ADD_TAG:CRAZED:START:0:END:200]
+				[CE_FLASH_TILE:TILE:'!':4:0:1:FREQUENCY:800:300:START:0:END:300]
 	[SECRETION:LOCAL_CREATURE_MAT:SLIME:LIQUID:BY_CATEGORY:TENTACLE:SKIN]
 	[SECRETION:LOCAL_CREATURE_MAT:SLIME:LIQUID:BY_CATEGORY:MOUTH:SKIN]
 	[BODY_SIZE:0:0:100]

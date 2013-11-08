@@ -1,19 +1,9 @@
 5.3
 ---
 
-+ Modifier les descriptions des réactions et des unités invoquées pour plus d'aide
-
-+ Retirer un reagent par invocation
-
 + Faire un patch MW, renommer orichalcum
 
-+ Mettre en casse toutes les créatures pours - de modifs à faire sur les syndromes
-
 + Rendre les soul wisps utils
-
-+ Nerfer le slime des tentacles
-
-+ Ajouter de la necrose sur le slime des shothoth
 
 5.4
 ---
@@ -30,6 +20,7 @@ Scripts
 Den
 + Tester un fix pour les souls, pour pousser les convertis à bosser
 
++ Mettre en classe toutes les créatures pours - de modifs à faire sur les syndromes
 
 6.0
 ---
