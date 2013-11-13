@@ -9,6 +9,7 @@
 + Nahashes and tentacle monsters are now immune from shothoth slime effects.
 + Basilisk breath is now a vapor flow and will leave spatters.
 + All summoned creatures are now immune to the basilisk's breat.
++ The gas released upon a soul wisp or shothoth spawn's death now have a stun effect.
 
 5.2
 + Tentacle slime will no longer affect deep succubi as well as the other summoned creatures.
