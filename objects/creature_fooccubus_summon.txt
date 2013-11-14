@@ -180,7 +180,7 @@ creature_fooccubus
 	[CASTE:GENERIC]
 
 [CREATURE:SOUL_WISP] // creature used in summons
-	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people.]
+	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people. It is said that breaking one will put everyone around it to sleep.]
 	[NAME:soul wisp:soul wisps:soul wisp]
 	[CREATURE_TILE:'o'][COLOR:7:0:1]
 	[GLOWTILE:'`'][GLOWCOLOR:7:0:1]
@@ -585,7 +585,7 @@ creature_fooccubus
 	[CASTE:GENERIC]
 
 [CREATURE:BASILISK] // orichalcum + piercing + debuff breath
-	[DESCRIPTION:A large, height legged, reptile that can breath poisonous vapors. Its particular diet for minerals allow it to grow a specific horn that can be sheared then smelted by specialist into a lightweight but solid metal.]
+	[DESCRIPTION:A large, height legged, reptile that can breath poisonous vapors. Its particular diet for minerals allow it to grow a specific horn that can be sheared. The product can be then smelted into a lightweight but solid metal.]
 	[NAME:basilisk:basilisks:basilisk]
 	[CASTE_NAME:basilisk:basilisks:basilisk]
 	[CHILD:3][GENERAL_CHILD_NAME:basilisk hatchling:basilisk hatchlings:basilisk hatchling]

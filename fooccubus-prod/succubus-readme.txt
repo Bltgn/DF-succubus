@@ -44,12 +44,12 @@ will be tempted to embrace their ways.
 * Deep succubi
 Small cults of succubi who believe that the world is doomed and must be prepared for the return of the ancient gods. Each cult
 must survive on its own against all the other civilizations. As a result they rely on their dark powers to turn members of other
-races into half breed to strengthen their numbers.
+races into half breeds to strengthen their numbers.
 
 # Summoning a creature #
 * In order to summon a creature, you must build a summoning circle using a totem and a construction material.
 * Various jobs require different items, select an unavailable task to see which one.
-* When applicable, the resulting gender will be choosen randomly.
+* When applicable, the resulting gender of the summoned creature will be choosen randomly.
 
 ## Summons for both civs ##
 * Nahash : Vermin hunting snake. It can be bred for its eggs.
@@ -63,7 +63,7 @@ races into half breed to strengthen their numbers.
 * Basilisk : A large reptile breathing poisonous vapors. Its horn can be sheared for orichalcum.
 
 ## Deep succubi summon ##
-* Sothoth spawn : An huge monster that will turn itself invisible to its enemies. Its slime will turn its victims crazy.
+* Sothoth spawn : An huge monster that will turn itself invisible to its enemies. Its slime will damage its victims bodies.
 
 # Turning prisoners in you side #
 Both civs have access to a special building allowing them to turn citizen of other civilization to your fort.
