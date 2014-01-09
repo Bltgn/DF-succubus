@@ -1,9 +1,3 @@
-5.3
----
-
-+ Faire un patch MW, renommer orichalcum
-+ Réduire la longueur de mots
-
 5.4
 ---
 
@@ -13,13 +7,12 @@ Sprites
 + Master thief
 + Ajouter les références aux deep succubi
 
-Scripts
-- Cancel reaction, no invader/minotaur
-
 Den
 + Tester un fix pour les souls, pour pousser les convertis à bosser
++ Retirer les bad thoughts sur les vetements
 
-+ Mettre en classe toutes les créatures pours - de modifs à faire sur les syndromes
+Altar
++ Call rain
 
 6.0
 ---
@@ -28,8 +21,9 @@ Summon
 + Retirer les interactions, inutiles (ou virer les scripts pour les remplacer par des syndrometarget si ça marche)
 + Nettoyer phpraw car des paramètres sont inutiles maintenant
 + Retirer les castes 'generic', remplacer par default pour pain elemental
-+ Ajouter un summon pour soul wisp, ou les supprimer
-+ 
++ Ajouter un summon pour soul wisp aoe skill buff
+
++ Mettre en classe toutes les créatures pours - de modifs à faire sur les syndromes
 
 Sprites
 + Commencer deep
@@ -38,11 +32,16 @@ Sprites
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient
-+ 1 cthulu mythos (deep one)
++ cthulu mythos (deep one, brown arny)
 
 + Commencer sprite deep
 
 + Charm minotaur => charm megabeast (+ cyclops, giant, ...?)
+
+Scripts
+- Cancel reaction, no invader/minotaur
+- Donner des jobs aux non race
+- Retirer les bad thoughts sur les vetements
 
 Altar of nightmare
 + call evil weather
@@ -54,6 +53,7 @@ Summoning circle
 + Essayer placeunit
 
 Pouvoirs
++ Créer 3 branches pour chaque civ
 + Gehenna fire + fireimmune
 + Spread pheromones (cave adapt ?)
 + Gaze of loss (inconscient)
@@ -61,6 +61,9 @@ Pouvoirs
 + Dimensional rub (deep, necrose)
 + Caresses (royal, soin alliés + nettoyage)
 + Torrid kiss (royal, feu au contact + fireimmune)
+
+Civ
++ Renommer les prositions vérifier qu'elles ont les mêmes ID que les vanilla
 
 PHP
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible

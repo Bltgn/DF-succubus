@@ -331,12 +331,12 @@ inorganic_fooccubus
 		[CE_COUGH_BLOOD:SEV:100:PROB:100:START:0:PEAK:1:END:100]
 
 // Altar of nightmares
-[INORGANIC:VISIT_NIGHTMARES] // bonus gains (non functionnal, to be scripted)
+[INORGANIC:VISIT_NIGHTMARES] // bonus gains (tb renamed)
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
 	[STATE_COLOR:GAS:WHITE]
 	[STATE_COLOR:ALL_SOLID:WHITE]
-	[STATE_NAME_ADJ:ALL_SOLID:Call in a wave of migrants]
+	[STATE_NAME_ADJ:ALL_SOLID:Raises the appraisal skill]
 	[STATE_NAME_ADJ:LIQUID:liquid]
 	[STATE_NAME_ADJ:GAS:smoke]
 	[DISPLAY_COLOR:6:0:1][TILE:'*']
@@ -348,7 +348,12 @@ inorganic_fooccubus
 		[SYN_CLASS:\WORKER_ONLY]
 		[SYN_AFFECTED_CREATURE:FOOCCUBUS:ALL]
 		[SYN_AFFECTED_CREATURE:FOOCCUBUS_DEEP:ALL]
+		[CE_UNCONSCIOUSNESS:SEV:100:PROB:100:RESISTABLE:SIZE_DILUTES:START:0:PEAK:1:END:200]
 		[SYN_CLASS:\COMMAND]
+		[SYN_CLASS:trainSkill]
+		[SYN_CLASS:\WORKER_ID]
+		[SYN_CLASS:APPRAISAL]
+		[SYN_CLASS:15]
 
 [INORGANIC:CALL_MIGRANTS] // migration wave (non functionnal for deep succubi, to be scripted)
 	[SPECIAL]
@@ -411,7 +416,8 @@ inorganic_fooccubus
 		[SYN_AFFECTED_CREATURE:FOOCCUBUS:ALL]
 		[SYN_AFFECTED_CREATURE:FOOCCUBUS_DEEP:ALL]
 		[SYN_CLASS:\COMMAND]
-		TODO
+		[SYN_CLASS:weather]
+		[SYN_CLASS:rain]
 
 // conversion dens
 [INORGANIC:CHARM_PRISONERS] // makeown prisonners
