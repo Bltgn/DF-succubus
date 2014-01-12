@@ -33,17 +33,17 @@ unit = df.unit.find(unitId)
 if not unit then qerror('Unit not found.') end
 
 -- Setting things up for the creature
-if 
-	creature == 'NAHASH' or 
-	creature == 'HELLHOUND' or 
-	creature == 'NIGHTMARE' or
-	creature == 'BASILISK'
+if
+	creature == 'NAHASH' or
+	creature == 'HELLHOUND2' or
+	creature == 'NIGHTMARE2' or
+	creature == 'BASILISK2'
 then
 	casteMax = 1
 end
 
-if 
-	creature == 'NAHASH' or 
+if
+	creature == 'NAHASH' or
 	creature == 'SHOTHOTH_SPAWN'
 then
 	tame = true

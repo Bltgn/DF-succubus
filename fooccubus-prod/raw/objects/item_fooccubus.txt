@@ -19,15 +19,6 @@ item_fooccubus
 	[NAME:handcuff:handcuffs]
 	[HARD_MAT]
 
-// Instrument
-[ITEM_INSTRUMENT:ITEM_INSTRUMENT_VIOLIN]
-	[NAME:violin:violins]
-	[HARD_MAT]
-
-[ITEM_INSTRUMENT:ITEM_INSTRUMENT_GUITAR]
-	[NAME:guitar:guitars]
-	[HARD_MAT]
-
 // Clothing
 [ITEM_ARMOR:ITEM_ARMOR_CORSET]
 	[NAME:corset:corsets]
@@ -69,13 +60,3 @@ item_fooccubus
 	[LEATHER]
 	[STRUCTURAL_ELASTICITY_WOVEN_THREAD]
 
-// Weapon
-[ITEM_WEAPON:ITEM_WEAPON_PITCHFORK]
-	[NAME:Pitchfork:pitchforks]
-	[SIZE:900]
-	[SKILL:PIKE]
-	[TWO_HANDED:57500]
-	[MINIMUM_SIZE:52500]
-	[MATERIAL_SIZE:4]
-	[ATTACK:EDGE:20:12000:stab:stabs:NO_SUB:1000]
-	[ATTACK:BLUNT:10000:6000:bash:bashes:shaft:1250]

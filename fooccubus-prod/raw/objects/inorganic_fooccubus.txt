@@ -51,7 +51,7 @@ inorganic_fooccubus
 
 [INORGANIC:ORICHALCUM]
 	[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]
-	[STATE_NAME_ADJ:ALL_SOLID:orichalcum]
+	[STATE_NAME_ADJ:ALL_SOLID:hellish orichalcum]
 	[STATE_NAME_ADJ:LIQUID:molten orichalcum]
 	[STATE_NAME_ADJ:GAS:boiling orichalcum]
 	[DISPLAY_COLOR:6:7:1]
@@ -146,7 +146,7 @@ inorganic_fooccubus
 		[SYN_CLASS:\COMMAND]
 		[SYN_CLASS:fooccubus-summoning]
 		[SYN_CLASS:\WORKER_ID]
-		[SYN_CLASS:HELLHOUND]
+		[SYN_CLASS:HELLHOUND2]
 
 [INORGANIC:SUMMONING_NIGHTMARE]
 	[SPECIAL]
@@ -170,7 +170,7 @@ inorganic_fooccubus
 		[SYN_CLASS:\COMMAND]
 		[SYN_CLASS:fooccubus-summoning]
 		[SYN_CLASS:\WORKER_ID]
-		[SYN_CLASS:NIGHTMARE]
+		[SYN_CLASS:NIGHTMARE2]
 
 [INORGANIC:SUMMONING_TENTACLE_MONSTER]
 	[SPECIAL]
@@ -266,7 +266,7 @@ inorganic_fooccubus
 		[SYN_CLASS:\COMMAND]
 		[SYN_CLASS:fooccubus-summoning]
 		[SYN_CLASS:\WORKER_ID]
-		[SYN_CLASS:BASILISK]
+		[SYN_CLASS:BASILISK2]
 
 [INORGANIC:SUMMONING_SHOTHOTH_SPAWN]
 	[SPECIAL]
@@ -393,26 +393,6 @@ inorganic_fooccubus
 		[SYN_CLASS:fooccubus-callsiege]
 		[SYN_CLASS:100]
 
-[INORGANIC:WEATHER_RAIN] // rain (to be scripted)
-	[SPECIAL]
-	[NO_STONE_STOCKPILE]
-	[STATE_COLOR:GAS:WHITE]
-	[STATE_COLOR:ALL_SOLID:WHITE]
-	[STATE_NAME_ADJ:ALL_SOLID:Start a rainy weather]
-	[STATE_NAME_ADJ:LIQUID:liquid]
-	[STATE_NAME_ADJ:GAS:smoke]
-	[DISPLAY_COLOR:6:0:1][TILE:'*']
-	[MELTING_POINT:9000]
-	[BOILING_POINT:8999]
-	[SOLID_DENSITY:20000000]
-	[SYNDROME]
-		[SYN_CLASS:\AUTO_SYNDROME]
-		[SYN_CLASS:\WORKER_ONLY]
-		[SYN_AFFECTED_CREATURE:FOOCCUBUS:ALL]
-		[SYN_AFFECTED_CREATURE:FOOCCUBUS_DEEP:ALL]
-		[SYN_CLASS:\COMMAND]
-		TODO
-
 // conversion dens
 [INORGANIC:CHARM_PRISONERS] // makeown prisonners
 	[SPECIAL]
@@ -446,7 +426,7 @@ inorganic_fooccubus
 			[CDI:FREE_ACTION]
 			[CDI:VERB:perform a suggestive dance:perform a suggestive dance:NA]
 			[CDI:TARGET_VERB:is mesmerized]
-		
+
 [INORGANIC:CHARM_MINOTAUR] // makeown minotaur
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
