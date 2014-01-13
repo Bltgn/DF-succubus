@@ -5,6 +5,7 @@
 + Added a job in the altar of nightmares to call a rain outside.
 + Removed the smoke from the stygian bronze bar production.
 + Fixed the 'script not found' error on loading.
++ Sprite update : Added priestess, cultist. Updated warlord, comissionner
 
 5.3
 + Summoning no longer require soul wisps near the summoning circle.
