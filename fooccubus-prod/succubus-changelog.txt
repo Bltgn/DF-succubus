@@ -1,6 +1,8 @@
 # Succubus Dungeon : Changelog #
 5.4
-+ The royalist succubi now have access to the altar of nightmare. They cannot provoke sieges with it.
++ Scripts and premade builds has been updated to dfhack r4.
++ The line 'enable autoSyndrome' must be placed in dfhack.init.
++ The royalist succubi now have access to the altar of nightmare.
 + Added a job in the altar of nightmares to allow the acquisition of the appraisal skill, allowing deep succubi to display their fort's production.
 + Added a job in the altar of nightmares to call a rain outside.
 + Removed the smoke from the stygian bronze bar production.

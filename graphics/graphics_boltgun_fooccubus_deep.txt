@@ -1,4 +1,4 @@
-﻿graphics_BOLTGUN_FDooccubus_deep
+﻿graphics_boltgun_fooccubus_deep
 
 [OBJECT:GRAPHICS]
 
