@@ -11,8 +11,6 @@
 	First parameter is the worker id, then a serie of commands
 	@author Boltgun
 
-	todo: add untame
-
 ]]
 
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
@@ -28,22 +26,33 @@ local unitId = args[1]
 if not args[2] then qerror('Please enter a creature raw ID.') end
 local creature = args[2]
 
+local creatureName, creatureLetter, article;
+
+-- Return the creature's raw data
+function getRaw(creature_id)
+	local id, creatureRaw
+
+	for id, creatureRaw in pairs(df.global.world.raws.creatures.all) do
+		if creatureRaw.creature_id == creature_id then return creatureRaw.name[0] end
+	end
+end
+
 -- Getting the summoner
 unit = df.unit.find(unitId)
 if not unit then qerror('Unit not found.') end
 
 -- Setting things up for the creature
-if 
-	creature == 'NAHASH' or 
-	creature == 'HELLHOUND' or 
+if
+	creature == 'NAHASH' or
+	creature == 'HELLHOUND' or
 	creature == 'NIGHTMARE' or
 	creature == 'BASILISK'
 then
 	casteMax = 1
 end
 
-if 
-	creature == 'NAHASH' or 
+if
+	creature == 'NAHASH' or
 	creature == 'SHOTHOTH_SPAWN'
 then
 	tame = true
@@ -59,4 +68,20 @@ end
 -- Execution
 dfhack.run_script('spawnunit', creature, caste, nil, dfhack.units.getPosition(unit))
 
+-- Generating the message
+creatureName = getRaw(creature)
+creatureLetter = string.sub(creatureName, 0, 1)
+
+if creatureLetter == 'a' or creatureLetter == 'e' or
+	creatureLetter == 'i' or creatureLetter == 'u' or
+	creatureLetter == 'h' then
+	article = 'an'
+else
+	article = 'a'
+end
+
+
+dfhack.gui.showAnnouncement('You have summonned '..article..' '..creatureName, COLOR_YELLOW)
+
+-- Tame creature
 if tame then dfhack.run_script('fovtame', unitId, creature) end
