@@ -4,15 +4,17 @@
 Sprites
 + Finir foreign (religieux, forced admin, faire un tour sur elfs et humans)
 + Prowler, faire un tour sur les adventure stuff, overlord
-+ Master thief
 + Ajouter les références aux deep succubi
 
 Den
 + Tester un fix pour les souls, pour pousser les convertis à bosser
-+ Retirer les bad thoughts sur les vetements
++ Retirer les bad thoughts sur les vetements (fixnaked en boucle ?)
 
 Altar
 + Call rain
+
+-retirer la transformation des summons- et ajouter un message
+Migrer untame pour ne plus utiliser fovcommand.
 
 6.0
 ---
@@ -24,6 +26,7 @@ Summon
 + Ajouter un summon pour soul wisp aoe skill buff
 
 + Mettre en classe toutes les créatures pours - de modifs à faire sur les syndromes
++ Ajouter un grasp aux unholy rituals
 
 Sprites
 + Commencer deep
@@ -61,6 +64,8 @@ Pouvoirs
 + Dimensional rub (deep, necrose)
 + Caresses (royal, soin alliés + nettoyage)
 + Torrid kiss (royal, feu au contact + fireimmune)
+
+Créer une météo spéciale pour les zones evil
 
 Civ
 + Renommer les prositions vérifier qu'elles ont les mêmes ID que les vanilla
