@@ -3,9 +3,10 @@
 + Scripts and premade builds has been updated to dfhack r4.
 + Summonning a creature no longer cause transformation.
 + An announcement has been added when a creature is summonned.
++ Succubi and deep succubi no longer lose morale when lacking clothing.
 + The royalist succubi now have access to the altar of nightmare.
 + Added a job in the altar of nightmares to allow the acquisition of the appraisal skill, allowing deep succubi to display their fort's production.
-+ Added a job in the altar of nightmares to call a rain outside.
++ Added a job in the altar of nightmares to call a rain on the field.
 + Removed the smoke from the stygian bronze bar production.
 + Fixed the 'script not found' error on loading.
 + Basilisks are now immune to tentacle slime
