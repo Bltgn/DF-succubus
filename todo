@@ -7,14 +7,7 @@ Sprites
 + Ajouter les références aux deep succubi
 
 Den
-+ Tester un fix pour les souls, pour pousser les convertis à bosser
 + Retirer les bad thoughts sur les vetements (fixnaked en boucle ?)
-
-Altar
-+ Call rain
-
--retirer la transformation des summons- et ajouter un message
-Migrer untame pour ne plus utiliser fovcommand.
 
 6.0
 ---
@@ -66,9 +59,15 @@ Pouvoirs
 + Torrid kiss (royal, feu au contact + fireimmune)
 
 Créer une météo spéciale pour les zones evil
+Migrer untame pour ne plus utiliser fovcommand.
 
 Civ
 + Renommer les prositions vérifier qu'elles ont les mêmes ID que les vanilla
+
+Creatures
++ Ajouter les succubi sauvages, mettre dans HFS
++ Transformer en sauvage en cas de folie
++ Ajouter un effet cave adapt pour les deep
 
 PHP
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
