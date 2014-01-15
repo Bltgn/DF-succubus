@@ -115,9 +115,10 @@ inorganic_fooccubus
 	[SYNDROME]
 		[SYN_CLASS:\AUTO_SYNDROME]
 		[SYN_CLASS:\COMMAND]
-		[SYN_CLASS:fooccubus-summoning]
+		[SYN_CLASS:summoning]
 		[SYN_CLASS:\WORKER_ID]
 		[SYN_CLASS:NAHASH]
+		[SYN_CLASS:tame]
 
 [INORGANIC:SUMMONING_HELLHOUND]
 	[SPECIAL]
@@ -134,7 +135,7 @@ inorganic_fooccubus
 	[SYNDROME]
 		[SYN_CLASS:\AUTO_SYNDROME]
 		[SYN_CLASS:\COMMAND]
-		[SYN_CLASS:fooccubus-summoning]
+		[SYN_CLASS:summoning]
 		[SYN_CLASS:\WORKER_ID]
 		[SYN_CLASS:HELLHOUND]
 
@@ -153,7 +154,7 @@ inorganic_fooccubus
 	[SYNDROME]
 		[SYN_CLASS:\AUTO_SYNDROME]
 		[SYN_CLASS:\COMMAND]
-		[SYN_CLASS:fooccubus-summoning]
+		[SYN_CLASS:summoning]
 		[SYN_CLASS:\WORKER_ID]
 		[SYN_CLASS:NIGHTMARE]
 
@@ -172,7 +173,7 @@ inorganic_fooccubus
 	[SYNDROME]
 		[SYN_CLASS:\AUTO_SYNDROME]
 		[SYN_CLASS:\COMMAND]
-		[SYN_CLASS:fooccubus-summoning]
+		[SYN_CLASS:summoning]
 		[SYN_CLASS:\WORKER_ID]
 		[SYN_CLASS:TENTACLE_MONSTER]
 
@@ -191,7 +192,7 @@ inorganic_fooccubus
 	[SYNDROME]
 		[SYN_CLASS:\AUTO_SYNDROME]
 		[SYN_CLASS:\COMMAND]
-		[SYN_CLASS:fooccubus-summoning]
+		[SYN_CLASS:summoning]
 		[SYN_CLASS:\WORKER_ID]
 		[SYN_CLASS:PAIN_ELEMENTAL]
 
@@ -210,7 +211,7 @@ inorganic_fooccubus
 	[SYNDROME]
 		[SYN_CLASS:\AUTO_SYNDROME]
 		[SYN_CLASS:\COMMAND]
-		[SYN_CLASS:fooccubus-summoning]
+		[SYN_CLASS:summoning]
 		[SYN_CLASS:\WORKER_ID]
 		[SYN_CLASS:IMP_FIRE]
 
@@ -229,7 +230,7 @@ inorganic_fooccubus
 	[SYNDROME]
 		[SYN_CLASS:\AUTO_SYNDROME]
 		[SYN_CLASS:\COMMAND]
-		[SYN_CLASS:fooccubus-summoning]
+		[SYN_CLASS:summoning]
 		[SYN_CLASS:\WORKER_ID]
 		[SYN_CLASS:BASILISK]
 
@@ -248,9 +249,10 @@ inorganic_fooccubus
 	[SYNDROME]
 		[SYN_CLASS:\AUTO_SYNDROME]
 		[SYN_CLASS:\COMMAND]
-		[SYN_CLASS:fooccubus-summoning]
+		[SYN_CLASS:summoning]
 		[SYN_CLASS:\WORKER_ID]
 		[SYN_CLASS:SHOTHOTH_SPAWN]
+		[SYN_CLASS:tame]
 
 // Misc creature stuff
 [INORGANIC:WISP_SMOKE]

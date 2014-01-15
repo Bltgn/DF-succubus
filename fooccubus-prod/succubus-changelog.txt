@@ -1,7 +1,6 @@
 # Succubus Dungeon : Changelog #
 5.4
 + Scripts and premade builds has been updated to dfhack r4.
-+ The line 'enable autoSyndrome' must be placed in dfhack.init.
 + Summonning a creature no longer cause transformation.
 + An announcement has been added when a creature is summonned.
 + The royalist succubi now have access to the altar of nightmare.
@@ -9,6 +8,7 @@
 + Added a job in the altar of nightmares to call a rain outside.
 + Removed the smoke from the stygian bronze bar production.
 + Fixed the 'script not found' error on loading.
++ Basilisks are now immune to tentacle slime
 + Sprite update : Added priestess, cultist, tyrant.
 + Sprite update : Updated warlord, comissionner, male nobles.
 
