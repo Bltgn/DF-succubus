@@ -4,11 +4,11 @@
 	Requires SpawnUnit, for the current version of dfhack.
 	This will spawn the unit using a random caste and call a fov tame flag removal if needed.
 
-	usage fooccubus-summoning <sourceUnit> <creatureRaw>
+	usage fooccubus-summoning <sourceUnit> <creatureRaw> [<tame>]
 	* sourceUnit : The unit's id in the current site (ie: 128)
 	* creatureRaw : The creature raw id (ie: DOG)
+	* tame : If provided, will tame the creature
 
-	First parameter is the worker id, then a serie of commands
 	@author Boltgun
 
 ]]
@@ -26,14 +26,18 @@ local unitId = args[1]
 if not args[2] then qerror('Please enter a creature raw ID.') end
 local creature = args[2]
 
-local creatureName, creatureLetter, article;
+if args[3] then
+	tame = true
+end
+
+local creatureRaw, creatureName, creatureLetter, article;
 
 -- Return the creature's raw data
 function getRaw(creature_id)
-	local id, creatureRaw
+	local id, raw
 
-	for id, creatureRaw in pairs(df.global.world.raws.creatures.all) do
-		if creatureRaw.creature_id == creature_id then return creatureRaw.name[0] end
+	for id, raw in pairs(df.global.world.raws.creatures.all) do
+		if raw.creature_id == creature_id then return raw end
 	end
 end
 
@@ -42,21 +46,8 @@ unit = df.unit.find(unitId)
 if not unit then qerror('Unit not found.') end
 
 -- Setting things up for the creature
-if
-	creature == 'NAHASH' or
-	creature == 'HELLHOUND' or
-	creature == 'NIGHTMARE' or
-	creature == 'BASILISK'
-then
-	casteMax = 1
-end
-
-if
-	creature == 'NAHASH' or
-	creature == 'SHOTHOTH_SPAWN'
-then
-	tame = true
-end
+creatureRaw = getRaw(creature)
+casteMax = #creatureRaw.caste - 1
 
 -- Picking a caste or gender at random
 if casteMax > 0 then
@@ -65,11 +56,11 @@ else
 	caste = 0
 end
 
--- Execution
+-- Spawning
 dfhack.run_script('spawnunit', creature, caste, nil, dfhack.units.getPosition(unit))
 
 -- Generating the message
-creatureName = getRaw(creature)
+creatureName = creatureRaw.name[0]
 creatureLetter = string.sub(creatureName, 0, 1)
 
 if creatureLetter == 'a' or creatureLetter == 'e' or
@@ -80,8 +71,7 @@ else
 	article = 'a'
 end
 
-
-dfhack.gui.showAnnouncement('You have summonned '..article..' '..creatureName, COLOR_YELLOW)
+dfhack.gui.showAnnouncement('You have summonned '..article..' '..creatureName..'.', COLOR_YELLOW)
 
 -- Tame creature
 if tame then dfhack.run_script('fovtame', unitId, creature) end

@@ -64,6 +64,11 @@ Migrer untame pour ne plus utiliser fovcommand.
 Civ
 + Renommer les prositions vérifier qu'elles ont les mêmes ID que les vanilla
 
+Creatures
++ Ajouter les succubi sauvages, mettre dans HFS
++ Transformer en sauvage en cas de folie
++ Ajouter un effet cave adapt pour les deep
+
 PHP
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
 Sans tag
