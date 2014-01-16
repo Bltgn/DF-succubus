@@ -10,7 +10,7 @@
 + Removed the smoke from the stygian bronze bar production.
 + Fixed the 'script not found' error on loading.
 + Basilisks are now immune to tentacle slime
-+ Sprite update : Added priestess, cultist, tyrant.
++ Sprite update : Added priestess, cultist, tyrant, shop keeper, diplomat.
 + Sprite update : Updated warlord, comissionner, male nobles.
 
 5.3
