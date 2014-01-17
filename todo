@@ -1,21 +1,16 @@
 5.4
 ---
 
-Sprites
-+ hunter
-+ administrator
-+ lieutenant
-+ militia captain
-+ militia commander
-+ captain of the guard
-+ refaire jeweler
-
 + MW : AJouter le ore processor
++ Ajouter tax escort à l'overlord
++ Retirer la ligne protector, inutile
 
 + Compiler dfhack pour mac os
 
 6.0
 ---
+
+Renommer la position hunter vers prowler
 
 Summon
 + Retirer les interactions, inutiles (ou virer les scripts pour les remplacer par des syndrometarget si ça marche)
@@ -28,12 +23,14 @@ Summon
 
 Sprites
 + Commencer deep
-+ Réduire la taille de royalist
++ Ajouter les tax escort dans royalist (on ne sait jamais)
 
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient
 + cthulu mythos (deep one, brown arny)
+
++ Retirer la miel et strawberry des nahash et tentacle, ajouter un remplaçant
 
 + Commencer sprite deep
 
