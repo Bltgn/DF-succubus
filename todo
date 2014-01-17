@@ -1,8 +1,10 @@
 5.4
 ---
 
++ Remettre rendermax
++ Retirer getplants
+
 + MW : AJouter le ore processor
-+ Ajouter tax escort à l'overlord
 + Retirer la ligne protector, inutile
 
 + Compiler dfhack pour mac os
@@ -24,6 +26,7 @@ Summon
 Sprites
 + Commencer deep
 + Ajouter les tax escort dans royalist (on ne sait jamais)
++ Ajouter tax escort à l'overlord
 
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
