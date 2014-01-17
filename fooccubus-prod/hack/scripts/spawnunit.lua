@@ -1,9 +1,9 @@
 --create unit at pointer or given location. Usage e.g. "spawnunit DWARF 0 Dwarfy"
-
+ 
 --Made by warmist, but edited by Putnam for the dragon ball mod to be used in reactions
-
+ 
 --note that it's extensible to any autosyndrome reaction to spawn anything due to this; to use in autosyndrome, you want \COMMAND spawnunit CREATURE caste_number name \LOCATION
-
+ 
 args={...}
 function getCaste(race_id,caste_id)
     local cr=df.creature_raw.find(race_id)
@@ -66,19 +66,23 @@ function CreateUnit(race_id,caste_id)
     unit.caste=caste_id
     unit.id=df.global.unit_next_id
     df.global.unit_next_id=df.global.unit_next_id+1
+	unit.relations.old_year=df.global.cur_year-5 -- everybody will be 15 years old
     if caste.misc.maxage_max==-1 then
         unit.relations.old_year=-1
     else
         unit.relations.old_year=df.global.cur_year+math.random(caste.misc.maxage_min,caste.misc.maxage_max)
     end
     unit.sex=caste.gender
+		local num_inter=#caste.body_info.interactions  -- new for interactions
+	unit.curse.anon_4:resize(num_inter) -- new for interactions
+	unit.curse.anon_5:resize(num_inter) -- new for interactions
     local body=unit.body
     
     body.body_plan=caste.body_info
     local body_part_count=#body.body_plan.body_parts
     local layer_count=#body.body_plan.layer_part
     --components
-    unit.relations.birth_year=df.global.cur_year
+    unit.relations.birth_year=df.global.cur_year-15
     --unit.relations.birth_time=??
     
     --unit.relations.old_time=?? --TODO add normal age
@@ -89,11 +93,11 @@ function CreateUnit(race_id,caste_id)
         cp.numbered_masks[num]=v
     end
     
-    cp.body_layer_338:resize(layer_count)
-    cp.body_layer_348:resize(layer_count)
-    cp.body_layer_358:resize(layer_count)
-    cp.body_layer_368:resize(layer_count)
-    cp.body_layer_378:resize(layer_count)
+    cp.layer_status:resize(layer_count)
+    cp.layer_wound_area:resize(layer_count)
+    cp.layer_cut_fraction:resize(layer_count)
+    cp.layer_dent_fraction:resize(layer_count)
+    cp.layer_effect_fraction:resize(layer_count)
     local attrs=caste.attributes
     for k,v in pairs(attrs.phys_att_range) do
         local max_percent=attrs.phys_att_cap_perc[k]/100
@@ -104,7 +108,7 @@ function CreateUnit(race_id,caste_id)
  
     body.blood_max=getBodySize(caste,0) --TODO normal values
     body.blood_count=body.blood_max
-    body.unk_494=0 --infection level
+    body.infection_level=0
     unit.status2.body_part_temperature:resize(body_part_count)
     for k,v in pairs(unit.status2.body_part_temperature) do
         unit.status2.body_part_temperature[k]={new=true,whole=10067,fraction=0}
@@ -118,12 +122,12 @@ function CreateUnit(race_id,caste_id)
  
     --TODO add correct sizes. (calculate from age)
     local size=caste.body_size_2[#caste.body_size_2-1]
-    body.physical_attr_tissues[0]=size
-    body.physical_attr_tissues[1]=size
-    body.physical_attr_tissues[2]=math.pow(size,0.666)
-    body.physical_attr_tissues[3]=math.pow(size,0.666)
-    body.physical_attr_tissues[4]=math.pow(size*10000,0.333)
-    body.physical_attr_tissues[5]=math.pow(size*10000,0.333)
+    body.size_info.size_cur=size
+    body.size_info.size_base=size
+    body.size_info.area_cur=math.pow(size,0.666)
+    body.size_info.area_base=math.pow(size,0.666)
+    body.size_info.area_cur=math.pow(size*10000,0.333)
+    body.size_info.area_base=math.pow(size*10000,0.333)
     
     stuff.were_race=race_id
     stuff.were_caste=caste_id
@@ -163,7 +167,6 @@ function CreateUnit(race_id,caste_id)
     
     local num_inter=#caste.body_info.interactions
     unit.curse.anon_5:resize(num_inter)
-    unit.curse.anon_6:resize(num_inter)
     return unit
 end
 function findRace(name)
@@ -174,49 +177,74 @@ function findRace(name)
     end
     qerror("Race:"..name.." not found!")
 end
-function PlaceUnit(race,caste,name,position)
-local pos=position or copyall(df.global.cursor)
-if pos.x==-30000 then
-    qerror("Point your pointy thing somewhere")
-end
-    race=findRace(race)
-    local u=CreateUnit(race,tonumber(caste) or 0)
-    u.pos:assign(pos)
-    if name then
-        u.name.first_name=name
-        u.name.has_name=true
-    end
-    u.civ_id=df.global.ui.civ_id
- 
-    local desig,ocupan=dfhack.maps.getTileFlags(pos)
-    if ocupan.unit then
-        ocupan.unit_grounded=true
-        u.flags1.on_ground=true
-    else
-        ocupan.unit=true
-    end
-    --createNemesis(u)
-end
-function createFigure(trgunit)
+
+function createFigure(trgunit,he)
     local hf=df.historical_figure:new()
     hf.id=df.global.hist_figure_next_id
     hf.race=trgunit.race
     hf.caste=trgunit.caste
+	hf.profession = trgunit.profession
+	hf.sex = trgunit.sex
     df.global.hist_figure_next_id=df.global.hist_figure_next_id+1
-    hf.name.first_name=trgunit.name.first_name
-    hf.name.has_name=true
- 
- 
+	hf.appeared_year = df.global.cur_year
+	
+	hf.born_year = trgunit.relations.birth_year
+	hf.born_seconds = trgunit.relations.birth_time
+	hf.curse_year = trgunit.relations.curse_year
+	hf.curse_seconds = trgunit.relations.curse_time
+	hf.birth_year_bias = trgunit.relations.birth_year_bias
+	hf.birth_time_bias = trgunit.relations.birth_time_bias
+	hf.old_year = trgunit.relations.old_year
+	hf.old_seconds = trgunit.relations.old_time
+	hf.died_year = -1
+	hf.died_seconds = -1
+	hf.name:assign(trgunit.name)
+	hf.civ_id = trgunit.civ_id
+	hf.population_id = trgunit.population_id
+	hf.breed_id = -1
+	hf.unit_id = trgunit.id
+	
     df.global.world.history.figures:insert("#",hf)
+
+	hf.info = df.historical_figure_info:new()
+	hf.info.unk_14 = df.historical_figure_info.T_unk_14:new() -- hf state?
+	--unk_14.region_id = -1; unk_14.beast_id = -1; unk_14.unk_14 = 0
+	hf.info.unk_14.unk_18 = -1; hf.info.unk_14.unk_1c = -1
+	-- set values that seem related to state and do event
+	--change_state(hf, dfg.ui.site_id, region_pos)
+
+
+--lets skip skills for now
+--local skills = df.historical_figure_info.T_skills:new() -- skills snap shot
+-- ...
+--info.skills = skills
+
+
+	he.histfig_ids:insert('#', hf.id)
+	he.hist_figures:insert('#', hf)
+
+	trgunit.flags1.important_historical_figure = true
+	trgunit.flags2.important_historical_figure = true
+	trgunit.hist_figure_id = hf.id
+	trgunit.hist_figure_id2 = hf.id
+    
+    hf.entity_links:insert("#",{new=df.histfig_entity_link_memberst,entity_id=trgunit.civ_id,link_strength=100})
+    --add entity event
+    local hf_event_id=df.global.hist_event_next_id
+    df.global.hist_event_next_id=df.global.hist_event_next_id+1
+    df.global.world.history.events:insert("#",{new=df.history_event_add_hf_entity_linkst,year=trgunit.relations.birth_year,
+        seconds=trgunit.relations.birth_time,id=hf_event_id,civ=hf.civ_id,histfig=hf.id,link_type=0})
     return hf
 end
-function createNemesis(trgunit)
+function createNemesis(trgunit,civ_id)
     local id=df.global.nemesis_next_id
     local nem=df.nemesis_record:new()
+	local he=df.historical_entity.find(civ_id)
     nem.id=id
     nem.unit_id=trgunit.id
     nem.unit=trgunit
     nem.flags:resize(1)
+    --not sure about these flags...
     nem.flags[4]=true
     nem.flags[5]=true
     nem.flags[6]=true
@@ -230,25 +258,61 @@ function createNemesis(trgunit)
     df.global.nemesis_next_id=id+1
     trgunit.general_refs:insert("#",{new=df.general_ref_is_nemesisst,nemesis_id=id})
     trgunit.flags1.important_historical_figure=true
-    local gen=df.global.world.worldgen
-    nem.save_file_id=gen.next_unit_chunk_id;
-    gen.next_unit_chunk_id=gen.next_unit_chunk_id+1
-    gen.next_unit_chunk_offset=gen.next_unit_chunk_offset+1
     
+    nem.save_file_id=he.save_file_id
+	
+    he.nemesis_ids:insert("#",id)
+	he.nemesis:insert("#",nem)
+    nem.member_idx=he.next_member_idx
+    he.next_member_idx=he.next_member_idx+1
     --[[ local gen=df.global.world.worldgen
     gen.next_unit_chunk_id
     gen.next_unit_chunk_offset
     ]]
-    nem.figure=createFigure(trgunit)
+    nem.figure=createFigure(trgunit,he)
+end
+
+function PlaceUnit(race,caste,name,position,civ_id)
+
+
+	
+    local pos=position or copyall(df.global.cursor)
+    if pos.x==-30000 then
+        qerror("Point your pointy thing somewhere")
+    end
+    race=findRace(race)
+
+	
+    local u=CreateUnit(race,tonumber(caste) or 0)
+    u.pos:assign(pos)
+		
+    if name then
+        u.name.first_name=name
+        u.name.has_name=true
+    end
+    u.civ_id=civ_id or df.global.ui.civ_id
+
+    
+    local desig,ocupan=dfhack.maps.getTileFlags(pos)
+    if ocupan.unit then
+        ocupan.unit_grounded=true
+        u.flags1.on_ground=true
+    else
+        ocupan.unit=true
+    end
+    
+    if df.historical_entity.find(u.civ_id) ~= nil  then
+        createNemesis(u,u.civ_id)
+    end
 end
 
 local argPos
-
+ 
 if #args>3 then
     argPos={}
     argPos.x=args[4]
     argPos.y=args[5]
     argPos.z=args[6]
 end
-
-PlaceUnit(args[1],args[2],args[3],argPos) --Creature (ID), caste (number), name, x,y,z for spawn.
+ 
+PlaceUnit(args[1],args[2],args[3],argPos) --Creature (ID), caste (number), name, x,y,z , civ_id(-1 for enemy, optional) for spawn.

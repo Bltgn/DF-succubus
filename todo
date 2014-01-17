@@ -1,21 +1,18 @@
 5.4
 ---
 
-Sprites
-+ Finir foreign (religieux, forced admin, faire un tour sur elfs et humans)
-+ Prowler, priestess, cultists, faire un tour sur les adventure stuff, overlord
-+ Master thief
-+ Ajouter les références aux deep succubi
++ Remettre rendermax
++ Retirer getplants
 
-Den
-+ Tester un fix pour les souls, pour pousser les convertis à bosser
-+ Retirer les bad thoughts sur les vetements
++ MW : AJouter le ore processor
++ Retirer la ligne protector, inutile
 
-Altar
-+ Call rain
++ Compiler dfhack pour mac os
 
 6.0
 ---
+
+Renommer la position hunter vers prowler
 
 Summon
 + Retirer les interactions, inutiles (ou virer les scripts pour les remplacer par des syndrometarget si ça marche)
@@ -24,15 +21,19 @@ Summon
 + Ajouter un summon pour soul wisp aoe skill buff
 
 + Mettre en classe toutes les créatures pours - de modifs à faire sur les syndromes
++ Ajouter un grasp aux unholy rituals
 
 Sprites
 + Commencer deep
-+ Réduire la taille de royalist
++ Ajouter les tax escort dans royalist (on ne sait jamais)
++ Ajouter tax escort à l'overlord
 
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient
 + cthulu mythos (deep one, brown arny)
+
++ Retirer la miel et strawberry des nahash et tentacle, ajouter un remplaçant
 
 + Commencer sprite deep
 
@@ -62,8 +63,16 @@ Pouvoirs
 + Caresses (royal, soin alliés + nettoyage)
 + Torrid kiss (royal, feu au contact + fireimmune)
 
+Créer une météo spéciale pour les zones evil
+Migrer untame pour ne plus utiliser fovcommand.
+
 Civ
 + Renommer les prositions vérifier qu'elles ont les mêmes ID que les vanilla
+
+Creatures
++ Ajouter les succubi sauvages, mettre dans HFS
++ Transformer en sauvage en cas de folie
++ Ajouter un effet cave adapt pour les deep
 
 PHP
 - Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
