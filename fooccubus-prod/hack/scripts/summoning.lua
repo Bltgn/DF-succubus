@@ -75,3 +75,5 @@ dfhack.gui.showAnnouncement('You have summonned '..article..' '..creatureName..'
 
 -- Tame creature
 if tame then dfhack.run_script('fovtame', unitId, creature) end
+-- Temporary measure
+dfhack.run_script('naturalskills')

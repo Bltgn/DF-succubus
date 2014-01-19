@@ -12,7 +12,7 @@ Succubus Dungeon is a mod for vanilla Dwarf Fortress featuring a new 'evil' civ.
 * Dwarven sieges.
 
 # Installation #
-* Install dfhack r3 if you do not have it already (available at : http://www.bay12forums.com/smf/index.php?topic=91166.0)
+* Install dfhack r4 if you do not have it already (available at http://dffd.wimbli.com/)
 * Extract the archive in your DF folder, preserving the folder structure.
 * Overwrite the entity_default file in the optional folder with the one provided to add dwarven sieges (see below).
 * Make sure the temperature feature is activated. It should be by default on most versions of DF.
@@ -48,8 +48,15 @@ races into half breeds to strengthen their numbers.
 
 # Summoning a creature #
 * In order to summon a creature, you must build a summoning circle using a totem and a construction material.
-* Various jobs require different items, select an unavailable task to see which one.
+* Various jobs require different items, selecting an unavailable task will give your a list.
 * When applicable, the resulting gender of the summoned creature will be choosen randomly.
+* Most creatures are not tamed but act friendly.
+
+# Taming the summoned creatures #
+* To war train those creatures, you must first build a cage within an animal training activity zone.
+* Assign the creature to the cage.
+* In the animal screen assign a trainer. She will get to work.
+* You can release the creature one it is tamed by linking a cage to a lever and pulling it.
 
 ## Summons for both civs ##
 * Nahash : Vermin hunting snake. It can be bred for its eggs.
@@ -79,7 +86,7 @@ The deep succubi will also transform prisoners into half breeds :
 * Kobolds become imps : They are unfortunately small but are great at dodging and using knives.
 
 ## New materials ##
-* Stygian bronze : Made from bronze, flux stone and a secret ingredient. It is much lighter then regular bronze.
+* Stygian bronze : Made from bronze and flux stone. It is much lighter then regular bronze.
 * Oricalchum : A light and very solid metal. Can be made at a smelter using basilisk horns.
 
 # Known issues #

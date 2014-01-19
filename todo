@@ -1,11 +1,9 @@
-5.4
+5.5
 ---
 
 + Remettre rendermax
-
-+ MW : AJouter le ore processor
-
-+ Compiler dfhack pour mac os
++ Compiler dfhack pour mac os (xslt?)
++ Vérifier le readme+credits
 
 6.0
 ---

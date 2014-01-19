@@ -15,7 +15,7 @@
 function fixnaked()
     local total_fixed = 0
     local total_removed = 0
-    local debug = true
+    local debug = false
 
     for fnUnitCount,fnUnit in ipairs(df.global.world.units.all) do
         if fnUnit.race == df.global.ui.race_id then
