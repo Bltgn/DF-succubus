@@ -4,7 +4,6 @@
 + The summoned creature now have their natural skills set.
 + Removed the debug spam about clothing thoughts.
 + Added the missing tissue to the NSFW bits.
-+ Fixed the wrong tiles display on the premade builds.
 
 5.4
 + Scripts and premade builds has been updated to dfhack r4.

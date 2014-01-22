@@ -1,12 +1,8 @@
-5.5
----
-
-+ Remettre rendermax
-+ Compiler dfhack pour mac os (xslt?)
-+ Vérifier le readme+credits
-
 6.0
 ---
+
+Ajouter un b_detail pour le NSFW
+Retirer le bugfix de la créature
 
 Renommer la position hunter vers prowler
 
