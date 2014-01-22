@@ -1,4 +1,10 @@
 # Succubus Dungeon : Changelog #
+5.5
++ Inverted the warlord and overlord sprites.
++ The summoned creature now have their natural skills set.
++ Removed the debug spam about clothing thoughts.
++ Added the missing tissue to the NSFW bits.
+
 5.4
 + Scripts and premade builds has been updated to dfhack r4.
 + Summonning a creature no longer cause transformations.
