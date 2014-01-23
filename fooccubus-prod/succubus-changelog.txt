@@ -1,4 +1,8 @@
 # Succubus Dungeon : Changelog #
+6.0
++ Cleaned obsolete stuff from the raws.
++ Adjusted the body descriptors a bit.
+
 5.5
 + Inverted the warlord and overlord sprites.
 + The summoned creature now have their natural skills set.
