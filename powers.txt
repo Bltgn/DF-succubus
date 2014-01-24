@@ -1,0 +1,106 @@
+Les pouvoirs
+
+Roles
+- Effets sur les invaders
+- Effets sur le moral
+- Effet sur l'exterieur
+- Upgrades pour le combat
+- Upgrades civils
+- Sorts offensifs
+
+Aide
+- Utiliser plusieurs inorganics pour décrire des effets, couts etc...
+- Faire en sorte que l'on choisisse des workers dédiés
+- Ajouter des indicateurs style masterwork
+
+= 7 temples =
+
+Lust
+- Upgrades + effets grace aux pets
+- Reagents : ?
+- Multiplicateur : Happiness
+- Modif : Altruism, autres.
+- Contrecout : Le worker ajouter un lover dans les relations.
+
+* Release pheromones (aoe debuff, buff les autres succubi)
+* Climax (up des stats en combat, complètement OP à ecstatic)
+* Coiling nahashes (up de moral grace aux nahash)
+* Entangling tentacles (defense+ à porté des tentacle monsters)
+
+Greed
+- ?
+- Reagents : crafts
+- Multiplicateur : Valeur du craft
+- Modif : ?
+- Contrecout : Les marchants quittent les lieux ?
+
+* Posess a distant worker (+skill, si un artefact est utilisé get legendary, annonce et set mood à 1)
+
+Sloth
+- Améliorateur de productivité
+- Reagents : ?
+- Mutliplicateur : ?
+- Modif : Lazy
+- Contrecout : Le worker prend une pause
+
+* Annuler les pauses
+
+Pride
+- Améliorateur de moral
+- Reagents : ?
+- Multiplicateur : Nombre de relations
+- Modifs : Immodesty, immoderation
+- Contrecout : Chances de siege par les deep succubi, le worker se fait un ami.
+
+* Get summoned (le worker est téléporté, exilé, gros gain de moral)
+
+Gluttonry
+- ?
+- Multiplicateur : Qualité de la nourriture employée
+- Modifs : Skill de cuisine, fat
+- Contrecout : Faim et/ou soif
+
+Wrath
+- Upgrades pour le combat
+- Multiplicateur : Meilleur skill de combat
+- Modifs : Colère, prone to rage
+- Contrecout : Aucun
+
+* Berzek rage (en combat + force et no exert)
+* Broken heart (rip heart)
+* Reinforce strengh
+* Reinforce stamina
+* Reinforce speed
+
+Envy
+- Effet sur les invaders
+- Multiplicateur : Le skill du worker doit être bas et non noble (sauf alchemy).
+- Modifs : Liberalism
+- Contrecout : Perte de moral pour le worker
+
+* Rendre un invader crazed
+* Chef inconscient
+* Faire partir une escouade
+
+== Altar royalists ==
+
+Altar of fire
+- Blasts offensifs (feu!)
+- Upgrades
+
+* Become fireimmune
+* Torrid kiss (incinerate au toucher)
+* Gehena fire (fireball)
+* Infernal rain (exterieur)
+* Geyser de feu (1 invader non chef)
+
+Soul forge
+
+Construire des lances magiques, dégat faibles, effets en plus
+* Pain lance : Cause de la douleur
+* ?
+* ?
+
+Dark pact
+
+Altorney
