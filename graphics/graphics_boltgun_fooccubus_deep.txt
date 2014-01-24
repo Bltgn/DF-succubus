@@ -5,7 +5,7 @@
 [TILE_PAGE:BOLTGUN_FD]
 	[FILE:boltgun/fooccubus_deep.png]
 	[TILE_DIM:16:16]
-	[PAGE_DIM:12:17]
+	[PAGE_DIM:12:21]
 
 [CREATURE_GRAPHICS:FOOCCUBUS_DEEP]
 // Defaults
