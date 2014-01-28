@@ -3,6 +3,13 @@
 + Cleaned obsolete stuff from the raws.
 + Adjusted the body descriptors a bit.
 
+5.6
++ Fixed the warlord and overlord sprites, again.
++ Fixed the lack of transformation in the 'Corrupt prisoners' job.
++ Converting invaders to your civ hould work again.
++ Restored rendermax and falconne's ui plugins on the windows build.
++ A dfhack.init file is now included in the patch version, it is required for the mod to work properly.
+
 5.5
 + Inverted the warlord and overlord sprites.
 + The summoned creature now have their natural skills set.
