@@ -11,7 +11,6 @@ Summon
 + Retirer les castes 'generic', remplacer par default pour pain elemental
 + Ajouter un summon pour soul wisp aoe skill buff
 
-+ Mettre en classe toutes les créatures pours - de modifs à faire sur les syndromes
 + Ajouter un grasp aux unholy rituals
 
 Sprites
@@ -58,8 +57,6 @@ Creatures
 + Transformer en sauvage en cas de folie
 + Ajouter un effet cave adapt pour les deep
 
-PHP
-- Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
 Sans tag
 --------
 

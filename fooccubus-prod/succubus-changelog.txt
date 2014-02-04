@@ -3,6 +3,8 @@
 + Cleaned obsolete stuff from the raws.
 + Adjusted the body descriptors a bit.
 + Armor will now be forced upon the entities.
++ Made nightmares more aggressive in combat.
++ Hellhound will enrage in combat.
 
 5.6
 + Fixed the warlord and overlord sprites, again.
