@@ -4,7 +4,6 @@
 Ajouter un b_detail pour le NSFW
 Retirer le bugfix de la créature
 
-Renommer la position hunter vers prowler
 
 Summon
 + Retirer les interactions, inutiles (ou virer les scripts pour les remplacer par des syndrometarget si ça marche)
@@ -53,10 +52,6 @@ Pouvoirs
 voir pouvoir.txt
 
 Créer une météo spéciale pour les zones evil
-Migrer untame pour ne plus utiliser fovcommand.
-
-Civ
-+ Renommer les prositions vérifier qu'elles ont les mêmes ID que les vanilla
 
 Creatures
 + Ajouter les succubi sauvages, mettre dans HFS
@@ -71,7 +66,6 @@ Sans tag
 + Test
 Tentacle cleaning
 Instruments reageants dans accelerated
-Evil plants + drinks
 Charm minotaur
 
 + FIXME!

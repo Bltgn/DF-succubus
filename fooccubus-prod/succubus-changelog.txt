@@ -2,6 +2,7 @@
 6.0
 + Cleaned obsolete stuff from the raws.
 + Adjusted the body descriptors a bit.
++ Armor will now be forced upon the entities.
 
 5.6
 + Fixed the warlord and overlord sprites, again.
