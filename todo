@@ -5,7 +5,6 @@ Retirer le bugfix de la créature
 
 Summon
 + Retirer les interactions, inutiles (ou virer les scripts pour les remplacer par des syndrometarget si ça marche)
-+ Nettoyer phpraw car des paramètres sont inutiles maintenant
 + Retirer les castes 'generic', remplacer par default pour pain elemental
 + Ajouter un summon pour soul wisp aoe skill buff
 
@@ -21,9 +20,9 @@ Summons tier 3
 + Pit fiend, weapon user sentient
 + cthulu mythos (deep one, brown arny)
 + brown arny : teleport et forte morsure
-+ Ajouter crundle et beak dog
-+ Arachne
 + rose : throw spines
++ Beast of revelation : Throw dust + mutli tetes
+- Ajouter des descriptions aux réactions
 
 + Retirer la miel et strawberry des nahash et tentacle, ajouter un remplaçant
 

@@ -577,7 +577,7 @@ creature_fooccubus
 		[CDI:MAX_TARGET_NUMBER:E:20]
 		[CDI:WAIT_PERIOD:5000]
 
-[CREATURE:BASILISK] // orichalcum + piercing + debuff breath
+[CREATURE:BASILISK] // metal + piercing + debuff breath
 	[DESCRIPTION:A large, height legged, reptile that can breath poisonous vapors. Its particular diet for minerals allow it to grow a specific horn that can be sheared. The product can be then smelted into a lightweight but solid metal.]
 	[NAME:basilisk:basilisks:basilisk]
 	[CASTE_NAME:basilisk:basilisks:basilisk]
@@ -668,7 +668,7 @@ creature_fooccubus
 	[SWIMS_INNATE][SWIM_SPEED:2500]
 	// The horn can be sheared and used as metal
 	[SELECT_TISSUE:HORN]
-		[TISSUE_MATERIAL:INORGANIC:ORICHALCUM]
+		[TISSUE_MATERIAL:INORGANIC:BASILISKINE]
 		[HEALING_RATE:1000]
 	[SET_TL_GROUP:BY_CATEGORY:ALL:HORN]
 		[TISSUE_LAYER_APPEARANCE_MODIFIER:LENGTH:0:0:0:0:0:0:0]
