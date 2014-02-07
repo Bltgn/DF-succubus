@@ -1,9 +1,7 @@
 6.0
 ---
 
-Ajouter un b_detail pour le NSFW
 Retirer le bugfix de la créature
-
 
 Summon
 + Retirer les interactions, inutiles (ou virer les scripts pour les remplacer par des syndrometarget si ça marche)

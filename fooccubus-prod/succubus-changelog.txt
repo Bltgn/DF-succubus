@@ -3,7 +3,8 @@
 + Cleaned obsolete stuff from the raws.
 + Adjusted the body descriptors a bit.
 + Armor will now be forced upon the entities.
-+ Made nightmares more aggressive in combat.
++ Made nightmares more aggressive.
++ Soul wisps are more likely to flee now.
 + Hellhound will enrage in combat.
 
 5.6
