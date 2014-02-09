@@ -1,19 +1,14 @@
 6.0
 ---
 
-Retirer le bugfix de la créature
+Ajouter des worldgens et des embark profiles
 
 Summon
-+ Retirer les interactions, inutiles (ou virer les scripts pour les remplacer par des syndrometarget si ça marche)
-+ Retirer les castes 'generic', remplacer par default pour pain elemental
 + Ajouter un summon pour soul wisp aoe skill buff
-
-+ Ajouter un grasp aux unholy rituals
++ Ajouter un grasp aux unholy rituals (supprimer l'erreur too wounded)
 
 Sprites
 + Commencer deep
-+ Ajouter les tax escort dans royalist (on ne sait jamais)
-+ Ajouter tax escort à l'overlord
 
 Summons tier 3
 + Behemoth, énorme, tondre pour de la laine
@@ -23,8 +18,6 @@ Summons tier 3
 + rose : throw spines
 + Beast of revelation : Throw dust + mutli tetes
 - Ajouter des descriptions aux réactions
-
-+ Retirer la miel et strawberry des nahash et tentacle, ajouter un remplaçant
 
 + Commencer sprite deep
 
