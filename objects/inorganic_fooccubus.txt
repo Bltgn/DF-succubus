@@ -380,7 +380,7 @@ inorganic_fooccubus
 			[CDI:FREE_ACTION]
 			[CDI:VERB:perform a suggestive dance:perform a suggestive dance:NA]
 			[CDI:TARGET_VERB:is mesmerized]
-		
+
 [INORGANIC:CHARM_MINOTAUR] // makeown minotaur
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
@@ -409,7 +409,7 @@ inorganic_fooccubus
 			[CDI:WAIT_PERIOD:1]
 			[CDI:FREE_ACTION]
 			[CDI:VERB:embrace the nearby minotaur and ask for its submission:embraces at the nearby minotaur and asks for its submission:NA]
-			[CDI:TARGET_VERB:yield its will to the succubi]
+			[CDI:TARGET_VERB:yields its will to the succubi]
 
 [INORGANIC:CORRUPT_PRISONERS] // transform prisoners
 	[SPECIAL]
