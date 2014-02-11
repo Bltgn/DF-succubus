@@ -8,9 +8,9 @@
 + Armor will now be forced upon the entities.
 + Summoning has been made simpler, using less different reagents.
 + Made nightmares more aggressive.
-+ Soul wisps are more likely to flee now.
-+ Hellhound will enrage in combat.
-+ Pain elemental explosions now push away its victims.
++ Soul wisps are more likely to flee.
++ Hellhounds will enrage in combat.
++ Pain elemental explosions now push away its victims causing slamming damage.
 
 5.6
 + Fixed the warlord and overlord sprites, again.

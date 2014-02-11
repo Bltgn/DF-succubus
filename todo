@@ -3,10 +3,6 @@
 
 Ajouter des worldgens et des embark profiles
 
-Summon
-+ Ajouter un summon pour soul wisp aoe skill buff
-+ Ajouter un grasp aux unholy rituals (supprimer l'erreur too wounded)
-
 Sprites
 + Commencer deep
 
@@ -15,37 +11,31 @@ Summons tier 3
 + Brown Jenkin : teleport et forte morsure + ajouter les reagents
 + rose : throw spines
 + Beast of revelation : Throw dust + mutli tetes
++ Ajouter un summon pour soul wisp aoe skill buff
+
++ Ajouter un grasp aux unholy rituals (supprimer l'erreur too wounded)
 
 + Commencer sprite deep
+
+Pouvoirs
+voir pouvoir.txt
+
+Sans tag
+--------
 
 + Charm minotaur => charm megabeast (+ cyclops, giant, ...?)
 
 Scripts
 - Cancel reaction, no invader/minotaur
 - Donner des jobs aux non race
-- Retirer les bad thoughts sur les vetements
-
-Altar of nightmare
-+ call evil weather
-+ call fire weather
-+ visit dreams (effet ajout de valeur pour la migration ?)
-
-Summoning circle
-+ Sacrify (tranform en monstre)
-+ Essayer placeunit
-
-Pouvoirs
-voir pouvoir.txt
 
 Créer une météo spéciale pour les zones evil
+
 
 Creatures
 + Ajouter les succubi sauvages, mettre dans HFS
 + Transformer en sauvage en cas de folie
 + Ajouter un effet cave adapt pour les deep
-
-Sans tag
---------
 
 + Test
 Tentacle cleaning
