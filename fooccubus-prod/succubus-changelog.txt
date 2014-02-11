@@ -1,5 +1,8 @@
 # Succubus Dungeon : Changelog #
 6.0
++ Deep succubi are now competent swimmers.
++ Added an execution position to the deep succubi.
++ Both civs whippers will meet workers.
 + Cleaned obsolete stuff from the raws.
 + Adjusted the body descriptors of the succubi.
 + Armor will now be forced upon the entities.
