@@ -1,16 +1,18 @@
 # Succubus Dungeon : Changelog #
 6.0
++ Both civs spheres has been adjusted to better match its secrets.
 + Cleaned obsolete stuff from the raws.
-+ Deep succubi are now competent swimmers.
++ Deep succubi are now competent swimmers, converted prisonners will not have this skill.
 + Added an execution position to the deep succubi.
 + Both civs whippers will meet workers.
-+ Adjusted the body descriptors of the succubi.
++ Adjusted the body descriptors of the succubi, culled the tongue lengths.
 + Armor will now be forced upon the entities.
 + Summoning has been made simpler, using less different reagents.
 + Made nightmares more aggressive.
 + Soul wisps are more likely to flee.
 + Hellhounds will enrage in combat.
 + Pain elemental explosions now push away its victims causing slamming damage.
++ Tentacle monsters may start cleaning nearby succubi, they will ignore other sentients as it might kill them.
 
 5.6
 + Fixed the warlord and overlord sprites, again.

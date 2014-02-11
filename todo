@@ -7,15 +7,17 @@ Sprites
 + Commencer deep
 
 Summons tier 3
-+ Behemoth, énorme, tondre pour de la laine
 + Brown Jenkin : teleport et forte morsure + ajouter les reagents
 + rose : throw spines
 + Beast of revelation : Throw dust + mutli tetes
 + Ajouter un summon pour soul wisp aoe skill buff
++ Random demon
 
 + Ajouter un grasp aux unholy rituals (supprimer l'erreur too wounded)
 
-+ Commencer sprite deep
++ Ajouter material value 1 aux roches de reactions
+
++ Refaire le summoning circle
 
 Pouvoirs
 voir pouvoir.txt
@@ -46,5 +48,6 @@ Charm minotaur
 Soul wisp doit pouvoir bruler
 boobs and acheek should appear at 12, plus growth
 
-
+Summon
++ Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient (non fonctionnel)
