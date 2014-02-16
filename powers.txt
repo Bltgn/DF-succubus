@@ -1,5 +1,7 @@
 Les pouvoirs
 
+Noms : Temptation, villany, vomluptuous, sassy (saucy)
+
 Roles
 - Effets sur les invaders
 - Effets sur le moral
@@ -9,7 +11,7 @@ Roles
 - Sorts offensifs
 
 Aide
-- Utiliser plusieurs inorganics pour décrire des effets, couts etc...
+- Créer un plugin pour afficher les détails d'une réaction.
 - Faire en sorte que l'on choisisse des workers dédiés
 - Ajouter des indicateurs style masterwork
 
@@ -23,64 +25,75 @@ Lust
 - Contrecout : Le worker ajouter un lover dans les relations.
 
 * Release pheromones (aoe debuff, buff les autres succubi)
+* Broken heart (rip heart)
+* Entice (perte de skill enemy, peut faut tomber les armes)
 * Climax (up des stats en combat, complètement OP à ecstatic)
-* Coiling nahashes (up de moral grace aux nahash)
-* Entangling tentacles (defense+ à porté des tentacle monsters)
+* ??
 
 Greed
-- ?
+- Améliorateur de productivité
 - Reagents : crafts
 - Multiplicateur : Valeur du craft
-- Modif : ?
+- Modif : Craving, urges
 - Contrecout : Les marchants quittent les lieux ?
 
+* Annuler les pauses
+* Augmenter skills?
 * Posess a distant worker (+skill, si un artefact est utilisé get legendary, annonce et set mood à 1)
 
 Sloth
-- Améliorateur de productivité
+- Effect grace aux pets
 - Reagents : ?
-- Mutliplicateur : ?
+- Mutliplicateur : Le skill du worker doit être bas et non noble (sauf alchemy).
 - Modif : Lazy
 - Contrecout : Le worker prend une pause
 
-* Annuler les pauses
+* Coiling nahashes (up de moral grace aux nahash)
+* Protective tentacles (defense+ à porté des tentacle monsters)
+* Entangling roots (vitesse - pour les enemies autour des crimson roses)
+* Deep thoughts (buff d'apprentissage autour des wisps)
 
 Pride
 - Améliorateur de moral
 - Reagents : ?
 - Multiplicateur : Nombre de relations
 - Modifs : Immodesty, immoderation
-- Contrecout : Chances de siege par les deep succubi, le worker se fait un ami.
+- Contrecout : Chances de siege par les deep succubi.
 
+* Forget death
+* Up de moral aoe avec les enfants
 * Get summoned (le worker est téléporté, exilé, gros gain de moral)
 
 Gluttonry
-- ?
+- Upgrade civil
 - Multiplicateur : Qualité de la nourriture employée
 - Modifs : Skill de cuisine, fat
 - Contrecout : Faim et/ou soif
+s
+* Regeneration
 
 Wrath
 - Upgrades pour le combat
-- Multiplicateur : Meilleur skill de combat
+- Multiplicateur : Mécontentement
 - Modifs : Colère, prone to rage
 - Contrecout : Aucun
 
 * Berzek rage (en combat + force et no exert)
-* Broken heart (rip heart)
 * Reinforce strengh
 * Reinforce stamina
 * Reinforce speed
+* Slick skin (skin plus solide)
+* Reinforce wings
 
 Envy
 - Effet sur les invaders
-- Multiplicateur : Le skill du worker doit être bas et non noble (sauf alchemy).
+- Multiplicateur : Position (+1 pour admin, +2 pour leader/noble, +3 pour monarch)
 - Modifs : Liberalism
 - Contrecout : Perte de moral pour le worker
 
 * Rendre un invader crazed
 * Chef inconscient
-* Faire partir une escouade
+* Faire partir des invaders
 
 == Altar royalists ==
 
@@ -98,9 +111,6 @@ Soul forge
 
 Construire des lances magiques, dégat faibles, effets en plus
 * Pain lance : Cause de la douleur
-* ?
+* Force lance : Directed Dust
 * ?
 
-Dark pact
-
-Altorney

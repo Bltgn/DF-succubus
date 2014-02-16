@@ -5,18 +5,27 @@ Ajouter des worldgens et des embark profiles
 
 Sprites
 + Commencer deep
++ Fixer king consort
 
 Summons tier 3
-+ Brown Jenkin : teleport et forte morsure + ajouter les reagents
++ rat thing : teleport et forte morsure + ajouter les reagents
 + rose : throw spines
-+ Beast of revelation : Throw dust + mutli tetes
 + Ajouter un summon pour soul wisp aoe skill buff
 + Random demon
 
 + Ajouter material value 1 aux roches de reactions
 
+Reactions
++ Retirer whip/scourge de charm et corrupt
++ Retirer attact migrants (inorganics too)
+
 Pouvoirs
 voir pouvoir.txt
+
+Remettre wormy tendrils en violet
+Passer les max pop à 150
+Mettre à jour annoucements
+Corriger le pb avec les nobels (pas de baron!?)
 
 Sans tag
 --------
@@ -47,3 +56,4 @@ boobs and acheek should appear at 12, plus growth
 Summon
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient (non fonctionnel)
++ Beast of revelation : Throw dust + mutli tetes

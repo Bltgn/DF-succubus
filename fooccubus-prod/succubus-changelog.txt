@@ -16,6 +16,7 @@
 - Pain elemental explosions now push away its victims causing slamming damage.
 - Tentacle monsters may start cleaning nearby succubi, they will ignore other sentients as it might kill them.
 - Removed the 'too wounded' message when a worker transform into an unholy ritual.
+- Charming and corrupting no longer require a weapon. It has been added to the building directly.
 
 5.6
 + Fixed the warlord and overlord sprites, again.
