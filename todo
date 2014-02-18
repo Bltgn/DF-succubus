@@ -6,6 +6,7 @@ Ajouter des worldgens et des embark profiles
 Sprites
 + Commencer deep
 + Fixer king consort
++ Noble ?
 
 Summons tier 3
 + rat thing : teleport et forte morsure + ajouter les reagents
@@ -25,7 +26,7 @@ voir pouvoir.txt
 Remettre wormy tendrils en violet
 Passer les max pop à 150
 Mettre à jour annoucements
-Corriger le pb avec les nobels (pas de baron!?)
+Déplacer les scripts mineurs dans un sous dossier
 
 Sans tag
 --------
