@@ -1,24 +1,17 @@
 6.0
 ---
 
-Ajouter des worldgens et des embark profiles
-
 Sprites
 + Commencer deep
 + Fixer king consort
 + Noble ?
++ Options
 
 Summons tier 3
-+ rat thing : teleport et forte morsure + ajouter les reagents
++ rat thing : sprite
++ Soul wisp : Interaction, reagent, sprite
 + rose : throw spines
-+ Ajouter un summon pour soul wisp aoe skill buff
 + Random demon
-
-+ Ajouter material value 1 aux roches de reactions
-
-Reactions
-+ Retirer whip/scourge de charm et corrupt
-+ Retirer attact migrants (inorganics too)
 
 Pouvoirs
 voir pouvoir.txt
@@ -27,6 +20,10 @@ Remettre wormy tendrils en violet
 Passer les max pop à 150
 Mettre à jour annoucements
 Déplacer les scripts mineurs dans un sous dossier
+Ajouter des worldgens et des embark profiles
+
+Credits :
+- Teleport par Putnam
 
 Sans tag
 --------
@@ -49,6 +46,9 @@ Creatures
 Tentacle cleaning
 Instruments reageants dans accelerated
 Charm minotaur
+
++ Script
+Refactorer les script avec une librairie perso
 
 + FIXME!
 Soul wisp doit pouvoir bruler

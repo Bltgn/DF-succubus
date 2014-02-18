@@ -15,14 +15,13 @@ local fov = require 'fov'
 local args = {...}
 local unitId = args[1]
 local teleported = args[2]
-local syndrome
+local unitList = df.global.world.units.active
 
 -- Check if the unit is seen and valid
 function isSelected(unit, view)
 	local unitRaw = df.global.world.raws.creatures.all[unitTarget.race]
 
-	if unitRaw.creature_id == args[2] and
-		not dfhack.units.isDead(unit)
+	if unitRaw.creature_id == args[2] and not dfhack.units.isDead(unit) then
 			return validateCoords(unit, view)
 	end
 
@@ -46,14 +45,14 @@ end
 
 -- Find creatures within the LOS of the creature
 function findLos(unitSource)
-	local view = fov.get_fov(5, unitSource.pos)
+	local view = fov.get_fov(10, unitSource.pos)
 	local i
 
 	-- Check through the list for the right units
 	for i = #unitList - 1, 0, -1 do
 		unitTarget = unitList[i]
 		if isSelected(unitTarget, view) then
-			dfhack.run_script('teleport', unitTarget.id, unitSource.pos[1], unitSource.pos[2], unitSource.pos[3])
+			dfhack.run_script('teleport', 'unit', unitTarget.id, 'x', unitSource.pos.x, 'y', unitSource.pos.y, 'z', unitSource.pos.z)
 			return true
 		end
 	end

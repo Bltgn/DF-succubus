@@ -71,6 +71,7 @@ interaction_fooccubus
 			[SYN_CLASS:\COMMAND]
 			[SYN_CLASS:succubus/unit-teleport]
 			[SYN_CLASS:\UNIT_ID]
+			[SYN_CLASS:RAT_THING]
 
 [INTERACTION:MONSTER_HIDE]
 	[I_SOURCE:CREATURE_ACTION]
