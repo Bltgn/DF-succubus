@@ -8,10 +8,14 @@ Sprites
 + Options
 
 Summons tier 3
-+ rat thing : sprite
++ rat thing : sprite, ajouter une fumée violette
 + Soul wisp : Interaction, reagent, sprite
 + rose : throw spines
 + Random demon
+
+Importer le système de soul de MW
++ Créer un workshop et y permettre l'extraction
++ Importer le body part adequat
 
 Pouvoirs
 voir pouvoir.txt
@@ -24,6 +28,7 @@ Ajouter des worldgens et des embark profiles
 
 Credits :
 - Teleport par Putnam
+- Bits of MW by Meph
 
 Sans tag
 --------
