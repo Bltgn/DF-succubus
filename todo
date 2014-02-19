@@ -8,9 +8,8 @@ Sprites
 
 Summons tier 3
 + rat thing : sprite
-+ Soul wisp : Interaction, reagent, sprite
-+ rose : throw spines
-+ Random demon
++ Soul wisp : reagent
++ rose : body, reagent, sprites, throw spines
 
 Importer le système de soul de MW
 + Créer un workshop et y permettre l'extraction
@@ -43,6 +42,9 @@ Scripts
 
 Créer une météo spéciale pour les zones evil
 
+Noble
+- Ajouter un buff pour les noble en utilisant le système de Roses
+- Réduction de pauses, + attributes ?
 
 Creatures
 + Ajouter les succubi sauvages, mettre dans HFS
@@ -65,3 +67,4 @@ Summon
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient (non fonctionnel)
 + Beast of revelation : Throw dust + mutli tetes
++ Random demon : script, reagent
