@@ -3,12 +3,11 @@
 
 Sprites
 + Commencer deep
-+ Fixer king consort
 + Noble ?
 + Options
 
 Summons tier 3
-+ rat thing : sprite, ajouter une fumée violette
++ rat thing : sprite
 + Soul wisp : Interaction, reagent, sprite
 + rose : throw spines
 + Random demon
@@ -26,6 +25,8 @@ Mettre à jour annoucements
 Déplacer les scripts mineurs dans un sous dossier
 Ajouter des worldgens et des embark profiles
 MAJ Spawnunit
+AJouter errie material dans rendermax
+MAJ rendermax avec les workshops itou, y ajouter pain elemental
 
 Credits :
 - Teleport par Putnam

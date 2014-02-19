@@ -462,3 +462,16 @@ inorganic_fooccubus
 			[CDI:VERB:lash out while reciting incatations:lashes out while reciting incatations:NA]
 			[CDI:TARGET_VERB:screams as a transformation takes effect]
 
+// Visual effects
+[INORGANIC:EERIE_SMOKE] // Purple smoke/magma
+	[USE_MATERIAL_TEMPLATE:STONE_TEMPLATE]
+	[SPECIAL]
+	[NO_STONE_STOCKPILE]
+	[STATE_COLOR:GAS:WHITE]
+	[STATE_COLOR:ALL_SOLID:WHITE]
+	[STATE_NAME_ADJ:ALL_SOLID:errie rock]
+	[STATE_NAME_ADJ:LIQUID:glowing magma]
+	[STATE_NAME_ADJ:GAS:errie smoke]
+	[DISPLAY_COLOR:5:0:1][TILE:'*']
+	[SOLID_DENSITY:2650]
+	
