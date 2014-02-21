@@ -2,9 +2,10 @@
 6.0
 
 + Other changes
+- All the summoned creatures should now act faster.
 - Both civs spheres has been adjusted to better match its secrets.
 - Cleaned obsolete stuff from the raws.
-- Deep succubi are now competent swimmers, converted prisonners will not have this skill.
+- Deep succubi are now competent swimmers.
 - Added an execution position to the deep succubi.
 - Both civs whippers will meet workers.
 - Adjusted the body descriptors of the succubi, culled the tongue lengths.
@@ -14,9 +15,11 @@
 - Soul wisps are more likely to flee.
 - Hellhounds will enrage in combat.
 - Pain elemental explosions now push away its victims causing slamming damage.
-- Tentacle monsters may start cleaning nearby succubi, they will ignore other sentients as it might kill them.
-- Removed the 'too wounded' message when a worker transform into an unholy ritual.
-- Charming and corrupting no longer require a weapon. It has been added to the building directly.
+- Tentacle monsters may start cleaning nearby succubi,.
+- Removed the 'too wounded' message when a worker transforms into an unholy ritual.
+- Charming and corrupting no longer require a weapon. The weapon is now used for the building construction.
+- Bad thoughts about clothing will no longer be removed if you play a non succubus civ.
+- Sprite update : Fixed consort sprites
 
 5.6
 + Fixed the warlord and overlord sprites, again.

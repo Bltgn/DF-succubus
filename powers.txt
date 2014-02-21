@@ -38,7 +38,7 @@ Greed
 - Contrecout : Les marchants quittent les lieux ?
 
 * Annuler les pauses
-* Augmenter skills?
+* Augmenter skills
 * Posess a distant worker (+skill, si un artefact est utilisé get legendary, annonce et set mood à 1)
 
 Sloth
@@ -50,8 +50,8 @@ Sloth
 
 * Coiling nahashes (up de moral grace aux nahash)
 * Protective tentacles (defense+ à porté des tentacle monsters)
+* Deep thoughts (buff de skill 200% autour des wisps)
 * Entangling roots (vitesse - pour les enemies autour des crimson roses)
-* Deep thoughts (buff d'apprentissage autour des wisps)
 
 Pride
 - Améliorateur de moral

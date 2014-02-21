@@ -1,24 +1,19 @@
 6.0
 ---
 
-Ajouter des worldgens et des embark profiles
-
 Sprites
 + Commencer deep
-+ Fixer king consort
 + Noble ?
++ Options
 
 Summons tier 3
-+ rat thing : teleport et forte morsure + ajouter les reagents
-+ rose : throw spines
-+ Ajouter un summon pour soul wisp aoe skill buff
-+ Random demon
++ rat thing : sprite
++ Soul wisp : reagent
++ rose : body, reagent, sprites, throw spines
 
-+ Ajouter material value 1 aux roches de reactions
-
-Reactions
-+ Retirer whip/scourge de charm et corrupt
-+ Retirer attact migrants (inorganics too)
+Importer le système de soul de MW
++ Créer un workshop et y permettre l'extraction
++ Importer le body part adequat
 
 Pouvoirs
 voir pouvoir.txt
@@ -27,6 +22,14 @@ Remettre wormy tendrils en violet
 Passer les max pop à 150
 Mettre à jour annoucements
 Déplacer les scripts mineurs dans un sous dossier
+Ajouter des worldgens et des embark profiles
+MAJ Spawnunit
+AJouter errie material dans rendermax
+MAJ rendermax avec les workshops itou, y ajouter pain elemental
+
+Credits :
+- Teleport par Putnam
+- Bits of MW by Meph
 
 Sans tag
 --------
@@ -39,6 +42,9 @@ Scripts
 
 Créer une météo spéciale pour les zones evil
 
+Noble
+- Ajouter un buff pour les noble en utilisant le système de Roses
+- Réduction de pauses, + attributes ?
 
 Creatures
 + Ajouter les succubi sauvages, mettre dans HFS
@@ -50,6 +56,9 @@ Tentacle cleaning
 Instruments reageants dans accelerated
 Charm minotaur
 
++ Script
+Refactorer les script avec une librairie perso
+
 + FIXME!
 Soul wisp doit pouvoir bruler
 boobs and acheek should appear at 12, plus growth
@@ -58,3 +67,4 @@ Summon
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient (non fonctionnel)
 + Beast of revelation : Throw dust + mutli tetes
++ Random demon : script, reagent
