@@ -29,6 +29,8 @@ Packaging
 PHP
 + Ajout soul dans le butcher des succubus
 + Ajouter crystalized soul gems dans inorganic
++ Eerie smoke doit partir en fumée à temp ambiente
++ Convertir les summons en lua hooks, ajouter HFS
 
 Armes
 + Ajouter les pitchforks magiques
