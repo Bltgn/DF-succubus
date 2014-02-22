@@ -189,3 +189,11 @@ binpatch apply training-ammo
 # Bug 1445 - weapon racks broken, armor stand capacity too low
 binpatch apply weaponrack-unassign
 binpatch apply armorstand-capacity
+
+#######################################################
+# Scripts activation                                  #
+#                                                     #
+# Required for custom reactions.                      #
+#######################################################
+
+succubus/summon-hfs
