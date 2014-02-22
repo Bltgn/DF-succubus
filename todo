@@ -3,33 +3,47 @@
 
 Sprites
 + Commencer deep
-+ Noble ?
-+ Options
 
 Summons tier 3
 + rat thing : sprite
 + Soul wisp : reagent
-+ rose : body, reagent, sprites, throw spines
++ Random demon : script, reagent
 
 Importer le système de soul de MW
-+ Créer un workshop et y permettre l'extraction
-+ Importer le body part adequat
++ permettre l'extraction
 
 Pouvoirs
-voir pouvoir.txt
++ voir pouvoir.txt
 
-Remettre wormy tendrils en violet
-Passer les max pop à 150
-Mettre à jour annoucements
-Déplacer les scripts mineurs dans un sous dossier
-Ajouter des worldgens et des embark profiles
-MAJ Spawnunit
-AJouter errie material dans rendermax
-MAJ rendermax avec les workshops itou, y ajouter pain elemental
+Ajouter un buff aux brews evil
+
+Packaging
++ Remettre wormy tendrils en violet
++ Passer les max pop à 150
++ Mettre à jour annoucements
++ Ajouter des worldgens et des embark profiles
++ MAJ Spawnunit
++ AJouter errie material dans rendermax
++ MAJ rendermax avec les workshops itou, y ajouter pain elemental
+
+PHP
++ Ajout soul dans le butcher des succubus
++ Ajouter crystalized soul gems dans inorganic
+
+Armes
++ Ajouter les pitchforks magiques
++ Ajouter la munition
++ Ajouter un workshop pour ça
 
 Credits :
 - Teleport par Putnam
 - Bits of MW by Meph
+
+MW
+- Corriger les conflits
+
+GUI
+- Plugin pour afficher des détails
 
 Sans tag
 --------
@@ -67,4 +81,4 @@ Summon
 + Behemoth, énorme, tondre pour de la laine
 + Pit fiend, weapon user sentient (non fonctionnel)
 + Beast of revelation : Throw dust + mutli tetes
-+ Random demon : script, reagent
++ rose : body, reagent, sprites, throw spines
