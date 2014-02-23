@@ -19,6 +19,8 @@
 - Removed the 'too wounded' message when a worker transforms into an unholy ritual.
 - Charming and corrupting no longer require a weapon. The weapon is now used for the building construction.
 - Bad thoughts about clothing will no longer be removed if you play a non succubus civ.
+- Bloodworms should appear in evil caverns.
+- Added beneficial syndroms to bloodworm and black rose wines, non succubi who drink those wines may experience issues.
 - Sprite update : Fixed consort sprites
 
 5.6

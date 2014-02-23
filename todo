@@ -1,21 +1,19 @@
 6.0
 ---
 
-Sprites
-+ Commencer deep
++ Retirer summoned_soul et remplacer par unholy ritual
 
 Summons tier 3
 + rat thing : sprite
-+ Soul wisp : reagent
-+ Random demon : script, reagent
-
-Importer le système de soul de MW
-+ permettre l'extraction
++ Soul wisp : reagent (soul)
++ Random demon : reagent
 
 Pouvoirs
 + voir pouvoir.txt
 
 Ajouter un buff aux brews evil
+
+Ajouter une intéraction pour les nobles
 
 Packaging
 + Remettre wormy tendrils en violet
@@ -24,19 +22,25 @@ Packaging
 + Ajouter des worldgens et des embark profiles
 + MAJ Spawnunit
 + AJouter errie material dans rendermax
-+ MAJ rendermax avec les workshops itou, y ajouter pain elemental
++ MAJ rendermax avec les workshops itou depuis MW, y ajouter pain elemental
 
 PHP
 + Ajout soul dans le extra butcher object des succubus
 + Ajouter crystalized soul gems dans inorganic
 + Eerie smoke doit partir en fumée à temp ambiente
-+ Convertir les summons en lua hooks, ajouter HFS
 + Ajouter les nouvelles réactions
-+ Metrre à jour les réactions entity
++ Metrre à jour les réactions et buildings entity
+
+Reaction
++ Convertir les summons en lua hooks
++ Copier les nouvelles réactions dans php
++ Ajouter SUMMON_HFS
++ Copier les souls
++ Mettre une majuscule en début
 
 Armes
-+ Ajouter les pitchforks magiques
-+ Ajouter la munition
++ Ajouter les pitchforks magiques (avec projectile expansion)
++ Ajouter la munition (shards)
 + Ajouter un workshop pour ça
 
 Credits :
@@ -48,6 +52,12 @@ MW
 
 GUI
 - Plugin pour afficher des détails
+
+6.1
+---
+
+Sprites
++ Commencer deep
 
 Sans tag
 --------
@@ -70,12 +80,8 @@ Creatures
 + Ajouter un effet cave adapt pour les deep
 
 + Test
-Tentacle cleaning
 Instruments reageants dans accelerated
 Charm minotaur
-
-+ Script
-Refactorer les script avec une librairie perso
 
 + FIXME!
 Soul wisp doit pouvoir bruler
