@@ -27,10 +27,12 @@ Packaging
 + MAJ rendermax avec les workshops itou, y ajouter pain elemental
 
 PHP
-+ Ajout soul dans le butcher des succubus
++ Ajout soul dans le extra butcher object des succubus
 + Ajouter crystalized soul gems dans inorganic
 + Eerie smoke doit partir en fumée à temp ambiente
 + Convertir les summons en lua hooks, ajouter HFS
++ Ajouter les nouvelles réactions
++ Metrre à jour les réactions entity
 
 Armes
 + Ajouter les pitchforks magiques
