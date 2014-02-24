@@ -16,9 +16,10 @@ creature_fooccubus
 	[CREPUSCULAR]
 	[MILKABLE]
 	[BODY:HUMANOID_HOOF:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
+	[EXTRA_BUTCHER_OBJECT:BY_TYPE:THOUGHT][EBO_ITEM:PLANT:NONE:PLANT_MAT:SOUL:STRUCTURAL]
 	[CREATURE_CLASS:GENERAL_POISON]
-	[CREATURE_CLASS:FOOCCUBUS]
 	[CREATURE_CLASS:DEMON]
+	[CREATURE_CLASS:FOOCCUBUS]
 	[CREATURE_CLASS:FOOCCUBUS_SENTIENT]
 	[SPHERE:LUST]
 	
@@ -94,7 +95,7 @@ creature_fooccubus
 	
 	[SELECT_CASTE:FIREIMMUNE_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:FIREIMMUNE_MALE]
-		[POP_RATIO:10]
+		[POP_RATIO:1]
 		[CASTE_NAME:fireborn succubus:fireborn succubi:fireborn succubus]
 		[DESCRIPTION:A female lust demon of hedonistic interests. This succubus is unaffected by fire and lava and can manipulate both with her bare hands.]
 		[FIREIMMUNE][MAGMA_VISION]
@@ -112,14 +113,14 @@ creature_fooccubus
 	[SELECT_ADDITIONAL_CASTE:FLIER_MALE]
 		[POP_RATIO:10]
 		[CASTE_NAME:skyborn succubus:skyborn succubus:skyborn succubus]
-		[DESCRIPTION:A female lust demon of hedonistic interests. Her wings grew larger and stronger then its more mundane counterpart and can fly great distances.]
+		[DESCRIPTION:A female lust demon of hedonistic interests. Her wings grew larger and stronger, allowing her to fly.]
 		[FLIER]
 		[RELSIZE:BY_CATEGORY:WING:300]
 		[PHYS_ATT_RANGE:ENDURANCE:400:800:900:1000:1000:1100:1500] // Better lower endurance
 	[SELECT_CASTE:FLIER_MALE]
 		[POP_RATIO:1]
 		[CASTE_NAME:skyborn incubus:skyborn incubi:skyborn incubus]
-		[DESCRIPTION:A male lust demon of hedonistic interests. His wings grew larger and stronger then its more mundane counterpart and can fly great distances.]
+		[DESCRIPTION:A male lust demon of hedonistic interests. His wings grew larger and stronger, allowing him to fly.]
 		
 	// Body plan
 	[SELECT_CASTE:ALL]
