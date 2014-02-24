@@ -27,7 +27,7 @@ if not args[2] then qerror('Please enter a creature raw ID.') end
 local creature = args[2]
 
 if args[3] then
-	tame = true
+	tame = (args[3] == 1)
 end
 
 local creatureRaw, creatureName, creatureLetter, article;
@@ -39,6 +39,8 @@ function getRaw(creature_id)
 	for id, raw in pairs(df.global.world.raws.creatures.all) do
 		if raw.creature_id == creature_id then return raw end
 	end
+
+	qerror('Creature not found : '..creature_id)
 end
 
 -- Getting the summoner
