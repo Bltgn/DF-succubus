@@ -1,8 +1,6 @@
 6.0
 ---
 
-+ Retirer summoned_soul et remplacer par unholy ritual
-
 Summons tier 3
 + rat thing : sprite
 + Soul wisp : reagent (soul)
@@ -10,8 +8,6 @@ Summons tier 3
 
 Pouvoirs
 + voir pouvoir.txt
-
-Ajouter un buff aux brews evil
 
 Ajouter une intéraction pour les nobles
 
@@ -25,18 +21,10 @@ Packaging
 + MAJ rendermax avec les workshops itou depuis MW, y ajouter pain elemental
 
 PHP
-+ Ajout soul dans le extra butcher object des succubus
-+ Ajouter crystalized soul gems dans inorganic
-+ Eerie smoke doit partir en fumée à temp ambiente
 + Ajouter les nouvelles réactions
-+ Metrre à jour les réactions et buildings entity
 
 Reaction
-+ Convertir les summons en lua hooks
-+ Copier les nouvelles réactions dans php
-+ Ajouter SUMMON_HFS
-+ Copier les souls
-+ Mettre une majuscule en début
++ Convertir les summons en lua hooks (faire 1 script)
 
 Armes
 + Ajouter les pitchforks magiques (avec projectile expansion)
