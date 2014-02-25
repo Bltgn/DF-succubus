@@ -88,8 +88,8 @@ eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_ite
 
 	if reaction.code == 'LUA_HOOK_SUMMON_HFS' then
 		summonHfs(reaction, unit, input_items, input_reagents, output_items, call_native)
-	elseif reaction.code:find('SUMMON') then
-		creatureId = string.sub(String, 1, 26)
+	elseif reaction.code:find('_SUMMON_') then
+		creatureId = string.sub(reaction.code, 17)
 
 		if creatureId == 'NAHASH' or creatureId == 'SOUL_WISP' or creatureId == 'RAT_THING' then
 			tame = 1

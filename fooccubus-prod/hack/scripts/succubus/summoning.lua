@@ -21,7 +21,7 @@ local args = {...}
 local tame = false
 local casteMax = 0
 
-if not args[2] then qerror('Please enter a source unit ID number.') end
+if not args[1] then qerror('Please enter a source unit ID number.') end
 local unitId = args[1]
 if not args[2] then qerror('Please enter a creature raw ID.') end
 local creature = args[2]

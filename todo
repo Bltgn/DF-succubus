@@ -20,12 +20,6 @@ Packaging
 + AJouter errie material dans rendermax
 + MAJ rendermax avec les workshops itou depuis MW, y ajouter pain elemental
 
-PHP
-+ Ajouter les nouvelles réactions
-
-Reaction
-+ Convertir les summons en lua hooks (faire 1 script)
-
 Armes
 + Ajouter un workshop pour ça
 
@@ -38,6 +32,9 @@ MW
 
 GUI
 - Plugin pour afficher des détails
+
+Fix
+- Erreur de couleur en bas du circle
 
 6.1
 ---
