@@ -2,6 +2,9 @@ Les pouvoirs
 
 Noms : Temptation, villany, vomluptuous, sassy (saucy)
 
+! tester
++ reagents
+
 Roles
 - Effets sur les invaders
 - Effets sur le moral
@@ -83,7 +86,7 @@ Wrath
 * Reinforce stamina
 * Reinforce speed
 * Slick skin (skin plus solide)
-* Reinforce wings
+!+ Reinforce wings
 
 Envy
 - Effet sur les invaders
@@ -101,9 +104,9 @@ Altar of fire
 - Blasts offensifs (feu!)
 - Upgrades
 
-* Become fireimmune
+!+ Become fireimmune
 * Torrid kiss (incinerate au toucher)
-* Gehena fire (fireball)
+!+ Gehena fire (fireball)
 * Infernal rain (exterieur)
 * Geyser de feu (1 invader non chef)
 

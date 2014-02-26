@@ -76,7 +76,7 @@ local function summonHfs(reaction, unit, input_items, input_reagents, output_ite
 		return nil
 	end
 
-	selection = math.random(0, #demonId - 1)
+	selection = math.random(1, #demonId)
 	dfhack.run_script('succubus/summoning', unit.id, demonId[selection], 1)
 
 end

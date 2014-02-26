@@ -110,7 +110,6 @@ creature_fooccubus
 		[CDI:WAIT_PERIOD:300]
 		[CDI:VERB:reaches out:reach out:NA]
 		[CDI:TARGET_VERB:feel tentacles taking away the grime:feels tentacles taking away the grime:NA]
-		[CDI:WAIT_PERIOD:40]
 	[SET_TL_GROUP:BY_CATEGORY:EYE:EYE]
 		[TL_COLOR_MODIFIER:GREEN:1:EMERALD:1:YELLOW:1]
 		[TLCM_NOUN:eyes:PLURAL]
