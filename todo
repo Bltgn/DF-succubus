@@ -9,8 +9,6 @@ Summons tier 3
 Pouvoirs
 + voir pouvoir.txt
 
-Ajouter une intéraction pour les nobles
-
 Packaging
 ! Remettre wormy tendrils en violet
 ! Passer les max pop à 150
@@ -39,7 +37,6 @@ MW
 
 GUI
 - Plugin pour afficher des détails des réactions + help en txt
-
 
 Nobles
 - La reine + noble peuvent réssuciter (+makeown)

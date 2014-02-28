@@ -73,7 +73,6 @@ Gluttonry
 - Multiplicateur : Qualité de la nourriture employée
 - Modifs : Skill de cuisine, fat
 - Contrecout : Faim et/ou soif
-s
 * Regeneration
 
 Wrath
@@ -82,7 +81,7 @@ Wrath
 - Modifs : Colère, prone to rage
 - Contrecout : Aucun
 
-* Berzek rage (en combat + force et no exert)
+!+ Berzek rage (en combat + force et no exert)
 * Reinforce strengh
 * Reinforce stamina
 * Reinforce speed
@@ -108,7 +107,7 @@ Altar of fire
 !+ Become fireimmune
 !+ Torrid kiss (incinerate au toucher)
 !+ Gehena fire (fire secret)
-* Infernal rain (exterieur)
+!+ Infernal rain (exterieur)
 > Geyser de feu (1 invader non chef)
 
 Soul forge
