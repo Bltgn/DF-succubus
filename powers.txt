@@ -4,6 +4,7 @@ Noms : Temptation, villany, vomluptuous, sassy (saucy)
 
 ! tester
 + reagents
+> plus tard
 
 Roles
 - Effets sur les invaders
@@ -105,10 +106,10 @@ Altar of fire
 - Upgrades
 
 !+ Become fireimmune
-* Torrid kiss (incinerate au toucher)
-!+ Gehena fire (fireball)
+!+ Torrid kiss (incinerate au toucher)
+!+ Gehena fire (fire secret)
 * Infernal rain (exterieur)
-* Geyser de feu (1 invader non chef)
+> Geyser de feu (1 invader non chef)
 
 Soul forge
 

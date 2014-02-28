@@ -20,6 +20,11 @@ Packaging
 + AJouter errie material dans rendermax
 + MAJ rendermax avec les workshops itou depuis MW, y ajouter pain elemental
 
+Updates à vérifier
++ Sawnunit
++ Projectile expansion
++ SyndromeWeather
+
 Armes
 + Ajouter un workshop pour ça
 + Renommer pain lance par ??? lance
@@ -27,12 +32,18 @@ Armes
 Credits :
 - Teleport par Putnam
 - Bits of MW by Meph
+- Dwarf chocolate
 
 MW
 - Corriger les conflits
 
 GUI
 - Plugin pour afficher des détails des réactions + help en txt
+
+
+Nobles
+- La reine + noble peuvent réssuciter (+makeown)
+- Le mayor annule les pauses
 
 6.1
 ---
