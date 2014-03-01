@@ -3,7 +3,7 @@ inorganic_effects
 [OBJECT:INORGANIC] Special effects, like colored smoke, explosions and all
 
 [INORGANIC:EERIE_SMOKE] // Purple smoke/magma, glows in rendermax
-	[USE_MATERIAL_TEMPLATE:STONE_VAPOR_TEMPLATE]
+	[USE_MATERIAL_TEMPLATE:STONE_TEMPLATE]
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
 	[MATERIAL_VALUE:1]
@@ -12,6 +12,9 @@ inorganic_effects
 	[STATE_NAME_ADJ:ALL_SOLID:errie rock]
 	[STATE_NAME_ADJ:LIQUID:glowing magma]
 	[STATE_NAME_ADJ:GAS:errie smoke]
+	[MELTING_POINT:9000]
+	[BOILING_POINT:8999]
+	[SOLID_DENSITY:20000000]
 	[DISPLAY_COLOR:5:0:1][TILE:'*']
 
 [INORGANIC:DUST_EXPLOSIVE] // For use in projectile expansion
