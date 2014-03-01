@@ -456,4 +456,3 @@ creature_fooccubus
 			[ATTACK_PENETRATION_PERC:100]
 			[ATTACK_FLAG_EDGE]
 			[ATTACK_PRIORITY:second]
-

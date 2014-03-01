@@ -86,7 +86,7 @@ Wrath
 * Reinforce stamina
 * Reinforce speed
 * Slick skin (skin plus solide)
-!+ Reinforce wings
+! Reinforce wings
 
 Envy
 - Effet sur les invaders
@@ -104,11 +104,11 @@ Altar of fire
 - Blasts offensifs (feu!)
 - Upgrades
 
-!+ Become fireimmune
+! Become fireimmune
 !+ Torrid kiss (incinerate au toucher)
-!+ Gehena fire (fire secret)
+! Gehena fire (fire secret)
 !+ Infernal rain (exterieur)
-> Geyser de feu (1 invader non chef)
+* Geyser de feu (1 invader non chef)
 
 Soul forge
 
