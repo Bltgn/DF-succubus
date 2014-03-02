@@ -5,7 +5,7 @@ Summons tier 3
 + rat thing : sprite
 + Soul wisp : reagent (soul)
 + Random demon : reagent
-+ Retirer les lames du war tentacle
++ Retirer les lames du sprite war tentacle
 
 Pouvoirs
 + voir pouvoir.txt
@@ -16,11 +16,10 @@ Packaging
 ! Mettre à jour annoucements
 ! Ajouter des worldgens et des embark profiles
 + MAJ Spawnunit
-+ AJouter errie material dans rendermax
++ Ajouter errie material dans rendermax
 + MAJ rendermax avec les workshops itou depuis MW, y ajouter pain elemental
 
 Updates à vérifier
-+ Sawnunit
 + Projectile expansion
 
 Armes
@@ -36,16 +35,16 @@ Credits :
 MW
 - Corriger les conflits
 
-GUI
-- Plugin pour afficher des détails des réactions + help en txt
-
 Fix
-- Pas d'action berserk
-	- vapor
+- Tester berserk
 - Il manque step 1 et 2 du temple
+- Tester pain lance (et le renommer)
 
 6.1
 ---
+
+GUI
+- Plugin pour afficher des détails des réactions + help en txt
 
 Sprites
 + Commencer deep
