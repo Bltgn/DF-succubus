@@ -6,11 +6,11 @@ if not ... then qerror('Please enter a creature ID.') end
 local args = {...}
 local unit, domain
 
-if not args[1] then qerror('Influence: No unit entered') end
-if not args[2] then qerror('Influence: No domain entered') end
+if not args[1] then qerror('Influence: No domain entered') end
+if not args[2] then qerror('Influence: No unit entered') end
 
-unit = df.unit.find(tonumber(args[1]))
-domain = args[2]
+domain = args[1]
+unit = df.unit.find(tonumber(args[2]))
 
 local function wrath(unit)
 
@@ -20,7 +20,7 @@ local function wrath(unit)
 
 end
 
-if domain == 'wrath'
+if domain == 'wrath' then
 	wrath(unit)
 else
 	qerror('Influence: Wrong domain entered')
