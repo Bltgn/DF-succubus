@@ -21,6 +21,7 @@ Packaging
 
 Updates à vérifier
 + Projectile expansion
++ Rendermax
 
 Armes
 + Ajouter un workshop pour ça
@@ -35,9 +36,8 @@ Credits :
 MW
 - Corriger les conflits
 
-Fix
+Fix/test
 - Tester berserk
-- Il manque step 1 et 2 du temple
 - Tester pain lance (et le renommer)
 
 6.1

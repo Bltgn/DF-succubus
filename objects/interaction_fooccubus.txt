@@ -245,7 +245,7 @@ interaction_fooccubus
 		[SYNDROME]
 			[CE_ADD_TAG:NO_SLEEP:START:0:END:10]
 			[SYN_CLASS:\COMMAND]
-			[SYN_CLASS:fovcommand]
+			[SYN_CLASS:fovcommand11]
 			[SYN_CLASS:20]
 			[SYN_CLASS:succubus/berserk]
 			[SYN_CLASS:FOOCCUBUS]
