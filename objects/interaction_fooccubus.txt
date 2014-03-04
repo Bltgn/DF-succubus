@@ -247,6 +247,6 @@ interaction_fooccubus
 			[SYN_CLASS:\COMMAND]
 			[SYN_CLASS:fovcommand11]
 			[SYN_CLASS:\UNIT_ID]
-			[SYN_CLASS:20]
+			[SYN_CLASS:40]
 			[SYN_CLASS:succubus/berserk]
 			[SYN_CLASS:FOOCCUBUS]
