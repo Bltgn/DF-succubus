@@ -13,20 +13,48 @@ if not args[1] then qerror('Berserk : No unit entered') end
 unit = df.unit.find(args[1])
 if not unit then qerror('Berserk : Unit not found.') end
 
-power = rating.unhappiness(unit)
-name = dfhack.units.getVisibleName(unit)
+-- Addsyndrome may check for this, but I need to check first to prevent the announcement
+function isBerserk(unitTarget)
+	local actives = unitTarget.syndromes.active
+	local syndromes = df.global.world.raws.syndromes.all
+	local ka, kc, active, class
 
-if debug then print('Berserk unit #'..unit.id..' rating '..power) end
+	for ka, active in ipairs(actives) do
+		local synclass=syndromes[active.type].syn_class
+		for kc, class in ipairs(synclass) do
+			if class.value == 'BERSERK' then return true end
+		end
+	end
 
--- Lets pick a syndrome tier
-if power < 3 then
-	syndrome = 'FOOCCUBUS_BERSERK_1'
-elseif power < 5 then
-	syndrome = 'FOOCCUBUS_BERSERK_2'
-else
-	dfhack.gui.showAnnouncement(name .. ' is consumed by anger!', COLOR_YELLOW)
-	syndrome = 'FOOCCUBUS_BERSERK_3'
+	return false
 end
 
-dfhack.run_script('addsyndrome', syndrome, unit.id, '-1,-1,-1', 'civ', 'NONE', 'NONE', 'BERSERK', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE')
-if debug then print('- Apply '..syndrome) end
+-- @todo Support for last name maybe ?
+function getName(unitTarget)
+	local name = dfhack.units.getVisibleName(unit)
+	printall(name.words)
+
+	if not name.has_name then return '???' end
+	if string.len(name.nickname) > 0 then return "'"..name.nickname.."'" end
+
+	return string.gsub(name.first_name, '^(.)', string.upper)
+end
+
+power = rating.unhappiness(unit)
+
+if isBerserk(unit) then
+	if debug then print('Berserk unit #'..unit.id..' rating '..power) end
+
+	-- Lets pick a syndrome tier
+	if power < 3 then
+		syndrome = 'FOOCCUBUS_BERSERK_1'
+	elseif power < 5 then
+		syndrome = 'FOOCCUBUS_BERSERK_2'
+	else
+		dfhack.gui.showAnnouncement(getName(unit) .. ' is consumed by anger!', COLOR_YELLOW)
+		syndrome = 'FOOCCUBUS_BERSERK_3'
+	end
+
+	dfhack.run_script('addsyndrome', syndrome, unit.id, '-1,-1,-1', 'civ', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE')
+	if debug then print('- Apply '..syndrome) end
+end

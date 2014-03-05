@@ -1,8 +1,8 @@
 
 --[[
-Description: Changes to the boolean values, the changes last a certain number of ticks. 
+Description: Changes to the boolean values, the changes last a certain number of ticks.
 
-Use: 
+Use:
 [SYN_CLASS:\COMMAND]
 [SYN_CLASS:addsyndrome]
 [SYN_CLASS:type]
@@ -84,11 +84,14 @@ local function assignSyndrome(target,syn_id) --taken from Putnam's itemSyndrome
     newSyndrome.type=target_syndrome.id
     newSyndrome.year=df.global.cur_year
     newSyndrome.year_time=df.global.cur_year_tick
-    newSyndrome.ticks=1
-    newSyndrome.unk1=1
+    newSyndrome.ticks=0
+    newSyndrome.unk1=0
+	--newSyndrome.flags=0
     for k,v in ipairs(target_syndrome.ce) do
         local sympt=df.unit_syndrome.T_symptoms:new()
-        sympt.ticks=1
+        sympt.unk1=0
+        sympt.unk2=0
+        sympt.ticks=0
         sympt.flags=2
         newSyndrome.symptoms:insert("#",sympt)
     end
