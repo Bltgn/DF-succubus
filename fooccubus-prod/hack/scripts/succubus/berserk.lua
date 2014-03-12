@@ -1,17 +1,27 @@
 -- Apply a syndrome depending of its unhappy rating, it is run on the target creature and use addsyndrome to simulate a self buff
-local rating = require 'rating'
 local fov = require 'fov'
 
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 
 local args = {...}
-local debug = true
+local debug = false
 local syndrome, power, name
 
 if not args[1] then qerror('Berserk : No unit entered') end
 
 unit = df.unit.find(args[1])
 if not unit then qerror('Berserk : Unit not found.') end
+
+-- Unit is unhappy, 5 for miserable
+function unhappiness(unit)
+	local happiness = unit.status.happiness
+
+	if happiness == 0 then return 5
+	elseif happiness < 26 then return 4
+	elseif happiness <  51 then return 3
+	elseif happiness < 75 then return 2
+	else return 1 end
+end
 
 -- Addsyndrome may check for this, but I need to check first to prevent the announcement
 function isBerserk(unitTarget)
@@ -40,8 +50,7 @@ function getName(unitTarget)
 	return string.gsub(name.first_name, '^(.)', string.upper)
 end
 
-power = rating.unhappiness(unit)
-
+power = unhappiness(unit)
 if isBerserk(unit) then
 	if debug then print('Berserk unit #'..unit.id..' rating '..power) end
 
@@ -51,7 +60,7 @@ if isBerserk(unit) then
 	elseif power < 5 then
 		syndrome = 'FOOCCUBUS_BERSERK_2'
 	else
-		dfhack.gui.showAnnouncement(getName(unit) .. ' is consumed by anger!', COLOR_YELLOW)
+		dfhack.gui.showAnnouncement(getName(unit) .. ' is consumed by anger!', COLOR_BLUE)
 		syndrome = 'FOOCCUBUS_BERSERK_3'
 	end
 
