@@ -28,11 +28,13 @@ Lust
 - Modif : Altruism, autres.
 - Contrecout : Le worker ajouter un lover dans les relations.
 
+Secret of lust
 * Release pheromones (aoe debuff, buff les autres succubi)
-* Broken heart (rip heart)
 * Entice (perte de skill enemy, peut faut tomber les armes)
-* Climax (up des stats en combat, complètement OP à ecstatic)
-* ??
+
+Autres
+> Broken heart (rip heart)
+!+ Climax (up des stats en combat, complètement OP à ecstatic)
 
 Greed
 - Améliorateur de productivité
@@ -42,7 +44,6 @@ Greed
 - Contrecout : Les marchants quittent les lieux ?
 
 * Annuler les pauses
-* Augmenter skills
 * Posess a distant worker (+skill, si un artefact est utilisé get legendary, annonce et set mood à 1)
 
 Sloth
@@ -52,7 +53,7 @@ Sloth
 - Modif : Lazy
 - Contrecout : Le worker prend une pause
 
-* Coiling nahashes (up de moral grace aux nahash)
+> Coiling nahashes (up de moral grace aux nahash)
 * Protective tentacles (defense+ à porté des tentacle monsters)
 * Deep thoughts (buff de skill 200% autour des wisps)
 * Entangling roots (vitesse - pour les enemies autour des crimson roses)
@@ -81,10 +82,10 @@ Wrath
 - Modifs : Colère, prone to rage
 - Contrecout : Aucun
 
-!+ Berzek rage (en combat + force et no exert)
-* Reinforce strengh
-* Reinforce stamina
-* Reinforce speed
+! Berzerk rage (en combat + force et no exert)
+> Reinforce strengh
+> Reinforce stamina
+> Reinforce speed
 * Slick skin (skin plus solide)
 ! Reinforce wings
 
@@ -108,7 +109,7 @@ Altar of fire
 !+ Torrid kiss (incinerate au toucher)
 ! Gehena fire (fire secret)
 !+ Infernal rain (exterieur)
-* Geyser de feu (1 invader non chef)
+> Geyser de feu (1 invader non chef)
 
 Soul forge
 
