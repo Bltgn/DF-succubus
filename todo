@@ -4,7 +4,6 @@
 Summons tier 3
 + Soul wisp : reagent (soul)
 + Random demon : reagent
-+ Retirer les lames du sprite war tentacle
 
 Pouvoirs
 + voir pouvoir.txt
@@ -21,6 +20,7 @@ Packaging
 Updates à vérifier
 + Projectile expansion
 + Rendermax
++ Addsyndromes (maj les autres scripts)
 
 Armes
 + Ajouter un workshop pour ça
@@ -36,8 +36,8 @@ MW
 - Corriger les conflits
 
 Fix/test
-- Tester berserk
 - Tester pain lance (et le renommer)
+- Rendre torrid kiss touchable
 
 6.1
 ---

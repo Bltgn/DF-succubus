@@ -28,9 +28,9 @@ Lust
 - Modif : Altruism, autres.
 - Contrecout : Le worker ajouter un lover dans les relations.
 
-Secret of lust
-* Release pheromones (aoe debuff, buff les autres succubi)
-* Entice (perte de skill enemy, peut faut tomber les armes)
+! Secret of lust
++ Release pheromones (aoe debuff, buff les autres succubi)
++ Entice (perte de skill enemy, peut faut tomber les armes)
 
 Autres
 > Broken heart (rip heart)
