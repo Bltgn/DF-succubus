@@ -22,9 +22,14 @@ local function lust(unit)
 	unit.status.current_soul.traits.IMMODERATION = math.min(100, unit.status.current_soul.traits.IMMODERATION + 20)
 	unit.status.current_soul.traits.EXCITEMENT_SEEKING = math.min(100, unit.status.current_soul.traits.EXCITEMENT_SEEKING + 20)
 	unit.status.current_soul.traits.GREGARIOUSNESS = math.min(100, unit.status.current_soul.traits.GREGARIOUSNESS + 10)
-	unit.status.current_soul.traits.ALTRUISM = math.min(100, unit.status.current_soul.traits.ALTRUISM + 10)
-	unit.status.current_soul.traits.FRIENDLINESS = math.min(100, unit.status.current_soul.traits.FRIENDLINESS + 10)
 	-- todo add lover
+end
+
+local function pride(unit)
+	unit.status.current_soul.traits.MODESTY = math.max(0, unit.status.current_soul.traits.MODESTY - 10)
+	unit.status.current_soul.traits.ALTRUISM = math.min(100, unit.status.current_soul.traits.ALTRUISM + 10)
+	unit.status.current_soul.traits.STRAIGHTFORWARDNESS  = math.max(0, unit.status.current_soul.traits.STRAIGHTFORWARDNESS - 10)
+
 end
 
 if domain == 'wrath' then

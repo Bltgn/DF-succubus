@@ -23,8 +23,8 @@ Updates à vérifier
 + Addsyndromes (maj les autres scripts)
 
 Armes
-+ Ajouter un workshop pour ça
-+ Renommer pain lance par ??? lance
++ Ajouter un workshop pour ça (soulforge)
++ Renommer pain lance par stygian lance
 
 Credits :
 - Teleport par Putnam
@@ -38,6 +38,9 @@ MW
 Fix/test
 - Tester pain lance (et le renommer)
 - Rendre torrid kiss touchable
+
+PHP
+Mettre à jour reaction et entity
 
 6.1
 ---

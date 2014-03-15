@@ -21,9 +21,9 @@ Aide
 
 = 7 temples =
 
-Lust
+Lust >
 - Upgrades + effets grace aux pets
-- Reagents : ?
+- Reagents : Instruments, toys
 - Multiplicateur : Happiness
 - Modif : Altruism, autres.
 - Contrecout : Le worker ajouter un lover dans les relations.
@@ -31,6 +31,7 @@ Lust
 ! Secret of lust
 + Release pheromones (aoe debuff, buff les autres succubi)
 + Entice (perte de skill enemy, peut faut tomber les armes)
++ Heat régulier (flash, name, 2 interactions)
 
 Autres
 > Broken heart (rip heart)
@@ -41,7 +42,7 @@ Greed
 - Reagents : crafts
 - Multiplicateur : Valeur du craft
 - Modif : Craving, urges
-- Contrecout : Les marchants quittent les lieux ?
+- Contrecout : 10% chance de siege
 
 * Annuler les pauses
 * Posess a distant worker (+skill, si un artefact est utilisé get legendary, annonce et set mood à 1)
@@ -55,8 +56,8 @@ Sloth
 
 > Coiling nahashes (up de moral grace aux nahash)
 * Protective tentacles (defense+ à porté des tentacle monsters)
-* Deep thoughts (buff de skill 200% autour des wisps)
-* Entangling roots (vitesse - pour les enemies autour des crimson roses)
+* Deep souls (buff de skill 200% autour des wisps)
+> Entangling roots (vitesse - pour les enemies autour des crimson roses)
 
 Pride
 - Améliorateur de moral
@@ -65,18 +66,21 @@ Pride
 - Modifs : Immodesty, immoderation
 - Contrecout : Chances de siege par les deep succubi.
 
-* Forget death
+!+ Forget death
 * Up de moral aoe avec les enfants
-* Get summoned (le worker est téléporté, exilé, gros gain de moral)
+> Get summoned (le worker est téléporté, exilé, gros gain de moral)
 
 Gluttonry
-- Upgrade civil
+- Upgrade civil, santé
 - Multiplicateur : Qualité de la nourriture employée
 - Modifs : Skill de cuisine, fat
 - Contrecout : Faim et/ou soif
-* Regeneration
 
-Wrath
+* Regeneration
+* Soin total
+* Eat soul
+
+Wrath >
 - Upgrades pour le combat
 - Multiplicateur : Mécontentement
 - Modifs : Colère, prone to rage
@@ -86,7 +90,7 @@ Wrath
 > Reinforce strengh
 > Reinforce stamina
 > Reinforce speed
-* Slick skin (skin plus solide)
+> Slick skin (skin plus solide)
 ! Reinforce wings
 
 Envy
@@ -96,8 +100,8 @@ Envy
 - Contrecout : Perte de moral pour le worker
 
 * Rendre un invader crazed
-* Chef inconscient
-* Faire partir des invaders
+> Chef inconscient
+> Faire partir des invaders
 
 == Altar royalists ==
 
@@ -114,7 +118,6 @@ Altar of fire
 Soul forge
 
 Construire des lances magiques, dégat faibles, effets en plus
-* Pain lance : Cause de la douleur
+* Stygian lance : Un pitchfork + un soul, garder la material et la qualité
+* Pain shard : Cause de la douleur
 * Force lance : Directed Dust
-* ?
-
