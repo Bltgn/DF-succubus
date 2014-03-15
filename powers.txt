@@ -56,7 +56,7 @@ Sloth
 
 > Coiling nahashes (up de moral grace aux nahash)
 * Protective tentacles (defense+ à porté des tentacle monsters)
-* Deep souls (buff de skill 200% autour des wisps)
+> Deep souls (buff de skill 200% autour des wisps)
 > Entangling roots (vitesse - pour les enemies autour des crimson roses)
 
 Pride
@@ -67,7 +67,7 @@ Pride
 - Contrecout : Chances de siege par les deep succubi.
 
 !+ Forget death
-* Up de moral aoe avec les enfants
+> Up de moral aoe avec les enfants
 > Get summoned (le worker est téléporté, exilé, gros gain de moral)
 
 Gluttonry
@@ -76,9 +76,9 @@ Gluttonry
 - Modifs : Skill de cuisine, fat
 - Contrecout : Faim et/ou soif
 
-* Regeneration
-* Soin total
-* Eat soul
+> Regeneration
+> Soin total
+!+ Devour soul
 
 Wrath >
 - Upgrades pour le combat
