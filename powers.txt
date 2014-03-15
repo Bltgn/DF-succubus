@@ -21,7 +21,7 @@ Aide
 
 = 7 temples =
 
-Lust >
+Lust
 - Upgrades + effets grace aux pets
 - Reagents : Instruments, toys
 - Multiplicateur : Happiness

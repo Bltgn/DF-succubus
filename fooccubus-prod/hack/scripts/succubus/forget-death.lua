@@ -12,14 +12,6 @@ local function rating(unit)
 	return max.min(math.ceil(#unit.relations / 5), 5)
 end
 
--- Chances of siege from the deep succubi
-local function payback()
-	if math.random(0, 100) <= 10 then
-		dfhack.run_script('force', 'siege', 'CULTS')
-		dfhack.gui.showAnnouncement("Your pride has attracted some unwanted attention!", COLOR_LIGHTRED, true)
-	end
-end
-
 -- Action
 unit = df.unit.find(tonumber(unitId))
 if not unit then qerror('forget-death : Unit not found.') end
@@ -33,14 +25,17 @@ for fnUnitCount, fnUnit in ipairs(df.global.world.units.all) do
 			if v.type == df.unit_thought_type.WitnessDeath
 				or v.type == df.unit_thought_type.LostPet
 				or v.type == df.unit_thought_type.LostPet2
+				or v.type == df.unit_thought_type.LostTrainingAnimal
 				or v.type == df.unit_thought_type.RageKill
 				or v.type == df.unit_thought_type.SparringAccident
 				or v.type == df.unit_thought_type.LostSpouse
 				or v.type == df.unit_thought_type.LostFriend
+				or v.type == df.unit_thought_type.LostLover
 				or v.type == df.unit_thought_type.LostSibling
 				or v.type == df.unit_thought_type.LostChild
 				or v.type == df.unit_thought_type.LostMother
 				or v.type == df.unit_thought_type.LostFather
+				or v.type == df.unit_thought_type.LostGrudge
 			then
 				events:erase(k)
 				cFixedToughts = cFixedToughts + 1
