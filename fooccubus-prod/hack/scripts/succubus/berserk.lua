@@ -23,7 +23,7 @@ function unhappiness(unit)
 	else return 1 end
 end
 
--- Addsyndrome may check for this, but I need to check first to prevent the announcement
+-- I need to check first to make sure the berserkers gets berserk
 function isBerserk(unitTarget)
 	local actives = unitTarget.syndromes.active
 	local syndromes = df.global.world.raws.syndromes.all
@@ -64,6 +64,6 @@ if isBerserk(unit) then
 		syndrome = 'FOOCCUBUS_BERSERK_3'
 	end
 
-	dfhack.run_script('addsyndrome', syndrome, unit.id, '-1,-1,-1', 'civ', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE')
+	dfhack.run_script('addsyndrome', syndrome, unit.id)
 	if debug then print('- Apply '..syndrome) end
 end

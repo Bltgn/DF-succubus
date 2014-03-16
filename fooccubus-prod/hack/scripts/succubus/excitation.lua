@@ -32,7 +32,7 @@ function hasSyndrome(unitTarget)
 	for ka, active in ipairs(actives) do
 		local synclass=syndromes[active.type].syn_class
 		for kc, class in ipairs(synclass) do
-			if class.value == 'BERSERK' then return true end
+			if class.value == 'EXCITATION' then return true end
 		end
 	end
 
@@ -72,7 +72,7 @@ if isBerserk(unit) then
 	end
 
 	if syndrome then
-		dfhack.run_script('addsyndrome', syndrome, unit.id, '-1,-1,-1', 'civ', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE', 'NONE')
+		dfhack.run_script('addsyndrome', syndrome, unit.id)
 		if debug then print('- Apply '..syndrome) end
 	else
 		if debug then print('- Happiness is too low, no syndrome') end

@@ -377,7 +377,6 @@ inorganic_fooccubus
 			[CDI:ADV_NAME:Battle cry (scream)]
 			[CDI:VERB:scream:screams:NA]
 
-
 // Lust
 [INORGANIC:FOOCCUBUS_UPGRADE_EXCITATION] // add berserk buff interaction
 	[SPECIAL]
@@ -550,6 +549,33 @@ inorganic_fooccubus
 			[CDI:TARGET:A:SELF_ONLY]
 			[CDI:FREE_ACTION]
 			[CDI:WAIT_PERIOD:1000]
+
+// Sloth
+[INORGANIC:PROTECTIVE_TENTACLES] // Defense buff
+	[SPECIAL]
+	[NO_STONE_STOCKPILE]
+	[MATERIAL_VALUE:1]
+	[STATE_COLOR:GAS:WHITE]
+	[STATE_COLOR:ALL_SOLID:WHITE]
+	[STATE_NAME_ADJ:ALL_SOLID:Rock]
+	[STATE_NAME_ADJ:LIQUID:liquid]
+	[STATE_NAME_ADJ:GAS:smoke]
+	[DISPLAY_COLOR:6:0:1][TILE:'*']
+	[MELTING_POINT:9000]
+	[BOILING_POINT:8999]
+	[SOLID_DENSITY:20000000]
+	[SYNDROME]
+		[SYN_CLASS:\AUTO_SYNDROME]
+		[CE_CAN_DO_INTERACTION:START:0:END:8000]
+			[CDI:ADV_NAME:Raise the defense of nearby succubi]
+			[CDI:INTERACTION:PROTECTIVE_TENTACLES]
+			[CDI:TARGET:A:LINE_OF_SIGHT]
+			[CDI:TARGET_RANGE:A:5]
+			[CDI:MAX_TARGET_NUMBER:A:20]
+			[CDI:FREE_ACTION]
+			[CDI:WAIT_PERIOD:500]
+			[CDI:ADV_NAME:Increase a succubus defense]
+			[CDI:VERB:pull tentacles around the nearby succubi:pulls tentacles around the nearby succubi:NA]
 
 // Fire
 [INORGANIC:FOOCCUBUS_UPGRADE_FIRE_SECRET] // Learns the secret of fire

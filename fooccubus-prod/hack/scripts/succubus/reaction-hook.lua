@@ -1,7 +1,37 @@
 -- Captures custom reactions and make the appropriate dfhack calls.
 
 local eventful = require 'plugins.eventful'
--- Succubus Dungeons : Reaction hooks
+
+--http://lua-users.org/wiki/StringRecipes  (removed indents since I am not using them)
+function wrap(str, limit)--, indent, indent1)
+	--indent = indent or ""
+	--indent1 = indent1 or indent
+	local limit = limit or 72
+	local here = 1 ---#indent1
+	return str:gsub("(%s+)()(%S+)()",	--indent1..str:gsub(
+							function(sp, st, word, fi)
+								if fi-here > limit then
+									here = st -- - #indent
+									return "\n"..word --..indent..word
+								end
+							end)
+end
+
+-- Simulate a canceled reaction message, save the reagents
+local function cancelReaction(reaction, unit, input_reagents, message)
+	local lines = utils.split_string(wrap(
+			string.format("%s, %s cancels %s: %s.", dfhack.TranslateName(dfhack.units.getVisibleName(unit)), dfhack.units.getProfessionName(unit), reaction.name, message)
+		) , NEWLINE)
+	for _, v in ipairs(lines) do
+		dfhack.gui.showAnnouncement(v, COLOR_RED)
+	end
+
+	for _, v in ipairs(input_reagents or {}) do
+		v.flags.PRESERVE_REAGENT = true
+	end
+
+	--unit.job.current_job.flags.suspend = true
+end
 
 -- Chances of siege from the deep succubi
 local function paybackSiege(chance, domain)
@@ -25,6 +55,27 @@ local function paybackSiege(chance, domain)
 	end
 end
 
+local function hasCreature(creatureId)
+	local unitRaw
+	for k, unit in ipairs(df.global.world.units.all) do
+		unitRaw = df.global.world.raws.creatures.all[fnUnit.race]
+		if unitRaw.creature_id == creatureId then return true end
+	end
+
+	return false
+end
+-- Make sure
+local function slothCreature(creatureId, reaction, unit, input_reagents)
+	if(hasCreature(creatureId) == false) then
+		cancelReaction(reaction, unit, input_reagents, "no creature in the area")
+		return nil
+	end
+
+	if creatureId == 'TENTACLE_MONSTER' then
+		dfhack.run_script('succubus/protective-tentacles', unit.id)
+	end
+end
+
 eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_items, input_reagents, output_items, call_native)
 	if reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
 		-- Firejets outside
@@ -35,5 +86,9 @@ eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_ite
 		dfhack.run_script('succubus/forget-death', unit.id)
 		dfhack.run_script('succubus/influence', unit.id, 'pride')
 		paybackSiege(10, 'pride')
+	else if raction.code == 'LUA_HOOK_PROTECTIVE_TENTACLES' then
+		-- Tentacle summon buff
+		slothCreature('TENTACLE_MONSTER', reaction, unit, input_reagents)
+		dfhack.run_script('succubus/influence', unit.id, 'sloth')
 	end
 end
