@@ -2,7 +2,7 @@
 ---
 
 Summons tier 3
-+ Random demon : reagent, ajouter conjure slade
++ Random demon : reagent
 
 Pouvoirs
 + voir pouvoir.txt
@@ -19,10 +19,6 @@ Packaging
 Updates à vérifier
 + Projectile expansion
 + Rendermax
-+ Addsyndromes (maj les autres scripts)
-
-Armes
-+ Ajouter un workshop pour ça (soulforge)
 
 Credits :
 - Teleport par Putnam
@@ -38,7 +34,7 @@ Fix/test
 - Rendre torrid kiss touchable
 
 Temples
-- Faire les 7 temples + de l'aide
+- Faire les 7 temples
 
 6.1
 ---

@@ -34,9 +34,9 @@ Lust
 + Heat régulier (flash, name)
 > Interaction heat
 
-Autres
+* Autres
 > Broken heart (rip heart)
-!+ Climax (up des stats en combat, complètement OP à ecstatic)
+! Climax (up des stats en combat, complètement OP à ecstatic)
 
 Greed
 - Améliorateur de productivité
@@ -46,7 +46,7 @@ Greed
 - Contrecout : 10% chance de siege
 
 > Annuler les pauses
-+ Conjure slade
+! Conjure slade
 > Posess a distant worker (+skill, si un artefact est utilisé get legendary, annonce et set mood à 1)
 
 Sloth
@@ -57,7 +57,7 @@ Sloth
 - Contrecout : Le worker prend une pause
 
 > Coiling nahashes (up de moral grace aux nahash)
-* Protective tentacles (defense+ à porté des tentacle monsters)
+! Protective tentacles (defense+ à porté des tentacle monsters)
 > Deep souls (buff de skill 200% autour des wisps)
 > Entangling roots (vitesse - pour les enemies autour des crimson roses)
 
@@ -68,7 +68,7 @@ Pride
 - Modifs : Immodesty, immoderation
 - Contrecout : Chances de siege par les deep succubi.
 
-!+ Forget death
+! Forget death
 > Up de moral aoe avec les enfants
 > Get summoned (le worker est téléporté, exilé, gros gain de moral)
 
@@ -80,9 +80,9 @@ Gluttonry
 
 > Regeneration
 > Soin total
-!+ Devour soul
+! Devour soul
 
-Wrath >
+Wrath
 - Upgrades pour le combat
 - Multiplicateur : Mécontentement
 - Modifs : Colère, prone to rage
@@ -112,14 +112,15 @@ Altar of fire
 - Upgrades
 
 ! Become fireimmune
-!+ Torrid kiss (incinerate au toucher)
+! Torrid kiss (incinerate au toucher)
 ! Gehena fire (fire secret)
-!+ Infernal rain (exterieur)
+! Infernal rain (exterieur)
 > Geyser de feu (1 invader non chef)
 
 Soul forge
 
 Construire des lances magiques, dégat faibles, effets en plus
-* Stygian lance : Un pitchfork + un soul, garder la material et la qualité
+! Stygian lance : Un pitchfork + un soul, garder la material et la qualité
 * Pain shard : Cause de la douleur
-* Force lance : Directed Dust
+* Force shard : Directed Dust
+* Blight shard
