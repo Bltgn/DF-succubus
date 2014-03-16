@@ -31,7 +31,8 @@ Lust
 ! Secret of lust
 + Release pheromones (aoe debuff, buff les autres succubi)
 + Entice (perte de skill enemy, peut faut tomber les armes)
-+ Heat régulier (flash, name, 2 interactions)
++ Heat régulier (flash, name)
+> Interaction heat
 
 Autres
 > Broken heart (rip heart)
@@ -44,8 +45,9 @@ Greed
 - Modif : Craving, urges
 - Contrecout : 10% chance de siege
 
-* Annuler les pauses
-* Posess a distant worker (+skill, si un artefact est utilisé get legendary, annonce et set mood à 1)
+> Annuler les pauses
++ Conjure slade
+> Posess a distant worker (+skill, si un artefact est utilisé get legendary, annonce et set mood à 1)
 
 Sloth
 - Effect grace aux pets
@@ -61,7 +63,7 @@ Sloth
 
 Pride
 - Améliorateur de moral
-- Reagents : ?
+- Reagents : Un craft an particulier
 - Multiplicateur : Nombre de relations
 - Modifs : Immodesty, immoderation
 - Contrecout : Chances de siege par les deep succubi.

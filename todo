@@ -2,8 +2,7 @@
 ---
 
 Summons tier 3
-+ Soul wisp : reagent (soul)
-+ Random demon : reagent
++ Random demon : reagent, ajouter conjure slade
 
 Pouvoirs
 + voir pouvoir.txt
@@ -24,7 +23,6 @@ Updates à vérifier
 
 Armes
 + Ajouter un workshop pour ça (soulforge)
-+ Renommer pain lance par stygian lance
 
 Credits :
 - Teleport par Putnam
@@ -36,11 +34,11 @@ MW
 - Corriger les conflits
 
 Fix/test
-- Tester pain lance (et le renommer)
+- Tester pain lance
 - Rendre torrid kiss touchable
 
-PHP
-Mettre à jour reaction et entity
+Temples
+- Faire les 7 temples + de l'aide
 
 6.1
 ---
@@ -51,12 +49,15 @@ GUI
 Sprites
 + Commencer deep
 
+Influence
+- Lust, add a lover
+
+7.0
+---
+
 Nobles
 - La reine + noble peuvent réssuciter (+makeown)
 - Le mayor annule les pauses
-
-Influence
-- Lust, add a lover
 
 Sans tag
 --------

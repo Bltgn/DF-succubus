@@ -331,17 +331,6 @@ interaction_fooccubus
 				[CDI:WAIT_PERIOD:100]
 				[CDI:ADV_NAME:Spams]
 				[CDI:VERB:are taken by spams:is taken by spams:NA]
-			[CE_CAN_DO_INTERACTION:START:0] // Friendly
-				[CE:PERIODIC:MOON_PHASE:27:0]
-				[CDI:ADV_NAME:Caress]
-				[CDI:VERB:caress a friend:caresses a friend:NA]
-				[CDI:USAGE_HINT:GREETING_FRIEND]
-				[CDI:INTERACTION:FOOCCUBUS_CARESS]
-				[CDI:BP_REQUIRED:BY_CATEGORY:HAND]
-				[CDI:TARGET:A:TOUCHABLE]
-				[CDI:TARGET_RANGE:A:2]
-				[CDI:MAX_TARGET_NUMBER:A:1]
-				[CDI:WAIT_PERIOD:200]
 			// Actions
 			[CE_CAN_DO_INTERACTION:START:0]
 				[CDI:ADV_NAME:Release pheromones]
