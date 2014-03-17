@@ -102,6 +102,7 @@ Envy
 - Contrecout : Perte de moral pour le worker
 
 * Rendre un invader crazed
+* Attract invaders inside
 > Chef inconscient
 > Faire partir des invaders
 

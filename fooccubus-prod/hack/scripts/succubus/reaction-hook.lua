@@ -79,7 +79,10 @@ end
 
 -- Search the site for an invader
 local function hasInvader()
-
+	for k, unit in ipairs(df.global.world.units.all) do
+		if unit.flags1.active_invader then return true end
+	end
+	return false
 end
 
 -- Manages effects targeting invaders
@@ -91,6 +94,8 @@ local function invadersEffect(code, reaction, unit, input_reagents)
 
 	if code == 'SOW_DISCORD' then
 		dfhack.run_script('succubus/crazed-invader', unit.id, 'DECADENCE')
+	elseif code == 'LURE_INVADERS' then
+		dfhack.run_script('succubus/lure-invader')
 	end
 end
 
@@ -100,17 +105,20 @@ eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_ite
 		-- Firejets outside
 		dfhack.run_script('syndromeweather', firebeath, 100, 20, 5)
 		dfhack.gui.showAnnouncement('The sky darkens and fireballs strikes the earth.', COLOR_YELLOW)
-	else if reaction.code == 'LUA_HOOK_FORGET_DEATH' then
+	elseif reaction.code == 'LUA_HOOK_FORGET_DEATH' then
 		-- Forget death
 		dfhack.run_script('succubus/forget-death', unit.id)
 		dfhack.run_script('succubus/influence', unit.id, 'pride')
 		paybackSiege(10, 'pride')
-	else if raction.code == 'LUA_HOOK_PROTECTIVE_TENTACLES' then
+	elseif raction.code == 'LUA_HOOK_PROTECTIVE_TENTACLES' then
 		-- Tentacle summon buff
 		slothCreature('TENTACLE_MONSTER', reaction, unit, input_reagents)
 		dfhack.run_script('succubus/influence', unit.id, 'sloth')
-	else if reaction.code == 'LUA_HOOK_SOW_DISCORD'  then
+	elseif reaction.code == 'LUA_HOOK_SOW_DISCORD'  then
 		-- Render invaders crazed
 		invadersEffect('SOW_DISCORD', reaction, unit, input_reagents)
+	elseif reaction.code == 'LUA_HOOK_LURE_INVADERS'  then
+		-- Render invaders crazed
+		invadersEffect('LURE_INVADERS', reaction, unit, input_reagents)
 	end
 end

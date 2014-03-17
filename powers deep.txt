@@ -20,6 +20,7 @@ Atar of nightmares
 * Provoke a siege
 * Lure a beast
 * Possess a distant worker
+* Attract invaders inside
 
 Arme
 Forbidden bracelet
