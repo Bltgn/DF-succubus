@@ -7,17 +7,17 @@ Esoteric order
 > Meld with the deep ones (summon en combat si female, long term syndrome)
 
 Abyssal temple
-* Summon a rain (shell craft)
+!+ Summon a rain (shell craft)
 * Put Death to death (totem, soul, ?)
 * Dimensional pull (1 craft, slam, depend du craft)
 > Summon an evil weather
 
 Atar of nightmares
-* Visit broker dreams
-* Visit crafter dreams
-* Visit fighter dreams
-* Visit farmer dreams
-* Provoke a siege
+!+ Visit broker dreams
+!+ Visit crafter dreams
+!+ Visit fighter dreams
+!+ Visit farmer dreams
+!+ Provoke a siege
 * Lure a beast
 * Possess a distant worker
 * Attract invaders inside
