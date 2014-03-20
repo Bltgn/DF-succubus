@@ -36,22 +36,12 @@ end
 -- Chances of siege from the deep succubi
 local function paybackSiege(chance, domain)
 	if math.random(0, 100) <= chance then
-
-		if domain == 'deep' then
-			civ = 'DECADENCE'
-		else
-			civ = 'CULTS'
-		end
-
-		dfhack.run_script('force', 'siege', civ)
+		dfhack.run_script('force', 'siege', 'CULTS')
 
 		if domain == 'pride' then
 			dfhack.gui.showAnnouncement("Your pride has attracted some unwanted attention!", COLOR_LIGHTRED, true)
 		elseif domain == 'greed' then
 			dfhack.gui.showAnnouncement("Your greed has attracted some unwanted attention!", COLOR_LIGHTRED, true)
-		elseif domain == 'deep' then
-			dfhack.gui.showAnnouncement("The succubi queen has found your temple!", COLOR_LIGHTRED, true)
-		end
 	end
 end
 
@@ -96,29 +86,63 @@ local function invadersEffect(code, reaction, unit, input_reagents)
 		dfhack.run_script('succubus/crazed-invader', unit.id, 'DECADENCE')
 	elseif code == 'LURE_INVADERS' then
 		dfhack.run_script('succubus/lure-invader')
+	elseif code == 'DIMENSION_PULL' then
+		dfhack.run_script('succubus/dimension-pull') -- todo catch the reagent's value
 	end
+end
+
+-- Add a random skill from a defined set
+local function addSkill(set, unit)
+
+	local skillSet, roll
+
+	if(set == 'BROKER') then
+		dfhack.run_script('trainskill', unit.id, 'APPRAISAL', 15)
+		skillSet = {'LIAR', 'FLATTERY', 'RECORD_KEEPING'}
+	if(set == 'CRAFTER') then
+		skillSet = {'WOODCRAFT', 'STONECRAFT', 'METALCRAFT', 'GLASSMAKER', 'LEATHERWORK'}
+	if(set == 'FARMER') then
+		skillSet = {'PLANT', 'COOK', 'BREWING'}
+	if(set == 'SOLDIER') then
+		skillSet = {'SIEGEOPERATE', 'DODGING', 'ARMOR', 'MELEE_COMBAT', 'RANGED_COMBAT'}
+	end
+
+	roll = math.random(1, #skillSet)
+	dfhack.run_script('trainskill', unit.id, skillSet[roll], 15)
+
 end
 
 -- Reaction hook
 eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_items, input_reagents, output_items, call_native)
+	-- site effects
 	if reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
-		-- Firejets outside
 		dfhack.run_script('syndromeweather', firebeath, 100, 20, 5)
 		dfhack.gui.showAnnouncement('The sky darkens and fireballs strikes the earth.', COLOR_YELLOW)
+
+	-- citizen effects
 	elseif reaction.code == 'LUA_HOOK_FORGET_DEATH' then
-		-- Forget death
 		dfhack.run_script('succubus/forget-death', unit.id)
 		dfhack.run_script('succubus/influence', unit.id, 'pride')
 		paybackSiege(10, 'pride')
+
+	-- pet effects
 	elseif raction.code == 'LUA_HOOK_PROTECTIVE_TENTACLES' then
-		-- Tentacle summon buff
 		slothCreature('TENTACLE_MONSTER', reaction, unit, input_reagents)
 		dfhack.run_script('succubus/influence', unit.id, 'sloth')
-	elseif reaction.code == 'LUA_HOOK_SOW_DISCORD'  then
-		-- Render invaders crazed
-		invadersEffect('SOW_DISCORD', reaction, unit, input_reagents)
-	elseif reaction.code == 'LUA_HOOK_LURE_INVADERS'  then
-		-- Render invaders crazed
-		invadersEffect('LURE_INVADERS', reaction, unit, input_reagents)
+
+	-- invader effects
+	elseif reaction.code == 'LUA_HOOK_SOW_DISCORD' then invadersEffect('SOW_DISCORD', reaction, unit, input_reagents)
+	elseif reaction.code == 'LUA_HOOK_LURE_INVADERS' then invadersEffect('LURE_INVADERS', reaction, unit, input_reagents)
+	elseif reaction.code == 'LUA_HOOK_DIMENSION_PULL' then invadersEffect('DIMENSION_PULL', reaction, unit, input_reagents)
+
+	-- Skill trainers
+	elseif reaction.code == 'LUA_HOOK_NIGHTMARE_BROKER' then addSkill('BROKER', unit)
+	elseif reaction.code == 'LUA_HOOK_NIGHTMARE_CRAFTER' then addSkill('CRAFTER', unit)
+	elseif reaction.code == 'LUA_HOOK_NIGHTMARE_FARMER' then addSkill('FARMER', unit)
+	elseif reaction.code == 'LUA_HOOK_NIGHTMARE_SOLDIER' then addSkill('SOLDIER', unit)
+	-- Misc
+	elseif reaction.code == 'LUA_HOOK_CALL_SIEGE' then dfhack.run_script('fooccubus/callsiege', 100)
+	elseif reaction.code == 'LUA_HOOK_CALL_BEAST' then dfhack.run_script('force', 'megabeast')
+	elseif reaction.code == 'LUA_HOOK_WEATHER_RAIN' then dfhack.run_script('weather', 'rain')
 	end
 end
