@@ -1,4 +1,4 @@
--- Render x invaders crazed, the effect is more important if the worker has positions
+-- Slam siegers to the ground
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 if not ... then qerror('Please enter a creature ID.') end
 
@@ -9,9 +9,15 @@ if not unit then qerror('crazed-invaders : Unit not found.') end
 local invaders = {}
 local targetId
 
--- Todo more effect depending of the originating civ
+-- Todo more effect depending of the originating civ and the quality of the craft
 local function rating(unit)
 	local number = math.random(1, 3)
+	return number
+end
+
+-- Todo catch the reagent value
+local function power(unit)
+	local number = math.random(50000, 300000)
 	return number
 end
 
@@ -22,9 +28,9 @@ for k, unit in ipairs(df.global.world.units.all) do
 	end
 end
 
-if #invaders == 0 then qerror('crazed-invaders : No invader found.') end
+if #invaders == 0 then qerror('dimension pull: No invader found.') end
 
 for i = 0, rating(unit) do
 	targetId = invaders[math.random(1, #invaders)]
-	dfhack.run_script('addsyndrome', 'SYNDROME_BERSERK', targetId)
+	dfhack.run_script('slam', power(unit), targetId)
 end

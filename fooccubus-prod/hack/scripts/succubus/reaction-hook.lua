@@ -83,17 +83,16 @@ local function invadersEffect(code, reaction, unit, input_reagents)
 	end
 
 	if code == 'SOW_DISCORD' then
-		dfhack.run_script('succubus/crazed-invader', unit.id, 'DECADENCE')
+		dfhack.run_script('succubus/crazed-invader', unit.id)
 	elseif code == 'LURE_INVADERS' then
 		dfhack.run_script('succubus/lure-invader')
 	elseif code == 'DIMENSION_PULL' then
-		dfhack.run_script('succubus/dimension-pull') -- todo catch the reagent's value
+		dfhack.run_script('succubus/dimpull-invaders', unit.id) -- todo catch the reagent's value
 	end
 end
 
 -- Add a random skill from a defined set
 local function addSkill(set, unit)
-
 	local skillSet, roll
 
 	if(set == 'BROKER') then
@@ -109,7 +108,6 @@ local function addSkill(set, unit)
 
 	roll = math.random(1, #skillSet)
 	dfhack.run_script('trainskill', unit.id, skillSet[roll], 15)
-
 end
 
 -- Reaction hook
