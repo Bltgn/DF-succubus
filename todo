@@ -33,9 +33,7 @@ MW
 Fix/test
 - Tester pain lance
 - Rendre torrid kiss touchable
-
-Temples
-- Faire les 7 temples
+- Tout tester
 
 6.1
 ---
@@ -51,6 +49,9 @@ Influence
 
 7.0
 ---
+
+Temples
+- Faire les 7 temples
 
 Nobles
 - La reine + noble peuvent réssuciter (+makeown)

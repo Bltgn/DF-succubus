@@ -1,9 +1,9 @@
 Esoteric order
 ! Reinforce body (+250)
 > Embrace insanity (mega buff, crazed)
-* Learn abyssal gaze
-* Learn mind theft
-* Learn necrosis chant
+!+ Learn abyssal gaze
+!+ Learn mind theft
+!+ Learn necrosis chant
 > Meld with the deep ones ( long term syndrome)
 > ??? monster (summon en combat)
 
