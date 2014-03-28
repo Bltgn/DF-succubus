@@ -9,7 +9,7 @@ Esoteric order
 
 Abyssal temple
 ! Summon a rain (shell craft)
-> Put Death to death (totem, soul, ?)
+* Put Death to death (totem, soul, ?)
 ! Dimensional pull (1 craft, slam, depend du craft)
 > Summon an evil weather
 

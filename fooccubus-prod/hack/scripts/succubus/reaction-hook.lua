@@ -114,7 +114,7 @@ end
 eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_items, input_reagents, output_items, call_native)
 	-- site effects
 	if reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
-		dfhack.run_script('syndromeweather', firebeath, 100, 20, 5)
+		dfhack.run_script('syndromeweather', 'firebreath', 100, 20, 5)
 		dfhack.gui.showAnnouncement('The sky darkens and fireballs strikes the earth.', COLOR_YELLOW)
 
 	-- citizen effects
@@ -142,5 +142,10 @@ eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_ite
 	elseif reaction.code == 'LUA_HOOK_CALL_SIEGE' then dfhack.run_script('fooccubus/callsiege', 100)
 	elseif reaction.code == 'LUA_HOOK_CALL_BEAST' then dfhack.run_script('force', 'megabeast')
 	elseif reaction.code == 'LUA_HOOK_WEATHER_RAIN' then dfhack.run_script('weather', 'rain')
+	elseif reaction.code == 'LUA_HOOK_DEATH_TO_DEATH' then
+		dfhack.run_script('syndromeweather', 'miasma', 50, 20, 5)
+		dfhack.gui.showAnnouncement('You brought strange eons where even death can die.', COLOR_YELLOW)
+	elseif reaction.code == 'LUA_HOOK_DEATH_TO_DEATH_CANCEL' then
+		dfhack.gui.showAnnouncement('Death came back and the order is restored.', COLOR_YELLOW)
 	end
 end

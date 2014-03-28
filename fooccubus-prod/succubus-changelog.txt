@@ -9,19 +9,20 @@
 - Added an execution position to the deep succubi.
 - Both civs whippers will meet workers.
 - Adjusted the body descriptors of the succubi, culled the tongue lengths.
-- Armor will now be forced upon the entities.
+- Armor will is now garanteed to be available.
 - Summoning has been made simpler, using less different reagents.
 - Made nightmares more aggressive.
 - Soul wisps are more likely to flee.
 - Hellhounds will enrage in combat.
 - Pain elemental explosions now push away its victims causing slamming damage.
-- Tentacle monsters may start cleaning nearby succubi,.
+- Tentacle monsters may start cleaning nearby succubi now.
 - Removed the 'too wounded' message when a worker transforms into an unholy ritual.
 - Charming and corrupting no longer require a weapon. The weapon is now used for the building construction.
 - Bad thoughts about clothing will no longer be removed if you play a non succubus civ.
 - Bloodworms should appear in evil caverns.
 - Added beneficial syndroms to bloodworm and black rose wines, non succubi who drink those wines may experience issues.
 - Sprite update : Fixed consort sprites
+- Added illumination, those are found in the furnace choice.
 
 5.6
 + Fixed the warlord and overlord sprites, again.
