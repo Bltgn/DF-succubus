@@ -183,11 +183,11 @@ special.CURSOR=makeMaterialDef({1,1,1},{0.96,0.84,0.03},11, {"flicker"})
 special.CITIZEN=makeMaterialDef(nil,{0.80,0.80,0.90},8)
 special.LevelDim=0.6 -- darkness. Do not set to 0
 special.dayHour=-1 -- <0 cycle, else hour of the day
-special.dayColors={ {0,0,0}, --dark at 0 hours 
+special.dayColors={ {0,0,0}, --dark at 0 hours
 					{0.6,0.5,0.5}, --reddish twilight
-				    {1,1,1}, --fullbright at 12 hours 
-					{0.5,0.5,0.5}, 
-					{0,0,0}} --dark at 24 hours 
+				    {1,1,1}, --fullbright at 12 hours
+					{0.5,0.5,0.5},
+					{0,0,0}} --dark at 24 hours
 special.daySpeed=0.1 -- 1->1200 cur_year_ticks per day. 2->600 ticks
 
 --		glasses
@@ -273,7 +273,17 @@ addBuilding("Workshop:MetalsmithsForge",{1,1,1},{1.5,1,0.5},15)
 addBuilding("Workshop:MagmaForge",{1,1,1},{1.5,1,0.5},15)
 
 -- 		custom
-addBuilding("Workshop:Custom:SUMMONING_CIRCLE",{1,1,1},{1.8,0.5,0.9},15)
+addBuilding("Workshop:Custom:SUMMONING_CIRCLE",{1,1,1},{1.8,0.5,0.9},10)
+addBuilding("Workshop:Custom:GEMWORKSHOP",{1,1,1},{1.2,1,1.2},10)
+addBuilding("Workshop:Custom:DEN_OF_INIQUITY",{1,1,1},{1,1,0.8},10)
+addBuilding("Workshop:Custom:TORTURE_CHAMBER",{1,1,1},{1,1,0.8},10)
+addBuilding("Workshop:Custom:FOOCCUBUS_SIN",{1,1,1},{1.5,0.5,0.5},15)
+addBuilding("Workshop:Custom:FOOCCUBUS_FIRE",{1,1,1},{0.9,0.75,0.3},15)
+addBuilding("Workshop:Custom:FOOCCUBUS_ESOTERIC",{1,1,1},{1,1,0.8},15)
+addBuilding("Workshop:Custom:FOOCCUBUS_NIGHTMARES",{1,1,1},{1,1,0.8},10)
+addBuilding("Workshop:Custom:FOOCCUBUS_ABYSS",{1,1,1},{0.2,0.2,1},15)
+addBuilding("Workshop:Custom:FOOCCUBUS_SOUL_FORGE",{1,1,1},{1,1,0.8},10)
+addBuilding("Workshop:Custom:FOOCCUBUS_SOUL_WELL",{1,1,1},{1,0,1},10)
 
 -- 		furnaces
 addBuilding("Furnace:WoodFurnace",{1,1,1},{1.2,0.5,0.5},15)
