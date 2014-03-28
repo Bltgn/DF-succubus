@@ -6,11 +6,9 @@ ret.buildings={}
 ret.special={}
 ret.items={}
 ret.creatures={}
-
 for k,v in pairs(ret) do
   _ENV[k]=v
 end
-
 -- add material by id (index,mat pair or token string or a type number), flags is a table of strings
 -- supported flags (but not implemented):
 --		flicker
@@ -60,21 +58,18 @@ function buildingLookUp(id)
 				end
 			end
 		end
+		qerror("Invalid custom building:"..tokens[3])
 	end
 	return ret
 end
-
 function itemLookup(id)
 	local ret={}
 	local tokens={}
-
 	for i in string.gmatch(id, "[^:]+") do
 		table.insert(tokens,i)
 	end
-
 	ret.type=df.item_type[tokens[1]]
 	ret.subtype=-1
-
 	if tokens[2] then
 		for k,v in ipairs(df.global.world.raws.itemdefs.all) do --todo lookup correct itemdef
 			if v.id==tokens[2] then
@@ -84,18 +79,14 @@ function itemLookup(id)
 		end
 		qerror("Failed item subtype lookup:"..tokens[2])
 	end
-
-return ret
+	return ret
 end
-
 function creatureLookup(id)
 	local ret={}
 	local tokens={}
-
 	for i in string.gmatch(id, "[^:]+") do
 		table.insert(tokens,i)
 	end
-
 	for k,v in ipairs(df.global.world.raws.creatures.all) do
 		if v.creature_id==tokens[1] then
 			ret.type=k
@@ -107,17 +98,14 @@ function creatureLookup(id)
 					end
 				end
 				if ret.subtype==nil then
-
 					qerror("caste "..tokens[2].." for "..tokens[1].." not found")
 				end
 			end
 			return ret
 		end
 	end
-
 	qerror("Failed to find race:"..tokens[1])
 end
-
 -- add creature by id ("DWARF" or "DWARF:MALE")
 -- supported flags:
 function addCreature(id,transparency,emitance,radius,flags)
@@ -125,7 +113,6 @@ function addCreature(id,transparency,emitance,radius,flags)
 	local mat=makeMaterialDef(transparency,emitance,radius,flags)
 	table.insert(creatures,{race=crId.type,caste=crId.subtype or -1, light=mat})
 end
-
 -- add item by id ( "TOTEM" or "WEAPON:PICK" or "WEAPON" for all the weapon types)
 -- supported flags:
 --		hauling 	--active when hauled	TODO::currently all mean same thing...
@@ -139,7 +126,6 @@ function addItem(id,transparency,emitance,radius,flags)
 	local mat=makeMaterialDef(transparency,emitance,radius,flags)
 	table.insert(items,{["type"]=itemId.type,subtype=itemId.subtype,light=mat})
 end
-
 -- add building by id (string e.g. "Statue" or "Workshop:Masons", flags is a table of strings
 -- supported flags:
 --		useMaterial --uses material, but the defined things overwrite
@@ -197,30 +183,30 @@ special.CURSOR=makeMaterialDef({1,1,1},{0.96,0.84,0.03},11, {"flicker"})
 special.CITIZEN=makeMaterialDef(nil,{0.80,0.80,0.90},8)
 special.LevelDim=0.6 -- darkness. Do not set to 0
 special.dayHour=-1 -- <0 cycle, else hour of the day
-special.dayColors={ {0.2,0.2,0.7}, --dark at 0 hours
-	{0.6,0.5,0.5}, --reddish twilight
-	{1,1,1}, --fullbright at 12 hours
-	{0.8,0.6,0.2},
-	{0.2,0.2,0.7}} --dark at 24 hours
-special.daySpeed=0.5 -- 1->1200 cur_year_ticks per day. 2->600 ticks
+special.dayColors={ {0,0,0}, --dark at 0 hours 
+					{0.6,0.5,0.5}, --reddish twilight
+				    {1,1,1}, --fullbright at 12 hours 
+					{0.5,0.5,0.5}, 
+					{0,0,0}} --dark at 24 hours 
+special.daySpeed=0.1 -- 1->1200 cur_year_ticks per day. 2->600 ticks
 
 --		glasses
 addMaterial("GLASS_GREEN",{0.1,0.9,0.5})
 addMaterial("GLASS_CLEAR",{0.5,0.95,0.9})
 addMaterial("GLASS_CRYSTAL",{0.75,0.95,0.95})
-
 --		Plants
 addMaterial("PLANT:TOWER_CAP",nil,{0.65,0.65,0.65},6)
 addMaterial("PLANT:MUSHROOM_CUP_DIMPLE",nil,{0.03,0.03,0.5},3)
 addMaterial("PLANT:CAVE MOSS",nil,{0.1,0.1,0.4},2)
 addMaterial("PLANT:MUSHROOM_HELMET_PLUMP",nil,{0.2,0.1,0.6},2)
-
 --		inorganics
 addMaterial("INORGANIC:ADAMANTINE",{0.1,0.3,0.3},{0.1,0.3,0.3},4)
 addMaterial("INORGANIC:RAW_ADAMANTINE",{0.1,0.3,0.3},{0.1,0.3,0.3},4)
+addMaterial("INORGANIC:NATIVE_GOLD",{0.5,0.5,0},{0.5,0.5,0},4)
+addMaterial("INORGANIC:NATIVE_SILVER",{0.5,0.5,0.5},{0.5,0.5,0.5},4)
+addMaterial("INORGANIC:GALENA",{0.5,0.5,0.5},{0.5,0.5,0.5},2)
 addMaterial("INORGANIC:STYGIAN_BRONZE",nil,{0.4,0,0.4},4)
-addMaterial("INORGANIC:ORICHALCUM",nil,{0.6,0.6,0.3},4)
-
+addMaterial("INORGANIC:BASILISKINE",nil,{0.6,0.6,0.3},4)
 --		creature stuff
 addMaterial("CREATURE:DRAGON:BLOOD",nil,{0.6,0.1,0.1},4)
 addGems()
@@ -246,6 +232,12 @@ addBuilding("Cage",{1,1,1},{0.5,0.5,0.5},4,{"useMaterial"})
 addBuilding("Chain",{1,1,1},{0.5,0.5,0.5},4,{"useMaterial"})
 addBuilding("NestBox",nil,{0.8,0.8,0.8},6,{"useMaterial"})
 addBuilding("Hive",nil,{1,1,0.8},6,{"useMaterial"})
+
+addBuilding("Furnace:Custom:BRAZIER",{1,1,1},{0.9,0.75,0.3},12)
+addBuilding("Furnace:Custom:TORCHBEARER_STATUE",{1,1,1},{0.8,0.1,0.1},20)
+addBuilding("Furnace:Custom:GLOWING_ORB",{1,1,1},{1,1,1},50)
+addBuilding("Furnace:Custom:WARLOCK_LANTERN",{1,1,1},{0.2,0.8,0.8},50)
+addBuilding("Furnace:Custom:WARLOCK_PENTAGRAM",{1,1,1},{1,0,1},50)
 
 -- 		traps
 addBuilding("Trap:Lever",{1,1,1},{1.3,1.3,0.3},4)
