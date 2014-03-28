@@ -58,7 +58,6 @@ function buildingLookUp(id)
 				end
 			end
 		end
-		qerror("Invalid custom building:"..tokens[3])
 	end
 	return ret
 end
@@ -202,9 +201,6 @@ addMaterial("PLANT:MUSHROOM_HELMET_PLUMP",nil,{0.2,0.1,0.6},2)
 --		inorganics
 addMaterial("INORGANIC:ADAMANTINE",{0.1,0.3,0.3},{0.1,0.3,0.3},4)
 addMaterial("INORGANIC:RAW_ADAMANTINE",{0.1,0.3,0.3},{0.1,0.3,0.3},4)
-addMaterial("INORGANIC:NATIVE_GOLD",{0.5,0.5,0},{0.5,0.5,0},4)
-addMaterial("INORGANIC:NATIVE_SILVER",{0.5,0.5,0.5},{0.5,0.5,0.5},4)
-addMaterial("INORGANIC:GALENA",{0.5,0.5,0.5},{0.5,0.5,0.5},2)
 addMaterial("INORGANIC:STYGIAN_BRONZE",nil,{0.4,0,0.4},4)
 addMaterial("INORGANIC:BASILISKINE",nil,{0.6,0.6,0.3},4)
 --		creature stuff

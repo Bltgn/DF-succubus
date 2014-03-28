@@ -3,9 +3,7 @@
 
 Summons tier 3
 + Random demon : reagent
-
-Pouvoirs
-+ voir pouvoir.txt
++ Autres reagents
 
 Packaging
 ! Remettre wormy tendrils en violet
@@ -31,10 +29,11 @@ MW
 - Corriger les conflits
 
 Fix/test
-- Tester pain lance
 - Rendre torrid kiss touchable
 - Tout tester
-- Gem block, avec une gemme et avec du verre
+
+PHP
+- Réimporter
 
 6.1
 ---
