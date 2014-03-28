@@ -42,6 +42,7 @@ local function paybackSiege(chance, domain)
 			dfhack.gui.showAnnouncement("Your pride has attracted some unwanted attention!", COLOR_LIGHTRED, true)
 		elseif domain == 'greed' then
 			dfhack.gui.showAnnouncement("Your greed has attracted some unwanted attention!", COLOR_LIGHTRED, true)
+		end
 	end
 end
 
@@ -98,11 +99,11 @@ local function addSkill(set, unit)
 	if(set == 'BROKER') then
 		dfhack.run_script('trainskill', unit.id, 'APPRAISAL', 15)
 		skillSet = {'LIAR', 'FLATTERY', 'RECORD_KEEPING'}
-	if(set == 'CRAFTER') then
+	elseif(set == 'CRAFTER') then
 		skillSet = {'WOODCRAFT', 'STONECRAFT', 'METALCRAFT', 'GLASSMAKER', 'LEATHERWORK'}
-	if(set == 'FARMER') then
+	elseif(set == 'FARMER') then
 		skillSet = {'PLANT', 'COOK', 'BREWING'}
-	if(set == 'SOLDIER') then
+	elseif(set == 'SOLDIER') then
 		skillSet = {'SIEGEOPERATE', 'DODGING', 'ARMOR', 'MELEE_COMBAT', 'RANGED_COMBAT'}
 	end
 
