@@ -5,8 +5,15 @@
 # falconne good interface plugins
 enable dwarfmonitor mousequery autotrade buildingplan resume zone getplants search automaterial
 
+# technical stuff needed for mods to work
+enable autoSyndrome
+syndromeTrigger enable
+
 # labor manager
 enable manipulator
+
+#Proj expansion
+projectileExpansion enable
 
 ##############################
 # Generic dwarfmode bindings #
@@ -192,9 +199,4 @@ binpatch apply armorstand-capacity
 # Required for custom reactions.                      #
 #######################################################
 
-# technical stuff needed for mods to work
-enable autoSyndrome
-syndromeTrigger enable
-
 succubus/summon-hook
-succubus/reaction-hook
