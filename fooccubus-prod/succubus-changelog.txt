@@ -20,7 +20,8 @@
 - Charming and corrupting no longer require a weapon. The weapon is now used for the building construction.
 - Bad thoughts about clothing will no longer be removed if you play a non succubus civ.
 - Bloodworms should appear in evil caverns.
-- Added beneficial syndroms to bloodworm and black rose wines, non succubi who drink those wines may experience issues.
+- Added beneficial syndromes for succubi drinking bloodworm and black rose wines.
+- Other creatures, besides dwarves, who drink wines from the evil plants may experience issues.
 - Sprite update : Fixed consort sprites
 - Added illumination, those are found in the furnace choice.
 

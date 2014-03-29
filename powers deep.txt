@@ -1,16 +1,16 @@
 Esoteric order
 ! Reinforce body (+250)
 > Embrace insanity (mega buff, crazed)
-!+ Learn abyssal gaze
-!+ Learn mind theft
-!+ Learn necrosis chant
-> Meld with the deep ones ( long term syndrome)
+! Learn abyssal gaze
+! Learn mind theft
+! Learn necrosis chant
+> Meld with the deep ones (long term syndrome)
 > ??? monster (summon en combat)
 
 Abyssal temple
-! Summon a rain (shell craft)
-* Put Death to death (totem, soul, ?)
-! Dimensional pull (1 craft, slam, depend du craft)
+! Summon a rain
+! Put Death to death
+! Dimensional pull (depend du craft)
 > Summon an evil weather
 
 Atar of nightmares

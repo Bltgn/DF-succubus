@@ -2,6 +2,7 @@ plant_fake
 
 [OBJECT:PLANT]
 
+//souls that wither away
 [PLANT:SOUL]
 	[NAME:soul][NAME_PLURAL:souls][ADJ:soul]
 	[USE_MATERIAL_TEMPLATE:STRUCTURAL:SOUL_TEMPLATE]
