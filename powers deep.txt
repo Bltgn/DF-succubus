@@ -10,6 +10,7 @@ Esoteric order
 Abyssal temple
 ! Summon a rain
 ! Put Death to death
+! Cancel death to death
 ! Dimensional pull (depend du craft)
 > Summon an evil weather
 
@@ -25,6 +26,6 @@ Atar of nightmares
 
 Arme
 Forbidden bracelet
-* Pain shard
-* Force shard
-* Blight shard
+o Pain shard
+o Force shard
+o Blight shard
