@@ -125,7 +125,7 @@ eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_ite
 		paybackSiege(10, 'pride')
 
 	-- pet effects
-	elseif raction.code == 'LUA_HOOK_PROTECTIVE_TENTACLES' then
+	elseif reaction.code == 'LUA_HOOK_PROTECTIVE_TENTACLES' then
 		slothCreature('TENTACLE_MONSTER', reaction, unit, input_reagents)
 		dfhack.run_script('succubus/influence', unit.id, 'sloth')
 
