@@ -1,8 +1,11 @@
 -- Slam a unit into the ground
 args={...}
-local unit=dfhack.gui.getSelectedUnit()
-if unit == nil then
-	local unit = df.unit.find(tonumber(args[2]))
+
+local unit
+if tonumber(args[2]) then
+	unit = df.unit.find(tonumber(args[2]))
+else
+	unit=dfhack.gui.getSelectedUnit()
 end
 
 local strength=args[1]
