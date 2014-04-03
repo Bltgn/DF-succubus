@@ -37,7 +37,7 @@ end
 -- Gain cooking/brewing skills, makes fatter, empties stomach and add hunger + thirst
 local function gluttonry(unit)
 	dfhack.run_script('trainskill', unit.id, 'BREWING', 5)
-	dfhack.run_script('trainskill', unit.id, 'COOKING', 5)
+	dfhack.run_script('trainskill', unit.id, 'COOK', 5)
 	unit.counters2.stored_fat = unit.counters2.stored_fat * 1.4
 	unit.counters2.stomach_content = unit.counters2.stomach_content * 0.1
 	unit.counters2.stomach_food = unit.counters2.stomach_content * 0.1

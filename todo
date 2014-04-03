@@ -23,7 +23,10 @@ MW
 
 Fix/test
 - Rendre torrid kiss touchable
-- Tout tester
+
+Fix
+- Ajouter une réaction pour des glass blocks (mdf)
+- Retirer des réaction du gemcutter
 
 6.1
 ---
