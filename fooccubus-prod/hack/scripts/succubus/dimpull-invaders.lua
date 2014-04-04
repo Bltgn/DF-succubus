@@ -23,7 +23,7 @@ end
 
 -- Gets all the invaders, not their leaders
 for k, unit in ipairs(df.global.world.units.all) do
-	if unit.flags1.active_invader and unit.relations.group_leader_id > -1 then
+	if unit.flags1.active_invader and unit.relations.group_leader_id > -1 and not unit.flags1.caged then
 		table.insert(invaders, unit.id)
 	end
 end

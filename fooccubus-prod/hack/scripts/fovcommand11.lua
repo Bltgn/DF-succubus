@@ -1,4 +1,4 @@
--- Will execute a command over the field of view for the selected unit in a radius of 10.
+-- Will execute a command over the field of view for the selected unit.
 --[[
 
 	This script requires the fov plugin from the Hire guard reaction mods :

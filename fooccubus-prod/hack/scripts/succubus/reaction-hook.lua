@@ -71,7 +71,7 @@ end
 -- Search the site for an invader
 local function hasInvader()
 	for k, unit in ipairs(df.global.world.units.all) do
-		if unit.flags1.active_invader then return true end
+		if unit.flags1.active_invader and not unit.flags1.caged then return true end
 	end
 	return false
 end
@@ -117,9 +117,6 @@ eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_ite
 	if reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
 		dfhack.run_script('syndromeweather', 'firebreath', 100, 20, 5)
 		dfhack.gui.showAnnouncement('The sky darkens and fireballs strikes the earth.', COLOR_YELLOW)
-	elseif reaction.code == 'LUA_HOOK_WEATHER_RAIN' then
-		dfhack.run_script('weather', 'rain')
-
 
 	-- citizen effects
 	elseif reaction.code == 'LUA_HOOK_FORGET_DEATH' then
