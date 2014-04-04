@@ -46,7 +46,7 @@ Greed
 - Contrecout : 10% chance de siege
 
 > Annuler les pauses
-! Conjure slade
+0 Conjure slade
 > Posess a distant worker (+skill, si un artefact est utilisé get legendary, annonce et set mood à 1)
 
 Sloth
@@ -80,7 +80,7 @@ Gluttonry
 
 > Regeneration
 > Soin total
-! Devour soul
+0 Devour soul
 
 Wrath
 - Upgrades pour le combat
@@ -112,16 +112,16 @@ Altar of fire
 - Blasts offensifs (feu!)
 - Upgrades
 
-! Become fireimmune
+0 Become fireimmune
 ! Torrid kiss (incinerate au toucher)
 ! Gehena fire (fire secret)
-! Infernal rain (exterieur)
+0 Infernal rain (exterieur)
 > Geyser de feu (1 invader non chef)
 
 Soul forge
 
 Construire des lances magiques, dégat faibles, effets en plus
-! Stygian lance : Un pitchfork + un soul, garder la material et la qualité
+0 Stygian lance : Un pitchfork + un soul, garder la material et la qualité
 * Pain shard : Cause de la douleur
 * Force shard : Directed Dust
 * Blight shard

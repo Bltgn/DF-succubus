@@ -117,7 +117,7 @@ end
 eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_items, input_reagents, output_items, call_native)
 	-- site effects
 	if reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
-		dfhack.run_script('syndromeweather', 'firebreath', 100, 20, 5)
+		dfhack.run_script('syndromeweather', 'firebreath', 400, 100, 500)
 		dfhack.gui.showAnnouncement('The sky darkens and fireballs strikes the earth.', COLOR_YELLOW)
 
 	-- citizen effects
