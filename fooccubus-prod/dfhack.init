@@ -199,4 +199,5 @@ binpatch apply armorstand-capacity
 # Required for custom reactions.                      #
 #######################################################
 
+succubus/reaction-hook
 succubus/summon-hook

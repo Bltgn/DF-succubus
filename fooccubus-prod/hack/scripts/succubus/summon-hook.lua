@@ -82,7 +82,6 @@ local function summonHfs(reaction, unit, input_items, input_reagents, output_ite
 end
 
 eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_items, input_reagents, output_items, call_native)
-
 	local creatureId
 	local tame = 0
 
@@ -99,5 +98,6 @@ eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_ite
 	else
 		return nil
 	end
-
 end
+
+print("Summon hook activated")

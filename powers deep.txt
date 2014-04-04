@@ -22,7 +22,8 @@ Atar of nightmares
 ! Provoke a siege
 > Lure a beast, n'a pas l'air de marcher
 > Possess a distant worker
-! Attract invaders inside
+o Attract invaders inside
+o Sow discord
 
 Arme
 Forbidden bracelet
