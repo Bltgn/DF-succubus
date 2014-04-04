@@ -2,6 +2,7 @@
 6.0
 
 + Other changes
+- Fixed a major bug that caused converted prisonners to remain hostile.
 - All the summoned creatures should now act faster.
 - Both civs spheres has been adjusted to better match its secrets.
 - Cleaned obsolete stuff from the raws.

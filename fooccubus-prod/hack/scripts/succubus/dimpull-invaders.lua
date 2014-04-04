@@ -17,14 +17,14 @@ end
 
 -- Todo catch the reagent value
 local function power(unit)
-	local number = math.random(50000, 300000)
+	local number = math.random(50000, 200000)
 	return number
 end
 
 -- Gets all the invaders, not their leaders
 for k, unit in ipairs(df.global.world.units.all) do
-	if unit.flags1.active_invader and unit.relations.group_leader_id > -1 then	
-		table.insert(invaders, unit.id) 
+	if unit.flags1.active_invader and unit.relations.group_leader_id > -1 then
+		table.insert(invaders, unit.id)
 	end
 end
 
