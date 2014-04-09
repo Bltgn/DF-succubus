@@ -1,4 +1,4 @@
--- Will execute a command over the field of view for the selected unit.
+-- Will execute a command over the field of view for the selected unit in a radius of 10.
 --[[
 
 	This script requires the fov plugin from the Hire guard reaction mods :
@@ -45,9 +45,8 @@ if not ... then qerror('No arguments provided, please provide the source\'s id a
 
 local args = {...}
 local unitList = df.global.world.units.active
-local unit = args[1]
-local radius = args[2]
-local target_raw = nil
+local unit, target_raw
+local radius = tonumber(args[2])
 local view, i, unitTarget
 
 -- Checking args

@@ -7,10 +7,6 @@ Packaging
 ! Mettre à jour annoucements
 ! Ajouter des worldgens et des embark profiles
 
-Updates à vérifier
-+ Projectile expansion
-+ Rendermax
-
 Credits :
 - Teleport par Putnam
 - Bits of MW by Meph
@@ -27,8 +23,7 @@ Fix/test
 Fix
 - Ajouter une réaction pour des glass blocks (mdf)
 - Inporter weather rain
-- Forget death : revoir le reagent (great axe + soul?)
-- Concubine, nom et longueur d'effet du heat
+- Monter craving pour concumbines
 
 6.1
 ---
