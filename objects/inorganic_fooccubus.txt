@@ -144,7 +144,7 @@ inorganic_fooccubus
 			[CDI:WAIT_PERIOD:1]
 			[CDI:FREE_ACTION]
 			[CDI:VERB:perform a suggestive dance:perform a suggestive dance:NA]
-			[CDI:TARGET_VERB:is mesmerized]
+			[CDI:TARGET_VERB:is hypnotized:is hypnotized:NA]
 
 [INORGANIC:CHARM_MINOTAUR] // makeown minotaur
 	[SPECIAL]
@@ -386,7 +386,7 @@ inorganic_fooccubus
 		[CE_PHYS_ATT_CHANGE:AGILITY:175:0:START:0:END:500]
 		[CE_SPEED_CHANGE:SPEED_PERC:150:START:0:END:500]
 		[CE_CAN_DO_INTERACTION:START:0:END:1000]
-			[CDI:INTERACTION:FOOCCUBUS_EXCITATION_SPASMS]
+			[CDI:INTERACTION:FOOCCUBUS_SPASMS]
 			[CDI:TARGET:A:SELF_ONLY]
 			[CDI:FREE_ACTION]
 			[CDI:WAIT_PERIOD:200]
@@ -480,7 +480,7 @@ inorganic_fooccubus
 			[CDI:FREE_ACTION]
 			[CDI:WAIT_PERIOD:500]
 			[CDI:ADV_NAME:Increase a succubus defense]
-			[CDI:VERB:pull tentacles around the nearby succubi:pulls tentacles around the nearby succubi:NA]
+			[CDI:VERB:extend its tentacles around the nearby succubi:extends its tentacles around the nearby succubi:NA]
 
 // Fire
 [INORGANIC:FOOCCUBUS_UPGRADE_FIRE_SECRET] // Learns the secret of fire
