@@ -36,7 +36,7 @@ Lust
 
 * Autres
 > Broken heart (rip heart)
-! Climax (up des stats en combat, complètement OP à ecstatic)
+0 Climax (up des stats en combat, complètement OP à ecstatic)
 
 Greed
 - Améliorateur de productivité
@@ -88,7 +88,7 @@ Wrath
 - Modifs : Colère, prone to rage
 - Contrecout : Aucun
 
-! Berzerk rage (en combat + force et no exert)
+0 Berzerk rage (en combat + force et no exert)
 > Reinforce strengh
 > Reinforce stamina
 > Reinforce speed

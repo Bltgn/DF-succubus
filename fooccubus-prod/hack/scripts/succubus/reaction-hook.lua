@@ -114,7 +114,7 @@ local function addSkill(set, unit)
 end
 
 -- Reaction hook
-eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_items, input_reagents, output_items, call_native)
+eventful.onReactionComplete.fooccubusReaction = function(reaction, unit, input_items, input_reagents, output_items, call_native)
 	-- site effects
 	if reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
 		dfhack.run_script('syndromeweather', 'firebreath', 400, 100, 500)
@@ -123,7 +123,7 @@ eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_ite
 	-- citizen effects
 	elseif reaction.code == 'LUA_HOOK_FORGET_DEATH' then
 		dfhack.run_script('succubus/forget-death', unit.id)
-		dfhack.run_script('succubus/influence', unit.id, 'pride')
+		dfhack.run_script('succubus/influence', 'pride', unit.id)
 		paybackSiege(10, 'pride')
 
 	-- pet effects

@@ -61,6 +61,8 @@ elseif domain == 'gluttonry' then
 	gluttonry(unit)
 elseif domain == 'envy' then
 	envy(unit)
+elseif domain == 'pride' then
+	pride(unit)
 else
 	qerror('Influence: Wrong domain entered')
 end
