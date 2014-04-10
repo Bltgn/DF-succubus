@@ -289,6 +289,7 @@ addBuilding("Furnace:Glassfurnace",{1,1,1},{1.4,1.4,0.7},20)
 addBuilding("Furnace:MagmaSmelter",{1,1,1},{1.4,0.7,0.7},20)
 addBuilding("Furnace:MagmaKiln",{1,1,1},{1.4,0.7,0.7},20)
 addBuilding("Furnace:MagmaGlassFurnace",{1,1,1},{1.4,1.4,0.7},20)
+addBuilding("Furnace:Custom:GLASS_FLOAT",{1,1,1},{1.4,1.4,0.7},20)
 
 -- todo : powered only stuff, flicker for furnaces
 
