@@ -1,32 +1,32 @@
 Esoteric order
-! Reinforce body (+250)
+0 Reinforce body (+250)
 > Embrace insanity (mega buff, crazed)
-! Learn abyssal gaze
-! Learn mind theft
-! Learn necrosis chant
+0 Learn abyssal gaze
+0 Learn mind theft
+0 Learn necrosis chant
 > Meld with the deep ones (long term syndrome)
 > ??? monster (summon en combat)
 
 Abyssal temple
-! Summon a rain
+0 Summon a rain
 ! Put Death to death
 ! Cancel death to death
-! Dimensional pull (depend du craft)
+0 Dimensional pull (depend du craft)
 > Summon an evil weather
 
 Atar of nightmares
-! Visit broker dreams
-! Visit crafter dreams
-! Visit fighter dreams
-! Visit farmer dreams
-! Provoke a siege
+0 Visit broker dreams
+0 Visit crafter dreams
+0 Visit fighter dreams
+0 Visit farmer dreams
+0 Provoke a siege
 > Lure a beast, n'a pas l'air de marcher
 > Possess a distant worker
-o Attract invaders inside
-o Sow discord
+0 Attract invaders inside
+0 Sow discord
 
 Arme
 Forbidden bracelet
-o Pain shard
-o Force shard
-o Blight shard
+0 Pain shard
+0 Force shard
+0 Blight shard

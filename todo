@@ -17,13 +17,9 @@ Credits :
 MW
 - Corriger les conflits
 
-Fix/test
-- Rendre torrid kiss touchable
-
 Fix
 - Ajouter une réaction pour des glass blocks (mdf)
-- Inporter weather rain
-- Monter craving pour concumbines
+- Verre : Utiliser des roughs à la place
 
 6.1
 ---
@@ -40,6 +36,9 @@ Influence
 
 Powers
 - Dimension pull, use the reagent value
+
+Fix/test
+- Rendre torrid kiss touchable
 
 7.0
 ---
