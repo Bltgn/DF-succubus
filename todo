@@ -3,7 +3,7 @@
 
 Packaging
 ! Remettre wormy tendrils en violet
-! Passer les max pop à 150
+! Passer les max pop à 130
 ! Mettre à jour annoucements
 ! Ajouter des worldgens et des embark profiles
 
@@ -19,7 +19,6 @@ MW
 
 Fix
 - Ajouter une réaction pour des glass blocks (mdf)
-- Verre : Utiliser des roughs à la place
 
 6.1
 ---
