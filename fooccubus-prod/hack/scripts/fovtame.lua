@@ -46,8 +46,6 @@ function validateCoords(unit, view)
 	return view.z == pos[3] and view[pos[2]][pos[1]] > 0
 end
 
-
-
 -- Find soul wisps within the LOS of the creature
 function findLos(unitSource)
 	local view = fov.get_fov(5, unitSource.pos)

@@ -1,0 +1,127 @@
+Les pouvoirs
+
+Noms : Temptation, villany, vomluptuous, sassy (saucy)
+
+! tester
++ reagents
+> plus tard
+
+Roles
+- Effets sur les invaders
+- Effets sur le moral
+- Effet sur l'exterieur
+- Upgrades pour le combat
+- Upgrades civils
+- Sorts offensifs
+
+Aide
+- Créer un plugin pour afficher les détails d'une réaction.
+- Faire en sorte que l'on choisisse des workers dédiés
+- Ajouter des indicateurs style masterwork
+
+= 7 temples =
+
+Lust
+- Upgrades + effets grace aux pets
+- Reagents : Instruments, toys
+- Multiplicateur : Happiness
+- Modif : Altruism, autres.
+- Contrecout : Le worker ajouter un lover dans les relations.
+
+0 Secret of lust
+! Release pheromones (aoe debuff, buff les autres succubi)
+0 Entice (perte de skill enemy, peut faut tomber les armes)
+0 Heat régulier (flash, name)
+> Interaction heat
+
+* Autres
+> Broken heart (rip heart)
+0 Climax (up des stats en combat, complètement OP à ecstatic)
+
+Greed
+- Améliorateur de productivité
+- Reagents : crafts
+- Multiplicateur : Valeur du craft
+- Modif : Craving, urges
+- Contrecout : 10% chance de siege
+
+> Annuler les pauses
+0 Conjure slade
+> Posess a distant worker (+skill, si un artefact est utilisé get legendary, annonce et set mood à 1)
+
+Sloth
+- Effect grace aux pets
+- Reagents : ?
+- Mutliplicateur : Le skill du worker doit être bas et non noble (sauf alchemy).
+- Modif : Lazy
+- Contrecout : Le worker prend une pause
+
+> Coiling nahashes (up de moral grace aux nahash)
+0 Protective tentacles (defense++ à portée des tentacle monsters)
+> Deep souls (buff de skill 200% autour des wisps)
+> Entangling roots (vitesse - pour les enemies autour des crimson roses)
+
+Pride
+- Améliorateur de moral
+- Reagents : Un craft an particulier
+- Multiplicateur : Nombre de relations
+- Modifs : Immodesty, immoderation
+- Contrecout : Chances de siege par les deep succubi.
+
+! Forget death
+> Up de moral aoe avec les enfants
+> Get summoned (le worker est téléporté, exilé, gros gain de moral)
+
+Gluttonry
+- Upgrade civil, santé
+- Multiplicateur : Qualité de la nourriture employée
+- Modifs : Skill de cuisine, fat
+- Contrecout : Faim et/ou soif
+
+> Regeneration
+> Soin total
+0 Devour soul
+
+Wrath
+- Upgrades pour le combat
+- Multiplicateur : Mécontentement
+- Modifs : Colère, prone to rage
+- Contrecout : Aucun
+
+0 Berzerk rage (en combat + force et no exert)
+> Reinforce strengh
+> Reinforce stamina
+> Reinforce speed
+> Slick skin (skin plus solide)
+! Reinforce wings
+
+Envy
+- Effet sur les invaders
+- Multiplicateur : Position (+1 pour admin, +2 pour leader/noble, +3 pour monarch)
+- Modifs : Liberalism
+- Contrecout : Perte de moral pour le worker
+
+0 Rendre un invader crazed
+0 Attract invaders inside
+> Chef inconscient
+> Faire partir des invaders
+
+== Altar royalists ==
+
+Altar of fire
+- Blasts offensifs (feu!)
+- Upgrades
+
+0 Become fireimmune
+0 Torrid kiss (incinerate au toucher)
+0 Gehena fire (fire secret)
+0 Infernal rain (exterieur)
+> Geyser de feu (1 invader non chef)
+
+Soul forge
+
+Construire des lances magiques, dégat faibles, effets en plus
+0 Stygian lance : Un pitchfork + un soul, garder la material et la qualité
+* Pain shard : Cause de la douleur
+* Force shard : Directed Dust
+* Blight shard

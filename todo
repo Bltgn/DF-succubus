@@ -1,82 +1,81 @@
 6.0
 ---
 
-Ajouter un b_detail pour le NSFW
-Retirer le bugfix de la créature
+Packaging
+! Remettre wormy tendrils en violet
+! Passer les max pop à 130
+! Mettre à jour annoucements
+! Ajouter des worldgens et des embark profiles
 
-Renommer la position hunter vers prowler
+Credits :
+- Teleport par Putnam
+- Bits of MW by Meph
+- Dwarf chocolate
+- Roses scripts
+- Slam by IndigoFenix
 
-Summon
-+ Retirer les interactions, inutiles (ou virer les scripts pour les remplacer par des syndrometarget si ça marche)
-+ Nettoyer phpraw car des paramètres sont inutiles maintenant
-+ Retirer les castes 'generic', remplacer par default pour pain elemental
-+ Ajouter un summon pour soul wisp aoe skill buff
+MW
+- Corriger les conflits
 
-+ Mettre en classe toutes les créatures pours - de modifs à faire sur les syndromes
-+ Ajouter un grasp aux unholy rituals
+6.1
+---
+
+GUI
+- Plugin pour afficher des détails des réactions + help en txt
 
 Sprites
 + Commencer deep
-+ Ajouter les tax escort dans royalist (on ne sait jamais)
-+ Ajouter tax escort à l'overlord
 
-Summons tier 3
-+ Behemoth, énorme, tondre pour de la laine
-+ Pit fiend, weapon user sentient
-+ cthulu mythos (deep one, brown arny)
+Influence
+- Lust, add a lover
+- Devour soul, reduce hunger
 
-+ Retirer la miel et strawberry des nahash et tentacle, ajouter un remplaçant
+Powers
+- Dimension pull, use the reagent value
 
-+ Commencer sprite deep
+Fix/test
+- Rendre torrid kiss touchable
+
+7.0
+---
+
+Temples
+- Faire les 7 temples
+
+Nobles
+- La reine + noble peuvent réssuciter (+makeown)
+- Le mayor annule les pauses
+
+Sans tag
+--------
 
 + Charm minotaur => charm megabeast (+ cyclops, giant, ...?)
 
 Scripts
 - Cancel reaction, no invader/minotaur
 - Donner des jobs aux non race
-- Retirer les bad thoughts sur les vetements
-
-Altar of nightmare
-+ call evil weather
-+ call fire weather
-+ visit dreams (effet ajout de valeur pour la migration ?)
-
-Summoning circle
-+ Sacrify (tranform en monstre)
-+ Essayer placeunit
-
-Pouvoirs
-+ Créer 3 branches pour chaque civ
-+ Gehenna fire + fireimmune
-+ Spread pheromones (cave adapt ?)
-+ Gaze of loss (inconscient)
-+ Gaze of madness (deep, crazed)
-+ Dimensional rub (deep, necrose)
-+ Caresses (royal, soin alliés + nettoyage)
-+ Torrid kiss (royal, feu au contact + fireimmune)
 
 Créer une météo spéciale pour les zones evil
-Migrer untame pour ne plus utiliser fovcommand.
 
-Civ
-+ Renommer les prositions vérifier qu'elles ont les mêmes ID que les vanilla
+Noble
+- Ajouter un buff pour les noble en utilisant le système de Roses
+- Réduction de pauses, + attributes ?
 
 Creatures
 + Ajouter les succubi sauvages, mettre dans HFS
 + Transformer en sauvage en cas de folie
 + Ajouter un effet cave adapt pour les deep
 
-PHP
-- Factoriser et nettoyer les raw, pour avoir un minimum de lignes possible
-Sans tag
---------
-
 + Test
-Tentacle cleaning
 Instruments reageants dans accelerated
-Evil plants + drinks
 Charm minotaur
 
 + FIXME!
 Soul wisp doit pouvoir bruler
 boobs and acheek should appear at 12, plus growth
+
+Summon
++ Behemoth, énorme, tondre pour de la laine
++ Pit fiend, weapon user sentient (non fonctionnel)
++ Beast of revelation : Throw dust + mutli tetes
++ rose : body, reagent, sprites, throw spines

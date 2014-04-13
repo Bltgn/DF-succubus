@@ -1,4 +1,123 @@
 # Succubus Dungeon : Changelog #
+6.0
++ New temples
+- The temples are new workshops that provides upgrades and spells.
+- Upgrades does not require a particular skills.
+- Spells uses the Alchemy job.
+- Using the workshop profile (shift + P) allows to chose who will get the upgrade.
+- More effects will be added in the future.
+
++ Temple of sin (royalist)
+- Provides various effects tied to a sphere.
+- Depending on the sphere, the succubus peronnality will be affected and side effects might occur.
+- Gluttonry : Increases fat, hunger and thirst. Also trains brewing and cooking.
+- Wrath and Envy: Increases bad thoughts generating personnality facets.
+- Pride: May cause a siege from an old enemy, the effects also depends of the worker's number of acquaintances.
+- Other spheres: Only affect the personnality.
+- [LUST] Reinforce wings: Provide flying abilities, does not stack with fire immunity.
+- [LUST] Learn martial excitation: Improves abilities in combat depending on happiness. If the succubus is ecstatic...
+- [LUST] Learn the secret of lust: Becomes a concubine, and receive there combat interaction. Strange effects will occur at regular interval.
+- [WRATH] Learn berserk rage: Improves abilities in combat depending on unhappiness. If the succubus is miserable...
+- [PRIDE] Forget death: Attempt to fight tantrum spirals by removing thoughts about dead relatives.
+- [GREED] Conjure slade: Summon a boulder of slade, to satisfy the worst mandates.
+- [GREED] Conjure slade anvil: Summon a good heavy anvil for your forges.
+- [SLOTH] Protective tentacles: Provides tentacle monsters with a friendly defensive buff.
+- [GLUTTONRY] Devour soul: Eats a soul to increase strenght and stamina. This is permanent and will not stack if done multiple times.
+- [ENVY] Sow discord: Causes invaders to attack each other.
+- [ENVY] Lure invaders inside: Causes siegers to stop loitering at their camp and rush inside your fort.
+
++ Temple of fire (royalist)
+- Provides upgrades and attacks based on fire.
+- Grant fire immunity: Becomes into a fireborn succubus, and is immune to fire, lava, and cold. This does not stack with the ability to fly.
+- Learn Gehenna fire: Becomes a pyromancer and gain the ablity to throw fireballs, breath flames, and raise cloud of ashes.
+- Learn torrid kiss: Provides a close range fire attack.
+- Conjure fire storm: Summon fire balls to strike the outside area twice.
+
++ Altar of nightmares (deep)
+- New reactions has been added to increase skills.
+- The succubi performing theses actions will fall asleep for a while.
+
++ Esoteric order (deep)
+- Provides new interactions for the deep succubi.
+- Mind theft: Render an enemy crazy.
+- Necrosis chant: Causes the enemy to melt.
+- Abyssal gaze: Drain an enemy mental stats and cause it to fall unconscious after a while.
+
++ Abyssal temple (deep)
+- Provides reactions that affect the whole site.
+- Affect weather (rain): Starts raining.
+- Sow discord: Causes invaders to attack each other.
+- Dimension pull: Pulls the invaders insides, causing them to fall or explode.
+- Put death to undeath: Corpses on the map starts to rise as zombies.
+- Restore natural death: Put down undeaths on the map.
+
++ Harvesting souls
+- Many new jobs requires souls.
+- Souls are harvested at the Soul Well
+- The deep succubi extract the souls from totems (unavailable in MDF).
+- The royalist must build the well inside a refuse stockpile, to extract the soul from corpses in the vinicity.
+- Souls do wither after a few weeks.
+- To prevent withering, a soul can be trapped into a cut gem or glass.
+- In Masterwork DF, souls are found by butchering creatures.
+
++ Special ammunition
+- New weapons are available: pain lances and forbidden bracelets.
+- Those weapons are built at the Soul Forge.
+- Those weapons fire shards and do little damage by themselves.
+- Pain lances also act as a pitchfork in melee.
+- It is possible to make ammunitions with special effects at the soul forge.
+- Blight shards causes severe necrosis.
+- Pain shards inflict pain and might cause enemies to fall unconscious.
+- Force shards causes a localized cave in.
+- The succubi have an immunity to these effects but excessive friendly fire will hurt them.
+- Do make sure that ammo usage for combat and training are properly set in the military screen!
+
++ Premade versions changes
+- Imported a few world gen profiles from MDF.
+- Added a couple of embark profiles.
+- Updated announcements to prevent annoying pauses.
+
++ Other changes
+- Moved scripts into a succubus subfolder to avoid confusion.
+- Fixed a major bug that caused converted prisoners to remain hostile.
+- All the summoned creatures should now act faster.
+- Both civs spheres has been adjusted to better match its secrets.
+- Removed obsolete stuff from the raws.
+- Deep succubi are now competent swimmers.
+- Added an execution position to the deep succubi.
+- Both civs whippers will meet workers for complains, they will ask for a meager office.
+- Adjusted the body descriptors of the succubi, culled the tongue lengths.
+- Armor will is now garanteed to be available.
+- Summoning has been made simpler, using less different reagents.
+- Made nightmares more aggressive.
+- Soul wisps are more likely to flee.
+- Hellhounds will enrage in combat.
+- Pain elemental explosions now push away its victims causing slamming damage.
+- Tentacle monsters may start cleaning nearby succubi now.
+- Removed the 'too wounded' message when a worker transforms into an unholy ritual.
+- Charming and corrupting no longer require a weapon. The weapon is now used for the building construction.
+- Bad thoughts about clothing will no longer be removed if you play a non succubus civ.
+- Bloodworms should appear in evil caverns.
+- Added beneficial syndromes for succubi drinking bloodworm and black rose wines.
+- Other creatures, besides dwarves, who drink wines from the evil plants will experience issues.
+- Sprite update : Fixed consort sprites.
+- Added illumination, those are found in the furnace choices and will provide light if you use rendermax.
+- Added floating glass furnaces for both civ, this magma furnace allows a mass production of glass blocks and windows.
+- Renamed the royalist succubi's positions, bookkeeper and manager are merged into Librarian.
+- New summon for the deep succubi: Rat things. Those large rats will hunt vermins and can teleport towards enemies.
+- New summon for both civs: Horrible Fell Spirit. This ritual will be a gamble on your ressources.
+- Royalists cannot build the altar of nightmares anymore.
+- The summoning circle has been redesigned.
+- Added the gem workshop from Masterwork DF, this allows to build various objects with cut gems.
+- Orichalcum has been renamed to Basiliskine, to prevent confusion in MW.
+
+5.6
++ Fixed the warlord and overlord sprites, again.
++ Fixed the lack of transformation in the 'Corrupt prisoners' job.
++ Converting invaders to your civ should work again.
++ Restored rendermax and falconne's ui plugins on the windows build.
++ A dfhack.init file is now included in the patch version, it is required for the mod to work properly.
+
 5.5
 + Inverted the warlord and overlord sprites.
 + The summoned creature now have their natural skills set.
@@ -17,7 +136,7 @@
 + Removed the smoke from the stygian bronze bar production.
 + Fixed the 'script not found' error on loading.
 + Basilisks are now immune to tentacle slime
-+ Sprite update : Added priestess, cultist, tyrant, shop keeper, diplomat, priest, high priest, druid, ranger captain, acolyte, prowler, overlord, admninistrator.
++ Sprite update : Added priestess, cultist, tyrant, shop keeper, diplomat, priest, high priest, druid, ranger captain, acolyte, prowler, overlord, admnin.
 + Sprite update : Updated warlord, comissionner, jewelers.
 
 5.3

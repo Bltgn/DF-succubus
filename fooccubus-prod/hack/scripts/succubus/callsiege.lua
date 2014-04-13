@@ -59,7 +59,7 @@ function provokeSiege()
 	local entity = getRace()
 
 	dfhack.run_script('force', 'siege', entity)
-	dfhack.gui.showAnnouncement("You have attracted the attention of your enemies !", COLOR_LIGHTRED, true)
+	dfhack.gui.showAnnouncement("You have attracted the attention of your enemies!", COLOR_LIGHTRED, true)
 end
 
 -- Execution
