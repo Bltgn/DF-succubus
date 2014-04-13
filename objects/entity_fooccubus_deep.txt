@@ -537,6 +537,7 @@ entity_fooccubus_deep
 		[DO_NOT_CULL]
 		[COLOR:0:0:1]
 		[DUTY_BOUND]
+		[REQUIRED_OFFICE:100]
 	[POSITION:MANAGER]
 		[NAME:Keeper of secrets:Keepers of secrets]
 		[SITE]
