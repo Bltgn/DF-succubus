@@ -2,11 +2,6 @@ descriptor_shape_fooccubus
 
 [OBJECT:DESCRIPTOR_SHAPE]
 
-[SHAPE:HEART]
-	[NAME:heart:hearts]
-	[WORD:HEART]
-	[TILE:12]
-
 [SHAPE:FEMALE_SILOUETTE]
 	[NAME:female silouette:females silouettes]
 	[ADJ:nude]
@@ -61,14 +56,6 @@ descriptor_shape_fooccubus
 	[ADJ:indescribable]
 	[TILE:43]
 
-[SHAPE:PENTAGRAM]
-	[NAME:pentagram:pentagrams]
-	[WORD:EVIL]
-	[ADJ:burning]
-	[ADJ:large]
-	[ADJ:inverted]
-	[TILE:'*']
-
 [SHAPE:NAILED_CRESCENT]
 	[NAME:crescent:crescents]
 	[ADJ:nailed]
@@ -87,13 +74,6 @@ descriptor_shape_fooccubus
 	[ADJ:blood]
 	[ADJ:slime]
 	[ADJ:ichor]
-	[TILE:12]
-
-[SHAPE:FLAME]
-	[NAME:flame:flames]
-	[WORD:FLAME]
-	[ADJ:rising]
-	[ADJ:twisted]
 	[TILE:12]
 
 [SHAPE:HEART_CUT_GEM]

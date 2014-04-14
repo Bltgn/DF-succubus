@@ -100,7 +100,7 @@ creature_fooccubus
 	[SWIMS_INNATE][SWIM_SPEED:1000]
 	[SELECT_MATERIAL:ALL]
 		[MULTIPLY_VALUE:5]
-	[CAN_DO_INTERACTION:TENTACLE_CLEAN]
+	[CAN_DO_INTERACTION:TENTACLE_CLEAN2]
 		[CDI:ADV_NAME:Clean a friendly creature]
 		[CDI:USAGE_HINT:CLEAN_FRIEND]
 		[CDI:BP_REQUIRED:BY_CATEGORY:TENTACLE]
@@ -154,7 +154,7 @@ creature_fooccubus
 	[NO_DIZZINESS]
 	[CASTE:GENERIC]
 
-[CREATURE:SUMMONED_SOUL] // dummy
+[CREATURE:SUMMONED_SOUL2] // dummy
 	[DESCRIPTION:A new creature will be spawned here shortly.]
 	[NAME:summoned creature:summoned creatures:summoned creature]
 	[CASTE_NAME:summoned creature:summoned creatures:summoned creature]
@@ -182,8 +182,9 @@ creature_fooccubus
 	[BODY_SIZE:0:0:5000]
 	[ALL_ACTIVE]
 	[NO_DIZZINESS]
+	[CASTE:GENERIC]
 
-[CREATURE:SOUL_WISP] // civilian buff
+[CREATURE:SOUL_WISP2] // civilian buff
 	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people.]
 	[NAME:soul wisp:soul wisps:soul wisp]
 	[CREATURE_TILE:'o'][COLOR:7:0:1]
@@ -328,7 +329,7 @@ creature_fooccubus
 			[TL_COLOR_MODIFIER:BLACK:1]
 				[TLCM_NOUN:eyes:PLURAL]
 
-[CREATURE:HELLHOUND] // dogs
+[CREATURE:HELLHOUND2] // dogs
 	[DESCRIPTION:A medium sized vicious dog coming for the darkest pits. Courageous trainers can teach it various tasks.]
 	[NAME:hell hound:hell hounds:hell hounds]
 	[CASTE_NAME:hell hound:hell hounds:hell hound]
@@ -417,7 +418,7 @@ creature_fooccubus
 	[CASTE:MALE]
 		[MALE]
 
-[CREATURE:NIGHTMARE] // milkable + herd
+[CREATURE:NIGHTMARE2] // milkable + herd
 	[DESCRIPTION:A large hooved herbivore. These creatures are known to never tire, pursueing victims at great length before doing as they please.]
 	[NAME:nightmare:nightmares:nightmare]
 	[CASTE_NAME:nightmare:nightmares:nightmare]
@@ -538,7 +539,7 @@ creature_fooccubus
 	[SELECT_MATERIAL:ALL]
 		[MULTIPLY_VALUE:2]
 
-[CREATURE:PAIN_ELEMENTAL] // explosive suicidal bomber
+[CREATURE:PAIN_ELEMENTAL2] // explosive suicidal bomber
 	[DESCRIPTION:A soul wisp that has been fed the thoughts of the suffering. It is very unstable and will explode if someone frighten it.]
 	[NAME:pain elemental:pain elementals:pain elemental]
 	[CHILD:1]
@@ -579,7 +580,7 @@ creature_fooccubus
 	[LIKES_FIGHTING]
 	[MAGMA_VISION]
 	[ITEMCORPSE:BOULDER:NONE:INORGANIC:WISP_SMOKE]
-	[CAN_DO_INTERACTION:PAIN_ELEMENTAL_EXPLOSION]
+	[CAN_DO_INTERACTION:PAIN_ELEMENTAL_EXPLOSION2]
 		[CDI:ADV_NAME:Explode]
 		[CDI:USAGE_HINT:ATTACK]
 		[CDI:VERB:explode:explodes:NA]
@@ -588,7 +589,7 @@ creature_fooccubus
 		[CDI:MAX_TARGET_NUMBER:E:20]
 		[CDI:WAIT_PERIOD:400]
 
-[CREATURE:BASILISK] // metal + piercing + debuff breath
+[CREATURE:BASILISK2] // metal + piercing + debuff breath
 	[DESCRIPTION:A large, height legged, reptile that can breath poisonous vapors. Its particular diet for minerals allow it to grow a specific horn that can be sheared. The product can be then smelted into a lightweight but solid metal.]
 	[NAME:basilisk:basilisks:basilisk]
 	[CASTE_NAME:basilisk:basilisks:basilisk]
@@ -875,7 +876,7 @@ creature_fooccubus
 	[HOMEOTHERM:10040]
 	[SWIMS_INNATE]
 	[ITEMCORPSE:BOULDER:NONE:INORGANIC:WISP_SMOKE]
-	[CAN_DO_INTERACTION:MONSTER_HIDE]
+	[CAN_DO_INTERACTION:MONSTER_HIDE2]
 		[CDI:ADV_NAME:Hide away]
 		[CDI:TARGET:A:SELF_ONLY]
 		[CDI:WAIT_PERIOD:1000]

@@ -174,7 +174,7 @@ inorganic_fooccubus
 			[CDI:VERB:embrace the nearby minotaur and ask for its submission:embraces at the nearby minotaur and asks for its submission:NA]
 			[CDI:TARGET_VERB:yield its will to the succubi]
 
-[INORGANIC:CORRUPT_PRISONERS] // transform prisoners
+[INORGANIC:CORRUPT_PRISONERS2] // transform prisoners
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
 	[MATERIAL_VALUE:0]
