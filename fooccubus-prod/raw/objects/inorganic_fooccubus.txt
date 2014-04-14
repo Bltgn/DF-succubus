@@ -51,15 +51,9 @@ inorganic_fooccubus
 
 [INORGANIC:BASILISKINE]
 	[USE_MATERIAL_TEMPLATE:METAL_TEMPLATE]
-<<<<<<< HEAD
-	[STATE_NAME_ADJ:ALL_SOLID:hellish orichalcum]
-	[STATE_NAME_ADJ:LIQUID:molten orichalcum]
-	[STATE_NAME_ADJ:GAS:boiling orichalcum]
-=======
 	[STATE_NAME_ADJ:ALL_SOLID:basiliskine]
 	[STATE_NAME_ADJ:LIQUID:molten basiliskine]
 	[STATE_NAME_ADJ:GAS:boiling basiliskine]
->>>>>>> fooccubus
 	[DISPLAY_COLOR:6:7:1]
 	[BUILD_COLOR:6:7:1]
 	[MATERIAL_VALUE:35]
@@ -139,9 +133,6 @@ inorganic_fooccubus
 		[SYN_CLASS:\COMMAND]
 		[SYN_CLASS:fooccubus/makeown]
 		[SYN_CLASS:\WORKER_ID]
-<<<<<<< HEAD
-		[SYN_CLASS:HELLHOUND2]
-=======
 		[SYN_CLASS:invaders]
 		[CE_BODY_TRANSFORMATION:PROB:100:START:0:END:1000]
 		[CE:CREATURE:UNHOLY_RITUAL:GENERIC]
@@ -154,7 +145,6 @@ inorganic_fooccubus
 			[CDI:FREE_ACTION]
 			[CDI:VERB:perform a suggestive dance:perform a suggestive dance:NA]
 			[CDI:TARGET_VERB:is hypnotized:is hypnotized:NA]
->>>>>>> fooccubus
 
 [INORGANIC:CHARM_MINOTAUR] // makeown minotaur
 	[SPECIAL]
@@ -171,9 +161,6 @@ inorganic_fooccubus
 		[SYN_CLASS:\COMMAND]
 		[SYN_CLASS:fooccubus/makeown]
 		[SYN_CLASS:\WORKER_ID]
-<<<<<<< HEAD
-		[SYN_CLASS:NIGHTMARE2]
-=======
 		[SYN_CLASS:minotaur]
 		[CE_BODY_TRANSFORMATION:PROB:100:START:0:END:1000]
 		[CE:CREATURE:UNHOLY_RITUAL:GENERIC]
@@ -186,7 +173,6 @@ inorganic_fooccubus
 			[CDI:FREE_ACTION]
 			[CDI:VERB:embrace the nearby minotaur and ask for its submission:embraces at the nearby minotaur and asks for its submission:NA]
 			[CDI:TARGET_VERB:yield its will to the succubi]
->>>>>>> fooccubus
 
 [INORGANIC:CORRUPT_PRISONERS] // transform prisoners
 	[SPECIAL]
@@ -436,12 +422,6 @@ inorganic_fooccubus
 	[BOILING_POINT:8999]
 	[SYNDROME]
 		[SYN_CLASS:\AUTO_SYNDROME]
-<<<<<<< HEAD
-		[SYN_CLASS:\COMMAND]
-		[SYN_CLASS:summoning]
-		[SYN_CLASS:\WORKER_ID]
-		[SYN_CLASS:BASILISK2]
-=======
 		[SYN_AFFECTED_CREATURE:FOOCCUBUS:FEMALE]
 		[SYN_AFFECTED_CREATURE:FOOCCUBUS:FIREIMMUNE_FEMALE]
 		[CE_BODY_TRANSFORMATION:PROB:100:START:0:END:5]
@@ -458,7 +438,6 @@ inorganic_fooccubus
 		[SYN_CLASS:\PERMANENT]
 		[SYN_CLASS:FOOCCUBUS]
 		[SYN_CLASS:FLIER_MALE]
->>>>>>> fooccubus
 
 [INORGANIC:FOOCCUBUS_UPGRADE_LUST_SECRET] // Learns the secret of lust
 	[SPECIAL]
@@ -601,10 +580,6 @@ inorganic_fooccubus
 			[CDI:MAX_TARGET_NUMBER:A:1]
 			[CDI:WAIT_PERIOD:500]
 
-<<<<<<< HEAD
-// conversion dens
-[INORGANIC:CHARM_PRISONERS] // makeown prisonners
-=======
 [INORGANIC:FOOCCUBUS_UPGRADE_NECROSIS_CHANT] // Necrosis interaction
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
@@ -630,7 +605,6 @@ inorganic_fooccubus
 			[CDI:WAIT_PERIOD:900]
 
 [INORGANIC:FOCCUBUS_UPGRADE_ABYSSAL_GAZE] // Necrosis interaction
->>>>>>> fooccubus
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
 	[MATERIAL_VALUE:0]
@@ -650,22 +624,12 @@ inorganic_fooccubus
 			[CDI:USAGE_HINT:ATTACK]
 			[CDI:BP_REQUIRED:BY_CATEGORY:EYE]
 			[CDI:TARGET:A:LINE_OF_SIGHT]
-<<<<<<< HEAD
-			[CDI:TARGET_RANGE:A:10]
-			[CDI:WAIT_PERIOD:1]
-			[CDI:FREE_ACTION]
-			[CDI:VERB:perform a suggestive dance:perform a suggestive dance:NA]
-			[CDI:TARGET_VERB:is mesmerized]
-
-[INORGANIC:CHARM_MINOTAUR] // makeown minotaur
-=======
 			[CDI:TARGET_RANGE:A:5]
 			[CDI:MAX_TARGET_NUMBER:A:1]
 			[CDI:WAIT_PERIOD:900]
 
 // Gluttonry
 [INORGANIC:FOOCCUBUS_EAT_SOUL]
->>>>>>> fooccubus
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
 	[MATERIAL_VALUE:0]
@@ -745,10 +709,4 @@ inorganic_fooccubus
 			[CDI:TARGET_RANGE:A:15]
 			[CDI:WAIT_PERIOD:1]
 			[CDI:FREE_ACTION]
-<<<<<<< HEAD
-			[CDI:VERB:lash out while reciting incatations:lashes out while reciting incatations:NA]
-			[CDI:TARGET_VERB:screams as a transformation takes effect]
-
-=======
 			[CDI:VERB:call the soul of the fallen:calls the soul of the fallen:NA]
->>>>>>> fooccubus
