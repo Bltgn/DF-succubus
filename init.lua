@@ -4,10 +4,8 @@
 -- Make sure that commands are only run if you play as a succubus
 function isFooccubus()
 
-	for k, entity in pairs(df.global.world.entities.all) do
-		if entity.id == df.global.ui.civ_id then 
-			return entity.entity_raw.code == 'CULT' or entity.entity_raw.code == 'DECADENCE' 
-		end
+	for k, entity in pairs(df.global.world.raws.entities) do
+		if entity.code == 'CULT' or entity.code == 'DECADENCE' then return true end
 	end
 
 	return false
@@ -19,7 +17,7 @@ function onStateChange(sc)
 	if sc == SC_MAP_LOADED then
 
 		print('Map loaded')
-		if df.global.ui.civ_id and isFooccubus() then
+		if isFooccubus() then
 			dfhack.run_script('fixnakedregular')
 		end
 

@@ -46,3 +46,4 @@ material_template_fooccubus
 	[ABSORPTION:100]
 	[IMPLIES_ANIMAL_KILL]
 	[ROTS]
+

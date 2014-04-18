@@ -1,6 +1,7 @@
 -- Captures custom reactions and make the appropriate dfhack calls.
 
 local eventful = require 'plugins.eventful'
+local utils = require 'utils'
 
 --http://lua-users.org/wiki/StringRecipes  (removed indents since I am not using them)
 function wrap(str, limit)--, indent, indent1)
@@ -71,14 +72,14 @@ end
 -- Search the site for an invader
 local function hasInvader()
 	for k, unit in ipairs(df.global.world.units.all) do
-		if unit.flags1.active_invader and not unit.flags1.caged then return true end
+		if unit.flags1.active_invader and not unit.flags1.caged and dfhack.units.isAlive(unit) then return true end
 	end
 	return false
 end
 
 -- Manages effects targeting invaders
 local function invadersEffect(code, reaction, unit, input_reagents)
-	if hasInvader == false then
+	if hasInvader() == false then
 		cancelReaction(reaction, unit, input_reagents, "no invaders in the area")
 		return nil
 	end
@@ -88,7 +89,7 @@ local function invadersEffect(code, reaction, unit, input_reagents)
 	elseif code == 'LURE_INVADERS' then
 		dfhack.run_script('succubus/lure-invader')
 	elseif code == 'DIMENSION_PULL' then
-		dfhack.run_script('succubus/dimpull-invaders', unit.id) -- todo catch the reagent's value
+		dfhack.run_script('succubus/dimpull-invader', unit.id) -- todo catch the reagent's value
 	end
 end
 
@@ -98,7 +99,7 @@ local function addSkill(set, unit)
 
 	if(set == 'BROKER') then
 		dfhack.run_script('trainskill', unit.id, 'APPRAISAL', 15)
-		skillSet = {'LIAR', 'FLATTERY', 'RECORD_KEEPING'}
+		skillSet = {'LYING', 'FLATTERY', 'RECORD_KEEPING'}
 	elseif(set == 'CRAFTER') then
 		skillSet = {'WOODCRAFT', 'STONECRAFT', 'METALCRAFT', 'GLASSMAKER', 'LEATHERWORK'}
 	elseif(set == 'FARMER') then
@@ -108,20 +109,21 @@ local function addSkill(set, unit)
 	end
 
 	roll = math.random(1, #skillSet)
+	print("Skill increase : "..skillSet[roll])
 	dfhack.run_script('trainskill', unit.id, skillSet[roll], 15)
 end
 
 -- Reaction hook
-eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_items, input_reagents, output_items, call_native)
+eventful.onReactionComplete.fooccubusReaction = function(reaction, unit, input_items, input_reagents, output_items, call_native)
 	-- site effects
 	if reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
-		dfhack.run_script('syndromeweather', 'firebreath', 100, 20, 5)
+		dfhack.run_script('syndromeweather', 'firebreath', 400, 100, 500)
 		dfhack.gui.showAnnouncement('The sky darkens and fireballs strikes the earth.', COLOR_YELLOW)
 
 	-- citizen effects
 	elseif reaction.code == 'LUA_HOOK_FORGET_DEATH' then
 		dfhack.run_script('succubus/forget-death', unit.id)
-		dfhack.run_script('succubus/influence', unit.id, 'pride')
+		dfhack.run_script('succubus/influence', 'pride', unit.id)
 		paybackSiege(10, 'pride')
 
 	-- pet effects
@@ -150,3 +152,5 @@ eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_ite
 		dfhack.gui.showAnnouncement('Death came back and the order is restored.', COLOR_YELLOW)
 	end
 end
+
+print('Succubus reaction hook activated')

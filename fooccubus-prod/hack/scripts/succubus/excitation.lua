@@ -51,7 +51,7 @@ function getName(unitTarget)
 end
 
 power = happiness(unit)
-if isBerserk(unit) then
+if hasSyndrome(unit) then
 	if debug then print('Berserk unit #'..unit.id..' rating '..power) end
 
 	-- Lets pick a syndrome tier
@@ -62,7 +62,7 @@ if isBerserk(unit) then
 	elseif power < 5 then
 		syndrome = 'FOOCCUBUS_EXCITATION_2'
 	else
-		if unit.sex === 1 then
+		if unit.sex == 1 then
 			gender = 'his'
 		else
 			gender = 'her'
