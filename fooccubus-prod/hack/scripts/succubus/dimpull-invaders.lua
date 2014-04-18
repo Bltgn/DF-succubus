@@ -17,7 +17,7 @@ end
 
 -- Todo catch the reagent value
 local function power(unit)
-	local number = math.random(50000, 200000)
+	local number = math.random(50000, 150000)
 	return number
 end
 
