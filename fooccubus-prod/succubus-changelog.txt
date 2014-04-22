@@ -1,7 +1,7 @@
 # Succubus Dungeon : Changelog #
 6.1
-- The prisonner corruption should work again.
-- Added the Altar of NIghtmare back to the deep succubi.
+- The prisoner corruption should work again.
+- Added the Altar of Nightmares back to the deep succubi.
 - Bloodworm spawns are now named properly.
 
 6.0
