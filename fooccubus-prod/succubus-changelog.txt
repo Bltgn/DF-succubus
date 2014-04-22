@@ -3,6 +3,7 @@
 - The prisoner corruption should work again.
 - Added the Altar of Nightmares back to the deep succubi.
 - Bloodworm spawns are now named properly.
+- Removed most reagents from prisoner conversions.
 
 6.0
 + New temples
