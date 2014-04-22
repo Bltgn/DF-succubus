@@ -1,34 +1,4 @@
-6.0
----
-
-Packaging
-! Remettre wormy tendrils en violet
-! Passer les max pop à 150
-! Mettre à jour annoucements
-! Ajouter des worldgens et des embark profiles
-
-Updates à vérifier
-+ Projectile expansion
-+ Rendermax
-
-Credits :
-- Teleport par Putnam
-- Bits of MW by Meph
-- Dwarf chocolate
-- Roses scripts
-- Slam by IndigoFenix
-
-MW
-- Corriger les conflits
-
-Fix/test
-- Rendre torrid kiss touchable
-
-Fix
-- Ajouter une réaction pour des glass blocks (mdf)
-- Retirer des réaction du gemcutter
-
-6.1
+6.2
 ---
 
 GUI
