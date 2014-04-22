@@ -4,9 +4,10 @@
 -- Make sure that commands are only run if you play as a succubus
 function isFooccubus()
 
-	for k, entity in pairs(df.global.world.raws.entities) do
-		if entity.code == 'CULT' or entity.code == 'DECADENCE' then return true end
-	end
+	for k, entity in pairs(df.global.world.entities.all) do
+		if entity.id == df.global.ui.civ_id then
+			return entity.entity_raw.code == 'CULT' or entity.entity_raw.code == 'DECADENCE'
+		end
 
 	return false
 
