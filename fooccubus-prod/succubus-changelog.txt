@@ -1,4 +1,9 @@
 # Succubus Dungeon : Changelog #
+6.1
+- The prisonner corruption should work again.
+- Added the Altar of NIghtmare back to the deep succubi.
+- Bloodworm spawns are now named properly.
+
 6.0
 + New temples
 - The temples are new workshops that provides upgrades and spells.
