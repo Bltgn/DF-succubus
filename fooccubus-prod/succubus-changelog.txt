@@ -1,4 +1,10 @@
 # Succubus Dungeon : Changelog #
+6.1
+- The prisoner corruption should work again.
+- Added the Altar of Nightmares back to the deep succubi.
+- Bloodworm spawns are now named properly.
+- Removed most reagents from prisoner conversions.
+
 6.0
 + New temples
 - The temples are new workshops that provides upgrades and spells.
@@ -9,11 +15,11 @@
 
 + Temple of sin (royalist)
 - Provides various effects tied to a sphere.
-- Depending on the sphere, the succubus peronnality will be affected and side effects might occur.
-- Gluttonry : Increases fat, hunger and thirst. Also trains brewing and cooking.
-- Wrath and Envy: Increases bad thoughts generating personnality facets.
+- Depending on the sphere, the succubus personality will be affected and side effects might occur.
+- Gluttony : Increases fat, hunger and thirst. Also trains brewing and cooking.
+- Wrath and Envy: Increases bad thoughts generating personality facets.
 - Pride: May cause a siege from an old enemy, the effects also depends of the worker's number of acquaintances.
-- Other spheres: Only affect the personnality.
+- Other spheres: Only affect the personality.
 - [LUST] Reinforce wings: Provide flying abilities, does not stack with fire immunity.
 - [LUST] Learn martial excitation: Improves abilities in combat depending on happiness. If the succubus is ecstatic...
 - [LUST] Learn the secret of lust: Becomes a concubine, and receive there combat interaction. Strange effects will occur at regular interval.
@@ -22,7 +28,7 @@
 - [GREED] Conjure slade: Summon a boulder of slade, to satisfy the worst mandates.
 - [GREED] Conjure slade anvil: Summon a good heavy anvil for your forges.
 - [SLOTH] Protective tentacles: Provides tentacle monsters with a friendly defensive buff.
-- [GLUTTONRY] Devour soul: Eats a soul to increase strenght and stamina. This is permanent and will not stack if done multiple times.
+- [GLUTTONY] Devour soul: Eats a soul to increase strength and stamina. This is permanent and will not stack if done multiple times.
 - [ENVY] Sow discord: Causes invaders to attack each other.
 - [ENVY] Lure invaders inside: Causes siegers to stop loitering at their camp and rush inside your fort.
 
@@ -55,7 +61,7 @@
 - Many new jobs requires souls.
 - Souls are harvested at the Soul Well
 - The deep succubi extract the souls from totems (unavailable in MDF).
-- The royalist must build the well inside a refuse stockpile, to extract the soul from corpses in the vinicity.
+- The royalist must build the well inside a refuse stockpile, to extract the soul from corpses in the vicinity.
 - Souls do wither after a few weeks.
 - To prevent withering, a soul can be trapped into a cut gem or glass.
 - In Masterwork DF, souls are found by butchering creatures.
@@ -87,7 +93,7 @@
 - Added an execution position to the deep succubi.
 - Both civs whippers will meet workers for complains, they will ask for a meager office.
 - Adjusted the body descriptors of the succubi, culled the tongue lengths.
-- Armor will is now garanteed to be available.
+- Armor will is now guaranteed to be available.
 - Summoning has been made simpler, using less different reagents.
 - Made nightmares more aggressive.
 - Soul wisps are more likely to flee.
@@ -104,7 +110,7 @@
 - Added illumination, those are found in the furnace choices and will provide light if you use rendermax.
 - Added floating glass furnaces for both civ, this magma furnace allows a mass production of glass blocks and windows.
 - Renamed the royalist succubi's positions, bookkeeper and manager are merged into Librarian.
-- New summon for the deep succubi: Rat things. Those large rats will hunt vermins and can teleport towards enemies.
+- New summon for the deep succubi: Rat things. Those large rats will hunt vermin and can teleport towards enemies.
 - New summon for both civs: Horrible Fell Spirit. This ritual will be a gamble on your ressources.
 - Royalists cannot build the altar of nightmares anymore.
 - The summoning circle has been redesigned.
@@ -126,10 +132,10 @@
 
 5.4
 + Scripts and premade builds has been updated to dfhack r4.
-+ Summonning a creature no longer cause transformations.
-+ An announcement has been added when a creature is summonned.
++ Summoning a creature no longer cause transformations.
++ An announcement has been added when a creature is summoned.
 + Summoned creature will now use their interaction again, that includes fireballs and breath.
-+ Succubi and deep succubi will regulary forget bad thoughts related to the lack of clothing.
++ Succubi and deep succubi will regularly forget bad thoughts related to the lack of clothing.
 + The royalist succubi now have access to the altar of nightmare, without the Provoke siege job.
 + Added a job in the altar of nightmares to allow the acquisition of the appraisal skill, allowing deep succubi to display their fort's production.
 + Added a job in the altar of nightmares to call a rain on the field.

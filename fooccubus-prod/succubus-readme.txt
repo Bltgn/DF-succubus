@@ -10,7 +10,7 @@ Succubus Dungeon is a mod for vanilla Dwarf Fortress featuring a new 'evil' civ.
 * 2 new metals : Stygian Bronze and Orichalcum.
 * Temples : Provides upgrades, interactions and spells that can affect the entire site.
 * Ranged weapons with explosive ammo.
-* The ablity to build whips.
+* The ability to build whips.
 * Dwarven sieges.
 
 # Installation #
@@ -51,7 +51,7 @@ races into half breeds to strengthen their numbers.
 # Summoning a creature #
 * In order to summon a creature, you must build a summoning circle using a totem and a construction material.
 * Various jobs require different items, selecting an unavailable task will give your a list.
-* When applicable, the resulting gender of the summoned creature will be choosen randomly.
+* When applicable, the resulting gender of the summoned creature will be chosen randomly.
 * Most creatures are not tamed but act friendly.
 
 # Taming the summoned creatures #
@@ -72,7 +72,7 @@ races into half breeds to strengthen their numbers.
 * Basilisk : A large reptile breathing poisonous vapors. Its horn can be sheared for orichalcum.
 
 ## Deep succubi summon ##
-* Rat thing : A large rate that hunts vermins and can teleport towards enemies.
+* Rat thing : A large rate that hunts vermin and can teleport towards enemies.
 * Sothoth spawn : An huge monster that will turn itself invisible to its enemies. Its slime will damage its victims bodies.
 
 # Turning prisoners in you side #

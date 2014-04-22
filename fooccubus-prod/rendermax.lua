@@ -266,3 +266,25 @@ addBuilding("Workshop:Custom:FOOCCUBUS_NIGHTMARES",{1,1,1},{1,1,0.8},10)
 addBuilding("Workshop:Custom:FOOCCUBUS_ABYSS",{1,1,1},{0.2,0.2,1},15)
 addBuilding("Workshop:Custom:FOOCCUBUS_SOUL_FORGE",{1,1,1},{1,0.5,0.8},10)
 addBuilding("Furnace:Custom:FOOCCUBUS_SOUL_WELL",{1,1,1},{1,0,1},10)
+
+-- 		furnaces
+addBuilding("Furnace:WoodFurnace",{1,1,1},{1.2,0.5,0.5},10)
+addBuilding("Furnace:Smelter",{1,1,1},{1.4,0.7,0.7},20)
+addBuilding("Furnace:Kiln",{1,1,1},{1.4,0.7,0.7},20)
+addBuilding("Furnace:Glassfurnace",{1,1,1},{1.4,1.4,0.7},20)
+addBuilding("Furnace:MagmaSmelter",{1,1,1},{1.4,0.7,0.7},20)
+addBuilding("Furnace:MagmaKiln",{1,1,1},{1.4,0.7,0.7},20)
+addBuilding("Furnace:MagmaGlassFurnace",{1,1,1},{1.4,1.4,0.7},20)
+addBuilding("Furnace:Custom:GLASS_FLOAT",{1,1,1},{1.4,1.4,0.7},20)
+
+-- todo : powered only stuff, flicker for furnaces
+
+--creatures
+addCreature("ELEMENTMAN_MAGMA",{0.8,0.2,0.2},{0.8,0.2,0.2},5)
+addCreature("SOUL_WISP",{0.8,0.8,0.8},{0.8,0.8,0.8},5)
+addCreature("PAIN_ELEMENTAL",{1.4,0.8,0.8},{0.8,0.8,0.8},5)
+
+--items
+addItem("GEM",nil,nil,{"useMaterial","onGround"})
+addItem("ROUGH",nil,nil,{"useMaterial","onGround"})
+addItem("SMALLGEM",nil,nil,{"useMaterial","onGround"})

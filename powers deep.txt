@@ -1,17 +1,17 @@
 Esoteric order
-0 Reinforce body (+250)
+o Devour soul
 > Embrace insanity (mega buff, crazed)
-0 Learn abyssal gaze
-0 Learn mind theft
-0 Learn necrosis chant
+o Learn abyssal gaze (buffer un peu peu etre)
+o Learn mind theft
+o Learn necrosis chant
 > Meld with the deep ones (long term syndrome)
 > ??? monster (summon en combat)
 
 Abyssal temple
-0 Summon a rain
+o Summon a rain
 ! Put Death to death
 ! Cancel death to death
-0 Dimensional pull (depend du craft)
+o Dimensional pull (depend du craft)
 > Summon an evil weather
 
 Atar of nightmares
@@ -26,7 +26,7 @@ Atar of nightmares
 0 Sow discord
 
 Arme
-Forbidden bracelet
-0 Pain shard
-0 Force shard
-0 Blight shard
+o Forbidden bracelet
+o Pain shard
+o Force shard
+o Blight shard
