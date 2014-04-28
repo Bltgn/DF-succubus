@@ -929,7 +929,7 @@ interaction_dwarfchocolate
 				[CDI:WAIT_PERIOD:90]
 
 [INTERACTION:FIRE_SECRET]
-	[I_SOURCE:CREATURE_ACTION] // Added to allow learning in dwarf mode
+	[I_SOURCE:CREATURE_ACTION] by boltgun // allows learning in dwarf mode
 	[I_SOURCE:SECRET]
 		[IS_NAME:the secrets of fire]
 		[IS_SPHERE:FIRE]
