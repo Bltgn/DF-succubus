@@ -17,33 +17,101 @@ Powers
 Fix/test
 - Rendre torrid kiss touchable
 
+Buildings
+- S'assurer du bon affichage
+- Tanner dwarf (et tous les upgrades) + make leather whip
+! Thread reclaim
+! Slag pit
+- Play game (?)
+! Crematorium
+- Brick oven (+ magma)
+- Kiln
+- metalworks non metal (?)
+- gemforge
+- glassforge
+- graveforge (?)
+- metalworks
+- metallurgist (plus magma)
+- blast furnace
+- crucible
+- smithing
+- great magma forge
+- tar pot
+- warpstone lab
+- bulleting board
+- display case
+- chandler
+- painter
+- fletcher
+- tailor
+- greater dyery
+- slughterhouse
+- winery
+- music
+- armok stuff
+- library
+- scriptorum
+- apothecarius
+- archeologist
+- ebonforge
+- skullforge
+- teleport
+- fountain
+- loo (?)
+- decorations
+
+Items
+- Weapons
+- Armor (pas de breastplate, mail + leather + corset)
+- evil toys
+
 7.0
 ---
 
-Temples
-- Faire les 7 temples
+Building
+- Tattoo
+- Devil deal
+- archeologist
+- flash shapper
+- play games
+
+MW
+- Immuniser aux black lungs
+- Warpstone donne un boost
+
+Sans tag
+--------
+
+Workshops
+- poison
+- music stand
+- smoking
+- defiler
+- praying
+- magma well
+- dark pact
+- demon attorney
+- eternal rose
+- dollhouse
+- animal care
+
+Objets
+- pieges
+- explosive siege ammo
+
++ Charm minotaur => charm megabeast (+ cyclops, giant, ...?)
 
 Nobles
 - La reine + noble peuvent réssuciter (+makeown)
 - Le mayor annule les pauses
 
-MW
-- Immuniser à hard dig et maladies
-
-Sans tag
---------
-
-+ Charm minotaur => charm megabeast (+ cyclops, giant, ...?)
-
 Scripts
-- Cancel reaction, no invader/minotaur
+- Cancel reaction, no invader/minotaur in range
 - Donner des jobs aux non race
-
-Créer une météo spéciale pour les zones evil
-
-Noble
 - Ajouter un buff pour les noble en utilisant le système de Roses
 - Réduction de pauses, + attributes ?
+
+Créer une météo spéciale pour les zones evil
 
 Creatures
 + Ajouter les succubi sauvages, mettre dans HFS
