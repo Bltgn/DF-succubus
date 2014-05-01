@@ -14,11 +14,11 @@ Influence
 Powers
 - Dimension pull, use the reagent value
 
-Fix/test
-- Rendre torrid kiss touchable
 
 Buildings
-- S'assurer du bon affichage
+- S'assurer du bon affichage avec les === aides ===
+- Harmoniser le nombre de =
+
 - Tanner dwarf (et tous les upgrades) + make leather whip
 ! Thread reclaim
 ! Slag pit
@@ -65,6 +65,15 @@ Items
 - Armor (pas de breastplate, mail + leather + corset)
 - evil toys
 
+Plants
+- Harder farming
+
+Fix
+- Basiliskine absent
+- Nightmare, pas de skin et wool
+- MAJ les armures et armes
+
+
 7.0
 ---
 
@@ -78,6 +87,11 @@ Building
 MW
 - Immuniser aux black lungs
 - Warpstone donne un boost
+
+Jobs
+- Renommer les jobs
+- Faire de nouveaux sprites
+- Adapter les réactions à ces jobs
 
 Sans tag
 --------
@@ -125,6 +139,7 @@ Charm minotaur
 + FIXME!
 Soul wisp doit pouvoir bruler
 boobs and acheek should appear at 12, plus growth
+- Rendre torrid kiss touchable
 
 Summon
 + Behemoth, énorme, tondre pour de la laine
