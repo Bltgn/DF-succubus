@@ -1,4 +1,17 @@
 # Succubus Dungeon : Changelog #
+6.2
+- You should be able to make basilikine bars again.
+- You cannot make breatplates anymore.
+- Bucklers has been replaced with shields.
+- Corsets coverage has been raised to 90% and moved to the armor layer.
+- Armor is now forced upon the entities.
+
++ Masterwork changes
+- The growth duration of bloodworms and black roses has been set according to the harder farming settings.
+- The entities will now be mdified when you activate or deactivate settings on te launcher.
+- New weapons has been added to both civs.
+- Wrist guards has been replaced by gauntlets.
+
 6.1
 - The prisoner corruption should work again.
 - Added the Altar of Nightmares back to the deep succubi.

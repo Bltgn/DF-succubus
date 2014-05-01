@@ -1,20 +1,6 @@
 6.2
 ---
 
-GUI
-- Plugin pour afficher des détails des réactions + help en txt
-
-Sprites
-+ Commencer deep
-
-Influence
-- Lust, add a lover
-- Devour soul, reduce hunger
-
-Powers
-- Dimension pull, use the reagent value
-
-
 Buildings
 - S'assurer du bon affichage avec les === aides ===
 - Harmoniser le nombre de =
@@ -54,25 +40,32 @@ Buildings
 - apothecarius
 - archeologist
 - ebonforge
-- skullforge
 - teleport
 - fountain
 - loo (?)
 - decorations
 
-Items
-- Weapons
-- Armor (pas de breastplate, mail + leather + corset)
-- evil toys
-
-Plants
-- Harder farming
-
 Fix
-- Basiliskine absent
 - Nightmare, pas de skin et wool
-- MAJ les armures et armes
 
+Test
+- dégats des armes
+
+6.3
+---
+
+GUI
+- Plugin pour afficher des détails des réactions + help en txt
+
+Sprites
++ Commencer deep
+
+Influence
+- Lust, add a lover
+- Devour soul, reduce hunger
+
+Powers
+- Dimension pull, use the reagent value
 
 7.0
 ---
@@ -81,7 +74,7 @@ Building
 - Tattoo
 - Devil deal
 - archeologist
-- flash shapper
+- flesh shapper
 - play games
 
 MW
@@ -92,6 +85,10 @@ Jobs
 - Renommer les jobs
 - Faire de nouveaux sprites
 - Adapter les réactions à ces jobs
+
+Items
+- Nouvelle armure de cuir en under (bodysuit en 2 items)
+- Upper la coverage de corsets et les block chances
 
 Sans tag
 --------
