@@ -4,48 +4,6 @@
 Buildings
 - S'assurer du bon affichage avec les === aides ===
 
-- Tanner dwarf (et tous les upgrades) + make leather whip
-! Thread reclaim
-! Slag pit
-- Play game (?)
-! Crematorium
-- Brick oven (+ magma)
-- Kiln
-- metalworks non metal (?)
-- gemforge
-- glassforge
-- graveforge (?)
-- metalworks
-- metallurgist (plus magma)
-- blast furnace
-- crucible
-- smithing
-- great magma forge
-- tar pot
-- warpstone lab
-- bulleting board
-- display case
-- chandler
-- painter
-- fletcher
-- tailor
-- greater dyery
-- slughterhouse
-- winery
-- armok stuff
-- apothecarius
-- archeologist
-- ebonforge
-- teleport
-- fountain
-- loo (?)
-- decorations
-
-Fix
-- Nightmare, pas de skin et wool (retester)
-
-Test
-- dégats des armes
 
 6.3
 ---
@@ -63,18 +21,40 @@ Influence
 Powers
 - Dimension pull, use the reagent value
 
+Fix
+- Nightmare, pas de skin et wool (retester)
+
+Test
+- dégats des armes
+
 7.0
 ---
 
 Building
-- Tattoo
 - Devil deal
 - archeologist
-- flesh shapper
-- play games
-- music
-- library
-- scriptorum
+- Tanner dwarf (et tous les upgrades) + make leather whip
+- armok stuff
+
+Reactions
+- Slade ammo dans soul forge
+- weather control, retirer weath2
+
+ Creatures
+- Hellhound > orthus
+- basilisk mw > add horn et basiliskine
+- cerberus
+
+Attorney
+- Fabriquer ces machins
+- Réactions echanges
+
+Mineral oil
+
+Summon
+- hellhound mw
+- nightmare mw
+- basilisk mw
 
 MW
 - Immuniser aux black lungs
@@ -104,6 +84,9 @@ Workshops
 - eternal rose
 - dollhouse
 - animal care
+- gemforge
+- glassforge
+- graveforge (?)
 
 Objets
 - pieges
