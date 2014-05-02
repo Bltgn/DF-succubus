@@ -4,13 +4,17 @@
 - You cannot make breatplates anymore.
 - Bucklers has been replaced with shields.
 - Corsets coverage has been raised to 90% and moved to the armor layer.
-- Basilisks has been given a ticker skin
+- Basilisks has been given a ticker skin.
 
 + Masterwork changes
 - The growth duration of bloodworms and black roses has been set according to the harder farming settings.
-- The entities will now be mdified when you activate or deactivate settings on te launcher.
+- The entities will now reaction to changes in the launcher's settings.
 - New weapons has been added to both civs.
 - Wrist guards has been replaced by gauntlets.
+- Added decorations.
+- Added the tailor shops with reclaiming thread reactions
+- Added the crematorium with ramains burning reactions.
+- Added the slag pit with slag destruction and potash making.
 
 6.1
 - The prisoner corruption should work again.
