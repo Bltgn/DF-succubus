@@ -3,7 +3,6 @@
 
 Buildings
 - S'assurer du bon affichage avec les === aides ===
-- Harmoniser le nombre de =
 
 - Tanner dwarf (et tous les upgrades) + make leather whip
 ! Thread reclaim
@@ -33,10 +32,7 @@ Buildings
 - greater dyery
 - slughterhouse
 - winery
-- music
 - armok stuff
-- library
-- scriptorum
 - apothecarius
 - archeologist
 - ebonforge
@@ -47,6 +43,7 @@ Buildings
 
 Fix
 - Nightmare, pas de skin et wool
+- Inverser les sprites spear a lance
 
 Test
 - dégats des armes
@@ -76,6 +73,9 @@ Building
 - archeologist
 - flesh shapper
 - play games
+- music
+- library
+- scriptorum
 
 MW
 - Immuniser aux black lungs

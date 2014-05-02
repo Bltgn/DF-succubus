@@ -4,7 +4,7 @@
 - You cannot make breatplates anymore.
 - Bucklers has been replaced with shields.
 - Corsets coverage has been raised to 90% and moved to the armor layer.
-- Armor is now forced upon the entities.
+- Basilisks has been given a ticker skin
 
 + Masterwork changes
 - The growth duration of bloodworms and black roses has been set according to the harder farming settings.

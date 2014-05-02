@@ -39,6 +39,20 @@ creature_fooccubus_deep
 	[SKILL_LEARN_RATE:ALCHEMY:300]
 	[SKILL_LEARN_RATE:MECHANICS:50]
 
+	[PROFESSION_NAME:FARMER:farmworker:farmworkers]
+	[PROFESSION_NAME:MILLER:archeologist:archeologists]
+	[PROFESSION_NAME:PRESSER:researcher:researchers]
+	[PROFESSION_NAME:POTTER:scribe:scribes]
+	[PROFESSION_NAME:STRAND_EXTRACTOR:apostle:apostles]
+	[PROFESSION_NAME:GLAZER:toolmaker:toolmakers]
+	[PROFESSION_NAME:SOAP_MAKER:diplomat:diplomats]
+	[PROFESSION_NAME:WOOD_BURNER:oven operator:oven operators]
+	[PROFESSION_NAME:LYE_MAKER:chemist:chemists]
+	[PROFESSION_NAME:PUMP_OPERATOR:machine operator:machine operators]
+	[PROFESSION_NAME:PLANTER:farmer:famers]
+	[PROFESSION_NAME:BEEKEEPER:hivekeeper:hivekeepers]
+	[PROFESSION_NAME:THRESHER:miller:millers]
+
 	// Body and description
 	[CREATURE_TILE:'&'][COLOR:4:0:0]
 	[GLOWTILE:'"'][GLOWCOLOR:6:0:1]
