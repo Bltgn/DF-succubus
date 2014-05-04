@@ -8,6 +8,7 @@ function isFooccubus()
 		if entity.id == df.global.ui.civ_id then
 			return entity.entity_raw.code == 'CULT' or entity.entity_raw.code == 'DECADENCE'
 		end
+	end
 
 	return false
 
