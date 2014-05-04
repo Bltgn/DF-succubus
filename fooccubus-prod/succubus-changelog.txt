@@ -1,4 +1,12 @@
 # Succubus Dungeon : Changelog #
+6.3
+- Moved the corsets back in the UNDER layer.
+- The succubi should forget bad thoughts about clothing again.
+
++ Masterwork changes
+- Added support for more instruments.
+- Added razor wires traps.
+
 6.2
 - You should be able to make basilikine bars again.
 - You cannot make breatplates anymore.

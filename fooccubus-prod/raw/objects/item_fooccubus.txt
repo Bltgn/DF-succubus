@@ -7,11 +7,11 @@ item_fooccubus
 	[NAME:card game:card games]
 	[HARD_MAT]
 
-[ITEM_TOY:ITEM_TOY_DIE]
+[ITEM_TOY:ITEM_TOY_DIE] // to be removed, existing dice craft
 	[NAME:die:dices]
 	[HARD_MAT]
 
-[ITEM_TOY:ITEM_TOY_CHESS_SET]
+[ITEM_TOY:ITEM_TOY_CHESS_SET] // to be removed, use ITEM_TOY_CHESSBOARD
 	[NAME:card set:chess sets]
 	[HARD_MAT]
 
@@ -24,7 +24,7 @@ item_fooccubus
 	[NAME:corset:corsets]
 	[UBSTEP:0]
 	[LBSTEP:0]
-	[LAYER:ARMOR]
+	[LAYER:UNDER]
 	[COVERAGE:90]
 	[LAYER_SIZE:15]
 	[LAYER_PERMIT:50]
