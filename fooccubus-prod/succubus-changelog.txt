@@ -2,6 +2,8 @@
 6.3
 - Moved the corsets back in the UNDER layer.
 - The succubi should forget bad thoughts about clothing again.
+- Pitchforks and their stygian versions now use the spear skill
+- Inverted the spearsuccubus and pikesuccubus sprites.
 
 + Masterwork changes
 - Added support for more instruments.
