@@ -1,17 +1,8 @@
-6.2
----
-
-Buildings
-- S'assurer du bon affichage avec les === aides ===
-
 6.3
 ---
 
 GUI
 - Plugin pour afficher des détails des réactions + help en txt
-
-Sprites
-+ Commencer deep
 
 Influence
 - Lust, add a lover
@@ -25,6 +16,16 @@ Fix
 
 Test
 - dégats des armes
+
+Revoir les workshops
+- Vérifier la dispo des alliages
+- Ajouter glass forge
+- Brick oven
+- Gem forge
+- DIsplay case warmist (dajà?)
+
+Question
+- ITEM_SHIELD_SHIELD
 
 7.0
 ---
@@ -41,7 +42,7 @@ Reactions
 - Slade ammo dans soul forge
 - weather control, retirer weath2
 
- Creatures
+Creatures
 - Hellhound > orthus
 - basilisk mw > add horn et basiliskine
 - cerberus
@@ -49,6 +50,13 @@ Reactions
 Attorney
 - Fabriquer ces machins
 - Réactions echanges
+
+Teleport
+- Ajouter et corriger
+
+Glassforge
+- Glass corset
+- Pitchfork
 
 Mineral oil
 
