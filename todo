@@ -1,21 +1,9 @@
 6.3
 ---
 
-GUI
-- Plugin pour afficher des détails des réactions + help en txt
-
-Test
-- dégats des armes
-
-Revoir les workshops
-- Vérifier la dispo des alliages
-
 Inorganic
 - Modifier effect  de warpstone en positif
 - Immuniser black lung
-
-Reaction
-- Ajouter lure merchants dans altar of nightmares
 
 7.0
 ---
@@ -97,12 +85,11 @@ Workshops
 - magma well
 - dark pact
 - demon attorney
-- eternal rose
 - dollhouse
 - animal care
-- gemforge
-- glassforge
-- graveforge (?)
+
+GUI
+- Plugin pour afficher des détails des réactions + help en txt
 
 Objets
 - pieges

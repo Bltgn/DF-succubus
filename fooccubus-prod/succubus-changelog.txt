@@ -1,4 +1,15 @@
 # Succubus Dungeon : Changelog #
+6.4
+- The concubine secret is no longer a curse given by gods.
+
++ Masterwork changes
+- Added glassforge, gemforge, fountains, brick oven, boneyard, archeologist, portals and other existing buildings.
+- Not all buildings can be built, means to get the missing blueprints will be added later on.
+- MWDF races can now be charmed and corrupted.
+- You can lure caravan, warlock style, at the altar of nightmare.
+- The succubi are now immune to black lung.
+- Warpstone will provide boosts instead of losses.
+
 6.3
 - Moved the corsets back in the UNDER layer.
 - The succubi should forget bad thoughts about clothing again.
