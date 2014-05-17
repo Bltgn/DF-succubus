@@ -4,39 +4,33 @@
 GUI
 - Plugin pour afficher des détails des réactions + help en txt
 
-Influence
-- Lust, add a lover
-- Devour soul, reduce hunger
-
-Powers
-- Dimension pull, use the reagent value
-
-Fix
-- Nightmare, pas de skin et wool (retester)
-
 Test
 - dégats des armes
 
 Revoir les workshops
 - Vérifier la dispo des alliages
-- Ajouter glass forge
-- Brick oven
-- Gem forge
-- DIsplay case warmist (dajà?)
+- Tanner
 
-Question
-- ITEM_SHIELD_SHIELD
+Inorganic
+- Modifier effect  de warpstone en positif
+
+Reaction
+- Ajouter lure merchants dans altar of nightmares
+
+Summon
+- Ajouter were creature, boogeyman, titan et FB
+- Retirer intelligent des clowns
 
 7.0
 ---
 
 Building
 - Devil deal
-- archeologist
+	- Y ajouter des trades
+	- Acheter des ames
+- archeologist (le refaire)
 - Tanner dwarf (et tous les upgrades) + make leather whip
 - armok stuff
-
-Spliter le temple of sin en 7 temples
 
 Reactions
 - Slade ammo dans soul forge
@@ -45,11 +39,13 @@ Reactions
 Creatures
 - Hellhound > orthus
 - basilisk mw > add horn et basiliskine
-- cerberus
+- cerberus > dans mw ?
+- soul wisp > harmoniser
 
 Attorney
 - Fabriquer ces machins
 - Réactions echanges
+- Recherche glassforge
 
 Teleport
 - Ajouter et corriger
@@ -57,6 +53,9 @@ Teleport
 Glassforge
 - Glass corset
 - Pitchfork
+
+Gemforge
+- Gem corset + pitchfork
 
 Mineral oil
 
@@ -70,13 +69,25 @@ MW
 - Warpstone donne un boost
 
 Jobs
-- Renommer les jobs
 - Faire de nouveaux sprites
 - Adapter les réactions à ces jobs
 
 Items
 - Nouvelle armure de cuir en under (bodysuit en 2 items)
-- Upper la coverage de corsets et les block chances
+
+Fixes
+- Warlock teleport
+- fovcommand (update reactions, remove les 2 scripts)
+
+Defiler
+- Reforge breastplate
+- Reforge shield
+- Reforge ???
+
+A produire
+ - Warlock codex
+ - Des roses eternelles
+ - Leather whip
 
 Sans tag
 --------
@@ -134,3 +145,10 @@ Summon
 + Pit fiend, weapon user sentient (non fonctionnel)
 + Beast of revelation : Throw dust + mutli tetes
 + rose : body, reagent, sprites, throw spines
+
+Pouvoirs
+- Lust, add a lover
+- Devour soul, reduce hunger
+- Dimanesion pull, selon la valeur du craft
+
+Greater dyery
