@@ -1,12 +1,9 @@
-6.3
----
-
-Inorganic
-- Modifier effect  de warpstone en positif
-- Immuniser black lung
-
 7.0
 ---
+
+Tester le corps en mode nsfw (breast?)
+
+Refaire metallurgiste
 
 Building
 - Devil deal
@@ -15,10 +12,11 @@ Building
 - archeologist (le refaire)
 - Tanner dwarf (et tous les upgrades) + make leather whip
 - armok stuff
+- Soul well, trap soul in glass
 
-Reactions
-- Slade ammo dans soul forge
-- weather control, retirer weath2
+Defiler
+- Reforge breastplate
+- Reforge round shield
 
 Creatures
 - Hellhound > orthus
@@ -52,10 +50,6 @@ MW
 - Immuniser aux black lungs
 - Warpstone donne un boost
 
-Jobs
-- Faire de nouveaux sprites
-- Adapter les réactions à ces jobs
-
 Items
 - Nouvelle armure de cuir en under (bodysuit en 2 items)
 
@@ -72,6 +66,21 @@ A produire
  - Warlock codex
  - Des roses eternelles
  - Leather whip
+
+Réarranger les buildings
+
+Tout passer dans vanilla
+
+Plant
+- Monter le prix des bloodworms
+- Bloodworms en evil only
+
+7.1
+---
+
+Jobs
+- Faire de nouveaux sprites
+- Adapter les réactions à ces jobs
 
 Sans tag
 --------
@@ -139,3 +148,7 @@ Greater dyery
 Summon
 - Ajouter were creature, boogeyman, titan et FB
 - Retirer intelligent des clowns
+- Utiliser dfhack pour ajouter les summons dans les pets de la civ
+
+Interaction kiss
+- Male -> femle et vice versa
