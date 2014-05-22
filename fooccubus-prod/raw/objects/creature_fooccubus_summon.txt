@@ -329,11 +329,11 @@ creature_fooccubus
 			[TL_COLOR_MODIFIER:BLACK:1]
 				[TLCM_NOUN:eyes:PLURAL]
 
-[CREATURE:HELLHOUND2] // dogs
-	[DESCRIPTION:A medium sized vicious dog coming for the darkest pits. Courageous trainers can teach it various tasks.]
-	[NAME:hell hound:hell hounds:hell hounds]
-	[CASTE_NAME:hell hound:hell hounds:hell hound]
-	[CHILDNAME:hell hound pup:hell hounds pup:hell hound pup]
+[CREATURE:ORTHUS] // dogs
+	[DESCRIPTION:A medium sized vicious dog with two heads. Courageous trainers can teach it various tasks.]
+	[NAME:orthus:orthi:orthus]
+	[CASTE_NAME:orthus:orthi:orthus]
+	[CHILDNAME:orthus pup:orthis pup:orthus pup]
 	[CREATURE_TILE:'d'][COLOR:6:0:0]
 	[CREATURE_CLASS:GENERAL_POISON]
 	[CREATURE_CLASS:FOOCCUBUS]
@@ -347,7 +347,7 @@ creature_fooccubus
 	[TRAPAVOID]
 	[PRONE_TO_RAGE:10]
 	[BIOME:SUBTERRANEAN_CHASM]
-	[UNDERGROUND_DEPTH:5:5]
+	[UNDERGROUND_DEPTH:4:5]
 	[BONECARN]
 	[SPHERE:HUNTING]
 	[POPULATION_NUMBER:250:500]
@@ -358,12 +358,12 @@ creature_fooccubus
 	[PET_EXOTIC]
 	[TRAINABLE]
 	[PETVALUE:200]
-	[PREFSTRING:barks]
+	[PREFSTRING:twin heads]
 	[PREFSTRING:agressive behavior]
 	[SOUND:ALERT:100:1000:VOCALIZATION:bark:barks:a loud bark]
 	[SOUND:PEACEFUL_INTERMITTENT:25:10000:VOCALIZATION:grunt:grunts:a grunt]
 	[MAXAGE:100:125]
-	[BODY:QUADRUPED:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:OUTERBRAIN:BRAIN:SKULL:4TOES_FQ_REG:4TOES_RQ_REG:MOUTH:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE:TONGUE]
+	[BODY:QUADRUPED:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:OUTERBRAIN:BRAIN:SKULL:4TOES_FQ_REG:4TOES_RQ_REG:MOUTH:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE:TONGUE:HEAD]
 	[EXTRA_BUTCHER_OBJECT:BY_TYPE:THOUGHT][EBO_ITEM:PLANT:NONE:PLANT_MAT:SOUL:STRUCTURAL]
 	[BODYGLOSS:PAW]
 	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
@@ -418,10 +418,10 @@ creature_fooccubus
 	[CASTE:MALE]
 		[MALE]
 
-[CREATURE:NIGHTMARE2] // milkable + herd
-	[DESCRIPTION:A large hooved herbivore. These creatures are known to never tire, pursueing victims at great length before doing as they please.]
-	[NAME:nightmare:nightmares:nightmare]
-	[CASTE_NAME:nightmare:nightmares:nightmare]
+[CREATURE:CAUCHEMAR] // milkable + herd
+	[DESCRIPTION:A large hooved herbivore that is sometimes used as a steed by evil creatures. These creatures are known to never tire, pursueing victims at great length before doing as they please.]
+	[NAME:cauchemar:cauchemars:cauchemar]
+	[CASTE_NAME:cauchemar:cauchemars:cauchemar]
 	[CREATURE_TILE:'H'][COLOR:7:0:0]
 	[GLOWTILE:'"'][GLOWCOLOR:6:0:1]
 	[CREATURE_CLASS:GENERAL_POISON]
@@ -589,11 +589,11 @@ creature_fooccubus
 		[CDI:MAX_TARGET_NUMBER:E:20]
 		[CDI:WAIT_PERIOD:400]
 
-[CREATURE:BASILISK2] // metal + piercing + debuff breath
+[CREATURE:BASILISK_LESSER] // metal + piercing + debuff breath
 	[DESCRIPTION:A large, height legged, reptile that can breath poisonous vapors. Its particular diet for minerals allow it to grow a specific horn that can be sheared. The product can be then smelted into a lightweight but solid metal.]
-	[NAME:basilisk:basilisks:basilisk]
-	[CASTE_NAME:basilisk:basilisks:basilisk]
-	[CHILD:3][GENERAL_CHILD_NAME:basilisk hatchling:basilisk hatchlings:basilisk hatchling]
+	[NAME:lesser basilisk:lsser basilisks:lesser basilisk]
+	[CASTE_NAME:lesser basilisk:lesser basilisks:lesser basilisk]
+	[CHILD:3][GENERAL_CHILD_NAME:lesser basilisk hatchling:lesser basilisk hatchlings:lesser basilisk hatchling]
 	[CREATURE_TILE:'C'][COLOR:7:0:1]
 	[PETVALUE:750]
 	[CREATURE_CLASS:GENERAL_POISON]
