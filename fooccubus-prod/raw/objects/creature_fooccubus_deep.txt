@@ -55,7 +55,7 @@ creature_fooccubus_deep
 
 	// Body and description
 	[CREATURE_TILE:'&'][COLOR:4:0:0]
-	[GLOWTILE:'"'][GLOWCOLOR:6:0:1]
+	[GLOWTILE:82][GLOWCOLOR:0:14:0]
 	[CASTE:FEMALE]
 		[DESCRIPTION:A female lust demon dedicated to the worship of the ancient gods.]
 		[FEMALE]
