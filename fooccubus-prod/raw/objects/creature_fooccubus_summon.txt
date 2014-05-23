@@ -154,13 +154,14 @@ creature_fooccubus
 	[NO_DIZZINESS]
 	[CASTE:GENERIC]
 
-[CREATURE:SUMMONED_SOUL2] // dummy
+[CREATURE:SUMMONED_SOUL_FOOCCUBUS] // dummy
 	[DESCRIPTION:A new creature will be spawned here shortly.]
 	[NAME:summoned creature:summoned creatures:summoned creature]
 	[CASTE_NAME:summoned creature:summoned creatures:summoned creature]
 	[CREATURE_TILE:'*'][COLOR:4:0:1]
 	[NOT_BUTCHERABLE]
 	[ARENA_RESTRICTED]
+	[EVIL][CREATURE_CLASS:EVIL]
 	[ITEMCORPSE:PLANT:NONE:PLANT_MAT:SOUL]
 	[NO_EAT][NO_DRINK][NOSTUN][PARALYZEIMMUNE][NO_SLEEP][NOEXERT]
 	[PREFSTRING:exotic features]
@@ -182,10 +183,9 @@ creature_fooccubus
 	[BODY_SIZE:0:0:5000]
 	[ALL_ACTIVE]
 	[NO_DIZZINESS]
-	[CASTE:GENERIC]
 
-[CREATURE:SOUL_WISP2] // civilian buff
-	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people.]
+[CREATURE:SOUL_WISP] // civilian buff
+	[DESCRIPTION:A floating creature feeding on the thoughts of sleeping people. It is said that breaking one will put everyone around it to sleep.]
 	[NAME:soul wisp:soul wisps:soul wisp]
 	[CREATURE_TILE:'o'][COLOR:7:0:1]
 	[GLOWTILE:'`'][GLOWCOLOR:7:0:1]
@@ -193,9 +193,9 @@ creature_fooccubus
 	[CHILDNAME:immature soul wisp:immature soul wisps]
 	[CASTE_NAME:soul wisp:soul wisps:soul wisp]
 	[BIOME:SUBTERRANEAN_CHASM]
-	[UNDERGROUND_DEPTH:2:3]
-	[POPULATION_NUMBER:1:10]
-	[CREATURE_CLASS:FOOCCUBUS]
+	[UNDERGROUND_DEPTH:1:3]
+	[POPULATION_NUMBER:1:5]
+	[CREATURE_CLASS:FOOCCUBUS][CREATURE_CLASS:EVIL]
 	[EXTRAVISION]
 	[MUNDANE]
 	[LARGE_ROAMING]
@@ -226,7 +226,15 @@ creature_fooccubus
 	[TISSUE_LAYER:BY_CATEGORY:EYE:JELLY]
 	[BODY_SIZE:0:0:500]
 	[MAXAGE:10:15]
-	[ITEMCORPSE:BOULDER:NONE:INORGANIC:WISP_SMOKE2]
+	[ITEMCORPSE:BOULDER:NONE:INORGANIC:WISP_SMOKE]
+	[CAN_DO_INTERACTION:SOUL_WISP_EXPLOSION]
+		[CDI:ADV_NAME:explode]
+		[CDI:USAGE_HINT:ATTACK]
+		[CDI:VERB:explode:explodes:NA]
+		[CDI:TARGET:E:LINE_OF_SIGHT]
+		[CDI:TARGET_RANGE:E:3]
+		[CDI:MAX_TARGET_NUMBER:E:20]
+		[CDI:WAIT_PERIOD:5000]
 	[SET_TL_GROUP:BY_CATEGORY:ALL:JELLY]
 		[TL_COLOR_MODIFIER:WHITE:1:GRAY:1]
 		[TLCM_NOUN:light:SINGULAR]
@@ -235,6 +243,9 @@ creature_fooccubus
 		[CDI:TARGET:A:LINE_OF_SIGHT]
 		[CDI:TARGET_RANGE:A:10]
 		[CDI:WAIT_PERIOD:5000]
+	[CAN_DO_INTERACTION:MAKE_VAMPIRE] => to make them friendly to undead
+		[CDI:TARGET:A:SELF_ONLY]
+		[CDI:FREE_ACTION]
 
 [CREATURE:NAHASH] // eggs + vermin hunting
 	[DESCRIPTION:A medium-sized snake that displays more intelligence then its mundane cousins. Its can whisper simple sentences, tempting other creatures into protecting it.]
@@ -539,7 +550,7 @@ creature_fooccubus
 	[SELECT_MATERIAL:ALL]
 		[MULTIPLY_VALUE:2]
 
-[CREATURE:PAIN_ELEMENTAL2] // explosive suicidal bomber
+[CREATURE:PAIN_ELEMENTAL] // explosive suicidal bomber
 	[DESCRIPTION:A soul wisp that has been fed the thoughts of the suffering. It is very unstable and will explode if someone frighten it.]
 	[NAME:pain elemental:pain elementals:pain elemental]
 	[CHILD:1]
@@ -548,7 +559,7 @@ creature_fooccubus
 	[CREATURE_TILE:'o'][COLOR:6:0:1]
 	[GLOWTILE:'o'][GLOWCOLOR:6:0:1]
 	[EXTRAVISION]
-	[CREATURE_CLASS:FOOCCUBUS]
+	[CREATURE_CLASS:FOOCCUBUS][CREATURE_CLASS:EVIL]
 	[EVIL]
 	[NO_EAT]
 	[NO_DRINK]
@@ -558,7 +569,7 @@ creature_fooccubus
 	[PARALYZEIMMUNE]
 	[NOEXERT]
 	[PREFSTRING:warm glow]
-	[PREFSTRING:spectacular explosions]
+	[PREFSTRING:spectacular death]
 	[SOUND:ALERT:200:2000:VOCALIZATION:emit a chorus of painful cries:emit a chorus of painful cries:a chorus of painful cries]
 	[SOUND:PEACEFUL_INTERMITTENT:10:100:VOCALIZATION:emit a painful cry:emit a painful cry:a cry of pain]
 	[ALL_ACTIVE]
@@ -580,7 +591,7 @@ creature_fooccubus
 	[LIKES_FIGHTING]
 	[MAGMA_VISION]
 	[ITEMCORPSE:BOULDER:NONE:INORGANIC:WISP_SMOKE]
-	[CAN_DO_INTERACTION:PAIN_ELEMENTAL_EXPLOSION2]
+	[CAN_DO_INTERACTION:PAIN_ELEMENTAL_EXPLOSION]
 		[CDI:ADV_NAME:Explode]
 		[CDI:USAGE_HINT:ATTACK]
 		[CDI:VERB:explode:explodes:NA]
@@ -588,6 +599,10 @@ creature_fooccubus
 		[CDI:TARGET_RANGE:E:10]
 		[CDI:MAX_TARGET_NUMBER:E:20]
 		[CDI:WAIT_PERIOD:400]
+	[CASTE:GENERIC]
+		[CAN_DO_INTERACTION:MAKE_VAMPIRE] => to make them friendly to undead
+		[CDI:TARGET:A:SELF_ONLY]
+		[CDI:FREE_ACTION]
 
 [CREATURE:BASILISK_LESSER] // metal + piercing + debuff breath
 	[DESCRIPTION:A large, height legged, reptile that can breath poisonous vapors. Its particular diet for minerals allow it to grow a specific horn that can be sheared. The product can be then smelted into a lightweight but solid metal.]
