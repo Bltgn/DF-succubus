@@ -1,4 +1,14 @@
 # Succubus Dungeon : Changelog #
+7.0
++ Summoned creatures changes
+- Hellhounds are now orthi and have two heads.
+- Nightmares have been renamed to cauchemars.
+
++ Masterwork integration
+- Summoned grazzers will not get mad from eating evil plant.
+- Duplicate body parts have been removed.
+- Removed NSFW body parts, as those conflicts with the default body plan.
+
 6.4
 + Masterwork changes
 - The concubine secret is no longer a curse given by the gods.
