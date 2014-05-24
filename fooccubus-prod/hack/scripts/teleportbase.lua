@@ -4,6 +4,10 @@ events.enableEvent(events.eventType.BUILDING,100)
 events.onBuildingCreatedDestroyed.teleport=function(building_id)
 	bldg = df.building.find(building_id)
 	if bldg then
+
+		-- Building validation : Must be a furnace
+		if not df.building_furnacest:is_instance(bldg) then return end
+
 		all_bldgs = df.global.world.raws.buildings.all
 		btype = bldg.custom_type
 		if btype < 0 then return end
