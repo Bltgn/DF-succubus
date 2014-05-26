@@ -1,17 +1,10 @@
 7.0
 ---
 
-Tester le corps en mode nsfw
-- Supprimer neutral
-- Attack lick using tongue
-
-Refaire metallurgiste
-
 Building
 - Devil deal
 	- mirrorer
 - archeologist (le refaire)
-- Flesh shaper > Tanner dwarf (et tous les upgrades) + make leather whip
 - Soul well, trap soul in glass (ou trouver ce qui ne va pas)
 
 Creatures
@@ -31,23 +24,10 @@ Glassforge
 Gemforge
 - Gem corset + pitchfork
 
-Mineral oil
-
 Summon
 - hellhound mw
 - nightmare mw
 - basilisk mw
-
-Items
-- Nouvelle armure de cuir en under (bodysuit en 2 items)
-
-Fixes
-- Warlock teleport
-- fovcommand (update reactions, remove les 2 scripts)
-
-Defiler
-- Reforge breastplate
-- Reforge shield
 
 A produire
  - Warlock codex
@@ -58,12 +38,6 @@ Réarranger les buildings
 
 Tout passer dans vanilla
 
-Plant
-- Monter le prix des bloodworms
-- Bloodworms en evil only
-
-Tout importer dans vanilla
-
 7.1
 ---
 
@@ -71,8 +45,25 @@ Jobs
 - Faire de nouveaux sprites
 - Adapter les réactions à ces jobs
 
+Pets
+- Retirer cave animals
+- Ajouter un script de pets
+df.global.world.entities.all[X].resources.animals.pet_races
+df.global.world.entities.all[X].resources.animals.pet_castes
+But I have never tried adding or subtracting available pets and such, I have no idea if it would work.
+There is also wagon_races, pack_animal_races, wagon_puller_races, mount_races, minion_races, and exotic_pet_races.
+
+Bugfix
+- Summon > maj liste des animaux
+- Warlock teleport
+- fovcommand (update reactions, remove les 2 scripts)
+
 Sans tag
 --------
+
+Mineral oil
+
+- Attack lick using tongue
 
 Workshops
 - poison
@@ -85,6 +76,14 @@ Workshops
 - demon attorney
 - dollhouse
 - animal care
+- Flesh shaper > Tanner dwarf (et tous les upgrades) + make leather whip
+
+Items
+- Nouvelle armure de cuir en under (bodysuit en 2 items)
+
+Defiler
+- Reforge breastplate
+- Reforge shield
 
 GUI
 - Plugin pour afficher des détails des réactions + help en txt
