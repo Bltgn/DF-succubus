@@ -2,34 +2,6 @@ descriptor_color_fooccubus
 
 [OBJECT:DESCRIPTOR_COLOR]
 
-[COLOR:BREAST_PLUMP]
-	[NAME:plump]
-	[RGB:255:0:0]
-
-[COLOR:BREAST_PERKY]
-	[NAME:perky]
-	[RGB:255:0:0]
-
-[COLOR:BREAST_BOUNCY]
-	[NAME:bouncy]
-	[RGB:255:0:0]
-
-[COLOR:BREAST_SUPPLE]
-	[NAME:supple]
-	[RGB:255:0:0]
-
-[COLOR:BREAST_VOLUPTOUS]
-	[NAME:voluptous]
-	[RGB:255:0:0]
-
-[COLOR:BREAST_SENSUAL]
-	[NAME:sensual]
-	[RGB:255:0:0]
-
-[COLOR:BREAST_SPRINGY]
-	[NAME:springy]
-	[RGB:255:0:0]
-
 [COLOR:WING_LEATHERY]
 	[NAME:leathery]
 	[RGB:255:0:0]
@@ -40,7 +12,7 @@ descriptor_color_fooccubus
 
 [COLOR:WING_FLOWING]
 	[NAME:flowing]
-	[RGB:255:0:0]	
+	[RGB:255:0:0]
 
 [COLOR:WING_SPIKY]
 	[NAME:spiky]
@@ -80,52 +52,4 @@ descriptor_color_fooccubus
 
 [COLOR:PART_FIRM]
 	[NAME:firm]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_WELLSHAPED]
-	[NAME:well-shaped]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_LARGE]
-	[NAME:big]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_TIGHT]
-	[NAME:tight]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_ROUND]
-	[NAME:round]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_GRACEFUL]
-	[NAME:graceful]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_LUSH]
-	[NAME:lush]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_CHUNKY]
-	[NAME:chunky]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_CALIPYGIAN]
-	[NAME:callipygian]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_SLENDER]
-	[NAME:slender]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_SHAPELY]
-	[NAME:shapely]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_TONED]
-	[NAME:toned]
-	[RGB:255:0:0]
-
-[COLOR:BUTT_CHISELED]
-	[NAME:chiseled]
 	[RGB:255:0:0]

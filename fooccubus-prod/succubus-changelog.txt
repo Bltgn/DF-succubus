@@ -3,11 +3,14 @@
 + Summoned creatures changes
 - Hellhounds are now orthi and have two heads.
 - Nightmares have been renamed to cauchemars.
+- Basilisks have been renamed lesser basilisk
 
 + Masterwork integration
 - Summoned grazzers will not get mad from eating evil plant.
-- Duplicate body parts have been removed.
-- Removed NSFW body parts, as those conflicts with the default body plan.
+- NSFW parts have been completely removed.
+
++ Other changes
+- Renamed concubines to courtesans
 
 6.4
 + Masterwork changes
