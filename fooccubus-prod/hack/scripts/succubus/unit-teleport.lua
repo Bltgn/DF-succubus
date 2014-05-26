@@ -52,7 +52,7 @@ function findLos(unitSource)
 	for i = #unitList - 1, 0, -1 do
 		unitTarget = unitList[i]
 		if isSelected(unitTarget, view) then
-			dfhack.run_script('teleport', 'unit', unitTarget.id, 'x', unitSource.pos.x, 'y', unitSource.pos.y, 'z', unitSource.pos.z)
+			dfhack.run_script('teleportunit', 'unit', unitTarget.id, 'x', unitSource.pos.x, 'y', unitSource.pos.y, 'z', unitSource.pos.z)
 			return true
 		end
 	end
