@@ -10,7 +10,8 @@
 - NSFW parts have been completely removed.
 
 + Other changes
-- Renamed concubines to courtesans
+- Renamed concubines to courtesans.
+- You can now trap soul in cut green glass.
 
 6.4
 + Masterwork changes

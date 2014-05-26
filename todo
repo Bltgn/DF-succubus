@@ -1,38 +1,8 @@
 7.0
 ---
 
-Building
-- Devil deal
-	- mirrorer
-- archeologist (le refaire)
-- Soul well, trap soul in glass (ou trouver ce qui ne va pas)
-
 Creatures
-- basilisk mw > add horn et basiliskine
-- cerberus > dans mw ?
 - cauchemar > revoir les reagents
-
-Attorney
-- Fabriquer ces machins
-- Réactions echanges
-- Recherche glassforge
-
-Glassforge
-- Glass corset
-- Pitchfork
-
-Gemforge
-- Gem corset + pitchfork
-
-Summon
-- hellhound mw
-- nightmare mw
-- basilisk mw
-
-A produire
-- Warlock codex
-- Des roses eternelles
-- Leather whip
 
 Réarranger les buildings
 
@@ -61,6 +31,11 @@ Bugfix
 Sans tag
 --------
 
+A produire
+- Warlock codex
+- Des roses eternelles
+- Leather whip
+
 Color: figure, face, etc.
 
 Mineral oil
@@ -79,6 +54,9 @@ Workshops
 - dollhouse
 - animal care
 - Flesh shaper > Tanner dwarf (et tous les upgrades) + make leather whip
+- archeologist (le refaire)*
+- Attorney : Fabriquer ces machins et mirroir
+- Devil deal
 
 Items
 - Nouvelle armure de cuir en under (bodysuit en 2 items)
@@ -129,18 +107,22 @@ Summon
 + rose : body, reagent, sprites, throw spines
 + Cat sidhe : Soul eating? Luck et bad luck.
 + Chesire cat : Ambusher
+- hellhound mw
+- nightmare mw
+- basilisk mw
+- basilisk mw > add horn et basiliskine
+- cerberus > dans mw ?
 
 Pouvoirs
 - Lust, add a lover
 - Devour soul, reduce hunger
-- Dimanesion pull, selon la valeur du craft
+- Dimension pull, selon la valeur du craft
 
 Greater dyery
 
 Summon
 - Ajouter were creature, boogeyman, titan et FB
 - Retirer intelligent des clowns
-- Utiliser dfhack pour ajouter les summons dans les pets de la civ
 
 Interaction kiss
-- Male -> femle et vice versa
+- Male -> female et vice versa
