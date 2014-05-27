@@ -1,11 +1,13 @@
 # Succubus Dungeon : Changelog #
-7.0
+7.0 - Masterwork
++ Masterwork buildings
+
 + Summoned creatures changes
 - Hellhounds are now orthi and have two heads.
 - Nightmares have been renamed to cauchemars.
 - Basilisks have been renamed lesser basilisk
 
-+ Masterwork integration
++ Masterwork changes
 - Summoned grazzers will not get mad from eating evil plant.
 - NSFW parts have been completely removed.
 
