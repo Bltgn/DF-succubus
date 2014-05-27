@@ -64,6 +64,6 @@ if isBerserk(unit) then
 		syndrome = 'FOOCCUBUS_BERSERK_3'
 	end
 
-	dfhack.run_script('addsyndrome', syndrome, unit.id)
+	dfhack.run_script('addsyndrome2', syndrome, unit.id)
 	if debug then print('- Apply '..syndrome) end
 end

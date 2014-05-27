@@ -72,7 +72,7 @@ if hasSyndrome(unit) then
 	end
 
 	if syndrome then
-		dfhack.run_script('addsyndrome', syndrome, unit.id)
+		dfhack.run_script('addsyndrome2', syndrome, unit.id)
 		if debug then print('- Apply '..syndrome) end
 	else
 		if debug then print('- Happiness is too low, no syndrome') end

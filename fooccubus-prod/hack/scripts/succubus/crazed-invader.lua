@@ -26,5 +26,5 @@ if #invaders == 0 then qerror('crazed-invaders : No invader found.') end
 
 for i = 0, rating(unit) do
 	targetId = invaders[math.random(1, #invaders)]
-	dfhack.run_script('addsyndrome', 'SYNDROME_BERSERK', targetId)
+	dfhack.run_script('addsyndrome2', 'SYNDROME_BERSERK', targetId)
 end
