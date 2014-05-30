@@ -1,22 +1,19 @@
 7.0
 ---
 
-Creatures
-- cauchemar > revoir les reagents
-
 Tout passer dans vanilla
 
 Tester
 - Construire gemforge
 + Tester sawmill
 + Tester slaughterhouse
-- Rat thing dans arena -> teleport
 - Installer fountain armok
 - Construire eternal rose, tester reactions
 + Construire metallurgist
 - Pas de cauchemar à l'embark ? Et dans les caravans ?
 - Pas de display case ?
 + Retester berserk et excitation
+- Les fouets ont ils été nerfés.
 
 Reactions
 - Gem pitchfork / corset
@@ -24,29 +21,34 @@ Reactions
 - Crystalizer soul glass
 - Eternal rose
 - Metallurgist
-- attorney
++ attorney (fixer craft)
 
-! Refaire eternal rose
-! Floating glass dans furnaces
-! Rien dans clay oven ?
-! Ajouter sawblade (serrated disc)
-! Renommer addsyndrome ->  Retester excitation et berserk
++ Refaire eternal rose
++ Floating glass dans furnaces
++ Rien dans clay oven ?
++ Ajouter sawblade (serrated disc)
++ Renommer addsyndrome ->  Retester excitation et berserk
 
 Changer les raccourcis
-! Furnace : fountains of blood/bones, metallurgist
++ Furnace : fountains of blood/bones, metallurgist
 
-! Metallurgiste, construire
++ Metallurgiste, construire
 
 Ajouter un 4 eme profil religieux
-
+- Le replacer dans le nouveau embark_profile
 Ajouter pottery
+Ajouter well of magma
+Ajouter leather bodysuit
+Ajouter heat stone
 
-rendermax
-soul gem en rose merci
++ rendermax
++ soul gem en rose merci
 
 Sprite : orthus
 
 Maj les noms de positions
+
+Changelog
 
 7.1
 ---
@@ -97,6 +99,7 @@ Workshops
 - archeologist (le refaire)*
 - Attorney : Fabriquer ces machins et mirroir
 - Devil deal
+- Greater dyery
 
 Items
 - Nouvelle armure de cuir en under (bodysuit en 2 items)
@@ -158,11 +161,15 @@ Pouvoirs
 - Devour soul, reduce hunger
 - Dimension pull, selon la valeur du craft
 
-Greater dyery
-
 Summon
 - Ajouter were creature, boogeyman, titan et FB
 - Retirer intelligent des clowns
 
 Interaction kiss
 - Male -> female et vice versa
+
+Chauffer la forge
+- Une réaction produit des hot stone temporaires.
+- Pouse la succube à aller dormir.
+
+Magma well
