@@ -416,7 +416,7 @@ interaction_fooccubus
 				[CDI:TARGET_RANGE:A:10]
 				[CDI:MAX_TARGET_NUMBER:A:10]
 				[CDI:WAIT_PERIOD:400]
-				[CDI:VERB:strike a gracious pose:strikes a gracious pose:NA]
+				[CDI:VERB:strike a suggestive pose:strikes a suggestive pose:NA]
 				[CDI:TARGET_VERB:is mesmerized:is mesmerized:NA]
 
 [INTERACTION:FOOCCUBUS_CARESS] // Buff friendly

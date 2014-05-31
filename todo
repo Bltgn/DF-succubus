@@ -1,8 +1,6 @@
 7.0
 ---
 
-Nettoyer, maj par rapport à 5.01
-
 Tout passer dans vanilla
 
 Tester
@@ -39,8 +37,10 @@ Ajouter un 4 eme profil religieux
 - Le replacer dans le nouveau embark_profile
 Ajouter pottery
 Ajouter well of magma
-Ajouter leather bodysuit
-Ajouter heat stone
+> Ajouter leather bodysuit
+> Ajouter heat stone
+Ajouter un temple
+Refaire soul forge (moche), esoteric order, abyssal temple
 
 Summon grave cat ?
 
@@ -56,6 +56,17 @@ Changelog
 Remettre les colors nsfw
 
 Morsure de vermin evil, immunizer voire booster
+
+Temples
++ Ajouter architect
++ Déplacer protective tentacles de temple of sin
++ Ajouter des side effects à nightmare, abyss itou.
++ revoir les pouvoirs par 7 sins
+
+Manuel
+------
+
+Building, relinker les images
 
 7.1
 ---
@@ -79,6 +90,8 @@ Bugfix
 
 Sans tag
 --------
+
+Nightmare : Une réaction par race
 
 A produire
 - Warlock codex
