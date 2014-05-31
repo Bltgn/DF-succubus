@@ -1,6 +1,8 @@
 7.0
 ---
 
+Nettoyer, maj par rapport à 5.01
+
 Tout passer dans vanilla
 
 Tester
@@ -40,6 +42,8 @@ Ajouter well of magma
 Ajouter leather bodysuit
 Ajouter heat stone
 
+Summon grave cat ?
+
 + rendermax
 + soul gem en rose merci
 
@@ -48,6 +52,10 @@ Sprite : orthus
 Maj les noms de positions
 
 Changelog
+
+Remettre les colors nsfw
+
+Morsure de vermin evil, immunizer voire booster
 
 7.1
 ---
@@ -82,6 +90,9 @@ Color: figure, face, etc.
 Mineral oil
 
 - Attack lick using tongue
+
+Gluttony
+- Transformer souls en dirnk/meals
 
 Workshops
 - poison
