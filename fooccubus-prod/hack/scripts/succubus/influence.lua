@@ -35,7 +35,7 @@ local function pride(unit)
 end
 
 -- Gain cooking/brewing skills, makes fatter, empties stomach and add hunger + thirst
-local function gluttonry(unit)
+local function gluttony(unit)
 	dfhack.run_script('trainskill', unit.id, 'BREWING', 5)
 	dfhack.run_script('trainskill', unit.id, 'COOK', 5)
 	unit.counters2.stored_fat = unit.counters2.stored_fat * 1.4
@@ -53,16 +53,25 @@ local function envy(unit)
 	unit.status.current_soul.traits.ANXIETY = math.min(100, unit.status.current_soul.traits.ANXIETY + 10)
 end
 
+-- Chance to have a siege TODO personnality
+local function greed(unit)
+	dfhack.run_script('succubus/callsiege', 5)
+end
+
 if domain == 'wrath' then
 	wrath(unit)
 elseif domain == 'lust' then
 	lust(unit)
-elseif domain == 'gluttonry' then
-	gluttonry(unit)
+elseif domain == 'gluttony' then
+	gluttony(unit)
 elseif domain == 'envy' then
 	envy(unit)
 elseif domain == 'pride' then
 	pride(unit)
+elseif domain == 'sloth' then
+	-- todo
+elseif domain == 'greed' then
+	greed(unit)
 else
-	qerror('Influence: Wrong domain entered')
+	print('Influence: Wrong domain entered')
 end

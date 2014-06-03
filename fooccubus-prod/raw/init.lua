@@ -6,7 +6,7 @@ function isFooccubus()
 
 	for k, entity in pairs(df.global.world.entities.all) do
 		if entity.id == df.global.ui.civ_id then
-			return entity.entity_raw.code == 'CULT' or entity.entity_raw.code == 'DECADENCE'
+			return entity.entity_raw.code == 'DECADENCE'
 		end
 	end
 
@@ -21,6 +21,7 @@ function onStateChange(sc)
 		print('Map loaded')
 		if isFooccubus() then
 			dfhack.run_script('fixnakedregular')
+			print('fixnakedregular: started')
 		end
 
 	end
