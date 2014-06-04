@@ -19,7 +19,7 @@ function happiness(unit)
 	if happiness > 150 then return 5
 	elseif happiness > 124 then return 4
 	elseif happiness > 75 then return 3
-	elseif happiness < 26 then return 2
+	elseif happiness > 26 then return 2
 	else return 1 end
 end
 

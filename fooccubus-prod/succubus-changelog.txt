@@ -1,4 +1,10 @@
 # Succubus Dungeon : Changelog #
+7.2
+- Provoke a siege now work again.
+- Excitation should have less effect on unhappy succubi.
+- Manual: Fixed a few typos in the buildings and tricks, added materials.
+- Removed the fixnaked spam from the terminal, it will only display once.
+
 7.0 - Masterwork
 + New buildings
 - Attorney's stock, allow to trade with warlocks, using souls as currency.
@@ -11,14 +17,11 @@
 - Nightmares have been renamed to cauchemars.
 - Basilisks have been renamed lesser basilisk
 
-+ Masterwork changes
-- Summoned grazzers will not get mad from eating evil plant.
-- NSFW parts have been completely removed.
-
 + Other changes
 - You can now make large serrated discs.
 - Renamed concubines to courtesans.
 - You can now trap soul in cut green glass.
+- Summoned grazers will not get mad from eating evil plant.
 - Portal teleport should be working again.
 - The royalist civ now have access to the deep summoning rituals.
 - There is now two jobs allowing to crystalize souls, one using gems and another using cut green glass.

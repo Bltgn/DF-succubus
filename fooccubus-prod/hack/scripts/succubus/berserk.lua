@@ -18,7 +18,7 @@ function unhappiness(unit)
 
 	if happiness == 0 then return 5
 	elseif happiness < 26 then return 4
-	elseif happiness <  51 then return 3
+	elseif happiness < 51 then return 3
 	elseif happiness < 75 then return 2
 	else return 1 end
 end

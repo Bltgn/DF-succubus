@@ -40,7 +40,7 @@ descriptor_color_fooccubus
 
 [COLOR:WING_FLOWING]
 	[NAME:flowing]
-	[RGB:255:0:0]
+	[RGB:255:0:0]	
 
 [COLOR:WING_SPIKY]
 	[NAME:spiky]

@@ -4,22 +4,21 @@
 Tout passer dans vanilla
 
 Tester
-- Construire gemforge
++ Construire gemforge
 + Tester sawmill
 + Tester slaughterhouse
 - Installer fountain armok
-- Construire eternal rose, tester reactions
 + Construire metallurgist
 - Pas de display case ?
 + Retester berserk et excitation
-- Les fouets ont ils été nerfés.
++ Les fouets ont ils été nerfés?
 
 Reactions
-- Gem pitchfork / corset
-- Glass pitchfork / corset
-- Crystalizer soul glass
-- Eternal rose
-- Metallurgist
++ Gem pitchfork / corset
++ Glass pitchfork / corset
++ Crystalizer soul glass
++ Eternal rose
++ Metallurgist
 + attorney (fixer craft)
 
 + Refaire eternal rose
@@ -27,33 +26,28 @@ Reactions
 + Rien dans clay oven ?
 + Ajouter sawblade (serrated disc)
 + Renommer addsyndrome ->  Retester excitation et berserk
++ Ajouter pottery
 
 Changer les raccourcis
 + Furnace : fountains of blood/bones, metallurgist
 
 + Metallurgiste, construire
 
-Ajouter un 4 eme profil religieux
-- Le replacer dans le nouveau embark_profile
-Ajouter pottery
 Ajouter well of magma
-> Ajouter leather bodysuit
-> Ajouter heat stone
 Ajouter un temple
 Refaire soul forge (moche), esoteric order, abyssal temple
 
-Summon grave cat ?
-
-+ rendermax
 + soul gem en rose merci
 
 Raccourci soul lantern
 Vérifier que l'on puisse contruire les illuminations
 Ajouter fireplace
+Ajouter architecture aux temples
 
 Sprite : orthus
 
 Maj les noms de positions
+Retirer skyborn
 
 Changelog
 
@@ -63,6 +57,12 @@ Temples
 + Ajouter architect
 
 Weather rain cassé
+
+Crafter
++ Ajouter des réactions pour les crafts
+
+Mettre à jour summon
+Reaction fountain drink blood
 
 Manuel
 ------
@@ -76,18 +76,13 @@ Jobs
 - Faire de nouveaux sprites
 - Adapter les réactions à ces jobs
 
-Pets
-- Retirer cave animals
-- Ajouter un script de pets
-df.global.world.entities.all[X].resources.animals.pet_races
-df.global.world.entities.all[X].resources.animals.pet_castes
-But I have never tried adding or subtracting available pets and such, I have no idea if it would work.
-There is also wagon_races, pack_animal_races, wagon_puller_races, mount_races, minion_races, and exotic_pet_races.
-
 Bugfix
 - Summon > maj liste des animaux
 - Warlock teleport
 - fovcommand (update reactions, remove les 2 scripts)
+
+> Ajouter leather bodysuit
+> Ajouter heat stone
 
 Sans tag
 --------
