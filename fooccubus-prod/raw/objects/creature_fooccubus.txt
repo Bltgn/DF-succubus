@@ -165,22 +165,6 @@ creature_fooccubus
 		[CASTE_NAME:fireborn incubus:fireborn incubi:fireborn incubus]
 		[DESCRIPTION:A male lust demon of hedonistic interests. This incubus is unaffected by fire and lava and can manipulate both with his bare hands.]
 
-	[USE_CASTE:FLIER_FEMALE:FEMALE]
-	[USE_CASTE:FLIER_MALE:MALE]
-
-	[SELECT_CASTE:FLIER_FEMALE]
-	[SELECT_ADDITIONAL_CASTE:FLIER_MALE]
-		[POP_RATIO:10]
-		[CASTE_NAME:skyborn succubus:skyborn succubus:skyborn succubus]
-		[DESCRIPTION:A female lust demon of hedonistic interests. Her wings grew larger and stronger, allowing her to fly.]
-		[FLIER]
-		[RELSIZE:BY_CATEGORY:WING:300]
-		[PHYS_ATT_RANGE:ENDURANCE:400:800:900:1000:1000:1100:1500] // Better lower endurance
-	[SELECT_CASTE:FLIER_MALE]
-		[POP_RATIO:1]
-		[CASTE_NAME:skyborn incubus:skyborn incubi:skyborn incubus]
-		[DESCRIPTION:A male lust demon of hedonistic interests. His wings grew larger and stronger, allowing him to fly.]
-
 	// Body plan
 	[SELECT_CASTE:ALL]
 	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]

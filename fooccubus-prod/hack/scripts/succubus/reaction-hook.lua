@@ -109,8 +109,7 @@ eventful.onReactionComplete.fooccubusReaction = function(reaction, unit, input_i
 		dfhack.gui.showAnnouncement('The sky darkens and fireballs strikes the earth.', COLOR_YELLOW)
 
 	-- lust
-	elseif reaction.code == 'LUA_HOOK_FOOCCUBUS_UPGRADE_FLIER' or
-		reaction.code == 'LUA_HOOK_FOOCCUBUS_UPGRADE_EXCITATION' or
+	elseif reaction.code == 'LUA_HOOK_FOOCCUBUS_UPGRADE_EXCITATION' or
 		reaction.code == 'LUA_HOOK_FOOCCUBUS_UPGRADE_LUST_SECRET' or
 		reaction.code == 'LUA_HOOK_FOCCUBUS_UPGRADE_ABYSSAL_GAZE'
 	then

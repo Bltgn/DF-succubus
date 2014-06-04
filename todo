@@ -1,9 +1,7 @@
-7.0
----
-
-Tout passer dans vanilla
-
 Tester
+------
+
+Buildings
 + Construire gemforge
 + Tester sawmill
 + Tester slaughterhouse
@@ -12,65 +10,54 @@ Tester
 - Pas de display case ?
 + Retester berserk et excitation
 + Les fouets ont ils été nerfés?
++ Metallurgiste, construire
 
 Reactions
 + Gem pitchfork / corset
 + Glass pitchfork / corset
-+ Crystalizer soul glass
 + Eternal rose
 + Metallurgist
 + attorney (fixer craft)
-
 + Refaire eternal rose
 + Floating glass dans furnaces
 + Rien dans clay oven ?
 + Ajouter sawblade (serrated disc)
 + Renommer addsyndrome ->  Retester excitation et berserk
 + Ajouter pottery
-
-Changer les raccourcis
 + Furnace : fountains of blood/bones, metallurgist
+- Weather rain cassé
 
-+ Metallurgiste, construire
-
-Ajouter well of magma
-Ajouter un temple
-Refaire soul forge (moche), esoteric order, abyssal temple
-
+Autres
 + soul gem en rose merci
 
-Raccourci soul lantern
+- Fireborn > mort ?
+
+7.1
+---
 Vérifier que l'on puisse contruire les illuminations
 Ajouter fireplace
 Ajouter architecture aux temples
 
-Sprite : orthus
-
-Maj les noms de positions
-Retirer skyborn
-
-Changelog
-
-Morsure de vermin evil, immunizer voire booster
-
 Temples
 + Ajouter architect
+Maj les noms de positions
 
-Weather rain cassé
+Refaire soul forge (moche), esoteric order, abyssal temple
 
 Crafter
 + Ajouter des réactions pour les crafts
 
-Mettre à jour summon
-Reaction fountain drink blood
+Rapatrier corrupt
+- Les castes
+- Les réactions dans den
+- Supprimer torture chamber
+- Supprimer charm prisonner
 
-Manuel
-------
-
-Building, relinker les images
-
-7.1
+7.2
 ---
+Ajouter well of magma
+
+Sprite : orthus
 
 Jobs
 - Faire de nouveaux sprites
@@ -81,13 +68,28 @@ Bugfix
 - Warlock teleport
 - fovcommand (update reactions, remove les 2 scripts)
 
-> Ajouter leather bodysuit
-> Ajouter heat stone
+Ajouter leather bodysuit
+Ajouter heat stone
+
+Mettre à jour summon
+Reaction fountain drink blood
+
+8.0
+---
+
+Tout passer dans vanilla
+
+Manuel
+------
+
+Building, relinker les images
 
 Sans tag
 --------
 
-Nightmare : Une réaction par race
+Morsure de vermin evil, immunizer voire booster
+
+Altar of Nightmare : Une réaction par race
 
 A produire
 - Warlock codex
@@ -97,8 +99,6 @@ A produire
 Color: figure, face, etc.
 
 Mineral oil
-
-- Attack lick using tongue
 
 Gluttony
 - Transformer souls en dirnk/meals
@@ -151,11 +151,6 @@ Créer une météo spéciale pour les zones evil
 Creatures
 + Ajouter les succubi sauvages, mettre dans HFS
 + Transformer en sauvage en cas de folie
-+ Ajouter un effet cave adapt pour les deep
-
-+ Test
-Instruments reageants dans accelerated
-Charm minotaur
 
 + FIXME!
 Soul wisp doit pouvoir bruler
@@ -177,7 +172,6 @@ Summon
 
 Pouvoirs
 - Lust, add a lover
-- Devour soul, reduce hunger
 - Dimension pull, selon la valeur du craft
 
 Summon

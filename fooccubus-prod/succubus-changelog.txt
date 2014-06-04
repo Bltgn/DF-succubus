@@ -1,9 +1,15 @@
 # Succubus Dungeon : Changelog #
 7.2
-- Provoke a siege now work again.
+Position changes
+- Renamed librarian to keeper of secrets.
+- Renamed warlord to lady of pain.
+
+- Provoking a siege now work again.
 - Excitation should have less effect on unhappy succubi.
-- Manual: Fixed a few typos in the buildings and tricks, added materials.
-- Removed the fixnaked spam from the terminal, it will only display once.
+- Manual update: Fixed a few typos in the buildings and tricks, added materials.
+- Removed the fixnaked spam from the terminal.
+- Removed the flier upgrade and caste, it caused too many pathing issues.
+- Replaced the instrument choice with Harp, Oboe and Ocarina (the original suggestion from Meph).
 
 7.0 - Masterwork
 + New buildings
