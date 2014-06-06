@@ -54,4 +54,3 @@ end
 
 fixnaked()
 dfhack.timeout(7, 'days', function() dfhack.run_script('fixnakedregular') end)
-print('fixnakedregular: started')

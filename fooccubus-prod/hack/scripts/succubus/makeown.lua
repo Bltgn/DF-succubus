@@ -1,4 +1,4 @@
--- Sets the units within line of sight of the unit
+-- Sets the units within line of sight of the unit as non hostiles and members of your civ.
 --[[
 
 	This script is called by the conversion dens.
@@ -52,8 +52,8 @@ end
 function clearEnemy(unit)
 	hf = utils.binsearch(df.global.world.history.figures, unit.hist_figure_id, 'id')
 	for k, v in ipairs(hf.entity_links) do
-		if df.histfig_entity_link_enemyst:is_instance(v) and 
-			(v.entity_id == df.global.ui.civ_id or v.entity_id == df.global.ui.group_id) 
+		if df.histfig_entity_link_enemyst:is_instance(v) and
+			(v.entity_id == df.global.ui.civ_id or v.entity_id == df.global.ui.group_id)
 		then
 			newLink = df.histfig_entity_link_former_prisonerst:new()
 			newLink.entity_id = v.entity_id
@@ -110,10 +110,23 @@ if not unit then qerror('Unit not found.') end
 
 -- Return the set of affected units
 if not args[2] then qerror('Please enter a creature set.') end
-if args[2] == 'invaders-deep' then
-	creatureSet = {['HUMAN'] = true, ['KOBOLD'] = true, ['ELF'] = true, ['DWARF'] = true, ['GOBLIN'] = true, ['FOOCCUBUS'] = true}
-elseif args[2] == 'invaders' then
-	creatureSet = {['HUMAN'] = true, ['KOBOLD'] = true, ['ELF'] = true, ['DWARF'] = true, ['GOBLIN'] = true, ['FOOCCUBUS_DEEP'] = true}
+if args[2] == 'succubus' then
+	creatureSet = {
+		['DWARF'] = true,
+		['HUMAN'] = true,
+		['ELF'] = true,
+		['GOBLIN'] = true,
+		['DROW'] = true,
+		['KOBOLD'] = true,
+		['KOBOLD_CAMP'] = true,
+		['ORC'] = true,
+		['ORC_TAIGA'] = true,
+		['GNOME_CIV'] = true,
+		['TROGLODYTE'] = true,
+		['GREMLIN'] = true,
+		['FROST_GIANT'] = true,
+		['WARLOCK_CIV'] = true
+	}
 elseif args[2] == 'minotaur' then
 	creatureSet = {['MINOTAUR'] = true}
 else

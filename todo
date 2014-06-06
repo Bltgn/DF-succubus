@@ -8,7 +8,6 @@ Buildings
 - Installer fountain armok
 + Construire metallurgist
 - Pas de display case ?
-+ Retester berserk et excitation
 + Les fouets ont ils été nerfés?
 + Metallurgiste, construire
 
@@ -27,34 +26,25 @@ Reactions
 + Furnace : fountains of blood/bones, metallurgist
 - Weather rain cassé
 
-Autres
-+ soul gem en rose merci
-
-- Fireborn > mort ?
-
 7.1
 ---
-Vérifier que l'on puisse contruire les illuminations
-Ajouter fireplace
-Ajouter architecture aux temples
+maj decoration
++ Vérifier que l'on puisse contruire les illuminations
 
-Temples
-+ Ajouter architect
-Maj les noms de positions
 
-Refaire soul forge (moche), esoteric order, abyssal temple
+Nerfer hellhound
++ Vérif les nouveaux reagents
 
-Crafter
-+ Ajouter des réactions pour les crafts
-
-Rapatrier corrupt
-- Les castes
-- Les réactions dans den
-- Supprimer torture chamber
-- Supprimer charm prisonner
 
 7.2
 ---
+
+Vérifier spawnunit
+- MAJ
+- Mode tame par nom de réaction
+- Tame par appel spawunit
+- Corriger la bug de la liste animals
+
 Ajouter well of magma
 
 Sprite : orthus
@@ -74,6 +64,7 @@ Ajouter heat stone
 Mettre à jour summon
 Reaction fountain drink blood
 
+Nettoyer les catégories > vérifier quelles soient bien marquée quand construites
 8.0
 ---
 
