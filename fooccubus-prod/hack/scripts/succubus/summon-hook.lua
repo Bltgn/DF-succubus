@@ -58,6 +58,7 @@ local function cancelReaction(reaction, unit, input_reagents, message)
 	--unit.job.current_job.flags.suspend = true
 end
 
+-- SUmmon a randomly generated clown, if there isn't any, save the reagents.
 local function summonHfs(reaction, unit, input_items, input_reagents, output_items, call_native)
 	local selection
 	local key = 1
@@ -77,8 +78,8 @@ local function summonHfs(reaction, unit, input_items, input_reagents, output_ite
 	end
 
 	selection = math.random(1, #demonId)
-	dfhack.run_script('succubus/summoning', unit.id, demonId[selection], 1)
-
+	dfhack.run_script('succubus/summoning', unit.id, demonId[selection])
+	dfhack.run_script('succubus/fovunsentient', unit.id, demonId[selection])
 end
 
 eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_items, input_reagents, output_items, call_native)
@@ -88,10 +89,11 @@ eventful.onReactionComplete.fooccubusSummon = function(reaction, unit, input_ite
 	if reaction.code == 'LUA_HOOK_SUMMON_HFS' then
 		summonHfs(reaction, unit, input_items, input_reagents, output_items, call_native)
 	elseif reaction.code:find('_SUMMON_') then
-		creatureId = string.sub(reaction.code, 17)
-
-		if creatureId == 'NAHASH' or creatureId == 'SOUL_WISP' or creatureId == 'RAT_THING' then
+		if(reaction.code:find('_SUMMON_TAME_')) then
 			tame = 1
+			creatureId = string.sub(reaction.code, 22)
+		else
+			creatureId = string.sub(reaction.code, 17)
 		end
 
 		dfhack.run_script('succubus/summoning', unit.id, creatureId, tame)

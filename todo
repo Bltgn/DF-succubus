@@ -1,14 +1,10 @@
 Tester
 ------
-
 Buildings
 + Construire gemforge
 + Tester sawmill
 + Tester slaughterhouse
-- Installer fountain armok
-+ Construire metallurgist
-- Pas de display case ?
-+ Les fouets ont ils été nerfés?
++ Construire metallurgistd
 + Metallurgiste, construire
 
 Reactions
@@ -17,27 +13,12 @@ Reactions
 + Eternal rose
 + Metallurgist
 + attorney (fixer craft)
-+ Refaire eternal rose
-+ Floating glass dans furnaces
-+ Rien dans clay oven ?
 + Ajouter sawblade (serrated disc)
-+ Renommer addsyndrome ->  Retester excitation et berserk
-+ Ajouter pottery
-+ Furnace : fountains of blood/bones, metallurgist
 - Weather rain cassé
-
-7.1
----
-maj decoration
-+ Vérifier que l'on puisse contruire les illuminations
-
-
-Nerfer hellhound
-+ Vérif les nouveaux reagents
-
 
 7.2
 ---
+Raccourcir des noms
 
 Vérifier spawnunit
 - MAJ
@@ -61,26 +42,31 @@ Bugfix
 Ajouter leather bodysuit
 Ajouter heat stone
 
-Mettre à jour summon
-Reaction fountain drink blood
+Nerfer kite shield en round shield
 
 Nettoyer les catégories > vérifier quelles soient bien marquée quand construites
+
+7.3
+---
+Ajouter meat ou slade wagon
+Ajouter leather whip
+
 8.0
 ---
-
 Tout passer dans vanilla
 
-Manuel
-------
-
-Building, relinker les images
+Nettoyage
+---------
+fovcommand11 > fovcommand, corriger les réaction warlocks
+addsyndrome > convertir les autres appels
 
 Sans tag
 --------
-
 Morsure de vermin evil, immunizer voire booster
 
 Altar of Nightmare : Une réaction par race
+
+Fountain of blood : Reaction fountain drink blood
 
 A produire
 - Warlock codex

@@ -1,15 +1,14 @@
 # Succubus Dungeon : Changelog #
-7.2
+7.1
 - You can now corrupt prisoners at the den of iniquity. They will join the military of complete jobs. See the manual for more info.
-- Deleted charming prisoners and all their references.
-- Renamed a few positions : librarian to keeper of secret, warlord to lady of pain. No change in functionnality.
-- Provoking a siege now work again.
-- Excitation should have less effect on unhappy succubi.
+- Renamed a few positions : librarian to keeper of secret, warlord to lady of pain. No change besides the names.
 - Fixed a few typos in the manuals, added materials and reference to the den of iniquity.
-- Removed the fixnaked spam from the terminal.
 - Removed the flier upgrade and caste, it caused too many pathing issues.
-- Recolored the abssal temple, esoteric order and the soul forge.
+- Recolored the abyssal temple, esoteric order and the soul forge.
 - You can now build the chandler and make candles.
+- Replaced violins by violoncellos to adhere to the 3 instruments per race design.
+- Gave the succubi and all their castes new descriptions.
+- Summoning orthus now requires an soul and a chain/rope.
 
 7.0 - Masterwork
 + New buildings

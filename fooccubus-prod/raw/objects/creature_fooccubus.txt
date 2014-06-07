@@ -74,7 +74,7 @@ creature_fooccubus
 	[PROFESSION_NAME:THRESHER:miller:millers]
 
 	// Body and description
-	[CREATURE_TILE:'&'][COLOR:4:0:0]
+	[CREATURE_TILE:1][COLOR:7:0:1]
 	[GLOWTILE:82][GLOWCOLOR:0:14:0]
 	[CASTE:FEMALE]
 		[DESCRIPTION:A female lust demon of hedonistic interests. She belongs to a former slave caste of demons who escaped the underworld and found the surface to be a wonderful place to settle. The succubi are feared for their affinity with fire and their ability to influence other races in their sleep, whispering obscene ideas to their mind. However, these abilities and their depraved culture has led them to antagonize most of the other civilizations, eager to prevent their influence on their population.  Despite this, the succubi are famous for their finely decorated dungeons and fine arts.]

@@ -37,8 +37,8 @@ item_instrument
 [NAME:oboe:oboes]
 [HARD_MAT]
 
-[ITEM_INSTRUMENT:ITEM_INSTRUMENT_CELLO]
-[NAME:cello:cellos]
+[ITEM_INSTRUMENT:ITEM_INSTRUMENT_VIOLONCELLO]
+[NAME:violoncello:violoncellos]
 [HARD_MAT]
 
 ############################################################################################################
