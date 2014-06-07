@@ -20,12 +20,6 @@ Reactions
 ---
 Raccourcir des noms
 
-Vérifier spawnunit
-- MAJ
-- Mode tame par nom de réaction
-- Tame par appel spawunit
-- Corriger la bug de la liste animals
-
 Ajouter well of magma
 
 Sprite : orthus
@@ -34,13 +28,11 @@ Jobs
 - Faire de nouveaux sprites
 - Adapter les réactions à ces jobs
 
-Bugfix
-- Summon > maj liste des animaux
-- Warlock teleport
-- fovcommand (update reactions, remove les 2 scripts)
-
 Ajouter leather bodysuit
-Ajouter heat stone
+
+Chauffer les forges
+- Ajouter heat stone
+- Ajouter des réactions pour chauffer les forges
 
 Nerfer kite shield en round shield
 
@@ -50,6 +42,8 @@ Nettoyer les catégories > vérifier quelles soient bien marquée quand construi
 ---
 Ajouter meat ou slade wagon
 Ajouter leather whip
+
+SUmmon hostile
 
 8.0
 ---

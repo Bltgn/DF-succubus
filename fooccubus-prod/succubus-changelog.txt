@@ -1,4 +1,10 @@
 # Succubus Dungeon : Changelog #
+7.2
+- Summoned clowns are now non sentient, making it possible to butcher and train them.
+- Spawned creatures now appear on the animal screen immediatly.
+- Downgraded kite shields to round shield.
+- Updated the orthus sprite with an extra head.
+
 7.1
 - You can now corrupt prisoners at the den of iniquity. They will join the military of complete jobs. See the manual for more info.
 - Renamed a few positions : librarian to keeper of secret, warlord to lady of pain. No change besides the names.
