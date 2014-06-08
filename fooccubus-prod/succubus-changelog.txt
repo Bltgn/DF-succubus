@@ -4,6 +4,7 @@
 - Spawned creatures now appear on the animal screen immediatly.
 - Downgraded kite shields to round shield.
 - Updated the orthus sprite with an extra head.
+- You cannot build kite shield anymore, round shields now replace them.
 
 7.1
 - You can now corrupt prisoners at the den of iniquity. They will join the military of complete jobs. See the manual for more info.

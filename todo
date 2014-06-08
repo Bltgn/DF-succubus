@@ -22,28 +22,24 @@ Raccourcir des noms
 
 Ajouter well of magma
 
-Sprite : orthus
-
-Jobs
-- Faire de nouveaux sprites
-- Adapter les réactions à ces jobs
-
 Ajouter leather bodysuit
 
-Chauffer les forges
-- Ajouter heat stone
-- Ajouter des réactions pour chauffer les forges
-
-Nerfer kite shield en round shield
-
-Nettoyer les catégories > vérifier quelles soient bien marquée quand construites
++ Nerfer kite shield en round shield
 
 7.3
 ---
 Ajouter meat ou slade wagon
 Ajouter leather whip
 
+Jobs
+- Faire de nouveaux sprites
+- Adapter les réactions à ces jobs
+
 SUmmon hostile
+
+Chauffer les forges
+- Ajouter heat stone
+- Ajouter des réactions pour chauffer les forges
 
 8.0
 ---
