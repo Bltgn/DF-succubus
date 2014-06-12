@@ -2,9 +2,12 @@
 7.2
 - Summoned clowns are now non sentient, making it possible to butcher and train them.
 - Spawned creatures now appear on the animal screen immediatly.
-- Downgraded kite shields to round shield.
 - Updated the orthus sprite with an extra head.
-- You cannot build kite shield anymore, round shields now replace them.
+- You cannot build kite shield anymore, round shields now replace them
+- You can build bodysuits. Those cover the upper of lower body and replace chainmail if you collected good leathery materials.
+- Added the well of magma, where you can spawn magma at will. It will activate the magma forges, same for the warlock version.
+- Added sawblades, for real this time.
+- Rendermax will work for any race.
 
 7.1
 - You can now corrupt prisoners at the den of iniquity. They will join the military of complete jobs. See the manual for more info.
