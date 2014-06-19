@@ -74,7 +74,19 @@ creature_fooccubus
 	[PROFESSION_NAME:THRESHER:miller:millers]
 
 	// Body and description
-	[CREATURE_TILE:0][COLOR:7:0:1]
+	df
+	YESMDF_GRAPHICS[CREATURE_TILE:0]
+	Ascii
+	!NOASCII_GRAPHICS!CREATURE_TILE:'&']
+	Ironhand
+	!NOIRONHAND_GRAPHICS!CREATURE_TILE:'&']
+	Obsidian
+	!NOOBSIDIAN_GRAPHICS!CREATURE_TILE:'&']
+	Phoebus
+	!NOPHOEBUS_GRAPHICS!CREATURE_TILE:'&']
+	Mayday
+	!NOMAYDAY_GRAPHICS!CREATURE_TILE:'&']
+	[COLOR:7:0:1]
 	[GLOWTILE:82][GLOWCOLOR:0:14:0]
 	[CASTE:FEMALE]
 		[DESCRIPTION:A female lust demon of hedonistic interests. She belongs to a former slave caste of demons who escaped the underworld and found the surface to be a wonderful place to settle. The succubi are feared for their affinity with fire and their ability to influence other races in their sleep, whispering obscene ideas to their mind. However, these abilities and their depraved culture has led them to antagonize most of the other civilizations, eager to prevent their influence on their population.  Despite this, the succubi are famous for their finely decorated dungeons and fine arts.]
@@ -366,14 +378,11 @@ creature_fooccubus
 			[TL_COLOR_MODIFIER:PART_LARGE:1:BREAST_PLUMP:1:BREAST_PERKY:1:BREAST_BOUNCY:1:PART_FIRM:1:BREAST_SUPPLE:1:PART_SOFT:1:BREAST_VOLUPTOUS:1:PART_CURVY:1:BREAST_SENSUAL:1:BREAST_SPRINGY:1]
 			[TLCM_NOUN:breasts:PLURAL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
-			[TL_COLOR_MODIFIER:PART_SOFT:1:PART_SMOOTH:1:PART_MATTE:1:PART_RADIANT:1:PART_OILY:1:PART_WET:1]
-			[TLCM_NOUN:flesh:SINGULAR]
+			[TL_COLOR_MODIFIER:PART_SOFT:1:PART_SMOOTH:1:PART_MATTE:1:PART_WET:1:PART_OILY:1:PART_WET:1:PART_RADIANT:1]
+			[TLCM_NOUN:bare skin:SINGULAR]
 		[SET_TL_GROUP:BY_CATEGORY:BODY_LOWER:SKIN]
 			[TL_COLOR_MODIFIER:BUTT_WELLSHAPED:1:PART_LARGE:1:BUTT_TIGHT:1:PART_FIRM:1:BUTT_TIGHT:1:PART_LITHE:1:BUTT_GRACEFUL:1:BUTT_CALIPYGIAN:1:PART_CURVY:1:BUTT_SLENDER:1:BUTT_LUSH:1:BUTT_SHAPELY:1]
 			[TLCM_NOUN:buttocks:PLURAL]
-		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
-			[TL_COLOR_MODIFIER:PART_SOFT:1:PART_MATTE:1:PART_RADIANT:1:PART_OILY:1:PART_WET:1:PART_SMOOTH:1]
-			[TLCM_NOUN:flesh:SINGULAR]
 		[SET_TL_GROUP:BY_CATEGORY:WING:SKIN]
 			[TL_COLOR_MODIFIER:WING_LEATHERY:1:PART_SOFT:1:PART_LITHE:1:WING_SPIKY:1:WING_TOUGH:1:WING_BLACKENED:1:WING_GENTLE:1:WING_FLOWING:1:WING_SPINY:1:WING_TORN:1]
 			[TLCM_NOUN:wings:PLURAL]
@@ -385,8 +394,8 @@ creature_fooccubus
 			[TL_COLOR_MODIFIER:WING_LEATHERY:1:WING_SPIKY:1:WING_TOUGH:1:WING_BLACKENED:1:WING_TOUGH:1:WING_SPINY:1:WING_TORN:1]
 			[TLCM_NOUN:wings:PLURAL]
 			[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
-				[TL_COLOR_MODIFIER:PART_SOFT:1:PART_MATTE:1:PART_RADIANT:1:BUTT_TONED:1]
-				[TLCM_NOUN:flesh:SINGULAR]
+				[TL_COLOR_MODIFIER:PART_SOFT:1:PART_MATTE:1:BUTT_TONED:1:PART_SMOOTH:1:PART_OILY:1:PART_WET:1:PART_RADIANT:1]
+				[TLCM_NOUN:bare skin:SINGULAR]
 
 	// Ineractions
 	[SELECT_CASTE:ALL]
@@ -476,14 +485,14 @@ creature_fooccubus
 	[SELECT_ADDITIONAL_CASTE:FIREIMMUNE_MALE]
 		[POP_RATIO:1]
 		[CASTE_NAME:fireborn succubus:fireborn succubi:fireborn succubus]
-		[DESCRIPTION:A female lust demon of hedonistic interests. This succubus is unaffected by fire and lava and can manipulate both with her bare hands. The fireborn are dangerous as they are often able to hurl fireballs or, failing that, seduce their enemies in taking a magma bath with them. The ability to cause mayhem without suffering the consequences earned her some respect among her kin.]
+		[DESCRIPTION:A female lust demon of hedonistic interests. This succubus is unaffected by fire and lava and can manipulate both with her bare hands. The fireborn are dangerous as they are often able to hurl fireballs or seduce their enemies in taking a magma bath with them. The ability to cause mayhem without suffering the consequences earned her respect among her kin.]
 		[FIREIMMUNE][MAGMA_VISION]
 		[HOMEOTHERM:10090]
 		[FIXED_TEMP:10090]
 	[SELECT_CASTE:FIREIMMUNE_MALE]
 		[POP_RATIO:1]
 		[CASTE_NAME:fireborn incubus:fireborn incubi:fireborn incubus]
-		[DESCRIPTION:A male lust demon of hedonistic interests. This incubus is unaffected by fire and lava and can manipulate both with his bare hands. The fireborn are dangerous as they are often able to hurl fireballs or, failing that, seduce their enemies in taking a magma bath with them. The ability to cause mayhem without suffering the consequences earned her some respect among her kin.]
+		[DESCRIPTION:A male lust demon of hedonistic interests. This incubus is unaffected by fire and lava and can manipulate both with his bare hands. The fireborn are dangerous as they are often able to hurl fireballs or seduce their enemies in taking a magma bath with them. The ability to cause mayhem without suffering the consequences earned him respect among his kin.]
 
 	[USE_CASTE:CAMBION_FEMALE:FEMALE] // elf + drow
 	[USE_CASTE:CAMBION_MALE:MALE]

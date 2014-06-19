@@ -13,24 +13,28 @@ Reactions
 + Eternal rose
 + Metallurgist
 + attorney (fixer craft)
-+ Ajouter sawblade (serrated disc)
 - Weather rain cassé
-
-7.2
----
-Raccourcir des noms
-+ Ajouter well of magma
 
 7.3
 ---
-Ajouter meat ou slade wagon
+
+Changer 'her skin' en qq plus parlant.
 Ajouter leather whip
+
+
+
++ Changer le tile pour les sets non standard
+
+7.4
+---
+Raccourcir des noms
+Ajouter meat ou slade wagon
 
 Jobs
 - Faire de nouveaux sprites
 - Adapter les réactions à ces jobs
 
-SUmmon hostile
+Summon hostile en script
 
 Chauffer les forges
 - Ajouter heat stone
@@ -39,10 +43,19 @@ Chauffer les forges
 Defiler
 - Reforge breastplate
 - Reforge kite shield, tower shield, etc...
+- Make boltgun
+
+7.5
+---
+Battlecries
+Mineral oil
 
 8.0
 ---
 Tout passer dans vanilla
+Morsure de vermin evil, immunizer voire booster
+
+Créer une météo spéciale pour les zones evil
 
 Nettoyage
 ---------
@@ -51,11 +64,7 @@ addsyndrome > convertir les autres appels
 
 Sans tag
 --------
-Morsure de vermin evil, immunizer voire booster
-
 Altar of Nightmare : Une réaction par race
-
-Fountain of blood : Reaction fountain drink blood
 
 A produire
 - Warlock codex
@@ -64,34 +73,17 @@ A produire
 
 Color: figure, face, etc.
 
-Mineral oil
-
 Gluttony
-- Transformer souls en dirnk/meals
+- Transformer souls en drink/meals
 
 Workshops
 - poison
 - music stand
 - smoking
-- defiler
-- praying
-- magma well
 - dark pact
-- demon attorney
-- dollhouse
 - animal care
 - Flesh shaper > Tanner dwarf (et tous les upgrades) + make leather whip
-- archeologist (le refaire)*
-- Attorney : Fabriquer ces machins et mirroir
-- Devil deal
 - Greater dyery
-
-Items
-- Nouvelle armure de cuir en under (bodysuit en 2 items)
-
-Defiler
-- Reforge breastplate
-- Reforge shield
 
 GUI
 - Plugin pour afficher des détails des réactions + help en txt
@@ -111,8 +103,6 @@ Scripts
 - Donner des jobs aux non race
 - Ajouter un buff pour les noble en utilisant le système de Roses
 - Réduction de pauses, + attributes ?
-
-Créer une météo spéciale pour les zones evil
 
 Creatures
 + Ajouter les succubi sauvages, mettre dans HFS
@@ -146,9 +136,3 @@ Summon
 
 Interaction kiss
 - Male -> female et vice versa
-
-Chauffer la forge
-- Une réaction produit des hot stone temporaires.
-- Pouse la succube à aller dormir.
-
-Magma well

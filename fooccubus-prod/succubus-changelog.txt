@@ -1,4 +1,11 @@
 # Succubus Dungeon : Changelog #
+7.3
+- Summoning orthi and rat things have been made harder. Again.
+- The creature tiles should be visible on the non default tilesets now.
+- Making basiliskine bar is now possible.
+- Making blade-whips should properly use bars now.
+- Added press reactions, for oil and paper used in future reactions.
+
 7.2
 - Summoned clowns are now non sentient, making it possible to butcher and train them.
 - Spawned creatures now appear on the animal screen immediatly.

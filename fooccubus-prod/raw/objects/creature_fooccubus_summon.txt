@@ -6,7 +6,7 @@ creature_fooccubus
 	[DESCRIPTION:A terrifying creature with many tentacles and corrupt intentions. Their slime is known to cause strange feelings of euphoria on most creatures. Tentacle monsters are often kept as pets by the succubi who enjoy milking them for various purposes.]
 	[NAME:tentacle monster:tentacle monsters:tentacle monster]
 	[CASTE_NAME:tentacle monster:tentacle monsters:tentacle monster]
-	[CREATURE_TILE:'&'][COLOR:2:0:0]
+	[CREATURE_TILE:164][COLOR:2:0:0]
 	[GLOWTILE:82][GLOWCOLOR:0:10:0]
 	[PETVALUE:200]
 	[CREATURE_CLASS:GENERAL_POISON]
