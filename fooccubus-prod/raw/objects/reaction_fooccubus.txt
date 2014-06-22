@@ -237,7 +237,7 @@ reaction_fooccubus
 // Temples
 // Lust
 [REACTION:LUA_HOOK_FOOCCUBUS_UPGRADE_EXCITATION]
-	[NAME:Learn martial excitation (lust)]
+	[NAME:Learn martial excitement (lust)]
 	[BUILDING:FOOCCUBUS_SIN:CUSTOM_E]
 	[REAGENT:craft:1:ANY_CRAFT:NONE:METAL:GOLD]
 	[REAGENT:soul:1:NONE:NONE:NONE:NONE][REACTION_CLASS:SOUL][UNROTTEN]

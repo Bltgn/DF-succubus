@@ -559,7 +559,7 @@ creature_fooccubus
 		[PERSONALITY:IMAGINATION:0:60:100]
 		[PERSONALITY:INTELLECTUAL_CURIOSITY:0:75:100]
 		[PERSONALITY:DEPRESSION:0:45:100]
-		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the succubus kingdom, shedding all thoughts of morality and decency. The fiends live in dark hallways, where they dig with an unmatched greed and contruct the most dangerous dungeons. They take so much joy in violence that even the succubi find them overly aggressive.]
+		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the succubus kingdom, shedding all thoughts of morality and decency. The fiends live in dark hallways, where they dig with an unmatched greed and contruct the most dangerous dungeons.]
 		[CASTE_NAME:fiend:fiends:fiend]
 		[BABYNAME:fiend baby:fiend babies]
 		[CHILDNAME:fiend girl:fiend girls]

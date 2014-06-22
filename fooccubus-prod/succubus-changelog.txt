@@ -2,10 +2,11 @@
 7.3
 - Summoning orthi and rat things have been made harder. Again.
 - The creature tiles should be visible on the non default tilesets now.
-- Making basiliskine bar is now possible.
+- Making basiliskine bars is now possible.
 - Making blade-whips should properly use bars now.
-- Added press reactions, for oil and paper used in future reactions.
 - Sow discord will no longer cause a loyalty cascade among invaders and is now cheaper.
+- Succubi are vulnerable to black lung again, but fiends (converted dwarves) are immune.
+- Updated the manuals with a summary page and less typos.
 
 7.2
 - Summoned clowns are now non sentient, making it possible to butcher and train them.
