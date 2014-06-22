@@ -24,7 +24,7 @@ local function cancelReaction(reaction, unit, input_reagents, message)
 			string.format("%s, %s cancels %s: %s.", dfhack.TranslateName(dfhack.units.getVisibleName(unit)), dfhack.units.getProfessionName(unit), reaction.name, message)
 		) , NEWLINE)
 	for _, v in ipairs(lines) do
-		dfhack.gui.showAnnouncement(v, COLOR_RED)
+		dfhack.gui.showAnnouncement(v, COLOR_RED, true)
 	end
 
 	for _, v in ipairs(input_reagents or {}) do

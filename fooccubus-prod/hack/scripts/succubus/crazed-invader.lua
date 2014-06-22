@@ -1,15 +1,15 @@
--- Render x invaders crazed, the effect is more important if the worker has positions
+-- Render x invaders opposed to lige, the effect is more important if the worker has positions
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 if not ... then qerror('Please enter a creature ID.') end
 
 local args = {...}
-local unit = df.unit.find(tonumber(args[1]))
-if not unit then qerror('crazed-invaders : Unit not found.') end
+local sourceUnit = df.unit.find(tonumber(args[1]))
+if not sourceUnit then qerror('crazed-invaders : Unit not found.') end
 
 local invaders = {}
 local targetId
 
--- Todo more effect depending of the originating civ
+-- Todo more effects depending of the worker's position
 local function rating(unit)
 	local number = math.random(1, 3)
 	return number
@@ -26,5 +26,5 @@ if #invaders == 0 then qerror('crazed-invaders : No invader found.') end
 
 for i = 0, rating(unit) do
 	targetId = invaders[math.random(1, #invaders)]
-	dfhack.run_script('addsyndrome2', 'SYNDROME_BERSERK', targetId)
+	dfhack.run_script('addsyndrome2', 'SYNDROME_OPPOSED_TO_LIFE', targetId)
 end

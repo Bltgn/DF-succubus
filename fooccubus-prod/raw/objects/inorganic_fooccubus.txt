@@ -139,7 +139,7 @@ inorganic_fooccubus
 			[CDI:TARGET:A:LINE_OF_SIGHT]
 			[CDI:USAGE_HINT:ATTACK]
 			[CDI:FREE_ACTION]
-			[CDI:WAIT_PERIOD:120]
+			[CDI:WAIT_PERIOD:250]
 			[CDI:ADV_NAME:Battle cry (grunt)]
 			[CDI:VERB:grunt:grunts:NA]
 
