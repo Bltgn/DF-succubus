@@ -75,7 +75,7 @@ creature_fooccubus
 
 	// Body and description
 	df
-	YESMDF_GRAPHICS[CREATURE_TILE:0]
+	YESMDF_GRAPHICS[CREATURE_TILE:139]
 	Ascii
 	!NOASCII_GRAPHICS!CREATURE_TILE:'&']
 	Ironhand

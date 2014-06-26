@@ -4,7 +4,7 @@ item_weapon
 
 ######################################################################################################################
 /// rare drops from temple, dwarf only. upgrades to normal versions.
-
+0
 [ITEM_WEAPON:ITEM_WEAPON_HAMMER_WAR_ARMOK]
 [NAME:war hammer of armok:war hammers of armok]
 [SIZE:800]
@@ -18,7 +18,7 @@ item_weapon
 [ATTACK:BLUNT:100:6000:viciously beat:viciously beats:NO_SUB:3000]
 [ATTACK:BLUNT:10:200:throw a haymaker at:throws a haymaker at:NO_SUB:3000]
 [ATTACK:BLUNT:20:200:make an undercut swing at:makes an undercut swing at:NO_SUB:2000]
-
+1
 [ITEM_WEAPON:ITEM_WEAPON_ARMOK_SWORD]
 [NAME:sword of armok:sword of armok]
 [SIZE:310]
@@ -31,7 +31,7 @@ item_weapon
 [ATTACK:EDGE:100:5000:viciously strike:viciously strikes:NO_SUB:1250]
 [ATTACK:EDGE:10:50000:impale:impales:NO_SUB:2000]
 [ATTACK:EDGE:10:50000:gore:gores:NO_SUB:2000]
-
+2
 [ITEM_WEAPON:ITEM_WEAPON_AXE_BATTLE_ARMOK]
 [NAME:battle axe of armok:battle axes of armok]
 [SIZE:600]
@@ -45,7 +45,7 @@ item_weapon
 
 ################################################################################################################
 /// Succubus weapon
-
+3
 [ITEM_WEAPON:ITEM_WEAPON_RAPIER]
 [NAME:duel sword:duel sword]
 [SIZE:610]
@@ -59,7 +59,7 @@ item_weapon
 [ATTACK:EDGE:10:50000:impale:impales:NO_SUB:2000]
 [ATTACK:EDGE:10:50000:gore:gores:NO_SUB:2000]
 [ATTACK:BLUNT:250:4000:bash:bashes:pommel::1000]
-
+4
 [ITEM_WEAPON:ITEM_WEAPON_AXE_CHAIN]
 [NAME:blade-whip:blade-whips]
 [SIZE:500]
@@ -70,7 +70,7 @@ item_weapon
 [ATTACK:EDGE:5000:3000:slash:slashes:blade:1200]
 [ATTACK:BLUNT:200:6000:whack:whacks:blunt end:1100]
 [ATTACK:BLUNT:250:4000:hit:hits:handle:1000]
-
+5
 [ITEM_WEAPON:ITEM_WEAPON_AXE_LABRYS]
 [NAME:doublesided axe:doublesided axe]
 [SIZE:700]
@@ -83,7 +83,7 @@ item_weapon
 [ATTACK:EDGE:40000:6000:cleave:cleaves:NO_SUB:1550]
 [ATTACK:BLUNT:40000:6000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
-
+6
 [ITEM_WEAPON:ITEM_WEAPON_CLAYMORE]
 [NAME:claymore:claymores]
 [SIZE:1000]
@@ -95,7 +95,7 @@ item_weapon
 [ATTACK:EDGE:50:4000:stab:stabs:NO_SUB:1000]
 [ATTACK:BLUNT:100000:8000:club:clubs:broad side:1350]
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
-
+7
 [ITEM_WEAPON:CAT_O_NINE_TAILS]
 [NAME:cat o' nine tails-whip:cats o' nine tails-whip]
 [SIZE:400]
@@ -108,7 +108,7 @@ item_weapon
 
 #########################################################################################################
 /// Warlock weapons
-
+8
 [ITEM_WEAPON:ITEM_WEAPON_SCYTHE]
 [NAME:scythe:scythes]
 [SIZE:1000]
@@ -120,7 +120,7 @@ item_weapon
 [ATTACK:EDGE:80000:1000:slash:slashes:NO_SUB:1500]
 [ATTACK:EDGE:50:5000:jab:jabs:point:1250]
 [ATTACK:BLUNT:20000:4000:smack:smacks:shaft:1000]
-
+9
 [ITEM_WEAPON:ITEM_WEAPON_PITCHFORK]
 [NAME:pitchfork:pitchforks]
 [SIZE:400]
@@ -131,7 +131,7 @@ item_weapon
 [ATTACK:EDGE:20:10000:jab:jabs:NO_SUB:1000]
 [ATTACK:EDGE:20:10000:stab:stabs:NO_SUB:1200]
 [ATTACK:BLUNT:10000:6000:bash:bashes:shaft:1250]
-
+10
 [ITEM_WEAPON:ITEM_WEAPON_BONESAW]
 [NAME:bonesaw:bonesaws]
 [SIZE:300]
@@ -143,7 +143,7 @@ item_weapon
 [ATTACK:EDGE:20000:4000:saw:saws:serrated teeth:1250]
 [ATTACK:BLUNT:20000:4000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-
+11
 [ITEM_WEAPON:ITEM_WEAPON_WARLOCK_STAFF]
 [NAME:warlock staff:warlock staves]
 [SIZE:700]
@@ -158,7 +158,7 @@ item_weapon
 [ATTACK:BLUNT:40:1000:poke:pokes:NO_SUB:1200]
 [ATTACK:BLUNT:10:500:rend:rends:runic focus:6000]
 [ATTACK:BLUNT:100:500:blast:blasts:rush of elemental power:6000]
-
+12
 [ITEM_WEAPON:ITEM_WEAPON_WRAITH_SWORD_WARLOCK]
 [NAME:wraithblade:wraithblades]
 [SIZE:700]
@@ -177,7 +177,7 @@ item_weapon
 [ATTACK:EDGE:60000:6000:slash:slashes:blade:1500]
 [ATTACK:EDGE:50:10000:run through:runs through:tip:1100]
 [ATTACK:EDGE:10:22000:pierce:pierces:manifest vision of terror:1500]
-
+13
 [ITEM_WEAPON:ITEM_WEAPON_AXE_SERRATED]
 [NAME:axe:axes]
 [ADJECTIVE:serrated]
@@ -190,7 +190,7 @@ item_weapon
 [ATTACK:EDGE:50000:2000:rake:rakes:serrated edge:1500]
 [ATTACK:BLUNT:40000:6000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
-
+14
 [ITEM_WEAPON:ITEM_WEAPON_SWORD_HOOK]
 [NAME:hooked sword:hooked swords]
 [SIZE:300]
@@ -203,7 +203,7 @@ item_weapon
 [ATTACK:EDGE:5000:5000:lacerate:lacerates:blade:1250]
 [ATTACK:BLUNT:5000:100:smack:smacks:flat:1000]
 [ATTACK:EDGE:200:600:strike:strikes:bladed pommel:1000]
-
+15
 [ITEM_WEAPON:ITEM_WEAPON_HAMMER_SLEDGE]
 [NAME:sledgehammer:sledgehammers]
 [SIZE:1050]
@@ -215,7 +215,7 @@ item_weapon
 [ATTACK:BLUNT:100:6000:bludgeon:bludgeons:head:1800]
 [ATTACK:BLUNT:250:4000:strike:strikes:handle:1000]
 [ATTACK:BLUNT:10:200:viciously hammer:viciously hammers:head:2000]
-
+16
 [ITEM_WEAPON:ITEM_WEAPON_RITUAL_KNIFE]
 [NAME:ritual knife:ritual knives]
 [ADJECTIVE:curious]
@@ -241,7 +241,7 @@ item_weapon
 
 ###################################################################################################################
 /// Elven Elf weapons
-
+17
 [ITEM_WEAPON:ITEM_WEAPON_JITTE]
 [NAME:jitte:jittes]
 [SIZE:450]
@@ -253,7 +253,7 @@ item_weapon
 [ATTACK:BLUNT:20:200:beat:beats:NO_SUB:1000]
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
 [ATTACK:BLUNT:250:4000:strike:strikes:hilt:1000]
-
+18
 [ITEM_WEAPON:ITEM_WEAPON_KRISS]
 [NAME:kriss:krisses]
 [SIZE:700]
@@ -266,7 +266,7 @@ item_weapon
 
 ###################################################################################################################
 /// dagger made of horn at the tanner
-
+19
 [ITEM_WEAPON:ITEM_WEAPON_DAGGER_HORN]
 [NAME:knife:knives]
 [ADJECTIVE:small]
@@ -284,7 +284,7 @@ item_weapon
 
 ###################################################################################################################
 /// normal, rl and dwarven weapons
-
+20
 [ITEM_WEAPON:ITEM_WEAPON_HALBERD]
 [NAME:halberd:halberds]
 [SIZE:1200]
@@ -302,7 +302,7 @@ item_weapon
 [ATTACK:EDGE:50:2000:furiously stab:furiously stabs:NO_SUB:1000]
 [ATTACK:EDGE:50:10000:impale:impales:NO_SUB:2000]
 [ATTACK:EDGE:50:10000:run through:runs through:tip:4100]
-
+21
 [ITEM_WEAPON:ITEM_WEAPON_SWORD_HANDER_ZWEI]
 [NAME:zweihander:zweihander]
 [SIZE:1200]
@@ -320,7 +320,7 @@ item_weapon
 [ATTACK:BLUNT:100000:8000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:1000:3000:strike:strikes:pommel:1000]
 [ATTACK:EDGE:50:10000:run through:runs through:tip:4100]
-
+22
 [ITEM_WEAPON:ITEM_WEAPON_MAUL]
 [NAME:maul:mauls]
 [SIZE:1300]
@@ -334,7 +334,7 @@ item_weapon
 [ATTACK:BLUNT:120:8000:viciously beat:viciously beats:NO_SUB:3000]
 [ATTACK:BLUNT:500:3000:throw a haymaker at:throws a haymaker at:NO_SUB:3000]
 [ATTACK:BLUNT:200:200:make an undercut swing at:makes an undercut swing at:NO_SUB:2000]
-
+23
 [ITEM_WEAPON:ITEM_WEAPON_AXE_GREAT]
 [NAME:great axe:great axes]
 [SIZE:1300]
@@ -349,7 +349,7 @@ item_weapon
 [ATTACK:EDGE:60000:12000:relentlessly hew:relentlessly hews:full force:2000]
 [ATTACK:EDGE:40000:6000:emphatically slice:emphatically slices:NO_SUB:1800]
 [ATTACK:EDGE:50000:10000:make an undercut swing at:makes an undercut swing at:NO_SUB:2000]
-
+24
 [ITEM_WEAPON:ITEM_WEAPON_MACE]
 [NAME:mace:maces]
 [SIZE:800]
@@ -363,7 +363,7 @@ item_weapon
 [ATTACK:BLUNT:20:200:viciously beat:viciously beats:NO_SUB:2000]
 [ATTACK:BLUNT:15:200:throw a haymaker at:throws a haymaker at:NO_SUB:2000]
 [ATTACK:BLUNT:15:200:make an undercut swing at:makes an undercut swing at:NO_SUB:2000]
-
+25
 [ITEM_WEAPON:ITEM_WEAPON_MORNINGSTAR]
 [NAME:morningstar:morningstars]
 [SIZE:500]
@@ -378,7 +378,7 @@ item_weapon
 [ATTACK:EDGE:20:200:viciously beat:viciously beats:NO_SUB:2000]
 [ATTACK:EDGE:15:200:throw a haymaker at:throws a haymaker at:NO_SUB:2000]
 [ATTACK:EDGE:15:200:make an undercut swing at:makes an undercut swing at:NO_SUB:2000]
-
+26
 [ITEM_WEAPON:ITEM_WEAPON_PIKE]
 [NAME:pike:pikes]
 [SIZE:800]
@@ -394,7 +394,7 @@ item_weapon
 [ATTACK:EDGE:20:12000:furiously stab:furiously stabs:sharp tip:1000]
 [ATTACK:EDGE:10:12000:impale:impales:full force:2000]
 [ATTACK:EDGE:10:12000:run through:runs through:tip:4100]
-
+27
 [ITEM_WEAPON:ITEM_WEAPON_SPEAR]
 [NAME:spear:spears]
 [SIZE:400]
@@ -410,7 +410,7 @@ item_weapon
 [ATTACK:EDGE:20:12000:furiously stab:furiously stabs:sharp tip:1000]
 [ATTACK:EDGE:10:12000:impale:impales:full force:2000]
 [ATTACK:EDGE:10:12000:run through:runs through:tip:4100]
-
+28
 [ITEM_WEAPON:ITEM_WEAPON_SCIMITAR]
 [NAME:scimitar:scimitars]
 [SIZE:600]
@@ -428,7 +428,7 @@ item_weapon
 [ATTACK:EDGE:30000:4000:quickly slash:quickly slashes:partial edge:2500]
 [ATTACK:EDGE:30000:4000:slash:slashes:curved blade:2500]
 [ATTACK:EDGE:50:10000:run through:runs through:tip:4100]
-
+29
 [ITEM_WEAPON:ITEM_WEAPON_SWORD_LONG]
 [NAME:long sword:long swords]
 [SIZE:700]
@@ -446,7 +446,7 @@ item_weapon
 [ATTACK:EDGE:60000:6000:quickly slash:quickly slashes:partial edge:2500]
 [ATTACK:EDGE:60000:6000:slash:slashes:blade:2500]
 [ATTACK:EDGE:50:10000:run through:runs through:tip:4100]
-
+30
 [ITEM_WEAPON:ITEM_WEAPON_SWORD_SHORT]
 [NAME:short sword:short swords]
 [SIZE:300]
@@ -464,7 +464,7 @@ item_weapon
 [ATTACK:EDGE:20000:4000:quickly slash:quickly slashes:partial edge:2500]
 [ATTACK:EDGE:20000:4000:slash:slashes:honed blade:2500]
 [ATTACK:EDGE:50:10000:run through:runs through:tip:4100]
-
+31
 [ITEM_WEAPON:ITEM_WEAPON_DAGGER_LARGE]
 [NAME:dagger:daggers]
 [ADJECTIVE:large]
@@ -483,7 +483,7 @@ item_weapon
 [ATTACK:EDGE:1000:800:quickly slash:quickly slashes:partial edge:1000]
 [ATTACK:EDGE:1000:800:slash:slashes:honed blade:1000]
 [ATTACK:EDGE:50:10000:run through:runs through:tip:1000]
-
+32
 [ITEM_WEAPON:ITEM_WEAPON_HAMMER_WAR]
 [NAME:war hammer:war hammers]
 [SIZE:800]
@@ -497,7 +497,7 @@ item_weapon
 [ATTACK:BLUNT:12:8000:viciously beat:viciously beats:NO_SUB:3000]
 [ATTACK:BLUNT:50:3000:throw a haymaker at:throws a haymaker at:NO_SUB:3000]
 [ATTACK:BLUNT:20:200:make an undercut swing at:makes an undercut swing at:NO_SUB:2000]
-
+33
 [ITEM_WEAPON:ITEM_WEAPON_AXE_BATTLE]
 [NAME:battle axe:battle axes]
 [SIZE:800]
@@ -513,7 +513,7 @@ item_weapon
 [ATTACK:EDGE:40000:6000:emphatically slice:emphatically slices:honed axeblade:1800]
 [ATTACK:EDGE:50000:10000:make an undercut swing at:makes an undercut swing at:power:2000]
 [ATTACK:EDGE:50000:10000:make a backhanded strike at:makes a backhanded strike at:NO_SUB:2000]
-
+34
 [ITEM_WEAPON:ITEM_WEAPON_AXE_WOOD]
 [NAME:chopping axe:chopping axes]
 [SIZE:400]
@@ -526,7 +526,7 @@ item_weapon
 [ATTACK:EDGE:40000:600:cleave:cleaves:NO_SUB:1250]
 [ATTACK:BLUNT:40000:6000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-
+35
 [ITEM_WEAPON:ITEM_WEAPON_PICK]
 [NAME:pick:picks]
 [SIZE:400]
@@ -546,7 +546,7 @@ item_weapon
 [ATTACK:EDGE:50:1000:furiously stab:furiously stabs:NO_SUB:1000]
 [ATTACK:EDGE:50:2000:impale:impales:NO_SUB:2000]
 [ATTACK:EDGE:50:2000:run through:runs through:tip:2100]
-
+36
 [ITEM_WEAPON:ITEM_WEAPON_PICK_BATTLE]
 [NAME:battle pick:battle picks]
 [SIZE:600]
@@ -566,7 +566,7 @@ item_weapon
 [ATTACK:EDGE:50:2000:furiously stab:furiously stabs:end:2000]
 [ATTACK:EDGE:50:5000:impale:impales:shaft:2000]
 [ATTACK:EDGE:50:5000:run through:runs through:tip:2100]
-
+37
 [ITEM_WEAPON:ITEM_WEAPON_KNUCKLE_DUSTER]
 [NAME:knuckle duster:knuckle dusters]
 [SIZE:175]
@@ -578,7 +578,7 @@ item_weapon
 [ATTACK:BLUNT:100:2500:sidestep quickly and strike:sidesteps quickly and strikes:NO_SUB:1250]
 [ATTACK:BLUNT:100:2500:make an undercut swing at:makes an undercut swing at:NO_SUB:1500]
 [ATTACK:BLUNT:500:3000:throw a haymaker at:throws a haymaker at:full force:3000]
-
+38
 [ITEM_WEAPON:ITEM_WEAPON_SCOURGE]
 [NAME:scourge:scourges]
 [SIZE:300]
@@ -592,7 +592,7 @@ item_weapon
 [ATTACK:EDGE:100:50:cut:cuts:wire:2000]
 [ATTACK:EDGE:100:50:hit:hits:NO_SUB:2000]
 [ATTACK:BLUNT:500:50:strike:strikes:pommel:2000]
-
+39
 [ITEM_WEAPON:ITEM_WEAPON_FLAIL]
 [NAME:flail:flails]
 [SIZE:500]
@@ -607,7 +607,7 @@ item_weapon
 [ATTACK:BLUNT:200:4000:cut:cuts:NO_SUB:2000]
 [ATTACK:BLUNT:200:4000:hit:hits:NO_SUB:2000]
 [ATTACK:BLUNT:200:4000:strike:strikes:pommel:2000]
-
+40
 [ITEM_WEAPON:ITEM_WEAPON_WHIP]
 [NAME:whip:whips]
 [SIZE:100]
@@ -624,7 +624,7 @@ item_weapon
 
 ########################################################################################################################
 /// Kobolds
-
+41
 [ITEM_WEAPON:ITEM_WEAPON_MACHETE]
 [NAME:machete:machetes]
 [SIZE:200]
@@ -635,7 +635,7 @@ item_weapon
 [ATTACK:EDGE:2000:800:hack:hacks:NO_SUB:1300]
 [ATTACK:EDGE:50:1000:stab:stabs:NO_SUB:1200]
 [ATTACK:BLUNT:250:4000:strike:strikes:grip:1000]
-
+42
 [ITEM_WEAPON:ITEM_WEAPON_SHOVEL]
 [NAME:shovel:shovels]
 [SIZE:500]
@@ -646,7 +646,7 @@ item_weapon
 [ATTACK:EDGE:100:4000:strike:strikes:edge:2000]
 [ATTACK:BLUNT:1000:6000:whack:whacks:flat:1750]
 [ATTACK:BLUNT:100:1000:bash:bashes:shaft:1250]
-
+43
 [ITEM_WEAPON:ITEM_WEAPON_CHOPPER]
 [NAME:chopper:choppers]
 [SIZE:500]
@@ -657,7 +657,7 @@ item_weapon
 [ATTACK:EDGE:20000:3000:hack:hacks:NO_SUB:1250]
 [ATTACK:BLUNT:20000:3000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:50:500:strike:strikes:pommel:1000]
-
+44
 [ITEM_WEAPON:ITEM_WEAPON_POINTY_STICK]
 [NAME:stick:sticks]
 [ADJECTIVE:pointy]
@@ -668,7 +668,7 @@ item_weapon
 [MATERIAL_SIZE:2]
 [ATTACK:EDGE:20:10000:stab:stabs:NO_SUB:1000]
 [ATTACK:BLUNT:10000:6000:bash:bashes:shaft:1250]
-
+45
 [ITEM_WEAPON:ITEM_WEAPON_CLUB]
 [NAME:club:clubs]
 [SIZE:650]
@@ -682,7 +682,7 @@ item_weapon
 
 ###############################################################################################################################
 /// Gnomes
-
+46
 [ITEM_WEAPON:ITEM_WEAPON_PICK_GNOME]
 [NAME:hand pick:hand picks]
 [SIZE:100]
@@ -702,7 +702,7 @@ item_weapon
 [ATTACK:EDGE:50:1000:furiously stab:furiously stabs:NO_SUB:1000]
 [ATTACK:EDGE:50:2000:impale:impales:NO_SUB:2000]
 [ATTACK:EDGE:50:2000:run through:runs through:tip:2100]
-
+47
 [ITEM_WEAPON:ITEM_WEAPON_AXE_GNOME]
 [NAME:hatchet:hatchets]
 [SIZE:100]
@@ -714,7 +714,7 @@ item_weapon
 [ATTACK:EDGE:40000:600:hack:hacks:NO_SUB:1250]
 [ATTACK:BLUNT:40000:6000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-
+48
 [ITEM_WEAPON:ITEM_WEAPON_AXE_2_GNOME]
 [NAME:auto-hatchet:auto-hatchets]
 [ADJECTIVE:clockwork]
@@ -727,7 +727,7 @@ item_weapon
 [ATTACK:EDGE:40000:600:hack:hacks:vibrating blade:2500]
 [ATTACK:BLUNT:40000:6000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-
+49
 [ITEM_WEAPON:ITEM_WEAPON_HAMMER_GNOME]
 [NAME:mallet:mallets]
 [SIZE:200]
@@ -737,7 +737,7 @@ item_weapon
 [MINIMUM_SIZE:5000]
 [MATERIAL_SIZE:3]
 [ATTACK:BLUNT:20:200:bash:bashes:NO_SUB:2000]
-
+50
 [ITEM_WEAPON:ITEM_WEAPON_HAMMER_2_GNOME]
 [NAME:auto-mallet:auto-mallets]
 [ADJECTIVE:clockwork]
@@ -748,7 +748,7 @@ item_weapon
 [MINIMUM_SIZE:5000]
 [MATERIAL_SIZE:3]
 [ATTACK:BLUNT:20:200:bash:bashes:vibrating head:4000]
-
+51
 [ITEM_WEAPON:ITEM_WEAPON_SWORD_GNOME]
 [NAME:sabre:sabres]
 [SIZE:100]
@@ -761,7 +761,7 @@ item_weapon
 [ATTACK:EDGE:10000:18000:stab:stabs:NO_SUB:1000]
 [ATTACK:BLUNT:60000:4000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
-
+52
 [ITEM_WEAPON:ITEM_WEAPON_SWORD_2_GNOME]
 [NAME:vibroblade:vibroblades]
 [ADJECTIVE:clockwork]
@@ -775,7 +775,7 @@ item_weapon
 [ATTACK:EDGE:10000:18000:stab:stabs:vibrating blade:2000]
 [ATTACK:BLUNT:60000:4000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
-
+53
 [ITEM_WEAPON:ITEM_WEAPON_CLAW_GNOME]
 [NAME:claw:claws]
 [ADJECTIVE:mechanical]
@@ -786,7 +786,7 @@ item_weapon
 [MATERIAL_SIZE:3]
 [ATTACK:EDGE:5:1000:stab:stabs:NO_SUB:1500]
 [ATTACK:EDGE:500:800:slash:slashes:NO_SUB:1500]
-
+54
 [ITEM_WEAPON:ITEM_WEAPON_DRILL_GNOME]
 [NAME:drill:drills]
 [ADJECTIVE:clockwork]
@@ -805,7 +805,7 @@ item_weapon
 [ATTACK:EDGE:50:2000:sidestep and stab:sidesteps and stabs:NO_SUB:1000]
 [ATTACK:EDGE:50:4000:summon up enormous willpower and rush forward, drilling:summons up enormous willpower and rushes forward, drilling:NO_SUB:2000]
 [ATTACK:EDGE:50:6000:continually drill:continually drills:NO_SUB:1250]
-
+55
 [ITEM_WEAPON:ITEM_WEAPON_CHAINSAW_GNOME]
 [NAME:chainsaw:chainsaws]
 [ADJECTIVE:clockwork]
@@ -820,7 +820,7 @@ item_weapon
 [ATTACK:EDGE:100000:11000:quickly slash:quickly slashes:partial edge:2500]
 [ATTACK:BLUNT:1000:3000:strike:strikes:handle:1000]
 [ATTACK:EDGE:1000:10000:thrust at:thrusts at:NO_SUB:3000]
-
+56
 [ITEM_WEAPON:ITEM_WEAPON_WRENCH_GNOME]
 [NAME:wrench:wrenches]
 [SIZE:60]
@@ -833,7 +833,7 @@ item_weapon
 [ATTACK:BLUNT:20:200:viciously beat:viciously beats:NO_SUB:2000]
 [ATTACK:BLUNT:15:200:throw a haymaker at:throws a haymaker at:NO_SUB:2000]
 [ATTACK:BLUNT:15:200:make an undercut swing at:makes an undercut swing at:NO_SUB:2000]
-
+57
 [ITEM_WEAPON:ITEM_WEAPON_SCREWDRIVER_GNOME]
 [NAME:screwdriver:screwdrivers]
 [SIZE:60]
@@ -843,7 +843,7 @@ item_weapon
 [MATERIAL_SIZE:1]
 [ATTACK:EDGE:5:500:stab:stabs:NO_SUB:1000]
 [ATTACK:BLUNT:250:4000:strike:strikes:handle:1000]
-
+58
 [ITEM_WEAPON:ITEM_WEAPON_CROWBAR_GNOME]
 [NAME:crowbar:crowbars]
 [SIZE:200]
@@ -856,7 +856,7 @@ item_weapon
 [ATTACK:BLUNT:20:200:viciously beat:viciously beats:NO_SUB:2000]
 [ATTACK:BLUNT:15:200:throw a haymaker at:throws a haymaker at:NO_SUB:2000]
 [ATTACK:BLUNT:15:200:make an undercut swing at:makes an undercut swing at:NO_SUB:2000]
-
+59
 [ITEM_WEAPON:ITEM_WEAPON_NAILBOARD_GNOME]
 [NAME:nail in it:nail in it]
 [ADJECTIVE:board with a]
@@ -870,7 +870,7 @@ item_weapon
 [ATTACK:BLUNT:20:200:bash:bashes:NO_SUB:2000]
 [ATTACK:BLUNT:20:200:bludgeon:bludgeons:NO_SUB:2000]
 [ATTACK:BLUNT:20:200:viciously beat:viciously beats:NO_SUB:2000]
-
+60
 [ITEM_WEAPON:ITEM_WEAPON_BATON_GNOME]
 [NAME:baton:batons]
 [SIZE:100]
@@ -883,7 +883,7 @@ item_weapon
 [ATTACK:BLUNT:20:200:viciously beat:viciously beats:NO_SUB:2000]
 [ATTACK:BLUNT:15:200:throw a haymaker at:throws a haymaker at:NO_SUB:2000]
 [ATTACK:BLUNT:15:200:make an undercut swing at:makes an undercut swing at:NO_SUB:2000]
-
+61
 [ITEM_WEAPON:ITEM_WEAPON_BATON_ELECTRIC_GNOME]
 [NAME:shock baton:shock batons]
 [SIZE:100]
@@ -896,7 +896,7 @@ item_weapon
 [ATTACK:BLUNT:20:200:viciously beat:viciously beats:NO_SUB:2000]
 [ATTACK:BLUNT:15:200:throw a haymaker at:throws a haymaker at:NO_SUB:2000]
 [ATTACK:BLUNT:15:200:make an undercut swing at:makes an undercut swing at:NO_SUB:2000]
-
+62
 [ITEM_WEAPON:ITEM_WEAPON_FIREBALL_GNOME]
 [NAME:flare gun:flare guns]
 [SIZE:150]
@@ -908,7 +908,7 @@ item_weapon
 [ATTACK:BLUNT:10000:3000:poke:pokes:end:1250]
 [ATTACK:BLUNT:10000:5000:bludgeon:bludgeons:stock:1300]
 [ATTACK:BLUNT:10000:2000:slap:slaps:shaft:1250]
-
+63
 [ITEM_WEAPON:ITEM_WEAPON_LIGHTNING_GNOME]
 [NAME:lightning gun:lightning guns]
 [SIZE:150]
@@ -920,7 +920,7 @@ item_weapon
 [ATTACK:BLUNT:10000:3000:poke:pokes:end:1250]
 [ATTACK:BLUNT:10000:5000:bludgeon:bludgeons:stock:1300]
 [ATTACK:BLUNT:10000:2000:slap:slaps:shaft:1250]
-
+64
 [ITEM_WEAPON:ITEM_WEAPON_LASER_GNOME]
 [NAME:laser pistol:laser pistols]
 [SIZE:150]
@@ -932,7 +932,7 @@ item_weapon
 [ATTACK:BLUNT:10000:3000:poke:pokes:end:1250]
 [ATTACK:BLUNT:10000:5000:bludgeon:bludgeons:stock:1300]
 [ATTACK:BLUNT:10000:2000:slap:slaps:shaft:1250]
-
+65
 [ITEM_WEAPON:ITEM_WEAPON_ION_GNOME]
 [NAME:ion cannon:ion cannons]
 [SIZE:150]
@@ -944,7 +944,7 @@ item_weapon
 [ATTACK:BLUNT:10000:3000:poke:pokes:end:1250]
 [ATTACK:BLUNT:10000:5000:bludgeon:bludgeons:stock:1300]
 [ATTACK:BLUNT:10000:2000:slap:slaps:shaft:1250]
-
+66
 [ITEM_WEAPON:ITEM_WEAPON_GLUE_GNOME]
 [NAME:glue gun:glue guns]
 [SIZE:150]
@@ -956,7 +956,7 @@ item_weapon
 [ATTACK:BLUNT:10000:3000:poke:pokes:end:1250]
 [ATTACK:BLUNT:10000:5000:bludgeon:bludgeons:stock:1300]
 [ATTACK:BLUNT:10000:2000:slap:slaps:shaft:1250]
-
+67
 [ITEM_WEAPON:ITEM_WEAPON_AIR_GNOME]
 [NAME:air blaster:air blasters]
 [SIZE:150]
@@ -971,7 +971,7 @@ item_weapon
 
 ##############################################################################################################
 /// Orc Weapons
-
+68
 [ITEM_WEAPON:ITEM_WEAPON_SPEAR_BLUNT]
 [NAME:lucerne polehammer:lucerne polehammers]
 [SIZE:1200]
@@ -983,7 +983,7 @@ item_weapon
 [ATTACK:BLUNT:100:2000:hammer:hammers:blunt side:5000]
 [ATTACK:BLUNT:10:3000:drill:drills:spiked tip:1200]
 [ATTACK:BLUNT:20000:4000:bash:bashes:shaft:1250]
-
+69
 [ITEM_WEAPON:ITEM_WEAPON_CLAWS]
 [NAME:pair of claws:pairs of claws]
 [SIZE:300]
@@ -996,7 +996,7 @@ item_weapon
 [ATTACK:EDGE:5:1000:stab:stabs:right claw:1100]
 [ATTACK:EDGE:500:800:slash:slashes:right claw:1100]
 [ATTACK:EDGE:10:10000:mercilessly pierce:mercilessly pierces:savage points:1800]
-
+70
 [ITEM_WEAPON:ITEM_WEAPON_TOMAHAWKS]
 [NAME:pair of tomahawks:pairs of tomahawks]
 [SIZE:800]
@@ -1010,7 +1010,7 @@ item_weapon
 [ATTACK:BLUNT:20:200:simultaneously bludgeon:simultaneously bludgeons:blunt ends of both weapons:2000]
 [ATTACK:BLUNT:250:200:strike:strikes:handle:left tomahawk:1000]
 [ATTACK:BLUNT:250:200:strike:strikes:handle:right tomahawk:1000]
-
+71
 [ITEM_WEAPON:ITEM_WEAPON_WHIP_CHAIN]
 [NAME:pair of bladed chains:pairs of bladed chains]
 [SIZE:700]
@@ -1023,7 +1023,7 @@ item_weapon
 [ATTACK:EDGE:20:100:simultaneously strike:simultaneously strikes:chains of both:3000]
 [ATTACK:BLUNT:250:4000:strike:strikes:left grip:1000]
 [ATTACK:BLUNT:250:4000:strike:strikes:right grip:1000]
-
+72
 [ITEM_WEAPON:ITEM_WEAPON_KATANA]
 [NAME:katana:katanas]
 [SIZE:700]
@@ -1034,7 +1034,7 @@ item_weapon
 [ATTACK:EDGE:20000:6000:slash:slashes:NO_SUB:1250]
 [ATTACK:BLUNT:20000:6000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
-
+73
 [ITEM_WEAPON:ITEM_WEAPON_KATANA_2H]
 [NAME:dai-katana:dai-katanas]
 [SIZE:1800]
@@ -1047,7 +1047,7 @@ item_weapon
 [ATTACK:BLUNT:60000:6000:slap:slaps:flat:1250]
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
 [ATTACK:EDGE:60000:12000:relentlessly hew:relentlessly hews:full force:2000]
-
+74
 [ITEM_WEAPON:ITEM_WEAPON_AXE_TOOTHED]
 [NAME:toothed axe:toothed axes]
 [SIZE:800]
@@ -1059,7 +1059,7 @@ item_weapon
 [ATTACK:EDGE:50000:2000:rake:rakes:toothed edge:1250]
 [ATTACK:EDGE:40000:12000:relentlessly hew:relentlessly hews:full force:2000] same as MWDF battleaxe
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
-
+75
 [ITEM_WEAPON:ITEM_WEAPON_MACUAHUITL]
 [NAME:macuahuitl sword:macuahuitl swords]
 [SIZE:700]
@@ -1073,7 +1073,7 @@ item_weapon
 [ATTACK:EDGE:60000:6000:sidestep and slash:sitesteps and slashes:forward edge:2500]
 [ATTACK:EDGE:80000:2000:sidestep and rake:sidesteps and slashes:reverse edge:1800]
 [ATTACK:EDGE:80000:3000:viciously rake:viciously rakes:sharp blade:3000]
-
+76
 [ITEM_WEAPON:ITEM_WEAPON_SPEAR_TOOTHED]
 [NAME:toothed spear:toothed spears]
 [SIZE:600]
@@ -1086,7 +1086,7 @@ item_weapon
 [ATTACK:EDGE:20:5000:stab:stabs:point:1000] normal spear stab is 20:10000:1000
 [ATTACK:EDGE:20:10000:impale:impales:point:2000] MWDF spear impale is 10:12000:2000
 [ATTACK:BLUNT:10000:6000:strike:strikes:shaft:1000]
-
+77
 [ITEM_WEAPON:ITEM_WEAPON_MSFLAIL_ORC]
 [NAME:makeshift flail:makeshift flails]
 [SIZE:500]
@@ -1097,7 +1097,7 @@ item_weapon
 [ATTACK:BLUNT:200:3000:bash:bashes:NO_SUB:2500] Normal flail is 4000 penetration depth
 [ATTACK:BLUNT:200:3000:smash:smashes:NO_SUB:2500]
 [ATTACK:BLUNT:200:4000:wind up in a powerful motion and crush:winds up in a powerful motion and crushes:NO_SUB:3500]
-
+78
 [ITEM_WEAPON:ITEM_WEAPON_MSMACE_ORC]
 [NAME:makeshift mace:makeshift mace]
 [SIZE:500]
@@ -1108,7 +1108,7 @@ item_weapon
 [ATTACK:BLUNT:25:200:bash:bashes:NO_SUB:2000] Normal mace is 20 contact area
 [ATTACK:BLUNT:25:200:smash:smashes:NO_SUB:2000]
 [ATTACK:BLUNT:25:1000:wind up in a powerful motion and crush:winds up in a powerful motion and crushes:NO_SUB:3500] much less intense than some MWDF blunt wind-ups (10000 penetration)
-
+79
 [ITEM_WEAPON:ITEM_WEAPON_MSBLADE_ORC]
 [NAME:makeshift blade:makeshift blades]
 [SIZE:300]
@@ -1124,7 +1124,7 @@ item_weapon
 ##########
 ## Society Arms Kits
 ##########
-
+80
 [ITEM_WEAPON:ITEM_WEAPON_JAGUAR_ARMS]
 # represents a macuahuitl and war-claws, large orcs may still use shield
 [NAME:jaguar warrior arms:jaguar warriors arms]
@@ -1141,7 +1141,7 @@ item_weapon
 [ATTACK:EDGE:500:800:slash:slashes:claws:1100]
 [ATTACK:EDGE:10:10000:follow up a parried slash with a vicious uppercut:follows up a parried slash with a vicious uppercut:claws:1800]
 [ATTACK:EDGE:6000:6000:unleash a furious assault:unleashes a furious assault:blade and claws:6000]
-
+81
 [ITEM_WEAPON:ITEM_WEAPON_BLADEMASTER_ARMS]
 # represents a pair of katana dual wielded (orcs learn this technique from Drow)
 [NAME:blademaster arms:blademasters arms]
@@ -1157,7 +1157,7 @@ item_weapon
 [ATTACK:EDGE:100:9000:riposte with a piercing blow:ripostes with a piercing blow:offhand blade:2500]
 [ATTACK:EDGE:90000:12000:attack with an exquisite form:attacks with an exquisite form:paired blades:4250]
 [ATTACK:EDGE:90000:18000:unleash a rapid onslaught of strikes:unleashes a rapid onslaught of strikes:paired blades:6000]
-
+82
 [ITEM_WEAPON:ITEM_WEAPON_CAVEBEAR_ARMS]
 [NAME:cavebear berserker arms:cavebear berserkers arms]
 # represents a axe and battlepick dual wielded (orcs learn this technique from Dwarf)
@@ -1178,7 +1178,7 @@ item_weapon
 #######
 # Powered Heavy Weapons
 #######
-
+83
 [ITEM_WEAPON:ITEM_WEAPON_CHAINAXE]
 [NAME:chainaxe:chainaxes]
 [SIZE:1200]
@@ -1194,7 +1194,7 @@ item_weapon
 [ATTACK:EDGE:60000:12000:relentlessly hew:relentlessly hews:power assisted overhand swing:5000] special critical
 [ATTACK:EDGE:60000:12000:assault:assaults:power assisted uppercut:3000] special moderate
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
-
+84
 [ITEM_WEAPON:ITEM_WEAPON_VIBROBLADE]
 [NAME:vibroblade:vibroblade]
 [SIZE:800]
@@ -1209,7 +1209,7 @@ item_weapon
 [ATTACK:EDGE:30000:6000:slash:slashes:vibrating edge:2500]
 [ATTACK:EDGE:50:15000:run through:runs through:vibrating blade:4100]
 [ATTACK:BLUNT:250:4000:strike:strikes:pommel:1000]
-
+85
 [ITEM_WEAPON:ITEM_WEAPON_STEAMHAMMER]
 [NAME:steamhammer:steamhammer]
 [SIZE:1800]

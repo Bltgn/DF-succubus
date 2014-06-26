@@ -101,10 +101,32 @@ local function addSkill(set, unit)
 	dfhack.run_script('succubus/influence', 'lust', unit.id)
 end
 
+-- Raises
+local function raiseQuality(reaction, unit, input_reagents)
+
+	print('--- reaction')
+	printall(reaction)
+
+	print('--- input_reagents')
+	printall(input_reagents)
+
+	-- Get the skill used
+
+	-- Get the quality increase
+
+	-- Raise that quality
+
+end
+
 -- Reaction hook
 eventful.onReactionComplete.fooccubusReaction = function(reaction, unit, input_items, input_reagents, output_items, call_native)
+
+	-- upgrades
+	if reaction.code:find('LUA_HOOK_DEFILE_') then
+		raiseQuality(reaction, unit, input_reagents)
+
 	-- fire
-	if reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
+	elseif reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
 		dfhack.run_script('syndromeweather', 'firebreath', 400, 100, 500)
 		dfhack.gui.showAnnouncement('The sky darkens and fireballs strikes the earth.', COLOR_YELLOW)
 

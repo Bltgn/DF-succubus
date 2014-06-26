@@ -18,29 +18,32 @@ Reactions
 7.4
 ---
 Raccourcir des noms
-Ajouter meat ou slade wagon
+
+Mettre à jour les embark profiles avec moins de choses et des points en plus.
+
+Mettre à jour les corruptions
+Mettre à jour call siege
+
+7.5
+---
+Battlecries
+Summon hellhound, nightmare, cerberus, shogoth...
+Mineral oil
+Summon hostile en script
+
+Make boltgun
+
+Defiler
+- Reforge breastplate
+- Reforge kite shield, tower shield, etc...
+- Decorate avec une gemme
+- Make boltgun
 
 Jobs
 - Faire de nouveaux sprites
 - Adapter les réactions à ces jobs
 
-Summon hostile en script
-
-Chauffer les forges
-- Ajouter heat stone
-- Ajouter des réactions pour chauffer les forges
-
-Defiler
-- Reforge breastplate
-- Reforge kite shield, tower shield, etc...
-- Make boltgun
-
-Fleshmaker
-
-7.5
----
-Battlecries
-Mineral oil
+Ajouter meat ou slade wagon
 
 8.0
 ---
@@ -48,6 +51,11 @@ Tout passer dans vanilla
 Morsure de vermin evil, immunizer voire booster
 
 Créer une météo spéciale pour les zones evil
+
+9.0
+---
+
+Fleshmaker
 
 Nettoyage
 ---------

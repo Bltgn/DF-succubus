@@ -15,13 +15,26 @@
 -- Config
 -- Chances of attack for each entity, they do not need to sum up to 100
 local entities = {
-	["MOUNTAIN"] = 50, -- dwarves
-	["FOREST"] = 50, -- elves
-	["KOBOLD_CAMP"] = 10,
-	["PLAINS"] = 50, -- humans
-	["DROW"] = 10,
+	["MOUNTAIN"] = 50,
+	["FOREST"] = 50,
+	["PLAINS"] = 50,
 	["GNOMES"] = 30,
-	["TAIGA"] = 30,
+
+	["ANTMEN"] = 10,
+	["TROGS"] = 30,
+	["SPAWN"] = 5,
+
+	["AUTOMATON"] = 20,
+	["BANSHEE"] = 20,
+	["FROST_GIANT"] = 20,
+	["WARLOCK"] = 10,
+
+	["CENTAUR_FF"] = 30,
+	["KOBOLD_CAMP"] = 20,
+	["NAGA"] = 30,
+	["WEREWOLF"] = 30
+
+	-- No slavers
 }
 
 -- Checks
