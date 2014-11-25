@@ -18,7 +18,7 @@ function unhappiness(unit)
 
 	if happiness == 0 then return 5
 	elseif happiness < 26 then return 4
-	elseif happiness <  51 then return 3
+	elseif happiness < 51 then return 3
 	elseif happiness < 75 then return 2
 	else return 1 end
 end
@@ -42,9 +42,8 @@ end
 -- @todo Support for last name maybe ?
 function getName(unitTarget)
 	local name = dfhack.units.getVisibleName(unit)
-	printall(name.words)
 
-	if not name.has_name then return '???' end
+	if not name.has_name then return 'A creature' end
 	if string.len(name.nickname) > 0 then return "'"..name.nickname.."'" end
 
 	return string.gsub(name.first_name, '^(.)', string.upper)
@@ -64,6 +63,6 @@ if isBerserk(unit) then
 		syndrome = 'FOOCCUBUS_BERSERK_3'
 	end
 
-	dfhack.run_script('addsyndrome', syndrome, unit.id)
+	dfhack.run_script('addsyndrome2', syndrome, unit.id)
 	if debug then print('- Apply '..syndrome) end
 end

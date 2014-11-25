@@ -1,0 +1,11 @@
+#Adds pet types to civs on world load
+AddMinionToCiv
+AddMountToCiv
+AddPackToCiv
+AddPullToCiv
+AddWagonToCiv
+AddPetToCiv
+
+#patches the armor stands
+enable fix-armory
+

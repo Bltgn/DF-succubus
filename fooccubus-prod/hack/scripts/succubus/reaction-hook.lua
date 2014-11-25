@@ -111,12 +111,36 @@ local function addSkill(set, unit)
 	roll = math.random(1, #skillSet)
 	print("Skill increase : "..skillSet[roll])
 	dfhack.run_script('trainskill', unit.id, skillSet[roll], 15)
+	dfhack.run_script('succubus/influence', 'lust', unit.id)
+end
+
+-- Resize the preserved reagents to make those succubus sized
+local function resizeReagents(input_items, input_reagents)
+	local sitems = {}
+
+	for i,x in ipairs(input_reagents) do
+		if x.flags.PRESERVE_REAGENT then sitems[i] = input_items[i] end
+	end
+
+	for _,x in pairs(sitems) do
+		x.maker_race = df.global.ui.race_id
+	end
 end
 
 -- Reaction hook
 eventful.onReactionComplete.fooccubusReaction = function(reaction, unit, input_items, input_reagents, output_items, call_native)
-	-- site effects
-	if reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
+
+	-- GUI
+	if reaction.code == 'LUA_HOOK_CHECK_POWERS' then
+		dfhack.run_script('show-powers', unit.id)
+	end
+
+	-- upgrades
+	if reaction.code:find('LUA_HOOK_IMPROVE_ITEM_DEFILE') then
+		resizeReagents(input_items, input_reagents)
+
+	-- fire
+	elseif reaction.code == 'LUA_HOOK_FOOCCUBUS_RAIN_FIRE' then
 		dfhack.run_script('syndromeweather', 'firebreath', 400, 100, 500)
 		dfhack.gui.showAnnouncement('The sky darkens and fireballs strikes the earth.', COLOR_YELLOW)
 
@@ -126,30 +150,36 @@ eventful.onReactionComplete.fooccubusReaction = function(reaction, unit, input_i
 		dfhack.run_script('succubus/influence', 'pride', unit.id)
 		paybackSiege(10, 'pride')
 
-	-- pet effects
+	-- greed
+
+	-- sloth
 	elseif reaction.code == 'LUA_HOOK_PROTECTIVE_TENTACLES' then
 		slothCreature('TENTACLE_MONSTER', reaction, unit, input_reagents)
-		dfhack.run_script('succubus/influence', unit.id, 'sloth')
+		dfhack.run_script('succubus/influence', 'sloth', unit.id)
 
-	-- invader effects
-	elseif reaction.code == 'LUA_HOOK_SOW_DISCORD' then invadersEffect('SOW_DISCORD', reaction, unit, input_reagents)
-	elseif reaction.code == 'LUA_HOOK_LURE_INVADERS' then invadersEffect('LURE_INVADERS', reaction, unit, input_reagents)
-	elseif reaction.code == 'LUA_HOOK_DIMENSION_PULL' then invadersEffect('DIMENSION_PULL', reaction, unit, input_reagents)
+	-- gluttony
+	elseif reaction.code == 'LUA_HOOK_FOOCCUBUS_DEVOUR_SOUL' then
+		dfhack.run_script('succubus/influence', 'gluttony', unit.id)
 
-	-- Skill trainers
-	elseif reaction.code == 'LUA_HOOK_NIGHTMARE_BROKER' then addSkill('BROKER', unit)
-	elseif reaction.code == 'LUA_HOOK_NIGHTMARE_CRAFTER' then addSkill('CRAFTER', unit)
-	elseif reaction.code == 'LUA_HOOK_NIGHTMARE_FARMER' then addSkill('FARMER', unit)
-	elseif reaction.code == 'LUA_HOOK_NIGHTMARE_SOLDIER' then addSkill('SOLDIER', unit)
-	-- Misc
-	elseif reaction.code == 'LUA_HOOK_CALL_SIEGE' then dfhack.run_script('fooccubus/callsiege', 100)
-	elseif reaction.code == 'LUA_HOOK_CALL_BEAST' then dfhack.run_script('force', 'megabeast')
-	elseif reaction.code == 'LUA_HOOK_WEATHER_RAIN' then dfhack.run_script('weather', 'rain')
-	elseif reaction.code == 'LUA_HOOK_DEATH_TO_DEATH' then
-		dfhack.run_script('syndromeweather', 'miasma', 50, 20, 5)
-		dfhack.gui.showAnnouncement('You brought strange eons where even death can die.', COLOR_YELLOW)
-	elseif reaction.code == 'LUA_HOOK_DEATH_TO_DEATH_CANCEL' then
-		dfhack.gui.showAnnouncement('Death came back and the order is restored.', COLOR_YELLOW)
+	-- envy
+	elseif reaction.code == 'LUA_HOOK_SOW_DISCORD' then
+		invadersEffect('SOW_DISCORD', reaction, unit, input_reagents)
+		dfhack.run_script('succubus/influence', 'envy',unit.id)
+	elseif reaction.code == 'LUA_HOOK_LURE_INVADERS' then
+		invadersEffect('LURE_INVADERS', reaction, unit, input_reagents)
+		dfhack.run_script('succubus/influence', 'envy',unit.id)
+	elseif reaction.code == 'LUA_HOOK_CALL_SIEGE' then
+		dfhack.run_script('succubus/callsiege', 100)
+		dfhack.run_script('succubus/influence', 'envy', unit.id)
+
+	-- Special summon
+	elseif reaction.code == 'LUA_HOOK_SUMMON_OBSIDIAN_COLOSSUS' or
+		reaction.code == 'LUA_HOOK_SUMMON_SPIRIT_OF_FIRE' or
+		reaction.code == 'LUA_HOOK_SUMMON_NIGHTMARE' or
+		reaction.code == 'LUA_HOOK_SUMMON_FROST_WRAITH' then
+		creatureId = string.sub(reaction.code, 17)
+		print(creatureId)
+		dfhack.timeout(2, 'ticks', function() dfhack.run_script('succubus/fovunsentient', unit.id, creatureId) end)
 	end
 end
 

@@ -66,8 +66,8 @@ creatureName = creatureRaw.name[0]
 creatureLetter = string.sub(creatureName, 0, 1)
 
 if creatureLetter == 'a' or creatureLetter == 'e' or
-	creatureLetter == 'i' or creatureLetter == 'u' or
-	creatureLetter == 'h' then
+	creatureLetter == 'i' or creatureLetter == 'o' or
+	creatureLetter == 'u' then
 	article = 'an'
 else
 	article = 'a'

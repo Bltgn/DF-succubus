@@ -5,10 +5,10 @@ This build contain the succubus civilization mod.
 It has been assembled using many contributions from the bay12 community:
 * Obsidian tileset and color palette
 * Phoebus color palette and creature sprite set
-* dfhack r3 maintained by Peterix and contributors
+* dfhack r4 maintained by Peterix and contributors
 * K33N elves
 * Falconne's UI improvements (mousequery, hotkeys and dwarfmonitor)
-* Warmist's spawnunit-r3 script
+* Warmist's spawnunit script
 * Teleport by Putnam
 * Bits of Masterwork DF by Meph
 * Dwarf chocolate by SethCreiyd
