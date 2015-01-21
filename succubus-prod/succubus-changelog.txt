@@ -1,4 +1,16 @@
 # Succubus Dungeon : Changelog #
+10.0
+- The mod is remade from scratch for DF2014 
+- The succubi now assist a major demon by building dark fortresses
+- The deep succubi are gone, both civs are now united
+- The succubi are now all fire immune
+- New furnace: Magma well, it will allow to spawn magma at will! Also unlock magma workshops
+- New furnace: Slade drill, creates slade blocks and boulders to build your spire
+- The floating glass furnace has been included
+
+7,8 and 9
+- Masterwork only releases
+
 6.3
 - Moved the corsets back in the UNDER layer.
 - The succubi should forget bad thoughts about clothing again.
