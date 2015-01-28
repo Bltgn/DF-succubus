@@ -1,8 +1,8 @@
 # Succubus dungeon mod #
 
-This build contain the succubus civilization mod.
+This archive contain the succubus civilization mod.
 
-It has been assembled using many contributions from the bay12 community:
+It has been assembled with the help of many contributions from the bay12 community:
 * Obsidian tileset and color palette
 * Phoebus color palette and creature sprite set
 * dfhack r4 maintained by Peterix and contributors
@@ -13,5 +13,6 @@ It has been assembled using many contributions from the bay12 community:
 * Bits of Masterwork DF by Meph
 * Dwarf chocolate by SethCreiyd
 * Roses scripts and spells
-* Slam by IndigoFenix
+* Scripts by IndigoFenix
+* The demon mod by Naryar
 * And of course, Dwarf Fortress by Tarn and Zach Adams
