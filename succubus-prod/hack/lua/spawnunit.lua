@@ -260,9 +260,6 @@ function CreateUnit(race_id,caste_id)
     df.global.world.units.all:insert("#",unit)
     df.global.world.units.active:insert("#",unit)
     
-    --df.global.world.units.other.ANY_ANIMAL:insert("#",unit)
-    unit.flags1.tame = true
-    unit.training_level = 7
     return unit
 end
 function findRace(name)
@@ -475,7 +472,7 @@ function place()
         end
     end
     
-
+    reset()
 
     return units
 end
