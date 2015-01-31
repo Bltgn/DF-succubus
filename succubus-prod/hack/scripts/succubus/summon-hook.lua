@@ -4,9 +4,10 @@
 	[REACTION:LUA_HOOK_SUMMON_DOG]
 	[NAME:Summon a dog]
 	[BUILDING:SUMMONING_CIRCLE:NONE]
+	[PRODUCT:100:1:BOULDER:NONE:INORGANIC:SMOKE_PURPLE]
 	[SKILL:ALCHEMY]
 
-	No product is needed. The creature will be friendly to your civ.
+	A product is needed. The creature will be friendly to your civ.
 
 	Special cases :
 	- LUA_HOOK_SUMMON_HFS: Will summon a clown, of any creature with the ID starting with DEMON.
@@ -114,7 +115,7 @@ local function announcement(creatureId)
 end
 
 -- Spawns a regular creature at one unit position, caste is random
-local function summonCreature(unitId, unit)
+local function summonCreature(unitId, unitSource)
 	local codeArray = utils.split_string(unitId, ' ')
 	local tame
 	local units, code, unitPos
@@ -125,21 +126,27 @@ local function summonCreature(unitId, unit)
 			tame = true
 		elseif starts(code, 'NUM_') then
 			spawnunit.ammount = tonumber(string.sub(code, 5))
+		else
+			unitId = code
 		end
 	end
 
 	-- Spawning
 	spawnunit.race = tostring(unitId)
-	spawnunit.setPos({dfhack.units.getPosition(unit)})
+	spawnunit.setPos({dfhack.units.getPosition(unitSource)})
 	units = spawnunit.place()
 
 	-- Post spawning processes
-	if tame then
-		for _, unit in ipairs(units) do
+	--if tame then
+	--[[	for _, unit in ipairs(units) do
+			unit.flags2.resident = true
+			unit.cultural_identity = unitSource.cultural_identity
+			unit.population_id = unitSource.population_id
+
 			unit.flags1.tame = true
 			unit.training_level = df.animal_training_level.Domesticated
 		end
-	end
+	--end]]
 
 	announcement(unitId)
 end

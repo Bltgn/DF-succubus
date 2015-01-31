@@ -51,13 +51,15 @@
     Made by warmist, but edited by Putnam for the dragon ball mod to be used in reactions
     Converted into a weird library by Boltgun
     TODO:
+        orientation
+        chosing a caste based on ratios
         birth time
         death time
         real body size
         blood max
         check if soulless and skip make soul
         set weapon body part
-        historical entity/nemesis
+        nemesis/histfig : add an 'arrived on site' event
         generate name
 --]=]
 local _ENV = mkmodule('spawnunit')
@@ -67,6 +69,7 @@ local utils=require 'utils'
 -- Picking a caste or gender at random
 local function getRandomCasteId(race_id)
     local cr = df.creature_raw.find(race_id)
+    local caste_id, casteMax
 
     casteMax = #cr.caste - 1
 
@@ -77,42 +80,35 @@ local function getRandomCasteId(race_id)
     return 0
 end
 
-local function getCaste(race_id,caste_id)
+function getCaste(race_id,caste_id)
     local cr=df.creature_raw.find(race_id)
     return cr.caste[caste_id]
 end
-
-local function genBodyModifier(body_app_mod)
+function genBodyModifier(body_app_mod)
     local a=math.random(0,#body_app_mod.ranges-2)
     return math.random(body_app_mod.ranges[a],body_app_mod.ranges[a+1])
 end
-
-local function getBodySize(caste,time)
+function getBodySize(caste,time)
     --TODO: real body size...
     return caste.body_size_1[#caste.body_size_1-1] --returns last body size
 end
-
-local function genAttribute(array)
+function genAttribute(array)
     local a=math.random(0,#array-2)
     return math.random(array[a],array[a+1])
 end
-
-local function norm()
+function norm()
     return math.sqrt((-2)*math.log(math.random()))*math.cos(2*math.pi*math.random())
 end
-
-local function normalDistributed(mean,sigma)
+function normalDistributed(mean,sigma)
     return mean+sigma*norm()
 end
-
-local function clampedNormal(min,median,max)
+function clampedNormal(min,median,max)
     local val=normalDistributed(median,math.sqrt(max-min))
     if val<min then return min end
     if val>max then return max end
     return val
 end
-
-local function makeSoul(unit,caste)
+function makeSoul(unit,caste)
     local tmp_soul=df.unit_soul:new()
     tmp_soul.unit_id=unit.id
     tmp_soul.name:assign(unit.name)
@@ -143,24 +139,25 @@ local function makeSoul(unit,caste)
     unit.status.souls:insert("#",tmp_soul)
     unit.status.current_soul=tmp_soul
 end
-
-local function CreateUnit(race_id,caste_id)
+function CreateUnit(race_id,caste_id)
     local race=df.creature_raw.find(race_id)
     if race==nil then error("Invalid race_id") end
     local caste
     local unit=df.unit:new()
 
-    if not caste_id then
+    -- Pick a random caste is none are set
+    if nil == caste_id then
         caste_id = getRandomCasteId(race_id)
     end
 
-    caste = getCaste(race_id,caste_id)
+    caste = getCaste(race_id, caste_id)
 
     unit:assign{
         race=race_id,
         caste=caste_id,
         sex=caste.gender,
     }
+
     unit.relations.birth_year=df.global.cur_year-15 --AGE is set here
     if caste.misc.maxage_max==-1 then
         unit.relations.old_year=-1
@@ -262,10 +259,13 @@ local function CreateUnit(race_id,caste_id)
     df.global.unit_next_id=df.global.unit_next_id+1
     df.global.world.units.all:insert("#",unit)
     df.global.world.units.active:insert("#",unit)
+    
+    --df.global.world.units.other.ANY_ANIMAL:insert("#",unit)
+    unit.flags1.tame = true
+    unit.training_level = 7
     return unit
 end
-
-local function findRace(name)
+function findRace(name)
     for k,v in pairs(df.global.world.raws.creatures.all) do
         if v.creature_id==name then
             return k
@@ -274,7 +274,7 @@ local function findRace(name)
     qerror("Race:"..name.." not found!")
 end
  
-local function createFigure(trgunit,he)
+function createFigure(trgunit,he,he_group)
     local hf=df.historical_figure:new()
     hf.id=df.global.hist_figure_next_id
     hf.race=trgunit.race
@@ -310,67 +310,96 @@ local function createFigure(trgunit,he)
     --change_state(hf, dfg.ui.site_id, region_pos)
  
  
---lets skip skills for now
---local skills = df.historical_figure_info.T_skills:new() -- skills snap shot
--- ...
---info.skills = skills
+    --lets skip skills for now
+    --local skills = df.historical_figure_info.T_skills:new() -- skills snap shot
+    -- ...
+    hf.info.skills = {new=true}
  
  
     he.histfig_ids:insert('#', hf.id)
     he.hist_figures:insert('#', hf)
- 
+    if he_group then
+        he_group.histfig_ids:insert('#', hf.id)
+        he_group.hist_figures:insert('#', hf)
+        hf.entity_links:insert("#",{new=df.histfig_entity_link_memberst,entity_id=he_group.id,link_strength=100})
+    end
     trgunit.flags1.important_historical_figure = true
     trgunit.flags2.important_historical_figure = true
     trgunit.hist_figure_id = hf.id
     trgunit.hist_figure_id2 = hf.id
     
     hf.entity_links:insert("#",{new=df.histfig_entity_link_memberst,entity_id=trgunit.civ_id,link_strength=100})
+    
     --add entity event
     local hf_event_id=df.global.hist_event_next_id
     df.global.hist_event_next_id=df.global.hist_event_next_id+1
     df.global.world.history.events:insert("#",{new=df.history_event_add_hf_entity_linkst,year=trgunit.relations.birth_year,
-        seconds=trgunit.relations.birth_time,id=hf_event_id,civ=hf.civ_id,histfig=hf.id,link_type=0})
+    seconds=trgunit.relations.birth_time,id=hf_event_id,civ=hf.civ_id,histfig=hf.id,link_type=0})
     return hf
 end
-
-local function createNemesis(trgunit,civ_id)
+function  allocateNewChunk(hist_entity)
+    hist_entity.save_file_id=df.global.unit_chunk_next_id
+    df.global.unit_chunk_next_id=df.global.unit_chunk_next_id+1
+    hist_entity.next_member_idx=0
+    print("allocating chunk:",hist_entity.save_file_id)
+end
+function allocateIds(nemesis_record,hist_entity)
+    if hist_entity.next_member_idx==100 then
+        allocateNewChunk(hist_entity)
+    end
+    nemesis_record.save_file_id=hist_entity.save_file_id
+    nemesis_record.member_idx=hist_entity.next_member_idx
+    hist_entity.next_member_idx=hist_entity.next_member_idx+1
+end
+ 
+function createNemesis(trgunit,civ_id,group_id)
     local id=df.global.nemesis_next_id
     local nem=df.nemesis_record:new()
-    local he=df.historical_entity.find(civ_id)
+    
     nem.id=id
     nem.unit_id=trgunit.id
     nem.unit=trgunit
-    nem.flags:resize(1)
+    nem.flags:resize(4)
     --not sure about these flags...
+    -- [[
     nem.flags[4]=true
     nem.flags[5]=true
     nem.flags[6]=true
     nem.flags[7]=true
     nem.flags[8]=true
     nem.flags[9]=true
+    --]]
     --[[for k=4,8 do
         nem.flags[k]=true
     end]]
+    nem.unk10=-1
+    nem.unk11=-1
+    nem.unk12=-1
     df.global.world.nemesis.all:insert("#",nem)
     df.global.nemesis_next_id=id+1
     trgunit.general_refs:insert("#",{new=df.general_ref_is_nemesisst,nemesis_id=id})
     trgunit.flags1.important_historical_figure=true
     
-    nem.save_file_id=he.save_file_id
-    
+    nem.save_file_id=-1
+ 
+    local he=df.historical_entity.find(civ_id)
     he.nemesis_ids:insert("#",id)
     he.nemesis:insert("#",nem)
-    nem.member_idx=he.next_member_idx
-    he.next_member_idx=he.next_member_idx+1
-    --[[ local gen=df.global.world.worldgen
-    gen.next_unit_chunk_id
-    gen.next_unit_chunk_offset
-    ]]
-    nem.figure=createFigure(trgunit,he)
+    local he_group
+    if group_id~=-1 then
+        he_group=df.historical_entity.find(group_id)
+    end
+    if he_group then
+        he_group.nemesis_ids:insert("#",id)
+        he_group.nemesis:insert("#",nem)
+    end
+    allocateIds(nem,he)
+    nem.figure=createFigure(trgunit,he,he_group)
 end
 
 -- Params
 position, civ_id, caste, race, name = nil
+no_nemesis = false
 ammount = 1
 
 function reset()
@@ -390,10 +419,11 @@ end
  
 -- Do the placement, race must be set, returns the created units
 function place()
+
+    local race_id = findRace(race)
+
     local pos = position or copyall(df.global.cursor)
     local i
-
-    print('spawnunit start')
 
     if pos.x==-30000 then
         qerror("Point your pointy thing somewhere")
@@ -412,28 +442,40 @@ function place()
         u.pos:assign(pos)
             
         if name then
-            u.name.first_name=name
-            u.name.has_name=true
+            u.name.first_name = name
+            u.name.has_name = true
         end
 
-        u.civ_id = civ_id or df.global.ui.civ_id
-        
-        local desig,ocupan=dfhack.maps.getTileFlags(position)
-        if ocupan.unit then
-            ocupan.unit_grounded=true
-            u.flags1.on_ground=true
+        local group_id
+        if df.global.gamemode == df.game_mode.ADVENTURE then
+            u.civ_id = civ_id or df.global.world.units.active[0].civ_id
+            group_id = -1
+        else    
+            u.civ_id = civ_id or df.global.ui.civ_id
+        end
+
+        if civ_id == -1 then
+            group_id = group_id or -1
         else
-            ocupan.unit=true
+            group_id = group_id or df.global.ui.group_id
+        end
+
+        local desig,ocupan = dfhack.maps.getTileFlags(pos)
+        if ocupan.unit then
+            ocupan.unit_grounded = true
+            u.flags1.on_ground = true
+        else
+            ocupan.unit = true
         end
 
         units[i] = u
+
+        if not no_nemesis and df.historical_entity.find(u.civ_id) ~= nil  then
+            createNemesis(u,u.civ_id,group_id)
+        end
     end
     
-    --[=[ crashes the game...
-    if df.historical_entity.find(u.civ_id) ~= nil  then
-        createNemesis(u,u.civ_id)
-    end
-    --]=]
+
 
     return units
 end
