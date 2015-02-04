@@ -10,7 +10,7 @@
 	A product is needed. The creature will be friendly to your civ.
 
 	Special cases :
-	- LUA_HOOK_SUMMON_HFS: Will summon a clown, of any creature with the ID starting with DEMON.
+	- LUA_HOOK_SUMMON_HFS: Will summon a clown, or any creature with the ID starting with DEMON.
 
 	Optional parameters, those are added to the end of the reaction name, separated with spaces.
 	- TAME: The creature will be fully tamed, non tamed creatures are not hostile but will require extra work to be trained.
@@ -21,6 +21,7 @@
 	Uses bits of hire-guards by Kurik Amudnil
 
 	@author Boltgun
+	@todo Remove the LUA_HOOK prefix as designed in dfhack 40.24 r2
 ]]
 
 local eventful = require 'plugins.eventful'

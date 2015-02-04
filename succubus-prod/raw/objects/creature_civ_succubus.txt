@@ -18,6 +18,7 @@ creature_civ_succubus
 	[CREPUSCULAR]
 	[MILKABLE]
 	[MAGMA_VISION]
+	[PRONE_TO_RAGE:5]
 
 	// Natural skills
 	[NATURAL_SKILL:AXE:0]YESHARDERINVADER_SUCCUBUS
@@ -50,37 +51,28 @@ creature_civ_succubus
 	[PERSONALITY:ANGER_PROPENSITY:50:75:100]
 	[PERSONALITY:VIOLENT:0:75:100]
 	[PERSONALITY:IMMODESTY:50:50:100]
-	[PERSONALITY:CRUELTY:50:50:100]
-	[PERSONALITY:EXCITEMENT_SEEKING:50:50:100]
+	[PERSONALITY:EXCITEMENT_SEEKING:50:60:100]
 
 	// Skills
 	[SKILL_LEARN_RATE:CONCENTRATION:200]
 	[SKILL_LEARN_RATE:KNOWLEDGE_ACQUISITION:200]
 	[SKILL_LEARN_RATE:LEADERSHIP:200]
 	[SKILL_LEARN_RATE:TEACHING:200]
-	[SKILL_LEARN_RATE:SOAP_MAKING:200]
+	[SKILL_LEARN_RATE:DISCIPLINE:300]
 
 	[PROFESSION_NAME:CRAFTSMAN:Craftsuccubus:Craftsuccubi]
 	[PROFESSION_NAME:FISHERMAN:Fishersuccubus:Fishersuccubi]
 	[PROFESSION_NAME:FARMER:Farmworker:Farmworkers]
-	[PROFESSION_NAME:MILLER:Archeologist:Archeologists]
-	[PROFESSION_NAME:PRESSER:Researcher:Researchers]
-	[PROFESSION_NAME:POTTER:Scribe:Scribes]
-	[PROFESSION_NAME:STRAND_EXTRACTOR:Cultist:Cultists]
-	[PROFESSION_NAME:GLAZER:Toolmaker:Toolmakers]
-	[PROFESSION_NAME:SOAP_MAKER:Tempter:Tempters]
-	[PROFESSION_NAME:WOOD_BURNER:Oven operator:Oven operators]
-	[PROFESSION_NAME:LYE_MAKER:chemist:chemists]
 	[PROFESSION_NAME:PUMP_OPERATOR:Machine operator:Machine operators]
 	[PROFESSION_NAME:PLANTER:Farmer:Famers]
 	[PROFESSION_NAME:BEEKEEPER:Hivekeeper:Hivekeepers]
 	[PROFESSION_NAME:THRESHER:Miller:Millers]
 	[PROFESSION_NAME:ENGRAVER:Engraver:Engravers]
-	[PROFESSION_NAME:ALCHEMIST:Warlock:Warlocks]
+	[PROFESSION_NAME:ALCHEMIST:Witch:Witches]
 	[PROFESSION_NAME:RECRUIT:Inductee:Inductees]
 	[PROFESSION_NAME:HAMMERMAN:Hammer Lady:Hammer Ladies]
 	[PROFESSION_NAME:SPEARMAN:Spear Lady:Spear Ladies]
-	[PROFESSION_NAME:CROSSBOWMAN:MarkLady:Mark Ladies]
+	[PROFESSION_NAME:CROSSBOWMAN:Mark Lady:Mark Ladies]
 	[PROFESSION_NAME:BOWMAN:Bow Lady:Bow Ladies]
 	[PROFESSION_NAME:AXEMAN:Axe Lady:Axe Ladies]
 	[PROFESSION_NAME:SWORDSMAN:Sword Lady:Sword Ladies]
@@ -99,21 +91,79 @@ creature_civ_succubus
 	[PROFESSION_NAME:MASTER_LASHER:Whip Mistress:Whip Mistress]
 	[PROFESSION_NAME:MASTER_BLOWGUNMAN:Blowgun Mistress:Blowgun Mistress]
 
-	// Body and description
+	// Description stuff
+	[MANNERISM_FINGERS:finger:fingers]
+	[MANNERISM_NOSE:nose]
+	[MANNERISM_EAR:ear]
+	[MANNERISM_HEAD:head]
+	[MANNERISM_EYES:eyes]
+	[MANNERISM_MOUTH:mouth]
+	[MANNERISM_HAIR:hair]
+	[MANNERISM_KNUCKLES:knuckles]
+	[MANNERISM_LIPS:lips]
+	[MANNERISM_CHEEK:cheek]
+	[MANNERISM_NAILS:nails]
+	[MANNERISM_FEET:hooves]
+	[MANNERISM_ARMS:arms]
+	[MANNERISM_HANDS:hands]
+	[MANNERISM_TONGUE:tongue]
+	[MANNERISM_LEG:leg]
+	[MANNERISM_LAUGH]
+	[MANNERISM_SMILE]
+	[MANNERISM_WALK]
+	[MANNERISM_SIT]
+	[MANNERISM_BREATH]
+	[MANNERISM_POSTURE]
+	[MANNERISM_STRETCH]
+	[MANNERISM_EYELIDS]
+	[SPOUSE_CONVERSION_TARGET]
+	[SPEECH:succubus.txt]
+
+	// Attributes
+	[PHYS_ATT_RANGE:AGILITY:700:1200:1400:1500:1600:1800:2500]              ++
+	[PHYS_ATT_RANGE:STRENGTH:450:950:1150:1250:1350:1550:2250]              +
+	[PHYS_ATT_RANGE:ENDURANCE:150:600:800:900:1000:1100:1500]				-
+	[PHYS_ATT_RANGE:TOUGHNESS:150:600:800:900:1000:1100:1500]				-
+	[PHYS_ATT_RANGE:RECUPERATION:450:950:1150:1250:1350:1550:2250]			+
+	[PHYS_ATT_RANGE:DISEASE_RESISTANCE:450:950:1150:1250:1350:1550:2250]    +
+	[MENT_ATT_RANGE:PATIENCE:0:400:600:750:800:900:1100]					--
+	[MENT_ATT_RANGE:FOCUS:0:400:600:750:800:900:1100] 						--
+	[MENT_ATT_RANGE:CREATIVITY:1250:1500:1750:2000:2500:3000:5000]			+++
+	[MENT_ATT_RANGE:LINGUISTIC_ABILITY:1250:1500:1750:2000:2500:3000:5000]  +++
+	[MENT_ATT_RANGE:MEMORY:5000:5000:5000:5000:5000:5000:5000]              max
+	[MENT_ATT_RANGE:WILLPOWER:150:600:800:900:1000:1100:1500] 				-
+	[MENT_ATT_RANGE:MUSICALITY:1250:1500:1750:2000:2500:3000:5000]          +++
+	[MENT_ATT_RANGE:SOCIAL_AWARENESS:700:1200:1400:1500:1600:1800:2500]     ++
+
+	// Movement and detection
+	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:612:408:204:1900:2900] 43 kph
+	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
+	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph
+	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
+	[SMELL_TRIGGER:60]
+	[LOW_LIGHT_VISION:9000]
+	[ODOR_LEVEL:75]
+	[SWIMS_LEARNED]
+
+	// Tiles
 	[CREATURE_TILE:'i']
 	[COLOR:7:0:1]
-	[GLOWTILE:82][GLOWCOLOR:0:14:0]
+	[GLOWTILE:82]
+	[GLOWCOLOR:0:14:0]
+
+	// Human Sized by default
+	[BODY_SIZE:0:0:4000]
+	[BODY_SIZE:1:168:17500]
+	[BODY_SIZE:15:0:75000]
 
 	// Common for all castes, specific pure succubi tags are defined at the end
 	[CASTE:FEMALE]
 		[CREATURE_CLASS:SUCCUBUS_FEMALE]
-		[DESCRIPTION:A medium sized demon with a beautiful face and caprinae features twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to serve its master before spreading over the world. The succubi are associated with lust, depravity and fire, but that's just hearsay.]
+		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to serve its master before spreading over the world. The succubi are associated with lust, depravity and fire, but that's just hearsay.]
 		[FEMALE]
-		[POP_RATIO:90000]
+		[POP_RATIO:80000]
 		[LITTERSIZE:1:2]
 		[CASTE_NAME:succubus:succubi:succubus]
-		[PREFSTRING:tantalizing figure]
-		[PREFSTRING:eloquence]
 		[BABYNAME:succubus baby:succubus babies]
 		[CHILDNAME:succubus girl:succubus girls]
 		[ODOR_STRING:sweet fragrance]
@@ -123,19 +173,18 @@ creature_civ_succubus
 
 	[CASTE:MALE]
 		[CREATURE_CLASS:SUCCUBUS_MALE]
-		[DESCRIPTION:A medium sized demon with a charming face and caprinae features twisted into humanoid form. He moves with elegance. Beware of his gentle manners. In a time before time, his kind escaped from the underworld to serve its master before spreading over the world. The incubi are associated with lust, depravity and fire, but that's just hearsay.]
+		[DESCRIPTION:A male hedonistic demon with caprinae legs twisted into humanoid form. He moves with elegance. Beware of his gentle manners. In a time before time, his kind escaped from the underworld to serve its master before spreading over the world. The incubi are associated with lust, depravity and fire, but that's just hearsay.]
 		[MALE]
 		[BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
-		[POP_RATIO:10000]
+		[POP_RATIO:20000]
 		[CASTE_NAME:incubus:incubi:incubus]
-		[PREFSTRING:manly chest]
-		[PREFSTRING:gentle manners]
 		[BABYNAME:incubus baby:incubus babies]
 		[CHILDNAME:incubus boy:incubus boys]
 		[ODOR_STRING:fresh fragrance]
 
-		[CASTE_PROFESSION_NAME:SOAP_MAKER:Tempter:Tempters]
-		[CASTE_PROFESSION_NAME:ALCHEMIST:Warlock:Warlocks]
+		[CASTE_PROFESSION_NAME:CRAFTSMAN:Craftincubus:Craftincubi]
+		[CASTE_PROFESSION_NAME:FISHERMAN:Fisherincubus:Fisherincubi]
+		[CASTE_PROFESSION_NAME:ALCHEMIST:Witcher:Witchers]
 		[CASTE_PROFESSION_NAME:HAMMERMAN:Hammer Gent:Hammer Gents]
 		[CASTE_PROFESSION_NAME:SPEARMAN:Spear Gent:Spear Gents]
 		[CASTE_PROFESSION_NAME:CROSSBOWMAN:Markgent:Mark Gents]
@@ -160,9 +209,10 @@ creature_civ_succubus
 		[ORIENTATION:MALE:10:45:45]
 		[ORIENTATION:FEMALE:0:10:90] // It's important to have breeding couples for world gen
 
+	// Now creating the corruption castes by cloning the male and female ones
 	[SELECT_CASTE:ALL]
 
-	[USE_CASTE:CAMBION_FEMALE:FEMALE] // elf + drow
+	[USE_CASTE:CAMBION_FEMALE:FEMALE] // elf
 	[USE_CASTE:CAMBION_MALE:MALE]
 	[USE_CASTE:DEVIL_FEMALE:FEMALE] // human + warlock
 	[USE_CASTE:DEVIL_MALE:MALE]
@@ -172,136 +222,337 @@ creature_civ_succubus
 	[USE_CASTE:HELLION_MALE:MALE]
 	[USE_CASTE:IMP_FEMALE:FEMALE] // kobold
 	[USE_CASTE:IMP_MALE:MALE]
-	// todo gnome, orc
+	[USE_CASTE:ONI_FEMALE:FEMALE] // orc
+	[USE_CASTE:ONI_MALE:MALE]
+	[USE_CASTE:PUCK_FEMALE:FEMALE] // gnome
+	[USE_CASTE:PUCK_MALE:MALE]
 
+	// Corrupted sentient clases (note that they usually carry their skills and personalities upon tranformsations)
 	[SELECT_CASTE:CAMBION_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:CAMBION_MALE]
-		[BODY:HUMANOID_NECK:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
+		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium sized creature of great beauty who escaped the strict rules of her homeland for a life of revelry among the succubi. With her body altered by demonic energies, there is no telling if this graceful being once lived in the forests or in the underground cities. The cambions particulary love to stalk their prey for hours in the shadows before striking their heart.]
+		[DESCRIPTION:A medium sized creature of great beauty who gave up nature for a life of revelry among the damned. The cambions love to stalk their prey in the shadows before striking its heart with an arrow.]
 		[CASTE_NAME:cambion:cambions:cambion]
 		[BABYNAME:cambion baby:cambion babies]
 		[CHILDNAME:cambion girl:cambion girls]
-		[PHYS_ATT_RANGE:RECUPERATION:450:950:1150:1250:1350:1550:2250]
-		[MENT_ATT_RANGE:LINGUISTIC_ABILITY:1250:1500:1750:2000:2500:3000:5000]
-		[MENT_ATT_RANGE:SPATIAL_SENSE:450:950:1150:1250:1350:1550:2250]
-		[BODY:5TOES]
-		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
 		[PREFSTRING:enthralling features]
-		[SKILL_LEARN_RATE:SNEAK:125]
+
+		[CASTE_PROFESSION_NAME:CRAFTSMAN:craftscambion:craftscambions]
+		[CASTE_PROFESSION_NAME:FISHERMAN:fishercambion:fishercambions]
+
+		[PHYS_ATT_RANGE:DISEASE_RESISTANCE:1250:1500:1750:2000:2500:3000:5000]  +++
+		[MENT_ATT_RANGE:KINESTHETIC_SENSE:700:1200:1400:1500:1600:1800:2500]    ++
+		[MENT_ATT_RANGE:EMPATHY:450:950:1150:1250:1350:1550:2250]               +
+		[MENT_ATT_RANGE:SPATIAL_SENSE:450:950:1150:1250:1350:1550:2250]         +
+
+		[SKILL_LEARN_RATE:MINING:50]
+		[SKILL_LEARN_RATE:WOODCUTTING:50]
+		[SKILL_LEARN_RATE:MECHANICS:50]
+		[SKILL_LEARN_RATE:SNEAK:130]
 		[SKILL_LEARN_RATE:SITUATIONAL_AWARENESS:150]
-		[SKILL_LEARN_RATE:MINING:70]
 		[SKILL_LEARN_RATE:BOW:130]
 		[SKILL_LEARN_RATE:RANGED_COMBAT:130]
+
+		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
+		[BODY_SIZE:0:0:3000]
+		[BODY_SIZE:1:168:15000]
+		[BODY_SIZE:12:0:60000]
+		[SMELL_TRIGGER:10]
+		[GRASSTRAMPLE:0]
+		[NO_VEGETATION_PERTURB]	
+		[MANNERISM_FEET:feet]	
+
+		[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2206:1692:1178:585:3400:4900] 15 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2728:2069:1409:675:4000:5700] 13 kph
 	[SELECT_CASTE:CAMBION_MALE]
-		[DESCRIPTION:A medium sized creature of great beauty who escaped the strict rules of his homeland for a life of revelry among the succubi. With his body altered by demonic energies, there is no telling if this graceful being once lived in the forests or in the underground cities. The cambions particulary love to stalk their prey for hours in the shadows before striking their heart.]
-		[CHILDNAME:cambion boy:cambion boys]
-		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
+		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
+			[BP_ADD_TYPE:GELDABLE]
 
 	[SELECT_CASTE:DEVIL_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:DEVIL_MALE]
-		[BODY:HUMANOID_NECK:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
+		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium sized creature whose fierce ambitions led her to sell her soul. Many tales are whispered in the dark about those who approach mens of power and bind them with intricate contracts. The succubi admire their charisma and enjoy their company. Dealing with a devil is a dangerous task, and they always win their negotiations.]
+		[DESCRIPTION:A medium sized creature who sold her soul to fulfill her fierce ambitions. Many tales are whispered in the dark about those who approach men of power and bind them with intricate contracts. Dealing with a devil is a dangerous task, and they always win their negotiations.]
 		[CASTE_NAME:devil:devils:devilish]
 		[BABYNAME:devil baby:devil babies]
 		[CHILDNAME:devil girl:devil girls]
-		[PHYS_ATT_RANGE:ENDURANCE:700:1200:1400:1500:1600:1800:2500]
-		[BODY:5TOES]
-		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
 		[PREFSTRING:charming tongue]
-		[SKILL_LEARN_RATE:PACIFY:200]
-		[SKILL_LEARN_RATE:JUDGING_INTENT:200]
-		[SKILL_LEARN_RATE:APPRAISAL:200]
-		[SKILL_LEARN_RATE:NEGOTIATION:200]
+		[MANNERISM_FEET:feet]
+
+		[CASTE_PROFESSION_NAME:CRAFTSMAN:craftsdevil:craftsdevils]
+		[CASTE_PROFESSION_NAME:FISHERMAN:fisherdevil:fisherdevils]
+
+		[CAVE_ADAPT]
+		[PHYS_ATT_RANGE:ENDURANCE:700:1200:1400:1500:1600:1800:2500] ++
+		[MENT_ATT_RANGE:SOCIAL_AWARENESS:1250:1500:1750:2000:2500:3000:5000] +++
+		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
+		[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:675:450:225:1900:2900] 39 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:6561:6115:5683:1755:7456:8567] 5 kph, NO DATA
+		[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:5341:4723:4112:1254:6433:7900] 7 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph, NO DATA
+
+		[SKILL_LEARN_RATE:PACIFY:300]
+		[SKILL_LEARN_RATE:JUDGING_INTENT:300]
+		[SKILL_LEARN_RATE:APPRAISAL:300]
+		[SKILL_LEARN_RATE:NEGOTIATION:300]
+		[SKILL_LEARN_RATE:SITUATIONAL_AWARENESS:200]
+
 	[SELECT_CASTE:DEVIL_MALE]
 		[CHILDNAME:devil boy:devil boys]
-		[DESCRIPTION:A medium sized creature whose fierce ambitions led him to sell his soul. Many tales are whispered in the dark about those who approach mens of power and bind them with intricate contracts. The succubi admire their charisma and enjoy their company. Dealing with a devil is a dangerous task, and they always win their negotiations.]
-		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
+		[DESCRIPTION:A medium sized creature who sold his soul to fulfill his fierce ambitions. Many tales are whispered in the dark about those who approach men of power and bind them with intricate contracts. Dealing with a devil is a dangerous task, and they always win their negotiations.]
+		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
+			[BP_ADD_TYPE:GELDABLE]
 
 	[SELECT_CASTE:FIEND_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:FIEND_MALE]
-		[BODY:HUMANOID_NECK:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
+		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the succubus kingdom, shedding all thoughts of morality and decency. The fiends live in dark hallways, where they dig with an unmatched greed and contruct the most dangerous dungeons.]
+		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the demonic kingdoms, shedding all thoughts of morality and decency for a life of greed, violence and infernal forges. Usually the process of becoming a fiend is called 'immigration'.]
 		[CASTE_NAME:fiend:fiends:fiendish]
 		[BABYNAME:fiend baby:fiend babies]
 		[CHILDNAME:fiend girl:fiend girls]
-		[ALCOHOL_DEPENDENT][TRANCES][LIKES_FIGHTING][CAVE_ADAPT]
-		[SKILL_LEARN_RATE:MECHANICS:150]
-		[SKILL_LEARN_RATE:MINING:130]
-		[SKILL_LEARN_RATE:MELEE_COMBAT:130]
-		[MENT_ATT_RANGE:FOCUS:700:1200:1400:1500:1600:1800:2500]
+		[PREFSTRING:psychotic outbreaks]
+		[MANNERISM_FEET:feet]
+
+		[CASTE_PROFESSION_NAME:CRAFTSMAN:craftsfiend:craftsfiends]
+		[CASTE_PROFESSION_NAME:FISHERMAN:fisherfiend:fisherfiends]
+		
+		[ALCOHOL_DEPENDENT]
+		[TRANCES]
+		[CAVE_ADAPT]
+		[PRONE_TO_RAGE:20]
+		[PHYS_ATT_RANGE:AGILITY:150:600:800:900:1000:1100:1500]  -
+		[PHYS_ATT_RANGE:TOUGHNESS:450:950:1150:1250:1350:1550:2250]  +
+		[MENT_ATT_RANGE:FOCUS:700:1200:1400:1500:1600:1800:2500] ++
+		[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
+
 		[RELSIZE:BY_CATEGORY:LIVER:300]
 		[BODY_SIZE:0:0:3000]
 		[BODY_SIZE:1:168:15000]
 		[BODY_SIZE:12:0:60000]
-		[BODY:5TOES]
 		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
-		[PREFSTRING:psychotic outbreaks]
-		[PREFSTRING:nefarious creativity]
+
+		[SKILL_LEARN_RATE:MINING:150]
+		[SKILL_LEARN_RATE:MELEE_COMBAT:130]
+		[SKILL_LEARN_RATE:FORGE_ARMOR:130]
+		[SKILL_LEARN_RATE:FORGE_WEAPON:130]
+		[SKILL_LEARN_RATE:MECHANICS:130]
+
 	[SELECT_CASTE:FIEND_MALE]
-		[CASTE_NAME:fiend:fiends:fiend]
+		[CASTE_NAME:fiend:fiends:fiendish]
 		[CHILDNAME:fiend boy:fiend boys]
-		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
+		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
+			[BP_ADD_TYPE:GELDABLE]
 
 	[SELECT_CASTE:HELLION_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:HELLION_MALE]
-		[BODY:HUMANOID_NECK:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
+		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium-sized creature driven to madness by its evil nature. A life of stealing, kidnapping and murdering led her to fall into the claws of the succubi who healed her disfigured features and taught her to channel her barbaric pulsions into new, refined acts of cruelty.]
+		[DESCRIPTION:A medium-sized creature driven to corruption by her evil nature. A life of stealing, kidnapping and murdering brought her into the claws of greater evils who healed her disfigured features and taught her to channel her barbaric pulsions into new, refined acts of cruelty. Her combined evil culture provided her a strong affinity with whips.]
 		[CASTE_NAME:hellion:hellions:hellion]
 		[BABYNAME:hellion baby:hellion babies]
 		[CHILDNAME:hellion girl:hellion girls]
-		[NOCTURNAL][BONECARN][NO_DRINK][NO_EAT][LIKES_FIGHTING]
-		[PHYS_ATT_RANGE:ENDURANCE:700:1200:1400:1500:1600:1800:2500]
-		[BODY:5TOES]
-		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
-		[SKILL_LEARN_RATE:WHIP:130]
-		[PREFSTRING:dirty ways]
 		[PREFSTRING:sadistic tastes]
+		[MANNERISM_FEET:feet]
+
+		[CASTE_PROFESSION_NAME:CRAFTSMAN:crafthellions:crafthellions]
+		[CASTE_PROFESSION_NAME:FISHERMAN:fisherhellion:fisherhellions]
+
+		[NOCTURNAL]
+		[BONECARN]
+		[NO_DRINK]
+		[NO_EAT]
+		[PRONE_TO_RAGE:10]
+		[PHYS_ATT_RANGE:ENDURANCE:700:1200:1400:1500:1600:1800:2500]             ++
+		[MENT_ATT_RANGE:EMPATHY:0:100:200:300:400:450:500]                       ---
+		[MENT_ATT_RANGE:CREATIVITY:0:400:600:750:800:900:1100]                   --
+		[MENT_ATT_RANGE:INTUITION:0:400:600:750:800:900:1100]                    --
+		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
+		[BODY_SIZE:0:0:3000]
+		[BODY_SIZE:1:168:15000]
+		[BODY_SIZE:12:0:60000]
+		[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:675:450:225:1900:2900] 39 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:6561:6115:5683:1755:7456:8567] 5 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:5341:4723:4112:1254:6433:7900] 7 kph
+		[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
+
+		[PERSONALITY:ALTRUISM:0:25:50]
+		[PERSONALITY:IMMODESTY:10:60:100]
+		[PERSONALITY:CRUELTY:50:75:100]
+		[PERSONALITY:SWAYED_BY_EMOTIONS:0:25:50]
+		
+		[SKILL_LEARN_RATE:WHIP:150]
+		[SMELL_TRIGGER:50]
+
 	[SELECT_CASTE:HELLION_MALE]
 		[CHILDNAME:hellion boy:hellion boys]
-		[DESCRIPTION:A medium-sized creature driven to madness by its evil nature. A life of stealing, kidnapping and murdering led him to fall into the claws of the succubi who healed his disfigured features and taught him to channel his barbaric pulsions into new, refined acts of cruelty.]
-		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
+		[DESCRIPTION:A medium-sized creature driven to corruption by his evil nature. A life of stealing, kidnapping and murdering brought him into the claws of greater evils who healed his disfigured features and taught him to channel his barbaric pulsions into new, refined acts of cruelty. His combined evil culture provided him a strong affinity with whips.]
+		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
+			[BP_ADD_TYPE:GELDABLE]
 
 	[SELECT_CASTE:IMP_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:IMP_MALE]
-		[BODY:HUMANOID_NECK:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
+		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:3TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A small, squat creature with long drooping ears, glowing eyes and impressive horns. This once feeble being has won the heart of a succubus who found it too cute to be released. Spending time with a lust demon made it stronger, and it now uses its skills with daggers to protect its mistress.]
+		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This once feeble being has won the heart of a succubus who found her too cute to be released. Spending time with a lust demon made her stronger, and she now uses her skills with daggers to protect her home. Female imps are also known to lay eggs if they have access to the right facilities.]
 		[CASTE_NAME:imp:imps:impish]
-		[BABYNAME:imp baby:imp babies]
+		[BABYNAME:imp pup:imp pups]
 		[CHILDNAME:imp girl:imp girls]
+		[PREFSTRING:cute eyes]
+		[PREFSTRING:extreme mischief]
+		[MANNERISM_FEET:feet]
+
+		[LOCKPICKER]
+		[TRAPAVOID]
 		[BODY_SIZE:0:0:1000]
 		[BODY_SIZE:1:168:7500]
 		[BODY_SIZE:12:0:30000]
-		[PREFSTRING:extreme mischief]
-		[PREFSTRING:cute faces]
-		[PREFSTRING:small frames]
-		[LOCKPICKER][TRAPAVOID]
+		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
+		[PHYS_ATT_RANGE:TOUGHNESS:450:950:1150:1250:1350:1550:2250]              +
+		[MENT_ATT_RANGE:PATIENCE:450:950:1150:1250:1350:1550:2250]               +
+		[PERSONALITY:ANXIETY_PROPENSITY:50:75:100]
+		[PERSONALITY:TRUST:0:25:50]
+		[PERSONALITY:ACTIVITY_LEVEL:50:75:100]
+		[PERSONALITY:GREED:50:75:100]
+		[SMELL_TRIGGER:25]
+		[LOW_LIGHT_VISION:10000]
+
+		[CASTE_PROFESSION_NAME:CRAFTSMAN:craftimp:craftimps]
+		[CASTE_PROFESSION_NAME:FISHERMAN:fisherimp:fisherimps]	
+
 		[SKILL_LEARN_RATE:SNEAK:130]
 		[SKILL_LEARN_RATE:DODGING:200]
 		[SKILL_LEARN_RATE:DAGGER:200]
 		[SKILL_LEARN_RATE:MINING:25]
-		[BODY:3TOES]
-		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
+
 	[SELECT_CASTE:IMP_MALE]
 		[CHILDNAME:imp boy:imp boys]
-		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
+		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This once feeble being has won the heart of a succubus who found his too cute to be released. Spending time with a lust demon made him stronger, and he now uses his skills with daggers to protect his home.]
+	[SELECT_CASTE:IMP_FEMALE] // Adding eggs
+		[BODY_DETAIL_PLAN:LEATHERY_EGG_MATERIALS]
+		[LAYS_EGGS]
+			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGGSHELL:SOLID]
+			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGG_WHITE:LIQUID]
+			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGG_YOLK:LIQUID]
+			[EGG_SIZE:1100]
+			[CLUTCH_SIZE:1:2]
+
+	[SELECT_CASTE:ONI_FEMALE]
+	[SELECT_ADDITIONAL_CASTE:ONI_MALE]
+		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:2HEAD_HORN]
+		[POP_RATIO:1]
+		[DESCRIPTION:A powerful humanoid creature with violent tendencies who got intoxicated on foul wine. They since live for the thrill of battle and drinking, usually giving into both at the same time. They can learn to fight quickly unarmed or with a mace.]
+		[CASTE_NAME:oni:onis:oni]
+		[BABYNAME:oni baby:oni babies]
+		[CHILDNAME:oni girl:oni girls]
+		[PREFSTRING:lust for battle]
+		[MANNERISM_FEET:feet]
+		
+		[ALCOHOL_DEPENDENT]
+		[VIEWRANGE:28]
+		[TRANCES]
+		[CAVE_ADAPT]
+		[CREPUSCULAR]
+		[PHYS_ATT_RANGE:STRENGTH:1500:2000:2250:2500:2750:3000:3500]             +++
+		[PHYS_ATT_RANGE:TOUGHNESS:3000:3500:3750:4000:4250:4500:5000]			 +++
+		[PHYS_ATT_RANGE:RECUPERATION:3000:3500:3750:4000:4250:4500:5000]         +++
+		[MENT_ATT_RANGE:LINGUISTIC_ABILITY:150:600:800:900:1000:1100:1500]       -
+		[MENT_ATT_RANGE:MUSICALITY:150:600:800:900:1000:1100:1500]               -
+		[MENT_ATT_RANGE:EMPATHY:150:600:800:900:1000:1100:1500]                  -
+		[MENT_ATT_RANGE:CREATIVITY:150:600:800:900:1000:1100:1500]               -
+
+		[CASTE_PROFESSION_NAME:CRAFTSMAN:craftsoni:craftsonis]
+		[CASTE_PROFESSION_NAME:FISHERMAN:fisheroni:fisheronis]
+
+		[PERSONALITY:ASSERTIVENESS:0:55:100]
+		[PERSONALITY:EXCITEMENT_SEEKING:0:55:100]
+
+		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
+
+  		[SKILL_LEARN_RATE:SWORD:130]
+  		[SKILL_LEARN_RATE:AXE:130]
+ 		[SKILL_LEARN_RATE:MACE:150]
+ 		[SKILL_LEARN_RATE:MELEE_COMBAT:150]
+ 		[SKILL_LEARN_RATE:WRESTLING:150]
+ 		[SKILL_LEARN_RATE:GRASP_STRIKE:150]
+ 		[SKILL_LEARN_RATE:STANCE_STRIKE:150]
+ 		[SKILL_LEARN_RATE:BREWING:150]
+
+	[SELECT_CASTE:ONI_MALE]
+		[CHILDNAME:oni boy:oni boys]
+		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
+			[BP_ADD_TYPE:GELDABLE]
+
+	[SELECT_CASTE:PUCK_FEMALE]
+	[SELECT_ADDITIONAL_CASTE:PUCK_MALE]
+		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
+		[POP_RATIO:1]
+		[DESCRIPTION:A tiny, jolly, enthusiastic, insane humanoid creature that dwells under the lair of evil creatures. Versed in technology, they make up for their diminutive size with advanced clockwork inventions and cataclysmic workshops. Although cautious and secretive when dealing with other races, their creativity, curiosity, and love for scientific experiment knows no ethical constraints.]
+		[CASTE_NAME:puck:pucks:puck]
+		[BABYNAME:puck baby:puck babies]
+		[CHILDNAME:puck child:puck children]
+		[PREFSTRING:crazy inventions]
+		[MANNERISM_FEET:feet]
+		
+		[ALCOHOL_DEPENDENT]
+		[GRASSTRAMPLE:20]
+		[AT_PEACE_WITH_WILDLIFE]
+		[BODY_SIZE:0:0:1500]
+		[BODY_SIZE:1:168:7500]
+		[BODY_SIZE:20:0:15000]
+		[MENT_ATT_RANGE:CREATIVITY:900:1200:1400:1500:1600:1800:2500]
+		[MENT_ATT_RANGE:ANALYTICAL_ABILITY:900:1200:1400:1500:1600:1800:2500]
+		[MENT_ATT_RANGE:SPATIAL_SENSE:900:1200:1400:1500:1600:1800:2500]
+		[PHYS_ATT_RANGE:AGILITY:900:1200:1400:1500:1600:1800:2500]
+		[PHYS_ATT_RANGE:ENDURANCE:900:1200:1400:1500:1600:1800:2500]
+		[PHYS_ATT_RANGE:STRENGTH:900:1200:1400:1500:1600:1800:2500]
+
+		[CASTE_PROFESSION_NAME:CRAFTSMAN:craftspuck:craftspuck]
+		[CASTE_PROFESSION_NAME:FISHERMAN:fisherpuck:fisherpuck]
+
+		[PERSONALITY:ASSERTIVENESS:0:55:100]
+		[PERSONALITY:EXCITEMENT_SEEKING:0:55:100]
+
+		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
+
+		[NATURAL_SKILL:ANIMALTRAIN:1]
+		[NATURAL_SKILL:ANIMALCARE:1]
+  		[SKILL_LEARN_RATE:ANIMALTRAIN:200]
+  		[SKILL_LEARN_RATE:MECHANICS:200]
+		[SKILL_LEARN_RATES:110]
+
+	[SELECT_CASTE:PUCK_MALE]
+		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
+			[BP_ADD_TYPE:GELDABLE]
 
 	// Pure succubi
 	[SELECT_CASTE:FEMALE]
 	[SELECT_ADDITIONAL_CASTE:MALE]
+		[PREFSTRING:tantalizing figure]
+		[PREFSTRING:eloquence]
+
 		[BODY:HUMANOID_NECK_HOOF:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
+		
 		[SKILL_LEARN_RATE:ALCHEMY:300]
-		[SKILL_LEARN_RATE:ANIMALTRAIN:300]
-		[PERSONALITY:LOVE_PROPENSITY:50:50:100]
-		[PERSONALITY:EMOTIONALLY_OBSESSIVE:50:50:100]
-		[PERSONALITY:SWAYED_BY_EMOTIONS:50:50:100]
+		[SKILL_LEARN_RATE:MECHANICS:75]
+		
+		[PERSONALITY:LOVE_PROPENSITY:50:60:100]
+		[PERSONALITY:EMOTIONALLY_OBSESSIVE:50:60:100]
+		[PERSONALITY:SWAYED_BY_EMOTIONS:50:60:100]
 		[PERSONALITY:LUST_PROPENSITY:65:80:100]
+		
+		[NATURAL_SKILL:CLIMBING:3]
+		[SKILL_LEARN_RATE:CLIMBING:130]
 	[SELECT_CASTE:MALE]
-		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
+		[PREFSTRING:manly chest]
+		[PREFSTRING:gentle manners]
+		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
+			[BP_ADD_TYPE:GELDABLE]
 
 	// Body plan
 	[SELECT_CASTE:ALL]
@@ -376,23 +627,7 @@ creature_civ_succubus
 	[SELECT_TISSUE:NERVE]
 		[HEALING_RATE:1000]
 
-	[PHYS_ATT_RANGE:AGILITY:700:1200:1400:1500:1600:1800:2500]              ++
-	[PHYS_ATT_RANGE:STRENGTH:450:950:1150:1250:1350:1550:2250]              +
-	[PHYS_ATT_RANGE:ENDURANCE:150:600:800:900:1000:1100:1500]				-
-	[PHYS_ATT_RANGE:DISEASE_RESISTANCE:1250:1500:1750:2000:2500:3000:5000]  +++
-	[MENT_ATT_RANGE:PATIENCE:0:400:600:750:800:900:1100]					--
-	[MENT_ATT_RANGE:FOCUS:0:400:600:750:800:900:1100] 						--
-	[MENT_ATT_RANGE:CREATIVITY:1250:1500:1750:2000:2500:3000:5000]			+++
-	[MENT_ATT_RANGE:LINGUISTIC_ABILITY:1250:1500:1750:2000:2500:3000:5000]  +++
-	[MENT_ATT_RANGE:MEMORY:5000:5000:5000:5000:5000:5000:5000]              max
-	[MENT_ATT_RANGE:WILLPOWER:150:600:800:900:1000:1100:1500] 				-
-	[MENT_ATT_RANGE:MUSICALITY:1250:1500:1750:2000:2500:3000:5000]          +++
-	[MENT_ATT_RANGE:SOCIAL_AWARENESS:700:1200:1400:1500:1600:1800:2500]     ++
-
-	// Human Sized
-	[BODY_SIZE:0:0:4000]
-	[BODY_SIZE:1:168:17500]
-	[BODY_SIZE:15:0:75000]
+	// description
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 		[APP_MOD_IMPORTANCE:500]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
@@ -468,45 +703,17 @@ creature_civ_succubus
 			[APP_MOD_DESC_RANGE:30:60:90:110:150:190]
 
 	// Fire immunity (and cold, and dragonfire)
-	[FIREIMMUNE]
+	[FIREIMMUNE_SUPER]
 	[MAGMA_VISION]
 	[HOMEOTHERM:10075]
-	[FIXED_TEMP:10075]
+	FIXED_TEMP:10075]
 	[SELECT_MATERIAL:ALL]
 		[MULTIPLY_VALUE:3]
 		[COLDDAM_POINT:NONE]
 		[HEATDAM_POINT:NONE]
 		[IGNITE_POINT:NONE]
-		[IF_EXISTS_SET_MELTING_POINT:15000]
-		[IF_EXISTS_SET_BOILING_POINT:20000]
-
-	// Description stuff
-	[MANNERISM_FINGERS:finger:fingers]
-	[MANNERISM_NOSE:nose]
-	[MANNERISM_EAR:ear]
-	[MANNERISM_HEAD:head]
-	[MANNERISM_EYES:eyes]
-	[MANNERISM_MOUTH:mouth]
-	[MANNERISM_HAIR:hair]
-	[MANNERISM_KNUCKLES:knuckles]
-	[MANNERISM_LIPS:lips]
-	[MANNERISM_CHEEK:cheek]
-	[MANNERISM_NAILS:nails]
-	[MANNERISM_FEET:hooves]
-	[MANNERISM_ARMS:arms]
-	[MANNERISM_HANDS:hands]
-	[MANNERISM_TONGUE:tongue]
-	[MANNERISM_LEG:leg]
-	[MANNERISM_LAUGH]
-	[MANNERISM_SMILE]
-	[MANNERISM_WALK]
-	[MANNERISM_SIT]
-	[MANNERISM_BREATH]
-	[MANNERISM_POSTURE]
-	[MANNERISM_STRETCH]
-	[MANNERISM_EYELIDS]
-	[SPOUSE_CONVERSION_TARGET]
-	[SPEECH:succubus.txt]
+		[IF_EXISTS_SET_MELTING_POINT:25000]
+		[IF_EXISTS_SET_BOILING_POINT:30000]
 
 	// Hair
 	[SET_TL_GROUP:BY_CATEGORY:HEAD:HAIR]
@@ -624,13 +831,3 @@ creature_civ_succubus
 			[ATTACK_PREPARE_AND_RECOVER:3:3]
 			[ATTACK_FLAG_WITH]
 			[ATTACK_PRIORITY:SECOND]
-
-	// Movement and detection
-	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:612:408:204:1900:2900] 43 kph
-	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
-	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:5951:5419:4898:1463:6944:8233] 6 kph
-	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
-	[SMELL_TRIGGER:60]
-	[LOW_LIGHT_VISION:9000]
-	[ODOR_LEVEL:75]
-	[SWIMS_LEARNED]

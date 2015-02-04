@@ -16,7 +16,7 @@
     - pos: A position in a {x, y, z} form
     - civ_id: The creature's civ number, nil for friendly to the player, -1 for hostile
     - caste: A caste number, or nil for random
-    - ammount: the number of copies you wish to creature, defaults to 1
+    - amount: the number of copies you wish to creature, defaults to 1
 
     Method :
     - setPos: converts and register a positions array (ie the result of {dfhack.units.getPosition(unit)})
@@ -30,7 +30,7 @@
     -- Spawns 5 dogs at their master's pos, gender is random
     spawnunit.race = 'DOG'
     spawnunit.setPost({dfhack.units.getPosition(unitMaster)})
-    spawnunit.ammount = 5
+    spawnunit.amount = 5
     unitDogs = spawnunit.place()
     
     spawnunit.reset()
@@ -397,14 +397,14 @@ end
 -- Params
 position, civ_id, caste, race, name = nil
 no_nemesis = false
-ammount = 1
+amount = 1
 
 function reset()
     name = nil
     pos = nil
     civ_id = nil
     caste = nil
-    ammount = 1
+    amount = 1
 end
 
 function setPos(posArray)
@@ -433,7 +433,7 @@ function place()
     local race = findRace(race)
     local units = {}
 
-    for i = 1,ammount do
+    for i = 1,amount do
         local u = CreateUnit(race, caste)
 
         u.pos:assign(pos)
