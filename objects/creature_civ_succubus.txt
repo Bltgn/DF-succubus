@@ -364,7 +364,6 @@ creature_civ_succubus
 		[CASTE_PROFESSION_NAME:FISHERMAN:fisherhellion:fisherhellions]
 
 		[NOCTURNAL]
-		[BONECARN]
 		[NO_DRINK]
 		[NO_EAT]
 		[PRONE_TO_RAGE:10]
