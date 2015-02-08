@@ -10,12 +10,58 @@
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 if not ... then qerror('Please enter a creature ID.') end
 
+local fov = require 'fov'
 local mo = require 'makeown'
 local utils = require 'utils'
 
-local unit, targetRace
-local creatureSet = {}
 local args = {...}
+
+local unitSource, targetRace, creatureSet
+local range = 10
+local debug = false
+
+-- Check boundaries and field of view
+local function validateCoords(unit, view)
+	local pos = {dfhack.units.getPosition(unit)}
+
+	if pos[1] < view.xmin or pos[1] > view.xmax then
+		return false
+	end
+
+	if pos[2] < view.ymin or pos[2] > view.ymax then
+		return false
+	end
+
+	return view.z == pos[3] and view[pos[2]][pos[1]] > 0
+end
+
+-- Check if the unit is seen and belong to the set
+local function isSelected(unit, view)
+	local creatureId = tostring(df.global.world.raws.creatures.all[unit.race].creature_id)
+
+	if nil ~= creatureSet[creatureId] and
+		not dfhack.units.isDead(unit) and
+		not dfhack.units.isOpposedToLife(unit) then
+			return validateCoords(unit, view)
+	end
+
+	return false
+end
+
+-- Find targets within the LOS of the creature
+local function findLos(unitSource)
+	local view = fov.get_fov(range, unitSource.pos)
+	local i, hf, k, v
+	local unitList = df.global.world.units.active
+
+	-- Check through the list for the right units
+	for i = #unitList - 1, 0, -1 do
+		unitTarget = unitList[i]
+		if isSelected(unitTarget, view) then
+			corrupt(unitTarget)
+		end
+	end
+end
 
 -- Erase the enemy links
 function clearEnemy(unit)
@@ -29,7 +75,7 @@ function clearEnemy(unit)
 			newLink.link_strength = v.link_strength
 			hf.entity_links[k] = newLink
 			v:delete()
-			print('deleted enemy link')
+			if debug then print('deleted enemy link') end
 		end
 	end
 
@@ -37,19 +83,14 @@ function clearEnemy(unit)
 	if not (unit.enemy.enemy_status_slot == -1) then
 		i = unit.enemy.enemy_status_slot
 		unit.enemy.enemy_status_slot = -1
-		print('enemy cache removed')
+		if debug then print('enemy cache removed') end
 	end
 end
 
 -- Find targets within the LOS of the creature
 function corrupt(unit)
-	local targetRace = df.global.world.raws.creatures.all[df.global.ui.race_id].creature_id
-	local origRace = df.global.world.raws.creatures.all[unit.race_id].creature_id
+	local origRace = tostring(df.global.world.raws.creatures.all[unit.race].creature_id)
 	local suffix, targetCaste
-	
-	if not creatureSet[origRace] then
-		return
-	end
 
 	mo.make_own(unit)
 	mo.make_citizen(unit)
@@ -71,55 +112,61 @@ function corrupt(unit)
 	clearEnemy(unit)
 
 	-- After taking the enemy to your side, transform it
-	if targetRace != origRace then
-		if unit.gender = 'male' then
+	if debug then print('origRace: '..origRace..', targetRace: '..targetRace) end
+
+	if targetRace == origRace then return end
+
+	targetCaste = creatureSet[origRace]
+	if nil ~= targetCaste then
+		if unit.sex == 1 then
 			suffix = "_MALE"
 		else
 			suffix = "_FEMALE"
 		end
 
-		targetCaste = creatureSet[origRace]..suffix
+		targetCaste = targetCaste..suffix
+		if debug then print('selected caste: '..targetCaste) end
 
-		dfhack.run_script('modtools/transform-unit', {unit=unitTarget.id, race=targetRace, caste=targetCaste, keepinventory=1})
+		dfhack.run_script('modtools/transform-unit', '-unit', unit.id, '-race', targetRace, '-caste', targetCaste, '-keepInventory', 1)
 	end
 end
 
 -- Action
-unit = df.unit.find(tonumber(args[1]))
-if not unit then qerror('Unit not found.') end
+unitSource = df.unit.find(tonumber(args[1]))
+if not unitSource then qerror('Unit not found.') end
 
 -- Return the set of affected units, syntax is ['ORIGINAL_RACE'] = 'TARGET_CASTE' without MALE or FEMALE
--- If the creature is not heren it will be unaffected by the script
+-- This is optional, if the affected creature isn't listen, no tranformation occurs
 if args[2] == 'succubus' then
 	creatureSet = {
-		['SUCCUBUS'] = true, -- tranformation will be skipped
-		['WARLOCK_CIV'] = 'DEVIL',
-		['HUMAN'] = 'DEVIL',
-		['DWARF'] = 'FIEND',
-		['ELF'] = 'CAMBION',
-		['GNOME_CIV'] = 'PUCK',
-		['KOBOLD'] = 'IMP',
-		['GOBLIN'] = 'HELLION',
-		['ORC_TAIGA'] = 'ONI',
+		WARLOCK_CIV = 'DEVIL',
+		HUMAN = 'DEVIL',
+		DWARF = 'FIEND',
+		ELF = 'CAMBION',
+		GNOME_CIV = 'PUCK',
+		KOBOLD = 'IMP',
+		GOBLIN = 'HELLION',
+		ORC_TAIGA = 'ONI',
 		-- FD
-		['FROG_MANFD'] = 'DEVIL',
-		['IMP_FIRE_FD'] = 'IMP',
-		['BLENDECFD'] = 'DEVIL',
-		['WEREWOLFFD'] = 'DEVIL',
-		['SERPENT_MANFD'] = 'CAMBION',
-		['TIGERMAN_WHITE_FD'] = 'CAMBION',
-		['BEAK_WOLF_FD'] = 'HELLION',
-		['ELF_FERRIC_FD'] = 'CAMBION',
-		['ELEPHANTFD'] = 'ONI',
-		['STRANGLERFD'] = 'HELLION',
-		['JOTUNFD'] = 'ONI',
-		['MINOTAURFD'] = 'ONI',
-		['SPIDER_FIEND_FD'] = 'DEVIL',
-		['NIGHTWINGFD'] = 'IMP',
-		['GREAT_BADGER_FD'] = 'IMP',
-		['PANDASHI_FD'] = 'FIEND',
-		['RAPTOR_MAN_FD'] = 'DEVIL'
+		FROG_MANFD = 'DEVIL',
+		IMP_FIRE_FD = 'IMP',
+		BLENDECFD = 'DEVIL',
+		WEREWOLFFD = 'DEVIL',
+		SERPENT_MANFD = 'CAMBION',
+		TIGERMAN_WHITE_FD = 'CAMBION',
+		BEAK_WOLF_FD = 'HELLION',
+		ELF_FERRIC_FD = 'CAMBION',
+		ELEPHANTFD = 'ONI',
+		STRANGLERFD = 'HELLION',
+		JOTUNFD = 'ONI',
+		MINOTAURFD = 'ONI',
+		SPIDER_FIEND_FD = 'DEVIL',
+		NIGHTWINGFD = 'IMP',
+		GREAT_BADGER_FD = 'IMP',
+		PANDASHI_FD = 'FIEND',
+		RAPTOR_MAN_FD = 'DEVIL'
 	}
 end
 
-findLos(unit)
+targetRace = df.global.world.raws.creatures.all[df.global.ui.race_id].creature_id
+findLos(unitSource)

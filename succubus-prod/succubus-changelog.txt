@@ -1,25 +1,24 @@
 # Succubus Dungeon : Changelog #
 11.0
 + Den of iniquity
-- Corruption is back with the same mechanisms as before.
-- Corruption is compatible with vanilla, masterwork and fortress defense races.
+- Corruption is back with the same method as before.
+- The den of iniquity is compatible with vanilla, masterwork and fortress defense races.
 - Masterwork: Added new castes for gnomes and orcs to transform into.
 - Removed old references to removed creatures
 
 + Creature changes
-- Adjusted the personality of succubi.
+- Adjusted the personality of the creatures.
 - Increased the male birth ratio to 20%.
-- Succubi will have a low change to enrage seeing enemies, this varies according to the caste.
-- Raised the discipline learning rate to 300%.
+- Succubi will have a low change to enrage while seeing enemies, this varies according to the caste.
+- Raised the discipline learning rate.
 - Removed the old masterwork job names.
-- Corrupted creatures should now have different attribute and sizes than pure succubi.
-- Removed fixed temperature and added dragonfire immunity. This means that clothes might burn off a succubus.
+- Corrupted creatures should now have different attributes than pure succubi.
 
 + Other changes
 - Magma workshops are immediatly unlocked upon playing a succubus fort.
 - Adjusted minor settings to summoned creatures like hostily and smells.
-- Skill help should display in custom workshops.
-- Changed entity values so not all succubi want to rule the world.
+- Skill help should now display in custom workshops.
+- Changed entity values so not all succubi dream of ruling the world.
 
 10.0
 - The mod is remade from scratch for DF2014 
