@@ -10,7 +10,7 @@
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 if not ... then qerror('Please enter a creature ID.') end
 
-local fov = require 'fov'
+fov = dfhack.script_environment('modtools/fov')
 local mo = require 'makeown'
 local utils = require 'utils'
 
@@ -18,7 +18,7 @@ local args = {...}
 
 local unitSource, targetRace, creatureSet
 local range = 10
-local debug = false
+local debug = true
 
 -- Check boundaries and field of view
 local function validateCoords(unit, view)

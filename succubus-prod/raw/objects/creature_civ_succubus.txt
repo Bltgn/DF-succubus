@@ -60,7 +60,7 @@ creature_civ_succubus
 	[SKILL_LEARN_RATE:TEACHING:200]
 	[SKILL_LEARN_RATE:DISCIPLINE:150]
 
-	[PROFESSION_NAME:PEASANT:Good-to-nothing:Goods-to-nothing]
+	[PROFESSION_NAME:STANDARD:Good-to-nothing:Goods-to-nothing]
 	[PROFESSION_NAME:CRAFTSMAN:Craftsuccubus:Craftsuccubi]
 	[PROFESSION_NAME:FISHERMAN:Fishersuccubus:Fishersuccubi]
 	[PROFESSION_NAME:FARMER:Farmworker:Farmworkers]
@@ -155,7 +155,7 @@ creature_civ_succubus
 	// Human Sized by default
 	[BODY_SIZE:0:0:4000]
 	[BODY_SIZE:1:168:17500]
-	[BODY_SIZE:15:0:75000]
+	[BODY_SIZE:15:0:70000]
 
 	// Common for all castes, specific pure succubi tags are defined at the end
 	[CASTE:FEMALE]
