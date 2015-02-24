@@ -26,7 +26,6 @@
 
 local eventful = require 'plugins.eventful'
 local utils = require 'utils'
-local spawnunit = require 'spawnunit'
 
 local function starts(String, Start)
 	return string.sub(String, 1, string.len(Start)) == Start
@@ -81,7 +80,6 @@ local function summonHfs(reaction, unit, input_reagents)
 
 	selection = math.random(1, #demonId)
 	summonCreature(demonId[selection], unit)
-	dfhack.run_script('succubus/fovunsentient', unit.id, demonId[selection])
 end
 
 -- Return the creature's raw data, there is probably a better way to select stuff from tables
@@ -118,28 +116,35 @@ end
 -- Spawns a regular creature at one unit position, caste is random
 local function summonCreature(unitId, unitSource)
 	local codeArray = utils.split_string(unitId, ' ')
-	local tame
-	local units, code, unitPos
-	local position = {}
+	local tame = false
+	local num = 1
+	local _, code
+	local unitpos = xyz2pos(dfhack.units.getPosition(unitSource))
+	local units = {}
 
 	for _, code in ipairs(codeArray or {}) do
 		if code == 'TAME' then
 			tame = true
 		elseif starts(code, 'NUM_') then
-			spawnunit.ammount = tonumber(string.sub(code, 5))
+			num = tonumber(string.sub(code, 5))
 		else
 			unitId = code
 		end
 	end
 
 	-- Spawning
-	spawnunit.race = tostring(unitId)
-	spawnunit.setPos({dfhack.units.getPosition(unitSource)})
-	units = spawnunit.place()
+	local su = dfhack.script_environment('spawn')
+
+	for i = 1, num do
+		units[i] = su.place({
+			race = unitId,
+			position = unitpos
+		})
+	end
 
 	-- Post spawning processes
-	--if tame then
-	--[[	for _, unit in ipairs(units) do
+	if tame then
+		for _, unit in ipairs(units) do
 			unit.flags2.resident = true
 			unit.cultural_identity = unitSource.cultural_identity
 			unit.population_id = unitSource.population_id
@@ -147,7 +152,7 @@ local function summonCreature(unitId, unitSource)
 			unit.flags1.tame = true
 			unit.training_level = df.animal_training_level.Domesticated
 		end
-	--end]]
+	end
 
 	announcement(unitId)
 end

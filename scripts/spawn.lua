@@ -2,54 +2,17 @@
 --[=[
     This is the library version, designed for mod devs who want to create scripts that spawns and manipulate creatures.
 
-    Usage:
-    - You must first feed the library params for your future creature.
-    - Adding race (with setRace) is mandatory.
-    - If no position is set, it will try to use the cursor position or otherwise fail.
-    - Then you execute your spawn using place(num) where num is the number od creatures spawned.
-    - The created unit(s) are returned in an array.
-    - The params are reset after spawning a creature.
+    Usage: Creature (ID), caste (number), name, x,y,z , civ_id(-1 for enemy, optional)
 
-    Variables :
-    - name: The name of your creature or nil if you do not want a name
-    - race: The RAW_ID of the creature's race, mandatory
-    - pos: A position in a {x, y, z} form
-    - civ_id: The creature's civ number, nil for friendly to the player, -1 for hostile
-    - caste: A caste number, or nil for random
-    - amount: the number of copies you wish to creature, defaults to 1
-
-    Method :
-    - setPos: converts and register a positions array (ie the result of {dfhack.units.getPosition(unit)})
-    - reset: Rests the variables to their defaults
-    - place: Spawns the unit(s)
-
-    Examples:
-
-    local spawnunit = require 'spawnunit'
-
-    -- Spawns 5 dogs at their master's pos, gender is random
-    spawnunit.race = 'DOG'
-    spawnunit.setPost({dfhack.units.getPosition(unitMaster)})
-    spawnunit.amount = 5
-    unitDogs = spawnunit.place()
-    
-    spawnunit.reset()
-
-    -- Spawn a female duck named ducky at the cursor
-    spawnunit.race = 'DUCK'
-    spawnunit.caste = 1
-    spawnunit.name = 'Ducky'
-    duck = spawnunit.place()
-
-    spawnunit.reset()
-
-    -- Spawn an hostile goblin at the cursor
-    spawnunit.race = 'GOBLIN'
-    spawnunit.civ_id = -1
-    spawnunit.place()
+    Usage as a library : 
+    su = dfhack.script_environment('spawn')
+    unit = su.place({
+        race = 'DOG',
+        caste = 0,
+        position = pos2xyz({dfhack.units.getPosition(unitSource)})
+    })
 
     Made by warmist, but edited by Putnam for the dragon ball mod to be used in reactions
-    Converted into a weird library by Boltgun
     TODO:
         orientation
         chosing a caste based on ratios
@@ -62,8 +25,6 @@
         nemesis/histfig : add an 'arrived on site' event
         generate name
 --]=]
-local _ENV = mkmodule('spawnunit')
-
 local utils=require 'utils'
 
 -- Picking a caste or gender at random
@@ -80,35 +41,42 @@ local function getRandomCasteId(race_id)
     return 0
 end
 
-function getCaste(race_id,caste_id)
+local function getCaste(race_id,caste_id)
     local cr=df.creature_raw.find(race_id)
     return cr.caste[caste_id]
 end
-function genBodyModifier(body_app_mod)
+
+local function genBodyModifier(body_app_mod)
     local a=math.random(0,#body_app_mod.ranges-2)
     return math.random(body_app_mod.ranges[a],body_app_mod.ranges[a+1])
 end
-function getBodySize(caste,time)
+
+local function getBodySize(caste,time)
     --TODO: real body size...
     return caste.body_size_1[#caste.body_size_1-1] --returns last body size
 end
-function genAttribute(array)
+
+local function genAttribute(array)
     local a=math.random(0,#array-2)
     return math.random(array[a],array[a+1])
 end
-function norm()
+
+local function norm()
     return math.sqrt((-2)*math.log(math.random()))*math.cos(2*math.pi*math.random())
 end
-function normalDistributed(mean,sigma)
+
+local function normalDistributed(mean,sigma)
     return mean+sigma*norm()
 end
-function clampedNormal(min,median,max)
+
+local function clampedNormal(min,median,max)
     local val=normalDistributed(median,math.sqrt(max-min))
     if val<min then return min end
     if val>max then return max end
     return val
 end
-function makeSoul(unit,caste)
+
+local function makeSoul(unit,caste)
     local tmp_soul=df.unit_soul:new()
     tmp_soul.unit_id=unit.id
     tmp_soul.name:assign(unit.name)
@@ -139,7 +107,8 @@ function makeSoul(unit,caste)
     unit.status.souls:insert("#",tmp_soul)
     unit.status.current_soul=tmp_soul
 end
-function CreateUnit(race_id,caste_id)
+
+local function CreateUnit(race_id,caste_id)
     local race=df.creature_raw.find(race_id)
     if race==nil then error("Invalid race_id") end
     local caste
@@ -262,7 +231,8 @@ function CreateUnit(race_id,caste_id)
     
     return unit
 end
-function findRace(name)
+
+local function findRace(name)
     for k,v in pairs(df.global.world.raws.creatures.all) do
         if v.creature_id==name then
             return k
@@ -271,7 +241,7 @@ function findRace(name)
     qerror("Race:"..name.." not found!")
 end
  
-function createFigure(trgunit,he,he_group)
+local function createFigure(trgunit,he,he_group)
     local hf=df.historical_figure:new()
     hf.id=df.global.hist_figure_next_id
     hf.race=trgunit.race
@@ -334,13 +304,15 @@ function createFigure(trgunit,he,he_group)
     seconds=trgunit.relations.birth_time,id=hf_event_id,civ=hf.civ_id,histfig=hf.id,link_type=0})
     return hf
 end
-function  allocateNewChunk(hist_entity)
+
+local function  allocateNewChunk(hist_entity)
     hist_entity.save_file_id=df.global.unit_chunk_next_id
     df.global.unit_chunk_next_id=df.global.unit_chunk_next_id+1
     hist_entity.next_member_idx=0
     print("allocating chunk:",hist_entity.save_file_id)
 end
-function allocateIds(nemesis_record,hist_entity)
+
+local function allocateIds(nemesis_record,hist_entity)
     if hist_entity.next_member_idx==100 then
         allocateNewChunk(hist_entity)
     end
@@ -349,7 +321,7 @@ function allocateIds(nemesis_record,hist_entity)
     hist_entity.next_member_idx=hist_entity.next_member_idx+1
 end
  
-function createNemesis(trgunit,civ_id,group_id)
+local function createNemesis(trgunit,civ_id,group_id)
     local id=df.global.nemesis_next_id
     local nem=df.nemesis_record:new()
     
@@ -394,87 +366,87 @@ function createNemesis(trgunit,civ_id,group_id)
     nem.figure=createFigure(trgunit,he,he_group)
 end
 
--- Params
-position, civ_id, caste, race, name = nil
-no_nemesis = false
-amount = 1
+-- Do the placement, returns the freshly spawned unit
+function place(args)
+    if not args.race then
+        qerror("Please provide a race")
+    end
 
-function reset()
-    name = nil
-    pos = nil
-    civ_id = nil
-    caste = nil
-    amount = 1
-end
-
-function setPos(posArray)
-    position = {}
-    position.x = posArray[1]
-    position.y = posArray[2]
-    position.z = posArray[3]
-end
- 
--- Do the placement, race must be set, returns the created units
-function place()
-
-    local race_id = findRace(race)
-
-    local pos = position or copyall(df.global.cursor)
-    local i
-
-    if pos.x==-30000 then
+    local pos = args.position or copyall(df.global.cursor)
+    if pos.x == -30000 then
         qerror("Point your pointy thing somewhere")
     end
 
-    if not race then
-        qerror('Please assign a value to race first')
+    local i
+    local race_id = findRace(args.race)
+    local u = CreateUnit(race_id, args.caste)
+
+    u.pos:assign(pos)
+        
+    if args.name then
+        u.name.first_name = args.name
+        u.name.has_name = true
     end
 
-    local race = findRace(race)
-    local units = {}
-
-    for i = 1,amount do
-        local u = CreateUnit(race, caste)
-
-        u.pos:assign(pos)
-            
-        if name then
-            u.name.first_name = name
-            u.name.has_name = true
-        end
-
-        local group_id
-        if df.global.gamemode == df.game_mode.ADVENTURE then
-            u.civ_id = civ_id or df.global.world.units.active[0].civ_id
-            group_id = -1
-        else    
-            u.civ_id = civ_id or df.global.ui.civ_id
-        end
-
-        if civ_id == -1 then
-            group_id = group_id or -1
-        else
-            group_id = group_id or df.global.ui.group_id
-        end
-
-        local desig,ocupan = dfhack.maps.getTileFlags(pos)
-        if ocupan.unit then
-            ocupan.unit_grounded = true
-            u.flags1.on_ground = true
-        else
-            ocupan.unit = true
-        end
-
-        units[i] = u
-
-        if not no_nemesis and df.historical_entity.find(u.civ_id) ~= nil  then
-            createNemesis(u,u.civ_id,group_id)
-        end
+    local group_id
+    if df.global.gamemode == df.game_mode.ADVENTURE then
+        u.civ_id = args.civ_id or df.global.world.units.active[0].civ_id
+        group_id = -1
+    else    
+        u.civ_id = args.civ_id or df.global.ui.civ_id
     end
-    
-    reset()
 
-    return units
+    if args.civ_id == -1 then
+        group_id = group_id or -1
+    else
+        group_id = group_id or df.global.ui.group_id
+    end
+
+    local desig,ocupan = dfhack.maps.getTileFlags(pos)
+    if ocupan.unit then
+        ocupan.unit_grounded = true
+        u.flags1.on_ground = true
+    else
+        ocupan.unit = true
+    end
+
+    if df.historical_entity.find(u.civ_id) ~= nil  then
+        createNemesis(u, u.civ_id,group_id)
+    end
+
+    return u
 end
 
-return _ENV
+validArgs = validArgs or utils.invert({
+    'help',
+    'race',
+    'caste',
+    'name',
+    'position',
+    'civ_id',
+})
+
+local args = utils.processArgs({...}, validArgs)
+
+if args.help then
+ print([[scripts/spawn.lua
+arguments
+    -help
+        print this help message
+    -race <RACE_ID>
+        The raw id of the creature's race, mandatory
+    -caste <number>
+        The caste's number, optional
+    -name <doggy>
+        The unit's name, optional
+    -position {x, y, z}
+        The unit's position, will try to use the cursor if ommited
+    -civ_id
+        The unit's civilisation or -1 for hostile, will be the player's if ommited
+]])
+ return
+end
+ 
+if #args > 0 then
+    place(args) --Creature (ID), caste (number), name, x,y,z , civ_id(-1 for enemy, optional) for spawn.
+end

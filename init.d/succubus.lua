@@ -15,7 +15,7 @@ dfhack.onStateChange.loadConstructCreature = function(code)
         end
 
         -- They will not care about being naked :)
-        dfhack.run_script('succubus/fixnakedregular')
+        --dfhack.run_script('succubus/fixnakedregular')
 
         -- Immediate unlocking of magma workshops + hint in the announcement log
         if df.global.gamemode == df.game_mode.DWARF then
