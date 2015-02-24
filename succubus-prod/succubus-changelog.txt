@@ -1,4 +1,14 @@
 # Succubus Dungeon : Changelog #
+11.1
+- This mod now requires dfhack for 0.40.24 r2
+- Moved spawunit into a normal script
+- Added the new argument handler to spawnunit
+- Updated summon-hook to use script_environment
+- Moved multi spawn into summon-hook
+- Moved FOV inso scripts/modtools
+- Moved all the scripts into the raw folder for easier save sharing
+- Reduced succubi size a bit
+
 11.0
 + Den of iniquity
 - Corruption is back with the same method as before.
