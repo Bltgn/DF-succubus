@@ -1,4 +1,7 @@
 # Succubus Dungeon : Changelog #
+11.2
+- Slight reduction in physical and mental attributes across the castes.
+
 11.1
 - This mod now requires dfhack for 0.40.24 r2
 - Moved spawunit into a normal script
