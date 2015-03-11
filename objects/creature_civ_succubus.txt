@@ -225,8 +225,8 @@ creature_civ_succubus
 	[USE_CASTE:IMP_MALE:MALE]
 	[USE_CASTE:ONI_FEMALE:FEMALE] // orc
 	[USE_CASTE:ONI_MALE:MALE]
-	[USE_CASTE:PUCK_FEMALE:FEMALE] // gnome
-	[USE_CASTE:PUCK_MALE:MALE]
+	[USE_CASTE:KORRIGAN_FEMALE:FEMALE] // gnome
+	[USE_CASTE:KORRIGAN_MALE:MALE]
 
 	// Corrupted sentient clases (note that they usually carry their skills and personalities upon tranformsations)
 	[SELECT_CASTE:CAMBION_FEMALE]
@@ -478,14 +478,14 @@ creature_civ_succubus
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
 			[BP_ADD_TYPE:GELDABLE]
 
-	[SELECT_CASTE:PUCK_FEMALE]
-	[SELECT_ADDITIONAL_CASTE:PUCK_MALE]
+	[SELECT_CASTE:KORRIGAN_FEMALE]
+	[SELECT_ADDITIONAL_CASTE:KORRIGAN_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A tiny, jolly, enthusiastic and insane humanoid creature that dwells under the lair of evil creatures. Versed in technology, they make up for their diminutive size with advanced clockwork inventions. Although cautious and secretive when dealing with other races, their creativity, curiosity, and love for scientific experiment knows no ethical constraints.]
-		[CASTE_NAME:puck:pucks:puck]
-		[BABYNAME:puck baby:puck babies]
-		[CHILDNAME:puck child:puck children]
+		[DESCRIPTION:A tiny, jolly humanoid creature that dwells near the lair of evil creatures. Versed in nature and technology, they make up for their diminutive size with advanced clockwork inventions. Although cautious and secretive when dealing with other races, their creativity, curiosity, and love for scientific experiment knows no ethical constraints.]
+		[CASTE_NAME:korrigan:korrigans:korrigans]
+		[BABYNAME:korrigan baby:korrigan babies]
+		[CHILDNAME:korrigan child:korrigan children]
 		[PREFSTRING:crazy inventions]
 		[MANNERISM_FEET:feet]
 		
@@ -496,8 +496,8 @@ creature_civ_succubus
 		[MENT_ATT_RANGE:ANALYTICAL_ABILITY:900:1200:1400:1500:1600:1800:2500]	++
 		[MENT_ATT_RANGE:SPATIAL_SENSE:900:1200:1400:1500:1600:1800:2500]		++
 
-		[CASTE_PROFESSION_NAME:CRAFTSMAN:craftspuck:craftspuck]
-		[CASTE_PROFESSION_NAME:FISHERMAN:fisherpuck:fisherpuck]
+		[CASTE_PROFESSION_NAME:CRAFTSMAN:craftskorrigan:craftskorrigan]
+		[CASTE_PROFESSION_NAME:FISHERMAN:fisherkorrigan:fisherkorrigan]
 
 		[PERSONALITY:ASSERTIVENESS:0:55:100]
 		[PERSONALITY:EXCITEMENT_SEEKING:0:55:100]
@@ -510,7 +510,7 @@ creature_civ_succubus
   		[SKILL_LEARN_RATE:ANIMALTRAIN:200]
   		[SKILL_LEARN_RATE:MECHANICS:200]
 
-	[SELECT_CASTE:PUCK_MALE]
+	[SELECT_CASTE:KORRIGAN_MALE]
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
 			[BP_ADD_TYPE:GELDABLE]
 

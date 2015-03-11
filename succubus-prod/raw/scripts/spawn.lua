@@ -9,7 +9,7 @@
     unit = su.place({
         race = 'DOG',
         caste = 0,
-        position = pos2xyz({dfhack.units.getPosition(unitSource)})
+        position = xyz2pos(dfhack.units.getPosition(unitSource))
     })
 
     Made by warmist, but edited by Putnam for the dragon ball mod to be used in reactions

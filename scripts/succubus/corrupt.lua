@@ -135,18 +135,19 @@ end
 unitSource = df.unit.find(tonumber(args[1]))
 if not unitSource then qerror('Unit not found.') end
 
--- Return the set of affected units, syntax is ['ORIGINAL_RACE'] = 'TARGET_CASTE' without MALE or FEMALE
--- This is optional, if the affected creature isn't listen, no tranformation occurs
+-- Return the set of affected units, syntax is ['ORIGINAL_RACE'] = 'TARGET_CASTE' without the _MALE or _FEMALE suffix.
+-- This is optional, if the affected creature isn't defined is false, no tranformation occurs
 if args[2] == 'succubus' then
 	creatureSet = {
 		WARLOCK_CIV = 'DEVIL',
 		HUMAN = 'DEVIL',
 		DWARF = 'FIEND',
 		ELF = 'CAMBION',
-		GNOME_CIV = 'PUCK',
+		GNOME_CIV = 'KORRIGAN',
 		KOBOLD = 'IMP',
 		GOBLIN = 'HELLION',
 		ORC_TAIGA = 'ONI',
+		SUCCUBUS = false,
 		-- FD
 		FROG_MANFD = 'DEVIL',
 		IMP_FIRE_FD = 'IMP',
