@@ -1,19 +1,24 @@
 --create unit at pointer or given location and with given civ (usefull to pass -1 for enemy). Usage e.g. "spawnunit DWARF 0 Dwarfy"
 --[=[
-    This is the library version, designed for mod devs who want to create scripts that spawns and manipulate creatures.
+    arguments
+        -help
+            print this help message
+        -race <RACE_ID>
+            The raw id of the creature's race, mandatory
+        -caste <number>
+            The caste's number, optional
+        -name <doggy>
+            The unit's name, optional
+        -position {x, y, z}
+            The unit's position, will try to use the cursor if ommited
+        -civ_id
+            The unit's civilisation or -1 for hostile, will be the player's if ommited
 
-    Usage: Creature (ID), caste (number), name, x,y,z , civ_id(-1 for enemy, optional)
-
-    Usage as a library : 
-    su = dfhack.script_environment('spawn')
-    unit = su.place({
-        race = 'DOG',
-        caste = 0,
-        position = xyz2pos(dfhack.units.getPosition(unitSource))
-    })
+    Example : spawn -race HUMAN -caste 0 -name Bob
 
     Made by warmist, but edited by Putnam for the dragon ball mod to be used in reactions
     TODO:
+        throw a proper error if the user attempt to run it from the console, without good args
         orientation
         chosing a caste based on ratios
         birth time
@@ -446,7 +451,7 @@ arguments
 ]])
  return
 end
- 
-if #args > 0 then
+
+if args.race then
     place(args) --Creature (ID), caste (number), name, x,y,z , civ_id(-1 for enemy, optional) for spawn.
 end
