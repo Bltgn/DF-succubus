@@ -1,9 +1,9 @@
--- Succubus Spire
+-- Succubus Dungeon
 -- This file will run fixes and tweaks when you load your saves
 
 -- Make sure that commands are only run if you play as a succubus
-function isCiv(civ)
-    local entity = df.global.world.entities.all[df.global.ui.civ_id]
+local function isCiv(civ)
+    local entity = df.historical_entity.find(df.global.ui.civ_id)
     return entity.entity_raw.code == civ
 end
 
@@ -20,6 +20,7 @@ dfhack.onStateChange.loadConstructCreature = function(code)
         -- Immediate unlocking of magma workshops + hint in the announcement log
         if df.global.gamemode == df.game_mode.DWARF then
             dfhack.run_script('succubus/feature', 'magmaWorkshops')
+            dfhack.gui.showAnnouncement("Welcome, the magma well can help powering the star marked buildings.", COLOR_WHITE)
         end
     end
 end
