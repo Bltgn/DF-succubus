@@ -1,5 +1,7 @@
 # Succubus Dungeon : Changelog #
 11.2
+- Magma powered buildings now unlock immediatly.
+- Upon save load, a welcome message hints about the usage of magma wells.
 - Slight reduction in physical and mental attributes across the castes.
 - The corrupted gnomes have been renamed to Korrigans.
 
