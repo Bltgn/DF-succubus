@@ -1,9 +1,26 @@
 # Succubus Dungeon : Changelog #
 11.2
-- Magma powered buildings now unlock immediatly.
-- Upon save load, a welcome message hints about the usage of magma wells.
-- Slight reduction in physical and mental attributes across the castes.
-- The corrupted gnomes have been renamed to Korrigans.
+- Magma powered buildings are now always unlocked, even before reaching magma.
+- Upon save load, a welcome message now hint about the usage of magma wells.
+- Slight reduction in physical and mental attributes across the castes to reduce their world gen conquests.
+- The corrupted Gnomes have been renamed to Korrigans.
+- Removed soul gems who served no purpose (this is temporary).
+- Armor pieces are now garanteed to be available on all world gens.
+- Heating the forge now causes dizziness to the operator.
+
++ Corruption changes
+- Corrupted merchants now give up trading immediatly.
+- Pack animals also join your fort.
+- Wagon drivers now scuttle their rides.
+- Pull and traded animals remains in depot until it's time to leave.
+- A message will instruct your to deconstruct the depot in order to seize the trade goods.
+- Corrupted prisoners should now leave their cages by themselves, levers are no longer required.
+
++ Edited several positions, most notably :
+- Added broker back, named Allure of wealth
+- Chief medical succubus is now Wound weaver
+- Leaders are prefixed with Dungeon / Spire
+- It should be harder to met their living standards
 
 11.1
 - This mod now requires dfhack for 0.40.24 r2

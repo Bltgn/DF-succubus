@@ -1,4 +1,4 @@
---create unit at pointer or given location and with given civ (usefull to pass -1 for enemy). Usage e.g. "spawnunit DWARF 0 Dwarfy"
+--create unit at pointer or given location and with given civ (usefull to pass -1 for enemy). Usage e.g. "spawn-unit -race DWARF -caste 0 -name Dwarfy"
 --[=[
     arguments
         -help
@@ -7,16 +7,22 @@
             The raw id of the creature's race, mandatory
         -caste <number>
             The caste's number, optional
+        -age <number>
+            The unit's age in years, defaults to 15 if omitted
         -name <doggy>
             The unit's name, optional
-        -position {x, y, z}
-            The unit's position, will try to use the cursor if ommited
+        -position [ x y z ]
+            The unit's position, will try to use the cursor if omitted
         -civ_id
-            The unit's civilisation or -1 for hostile, will be the player's if ommited
+            The unit's civilisation, will be the player's if omitted
+        -hostile
+            Overrides the civ_id to -1
 
-    Example : spawn -race HUMAN -caste 0 -name Bob
+    Example : spawn-unit -race HUMAN -caste 0 -name Bob
 
     Made by warmist, but edited by Putnam for the dragon ball mod to be used in reactions
+    Modified by Dirst for use in The Earth Strikes Back mod
+    
     TODO:
         throw a proper error if the user attempt to run it from the console, without good args
         orientation
@@ -48,7 +54,8 @@ end
 
 local function getCaste(race_id,caste_id)
     local cr=df.creature_raw.find(race_id)
-    return cr.caste[caste_id]
+    
+    return cr.caste[tonumber(caste_id)]
 end
 
 local function genBodyModifier(body_app_mod)
@@ -113,9 +120,12 @@ local function makeSoul(unit,caste)
     unit.status.current_soul=tmp_soul
 end
 
-local function CreateUnit(race_id,caste_id)
+local function CreateUnit(race_id,caste_id,unit_age)
     local race=df.creature_raw.find(race_id)
     if race==nil then error("Invalid race_id") end
+    
+    unit_age = unit_age or 15
+    
     local caste
     local unit=df.unit:new()
 
@@ -123,8 +133,8 @@ local function CreateUnit(race_id,caste_id)
     if nil == caste_id then
         caste_id = getRandomCasteId(race_id)
     end
-
-    caste = getCaste(race_id, caste_id)
+    
+    caste = getCaste(race_id,caste_id)
 
     unit:assign{
         race=race_id,
@@ -132,14 +142,14 @@ local function CreateUnit(race_id,caste_id)
         sex=caste.gender,
     }
 
-    unit.relations.birth_year=df.global.cur_year-15 --AGE is set here
+    unit.relations.birth_year=df.global.cur_year-unit_age --AGE is set here
     if caste.misc.maxage_max==-1 then
         unit.relations.old_year=-1
     else
         unit.relations.old_year=df.global.cur_year+math.random(caste.misc.maxage_min,caste.misc.maxage_max)
     end
     
-    --unit.relations.birth_time=??
+    unit.relations.birth_time=df.global.cur_year_tick
     --unit.relations.old_time=?? --TODO add normal age
     --[[ interataction stuff, probably timers ]]--
     local num_inter=#caste.body_info.interactions  -- new for interactions
@@ -376,15 +386,23 @@ function place(args)
     if not args.race then
         qerror("Please provide a race")
     end
-
-    local pos = args.position or copyall(df.global.cursor)
+    
+    local pos = {}
+    if args.position then
+        pos.x=args.position[1]
+        pos.y=args.position[2]
+        pos.z=args.position[3]
+    else
+        pos = copyall(df.global.cursor)
+    end
+    
     if pos.x == -30000 then
         qerror("Point your pointy thing somewhere")
     end
 
     local i
     local race_id = findRace(args.race)
-    local u = CreateUnit(race_id, args.caste)
+    local u = CreateUnit(race_id,args.caste,args.age)
 
     u.pos:assign(pos)
         
@@ -392,7 +410,11 @@ function place(args)
         u.name.first_name = args.name
         u.name.has_name = true
     end
-
+    
+    if args.hostile then 
+        args.civ_id = -1
+    end
+    
     local group_id
     if df.global.gamemode == df.game_mode.ADVENTURE then
         u.civ_id = args.civ_id or df.global.world.units.active[0].civ_id
@@ -426,15 +448,17 @@ validArgs = validArgs or utils.invert({
     'help',
     'race',
     'caste',
+    'age',
     'name',
     'position',
     'civ_id',
+    'hostile',
 })
 
 local args = utils.processArgs({...}, validArgs)
 
 if args.help then
- print([[scripts/spawn.lua
+ print([[scripts/spawn-unit.lua
 arguments
     -help
         print this help message
@@ -442,16 +466,20 @@ arguments
         The raw id of the creature's race, mandatory
     -caste <number>
         The caste's number, optional
+    -age <number>
+        The unit's age in years, defaults to 15 if omitted
     -name <doggy>
         The unit's name, optional
-    -position {x, y, z}
+    -position [ x y z ]
         The unit's position, will try to use the cursor if ommited
     -civ_id
-        The unit's civilisation or -1 for hostile, will be the player's if ommited
+        The unit's civilisation, will be the player's if ommited
+    -hostile
+        Overrides the civ_id to -1
 ]])
  return
 end
 
 if args.race then
-    place(args) --Creature (ID), caste (number), name, x,y,z , civ_id(-1 for enemy, optional) for spawn.
+    place(args) --Creature (ID), caste (number), age, name, x,y,z , civ_id(-1 for enemy, optional) for spawn.
 end

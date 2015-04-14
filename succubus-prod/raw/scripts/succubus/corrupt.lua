@@ -2,37 +2,73 @@
 --[[
 	This script is called by the conversion dens.
 	It will perform makeown on the target unit and perform some more fix to prevent loyalty cascades.
-	It will also remove flags related to invasions.
-	These units should be ready to act as citizens, if they are of the same race of your fort.
+	It will also remove flags related to invasions and mounting.
+	Merchants will give up trading and their dragged animals join as well, their wagons will be scuttled.
+	The targets will be let out of their cages
 
+	These units should be ready to act as citizen once transformed.
+
+	If you wish to implement this feature to your race, add a creature to caste set at the end of the file.
+
+	arguments
+	    -help
+	        print this help message
+	    -unit <number>
+	        The unit at the source of the corruption
+	    -set <string>
+	        One of the available creature sets, currently only succubus
+
+	@requires fov
 	@author Boltgun
 ]]
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
-if not ... then qerror('Please enter a creature ID.') end
 
-fov = dfhack.script_environment('modtools/fov')
+-- Dependancies
+local fov = dfhack.script_environment('modtools/fov')
 local mo = require 'makeown'
 local utils = require 'utils'
 
-local args = {...}
-
-local unitSource, targetRace, creatureSet
+-- The range of the check FOV
 local range = 10
+
+-- Will print debug messages if set to true
 local debug = true
 
--- Check boundaries and field of view
+-- Announcement
+local announceMerchant = false
+
+-- Misc
+local unitSource, targetRace, creatureSet
+
+--
+-- Functions
+--
+
+-- Announcement a hint if you corrupted a merchant
+local function marchantAnnouncement()
+	if not announceMerchant then return end
+	dfhack.timeout(
+		3,
+		'ticks',
+		function() 
+			dfhack.gui.showAnnouncement("Deconstruct the trade depot to seize the merchants goods.", COLOR_WHITE) 
+		end
+	)
+end
+
+-- Check boundaries and field of view, z level must be the same
 local function validateCoords(unit, view)
 	local pos = {dfhack.units.getPosition(unit)}
 
-	if pos[1] < view.xmin or pos[1] > view.xmax then
+	if 
+		pos[1] < view.xmin or pos[1] > view.xmax or
+		pos[2] < view.ymin or pos[2] > view.ymax or
+		view.z ~= pos[3]
+	then
 		return false
 	end
 
-	if pos[2] < view.ymin or pos[2] > view.ymax then
-		return false
-	end
-
-	return view.z == pos[3] and view[pos[2]][pos[1]] > 0
+	return view[pos[2]][pos[1]] > 0
 end
 
 -- Check if the unit is seen and belong to the set
@@ -61,6 +97,9 @@ local function findLos(unitSource)
 			corrupt(unitTarget)
 		end
 	end
+
+	-- Post process
+	marchantAnnouncement()
 end
 
 -- Erase the enemy links
@@ -87,15 +126,44 @@ function clearEnemy(unit)
 	end
 end
 
--- Find targets within the LOS of the creature
-function corrupt(unit)
-	local origRace = tostring(df.global.world.raws.creatures.all[unit.race].creature_id)
-	local suffix, targetCaste
+-- Clears dragging and riding of mounts/wagons, draggees also join your civ
+function clearMerchant(unit)
+	local draggee
 
-	mo.make_own(unit)
-	mo.make_citizen(unit)
+	-- Free the draggee as well and makeown + tame it
+	if -1 ~= unit.relations.draggee_id then
+		dragee = utils.binsearch(df.global.world.units.active, unit.relations.draggee_id, 'id')
 
-	-- Taking down all the hostility flags
+		if dragee then
+			mo.make_own(dragee)
+			dragee.relations.dragger_id = -1
+			dragee.flags1.tame = true
+			dragee.training_level = df.animal_training_level.Domesticated
+		end
+	end
+
+	unit.relations.draggee_id = -1
+	unit.relations.rider_mount_id = -1
+	unit.relations.mount_type = 0
+	unit.flags1.rider = 0
+
+	
+end
+
+-- Take the creature out of its cage
+function clearCage(unit)
+	local cage = dfhack.units.getContainer(unit)
+	
+	if -1 ~= cage then
+		position = xyz2pos(dfhack.units.getPosition(unit))
+		unit.pos:assign(position)
+		unit.flags1.caged = false
+	end
+
+end
+
+-- Takes down any hostility flags that mo didn't handle
+function clearHostile(unit)
 	unit.flags1.marauder = false
 	unit.flags1.active_invader = false
 	unit.flags1.hidden_in_ambush = false
@@ -108,7 +176,25 @@ function corrupt(unit)
 	unit.invasion_id = -1
 	unit.relations.group_leader_id = -1
 	unit.relations.last_attacker_id = -1
+end
 
+-- Change the creature race, take down hostility and  merchant flags, free cages and trading
+function corrupt(unit)
+	local origRace = tostring(df.global.world.raws.creatures.all[unit.race].creature_id)
+	local suffix, targetCaste, position
+
+	-- Setting announcements
+	if unit.flags1.merchant == true then 
+		announceMerchant = true 
+	end
+
+	mo.make_own(unit)
+	mo.make_citizen(unit)
+
+	-- Removes all the previous behaviour
+	clearHostile(unit)
+	clearMerchant(unit)
+	clearCage(unit)
 	clearEnemy(unit)
 
 	-- After taking the enemy to your side, transform it
@@ -131,13 +217,41 @@ function corrupt(unit)
 	end
 end
 
+--
 -- Action
-unitSource = df.unit.find(tonumber(args[1]))
+--
+
+validArgs = validArgs or utils.invert({
+    'help',
+    'unit',
+    'set',
+})
+
+local args = utils.processArgs({...}, validArgs)
+
+if args.help then
+ print([[scripts/succubus/corrupt.lua
+arguments
+    -help
+        Print this help message
+    -unit <number>
+        The unit at the source of the corruption
+    -set <string>
+        One of the available creature sets, currently only "succubus" is accepted
+]])
+ return
+end
+
+-- The source unit
+if not args.unit then qerror('Not unit provided, check succubus/corrupt -help') end
+
+unitSource = df.unit.find(tonumber(args.unit))
 if not unitSource then qerror('Unit not found.') end
 
--- Return the set of affected units, syntax is ['ORIGINAL_RACE'] = 'TARGET_CASTE' without the _MALE or _FEMALE suffix.
--- This is optional, if the affected creature isn't defined is false, no tranformation occurs
-if args[2] == 'succubus' then
+-- The transformation set, syntax is {RACE = 'TARGET_CASTE'}
+-- TARGET_CASTE can be false, then no transformation occur
+-- The played fort's race must contain the castes 
+if args.set == 'succubus' then
 	creatureSet = {
 		WARLOCK_CIV = 'DEVIL',
 		HUMAN = 'DEVIL',
@@ -167,7 +281,10 @@ if args[2] == 'succubus' then
 		PANDASHI_FD = 'FIEND',
 		RAPTOR_MAN_FD = 'DEVIL'
 	}
+else
+	qerror("Invalid set, check succubus/corrupt -help")
 end
 
+-- Starts the corruption process
 targetRace = df.global.world.raws.creatures.all[df.global.ui.race_id].creature_id
 findLos(unitSource)

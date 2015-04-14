@@ -1,6 +1,6 @@
 succubus/summon-hook
-modtools/reaction-trigger -reactionName SUCCUBUS_HEAT_FORGE -syndrome "major drowsiness"
+modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "dizziness"
 modtools/reaction-trigger -reactionName WELL_MAGMA_S -command [ succubus/eruption magma \\WORKER_ID 2/2/0 7 ]
 modtools/reaction-trigger -reactionName WELL_MAGMA_M -command [ succubus/eruption magma \\WORKER_ID 5/5/0 7 ]
 modtools/reaction-trigger -reactionName WELL_MAGMA_L -command [ succubus/eruption magma \\WORKER_ID 10/10/0 7 ]
-modtools/reaction-trigger -reactionName CORRUPT_PRISONERS_SUCCUBUS -command [ succubus/corrupt \\WORKER_ID succubus ]
+modtools/reaction-trigger -reactionName CORRUPT_PRISONERS_SUCCUBUS -command [ succubus/corrupt -unit \\WORKER_ID -set succubus ]
