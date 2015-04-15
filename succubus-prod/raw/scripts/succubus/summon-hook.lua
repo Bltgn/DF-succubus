@@ -13,10 +13,9 @@
 	- LUA_HOOK_SUMMON_HFS: Will summon a clown, or any creature with the ID starting with DEMON.
 
 	Optional parameters, those are added to the end of the reaction name, separated with spaces.
-	- TAME: The creature will be fully tamed, non tamed creatures are not hostile but will require extra work to be trained.
 	- NUM_X: WIll spawn x creatures instead of one.
 
-	Ex : [REACTION:LUA_HOOK_SUMMON_DOG TAME NUM_4]
+	Ex : [REACTION:LUA_HOOK_SUMMON_DOG NUM_4]
 
 	Uses bits of hire-guards by Kurik Amudnil
 
@@ -110,22 +109,19 @@ local function announcement(creatureId)
 		article = 'an'
 	end
 
-	dfhack.gui.showAnnouncement('You have summonned '..article..' '..name..'.', COLOR_YELLOW)
+	dfhack.gui.showAnnouncement('You have summonned '..article..' '..name..'.', COLOR_WHITE)
 end
 
 -- Spawns a regular creature at one unit position, caste is random
 local function summonCreature(unitId, unitSource)
 	local codeArray = utils.split_string(unitId, ' ')
-	local tame = false
 	local num = 1
 	local _, code
-	local unitpos = xyz2pos(dfhack.units.getPosition(unitSource))
+	local unitpos = {dfhack.units.getPosition(unitSource)}
 	local units = {}
 
 	for _, code in ipairs(codeArray or {}) do
-		if code == 'TAME' then
-			tame = true
-		elseif starts(code, 'NUM_') then
+		if starts(code, 'NUM_') then
 			num = tonumber(string.sub(code, 5))
 		else
 			unitId = code
@@ -143,15 +139,13 @@ local function summonCreature(unitId, unitSource)
 	end
 
 	-- Post spawning processes
-	if tame then
-		for _, unit in ipairs(units) do
-			unit.flags2.resident = true
-			unit.cultural_identity = unitSource.cultural_identity
-			unit.population_id = unitSource.population_id
+	for _, unit in ipairs(units) do
+		unit.flags2.resident = true
+		unit.cultural_identity = unitSource.cultural_identity
+		unit.population_id = unitSource.population_id
 
-			unit.flags1.tame = true
-			unit.training_level = df.animal_training_level.Domesticated
-		end
+		unit.flags1.tame = true
+		unit.training_level = df.animal_training_level.Domesticated
 	end
 
 	announcement(unitId)
