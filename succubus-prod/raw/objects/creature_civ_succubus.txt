@@ -84,7 +84,7 @@ creature_civ_succubus
 	[PROFESSION_NAME:MASTER_CROSSBOWMAN:Mark Mistress:Mark Mistress]
 	[PROFESSION_NAME:MASTER_BOWMAN:Bow Mistress:Bow Mistress]
 	[PROFESSION_NAME:MASTER_HAMMERMAN:Hammer Mistress:Hammer Mistress]
-	[PROFESSION_NAME:MASTER_SPEARMAN:Spears Mistress:Spear Mistress]
+	[PROFESSION_NAME:MASTER_SPEARMAN:Spear Mistress:Spear Mistress]
 	[PROFESSION_NAME:MASTER_AXEMAN:Axe Mistress:Axe Mistress]
 	[PROFESSION_NAME:MASTER_SWORDSMAN:Sword Mistress:Sword Mistress]
 	[PROFESSION_NAME:MASTER_MACEMAN:Mace Mistress:Mace Mistress]

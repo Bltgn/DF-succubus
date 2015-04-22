@@ -1,4 +1,8 @@
 # Succubus Dungeon : Changelog #
+12.0
++ Other changes
+- Masterwork: The civ will respect the bodyguard settins.
+
 11.2
 - Magma powered buildings are now always unlocked, even before reaching magma.
 - Upon save load, a welcome message now hint about the usage of magma wells.
