@@ -213,3 +213,14 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+##############
+## Main DF raw
+##############
+
+graphics/
+init.d/
+interaction\ examples/
+objects/
+scripts/
+onLoad.init
