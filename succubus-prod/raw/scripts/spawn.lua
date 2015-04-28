@@ -1,4 +1,4 @@
---create unit at pointer or given location and with given civ (usefull to pass -1 for enemy). Usage e.g. "spawn-unit -race DWARF -caste 0 -name Dwarfy"
+--create unit at pointer or given location and with given civ (usefull to pass -1 for enemy). Usage e.g. "spawn-unit -race DWARF -caste 0 -name Dwarfy -intelligent"
 --[=[
     arguments
         -help
@@ -17,15 +17,17 @@
             The unit's civilisation, will be the player's if omitted
         -hostile
             Overrides the civ_id to -1
+        -intelligent
+            Assumes that you are spawning an intelligent creature, and add additional legend information.
 
-    Example : spawn-unit -race HUMAN -caste 0 -name Bob
+    Example : spawn-unit -race HUMAN -caste 0 -name Bob -intelligent
 
     Made by warmist, but edited by Putnam for the dragon ball mod to be used in reactions
     Modified by Dirst for use in The Earth Strikes Back mod
+    Ported by Boltgun to dfhack 0.40.24 r3
     
     TODO:
-        throw a proper error if the user attempt to run it from the console, without good args
-        orientation
+        orientation, in current_soul->flags
         chosing a caste based on ratios
         birth time
         death time
@@ -52,6 +54,7 @@ local function getRandomCasteId(race_id)
     return 0
 end
 
+-- Returns the raws of a race's caste
 local function getCaste(race_id,caste_id)
     local cr=df.creature_raw.find(race_id)
     
@@ -63,6 +66,7 @@ local function genBodyModifier(body_app_mod)
     return math.random(body_app_mod.ranges[a],body_app_mod.ranges[a+1])
 end
 
+-- Returns the caste body size
 local function getBodySize(caste,time)
     --TODO: real body size...
     return caste.body_size_1[#caste.body_size_1-1] --returns last body size
@@ -88,6 +92,24 @@ local function clampedNormal(min,median,max)
     return val
 end
 
+-- Return a random key from an array of items containing weightings.
+local function getRandomItem(items)
+    local totalWeight, random, result, cursor
+
+    for k,v in pais(items) do
+        totalWeight = totalWeight + v
+    end
+
+    random = math.random(0, total)
+    for k, v in pairs(entities) do
+        cursor = cursor + score
+        if cursor >= random then return k end
+    end
+
+    return k
+end
+
+-- Creates the soul for the creature and caste setup
 local function makeSoul(unit,caste)
     local tmp_soul=df.unit_soul:new()
     tmp_soul.unit_id=unit.id
@@ -123,10 +145,35 @@ local function makeSoul(unit,caste)
     tmp_soul.anon_4 = -1
     tmp_soul.anon_5 = -1
 
+    -- Insertion
     unit.status.souls:insert("#",tmp_soul)
     unit.status.current_soul=tmp_soul
+
+    -- Post insertion
+    local orientation = tmp_soul.orientation_flags
+
+    if not args.intelligent then
+        if unit.sex == 0 then
+            orientation.marry_male = true
+        else
+            orientation.marry_female = true
+        end
+    else
+        local caste=getCaste(unit.race_id,unit.caste_id)
+
+        -- male
+        orientionResult = getRandomItem(caste.orientation_male)
+        orientation.romance_male = (orientionResult == 1)
+        orientation.rmarry_male = (orientionResult == 2)
+
+        -- female
+        orientionResult = getRandomItem(caste.orientation_female)
+        orientation.romance_female = (orientionResult == 1)
+        orientation.rmarry_female = (orientionResult == 2)
+    end
 end
 
+-- Creates the unit, give it a soul, save it into the world and returns it.
 local function CreateUnit(race_id,caste_id,unit_age)
     local race=df.creature_raw.find(race_id)
     if race==nil then error("Invalid race_id") end
@@ -251,10 +298,13 @@ local function CreateUnit(race_id,caste_id,unit_age)
     df.global.world.units.all:insert("#",unit)
     df.global.world.units.active:insert("#",unit)
 
-    -- !!! Misc stuff, I have no idea why and how
+    --  Post spawning asjustement
+    if args.intelligent then
+        unit.population_id = -1
+    end
+
     unit.flags2.resident = false;
     unit.flags3.body_temp_in_range = true;
-    unit.population_id = -1
     unit.status.current_soul.unit_id = unit.id
 
     unit.animal.population.region_x = -1
@@ -266,6 +316,7 @@ local function CreateUnit(race_id,caste_id,unit_age)
     unit.counters.soldier_mood_countdown = -1
     unit.counters.death_cause = -1
 
+    -- Prevents hostility on save reload
     unit.enemy.anon_4 = -1
     unit.enemy.anon_5 = -1
     unit.enemy.anon_6 = -1
@@ -273,6 +324,7 @@ local function CreateUnit(race_id,caste_id,unit_age)
     return unit
 end
 
+-- Find a race's raw
 local function findRace(name)
     for k,v in pairs(df.global.world.raws.creatures.all) do
         if v.creature_id==name then
@@ -282,6 +334,7 @@ local function findRace(name)
     qerror("Race:"..name.." not found!")
 end
  
+-- Creates an historical figure
 local function createFigure(trgunit,he,he_group)
     local hf=df.historical_figure:new()
     hf.id=df.global.hist_figure_next_id
@@ -317,12 +370,10 @@ local function createFigure(trgunit,he,he_group)
     -- set values that seem related to state and do event
     --change_state(hf, dfg.ui.site_id, region_pos)
  
- 
     --lets skip skills for now
     --local skills = df.historical_figure_info.T_skills:new() -- skills snap shot
     -- ...
     hf.info.skills = {new=true}
- 
  
     he.histfig_ids:insert('#', hf.id)
     he.hist_figures:insert('#', hf)
@@ -362,6 +413,7 @@ local function allocateIds(nemesis_record,hist_entity)
     hist_entity.next_member_idx=hist_entity.next_member_idx+1
 end
  
+-- Creates the nemsis for an unit, with relationship to the civ and group, implies the creation of an historical figure.
 local function createNemesis(trgunit,civ_id,group_id)
     local id=df.global.nemesis_next_id
     local nem=df.nemesis_record:new()
@@ -410,7 +462,7 @@ end
 -- Do the placement, returns the freshly spawned unit
 function place(args)
     if not args.race then
-        qerror("Please provide a race")
+        qerror("Please provide a race.")
     end
     
     local pos = {}
@@ -423,7 +475,7 @@ function place(args)
     end
     
     if pos.x == -30000 then
-        qerror("Point your pointy thing somewhere")
+        qerror("Please point the game cursor somewhere or provide coordinates.")
     end
 
     local i
@@ -463,13 +515,14 @@ function place(args)
         ocupan.unit = true
     end
 
-    if df.historical_entity.find(u.civ_id) ~= nil  then
-        --createNemesis(u, u.civ_id,group_id)
+    if args.intelligent and df.historical_entity.find(u.civ_id) ~= nil  then
+        createNemesis(u, u.civ_id,group_id)
     end
 
     return u
 end
 
+-- Arguments handling.
 validArgs = validArgs or utils.invert({
     'help',
     'race',
@@ -479,12 +532,13 @@ validArgs = validArgs or utils.invert({
     'position',
     'civ_id',
     'hostile',
+    'intelligent'
 })
 
 local args = utils.processArgs({...}, validArgs)
 
 if args.help then
- print([[scripts/spawn-unit.lua
+    print([[scripts/spawn.lua
 arguments
     -help
         print this help message
@@ -502,8 +556,10 @@ arguments
         The unit's civilisation, will be the player's if ommited
     -hostile
         Overrides the civ_id to -1
+    -intelligent
+        Assumes that you are spawning an intelligent creature, and add additional legend information.
 ]])
- return
+    return
 end
 
 if args.race then
