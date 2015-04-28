@@ -115,7 +115,14 @@ local function makeSoul(unit,caste)
         utils.insert_or_update(tmp_soul.skills,
             {new=true,id=skill,experience=caste.natural_skill_exp[k],rating=rating}, 'id')
     end
-    
+
+    -- not sure about these unk and anons there, part of a fix to prevent hostility
+    tmp_soul.unk2 = -1
+    tmp_soul.unk3 = -1
+    tmp_soul.unk4 = -1
+    tmp_soul.anon_4 = -1
+    tmp_soul.anon_5 = -1
+
     unit.status.souls:insert("#",tmp_soul)
     unit.status.current_soul=tmp_soul
 end
@@ -237,13 +244,32 @@ local function CreateUnit(race_id,caste_id,unit_age)
     app.colors:resize(#caste.color_modifiers)--3
     
     makeSoul(unit,caste)
-    
+
     --finally set the id
     unit.id=df.global.unit_next_id
     df.global.unit_next_id=df.global.unit_next_id+1
     df.global.world.units.all:insert("#",unit)
     df.global.world.units.active:insert("#",unit)
-    
+
+    -- !!! Misc stuff, I have no idea why and how
+    unit.flags2.resident = false;
+    unit.flags3.body_temp_in_range = true;
+    unit.population_id = -1
+    unit.status.current_soul.unit_id = unit.id
+
+    unit.animal.population.region_x = -1
+    unit.animal.population.region_y = -1
+    unit.animal.population.unk_28 = -1
+    unit.animal.population.population_idx = -1
+    unit.animal.population.depth = -1
+
+    unit.counters.soldier_mood_countdown = -1
+    unit.counters.death_cause = -1
+
+    unit.enemy.anon_4 = -1
+    unit.enemy.anon_5 = -1
+    unit.enemy.anon_6 = -1
+
     return unit
 end
 
@@ -438,7 +464,7 @@ function place(args)
     end
 
     if df.historical_entity.find(u.civ_id) ~= nil  then
-        createNemesis(u, u.civ_id,group_id)
+        --createNemesis(u, u.civ_id,group_id)
     end
 
     return u
