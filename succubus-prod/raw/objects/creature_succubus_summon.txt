@@ -407,7 +407,6 @@ creature_sucucbus_summon
 	[EVIL]
 	[PET_EXOTIC]
 	[TRAINABLE_WAR]
-	[SLOW_LEARNER] // Trying to add them into pits
 	[CANOPENDOORS]
 	[NOFEAR]
 	[BUILDINGDESTROYER:2]
@@ -530,7 +529,7 @@ creature_sucucbus_summon
 		[BP_ADD_TYPE:GELDABLE]
 
 [CREATURE:FROG_DEMON] // With help from the demon mod by Naryar
-	[DESCRIPTION:A gigantic batrachian creature twisted into humanoid form. It's skin exudes a noxious, foul-smelling oil and it has a similarly noxious bite. This toad has an infinite thirst for battle.]
+	[DESCRIPTION:A gigantic batrachian creature twisted into humanoid form. It's skin exudes a noxious, foul-smelling oil and it has a similarly noxious bite.]
 	[NAME:frog demon:frog demons:frog demon]
 	[CASTE_NAME:frog demon:frog demons:frog demon]
 	[CREATURE_TILE:'&']
@@ -602,7 +601,7 @@ creature_sucucbus_summon
 	[BODY_APPEARANCE_MODIFIER:LENGTH:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
-		[USE_MATERIAL_TEMPLATE:POISON:CREATURE_EXTRACT_TEMPLATE]
+	[USE_MATERIAL_TEMPLATE:POISON:CREATURE_EXTRACT_TEMPLATE]
 		[STATE_NAME:ALL_SOLID:frozen frog demon oil]
 		[STATE_NAME_ADJ:ALL_SOLID:frozen frog demon oil]
 		[STATE_NAME:LIQUID:frog demon oil]

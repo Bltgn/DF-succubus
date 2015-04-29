@@ -4,3 +4,34 @@ modtools/reaction-trigger -reactionName WELL_MAGMA_S -command [ succubus/eruptio
 modtools/reaction-trigger -reactionName WELL_MAGMA_M -command [ succubus/eruption magma \\WORKER_ID 5/5/0 7 ]
 modtools/reaction-trigger -reactionName WELL_MAGMA_L -command [ succubus/eruption magma \\WORKER_ID 10/10/0 7 ]
 modtools/reaction-trigger -reactionName CORRUPT_PRISONERS_SUCCUBUS -command [ succubus/corrupt -unit \\WORKER_ID -set succubus ]
+
+AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
+AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
+AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
+AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
+AddPetToCiv -civ SUCCUBUS -race ELEMENTAL_PAIN -caste DEFAULT
+AddPetToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
+AddPetToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
+AddPetToCiv -civ SUCCUBUS -race IMP_FIRE -caste DEFAULT
+AddPetToCiv -civ SUCCUBUS -race IMP_FIRE -caste DEFAULT
+AddPetToCiv -civ SUCCUBUS -race TENTACLE_MONSTER -caste MALE
+AddPetToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
+AddPetToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
+AddPetToCiv -civ SUCCUBUS -race SPIRIT_OF_FIRE -caste DEFAULT
+
+AddMinionToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
+AddMinionToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
+AddMinionToCiv -civ SUCCUBUS -race TENTACLE_MONSTER -caste MALE
+AddMinionToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
+AddMinionToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
+
+AddMountToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
+AddMountToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
+
+AddPackToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
+AddPackToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
+AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
+AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
+
+AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
+AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
