@@ -138,16 +138,6 @@ local function summonCreature(unitId, unitSource)
 		})
 	end
 
-	-- Post spawning processes
-	for _, unit in ipairs(units) do
-		unit.flags2.resident = true
-		unit.cultural_identity = unitSource.cultural_identity
-		unit.population_id = unitSource.population_id
-
-		unit.flags1.tame = true
-		unit.training_level = df.animal_training_level.Domesticated
-	end
-
 	announcement(unitId)
 end
 

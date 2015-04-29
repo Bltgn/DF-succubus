@@ -1,4 +1,4 @@
---create unit at pointer or given location and with given civ (usefull to pass -1 for enemy). Usage e.g. "spawn-unit -race DWARF -caste 0 -name Dwarfy -intelligent"
+--create unit at pointer or given location and with given civ (usefull to pass -1 for enemy). Usage e.g. "spawn-unit -race DWARF -caste 0 -name Dwarfy"
 --[=[
     arguments
         -help
@@ -7,27 +7,24 @@
             The raw id of the creature's race, mandatory
         -caste <number>
             The caste's number, optional
-        -age <number>
-            The unit's age in years, defaults to 15 if omitted
+		-age <number>
+		    The unit's age in years, defaults to 15 if omitted
         -name <doggy>
             The unit's name, optional
         -position [ x y z ]
             The unit's position, will try to use the cursor if omitted
         -civ_id
             The unit's civilisation, will be the player's if omitted
-        -hostile
-            Overrides the civ_id to -1
-        -intelligent
-            Assumes that you are spawning an intelligent creature, and add additional legend information.
 
-    Example : spawn-unit -race HUMAN -caste 0 -name Bob -intelligent
+    Example : spawn-unit -race HUMAN -caste 0 -name Bob
 
     Made by warmist, but edited by Putnam for the dragon ball mod to be used in reactions
-    Modified by Dirst for use in The Earth Strikes Back mod
-    Ported by Boltgun to dfhack 0.40.24 r3
-    
+	Modified by Dirst for use in The Earth Strikes Back mod, incorporating fixes discovered
+	by Boltgun
+	
     TODO:
-        orientation, in current_soul->flags
+        throw a proper error if the user attempt to run it from the console, without good args
+        orientation
         chosing a caste based on ratios
         birth time
         death time
@@ -54,10 +51,9 @@ local function getRandomCasteId(race_id)
     return 0
 end
 
--- Returns the raws of a race's caste
 local function getCaste(race_id,caste_id)
     local cr=df.creature_raw.find(race_id)
-    
+	
     return cr.caste[tonumber(caste_id)]
 end
 
@@ -66,7 +62,6 @@ local function genBodyModifier(body_app_mod)
     return math.random(body_app_mod.ranges[a],body_app_mod.ranges[a+1])
 end
 
--- Returns the caste body size
 local function getBodySize(caste,time)
     --TODO: real body size...
     return caste.body_size_1[#caste.body_size_1-1] --returns last body size
@@ -159,7 +154,7 @@ local function makeSoul(unit,caste)
             orientation.marry_female = true
         end
     else
-        local caste=getCaste(unit.race_id,unit.caste_id)
+        local caste = getCaste(unit.race_id,unit.caste_id)
 
         -- male
         orientionResult = getRandomItem(caste.orientation_male)
@@ -173,21 +168,20 @@ local function makeSoul(unit,caste)
     end
 end
 
--- Creates the unit, give it a soul, save it into the world and returns it.
 local function CreateUnit(race_id,caste_id,unit_age)
     local race=df.creature_raw.find(race_id)
     if race==nil then error("Invalid race_id") end
+	
+	unit_age = unit_age or 15
     
-    unit_age = unit_age or 15
-    
-    local caste
+	local caste
     local unit=df.unit:new()
 
     -- Pick a random caste is none are set
     if nil == caste_id then
         caste_id = getRandomCasteId(race_id)
     end
-    
+	
     caste = getCaste(race_id,caste_id)
 
     unit:assign{
@@ -291,40 +285,16 @@ local function CreateUnit(race_id,caste_id,unit_age)
     app.colors:resize(#caste.color_modifiers)--3
     
     makeSoul(unit,caste)
-
+    
     --finally set the id
     unit.id=df.global.unit_next_id
     df.global.unit_next_id=df.global.unit_next_id+1
     df.global.world.units.all:insert("#",unit)
     df.global.world.units.active:insert("#",unit)
-
-    --  Post spawning asjustement
-    if args.intelligent then
-        unit.population_id = -1
-    end
-
-    unit.flags2.resident = false;
-    unit.flags3.body_temp_in_range = true;
-    unit.status.current_soul.unit_id = unit.id
-
-    unit.animal.population.region_x = -1
-    unit.animal.population.region_y = -1
-    unit.animal.population.unk_28 = -1
-    unit.animal.population.population_idx = -1
-    unit.animal.population.depth = -1
-
-    unit.counters.soldier_mood_countdown = -1
-    unit.counters.death_cause = -1
-
-    -- Prevents hostility on save reload
-    unit.enemy.anon_4 = -1
-    unit.enemy.anon_5 = -1
-    unit.enemy.anon_6 = -1
-
+	
     return unit
 end
 
--- Find a race's raw
 local function findRace(name)
     for k,v in pairs(df.global.world.raws.creatures.all) do
         if v.creature_id==name then
@@ -334,7 +304,6 @@ local function findRace(name)
     qerror("Race:"..name.." not found!")
 end
  
--- Creates an historical figure
 local function createFigure(trgunit,he,he_group)
     local hf=df.historical_figure:new()
     hf.id=df.global.hist_figure_next_id
@@ -370,10 +339,12 @@ local function createFigure(trgunit,he,he_group)
     -- set values that seem related to state and do event
     --change_state(hf, dfg.ui.site_id, region_pos)
  
+ 
     --lets skip skills for now
     --local skills = df.historical_figure_info.T_skills:new() -- skills snap shot
     -- ...
     hf.info.skills = {new=true}
+ 
  
     he.histfig_ids:insert('#', hf.id)
     he.hist_figures:insert('#', hf)
@@ -413,7 +384,6 @@ local function allocateIds(nemesis_record,hist_entity)
     hist_entity.next_member_idx=hist_entity.next_member_idx+1
 end
  
--- Creates the nemsis for an unit, with relationship to the civ and group, implies the creation of an historical figure.
 local function createNemesis(trgunit,civ_id,group_id)
     local id=df.global.nemesis_next_id
     local nem=df.nemesis_record:new()
@@ -462,25 +432,26 @@ end
 -- Do the placement, returns the freshly spawned unit
 function place(args)
     if not args.race then
-        qerror("Please provide a race.")
+        qerror("Please provide a race")
     end
-    
-    local pos = {}
-    if args.position then
-        pos.x=args.position[1]
-        pos.y=args.position[2]
-        pos.z=args.position[3]
-    else
-        pos = copyall(df.global.cursor)
-    end
-    
+	
+	local pos = {}
+	if args.position then
+	    pos.x=args.position[1]
+		pos.y=args.position[2]
+		pos.z=args.position[3]
+	else
+	    pos = copyall(df.global.cursor)
+	end
+	
     if pos.x == -30000 then
-        qerror("Please point the game cursor somewhere or provide coordinates.")
+        qerror("Point your pointy thing somewhere")
     end
 
     local i
     local race_id = findRace(args.race)
     local u = CreateUnit(race_id,args.caste,args.age)
+    u.status.current_soul.unit_id = u.id
 
     u.pos:assign(pos)
         
@@ -488,24 +459,48 @@ function place(args)
         u.name.first_name = args.name
         u.name.has_name = true
     end
-    
-    if args.hostile then 
-        args.civ_id = -1
-    end
-    
+	
+	if args.cid_id then args.civ_id = tonumber(args.civ_id) end
+	
     local group_id
     if df.global.gamemode == df.game_mode.ADVENTURE then
         u.civ_id = args.civ_id or df.global.world.units.active[0].civ_id
         group_id = -1
     else    
         u.civ_id = args.civ_id or df.global.ui.civ_id
-    end
+   end
 
     if args.civ_id == -1 then
         group_id = group_id or -1
     else
         group_id = group_id or df.global.ui.group_id
-    end
+		-- If a friendly animal, make it domesticated.  From Boltgun & Dirst
+		local caste=df.creature_raw.find(u.race).caste[u.caste]
+		if not(caste.flags.CAN_SPEAK and caste.flags.CAN_LEARN) then
+			-- Fix friendly animals (from Boltgun)
+			u.flags2.resident = false;
+			u.flags3.body_temp_in_range = true;
+			u.population_id = -1
+
+			u.animal.population.region_x = -1
+			u.animal.population.region_y = -1
+			u.animal.population.unk_28 = -1
+			u.animal.population.population_idx = -1
+			u.animal.population.depth = -1
+
+			u.counters.soldier_mood_countdown = -1
+			u.counters.death_cause = -1
+
+			u.enemy.anon_4 = -1
+			u.enemy.anon_5 = -1
+			u.enemy.anon_6 = -1
+
+			-- And make them tame (from Dirst)
+			u.flags1.tame = true
+			u.training_level = 7 
+		end
+
+	end
 
     local desig,ocupan = dfhack.maps.getTileFlags(pos)
     if ocupan.unit then
@@ -515,30 +510,27 @@ function place(args)
         ocupan.unit = true
     end
 
-    if args.intelligent and df.historical_entity.find(u.civ_id) ~= nil  then
+    if caste.flags.CAN_SPEAK and caste.flags.CAN_LEARN and df.historical_entity.find(u.civ_id) ~= nil  then
         createNemesis(u, u.civ_id,group_id)
     end
 
     return u
 end
 
--- Arguments handling.
 validArgs = validArgs or utils.invert({
     'help',
     'race',
     'caste',
-    'age',
+	'age',
     'name',
     'position',
     'civ_id',
-    'hostile',
-    'intelligent'
 })
 
 local args = utils.processArgs({...}, validArgs)
 
 if args.help then
-    print([[scripts/spawn.lua
+ print([[scripts/spawn-unit.lua
 arguments
     -help
         print this help message
@@ -546,20 +538,17 @@ arguments
         The raw id of the creature's race, mandatory
     -caste <number>
         The caste's number, optional
-    -age <number>
-        The unit's age in years, defaults to 15 if omitted
-    -name <doggy>
+	-age <number>
+	    The unit's age in years, defaults to 15 if omitted
+	-name <doggy>
         The unit's name, optional
     -position [ x y z ]
         The unit's position, will try to use the cursor if ommited
     -civ_id
         The unit's civilisation, will be the player's if ommited
-    -hostile
-        Overrides the civ_id to -1
-    -intelligent
-        Assumes that you are spawning an intelligent creature, and add additional legend information.
+
 ]])
-    return
+ return
 end
 
 if args.race then
