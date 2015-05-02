@@ -1,7 +1,19 @@
 # Succubus Dungeon : Changelog #
 12.0
++ New buildgings
+- The gem cutter's shop: create furniture out of gems.
+- The red and blue portals: offering transportation to individual workers or sqauds of warriors.
+- Masterwork: The archeologist: identify relics and excavate stone.
+
 + Other changes
 - Masterwork: The civ will respect the bodyguard and AI settings.
+- Masterwork: You can now press peat and antracite.
+- Added skills indicator to several more buildings.
+- The magma well now uses the Pump Operator labor.
+- You can now grind stone to sand.
+- The tanner shop can now produce dry stomaches, leather ropes and horn daggers.
+- The craft shop now offer the option to make rock rings, scepters, etc.
+- You can now extract strands of gold, silver and (in masterwork) orichalcum.
 
 11.2
 - Magma powered buildings are now always unlocked, even before reaching magma.

@@ -39,6 +39,7 @@ reaction_all_skill_titles
 
 [REACTION:SKILL_HELP_ANIMALTRAIN] 
 	[NAME:===USE ANIMALTRAIN===]	
+	[BUILDING:SUMMONING_PORTAL]
 	
 6	ANIMALCARE	Animal caretaker	Animal Caretaking
 
@@ -74,6 +75,7 @@ reaction_all_skill_titles
 
 [REACTION:SKILL_HELP_TANNER] 
 	[NAME:===USE TANNER===]	
+	[BUILDING:TANNER]
 	
 13	WEAVING	Weaver	Weaving
 
@@ -139,7 +141,7 @@ reaction_all_skill_titles
 
 [REACTION:SKILL_HELP_SMELT] 
 	[NAME:===USE SMELTING===]
-	[BUILDING:WELL_MAGMA]	
+	[BUILDING:SMELTER]	
 	
 26	EXTRACT_STRAND	Strand extractor	Strand Extraction
 
@@ -165,6 +167,8 @@ reaction_all_skill_titles
 
 [REACTION:SKILL_HELP_CUTGEM] 
 	[NAME:===USE GEM CUTTING===]	
+	[BUILDING:GEMCUTTER]
+	[BULIDING:ARCHEOLOGIST]
 	
 31	ENCRUSTGEM	Gem setter	Gem Setting
 
@@ -201,6 +205,7 @@ reaction_all_skill_titles
 
 [REACTION:SKILL_HELP_BONECARVE] 
 	[NAME:===USE BONECARVE===]	
+	[BUILDING:BONECARVER]
 	
 38	AXE	Axeman	Axe
 
@@ -305,7 +310,9 @@ reaction_all_skill_titles
 58	DESIGNBUILDING	Building designer	Building Design
 
 [REACTION:SKILL_HELP_DESIGNBUILDING] 
-	[NAME:===USE BUILDING DESIGN===]	
+	[NAME:===USE ARCHITECTURE===]
+	[BUILDING:TELEPORT_1]
+	[BUILDING:TELEPORT_2]
 	
 59	DRESS_WOUNDS	Wound dresser	Wound Dressing
 
@@ -341,6 +348,8 @@ reaction_all_skill_titles
 
 [REACTION:SKILL_HELP_WOOD_BURNING] 
 	[NAME:===USE WOOD BURNING===]	
+	[BUILDING:BRICK_OVEN]
+	[BUILDING:CREMATORY]
 	
 66	LYE_MAKING	Lye maker	Lye Making
 
@@ -351,6 +360,7 @@ reaction_all_skill_titles
 
 [REACTION:SKILL_HELP_SOAP_MAKING] 
 	[NAME:===USE SOAP MAKING===]	
+	[BUILDING:SOAP_MAKER]
 	
 68	POTASH_MAKING	Potash maker	Potash Making
 
@@ -366,6 +376,7 @@ reaction_all_skill_titles
 
 [REACTION:SKILL_HELP_OPERATE_PUMP] 
 	[NAME:===USE PUMP OPERATOR===]	
+	[BUILDING:WELL_MAGMA]	
 	
 71	SWIMMING	Swimmer	Swimming
 
@@ -583,6 +594,7 @@ reaction_all_skill_titles
 
 [REACTION:SKILL_HELP_PRESSING] 
 	[NAME:===USE PRESSING===]	
+	[BUILDING:SCREW_PRESS]
 	
 114	BEEKEEPING	Beekeeper	Beekeeping
 
