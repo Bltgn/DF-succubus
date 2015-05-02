@@ -1,19 +1,39 @@
 # Succubus Dungeon : Changelog #
 12.0
-+ New buildgings
++ Summoning!
+- You can now summon creatures at the summoning portal.
+- This uses the animal training skill
+- As before this requires various reageants acquired through trade of the related industry.
+- The summoned monsters are tame and will be ready to be used as pets or from traning.
+
++ Available demons
+- Nahash: A vermin hunting snake, female lays eggs, summoned by batches of 5.
+- Orthus: Vicious two headed dogs, can be trained for hunting or war.
+- Nightmares: The mount and pack animal of the civilization. Cannot tire and throw a strong kick.
+- Fire imp: Throw fireballs at your foes.
+- Pain elemental: Suicidal spirit that will explode upon attack.
+- Tentacle monster: Can throw multi attacks easily, lays slime that weaken enemies. The slime can be collected to replace oil.
+- Frog demon: A strong fighter for the front lines.
+- Fire spirit: Powerful demons that can burn entire squads.
+- Decay brutes: Huge, invisible monsters with a necrosis secretion.
+- Horrible Fell Spirit: There is no telling what you will get with this.
+
++ New buildings
 - The gem cutter's shop: create furniture out of gems.
 - The red and blue portals: offering transportation to individual workers or sqauds of warriors.
 - Masterwork: The archeologist: identify relics and excavate stone.
 
 + Other changes
-- Masterwork: The civ will respect the bodyguard and AI settings.
-- Masterwork: You can now press peat and antracite.
+- The common domestic pets are no longer available.
 - Added skills indicator to several more buildings.
 - The magma well now uses the Pump Operator labor.
 - You can now grind stone to sand.
 - The tanner shop can now produce dry stomaches, leather ropes and horn daggers.
 - The craft shop now offer the option to make rock rings, scepters, etc.
 - You can now extract strands of gold, silver and (in masterwork) orichalcum.
+- Masterwork: The civ will respect the bodyguard and AI settings.
+- Masterwork: You can now press peat and antracite.
+- Optional files have been removed, and are included directly in the mod for easier installation.
 
 11.2
 - Magma powered buildings are now always unlocked, even before reaching magma.
