@@ -153,7 +153,7 @@ eventful.onReactionComplete.succubusSummon = function(reaction, unit, input_item
 	if reaction.code == 'LUA_HOOK_SUMMON_HFS' then
 		summonHfs(reaction, unit, input_reagents)
 	elseif starts(reaction.code, 'LUA_HOOK_SUMMON_') then
-		summonCreature(string.sub(reaction.code, 17), unit)
+		summonCreature(string.sub(reaction.code, 17), input_items) -- This should be unit there !
 	else
 		return nil
 	end
