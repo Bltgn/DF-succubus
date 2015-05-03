@@ -124,11 +124,25 @@ modtools/reaction-trigger -reactionName FORCE_CARAVAN_GNOME -command [ force \\c
 
 modtools/reaction-trigger -reactionName FORCE_MIGRANTS_DWARF -command [ force \\migrants MOUNTAIN ]
 
+# Kobolds
+AddPetToCiv -civ KOBOLD -race SHALSWAR -caste MALE
+AddPetToCiv -civ KOBOLD -race RAT_KOBOLD -caste FEMALE
+AddPetToCiv -civ KOBOLD -race RAT_KOBOLD -caste FEMALE
+AddPetToCiv -civ KOBOLD -race SPIDER_CAVE_GIANT -caste MALE
+AddPetToCiv -civ KOBOLD -race SPIDER_CAVE_GIANT -caste FEMALE
+AddPetToCiv -civ KOBOLD -race HELMET_SNAKE -caste MALE
+AddPetToCiv -civ KOBOLD -race HELMET_SNAKE -caste FEMALE
+AddPetToCiv -civ KOBOLD -race GIANT_BARK_SCORPION -caste MALE
+AddPetToCiv -civ KOBOLD -race GIANT_BARK_SCORPION -caste FEMALE
+
+AddMountToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste MALE
+AddMountToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste FEMALE
+
 # succubus mod
 init/teleportbase
 
 succubus/summon-hook
-modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "drowsiness"
+modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "dizziness"
 modtools/reaction-trigger -reactionName WELL_MAGMA_S -command [ succubus/eruption magma \\WORKER_ID 2/2/0 7 ]
 modtools/reaction-trigger -reactionName WELL_MAGMA_M -command [ succubus/eruption magma \\WORKER_ID 5/5/0 7 ]
 modtools/reaction-trigger -reactionName WELL_MAGMA_L -command [ succubus/eruption magma \\WORKER_ID 10/10/0 7 ]
