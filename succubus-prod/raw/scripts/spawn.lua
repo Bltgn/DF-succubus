@@ -7,8 +7,8 @@
             The raw id of the creature's race, mandatory
         -caste <number>
             The caste's number, optional
-		-age <number>
-		    The unit's age in years, defaults to 15 if omitted
+        -age <number>
+            The unit's age in years, defaults to 15 if omitted
         -name <doggy>
             The unit's name, optional
         -position [ x y z ]
@@ -19,12 +19,11 @@
     Example : spawn-unit -race HUMAN -caste 0 -name Bob
 
     Made by warmist, but edited by Putnam for the dragon ball mod to be used in reactions
-	Modified by Dirst for use in The Earth Strikes Back mod, incorporating fixes discovered
-	by Boltgun
-	
+    Modified by Dirst for use in The Earth Strikes Back mod, incorporating fixes discovered
+    by Boltgun
+
     TODO:
         throw a proper error if the user attempt to run it from the console, without good args
-        orientation
         chosing a caste based on ratios
         birth time
         death time
@@ -53,7 +52,6 @@ end
 
 local function getCaste(race_id,caste_id)
     local cr=df.creature_raw.find(race_id)
-	
     return cr.caste[tonumber(caste_id)]
 end
 
@@ -89,15 +87,18 @@ end
 
 -- Return a random key from an array of items containing weightings.
 local function getRandomItem(items)
-    local totalWeight, random, result, cursor
+    local totalWeight, random, cursor
 
-    for k,v in pais(items) do
+    totalWeight = 0
+    cursor = 0
+
+    for k, v in pairs(items) do
         totalWeight = totalWeight + v
     end
 
-    random = math.random(0, total)
-    for k, v in pairs(entities) do
-        cursor = cursor + score
+    random = math.random(0, totalWeight)
+    for k, v in pairs(items) do
+        cursor = cursor + v
         if cursor >= random then return k end
     end
 
@@ -146,42 +147,42 @@ local function makeSoul(unit,caste)
 
     -- Post insertion
     local orientation = tmp_soul.orientation_flags
+    local caste = getCaste(unit.race, unit.caste)
 
-    if not args.intelligent then
+    if not(caste.flags.CAN_SPEAK and caste.flags.CAN_LEARN) then
+        -- Animal mode, activate breeding
         if unit.sex == 0 then
             orientation.marry_male = true
         else
             orientation.marry_female = true
         end
     else
-        local caste = getCaste(unit.race_id,unit.caste_id)
-
         -- male
         orientionResult = getRandomItem(caste.orientation_male)
         orientation.romance_male = (orientionResult == 1)
-        orientation.rmarry_male = (orientionResult == 2)
+        orientation.marry_male = (orientionResult == 2)
 
         -- female
         orientionResult = getRandomItem(caste.orientation_female)
         orientation.romance_female = (orientionResult == 1)
-        orientation.rmarry_female = (orientionResult == 2)
+        orientation.marry_female = (orientionResult == 2)
     end
 end
 
 local function CreateUnit(race_id,caste_id,unit_age)
     local race=df.creature_raw.find(race_id)
     if race==nil then error("Invalid race_id") end
-	
-	unit_age = unit_age or 15
-    
-	local caste
+
+    unit_age = unit_age or 15
+
+    local caste
     local unit=df.unit:new()
 
     -- Pick a random caste is none are set
     if nil == caste_id then
         caste_id = getRandomCasteId(race_id)
     end
-	
+
     caste = getCaste(race_id,caste_id)
 
     unit:assign{
@@ -434,16 +435,16 @@ function place(args)
     if not args.race then
         qerror("Please provide a race")
     end
-	
-	local pos = {}
-	if args.position then
-	    pos.x=args.position[1]
-		pos.y=args.position[2]
-		pos.z=args.position[3]
-	else
-	    pos = copyall(df.global.cursor)
-	end
-	
+
+    local pos = {}
+    if args.position then
+        pos.x=args.position[1]
+        pos.y=args.position[2]
+        pos.z=args.position[3]
+    else
+        pos = copyall(df.global.cursor)
+    end
+
     if pos.x == -30000 then
         qerror("Point your pointy thing somewhere")
     end
@@ -468,39 +469,39 @@ function place(args)
         group_id = -1
     else    
         u.civ_id = args.civ_id or df.global.ui.civ_id
-   end
+    end
+
+    local caste=df.creature_raw.find(u.race).caste[u.caste]
 
     if args.civ_id == -1 then
         group_id = group_id or -1
     else
         group_id = group_id or df.global.ui.group_id
-		-- If a friendly animal, make it domesticated.  From Boltgun & Dirst
-		local caste=df.creature_raw.find(u.race).caste[u.caste]
-		if not(caste.flags.CAN_SPEAK and caste.flags.CAN_LEARN) then
-			-- Fix friendly animals (from Boltgun)
-			u.flags2.resident = false;
-			u.flags3.body_temp_in_range = true;
-			u.population_id = -1
+        -- If a friendly animal, make it domesticated.  From Boltgun & Dirst
+        u.flags2.resident = false;
+        u.flags3.body_temp_in_range = true;
+        u.population_id = -1
 
-			u.animal.population.region_x = -1
-			u.animal.population.region_y = -1
-			u.animal.population.unk_28 = -1
-			u.animal.population.population_idx = -1
-			u.animal.population.depth = -1
+        u.animal.population.region_x = -1
+        u.animal.population.region_y = -1
+        u.animal.population.unk_28 = -1
+        u.animal.population.population_idx = -1
+        u.animal.population.depth = -1
 
-			u.counters.soldier_mood_countdown = -1
-			u.counters.death_cause = -1
+        u.counters.soldier_mood_countdown = -1
+        u.counters.death_cause = -1
 
-			u.enemy.anon_4 = -1
-			u.enemy.anon_5 = -1
-			u.enemy.anon_6 = -1
+        u.enemy.anon_4 = -1
+        u.enemy.anon_5 = -1
+        u.enemy.anon_6 = -1
 
-			-- And make them tame (from Dirst)
-			u.flags1.tame = true
-			u.training_level = 7 
-		end
+        if not(caste.flags.CAN_SPEAK and caste.flags.CAN_LEARN) then
+            -- And make them tame (from Dirst)
+            u.flags1.tame = true
+            u.training_level = 7
+        end
 
-	end
+    end
 
     local desig,ocupan = dfhack.maps.getTileFlags(pos)
     if ocupan.unit then
@@ -538,9 +539,9 @@ arguments
         The raw id of the creature's race, mandatory
     -caste <number>
         The caste's number, optional
-	-age <number>
-	    The unit's age in years, defaults to 15 if omitted
-	-name <doggy>
+    -age <number>
+        The unit's age in years, defaults to 15 if omitted
+    -name <doggy>
         The unit's name, optional
     -position [ x y z ]
         The unit's position, will try to use the cursor if ommited

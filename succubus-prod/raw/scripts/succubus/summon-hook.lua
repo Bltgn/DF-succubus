@@ -118,7 +118,7 @@ local function announcement(creatureId, num)
 end
 
 -- Spawns a regular creature at one unit position, caste is random
-local function summonCreature(unitId, unitSource)
+function summonCreature(unitId, unitSource)
 	local codeArray = utils.split_string(unitId, ' ')
 	local num = 1
 	local _, code

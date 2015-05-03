@@ -16,7 +16,6 @@
 - Frog demon: A strong fighter for the front lines.
 - Fire spirit: Powerful demons that can burn entire squads.
 - Decay brutes: Huge, invisible monsters with a necrosis secretion.
-- Horrible Fell Spirit: There is no telling what you will get with this.
 
 + New buildings
 - The gem cutter's shop: create furniture out of gems.
@@ -25,7 +24,6 @@
 
 + Other changes
 - The common domestic pets are no longer available.
-- Added skills indicator to several more buildings.
 - The magma well now uses the Pump Operator labor.
 - You can now grind stone to sand.
 - The tanner shop can now produce dry stomaches, leather ropes and horn daggers.
