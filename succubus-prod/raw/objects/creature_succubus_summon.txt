@@ -4,7 +4,7 @@ creature_sucucbus_summon
 
 // Summons
 [CREATURE:NAHASH] // eggs + vermin hunting
-	[DESCRIPTION:A medium-sized snake that displays more intelligence then its mundane cousins. Its can whisper simple sentences, tempting other creatures into protecting it.]
+	[DESCRIPTION:A medium-sized snake displaying more intelligence then its mundane cousins. It can whisper simple sentences, tempting other creatures into protecting it.]
 	[NAME:nahash:nahashes:nahash]
 	[CASTE_NAME:nahash:nahashes:nahash]
 	[CREATURE_TILE:'s']
@@ -101,7 +101,7 @@ creature_sucucbus_summon
 		[BP_ADD_TYPE:GELDABLE]
 
 [CREATURE:NIGHTMARE] // milkable + herd, mount and puller
-	[DESCRIPTION:A large hooved herbivore that is sometimes used as a steed by evil creatures. These creatures are known to never tire, pursueing victims at great length before doing as they please.]
+	[DESCRIPTION:A large hooved herbivore that is sometimes used as a steed by evil creatures. These creatures are known to never tire, pursuing victims upon long distances before doing as they please.]
 	[NAME:nightmare:nightmares:nightmareish]
 	[CASTE_NAME:nightmare:nightmares:nightmareish]
 	[CREATURE_TILE:'H']
@@ -238,7 +238,7 @@ creature_sucucbus_summon
 	[FIXED_TEMP:10070]
 
 [CREATURE:ORTHUS] // dogs
-	[DESCRIPTION:A medium sized vicious dog with two heads. Courageous trainers can teach it various tasks.]
+	[DESCRIPTION:A medium sized dog with two heads. Courageous trainers can teach it various tasks at the cost of a few bites.]
 	[NAME:orthus:orthi:orthus]
 	[CASTE_NAME:orthus:orthi:orthus]
 	[CHILDNAME:orthus pup:orthis pup:orthus pup]
@@ -410,7 +410,7 @@ creature_sucucbus_summon
 		[CDI:WAIT_PERIOD:400]
 
 [CREATURE:TENTACLE_MONSTER] // Summon, war bodyguard, lays slime, can be milked for food or soap
-	[DESCRIPTION:A terrifying creature with many tentacles and a terrible reputation. Despite their apparent corrupt intentions, tentacles monsters display a strong loyalty and simple territorial instincts, protecting their masters against intruders and cleaning contaminants. Their slime is dangerous to the touch for mortal creatures, but can be milked to serve as a substitute for oil.]
+	[DESCRIPTION:A terrifying creature with many tentacles and a terrible reputation. Tentacles monsters display a strong loyalty and simple territorial instincts, protecting their masters against intruders and cleaning contaminants when given the chance. Their slime is dangerous to the touch for mortal creatures, but can be gathered by a milker to serve as a substitute for oil.]
 	[NAME:tentacle monster:tentacle monsters:tentacle monster]
 	[CASTE_NAME:tentacle monster:tentacle monsters:tentacle monster]
 	[CREATURE_TILE:164][COLOR:2:0:0]

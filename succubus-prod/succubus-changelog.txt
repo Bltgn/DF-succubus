@@ -3,8 +3,8 @@
 + Summoning!
 - You can now summon creatures at the summoning portal.
 - This uses the animal training skill
-- As before this requires various reageants acquired through trade of the related industry.
-- The summoned monsters are tame and will be ready to be used as pets or from traning.
+- As before this requires various reagents acquired through trade of the related industry.
+- The summoned monsters are tame and will be ready to be used as pets or from training.
 
 + Available demons
 - Nahash: A vermin hunting snake, female lays eggs, summoned by batches of 5.
@@ -20,17 +20,17 @@
 + New buildings
 - The gem cutter's shop: create furniture out of gems.
 - The red and blue portals: offering transportation to individual workers or sqauds of warriors.
-- Masterwork: The archeologist: identify relics and excavate stone.
+- Masterwork: The archaeologist: identify relics and excavate stone.
 
 + Other changes
 - The common domestic pets are no longer available.
 - The magma well now uses the Pump Operator labor.
 - You can now grind stone to sand.
-- The tanner shop can now produce dry stomaches, leather ropes and horn daggers.
+- The tanner shop can now produce dry stomachs, leather ropes and horn daggers.
 - The craft shop now offer the option to make rock rings, scepters, etc.
 - You can now extract strands of gold, silver and (in masterwork) orichalcum.
 - Masterwork: The civ will respect the bodyguard and AI settings.
-- Masterwork: You can now press peat and antracite.
+- Masterwork: You can now press peat and anthracite.
 - Optional files have been removed, and are included directly in the mod for easier installation.
 
 11.2
