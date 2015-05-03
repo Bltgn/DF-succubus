@@ -169,8 +169,8 @@ creature_civ_succubus
 		[CHILDNAME:succubus girl:succubus girls]
 		[ODOR_STRING:sweet fragrance]
 
-		[ORIENTATION:MALE:0:15:85]
-		[ORIENTATION:FEMALE:10:45:45]
+		[ORIENTATION:MALE:0:10:90]
+		[ORIENTATION:FEMALE:5:45:45]
 
 	[CASTE:MALE]
 		[CREATURE_CLASS:SUCCUBUS_MALE]
@@ -207,7 +207,7 @@ creature_civ_succubus
 		[CASTE_PROFESSION_NAME:MASTER_LASHER:Whip Master:Whip Masters]
 		[CASTE_PROFESSION_NAME:MASTER_BLOWGUNMAN:Blowgun Master:Blowgun Masters]
 
-		[ORIENTATION:MALE:10:45:45]
+		[ORIENTATION:MALE:5:45:45]
 		[ORIENTATION:FEMALE:0:10:90] // It's important to have breeding couples for world gen
 
 	// Now creating the corruption castes by cloning the male and female ones

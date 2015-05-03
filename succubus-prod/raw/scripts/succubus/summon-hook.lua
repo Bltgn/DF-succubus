@@ -93,7 +93,7 @@ local function getRaw(creature_id)
 end
 
 -- Shows an announcement in the bottom of the screen
-local function announcement(creatureId)
+local function announcement(creatureId, num)
 	local cr = getRaw(creatureId)
 	local name = cr.name[0]
 	local letter = string.sub(name, 0, 1)
@@ -109,11 +109,16 @@ local function announcement(creatureId)
 		article = 'an'
 	end
 
-	dfhack.gui.showAnnouncement('You have summonned '..article..' '..name..'.', COLOR_WHITE)
+	if num == 1 then
+		dfhack.gui.showAnnouncement('You have summonned '..article..' '..name..'.', COLOR_WHITE)
+	else
+		name = cr.name[1]
+		dfhack.gui.showAnnouncement('You have summonned '..num..' '..name..'.', COLOR_WHITE)
+	end
 end
 
 -- Spawns a regular creature at one unit position, caste is random
-local function summonCreature(unitId, unitSource)
+function summonCreature(unitId, unitSource)
 	local codeArray = utils.split_string(unitId, ' ')
 	local num = 1
 	local _, code
@@ -138,17 +143,7 @@ local function summonCreature(unitId, unitSource)
 		})
 	end
 
-	-- Post spawning processes
-	for _, unit in ipairs(units) do
-		unit.flags2.resident = true
-		unit.cultural_identity = unitSource.cultural_identity
-		unit.population_id = unitSource.population_id
-
-		unit.flags1.tame = true
-		unit.training_level = df.animal_training_level.Domesticated
-	end
-
-	announcement(unitId)
+	announcement(unitId, num)
 end
 
 -- Attaches the hook to eventful

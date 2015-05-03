@@ -15,17 +15,15 @@
             The unit's position, will try to use the cursor if omitted
         -civ_id
             The unit's civilisation, will be the player's if omitted
-        -hostile
-            Overrides the civ_id to -1
 
     Example : spawn-unit -race HUMAN -caste 0 -name Bob
 
     Made by warmist, but edited by Putnam for the dragon ball mod to be used in reactions
-    Modified by Dirst for use in The Earth Strikes Back mod
-    
+    Modified by Dirst for use in The Earth Strikes Back mod, incorporating fixes discovered
+    by Boltgun
+
     TODO:
         throw a proper error if the user attempt to run it from the console, without good args
-        orientation
         chosing a caste based on ratios
         birth time
         death time
@@ -54,7 +52,6 @@ end
 
 local function getCaste(race_id,caste_id)
     local cr=df.creature_raw.find(race_id)
-    
     return cr.caste[tonumber(caste_id)]
 end
 
@@ -88,6 +85,27 @@ local function clampedNormal(min,median,max)
     return val
 end
 
+-- Return a random key from an array of items containing weightings.
+local function getRandomItem(items)
+    local totalWeight, random, cursor
+
+    totalWeight = 0
+    cursor = 0
+
+    for k, v in pairs(items) do
+        totalWeight = totalWeight + v
+    end
+
+    random = math.random(0, totalWeight)
+    for k, v in pairs(items) do
+        cursor = cursor + v
+        if cursor >= random then return k end
+    end
+
+    return k
+end
+
+-- Creates the soul for the creature and caste setup
 local function makeSoul(unit,caste)
     local tmp_soul=df.unit_soul:new()
     tmp_soul.unit_id=unit.id
@@ -123,16 +141,40 @@ local function makeSoul(unit,caste)
     tmp_soul.anon_4 = -1
     tmp_soul.anon_5 = -1
 
+    -- Insertion
     unit.status.souls:insert("#",tmp_soul)
     unit.status.current_soul=tmp_soul
+
+    -- Post insertion
+    local orientation = tmp_soul.orientation_flags
+    local caste = getCaste(unit.race, unit.caste)
+
+    if not(caste.flags.CAN_SPEAK and caste.flags.CAN_LEARN) then
+        -- Animal mode, activate breeding
+        if unit.sex == 0 then
+            orientation.marry_male = true
+        else
+            orientation.marry_female = true
+        end
+    else
+        -- male
+        orientionResult = getRandomItem(caste.orientation_male)
+        orientation.romance_male = (orientionResult == 1)
+        orientation.marry_male = (orientionResult == 2)
+
+        -- female
+        orientionResult = getRandomItem(caste.orientation_female)
+        orientation.romance_female = (orientionResult == 1)
+        orientation.marry_female = (orientionResult == 2)
+    end
 end
 
 local function CreateUnit(race_id,caste_id,unit_age)
     local race=df.creature_raw.find(race_id)
     if race==nil then error("Invalid race_id") end
-    
+
     unit_age = unit_age or 15
-    
+
     local caste
     local unit=df.unit:new()
 
@@ -140,7 +182,7 @@ local function CreateUnit(race_id,caste_id,unit_age)
     if nil == caste_id then
         caste_id = getRandomCasteId(race_id)
     end
-    
+
     caste = getCaste(race_id,caste_id)
 
     unit:assign{
@@ -244,32 +286,13 @@ local function CreateUnit(race_id,caste_id,unit_age)
     app.colors:resize(#caste.color_modifiers)--3
     
     makeSoul(unit,caste)
-
+    
     --finally set the id
     unit.id=df.global.unit_next_id
     df.global.unit_next_id=df.global.unit_next_id+1
     df.global.world.units.all:insert("#",unit)
     df.global.world.units.active:insert("#",unit)
-
-    -- !!! Misc stuff, I have no idea why and how
-    unit.flags2.resident = false;
-    unit.flags3.body_temp_in_range = true;
-    unit.population_id = -1
-    unit.status.current_soul.unit_id = unit.id
-
-    unit.animal.population.region_x = -1
-    unit.animal.population.region_y = -1
-    unit.animal.population.unk_28 = -1
-    unit.animal.population.population_idx = -1
-    unit.animal.population.depth = -1
-
-    unit.counters.soldier_mood_countdown = -1
-    unit.counters.death_cause = -1
-
-    unit.enemy.anon_4 = -1
-    unit.enemy.anon_5 = -1
-    unit.enemy.anon_6 = -1
-
+	
     return unit
 end
 
@@ -412,7 +435,7 @@ function place(args)
     if not args.race then
         qerror("Please provide a race")
     end
-    
+
     local pos = {}
     if args.position then
         pos.x=args.position[1]
@@ -421,7 +444,7 @@ function place(args)
     else
         pos = copyall(df.global.cursor)
     end
-    
+
     if pos.x == -30000 then
         qerror("Point your pointy thing somewhere")
     end
@@ -429,6 +452,7 @@ function place(args)
     local i
     local race_id = findRace(args.race)
     local u = CreateUnit(race_id,args.caste,args.age)
+    u.status.current_soul.unit_id = u.id
 
     u.pos:assign(pos)
         
@@ -436,11 +460,9 @@ function place(args)
         u.name.first_name = args.name
         u.name.has_name = true
     end
-    
-    if args.hostile then 
-        args.civ_id = -1
-    end
-    
+	
+	if args.cid_id then args.civ_id = tonumber(args.civ_id) end
+	
     local group_id
     if df.global.gamemode == df.game_mode.ADVENTURE then
         u.civ_id = args.civ_id or df.global.world.units.active[0].civ_id
@@ -449,10 +471,36 @@ function place(args)
         u.civ_id = args.civ_id or df.global.ui.civ_id
     end
 
+    local caste=df.creature_raw.find(u.race).caste[u.caste]
+
     if args.civ_id == -1 then
         group_id = group_id or -1
     else
         group_id = group_id or df.global.ui.group_id
+        -- If a friendly animal, make it domesticated.  From Boltgun & Dirst
+        u.flags2.resident = false;
+        u.flags3.body_temp_in_range = true;
+        u.population_id = -1
+
+        u.animal.population.region_x = -1
+        u.animal.population.region_y = -1
+        u.animal.population.unk_28 = -1
+        u.animal.population.population_idx = -1
+        u.animal.population.depth = -1
+
+        u.counters.soldier_mood_countdown = -1
+        u.counters.death_cause = -1
+
+        u.enemy.anon_4 = -1
+        u.enemy.anon_5 = -1
+        u.enemy.anon_6 = -1
+
+        if not(caste.flags.CAN_SPEAK and caste.flags.CAN_LEARN) then
+            -- And make them tame (from Dirst)
+            u.flags1.tame = true
+            u.training_level = 7
+        end
+
     end
 
     local desig,ocupan = dfhack.maps.getTileFlags(pos)
@@ -463,8 +511,8 @@ function place(args)
         ocupan.unit = true
     end
 
-    if df.historical_entity.find(u.civ_id) ~= nil  then
-        --createNemesis(u, u.civ_id,group_id)
+    if caste.flags.CAN_SPEAK and caste.flags.CAN_LEARN and df.historical_entity.find(u.civ_id) ~= nil  then
+        createNemesis(u, u.civ_id,group_id)
     end
 
     return u
@@ -474,11 +522,10 @@ validArgs = validArgs or utils.invert({
     'help',
     'race',
     'caste',
-    'age',
+	'age',
     'name',
     'position',
     'civ_id',
-    'hostile',
 })
 
 local args = utils.processArgs({...}, validArgs)
@@ -500,8 +547,7 @@ arguments
         The unit's position, will try to use the cursor if ommited
     -civ_id
         The unit's civilisation, will be the player's if ommited
-    -hostile
-        Overrides the civ_id to -1
+
 ]])
  return
 end

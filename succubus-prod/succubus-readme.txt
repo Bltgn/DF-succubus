@@ -13,7 +13,7 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 # Installation #
 * Install DF 40.24+ with DFHack r3
 * Extract the archive in your DF folder, preserving the folder structure.
-* Make sure the temperature feature is activated. It should be on most versions of DF.
+* Make sure the temperature feature is activated. It should be on most distributions of DF.
 * Generate a new world and select a succubus civ to play.
 
 # Selecting your civ at the embark screen #
@@ -21,10 +21,10 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 * Press + and - to chose a civ that uses the 'cabinet' tile to display its colonies on the map.
 * Pressing tab again until seeing the list of neighbors will confirm your choice, your selected race is the first one.
 
-## Dwarves ##
-The dwarven entities lack the tags needed to interact with you in fortress mode. To have them pay a visit to your dungeons, replace the entity_default with the one included in the 'optional' folder of the archive. The changes will not affect your play as a dwarf civ.
+## Modified default files ##
 
-If this conflict with another mod, you can add the tags manually :
+###entity_default###
+The dwarven entities lack the tags needed to interact with you in fortress mode. A modified entity file is included with the needed changes but if this conflict with another mod, you can add the tags manually :
 * Add the following to the MOUNTAIN entity, in entity_default.txt
  [PROGRESS_TRIGGER_POPULATION:2]
  [PROGRESS_TRIGGER_PRODUCTION:2]
@@ -32,6 +32,9 @@ If this conflict with another mod, you can add the tags manually :
  [PROGRESS_TRIGGER_POP_SIEGE:4]
  [PROGRESS_TRIGGER_PROD_SIEGE:3]
  [PROGRESS_TRIGGER_TRADE_SIEGE:3]
+
+###creature_subterranean###
+A pet value has been added to fire imps, otherwise they'd cost 1 point on the embark setup.
 
 # Magma #
 Buildings marked with a star '*' must be powered by magma. Those are unlocked even if you did not reach the magma sea. Building a magma well (under the furnace menu) will allow you to spawn some at will. Be warned that spawning a large batch of magma will cause it to 'soak' walls and go through them.
@@ -44,6 +47,11 @@ If a succubus is stuck, you can wait for it to evaporate, dig around, or find a 
 So you have caged enemies in your fort, why not put them into work? You can transform your enemies into demons by building a Den of iniquity. It has a reaction inside that will let the worker transform every human, elf, kobold, dwarf and even goblin in a range of 10 squares. Once changed, they will act as citizens and can join the ranks of the military, while retaining memories and skills of their former lives. This is also compatible with the fortress defense mod's races.
 
 It is possible to convert traders too. A goblin caravan can join you if you build a den next to your depot. They'll bring their pack animals along and destroy their wagons in the process. However the trading inventory will stay in the trade depot. You will have to deconstruct it to seize the goods. Several of the trading animals will still be sent back home as a 'thank you' note.
+
+# Summoning creature #
+A selection of demonic creatures can be called directly inside your fort. To do that, build a summoning portal then seek for the needed items for their sumoning ritual. You can check for the requirement by selecting one of the red sumoning jobs and pressing enter.
+
+The creatures will be immediatly tame and ready to use in your fort. Some of those also produce ressources so try building nest boxes or milking them.
 
 # Known issues #
 * Upon reaching your site's edge, traders will "kidnap" their own pets, this has no consequenses to your fort.
