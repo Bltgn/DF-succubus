@@ -1,4 +1,9 @@
 # Succubus Dungeon : Changelog #
+12.1
+- Caravan will no longer bring Spirits of fire or pain elemental and should not combust.
+- Vanilla: The Gemcutter workshop will properly accept rough (non cut) gems.
+
+
 12.0
 + Summoning!
 - You can now summon creatures at the summoning portal.

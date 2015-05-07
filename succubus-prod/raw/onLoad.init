@@ -15,7 +15,6 @@ AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
 AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
 AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
-AddPetToCiv -civ SUCCUBUS -race ELEMENTAL_PAIN -caste DEFAULT
 AddPetToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
 AddPetToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
 AddPetToCiv -civ SUCCUBUS -race IMP_FIRE -caste DEFAULT
@@ -23,7 +22,6 @@ AddPetToCiv -civ SUCCUBUS -race IMP_FIRE -caste DEFAULT
 AddPetToCiv -civ SUCCUBUS -race TENTACLE_MONSTER -caste MALE
 AddPetToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
 AddPetToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
-AddPetToCiv -civ SUCCUBUS -race SPIRIT_OF_FIRE -caste DEFAULT
 AddPetToCiv -civ SUCCUBUS -race BRUTE_DECAY -caste DEFAULT
 
 AddMinionToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
