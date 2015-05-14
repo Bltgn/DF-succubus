@@ -1,8 +1,10 @@
 # Succubus Dungeon : Changelog #
 12.1
-- Caravan will no longer bring Spirits of fire or pain elemental and should not combust.
+- It is now possible to make cauldrons, it is required for several buildings.
+- Caravans will no longer bring Spirits of fire or pain elemental and should not combust.
+- Orthi, nahashes and frog demons are no longer born adults.
 - Vanilla: The Gemcutter workshop will properly accept rough (non cut) gems.
-
+- Masterwork: It is now possible to build the metalurgist's smelter with iron cauldrons.
 
 12.0
 + Summoning!
