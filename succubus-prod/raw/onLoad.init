@@ -1,5 +1,4 @@
-init/teleportbase
-
+# Succubus dungeon
 succubus/summon-hook
 modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "dizziness"
 modtools/reaction-trigger -reactionName WELL_MAGMA_S -command [ succubus/eruption magma \\WORKER_ID 2/2/0 7 ]

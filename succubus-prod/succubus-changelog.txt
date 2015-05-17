@@ -3,8 +3,9 @@
 - It is now possible to make cauldrons, it is required for several buildings.
 - Caravans will no longer bring Spirits of fire or pain elemental and should not combust.
 - Orthi, nahashes and frog demons are no longer born adults.
+- Several buildings now requires ceuldrons to be built.
 - Vanilla: The Gemcutter workshop will properly accept rough (non cut) gems.
-- Masterwork: It is now possible to build the metalurgist's smelter with iron cauldrons.
+- Masterwork: It is now possible to build the metalurgist's smelter..
 
 12.0
 + Summoning!
