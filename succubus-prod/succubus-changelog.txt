@@ -4,6 +4,7 @@
 - Caravans will no longer bring Spirits of fire or pain elemental and should not combust.
 - Orthi, nahashes and frog demons are no longer born adults.
 - Several buildings now requires ceuldrons to be built.
+- Succubi and their creatures should no longer be affected by frog demon oil.
 - Vanilla: The Gemcutter workshop will properly accept rough (non cut) gems.
 - Masterwork: It is now possible to build the metalurgist's smelter..
 
