@@ -123,7 +123,6 @@ function summonCreature(unitId, unitSource)
 	local num = 1
 	local _, code
 	local unitpos = {dfhack.units.getPosition(unitSource)}
-	local units = {}
 
 	for _, code in ipairs(codeArray or {}) do
 		if starts(code, 'NUM_') then
@@ -137,7 +136,7 @@ function summonCreature(unitId, unitSource)
 	local su = dfhack.script_environment('spawn')
 
 	for i = 1, num do
-		units[i] = su.place({
+		su.place({
 			race = unitId,
 			position = unitpos
 		})
@@ -154,8 +153,6 @@ eventful.onReactionComplete.succubusSummon = function(reaction, unit, input_item
 		summonHfs(reaction, unit, input_reagents)
 	elseif starts(reaction.code, 'LUA_HOOK_SUMMON_') then
 		summonCreature(string.sub(reaction.code, 17), input_items) -- This should be unit there !
-	else
-		return nil
 	end
 end
 
