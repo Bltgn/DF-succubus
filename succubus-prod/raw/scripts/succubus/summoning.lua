@@ -1,7 +1,7 @@
--- Will spawn an unit for each run of LUA_HOOK_SUMMON_<ID> reaction
+-- Will spawn an unit at one unit's position
 --[[
 	sample reaction
-	[REACTION:LUA_HOOK_SUMMON_DOG]
+	[REACTION:SUMMONING_DOG]
 	[NAME:Summon a dog]
 	[BUILDING:SUMMONING_CIRCLE:NONE]
 	[PRODUCT:100:1:BOULDER:NONE:INORGANIC:SMOKE_PURPLE]
@@ -10,17 +10,16 @@
 	A product is needed. The creature will be friendly to your civ.
 
 	Special cases :
-	- LUA_HOOK_SUMMON_HFS: Will summon a clown, or any creature with the ID starting with DEMON.
+	- LUA_HOOK_SUMMON_HFS: Will summon a demon, or any creature with the ID starting with DEMON.
 
 	Optional parameters, those are added to the end of the reaction name, separated with spaces.
 	- NUM_X: WIll spawn x creatures instead of one.
 
-	Ex : [REACTION:LUA_HOOK_SUMMON_DOG NUM_4]
+	Ex : [REACTION:SUMMONING_DOG NUM_4]
 
 	Uses bits of hire-guards by Kurik Amudnil
 
 	@author Boltgun
-	@todo Remove the LUA_HOOK prefix as designed in dfhack 40.24 r2
 ]]
 
 local eventful = require 'plugins.eventful'
@@ -59,8 +58,8 @@ local function cancelReaction(reaction, unit, input_reagents, message)
 	--unit.job.current_job.flags.suspend = true
 end
 
--- Summon a randomly generated clown. If there isn't any, cancels the reaction.
-local function summonHfs(reaction, unit, input_reagents)
+-- Summon a randomly generated demon. If there isn't any, cancels the reaction.
+local function summonHfs(unit, num)
 	local selection
 	local key = 1
 	local demonId = {}
@@ -73,12 +72,14 @@ local function summonHfs(reaction, unit, input_reagents)
 	end
 
 	if #demonId == 0 then
-		cancelReaction(reaction, unit, input_reagents, "no such creature on this world")
-		return nil
+		--cancelReaction(reaction, unit, input_reagents, "no such creature on this world")
+		--todo reimplement this
+		dfhack.gui.showAnnouncement("No demons in this world", COLOR_RED)
+		return
 	end
 
 	selection = math.random(1, #demonId)
-	summonCreature(demonId[selection], unit)
+	summonCreature(demonId[selection], unit, num)
 end
 
 -- Return the creature's raw data, there is probably a better way to select stuff from tables
@@ -118,42 +119,58 @@ local function announcement(creatureId, num)
 end
 
 -- Spawns a regular creature at one unit position, caste is random
-function summonCreature(unitId, unitSource)
-	local codeArray = utils.split_string(unitId, ' ')
-	local num = 1
-	local _, code
-	local unitpos = {dfhack.units.getPosition(unitSource)}
-
-	for _, code in ipairs(codeArray or {}) do
-		if starts(code, 'NUM_') then
-			num = tonumber(string.sub(code, 5))
-		else
-			unitId = code
-		end
-	end
-
-	-- Spawning
+function summonCreature(unitId, unitSource, num)
 	local su = dfhack.script_environment('spawn')
 
 	for i = 1, num do
 		su.place({
 			race = unitId,
-			position = unitpos
+			position = {dfhack.units.getPosition(unitSource)}
 		})
 	end
 
 	announcement(unitId, num)
 end
 
--- Attaches the hook to eventful
-eventful.onReactionComplete.succubusSummon = function(reaction, unit, input_items, input_reagents, output_items, call_native)
-	local creatureId
+-- Action
 
-	if reaction.code == 'LUA_HOOK_SUMMON_HFS' then
-		summonHfs(reaction, unit, input_reagents)
-	elseif starts(reaction.code, 'LUA_HOOK_SUMMON_') then
-		summonCreature(string.sub(reaction.code, 17), input_items) -- should be unit
-	end
+validArgs = validArgs or utils.invert({
+    'help',
+	'source',
+    'race',
+    'num',
+})
+
+local args = utils.processArgs({...}, validArgs)
+
+if args.help then
+	print([[scripts/succubus/summoning.lua
+arguments
+    -help
+        print this help message
+    -source <number>
+    	The source unit's id.
+    -race <RACE_ID>
+        The raw id of the creature's race
+    -num <number>
+        The ammount of creatures to summon, defaults to 1
+]])
+	return
 end
 
-print("Summon hook activated")
+-- Args testing
+if not args.source then
+	qerror('No source unit provided for summoning!')
+end
+
+if not args.num then
+	args.num = 1
+end
+
+if not args.race then
+	qerror('No race provided for summoning!')
+elseif 'HFS' === args.race then
+	summonHfs(args.unit, args.num)
+else
+	summonCreature(args.race, args.unit, args.num)
+end
