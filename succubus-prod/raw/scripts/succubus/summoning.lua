@@ -1,25 +1,20 @@
--- Will spawn an unit at one unit's position
+-- Will spawn the desired unit at another's position and make an announcement about it.
 --[[
-	sample reaction
-	[REACTION:SUMMONING_DOG]
-	[NAME:Summon a dog]
-	[BUILDING:SUMMONING_CIRCLE:NONE]
-	[PRODUCT:100:1:BOULDER:NONE:INORGANIC:SMOKE_PURPLE]
-	[SKILL:ALCHEMY]
-
-	A product is needed. The creature will be friendly to your civ.
-
-	Special cases :
-	- LUA_HOOK_SUMMON_HFS: Will summon a demon, or any creature with the ID starting with DEMON.
-
-	Optional parameters, those are added to the end of the reaction name, separated with spaces.
-	- NUM_X: WIll spawn x creatures instead of one.
-
-	Ex : [REACTION:SUMMONING_DOG NUM_4]
+	scripts/succubus/summoning.lua
+	arguments
+    -help
+        print this help message
+    -source <number>
+    	The source unit's id.
+    -race <RACE_ID>
+        The raw id of the creature's race
+    -num <number>
+        The ammount of creatures to summon, defaults to 1
 
 	Uses bits of hire-guards by Kurik Amudnil
 
 	@author Boltgun
+	@todo Reaction canceling if ther eis no demon generated
 ]]
 
 local eventful = require 'plugins.eventful'
@@ -42,18 +37,19 @@ local function wrap(str, limit)
 		end)
 end
 
--- Simulate a canceled reaction message, save the reagents
-local function cancelReaction(reaction, unit, input_reagents, message)
+-- Simulates a canceled reaction message
+local function cancelReaction(reaction, unit, message)
 	local lines = utils.split_string(wrap(
-			string.format("%s, %s cancels %s: %s.", dfhack.TranslateName(dfhack.units.getVisibleName(unit)), dfhack.units.getProfessionName(unit), reaction.name, message)
+			string.format("%s, %s cancels %s: %s.", dfhack.TranslateName(dfhack.units.getVisibleName(unit)), dfhack.units.getProfessionName(unit), reaction, message)
 		) , NEWLINE)
 	for _, v in ipairs(lines) do
 		dfhack.gui.showAnnouncement(v, COLOR_RED)
 	end
 
-	for _, v in ipairs(input_reagents or {}) do
+	-- @todo reimplement this if possible
+	--[[for _, v in ipairs(input_reagents or {}) do
 		v.flags.PRESERVE_REAGENT = true
-	end
+	end]]
 
 	--unit.job.current_job.flags.suspend = true
 end
@@ -72,9 +68,7 @@ local function summonHfs(unit, num)
 	end
 
 	if #demonId == 0 then
-		--cancelReaction(reaction, unit, input_reagents, "no such creature on this world")
-		--todo reimplement this
-		dfhack.gui.showAnnouncement("No demons in this world", COLOR_RED)
+		cancelReaction(reaction, unit, "no such creature on this world")
 		return
 	end
 
@@ -90,7 +84,7 @@ local function getRaw(creature_id)
 		if raw.creature_id == creature_id then return raw end
 	end
 
-	qerror('Creature not found : '..creature_id)
+	qerror('Creature not found: '..creature_id)
 end
 
 -- Shows an announcement in the bottom of the screen
@@ -111,10 +105,10 @@ local function announcement(creatureId, num)
 	end
 
 	if num == 1 then
-		dfhack.gui.showAnnouncement('You have summonned '..article..' '..name..'.', COLOR_WHITE)
+		dfhack.gui.showAnnouncement('You have summoned '..article..' '..name..'.', COLOR_WHITE)
 	else
 		name = cr.name[1]
-		dfhack.gui.showAnnouncement('You have summonned '..num..' '..name..'.', COLOR_WHITE)
+		dfhack.gui.showAnnouncement('You have summoned '..num..' '..name..'.', COLOR_WHITE)
 	end
 end
 
@@ -133,7 +127,6 @@ function summonCreature(unitId, unitSource, num)
 end
 
 -- Action
-
 validArgs = validArgs or utils.invert({
     'help',
 	'source',
@@ -163,14 +156,17 @@ if not args.source then
 	qerror('No source unit provided for summoning!')
 end
 
+local unitSource = df.unit.find(tonumber(args.source))
+if not unitSource then qerror('Unit not found.') end
+
 if not args.num then
 	args.num = 1
 end
 
 if not args.race then
 	qerror('No race provided for summoning!')
-elseif 'HFS' === args.race then
-	summonHfs(args.unit, args.num)
+elseif 'HFS' == args.race then
+	summonHfs(unitSource, args.num)
 else
-	summonCreature(args.race, args.unit, args.num)
+	summonCreature(args.race, unitSource, args.num)
 end
