@@ -138,7 +138,7 @@ AddPetToCiv -civ KOBOLD -race GIANT_BARK_SCORPION -caste FEMALE
 AddMountToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste MALE
 AddMountToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste FEMALE
 
-# succubus mod
+# Succubus mod
 modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "dizziness"
 modtools/reaction-trigger -reactionName WELL_MAGMA_S -command [ succubus/eruption magma \\WORKER_ID 2/2/0 7 ]
 modtools/reaction-trigger -reactionName WELL_MAGMA_M -command [ succubus/eruption magma \\WORKER_ID 5/5/0 7 ]
@@ -148,6 +148,17 @@ modtools/reaction-trigger -reactionName BLUE_TELEPORT -command [ succubus/telepo
 modtools/reaction-trigger -reactionName BLUE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 1 10/10/0 ]
 modtools/reaction-trigger -reactionName ORANGE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 2 1/1/0 ]
 modtools/reaction-trigger -reactionName ORANGE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 2 10/10/0 ]
+
+modtools/reaction-trigger -reactionName SUMMONING_NAHASH -command [ succubus/summoning -source \\WORKER_ID -race NAHASH -num 5 ]
+modtools/reaction-trigger -reactionName SUMMONING_ORTHUS -command [ succubus/summoning -source \\WORKER_ID -race ORTHUS ]
+modtools/reaction-trigger -reactionName SUMMONING_NIGHTMARE -command [ succubus/summoning -source \\WORKER_ID -race NIGHTMARE ]
+modtools/reaction-trigger -reactionName SUMMONING_ELEMENTAL_PAIN -command [ succubus/summoning -source \\WORKER_ID -race ELEMENTAL_PAIN -num 3 ]
+modtools/reaction-trigger -reactionName SUMMONING_IMP_FIRE -command [ succubus/summoning -source \\WORKER_ID -race IMP_FIRE ]
+modtools/reaction-trigger -reactionName SUMMONING_FROG_DEMON -command [ succubus/summoning -source \\WORKER_ID -race FROG_DEMON ]
+modtools/reaction-trigger -reactionName SUMMONING_TENTACLE_MONSTER -command [ succubus/summoning -source \\WORKER_ID -race TENTACLE_MONSTER ]
+modtools/reaction-trigger -reactionName SUMMONING_BRUTE_DECAY -command [ succubus/summoning -source \\WORKER_ID -race BRUTE_DECAY ]
+modtools/reaction-trigger -reactionName SUMMONING_SPIRIT_OF_FIRE -command [ succubus/summoning -source \\WORKER_ID -race SPIRIT_OF_FIRE ]
+modtools/reaction-trigger -reactionName SUMMONING_HFS -command [ succubus/summoning -source \\WORKER_ID -race HFS ]
 
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
@@ -179,3 +190,4 @@ AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
 
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
+# end succubus mod

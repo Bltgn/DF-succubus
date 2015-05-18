@@ -1,12 +1,14 @@
 # Succubus Dungeon : Changelog #
 12.1
-- It is now possible to make cauldrons, it is required for several buildings.
+- Summoning has been made more reliable on windows and masterwork.
+- Unfortunatly, trying to summon a demon on worlds where none have been generated will no longer preserve reagents.
+- It is now possible to make cauldrons, this is required for several buildings.
 - Caravans will no longer bring Spirits of fire or pain elemental and should not combust.
 - Orthi, nahashes and frog demons are no longer born adults.
 - Several buildings now requires ceuldrons to be built.
 - Succubi and their creatures should no longer be affected by frog demon oil.
 - Vanilla: The Gemcutter workshop will properly accept rough (non cut) gems.
-- Masterwork: It is now possible to build the metalurgist's smelter..
+- Masterwork: It is now possible to build the metalurgist's smelter.
 
 12.0
 + Summoning!
