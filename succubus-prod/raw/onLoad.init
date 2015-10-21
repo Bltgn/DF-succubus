@@ -140,9 +140,9 @@ AddMountToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste FEMALE
 
 # Succubus mod
 modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "dizziness"
-modtools/reaction-trigger -reactionName WELL_MAGMA_S -command [ succubus/eruption -type magma -unit \\WORKER_ID -radius [2 2 0] -offset [0 0 \-1] ]
-modtools/reaction-trigger -reactionName WELL_MAGMA_M -command [ succubus/eruption -type magma -unit \\WORKER_ID -radius [5 5 0] -offset [0 0 \-1] ]
-modtools/reaction-trigger -reactionName WELL_MAGMA_L -command [ succubus/eruption -type magma -unit \\WORKER_ID -radius [10 10 0] -offset [0 0 \-1] ]
+modtools/reaction-trigger -reactionName WELL_MAGMA_S -command [ succubus/eruption -type magma -unit \\WORKER_ID -radius [ 2 2 0 ] -offset [ 0 0 \-1 ] ]
+modtools/reaction-trigger -reactionName WELL_MAGMA_M -command [ succubus/eruption -type magma -unit \\WORKER_ID -radius [ 5 5 0 ] -offset [ 0 0 \-1 ] ]
+modtools/reaction-trigger -reactionName WELL_MAGMA_L -command [ succubus/eruption -type magma -unit \\WORKER_ID -radius [ 10 10 0 ] -offset [ 0 0 \-1 ] ]
 modtools/reaction-trigger -reactionName CORRUPT_PRISONERS_SUCCUBUS -command [ succubus/corrupt -unit \\WORKER_ID -set succubus ]
 modtools/reaction-trigger -reactionName BLUE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 1 1/1/0 ]
 modtools/reaction-trigger -reactionName BLUE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 1 10/10/0 ]
