@@ -15,6 +15,8 @@
 	    	A number from 1 to 7 of the depth of the liquid. Defaults to 7.
 	    - offset [x y z]
 	    	Relative coordinates from the unit, defaults to zero
+
+	@todo depth is not interpolated
 ]]
 
 local utils = require 'utils'
@@ -23,10 +25,12 @@ args={...}
 
 function eruption(args)
 	local etype = args.type
-	local unit = args.unit
+	local unit = df.unit.find(tonumber(args.unit))
 	local radius = args.radius
-	local depth = args.depth
+	local depth = tonumber(args.depth)
 	local offset = args.offset
+
+	printall(offset)
 
 	local i
 	local rando = dfhack.random.new()
@@ -41,6 +45,7 @@ function eruption(args)
 	local ymax = unit.pos.y + ry + offset[2]
 	local zmax = unit.pos.z + rz + offset[3]
 	local zmin = unit.pos.z + offset[3]
+	
 	if xmin < 1 then xmin = 1 end
 	if ymin < 1 then ymin = 1 end
 	if xmax > mapx then xmax = mapx-1 end
@@ -81,7 +86,8 @@ function eruption(args)
 					if not dsgn.hidden then
 						size = math.floor(depth-hx*math.abs(unit.pos.x-i)-hy*math.abs(unit.pos.y-j)-hz*math.abs(unit.pos.z-k))
 						if size < 1 then size = 1 end
-						dsgn.flow_size = size
+						-- todo fix that for negative offsets
+						dsgn.flow_size = depth
 						if etype == 'magma' then
 							dsgn.liquid_type = true
 						end
@@ -128,6 +134,7 @@ arguments
 	return
 end
 
+
 if not args.type then
 	qerror('Eruption: Please enter the type, water or magma.')
 end
@@ -149,8 +156,10 @@ if not args.depth then
 end
 
 if not args.offset then
-	args.offset = [0 0 0]
+	args.offset = {0, 0, 0}
 end
+
+print(args.depth)
 
 eruption(args)
 
