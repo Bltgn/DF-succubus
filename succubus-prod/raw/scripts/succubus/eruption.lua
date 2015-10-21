@@ -1,47 +1,47 @@
+-- Generates a circle or 3D ball of liquid in a position relative to one unit.
+--[[
+	Generates a circle or 3D ball of liquid in a position relative to one unit.
 
+	arguments
+	    -help
+	        print this help message
+	    -type <water|magma>
+	    	The type of liquid to spawn.
+	    -unit <number>
+	    	The id of the unit serving as the center of the eruption.
+	    -radius [x y z]
+	    	The radius of the circle or ball of liquid that will be added.
+	    -depth <number>
+	    	A number from 1 to 7 of the depth of the liquid. Defaults to 7.
+	    - offset [x y z]
+	    	Relative coordinates from the unit, defaults to zero
+]]
+
+local utils = require 'utils'
 
 args={...}
-
-function split(str, pat)
-   local t = {}  -- NOTE: use {n = 0} in Lua-5.0
-   local fpat = "(.-)" .. pat
-   local last_end = 1
-   local s, e, cap = str:find(fpat, 1)
-   while s do
-      if s ~= 1 or cap ~= "" then
-	 table.insert(t,cap)
-      end
-      last_end = e+1
-      s, e, cap = str:find(fpat, last_end)
-   end
-   if last_end <= #str then
-      cap = str:sub(last_end)
-      table.insert(t, cap)
-   end
-   return t
-end
 
 function eruption(args)
 	local etype = args.type
 	local unit = args.unit
 	local radius = args.radius
 	local depth = args.depth
-	local elevation = args.elevation
+	local offset = args.offset
 
 	local i
 	local rando = dfhack.random.new()
-	local radiusa = split(args.radius,'/')
-	local rx = tonumber(radiusa[1])
-	local ry = tonumber(radiusa[2])
-	local rz = tonumber(radiusa[3])
+	local rx = tonumber(radius[1])
+	local ry = tonumber(radius[2])
+	local rz = tonumber(radius[3])
 
 	local mapx, mapy, mapz = dfhack.maps.getTileSize()
-	local xmin = unit.pos.x - rx
-	local xmax = unit.pos.x + rx
-	local ymin = unit.pos.y - ry
-	local ymax = unit.pos.y + ry
-	local zmax = unit.pos.z + rz + elevation
-	local zmin = unit.pos.z + elevation
+	local xmin = unit.pos.x - rx + offset[1]
+	local xmax = unit.pos.x + rx + offset[1]
+	local ymin = unit.pos.y - ry + offset[2]
+	local ymax = unit.pos.y + ry + offset[2]
+	local zmax = unit.pos.z + rz + offset[3]
+	local zmin = unit.pos.z + offset[3]
+	
 	if xmin < 1 then xmin = 1 end
 	if ymin < 1 then ymin = 1 end
 	if xmax > mapx then xmax = mapx-1 end
@@ -105,7 +105,7 @@ validArgs = validArgs or utils.invert({
     'unit',
     'radius',
     'depth',
-    'elevation'
+    'offset'
 })
 
 local args = utils.processArgs({...}, validArgs)
@@ -117,13 +117,13 @@ arguments
         print this help message
     -type <water|magma>
     	The type of liquid to spawn.
-    -unit <number>
+    -unit <int>
     	The id of the unit serving as the center of the eruption.
-    -radius <x/y/z>
+    -radius [x y z]
     	The radius of the circle or ball of liquid that will be added.
-    -depth <number>
+    -depth <int>
     	A number from 1 to 7 of the depth of the liquid. Defaults to 7.
-    -elevation <number>
+    -offset [x y z]
     	A modifier for the z axis. Defaults to 0.
 ]])
 	return
@@ -133,7 +133,7 @@ if not args.type then
 	qerror('Eruption: Please enter the type, water or magma.')
 end
 
-if args.type != 'water' and args.type != 'magma' then
+if args.type ~= 'water' and args.type ~= 'magma' then
 	qerror('Eruption: Invalid liquid type.')
 end
 
@@ -149,8 +149,8 @@ if not args.depth then
 	args.depth = 7
 end
 
-if not args.elevation then
-	args.elevation = 0
+if not args.offset then
+	args.offset = [0 0 0]
 end
 
 eruption(args)

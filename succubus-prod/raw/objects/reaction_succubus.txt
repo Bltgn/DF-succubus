@@ -131,19 +131,19 @@ reaction_succubus
 
 // Magma well
 [REACTION:WELL_MAGMA_S]
-	[NAME:Spawn Magma under the well (S)]
+	[NAME:Spawn Magma below (Small)]
 	[BUILDING:WELL_MAGMA:CUSTOM_S]
 	[PRODUCT:0:1:BOULDER:NONE:INORGANIC:SMOKE_PURPLE]
 	[SKILL:SMELT]
 	
 [REACTION:WELL_MAGMA_M]
-	[NAME:Spawn Magma under the well (M)]
+	[NAME:Spawn Magma below (Medium)]
 	[BUILDING:WELL_MAGMA:CUSTOM_M]
 	[PRODUCT:0:1:BOULDER:NONE:INORGANIC:SMOKE_PURPLE]
 	[SKILL:SMELT]
 	
 [REACTION:WELL_MAGMA_L]
-	[NAME:Spawn Magma under the well (L)]
+	[NAME:Spawn Magma below (Large)]
 	[BUILDING:WELL_MAGMA:CUSTOM_L]
 	[PRODUCT:0:1:BOULDER:NONE:INORGANIC:SMOKE_PURPLE]
 	[SKILL:SMELT]
