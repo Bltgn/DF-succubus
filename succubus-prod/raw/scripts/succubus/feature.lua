@@ -112,7 +112,7 @@ function setDiscoveredByID(ID, discovered)
 				state="hidden." 
 			end
 			
-			print(utils.call_with_string(value,"getName"), " is now ", state)
+			--print(utils.call_with_string(value,"getName"), " is now ", state)
 		end
 			
 	end  

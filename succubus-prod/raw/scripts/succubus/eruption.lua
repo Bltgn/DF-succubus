@@ -21,10 +21,16 @@ function split(str, pat)
    return t
 end
 
-function eruption(etype,unit,radius,depth)
+function eruption(args)
+	local etype = args.type
+	local unit = args.unit
+	local radius = args.radius
+	local depth = args.depth
+	local elevation = args.elevation
+
 	local i
 	local rando = dfhack.random.new()
-	local radiusa = split(radius,'/')
+	local radiusa = split(args.radius,'/')
 	local rx = tonumber(radiusa[1])
 	local ry = tonumber(radiusa[2])
 	local rz = tonumber(radiusa[3])
@@ -34,8 +40,8 @@ function eruption(etype,unit,radius,depth)
 	local xmax = unit.pos.x + rx
 	local ymin = unit.pos.y - ry
 	local ymax = unit.pos.y + ry
-	local zmax = unit.pos.z + rz
-	local zmin = unit.pos.z
+	local zmax = unit.pos.z + rz + elevation
+	local zmin = unit.pos.z + elevation
 	if xmin < 1 then xmin = 1 end
 	if ymin < 1 then ymin = 1 end
 	if xmax > mapx then xmax = mapx-1 end
@@ -92,12 +98,62 @@ function eruption(etype,unit,radius,depth)
 	end
 end
 
-local etype = args[1]
-local unit = df.unit.find(tonumber(args[2]))
-local radius = args[3]
-local depth = tonumber(args[4])
+-- Action
+validArgs = validArgs or utils.invert({
+    'help',
+	'type',
+    'unit',
+    'radius',
+    'depth',
+    'elevation'
+})
 
-eruption(etype,unit,radius,depth)
+local args = utils.processArgs({...}, validArgs)
+
+if args.help then
+	print([[scripts/succubus/summoning.lua
+arguments
+    -help
+        print this help message
+    -type <water|magma>
+    	The type of liquid to spawn.
+    -unit <number>
+    	The id of the unit serving as the center of the eruption.
+    -radius <x/y/z>
+    	The radius of the circle or ball of liquid that will be added.
+    -depth <number>
+    	A number from 1 to 7 of the depth of the liquid. Defaults to 7.
+    -elevation <number>
+    	A modifier for the z axis. Defaults to 0.
+]])
+	return
+end
+
+if not args.type then
+	qerror('Eruption: Please enter the type, water or magma.')
+end
+
+if args.type != 'water' and args.type != 'magma' then
+	qerror('Eruption: Invalid liquid type.')
+end
+
+if not args.unit then
+	qerror('Eruption: No unit provided.')
+end
+
+if not args.radius then
+	qerror('Eruption: A radius in the form of x/y/z is required.')
+end
+
+if not args.depth then
+	args.depth = 7
+end
+
+if not args.elevation then
+	args.elevation = 0
+end
+
+eruption(args)
 
 -- Activating the magma forges
 if(etype == 'magma') then
