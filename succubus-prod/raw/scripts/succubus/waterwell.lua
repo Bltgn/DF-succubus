@@ -31,17 +31,8 @@ function usewater(reaction,unit,job,input_items,input_reagents,output_items,call
 end
 
 
-function usemagma(reaction, unit, input_items, input_reagents, output_items, call_native)
-	-- Fix for the windows dfhack input order
-	if unit._type == df.reaction_product_itemst then
-		unit_ref = input_items
-		input_items_ref = unit
-	else
-		unit_ref = unit
-		input_items_ref = input_items
-	end
-
-	local building = dfhack.buildings.findAtTile(unit_ref.pos)
+function usemagma(reaction, reaction_product, unit, input_items, input_reagents, output_items, call_native)
+	local building = dfhack.buildings.findAtTile(unit.pos)
 	local pos = {}
 	pos.x1 = building.x1
 	pos.x2 = building.x2
@@ -60,9 +51,9 @@ function usemagma(reaction, unit, input_items, input_reagents, output_items, cal
 		end
 	end
 
-	dfhack.gui.showAnnouncement( dfhack.TranslateName(unit_ref.name).." cancels "..reaction.name..": Needs magma." , COLOR_RED, true)
-	for k,v in ipairs(input_items_ref) do
-		input_items_ref[k].flags.PRESERVE_REAGENT = true
+	dfhack.gui.showAnnouncement( dfhack.TranslateName(unit.name).." cancels "..reaction.name..": Needs magma." , COLOR_RED, true)
+	for k,v in ipairs(input_reagents) do
+		input_reagents[k].flags.PRESERVE_REAGENT = true
 	end
 	for i=0,#reaction.products-1,1 do
 		reaction.products[i].probability = 0
