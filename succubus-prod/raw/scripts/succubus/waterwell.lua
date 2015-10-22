@@ -31,14 +31,24 @@ function usewater(reaction,unit,job,input_items,input_reagents,output_items,call
 end
 
 
-function usemagma(reaction,unit,job,input_items,input_reagents,output_items,call_native)
-	local building = dfhack.buildings.findAtTile(unit.pos)
+function usemagma(reaction, unit, input_items, input_reagents, output_items, call_native)
+	-- Fix for the windows dfhack input order
+	if unit._type == df.reaction_product_itemst then
+		unit_ref = input_items
+		input_items_ref = unit
+	else
+		unit_ref = unit
+		input_items_ref = input_items
+	end
+
+	local building = dfhack.buildings.findAtTile(unit_ref.pos)
 	local pos = {}
 	pos.x1 = building.x1
 	pos.x2 = building.x2
 	pos.y1 = building.y1
 	pos.y2 = building.y2
 	pos.z = building.z
+
 	for x = pos.x1-1, pos.x2+1, 1 do
 		for y = pos.y1-1, pos.y2+1, 1 do
 			baseBlock = dfhack.maps.ensureTileBlock(x,y,pos.z)
@@ -49,9 +59,10 @@ function usemagma(reaction,unit,job,input_items,input_reagents,output_items,call
 			end
 		end
 	end
-	dfhack.gui.showAnnouncement( dfhack.TranslateName(unit.name).." cancels "..reaction.name..": Needs magma." , COLOR_RED, true)
-	for i=0,#input_items-1,1 do
-		input_items[i].flags.PRESERVE_REAGENT = true
+
+	dfhack.gui.showAnnouncement( dfhack.TranslateName(unit_ref.name).." cancels "..reaction.name..": Needs magma." , COLOR_RED, true)
+	for k,v in ipairs(input_items_ref) do
+		input_items_ref[k].flags.PRESERVE_REAGENT = true
 	end
 	for i=0,#reaction.products-1,1 do
 		reaction.products[i].probability = 0
@@ -59,7 +70,7 @@ function usemagma(reaction,unit,job,input_items,input_reagents,output_items,call
 end
 
 dfhack.onStateChange.loadUseLiquid = function(code)
-	local registered_reactions
+	local registered_reactions = false
 	if code==SC_MAP_LOADED then
 		--registered_reactions = {}
 		for i,reaction in ipairs(df.global.world.raws.reactions) do
