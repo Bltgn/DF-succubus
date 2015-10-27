@@ -8,7 +8,7 @@ inorganic_succubus
 	[NO_STONE_STOCKPILE]
 	[STATE_NAME_ADJ:ALL_SOLID:syndrome stone (succubus)]
 	[STATE_NAME_ADJ:LIQUID:syndrome liquid (succubus)]
-	[STATE_NAME_ADJ:GAS:smoke]
+	[STATE_NAME_ADJ:GAS:syndrome smoke (succubus)]
 	[MELTING_POINT:9000]
 	[BOILING_POINT:8999]
 	[SOLID_DENSITY:20000000]
@@ -35,7 +35,7 @@ inorganic_succubus
 	[SOLID_DENSITY:20000000]
 	[DISPLAY_COLOR:5:0:1][TILE:'*']
 
-// Sleeping gax
+// Sleeping gas
 [INORGANIC:SMOKE_SLEEP]
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
