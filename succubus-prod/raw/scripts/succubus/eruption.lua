@@ -30,8 +30,6 @@ function eruption(args)
 	local depth = tonumber(args.depth)
 	local offset = args.offset
 
-	printall(offset)
-
 	local i
 	local rando = dfhack.random.new()
 	local rx = tonumber(radius[1])

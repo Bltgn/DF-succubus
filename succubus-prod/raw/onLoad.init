@@ -160,6 +160,8 @@ modtools/reaction-trigger -reactionName SUMMONING_BRUTE_DECAY -command [ succubu
 modtools/reaction-trigger -reactionName SUMMONING_SPIRIT_OF_FIRE -command [ succubus/summoning -source \\WORKER_ID -race SPIRIT_OF_FIRE ]
 modtools/reaction-trigger -reactionName SUMMONING_HFS -command [ succubus/summoning -source \\WORKER_ID -race HFS ]
 
+modtools/interaction-trigger -onAttackStr "SUCCUBUS_PHASING_ATK" -onDefendStr "SUCCUBUS_PHASING_DEF" -suppressAttack -suppressDefend -command [ succubus/phasing -source \\ATTACKER_ID -target \\DEFENDER_ID  ]
+
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
 AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
@@ -190,4 +192,7 @@ AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
 
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
+
+succubus/waterwell
+succubus/power-learning
 # end succubus mod
