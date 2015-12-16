@@ -72,6 +72,10 @@ creature_civ_succubus
 	[SKILL_LEARN_RATE:MAKE_MUSIC:150]
 	[SKILL_LEARN_RATE:WRITING:150]
 	[SKILL_LEARN_RATE:PROSE:150]
+	[SKILL_LEARN_RATE:MECHANICS:50]
+	[SKILL_LEARN_RATE:OPERATE_PUMP:50]
+	[SKILL_LEARN_RATE:SIEGECRAFT:50]
+	[SKILL_LEARN_RATE:SIEGEOPERATE:50]
 
 	[PROFESSION_NAME:STANDARD:Good-to-nothing:Goods-to-nothing]
 	[PROFESSION_NAME:CRAFTSMAN:Craftsuccubus:Craftsuccubi]
@@ -135,16 +139,16 @@ creature_civ_succubus
 
 	// Attributes
 	[PHYS_ATT_RANGE:AGILITY:700:1200:1400:1500:1600:1800:2500]              ++
-	[PHYS_ATT_RANGE:STRENGTH:450:950:1150:1250:1350:1550:2250]              +
+	PHYS_ATT_RANGE:STRENGTH:450:950:1150:1250:1350:1550:2250]               human equivalent
 	[PHYS_ATT_RANGE:ENDURANCE:150:600:800:900:1000:1100:1500]				-
 	[PHYS_ATT_RANGE:TOUGHNESS:150:600:800:900:1000:1100:1500]				-
 	[PHYS_ATT_RANGE:RECUPERATION:450:950:1150:1250:1350:1550:2250]			+
-	[PHYS_ATT_RANGE:DISEASE_RESISTANCE:450:950:1150:1250:1350:1550:2250]    +
+	[PHYS_ATT_RANGE:DISEASE_RESISTANCE:700:1200:1400:1500:1600:1800:2500]   ++
 	[MENT_ATT_RANGE:PATIENCE:0:400:600:750:800:900:1100]					--
 	[MENT_ATT_RANGE:FOCUS:0:400:600:750:800:900:1100] 						--
 	[MENT_ATT_RANGE:CREATIVITY:1250:1500:1750:2000:2500:3000:5000]			+++
 	[MENT_ATT_RANGE:LINGUISTIC_ABILITY:1250:1500:1750:2000:2500:3000:5000]  +++
-	[MENT_ATT_RANGE:MEMORY:5000:5000:5000:5000:5000:5000:5000]              max
+	[MENT_ATT_RANGE:MEMORY:1250:1500:1750:2000:2500:3000:5000]              +++
 	[MENT_ATT_RANGE:WILLPOWER:0:400:600:750:800:900:1100] 					--
 	[MENT_ATT_RANGE:MUSICALITY:1250:1500:1750:2000:2500:3000:5000]          +++
 	[MENT_ATT_RANGE:SOCIAL_AWARENESS:700:1200:1400:1500:1600:1800:2500]     ++
@@ -173,24 +177,24 @@ creature_civ_succubus
 	// Common for all castes, specific pure succubi tags are defined at the end
 	[CASTE:FEMALE]
 		[CREATURE_CLASS:SUCCUBUS_FEMALE]
-		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to serve its master and spread new forms of art into the world. The succubi are associated with lust, depravity and fire.]
+		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to serve its master and spread new forms of pleasures into the world. The succubi are associated with lust, depravity and fire.]
 		[FEMALE]
-		[POP_RATIO:90000]
-		[LITTERSIZE:1:2]
+		[POP_RATIO:90000] // 90%
+		[LITTERSIZE:1:2] // Higher chances to have twins, to help with early worldgen
 		[CASTE_NAME:succubus:succubi:succubus]
 		[BABYNAME:succubus baby:succubus babies]
 		[CHILDNAME:succubus girl:succubus girls]
 		[ODOR_STRING:sweet fragrance]
 
-		[ORIENTATION:MALE:0:20:80] // It's important to have breeding couples for world gen
+		[ORIENTATION:MALE:0:20:80] // It's important to have breeding couples for world gen, considering the ratio
 		[ORIENTATION:FEMALE:0:50:50]
 
 	[CASTE:MALE]
 		[CREATURE_CLASS:SUCCUBUS_MALE]
-		[DESCRIPTION:A male hedonistic demon with caprinae legs twisted into humanoid form. He moves with elegance. Beware of his gentle manners. In a time before time, his kind escaped from the underworld to serve its master and spread new forms of art into the world. The incubi are associated with lust, depravity and fire.]
+		[DESCRIPTION:A male hedonistic demon with caprinae legs twisted into humanoid form. He moves with elegance. Beware of his gentle manners. In a time before time, his kind escaped from the underworld to serve its master and spread new forms of pleasures into the world. The incubi are associated with lust, depravity and fire.]
 		[MALE]
 		[BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
-		[POP_RATIO:10000]
+		[POP_RATIO:10000] // 10%
 		[CASTE_NAME:incubus:incubi:incubus]
 		[BABYNAME:incubus baby:incubus babies]
 		[CHILDNAME:incubus boy:incubus boys]
@@ -221,7 +225,7 @@ creature_civ_succubus
 		[CASTE_PROFESSION_NAME:MASTER_BLOWGUNMAN:Blowgun Master:Blowgun Masters]
 
 		[ORIENTATION:MALE:0:50:50]
-		[ORIENTATION:FEMALE:0:10:90] // It's important to have breeding couples for world gen
+		[ORIENTATION:FEMALE:0:10:90] // It's important to have breeding couples for world gen, considering the ratio
 
 	// Now creating the corruption castes by cloning the male and female ones
 	[SELECT_CASTE:ALL]
@@ -262,7 +266,6 @@ creature_civ_succubus
 		[MENT_ATT_RANGE:SPATIAL_SENSE:450:950:1150:1250:1350:1550:2250]         +
 
 		[SKILL_LEARN_RATE:WOODCUTTING:50]
-		[SKILL_LEARN_RATE:MECHANICS:50]
 		[SKILL_LEARN_RATE:SNEAK:130]
 		[SKILL_LEARN_RATE:SITUATIONAL_AWARENESS:150]
 		[SKILL_LEARN_RATE:BOW:130]
