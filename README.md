@@ -41,7 +41,7 @@ Unfortunatly the game prevent your citizens from walking in magma. This is why y
 If a succubus is stuck, you can wait for the magma to evaporate or dig around.
 
 # Getting slade and construction materials #
-Slade can be generated at no cost in an underworld drill (requires magma) to help you build your spires. However, its extreme cost implies that slade projects will take more time and builders to complete. A smart usage of stockpiles and wheelbarrows is strongly recommended.
+Slade can be generated at no cost in an underworld drill (requires magma) to help you build your spires. However, its extreme weight implies that slade projects will take more time and builders to complete. A smart usage of stockpiles and wheelbarrows is strongly recommended.
 
 To get slade blocks, build the underworld drill from the furnaces menu. Like magma forges, it must have one of its tiles overlapping a pit with at least 4 levels of magma. A miner can then conjure slade blocks (for contruction) or boulders (for craft or masonry jobs).
 
