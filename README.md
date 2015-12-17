@@ -4,56 +4,49 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 
 # Features #
 * A new race
-* Fast and fire immune citizens.
+* Fast and fire immune citizens
 * The reintroduction of classic lore into Dwarf Fortress such as 40d demons
-* Spawning magma at will
 * Generating slade blocks to build an authentic demonic spire.
-* Corrupting enemies and allies, pushing them into joining your side.
 
 # Installation #
-* Install DF 40.24+ with DFHack r3
+* Install DF 42.03+
 * Extract the archive in your DF folder, preserving the folder structure.
-* Make sure the temperature feature is activated. It should be on most distributions of DF.
 * Generate a new world and select a succubus civ to play.
 
-# Selecting your civ at the embark screen #
+# Selecting your race at the embark screen #
 * Press tab before embarking until seeing a list of civilization names.
 * Press + and - to chose a civ that uses the 'cabinet' tile to display its colonies on the map.
 * Pressing tab again until seeing the list of neighbors will confirm your choice, your selected race is the first one.
 
-## Modified default files ##
+## Modified vanilla files ##
 
 ###entity_default###
-The dwarven entities lack the tags needed to interact with you in fortress mode. A modified entity file is included with the needed changes but if this conflict with another mod, you can add the tags manually :
-* Add the following to the MOUNTAIN entity, in entity_default.txt
- [PROGRESS_TRIGGER_POPULATION:2]
- [PROGRESS_TRIGGER_PRODUCTION:2]
- [PROGRESS_TRIGGER_TRADE:2]
- [PROGRESS_TRIGGER_POP_SIEGE:4]
- [PROGRESS_TRIGGER_PROD_SIEGE:3]
- [PROGRESS_TRIGGER_TRADE_SIEGE:3]
+The dwarven entities lack the tags needed to interact with you in fortress mode. A modified entity file is included with the needed changes but if this conflict with another mod, you can add the tags manually.
 
-###creature_subterranean###
-A pet value has been added to fire imps, otherwise they'd cost 1 point on the embark setup.
+Add the following to the MOUNTAIN entity, in entity_default.txt:
+* [PROGRESS_TRIGGER_POPULATION:2]
+* [PROGRESS_TRIGGER_PRODUCTION:2]
+* [PROGRESS_TRIGGER_TRADE:2]
+* [PROGRESS_TRIGGER_POP_SIEGE:4]
+* [PROGRESS_TRIGGER_PROD_SIEGE:3]
+* [PROGRESS_TRIGGER_TRADE_SIEGE:3]
 
 # Magma #
-Buildings marked with a star '*' must be powered by magma. Those are unlocked even if you did not reach the magma sea. Building a magma well (under the furnace menu) will allow you to spawn some at will. Be warned that spawning a large batch of magma will cause it to 'soak' walls and go through them.
+Magma is important for this race. Succubi are immune to heat and many of their workshops are powered by magma.
 
-Unfortunatly the game prevent your citizens from walking in magma, even if that does not harm them, and you might find yourself with stuck succubi in corridors. This is why it is best to separate your magma operations from your fort and dig evacuation paths beforehand.
+Buildings marked with a star '*' must be powered by magma. Those are unlocked right from the start even in the absence of a volcano or the magma sea. There is currently no way to easily generate magma but this will be added in the near future.
 
-If a succubus is stuck, you can wait for it to evaporate, dig around, or find a way to push her in the magma. Succubi inside magma will move as needed to reach a meeting area. Clothing and weapons will not burn off a succubus but hauled items will.
+Unfortunatly the game prevent your citizens from walking in magma. This is why you must be careful manipulating magma to avoid isolating someone in a corner. Succubi inside magma will evacuate without burning clothing or weapons but hauled items will be likely destroyed.
 
-# Corrupting prisoners #
-So you have caged enemies in your fort, why not put them into work? You can transform your enemies into demons by building a Den of iniquity. It has a reaction inside that will let the worker transform every human, elf, kobold, dwarf and even goblin in a range of 10 squares. Once changed, they will act as citizens and can join the ranks of the military, while retaining memories and skills of their former lives. This is also compatible with the fortress defense mod's races.
+If a succubus is stuck, you can wait for the magma to evaporate or dig around.
 
-It is possible to convert traders too. A goblin caravan can join you if you build a den next to your depot. They'll bring their pack animals along and destroy their wagons in the process. However the trading inventory will stay in the trade depot. You will have to deconstruct it to seize the goods. Several of the trading animals will still be sent back home as a 'thank you' note.
+# Getting slade #
+Slade is a featured as a free construction material that can be generated at no cost in an underworld drill. however, its extreme cost implies that slade project will take more time and builders to complete. A smart usage of stockpiles and wheelbarrow is strongly recommended.
 
-# Summoning creature #
-A selection of demonic creatures can be called directly inside your fort. To do that, build a summoning portal then seek for the needed items for their sumoning ritual. You can check for the requirement by selecting one of the red sumoning jobs and pressing enter.
-
-The creatures will be immediatly tame and ready to use in your fort. Some of those also produce ressources so try building nest boxes or milking them.
+To get slade blocks, build the underworld drill from the furnaces menu. Like magma forges, it must have one of its tiles overlapping a pit with at least 4 levels of magma. A miner can then conjure slade blocks (for contruction) or boulders (for craft or masonry jobs).
 
 # Known issues #
+* Embarking as dwarves? See "Selecting your race at the embark screen" above.
 * Upon reaching your site's edge, traders will "kidnap" their own pets, this has no consequenses to your fort.
 * Changing graphics in the Lazy Newb Pack deletes the mod, you'll have to reinstall it afterwards.
 
