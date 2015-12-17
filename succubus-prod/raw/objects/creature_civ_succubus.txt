@@ -164,7 +164,8 @@ creature_civ_succubus
 	[SWIMS_LEARNED]
 
 	// Tiles
-	[CREATURE_TILE:'ï']
+	[CREATURE_TILE:139]
+	[CREATURE_SOLDIER_TILE:161]
 	[COLOR:7:0:1]
 	[GLOWTILE:82]
 	[GLOWCOLOR:0:14:0]
@@ -177,7 +178,7 @@ creature_civ_succubus
 	// Common for all castes, specific pure succubi tags are defined at the end
 	[CASTE:FEMALE]
 		[CREATURE_CLASS:SUCCUBUS_FEMALE]
-		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to serve its master and spread new forms of pleasures into the world. The succubi are associated with lust, depravity and fire.]
+		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to serve its master and spread new forms of pleasure into the world. The succubi are associated with lust, depravity and fire.]
 		[FEMALE]
 		[POP_RATIO:90000] // 90%
 		[LITTERSIZE:1:2] // Higher chances to have twins, to help with early worldgen
@@ -191,7 +192,7 @@ creature_civ_succubus
 
 	[CASTE:MALE]
 		[CREATURE_CLASS:SUCCUBUS_MALE]
-		[DESCRIPTION:A male hedonistic demon with caprinae legs twisted into humanoid form. He moves with elegance. Beware of his gentle manners. In a time before time, his kind escaped from the underworld to serve its master and spread new forms of pleasures into the world. The incubi are associated with lust, depravity and fire.]
+		[DESCRIPTION:A male hedonistic demon with caprinae legs twisted into humanoid form. He moves with elegance. Beware of his gentle manners. In a time before time, his kind escaped from the underworld to serve its master and spread new forms of pleasure into the world. The incubi are associated with lust, depravity and fire.]
 		[MALE]
 		[BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
 		[POP_RATIO:10000] // 10%

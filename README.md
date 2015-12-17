@@ -34,16 +34,26 @@ Add the following to the MOUNTAIN entity, in entity_default.txt:
 # Magma #
 Magma is important for this race. Succubi are immune to heat and many of their workshops are powered by magma.
 
-Buildings marked with a star '*' must be powered by magma. Those are unlocked right from the start even in the absence of a volcano or the magma sea. There is currently no way to easily generate magma but this will be added in the near future.
+Buildings marked with a star '*' must be powered by magma. There is currently no way to easily generate magma but this will be added in the near future.
 
 Unfortunatly the game prevent your citizens from walking in magma. This is why you must be careful manipulating magma to avoid isolating someone in a corner. Succubi inside magma will evacuate without burning clothing or weapons but hauled items will be likely destroyed.
 
 If a succubus is stuck, you can wait for the magma to evaporate or dig around.
 
-# Getting slade #
-Slade is a featured as a free construction material that can be generated at no cost in an underworld drill. however, its extreme cost implies that slade project will take more time and builders to complete. A smart usage of stockpiles and wheelbarrow is strongly recommended.
+# Getting slade and construction materials #
+Slade can be generated at no cost in an underworld drill (requires magma) to help you build your spires. However, its extreme cost implies that slade projects will take more time and builders to complete. A smart usage of stockpiles and wheelbarrows is strongly recommended.
 
 To get slade blocks, build the underworld drill from the furnaces menu. Like magma forges, it must have one of its tiles overlapping a pit with at least 4 levels of magma. A miner can then conjure slade blocks (for contruction) or boulders (for craft or masonry jobs).
+
+As an alternative, glass blocks can easily be made using a floating glass furnace, using magma and a tin bar. This workshop is ten times more efficient than a regular glass furnace.
+
+# Adventuring as a succubi #
+
+Civilizations living in dark fortresses are not as well developped than dwarven or human ones. As a result, a succubus starts at an empty pit without the ability to fast travel. It is recommended that you play a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (omega tiles on the world map).
+
+If you start in a pit, you can open the regional map (shift+Q) to spot the nearest dark fortress, then travel by foot towards it to find people to talk to.
+
+Wandering around, you may also find dungeons with equipment and towers with population on its roof. If you are unable to reach the roof, try pressing alt+direction to open the hatch.
 
 # Known issues #
 * Embarking as dwarves? See "Selecting your race at the embark screen" above.
