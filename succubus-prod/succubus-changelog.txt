@@ -1,4 +1,33 @@
 # Succubus Dungeon : Changelog #
+13.0
++ Updated into DF 0.42.03
+- The mod is now compatible with the knowledge system, taverns, etc.
+- Forts can be visited, mostly by goblins and humans.
+- The succubi cannot make books, too flamable.
+- New stringed and wind instruments are created at world gen.
+- The entity has received a set of subjects to write scrolls about.
+
++ Modified pet behaviours
+- Most evil pets are now found roaming the surface in the appropriate biomes.
+- Adventurers can be abushed by these creatures in evil places.
+- Nightmares, nahashes and orthi are available for both the succubi and goblins.
+- Other pets will be available in the future.
+
++ Adjusted personalities and values
+- Most citizens need to socialize, romance, and admire art in addition to other random needs.
+- Without a proper place to relax, they get distracted and start stressing each other.
+- The succubi no longer care about nudity.
+
++ New sprites
+- Gelder
+- Artists and socializers: tavern keeper, poet, dancer, bard.
+
++ Other changes
+- Custom reactions now display ingame instructions.
+- Reduced strength to human levels.
+- Replaced shields by bucklers.
+- Deactivated the summoning portal and den of iniquity due to the absence of dfhack.
+
 12.1
 - Summoning has been made more reliable on windows.
 - Unfortunatly, trying to summon a demon on worlds where none have been generated will no longer preserve reagents.
