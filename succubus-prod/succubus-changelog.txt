@@ -21,6 +21,9 @@
 + New sprites
 - Gelder
 - Artists and socializers: tavern keeper, poet, dancer, bard.
+- Scholars: Sage, scholar, philosopher, mathematician, astronomernaturalist, chemist, geographer
+- Scribe
+- Modified sprites for book keeper, alchemist/witch and manager.
 
 + Other changes
 - Custom reactions now display ingame instructions.
