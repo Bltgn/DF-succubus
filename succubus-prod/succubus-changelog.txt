@@ -14,16 +14,16 @@
 - Other pets will be available in the future.
 
 + Adjusted personalities and values
-- Most citizens need to socialize, romance, and admire art in addition to other random needs.
+- Most citizens need to socialize, romance, admire art, etc.
 - Without a proper place to relax, they get distracted and start stressing each other.
 - The succubi no longer care about nudity.
 
 + New sprites
 - Gelder
-- Artists and socializers: tavern keeper, poet, dancer, bard.
+- Artists and socializers: tavern keeper, performer, poet, dancer, bard.
 - Scholars: Sage, scholar, philosopher, mathematician, astronomernaturalist, chemist, geographer
 - Scribe
-- Modified sprites for book keeper, alchemist/witch and manager.
+- Modified sprites for bookkeeper, animal trainer, alchemist/witch and manager.
 
 + Other changes
 - Custom reactions now display ingame instructions.
