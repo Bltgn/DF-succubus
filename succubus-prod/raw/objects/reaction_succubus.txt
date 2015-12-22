@@ -5,7 +5,7 @@ reaction_succubus
 // Extra Reactions
 [REACTION:HEAT_FORGE_SUCCUBUS]
 	[NAME:Heat up the forges]
-	[DESCRIPTION:A succubus will use her body to power this workshop, providing an alternative to fuel.]
+	[DESCRIPTION:A succubus will use her body heat to power this workshop, providing an alternative to fuel.]
 	[DESCRIPTION: ]
 	[DESCRIPTION:Generates up to 3 pieces of coal.]
 	[DESCRIPTION: ]
@@ -222,7 +222,7 @@ reaction_succubus
 	[SKILL:GLASSMAKER]
 
 [REACTION:FLOAT_CLEAR_BLOCKS]
-	[NAME:Pour clear glass blocks(10)]
+	[NAME:Make clear glass blocks(10)]
 	[DESCRIPTION:Produces 10 blocks from a single piece of raw green glass.]
 	[DESCRIPTION: ]
 	[DESCRIPTION:Raw glass is made at a glass furnace.]
@@ -248,7 +248,7 @@ reaction_succubus
 	[SKILL:GLASSMAKER]
 
 [REACTION:FLOAT_CRYSTAL_BLOCKS]
-	[NAME:Pour crystal glass blocks(10)]
+	[NAME:Make crystal glass blocks(10)]
 	[DESCRIPTION:Produces 10 blocks from a single piece of raw crystal glass.]
 	[DESCRIPTION: ]
 	[DESCRIPTION:Raw glass is made at a glass furnace.]
