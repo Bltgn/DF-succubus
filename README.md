@@ -33,9 +33,13 @@ Slade can be generated at no cost in an underworld drill to help you build your 
 
 To get slade blocks, build the underworld drill from the furnaces menu after discovering magma. Like magma forges, it must have one of its tiles overlapping a pit with at least 4 levels of magma. A miner can then conjure slade blocks (for construction) or boulders (for craft or masonry jobs).
 
-If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Flass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace but must also cover an access to magma like the Underworld Drill.
+If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace but must also cover an access to magma like the Underworld Drill.
 
 # Adventuring as a succubi #
+<<<<<<< HEAD
+=======
+
+>>>>>>> c18036873eaf33989996f4721761425f69a8ef08
 Civilizations living in dark fortresses are not as well developed than dwarven or human ones. As a result, a succubus starts at an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (omega tiles on the world map).
 
 If you start in a pit, you can open the regional map (shift + Q) to spot the nearest dark fortress, then travel by foot in this direction to find people to talk to.
