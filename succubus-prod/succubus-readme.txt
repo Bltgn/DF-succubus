@@ -1,6 +1,6 @@
 # Succubus Dungeon #
 
-Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a new evil civ.
+Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a new evil civ. It is developed one feature at a time and new features is added regularly.
 
 # Features #
 * A new race.
@@ -10,7 +10,7 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 * Generate fuel for your forges out of thin air.
 
 # Installation #
-* Install DF 42.03+, using the lazy newb pack is reccomended.
+* Install DF 42.03+, using the lazy newb pack is recommended.
 * Extract the archive in your DF folder, preserving the folder structure.
 * Generate a new world and select a succubus civ to play.
 
@@ -31,13 +31,12 @@ Also, remember that magma is a liquid and someone can drown in it if they cannot
 # Getting slade and construction materials #
 Slade can be generated at no cost in an underworld drill to help you build your spires. However, its extreme weight implies that slade projects will take more time and builders to complete. A smart usage of stockpiles and wheelbarrows is strongly recommended.
 
-To get slade blocks, build the underworld drill from the furnaces menu after discovering magma. Like magma forges, it must have one of its tiles overlapping a pit with at least 4 levels of magma. A miner can then conjure slade blocks (for contruction) or boulders (for craft or masonry jobs).
+To get slade blocks, build the underworld drill from the furnaces menu after discovering magma. Like magma forges, it must have one of its tiles overlapping a pit with at least 4 levels of magma. A miner can then conjure slade blocks (for construction) or boulders (for craft or masonry jobs).
 
 If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Flass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace but must also cover an access to magma like the Underworld Drill.
 
 # Adventuring as a succubi #
-
-Civilizations living in dark fortresses are not as well developped than dwarven or human ones. As a result, a succubus starts at an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (omega tiles on the world map).
+Civilizations living in dark fortresses are not as well developed than dwarven or human ones. As a result, a succubus starts at an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (omega tiles on the world map).
 
 If you start in a pit, you can open the regional map (shift + Q) to spot the nearest dark fortress, then travel by foot in this direction to find people to talk to.
 

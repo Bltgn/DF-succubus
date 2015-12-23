@@ -3,13 +3,13 @@
 + Updated into DF 0.42.03
 - The mod is now compatible with the knowledge system, taverns, etc.
 - Forts can be visited, mostly by goblins and humans.
-- The succubi cannot make books, too flamable.
+- The succubi cannot make books, too flammable.
 - New stringed and wind instruments are created at world gen.
 - The entity has received a set of subjects to write scrolls about.
 
-+ Modified pet behaviours
++ Modified pet behaviors
 - Most evil pets are now found roaming the surface in the appropriate biomes.
-- Adventurers can be abushed by these creatures in evil places.
+- Adventurers can be ambushed by these creatures in evil places.
 - Nightmares, nahashes and orthi are available for both the succubi and goblins.
 - Other pets will be available in the future.
 
@@ -20,8 +20,8 @@
 
 + New sprites
 - Gelder
-- Artists and socializers: tavern keeper, poet, dancer, bard.
-- Scholars: Sage, scholar, philosopher, mathematician, astronomernaturalist, chemist, geographer
+- Artists and socializers: tavern keeper, performer, poet, dancer, bard.
+- Scholars: Sage, scholar, philosopher, mathematician, astronomer, naturalist, chemist, geographer
 - Scribe
 - Modified sprites for book keeper, alchemist/witch and manager.
 
