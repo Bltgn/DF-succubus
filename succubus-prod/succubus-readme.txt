@@ -19,6 +19,11 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 * Press + and - to chose a civ that uses the 'cabinet' tile to display its colonies on the map.
 * Pressing tab again until seeing the list of neighbors will confirm your choice, your selected race is the first one.
 
+# Modified vanilla files #
+The following changes were done on the original DF files. Please keep them in mind if you combine this mod with others.
+
+* entity_default.txt: Added siege triggers to dwarves, made humans, elves and kobold attack faster.
+
 # Magma #
 Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock.
 

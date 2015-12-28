@@ -19,6 +19,10 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 * Press + and - to chose a civ that uses the 'cabinet' tile to display its colonies on the map.
 * Pressing tab again until seeing the list of neighbors will confirm your choice, your selected race is the first one.
 
+# Modified vanilla files #
+The following changes were done on the original DF files. Please keep them in mind if you combine this mod with others.
+* entity_default.txt: Added siege triggers to dwarves, made humans, elves and kobold attack faster.
+
 # Magma #
 Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock.
 
@@ -36,10 +40,6 @@ To get slade blocks, build the underworld drill from the furnaces menu after dis
 If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace but must also cover an access to magma like the Underworld Drill.
 
 # Adventuring as a succubi #
-<<<<<<< HEAD
-=======
-
->>>>>>> c18036873eaf33989996f4721761425f69a8ef08
 Civilizations living in dark fortresses are not as well developed than dwarven or human ones. As a result, a succubus starts at an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (omega tiles on the world map).
 
 If you start in a pit, you can open the regional map (shift + Q) to spot the nearest dark fortress, then travel by foot in this direction to find people to talk to.
