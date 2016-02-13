@@ -2,6 +2,9 @@
 local eventful = require 'plugins.eventful'
 local utils = require 'utils'
 
+local function starts(String, Start)
+	return string.sub(String, 1, string.len(Start)) == Start
+end
 
 function usewater(reaction,unit,job,input_items,input_reagents,output_items,call_native)
 	local building = dfhack.buildings.findAtTile(unit.pos)
@@ -65,10 +68,10 @@ dfhack.onStateChange.loadUseLiquid = function(code)
 	if code==SC_MAP_LOADED then
 		--registered_reactions = {}
 		for i,reaction in ipairs(df.global.world.raws.reactions) do
-			if string.starts(reaction.code,'LUA_HOOK_USEWATER') then
+			if starts(reaction.code,'LUA_HOOK_USEWATER') then
 				eventful.registerReaction(reaction.code,usewater)
 				registered_reactions = true
-			elseif string.starts(reaction.code,'LUA_HOOK_USEMAGMA') then
+			elseif starts(reaction.code,'LUA_HOOK_USEMAGMA') then
 				eventful.registerReaction(reaction.code,usemagma)
 				registered_reactions = true
 			end

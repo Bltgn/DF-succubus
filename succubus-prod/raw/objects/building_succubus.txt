@@ -338,7 +338,7 @@ building_succubus
 		[MAGMA_BUILD_SAFE]
 
 [BUILDING_FURNACE:PORTAL_TITLE]
-	[NAME:============ PORTALS =============]
+	[NAME:=== TRANSPORTATION ===]
 	[NAME_COLOR:7:0:1]
 	[DIM:6:1]
 	[WORK_LOCATION:1:1]
@@ -353,7 +353,7 @@ building_succubus
 	[COLOR:3:1:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0]
 
 [BUILDING_FURNACE:TELEPORT_1]
-	[NAME:Blue Portal]
+	[NAME:Blue Teleportation Portal]
 	[NAME_COLOR:7:0:1]
 	[BUILD_LABOR:ARCHITECT]
 	[BUILD_KEY:CUSTOM_B]
@@ -389,7 +389,7 @@ building_succubus
 	[BUILD_ITEM:2:BLOCKS:NONE:NONE:NONE]
 
 [BUILDING_FURNACE:TELEPORT_2]
-	[NAME:Red Portal]
+	[NAME:Red Teleportation Portal]
 	[NAME_COLOR:7:0:1]
 	[BUILD_LABOR:ARCHITECT]
 	[BUILD_KEY:CUSTOM_C]

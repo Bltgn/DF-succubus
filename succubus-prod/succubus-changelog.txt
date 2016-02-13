@@ -1,4 +1,15 @@
 # Succubus Dungeon : Changelog #
+14.0
++ Updated into DF 0.42.05 with Dfhack alpha
+- The magma well and teleport portails are back.
+- Brewing magma is back.
+
++ Other
+- Added an impassable tile to brick ovens to help with designation.
+- Descriptions has been added to the various reactions.
+- Reverted the succubi tile to 'i' for tileset compatibility.
+- Stopped the orthi from getting unfocused.
+
 13.0
 + Updated into DF 0.42.03
 - The mod is now compatible with the knowledge system, taverns, etc.
