@@ -15,14 +15,13 @@
 
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 local utils = require 'utils'
+local teleport = dfhack.script_environment('teleport')
 
-function teleport(sourceUnit, targetUnit)
-	sourceUnit.pos.x = targetUnit.pos.x
-	sourceUnit.pos.y = targetUnit.pos.y
-	sourceUnit.pos.z = targetUnit.pos.z
-	targetUnit.flags1.on_ground = true
-	sourceUnit.flags1.on_ground = true
-end
+local validArgs = validArgs or utils.invert({
+	'help',
+	'source',
+	'target'
+})
 
 local args = utils.processArgs({...}, validArgs)
 
@@ -48,4 +47,4 @@ if not sourceUnit then qerror('succubus/phasing: source unit not found') end
 local targetUnit = df.unit.find(args.target)
 if not targetUnit then qerror('succubus/phasing: target unit not found') end
 
-teleport(sourceUnit, targetUnit)
+teleport.eleport(sourceUnit, targetUnit.pos)

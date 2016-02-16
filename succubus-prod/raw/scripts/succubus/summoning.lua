@@ -114,13 +114,17 @@ end
 
 -- Spawns a regular creature at one unit position, caste is random
 function summonCreature(unitId, unitSource, num)
-	local su = dfhack.script_environment('spawn')
-
 	for i = 1, num do
-		su.place({
-			race = unitId,
-			position = {dfhack.units.getPosition(unitSource)}
-		})
+		dfhack.run_script(
+			'modtools/create-unit',
+			'-race',
+			unitId,
+			'-position',
+			{dfhack.units.getPosition(unitSource)},
+			'-civId',
+			'\\LOCAL',
+			'-domesticate'
+		)
 	end
 
 	announcement(unitId, num)
