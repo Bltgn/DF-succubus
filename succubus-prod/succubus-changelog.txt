@@ -1,7 +1,8 @@
 # Succubus Dungeon : Changelog #
 14.0
 + Updated into DF 0.42.05 with Dfhack alpha
-- The magma well and teleport portails are back.
+- The magma well as be brought back with ingame descriptions.
+- Teleportation portails are back.
 - Brewing magma is back.
 
 + Other

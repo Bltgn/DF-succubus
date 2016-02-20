@@ -112,19 +112,49 @@ local function announcement(creatureId, num)
 	end
 end
 
+function findRace(raceRawId)
+  --find race
+  for i,v in ipairs(df.global.world.raws.creatures.all) do
+    if v.creature_id == raceRawId then
+      return i
+    end
+  end
+
+  return nil
+end
+
 -- Spawns a regular creature at one unit position, caste is random
 function summonCreature(unitId, unitSource, num)
+	local createUnit = dfhack.script_environment('modtools/create-unit')
+  	local teleport = dfhack.script_environment('teleport')
+
+	local position = {dfhack.units.getPosition(unitSource)}
+	local raceIndex = findRace(unitId)
+
+	local casteIndex, newUnitIndex, newUnit
+
+	--Validation
+	if not raceIndex then
+		qerror("Summoning: Unknown race")
+	end
+
 	for i = 1, num do
-		dfhack.run_script(
-			'modtools/create-unit',
-			'-race',
-			unitId,
-			'-position',
-			{dfhack.units.getPosition(unitSource)},
-			'-civId',
-			'\\LOCAL',
-			'-domesticate'
-		)
+		casteIndex = createUnit.getRandomCasteId(raceIndex)
+		newUnitIndex = createUnit.createUnitInFortCivAndGroup(raceIndex, casteIndex)
+		createUnit.domesticate(newUnitIndex, df.global.ui.group_id)
+		
+		newUnit = df.unit.find(newUnitIndex)
+
+		-- Clear the arena mode name
+		newUnit.name.first_name = ''
+		newUnit.name.has_name = false
+		newUnit.status.current_soul.name.has_name = false
+		if newUnit.hist_figure_id ~= -1 then
+		    local histfig = df.historical_figure.find(newUnit.hist_figure_id)
+		    histfig.name.has_name = false
+		  end
+
+  		teleport.teleport(newUnit, xyz2pos(position[1], position[2] + 2, position[3]))
 	end
 
 	announcement(unitId, num)
