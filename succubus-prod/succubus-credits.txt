@@ -15,6 +15,7 @@ It has been assembled with the help of many contributions from the bay12 communi
 * Roses scripts and spells
 * Scripts by IndigoFenix
 * The demon mod by Naryar
+* Chiptune arrangements by Smoip
 * And of course, Dwarf Fortress by Tarn and Zach Adams
 
 Special thanks for proof reading the contents:
