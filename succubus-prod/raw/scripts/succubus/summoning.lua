@@ -130,6 +130,7 @@ function summonCreature(unitId, unitSource, num)
 
 	local position = {dfhack.units.getPosition(unitSource)}
 	local raceIndex = findRace(unitId)
+	local camera = xyz2pos(df.global.window_x, df.global.window_y, df.global.window_z)
 
 	local casteIndex, newUnitIndex, newUnit
 
@@ -156,6 +157,10 @@ function summonCreature(unitId, unitSource, num)
 
   		teleport.teleport(newUnit, xyz2pos(position[1], position[2] + 2, position[3]))
 	end
+
+	df.global.window_x = camera.x
+	df.global.window_y = camera.y
+	df.global.window_z = camera.z
 
 	announcement(unitId, num)
 end
