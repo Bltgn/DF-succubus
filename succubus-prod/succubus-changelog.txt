@@ -1,15 +1,25 @@
 # Succubus Dungeon : Changelog #
 14.0
 + Updated into DF 0.42.05 with Dfhack alpha
-- The magma well as be brought back with ingame descriptions.
-- Teleportation portails are back.
-- Brewing magma is back.
+- The magma well is back.
+- The teleportation portails are back.
+- Brewing magma at the still had been reactivated.
+- Summoning is back.
+- Corrupting prisoners is back.
+
++ Windows build change
+- Added dfhack alpha.
+- Because dfhack is not stable, seasonal saves with backups are active.
+- Upscaled the tilesets to 24px.
+- Added TWBT tileset.
+- Updates TWBT override to display weapons properly.
+- Added music remix by Smoip.
 
 + Other
 - Added an impassable tile to brick ovens to help with designation.
 - Descriptions has been added to the various reactions.
 - Reverted the succubi tile to 'i' for tileset compatibility.
-- Stopped the orthi from getting unfocused.
+- Stopped the orthi from getting bored.
 
 13.0
 + Updated into DF 0.42.03

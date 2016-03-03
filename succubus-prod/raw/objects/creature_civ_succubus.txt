@@ -178,7 +178,7 @@ creature_civ_succubus
 	// Common for all castes, specific pure succubi tags are defined at the end
 	[CASTE:FEMALE]
 		[CREATURE_CLASS:SUCCUBUS_FEMALE]
-		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to serve its master and spread new forms of pleasure into the world. The succubi are associated with lust, depravity and fire.]
+		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to serve its master and spread new forms of pleasure into the world. The succubi are associated with lust, depravity and fire. They are agile and their artistic skills are unmatched.]
 		[FEMALE]
 		[POP_RATIO:90000] // 90%
 		[LITTERSIZE:1:2] // Higher chances to have twins, to help with early worldgen
@@ -251,7 +251,7 @@ creature_civ_succubus
 	[SELECT_ADDITIONAL_CASTE:CAMBION_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium sized creature of great beauty who gave up nature for a life of revelry among the damned. The cambions love to stalk their prey in the shadows before striking its heart with an arrow.]
+		[DESCRIPTION:A medium sized creature of great beauty who gave up nature for a life of revelry among the damned. Cambions love to stalk their prey in the shadows before striking its heart with an arrow. They are excellent ambushers and bowdemons.]
 		[CASTE_NAME:cambion:cambions:cambion]
 		[BABYNAME:cambion baby:cambion babies]
 		[CHILDNAME:cambion girl:cambion girls]
@@ -289,7 +289,7 @@ creature_civ_succubus
 	[SELECT_ADDITIONAL_CASTE:DEVIL_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium sized creature who sold her soul to fulfill her fierce ambitions. Many tales are whispered in the dark about those who approach men of power and bind them with intricate contracts. Dealing with a devil is a dangerous task, and they always win their negotiations.]
+		[DESCRIPTION:A medium sized creature who sold her soul to fulfill her fierce ambitions. Many tales are whispered in the dark about the creatures who approach men of power and bind them with intricate contracts. Dealing with a devil is a dangerous task, and they always win their negotiations.]
 		[CASTE_NAME:devil:devils:devilish]
 		[BABYNAME:devil baby:devil babies]
 		[CHILDNAME:devil girl:devil girls]
@@ -326,7 +326,7 @@ creature_civ_succubus
 	[SELECT_ADDITIONAL_CASTE:FIEND_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the demonic kingdoms, shedding all thoughts of morality and decency for a life of greed, violence and infernal forges. Usually the process of becoming a fiend is called 'immigration'.]
+		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the demonic kingdoms, shedding all thoughts of morality and decency for a life of greed, violence and infernal forges. Fiends are excellent miners, fighters and smiths.]
 		[CASTE_NAME:fiend:fiends:fiendish]
 		[BABYNAME:fiend baby:fiend babies]
 		[CHILDNAME:fiend girl:fiend girls]
@@ -366,7 +366,7 @@ creature_civ_succubus
 	[SELECT_ADDITIONAL_CASTE:HELLION_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium-sized creature driven to corruption by her evil nature. A life of stealing, kidnapping and murdering brought her into the claws of greater evils who healed her disfigured features and taught her to channel her barbaric pulsions into new, refined acts of cruelty. Her combined evil culture provided her a strong affinity with whips.]
+		[DESCRIPTION:A medium-sized creature driven to corruption by her evil nature. A life of stealing, kidnapping and murdering brought her into the claws of greater evils who healed her disfigured features and taught her to channel her barbaric pulsions into new, refined acts of cruelty. Her evil culture gave her a strong affinity with whips.]
 		[CASTE_NAME:hellion:hellions:hellion]
 		[BABYNAME:hellion baby:hellion babies]
 		[CHILDNAME:hellion girl:hellion girls]
@@ -400,7 +400,7 @@ creature_civ_succubus
 
 	[SELECT_CASTE:HELLION_MALE]
 		[CHILDNAME:hellion boy:hellion boys]
-		[DESCRIPTION:A medium-sized creature driven to corruption by his evil nature. A life of stealing, kidnapping and murdering brought him into the claws of greater evils who healed his disfigured features and taught him to channel his barbaric pulsions into new, refined acts of cruelty. His combined evil culture provided him a strong affinity with whips.]
+		[DESCRIPTION:A medium-sized creature driven to corruption by his evil nature. A life of stealing, kidnapping and murdering brought him into the claws of greater evils who healed his disfigured features and taught him to channel his barbaric pulsions into new, refined acts of cruelty. His evil culture gave him a strong affinity with whips.]
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
 			[BP_ADD_TYPE:GELDABLE]
 
@@ -408,7 +408,7 @@ creature_civ_succubus
 	[SELECT_ADDITIONAL_CASTE:IMP_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:3TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This once feeble being has won the heart of a succubus who found her too cute to be released. Spending time with a lust demon made her stronger, and she now uses her skills with daggers to protect her home. Female imps are also known to lay eggs if they have access to the right facilities.]
+		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This tiny being has won the heart of a succubus who found her too cute to be released. Spending time with a lust demon made her stronger, and she now uses her skills with daggers to protect her home.]
 		[CASTE_NAME:imp:imps:impish]
 		[BABYNAME:imp pup:imp pups]
 		[CHILDNAME:imp girl:imp girls]
@@ -438,7 +438,7 @@ creature_civ_succubus
 
 	[SELECT_CASTE:IMP_MALE]
 		[CHILDNAME:imp boy:imp boys]
-		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This once feeble being has won the heart of a succubus who found his too cute to be released. Spending time with a lust demon made him stronger, and he now uses his skills with daggers to protect his home.]
+		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This tiny being has won the heart of a succubus who found his too cute to be released. Spending time with a lust demon made him stronger, and he now uses his skills with daggers to protect his home.]
 	[SELECT_CASTE:IMP_FEMALE] // Adding eggs
 
 		[BODY_DETAIL_PLAN:LEATHERY_EGG_MATERIALS]

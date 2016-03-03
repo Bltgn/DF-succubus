@@ -334,6 +334,11 @@ reaction_succubus
 // Den of iniquity
 [REACTION:CORRUPT_PRISONERS_SUCCUBUS]
 	[NAME:corrupt prisoners]
+	[DESCRIPTION:Convinces the nearby intelligent creatures to surrender their souls and turn them into demons. Affected creatures will join your dungeon as citizen.]
+	[DESCRIPTION: ]
+	[DESCRIPTION:After their transformation, your new creatures will have specific traits according to their former race. You can find more inside their descriptions.]
+	[DESCRIPTION: ]
+	[DESCRIPTION:This can be used on caged invaders if they are placed neaby.]
 	[BUILDING:DEN_OF_INIQUITY:CUSTOM_P]
 	[REAGENT:soap:150:BAR:NONE:NONE:NONE]
 		[ANY_SOAP_MATERIAL]

@@ -120,7 +120,7 @@ building_succubus
 		[CAN_USE_ARTIFACT]
 
 [BUILDING_WORKSHOP:SUCCUBUS_POWER]
-	[NAME:*Altar of Dis]
+	[NAME:*Altar of Sin]
 	!NODIMENSION!NAME:*Altar of sin 3x2]
 	[NAME_COLOR:7:0:1]
 	[WORK_LOCATION:2:2]
