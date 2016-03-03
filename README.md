@@ -19,7 +19,7 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 
 ## IMPORTANT: Selecting your race at the embark screen ##
 * Press tab before embarking until seeing a list of civilization names.
-* Press + and - to chose a civ that uses the cabinet 'π' tile to display its colonies on the map.
+* Press + and - to chose a civ that uses the cabinet tile (π) to display its colonies on the map.
 * Pressing tab again until seeing the list of neighbors will confirm your choice, your selected race is the first one.
 
 ## Modified vanilla files ##
@@ -30,11 +30,11 @@ The following changes were done on the original DF files. Please keep them in mi
 ## Magma ##
 Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock.
 
-Buildings marked with a star '*' must be powered by magma. There is currently no way to easily generate magma but this will be added in the near future.
+Buildings marked with a star '*' in its name must be powered by magma. You can easily provide magma to your dungeon by building a magma well. With this workshop, a pump operator can fill all nearby channels with enough magma to power buildings.
 
-Succubi are immune to any form of heat and cold. Unfortunatly the game prevent your citizens from walking in magma. If a succubus is stuck because a puddle of magma is in her way, you can wait for it to evaporate or dig around. Succubi inside magma will evacuate without burning clothing or weapons but hauled items will be likely destroyed.
+Unfortunatly the game does not allow your citizens to walk in magma. If a succubus is stuck because a puddle is in her way, you can wait for it to evaporate or dig around. Succubi inside magma will still evacuate without burning clothing or weapons but hauled items will be likely destroyed.
 
-As an option, if your succubi are runing out of drink and cannot find water, you can bring magma next to a still and turn it into a drink. You will need rock pots for this.
+As an option, if your succubi are running out of drink and cannot find water, you can bring magma next to a still and turn it into a drink. You will need rock pots for this.
 
 Also, remember that magma is a liquid and someone can drown in it if they cannot swim.
 
@@ -43,7 +43,7 @@ Slade can be generated at no cost in an underworld drill to help you build your 
 
 To get slade blocks, build the underworld drill from the furnaces menu after discovering magma. Like magma forges, it must have one of its tiles overlapping a pit with at least 4 levels of magma. A miner can then conjure slade blocks (for construction) or boulders (for craft or masonry jobs).
 
-If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace but must also cover an access to magma like the Underworld Drill.
+If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace.
 
 ## Summonning ##
 You can spawn pets in your fort by building a summoning portal over a magma pit. Evil pets are useful for various tasks or can be butchered for food.
@@ -53,15 +53,11 @@ Please note that spawned pets are more aggressive than natural ones and are pron
 A description of each pets abilities will be displayed while selecting the jobs from the summoning portal itself.
 
 ## Corruption ##
-An unique feature from the succubi is their ability to twist the bodies and souls of their guests at their image. Their victims, willing or not, are turned into hybrids with various abilities according to their former race.
+An unique feature from the succubi is their ability to twist the bodies and souls of their guests at their image. Their victims, willingly or not, are turned into hybrids with various abilities depending of their former race.
 
-This is done at the den of iniquity. Running the 'Corrupt prisonners' job will transform nearby sentients and have them join your civilization. Using this on succubi who do not belong to your dungeon will also cause them join you without further effect. The affected individuals will become citizens of your dungeon and can be appointed as nobles or drafted in the military.
+This is done at the den of iniquity. Running the 'Corrupt prisoners' job will transform nearby sentients and have them join your civilization. This include caged invaders if their cages are visible and close enough. Merchants and their guards will also join, but their pack animal will flee or go insane.
 
-This can be done on invaders. Simple build the cages with the enemies trapped inside near the den of iniquity. You can select which exact cage to build by pressing 'x' while buliding. Once transformed, the invaders turned friendly will leave the cages by themselves.
-
-Merchants and their guards will also join, but their pack animal will flee or go insane.
-
-Corruption is compatible with the Fortress Defense mod.
+Corrupting prisoners is also compatible with the Fortress Defense mod.
 
 ## Adventuring as a succubus ##
 Civilizations living in dark fortresses are not as well developed than dwarven or human ones. As a result, a succubus starts at an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (omega tiles on the world map).
@@ -74,6 +70,7 @@ Wandering around, you may also find dungeons with equipment and towers with popu
 * Embarking as dwarves? See "Selecting your race at the embark screen" above.
 * Upon reaching your site's edge, traders will "kidnap" their own pets, this has no consequenses to your fort.
 * Changing graphics in the Lazy Newb Pack deletes the mod, you'll have to reinstall it afterwards.
+* The game treat succubi blood as magma hot. Wounded succubi are likely to cause wildfires.
 * This has been made for an alpha version of dfhack, expect bugs. Save a lot and make backups.
 
 ## Contact ##
