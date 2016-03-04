@@ -6,6 +6,7 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 * A new race.
 * Fast and fire immune citizens.
 * The reintroduction of classic lore into Dwarf Fortress such as 40d demons.
+* Generate magma anywhere, make magma forge on the surface, traps, waterfalls...
 * Generating slade blocks to build an authentic demonic spire.
 * Generate fuel for your forges out of thin air.
 * Capture invaders and turn them into half demons.
@@ -45,7 +46,7 @@ To get slade blocks, build the underworld drill from the furnaces menu after dis
 
 If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace.
 
-## Summonning ##
+## Summoning ##
 You can spawn pets in your fort by building a summoning portal over a magma pit. Evil pets are useful for various tasks or can be butchered for food.
 
 Please note that spawned pets are more aggressive than natural ones and are prone to attack if they lack personal space. Isolating them or giving them large pasture zones will reduce the risks.
