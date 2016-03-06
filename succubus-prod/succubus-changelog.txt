@@ -1,4 +1,7 @@
 # Succubus Dungeon : Changelog #
+14.1
+- Updated into DF 0.42.06
+
 14.0
 + Updated into DF 0.42.05 with Dfhack alpha
 - The magma well is back.

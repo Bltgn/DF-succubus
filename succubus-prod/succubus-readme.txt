@@ -13,7 +13,7 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 * Summon powerful creatures to your side.
 
 ## Installation ##
-* Install Dwarf Fortress 42.05+, using the lazy newb pack is recommended.
+* Install Dwarf Fortress 42.06+, using the lazy newb pack is recommended.
 * Install dfhack for the appropriate DF version.
 * Extract the archive in your DF folder, preserving the folder structure.
 * Generate a new world and select a succubus civ to play.
