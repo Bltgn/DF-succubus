@@ -26,7 +26,7 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 ## Modified vanilla files ##
 The following changes were done on the original DF files. Please keep them in mind if you combine this mod with others.
 
-* entity_default.txt: Added siege triggers to dwarves, made humans, elves and kobold attack faster.
+* entity_default.txt: Added siege triggers to dwarves, made humans, elves and kobold attack faster, dwarves are no longer playable at embark.
 * creature_subterranean.txt: Added pet value to fire imps.
 
 ## Magma ##
@@ -49,7 +49,7 @@ If you wish to make a glass tower instead, glass blocks can easily be produced u
 
 ## New materials ##
 
-Because the succubi tend to reshape the world in their image, you will get hold of new materials to build items with:
+Because the succubi wish to reshape the world in their image, you will obtain of new materials to build with:
 
 * Afelsteel: This corrupted steel is extremely dense and possess a sharper edge, making it great for weaponsmithing.
 * Octobronze: An unaturally light bronze best suited to provide your succubi with a light and solid protection.

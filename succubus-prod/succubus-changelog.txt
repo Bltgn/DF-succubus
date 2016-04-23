@@ -1,4 +1,17 @@
 # Succubus Dungeon : Changelog #
+14.2
+- Updated dfhack into 0.42.06-beta1
+
++ Added two new metals
+- Octobronze (stygian bronze renamed), very light and suitable for armors.
+- Afelsteel, very heavy steel and suitable for weapons.
+- Those two metals ensure that anvils are available at embark.
+- You can not produce these metals yet, but you can purchause some from the caravans.
+
++ Other changes
+- Dwarves are no longer playable in fort mode to prevent confusion on the embark screen.
+- Fire imps now have cost 101 points at embark.
+
 14.1
 - Updated into DF 0.42.06
 

@@ -13,8 +13,8 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 * Summon powerful creatures to your side.
 
 ## Installation ##
-* Install Dwarf Fortress 42.05+, using the lazy newb pack is recommended.
-* Install dfhack for the appropriate DF version.
+* Install Dwarf Fortress 42.06+, using the lazy newb pack is recommended.
+* Install dfhack for the appropriate DF version is needed.
 * Extract the archive in your DF folder, preserving the folder structure.
 * Generate a new world and select a succubus civ to play.
 
@@ -26,7 +26,8 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 ## Modified vanilla files ##
 The following changes were done on the original DF files. Please keep them in mind if you combine this mod with others.
 
-* entity_default.txt: Added siege triggers to dwarves, made humans, elves and kobold attack faster.
+* entity_default.txt: Added siege triggers to dwarves, made humans, elves and kobold attack faster, dwarves are no longer playable at embark.
+* creature_subterranean.txt: Added pet value to fire imps.
 
 ## Magma ##
 Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock.
@@ -45,6 +46,13 @@ Slade can be generated at no cost in an underworld drill to help you build your 
 To get slade blocks, build the underworld drill from the furnaces menu after discovering magma. Like magma forges, it must have one of its tiles overlapping a pit with at least 4 levels of magma. A miner can then conjure slade blocks (for construction) or boulders (for craft or masonry jobs).
 
 If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace.
+
+## New materials ##
+
+Because the succubi wish to reshape the world in their image, you will obtain of new materials to build with:
+
+* Afelsteel: This corrupted steel is extremely dense and possess a sharper edge, making it great for weaponsmithing.
+* Octobronze: An unaturally light bronze best suited to provide your succubi with a light and solid protection.
 
 ## Summoning ##
 You can spawn pets in your fort by building a summoning portal over a magma pit. Evil pets are useful for various tasks or can be butchered for food.
