@@ -51,8 +51,8 @@ If you wish to make a glass tower instead, glass blocks can easily be produced u
 
 Because the succubi wish to reshape the world in their image, you will obtain of new materials to build with:
 
-* Afelsteel: This corrupted steel is extremely dense and possess a sharper edge, making it great for weaponsmithing.
-* Octobronze: An unaturally light bronze best suited to provide your succubi with a light and solid protection.
+* Afelsteel: This corrupted steel is extremely dense, making it great for weaponsmithing.
+* Stygium: An unaturally light bronze providing your succubi a decent protection without reducing their speed.
 
 ## Summoning ##
 You can spawn pets in your fort by building a summoning portal over a magma pit. Evil pets are useful for various tasks or can be butchered for food.
