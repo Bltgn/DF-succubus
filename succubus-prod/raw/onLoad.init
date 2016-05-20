@@ -22,7 +22,7 @@ modtools/reaction-trigger -reactionName SUMMONING_HFS -command [ succubus/summon
 
 modtools/interaction-trigger -onAttackStr "SUCCUBUS_PHASING_ATK" -onDefendStr "SUCCUBUS_PHASING_DEF" -suppressAttack -suppressDefend -command [ succubus/phasing -source \\ATTACKER_ID -target \\DEFENDER_ID  ]
 
-#AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
+AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
 AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
 AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
