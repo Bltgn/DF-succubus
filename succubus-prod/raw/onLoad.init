@@ -59,7 +59,7 @@ modtools/reaction-trigger -reactionName OPEN_LEGENDS -command [ open-legends ]
 #taxidermy
 modtools/reaction-product-trigger -reactionName TAXIDERMY_STATUE -command [ taxidermy -corpse_id \\INPUT_ITEMS -statue_id \\OUTPUT_ITEMS -record_name ]
 modtools/reaction-product-trigger -reactionName TAXIDERMY_FIGURINE -command [ taxidermy -corpse_id \\INPUT_ITEMS -statue_id \\OUTPUT_ITEMS -record_name ]
-
+1
 #banners - first decorations test
 modtools/reaction-trigger -reactionName BANNER_RED -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_RED ]
 modtools/reaction-trigger -reactionName BANNER_BLACK -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_BLACK ]
