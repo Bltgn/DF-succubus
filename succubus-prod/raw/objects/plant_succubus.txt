@@ -1,4 +1,4 @@
-plant_soccubus
+plant_succubus
 
 [OBJECT:PLANT]
 
