@@ -1,4 +1,74 @@
 # Succubus Dungeon : Changelog #
+14.2
+- Updated dfhack into 0.42.06-stable
+
++ Added two new metals
+- Stygium (formely stygian bronze), very light and suitable for armors.
+- Afelsteel, very heavy and suitable for weapons.
+- Those two metals ensure that anvils are available at embark.
+- You can not produce these metals yet, but you can purchause some from the caravans.
+
++ Other changes
+- Dwarves are no longer playable in fort mode to prevent confusion on the embark screen.
+- Fire imps now have cost 101 points at embark.
+
+14.1
+- Updated into DF 0.42.06
+
+14.0
++ Updated into DF 0.42.05 with Dfhack alpha
+- The magma well is back.
+- The teleportation portails are back.
+- Brewing magma at the still had been reactivated.
+- Summoning is back.
+- Corrupting prisoners is back.
+
++ Windows build change
+- Added dfhack alpha.
+- Because dfhack is not stable, seasonal saves with backups are active.
+- Upscaled the tilesets to 24px.
+- Added TWBT tileset.
+- Updates TWBT override to display weapons properly.
+- Added music remix by Smoip.
+
++ Other
+- Added an impassable tile to brick ovens to help with designation.
+- Descriptions has been added to the various reactions.
+- Reverted the succubi tile to 'i' for tileset compatibility.
+- Stopped the orthi from getting bored.
+
+13.0
++ Updated into DF 0.42.03
+- The mod is now compatible with the knowledge system, taverns, etc.
+- Forts can be visited, mostly by goblins and humans.
+- The succubi cannot make books, too flammable.
+- New stringed and wind instruments are created at world gen.
+- The entity has received a set of subjects to write scrolls about.
+
++ Modified pet behaviors
+- Most evil pets are now found roaming the surface in the appropriate biomes.
+- Adventurers can be ambushed by these creatures in evil places.
+- Nightmares, nahashes and orthi are available for both the succubi and goblins.
+- Other pets will be available in the future.
+
++ Adjusted personalities and values
+- Most citizens need to socialize, romance, admire art, etc.
+- Without a proper place to relax, they get distracted and start stressing each other.
+- The succubi no longer care about nudity.
+
++ New sprites
+- Gelder
+- Artists and socializers: tavern keeper, performer, poet, dancer, bard.
+- Scholars: Sage, scholar, philosopher, mathematician, astronomer, naturalist, chemist, geographer
+- Scribe
+- Modified sprites for bookkeeper, animal trainer, alchemist/witch and manager.
+
++ Other changes
+- Custom reactions now display ingame instructions.
+- Reduced strength to human levels.
+- Replaced shields by bucklers.
+- Deactivated the summoning portal and den of iniquity due to the absence of dfhack.
+
 12.1
 - Summoning has been made more reliable on windows.
 - Unfortunatly, trying to summon a demon on worlds where none have been generated will no longer preserve reagents.

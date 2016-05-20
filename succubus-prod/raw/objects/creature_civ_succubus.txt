@@ -18,6 +18,8 @@ creature_civ_succubus
 	[CREPUSCULAR]
 	[MILKABLE]
 	[MAGMA_VISION]
+	[STRANGE_MOODS]
+	[OUTSIDER_CONTROLLABLE]
 	[PRONE_TO_RAGE:5]
 
 	// Natural skills
@@ -43,15 +45,23 @@ creature_civ_succubus
 	[CREATURE_CLASS:GENERAL_POISON]
 	[CREATURE_CLASS:DEMON]
 	[CREATURE_CLASS:SUCCUBUS]
+	[SYNDROME_DILUTION_FACTOR:INEBRIATION:130]
 	[SPHERE:LUST]
 	[SPHERE:DEPRAVITY]
 	[SPHERE:FIRE]
 
 	// Personality
-	[PERSONALITY:ANGER_PROPENSITY:50:75:100]
-	[PERSONALITY:VIOLENT:0:75:100]
-	[PERSONALITY:IMMODESTY:50:50:100]
-	[PERSONALITY:EXCITEMENT_SEEKING:50:60:100]
+	[PERSONALITY:ANGER_PROPENSITY:60:75:100]
+	[PERSONALITY:EXCITEMENT_SEEKING:60:60:100]
+	[PERSONALITY:IMMODERATION:60:60:100]
+	[PERSONALITY:BASHFUL:0:0:20]
+
+	[PERSONALITY:TOLERANT:25:60:100]
+	[PERSONALITY:SINGLEMINDED:0:40:75]
+
+	[PERSONALITY:GREGARIOUSNESS:60:75:100]
+	[PERSONALITY:GREED:60:60:100]
+	[PERSONALITY:CURIOUS:60:60:100]
 
 	// Skills
 	[SKILL_LEARN_RATE:CONCENTRATION:200]
@@ -59,6 +69,13 @@ creature_civ_succubus
 	[SKILL_LEARN_RATE:LEADERSHIP:200]
 	[SKILL_LEARN_RATE:TEACHING:200]
 	[SKILL_LEARN_RATE:DISCIPLINE:150]
+	[SKILL_LEARN_RATE:MAKE_MUSIC:150]
+	[SKILL_LEARN_RATE:WRITING:150]
+	[SKILL_LEARN_RATE:PROSE:150]
+	[SKILL_LEARN_RATE:MECHANICS:50]
+	[SKILL_LEARN_RATE:OPERATE_PUMP:50]
+	[SKILL_LEARN_RATE:SIEGECRAFT:50]
+	[SKILL_LEARN_RATE:SIEGEOPERATE:50]
 
 	[PROFESSION_NAME:STANDARD:Good-to-nothing:Goods-to-nothing]
 	[PROFESSION_NAME:CRAFTSMAN:Craftsuccubus:Craftsuccubi]
@@ -122,16 +139,16 @@ creature_civ_succubus
 
 	// Attributes
 	[PHYS_ATT_RANGE:AGILITY:700:1200:1400:1500:1600:1800:2500]              ++
-	[PHYS_ATT_RANGE:STRENGTH:450:950:1150:1250:1350:1550:2250]              +
+	PHYS_ATT_RANGE:STRENGTH:450:950:1150:1250:1350:1550:2250]               human equivalent
 	[PHYS_ATT_RANGE:ENDURANCE:150:600:800:900:1000:1100:1500]				-
 	[PHYS_ATT_RANGE:TOUGHNESS:150:600:800:900:1000:1100:1500]				-
 	[PHYS_ATT_RANGE:RECUPERATION:450:950:1150:1250:1350:1550:2250]			+
-	[PHYS_ATT_RANGE:DISEASE_RESISTANCE:450:950:1150:1250:1350:1550:2250]    +
+	[PHYS_ATT_RANGE:DISEASE_RESISTANCE:700:1200:1400:1500:1600:1800:2500]   ++
 	[MENT_ATT_RANGE:PATIENCE:0:400:600:750:800:900:1100]					--
 	[MENT_ATT_RANGE:FOCUS:0:400:600:750:800:900:1100] 						--
 	[MENT_ATT_RANGE:CREATIVITY:1250:1500:1750:2000:2500:3000:5000]			+++
 	[MENT_ATT_RANGE:LINGUISTIC_ABILITY:1250:1500:1750:2000:2500:3000:5000]  +++
-	[MENT_ATT_RANGE:MEMORY:5000:5000:5000:5000:5000:5000:5000]              max
+	[MENT_ATT_RANGE:MEMORY:1250:1500:1750:2000:2500:3000:5000]              +++
 	[MENT_ATT_RANGE:WILLPOWER:0:400:600:750:800:900:1100] 					--
 	[MENT_ATT_RANGE:MUSICALITY:1250:1500:1750:2000:2500:3000:5000]          +++
 	[MENT_ATT_RANGE:SOCIAL_AWARENESS:700:1200:1400:1500:1600:1800:2500]     ++
@@ -148,6 +165,7 @@ creature_civ_succubus
 
 	// Tiles
 	[CREATURE_TILE:'i']
+	[CREATURE_SOLDIER_TILE:'i']
 	[COLOR:7:0:1]
 	[GLOWTILE:82]
 	[GLOWCOLOR:0:14:0]
@@ -160,24 +178,24 @@ creature_civ_succubus
 	// Common for all castes, specific pure succubi tags are defined at the end
 	[CASTE:FEMALE]
 		[CREATURE_CLASS:SUCCUBUS_FEMALE]
-		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to serve its master before spreading over the world. The succubi are associated with lust, depravity and fire, but that's just hearsay.]
+		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to spread new forms of pleasure into the world, serving her infernal master's will. The succubi are associated with lust, depravity and fire. They are agile and their artistic skills are unmatched.]
 		[FEMALE]
-		[POP_RATIO:80000]
-		[LITTERSIZE:1:2]
+		[POP_RATIO:90000] // 90%
+		[LITTERSIZE:1:2] // Higher chances to have twins, to help with early worldgen
 		[CASTE_NAME:succubus:succubi:succubus]
 		[BABYNAME:succubus baby:succubus babies]
 		[CHILDNAME:succubus girl:succubus girls]
 		[ODOR_STRING:sweet fragrance]
 
-		[ORIENTATION:MALE:0:10:90]
-		[ORIENTATION:FEMALE:5:45:45]
+		[ORIENTATION:MALE:0:20:80] // It's important to have breeding couples for world gen, considering the ratio
+		[ORIENTATION:FEMALE:0:50:50]
 
 	[CASTE:MALE]
 		[CREATURE_CLASS:SUCCUBUS_MALE]
-		[DESCRIPTION:A male hedonistic demon with caprinae legs twisted into humanoid form. He moves with elegance. Beware of his gentle manners. In a time before time, his kind escaped from the underworld to serve its master before spreading over the world. The incubi are associated with lust, depravity and fire, but that's just hearsay.]
+		[DESCRIPTION:A male hedonistic demon with caprinae legs twisted into humanoid form. He moves with elegance. Beware of his gentle manners. In a time before time, his kind escaped from the underworld to spread new forms of pleasure into the world, serving his infernal master's will. The incubi are associated with lust, depravity and fire. They are agile and their artistic skills are unmatched.]
 		[MALE]
 		[BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
-		[POP_RATIO:20000]
+		[POP_RATIO:10000] // 10%
 		[CASTE_NAME:incubus:incubi:incubus]
 		[BABYNAME:incubus baby:incubus babies]
 		[CHILDNAME:incubus boy:incubus boys]
@@ -207,8 +225,8 @@ creature_civ_succubus
 		[CASTE_PROFESSION_NAME:MASTER_LASHER:Whip Master:Whip Masters]
 		[CASTE_PROFESSION_NAME:MASTER_BLOWGUNMAN:Blowgun Master:Blowgun Masters]
 
-		[ORIENTATION:MALE:5:45:45]
-		[ORIENTATION:FEMALE:0:10:90] // It's important to have breeding couples for world gen
+		[ORIENTATION:MALE:0:50:50]
+		[ORIENTATION:FEMALE:0:10:90] // It's important to have breeding couples for world gen, considering the ratio
 
 	// Now creating the corruption castes by cloning the male and female ones
 	[SELECT_CASTE:ALL]
@@ -233,7 +251,7 @@ creature_civ_succubus
 	[SELECT_ADDITIONAL_CASTE:CAMBION_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium sized creature of great beauty who gave up nature for a life of revelry among the damned. The cambions love to stalk their prey in the shadows before striking its heart with an arrow.]
+		[DESCRIPTION:A medium sized creature of great beauty who gave up nature for a life of revelry among the damned. Cambions love to stalk their prey in the shadows before striking its heart with an arrow. They are excellent ambushers and bowdemons.]
 		[CASTE_NAME:cambion:cambions:cambion]
 		[BABYNAME:cambion baby:cambion babies]
 		[CHILDNAME:cambion girl:cambion girls]
@@ -248,9 +266,7 @@ creature_civ_succubus
 		[MENT_ATT_RANGE:EMPATHY:450:950:1150:1250:1350:1550:2250]               +
 		[MENT_ATT_RANGE:SPATIAL_SENSE:450:950:1150:1250:1350:1550:2250]         +
 
-		[SKILL_LEARN_RATE:MINING:50]
 		[SKILL_LEARN_RATE:WOODCUTTING:50]
-		[SKILL_LEARN_RATE:MECHANICS:50]
 		[SKILL_LEARN_RATE:SNEAK:130]
 		[SKILL_LEARN_RATE:SITUATIONAL_AWARENESS:150]
 		[SKILL_LEARN_RATE:BOW:130]
@@ -273,7 +289,7 @@ creature_civ_succubus
 	[SELECT_ADDITIONAL_CASTE:DEVIL_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium sized creature who sold her soul to fulfill her fierce ambitions. Many tales are whispered in the dark about those who approach men of power and bind them with intricate contracts. Dealing with a devil is a dangerous task, and they always win their negotiations.]
+		[DESCRIPTION:A medium sized creature who sold their soul to fulfill their fierce ambitions. Many tales are whispered in the dark about the creatures who approach men of power and bind them with intricate contracts. Dealing with a devil is a dangerous task, and they always win their negotiations.]
 		[CASTE_NAME:devil:devils:devilish]
 		[BABYNAME:devil baby:devil babies]
 		[CHILDNAME:devil girl:devil girls]
@@ -297,11 +313,11 @@ creature_civ_succubus
 		[SKILL_LEARN_RATE:JUDGING_INTENT:300]
 		[SKILL_LEARN_RATE:APPRAISAL:300]
 		[SKILL_LEARN_RATE:NEGOTIATION:300]
-		[SKILL_LEARN_RATE:SITUATIONAL_AWARENESS:200]
+		[SKILL_LEARN_RATE:SPEAKING:200]
+		[SKILL_LEARN_RATE:LEADERSHIP:200]
 
 	[SELECT_CASTE:DEVIL_MALE]
 		[CHILDNAME:devil boy:devil boys]
-		[DESCRIPTION:A medium sized creature who sold his soul to fulfill his fierce ambitions. Many tales are whispered in the dark about those who approach men of power and bind them with intricate contracts. Dealing with a devil is a dangerous task, and they always win their negotiations.]
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
 			[BP_ADD_TYPE:GELDABLE]
 
@@ -309,7 +325,7 @@ creature_civ_succubus
 	[SELECT_ADDITIONAL_CASTE:FIEND_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the demonic kingdoms, shedding all thoughts of morality and decency for a life of greed, violence and infernal forges. Usually the process of becoming a fiend is called 'immigration'.]
+		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the demonic kingdoms, shedding all thoughts of morality and decency for a life of greed, violence and infernal forges. Fiends are excellent miners, fighters and smiths.]
 		[CASTE_NAME:fiend:fiends:fiendish]
 		[BABYNAME:fiend baby:fiend babies]
 		[CHILDNAME:fiend girl:fiend girls]
@@ -338,7 +354,6 @@ creature_civ_succubus
 		[SKILL_LEARN_RATE:MELEE_COMBAT:130]
 		[SKILL_LEARN_RATE:FORGE_ARMOR:130]
 		[SKILL_LEARN_RATE:FORGE_WEAPON:130]
-		[SKILL_LEARN_RATE:MECHANICS:130]
 
 	[SELECT_CASTE:FIEND_MALE]
 		[CASTE_NAME:fiend:fiends:fiendish]
@@ -350,7 +365,7 @@ creature_civ_succubus
 	[SELECT_ADDITIONAL_CASTE:HELLION_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium-sized creature driven to corruption by her evil nature. A life of stealing, kidnapping and murdering brought her into the claws of greater evils who healed her disfigured features and taught her to channel her barbaric pulsions into new, refined acts of cruelty. Her combined evil culture provided her a strong affinity with whips.]
+		[DESCRIPTION:A medium-sized creature driven to corruption by their evil nature. A life of stealing, kidnapping and murdering brought them into the claws of greater evils who healed their disfigured features and taught them to channel their barbaric pulsions into new, refined acts of cruelty. Their evil culture gave them a strong affinity with whips.]
 		[CASTE_NAME:hellion:hellions:hellion]
 		[BABYNAME:hellion baby:hellion babies]
 		[CHILDNAME:hellion girl:hellion girls]
@@ -384,7 +399,6 @@ creature_civ_succubus
 
 	[SELECT_CASTE:HELLION_MALE]
 		[CHILDNAME:hellion boy:hellion boys]
-		[DESCRIPTION:A medium-sized creature driven to corruption by his evil nature. A life of stealing, kidnapping and murdering brought him into the claws of greater evils who healed his disfigured features and taught him to channel his barbaric pulsions into new, refined acts of cruelty. His combined evil culture provided him a strong affinity with whips.]
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
 			[BP_ADD_TYPE:GELDABLE]
 
@@ -392,7 +406,7 @@ creature_civ_succubus
 	[SELECT_ADDITIONAL_CASTE:IMP_MALE]
 		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:3TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This once feeble being has won the heart of a succubus who found her too cute to be released. Spending time with a lust demon made her stronger, and she now uses her skills with daggers to protect her home. Female imps are also known to lay eggs if they have access to the right facilities.]
+		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This tiny being has won the heart of a succubus who found it too cute to be released. Spending time with a lust demon made them stronger, and they now use their skills with daggers to protect her home.]
 		[CASTE_NAME:imp:imps:impish]
 		[BABYNAME:imp pup:imp pups]
 		[CHILDNAME:imp girl:imp girls]
@@ -422,7 +436,6 @@ creature_civ_succubus
 
 	[SELECT_CASTE:IMP_MALE]
 		[CHILDNAME:imp boy:imp boys]
-		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This once feeble being has won the heart of a succubus who found his too cute to be released. Spending time with a lust demon made him stronger, and he now uses his skills with daggers to protect his home.]
 	[SELECT_CASTE:IMP_FEMALE] // Adding eggs
 
 		[BODY_DETAIL_PLAN:LEATHERY_EGG_MATERIALS]
@@ -465,9 +478,6 @@ creature_civ_succubus
 
 		[TISSUE_LAYER:BY_CATEGORY:TOE:NAIL:FRONT]
 
-  		[SKILL_LEARN_RATE:SWORD:130]
-  		[SKILL_LEARN_RATE:AXE:130]
- 		[SKILL_LEARN_RATE:MACE:150]
  		[SKILL_LEARN_RATE:MELEE_COMBAT:150]
  		[SKILL_LEARN_RATE:WRESTLING:150]
  		[SKILL_LEARN_RATE:GRASP_STRIKE:150]
@@ -523,17 +533,25 @@ creature_civ_succubus
 
 		[BODY:HUMANOID_NECK_HOOF:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
 		
-		[SKILL_LEARN_RATE:ALCHEMY:300]
-		[SKILL_LEARN_RATE:MECHANICS:75]
-		
-		[PERSONALITY:LOVE_PROPENSITY:50:60:100]
-		[PERSONALITY:EMOTIONALLY_OBSESSIVE:50:60:100]
-		[PERSONALITY:SWAYED_BY_EMOTIONS:50:60:100]
-		[PERSONALITY:LUST_PROPENSITY:65:80:100]
-
 		[NATURAL_SKILL:CLIMBING:3]
 		[SKILL_LEARN_RATE:CLIMBING:130]
-		[SKILL_LEARN_RATE:DODGING:110]
+		[SKILL_LEARN_RATE:DODGING:130]
+		[SKILL_LEARN_RATE:SING:200]
+		[SKILL_LEARN_RATE:PLAY_STRINGED_INSTRUMENT:200]
+		[SKILL_LEARN_RATE:PLAY_KEYBOARD_INSTRUMENT:200]
+		[SKILL_LEARN_RATE:PLAY_WIND_INSTRUMENT:200]
+		[SKILL_LEARN_RATE:DANCE:200]
+		[SKILL_LEARN_RATE:POETRY:200]
+		[SKILL_LEARN_RATE:SPEAKING:200]
+
+		[PERSONALITY:LOVE_PROPENSITY:60:80:100]
+		[PERSONALITY:EMOTIONALLY_OBSESSIVE:60:75:100]
+		[PERSONALITY:SWAYED_BY_EMOTIONS:60:75:100]
+		[PERSONALITY:LUST_PROPENSITY:60:90:100]
+		[PERSONALITY:VANITY:60:75:100]
+		[PERSONALITY:ART_INCLINED:60:75:100]
+		[PERSONALITY:IMMODESTY:60:75:100]
+
 		
 	[SELECT_CASTE:MALE]
 		[PREFSTRING:manly chest]

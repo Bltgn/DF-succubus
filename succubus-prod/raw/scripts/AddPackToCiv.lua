@@ -41,7 +41,7 @@ local function insertPet(entity,creature,caste)
 				if checkrace.creature_id == creature and checkcaste.caste_id == caste then exists=true end
 			end
 			if exists==true then
-				print("ERROR- civilization ",entity," has creature ", creature, caste)
+				--print("ERROR- civilization ",entity," has creature ", creature, caste)
 			else
 				--the civ doesn't have the creature as a pet
 				--add the creature as a pet

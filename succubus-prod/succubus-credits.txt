@@ -1,11 +1,11 @@
 # Succubus dungeon mod #
 
-This archive contain the succubus civilization mod.
+This archive contains the succubus civilization mod.
 
 It has been assembled with the help of many contributions from the bay12 community:
 * Obsidian tileset and color palette
 * Phoebus color palette and creature sprite set
-* dfhack r4 maintained by Peterix and contributors
+* dfhack maintained by Peterix and contributors
 * K33N elves
 * Falconne's UI improvements (mousequery, hotkeys and dwarfmonitor)
 * Warmist's spawnunit script
@@ -15,4 +15,11 @@ It has been assembled with the help of many contributions from the bay12 communi
 * Roses scripts and spells
 * Scripts by IndigoFenix
 * The demon mod by Naryar
+* Chiptune arrangements by Smoip
+* PeridexisErrant's cutting-edge pack
 * And of course, Dwarf Fortress by Tarn and Zach Adams
+
+Special thanks for proof reading:
+* jwoodward48df
+* Meph
+* chaosfiend

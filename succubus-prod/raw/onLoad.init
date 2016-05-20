@@ -149,10 +149,10 @@ modtools/reaction-trigger -reactionName BLUE_TELEPORT_SQUAD -command [ succubus/
 modtools/reaction-trigger -reactionName ORANGE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 2 1/1/0 ]
 modtools/reaction-trigger -reactionName ORANGE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 2 10/10/0 ]
 
-modtools/reaction-trigger -reactionName SUMMONING_NAHASH -command [ succubus/summoning -source \\WORKER_ID -race NAHASH -num 5 ]
+modtools/reaction-trigger -reactionName SUMMONING_NAHASH -command [ succubus/summoning -source \\WORKER_ID -race NAHASH ]
 modtools/reaction-trigger -reactionName SUMMONING_ORTHUS -command [ succubus/summoning -source \\WORKER_ID -race ORTHUS ]
 modtools/reaction-trigger -reactionName SUMMONING_NIGHTMARE -command [ succubus/summoning -source \\WORKER_ID -race NIGHTMARE ]
-modtools/reaction-trigger -reactionName SUMMONING_ELEMENTAL_PAIN -command [ succubus/summoning -source \\WORKER_ID -race ELEMENTAL_PAIN -num 3 ]
+modtools/reaction-trigger -reactionName SUMMONING_ELEMENTAL_PAIN -command [ succubus/summoning -source \\WORKER_ID -race ELEMENTAL_PAIN ]
 modtools/reaction-trigger -reactionName SUMMONING_IMP_FIRE -command [ succubus/summoning -source \\WORKER_ID -race IMP_FIRE ]
 modtools/reaction-trigger -reactionName SUMMONING_FROG_DEMON -command [ succubus/summoning -source \\WORKER_ID -race FROG_DEMON ]
 modtools/reaction-trigger -reactionName SUMMONING_TENTACLE_MONSTER -command [ succubus/summoning -source \\WORKER_ID -race TENTACLE_MONSTER ]
@@ -162,7 +162,7 @@ modtools/reaction-trigger -reactionName SUMMONING_HFS -command [ succubus/summon
 
 modtools/interaction-trigger -onAttackStr "SUCCUBUS_PHASING_ATK" -onDefendStr "SUCCUBUS_PHASING_DEF" -suppressAttack -suppressDefend -command [ succubus/phasing -source \\ATTACKER_ID -target \\DEFENDER_ID  ]
 
-AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
+#AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
 AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
 AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
