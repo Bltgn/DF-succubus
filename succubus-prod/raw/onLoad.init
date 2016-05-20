@@ -9,9 +9,88 @@ AddMountToCiv
 #AddPullToCiv
 AddPetToCiv
 
+embark-tools anywhere
+
 #Dwarf Mode by Meph
-base/item-improve
-base/item-upgrade
+#putnamitemupgrade
+modtools/reaction-product-trigger -reactionName IMPROVE_ITEM_WEAPON_SWORD_SHORT -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_PICK -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_BATTLE_PICK -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName IMPROVE_ITEM_WEAPON_AXE_BATTLE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_HAMMER_WAR -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_SPEAR -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_MACE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_DAGGER_LARGE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_PIKE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_HALBERD -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_SWORD_2H -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_SWORD_LONG -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_MAUL -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_AXE_GREAT -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_CROSSBOW -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_WEAPON_JAVELIN_THROWER -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_GIANTAXEBLADE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_ENORMOUSCORKSCREW -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_SPIKEDBALL -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_LARGESERRATEDDISC -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_MENACINGSPIKE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_ITEM_TRAPCOMP_BARBED_WIRE_ROLL -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+
+
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_BREASTPLATE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_MAIL_SHIRT -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_PLATEARMOR -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_HELM -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_CAP -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_GAUNTLETS -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_GAUNTLETS_PLATE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_BOOTS -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_BOOTS_LOW -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_BOOTS_PLATE -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_GREAVES -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_SHIELD -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_BUCKLER -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_TOWER_SHIELD -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+modtools/reaction-product-trigger -reactionName LUA_HOOK_IMPROVE_ITEM_EXAMPLE_KITE_SHIELD -command [ item/quality-change -item \\INPUT_ITEMS -upgrade ]
+
+#archive
+modtools/reaction-trigger -reactionName OPEN_LEGENDS -command [ open-legends ]
+
+#taxidermy
+modtools/reaction-product-trigger -reactionName TAXIDERMY_STATUE -command [ taxidermy -corpse_id \\INPUT_ITEMS -statue_id \\OUTPUT_ITEMS -record_name ]
+modtools/reaction-product-trigger -reactionName TAXIDERMY_FIGURINE -command [ taxidermy -corpse_id \\INPUT_ITEMS -statue_id \\OUTPUT_ITEMS -record_name ]
+
+#banners - first decorations test
+modtools/reaction-trigger -reactionName BANNER_RED -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_RED ]
+modtools/reaction-trigger -reactionName BANNER_BLACK -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_BLACK ]
+modtools/reaction-trigger -reactionName BANNER_WHITE -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_WHITE ]
+modtools/reaction-trigger -reactionName BANNER_CYAN -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_CYAN ]
+modtools/reaction-trigger -reactionName BANNER_BLUE -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_BLUE ]
+modtools/reaction-trigger -reactionName BANNER_GREEN -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_GREEN ]
+modtools/reaction-trigger -reactionName BANNER_PURPLE -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_PURPLE ]
+modtools/reaction-trigger -reactionName BANNER_YELLOW -command [ building/subtype-change -building \\BUILDING_ID -type BANNER_YELLOW ]
+
+#carpets - overkill decoration with 20 options
+modtools/reaction-trigger -reactionName CARPET_RED_LEFT_HORIZONTAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_LEFT_HORIZONTAL ]
+modtools/reaction-trigger -reactionName CARPET_RED_CENTER_HORIZONTAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CENTER_HORIZONTAL ]
+modtools/reaction-trigger -reactionName CARPET_RED_RIGHT_HORIZONTAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_RIGHT_HORIZONTAL ]
+modtools/reaction-trigger -reactionName CARPET_RED_CENTER_VERTICAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CENTER_VERTICAL ]
+modtools/reaction-trigger -reactionName CARPET_RED_BOTTOM_VERTICAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_BOTTOM_VERTICAL ]
+modtools/reaction-trigger -reactionName CARPET_RED_CENTER_CENTER -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CENTER_CENTER ]
+modtools/reaction-trigger -reactionName CARPET_RED_CORNER_RIGHT_BOTTOM -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CORNER_RIGHT_BOTTOM ]
+modtools/reaction-trigger -reactionName CARPET_RED_CORNER_LEFT_BOTTOM -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CORNER_LEFT_BOTTOM ]
+modtools/reaction-trigger -reactionName CARPET_RED_CORNER_RIGHT_TOP -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CORNER_RIGHT_TOP ]
+modtools/reaction-trigger -reactionName CARPET_RED_CORNER_LEFT_TOP -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CORNER_LEFT_TOP ]
+modtools/reaction-trigger -reactionName CARPET_RED_T_NES -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_T_NES ]
+modtools/reaction-trigger -reactionName CARPET_RED_T_ESW -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_T_ESW ]
+modtools/reaction-trigger -reactionName CARPET_RED_T_NSW -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_T_NSW ]
+modtools/reaction-trigger -reactionName CARPET_RED_T_WNE -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_T_WNE ]
+modtools/reaction-trigger -reactionName CARPET_RED_FABRIC -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_FABRIC ]
+modtools/reaction-trigger -reactionName CARPET_RED_TOP_OPEN -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_TOP_OPEN ]
+modtools/reaction-trigger -reactionName CARPET_RED_BOTTOM_OPEN -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_BOTTOM_OPEN ]
+modtools/reaction-trigger -reactionName CARPET_RED_LEFT_OPEN -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_LEFT_OPEN ]
+modtools/reaction-trigger -reactionName CARPET_RED_RIGHT_OPEN -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_RIGHT_OPEN ]
+modtools/reaction-trigger -reactionName CARPET_RED_TOP_VERTICAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_TOP_VERTICAL ]
 
 #hooks for reactions, this is the dwarven library.
 modtools/reaction-trigger -reactionName STUDY_LIBRARY_CONCENTRATION -command [ librarytrain4 \\WORKER_ID CONCENTRATION 4 ]
@@ -124,19 +203,56 @@ modtools/reaction-trigger -reactionName FORCE_CARAVAN_GNOME -command [ force \\c
 
 modtools/reaction-trigger -reactionName FORCE_MIGRANTS_DWARF -command [ force \\migrants MOUNTAIN ]
 
-# Kobolds
-AddPetToCiv -civ KOBOLD -race SHALSWAR -caste MALE
-AddPetToCiv -civ KOBOLD -race RAT_KOBOLD -caste FEMALE
-AddPetToCiv -civ KOBOLD -race RAT_KOBOLD -caste FEMALE
-AddPetToCiv -civ KOBOLD -race SPIDER_CAVE_GIANT -caste MALE
-AddPetToCiv -civ KOBOLD -race SPIDER_CAVE_GIANT -caste FEMALE
-AddPetToCiv -civ KOBOLD -race HELMET_SNAKE -caste MALE
-AddPetToCiv -civ KOBOLD -race HELMET_SNAKE -caste FEMALE
-AddPetToCiv -civ KOBOLD -race GIANT_BARK_SCORPION -caste MALE
-AddPetToCiv -civ KOBOLD -race GIANT_BARK_SCORPION -caste FEMALE
 
-AddMountToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste MALE
-AddMountToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste FEMALE
+#guildhouse/garrison
+modtools/reaction-trigger -reactionName JOIN_GUILD_ALCHEMIST_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ALCHEMIST_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_ALCHEMIST_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ALCHEMIST_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_BEAST_WARDEN_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste BEAST_WARDEN_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_BEAST_WARDEN_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste BEAST_WARDEN_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_CARPENTER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CARPENTER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_CARPENTER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CARPENTER_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_CRAFTDWARF_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CRAFTDWARF_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_CRAFTDWARF_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste CRAFTDWARF_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_ENGINEER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ENGINEER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_ENGINEER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste ENGINEER_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_FARMER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FARMER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_FARMER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FARMER_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_FISHERMAN_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FISHERMAN_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_FISHERMAN_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste FISHERMAN_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_HEALER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste HEALER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_HEALER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste HEALER_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_JEWELER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste JEWELER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_JEWELER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste JEWELER_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_MASON_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MASON_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_MASON_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MASON_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_MERCHANT_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MERCHANT_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_MERCHANT_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MERCHANT_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_SMITH_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste SMITH_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_SMITH_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste SMITH_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_GUARD_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste GUARD_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_GUARD_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste GUARD_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_LEGIONNAIRE_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste LEGIONNAIRE_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_LEGIONNAIRE_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste LEGIONNAIRE_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_MARKSMAN_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MARKSMAN_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_MARKSMAN_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste MARKSMAN_FEMALE -keepInventory ]
+
+modtools/reaction-trigger -reactionName JOIN_GUILD_WRESTLER_M -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste WRESTLER_MALE -keepInventory ]
+modtools/reaction-trigger -reactionName JOIN_GUILD_WRESTLER_F -command [ modtools/transform-unit -unit \\WORKER_ID -race DWARF -caste WRESTLER_FEMALE -keepInventory ]
+
 
 # Succubus mod
 modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "dizziness"
@@ -193,6 +309,82 @@ AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
 
+
+AddPetToCiv -civ MOUNTAIN -race TESB_PET_ROCK -caste GRANITE
+
+
 succubus/waterwell
 succubus/power-learning
 # end succubus mod
+
+
+
+# The Earth Strikes Back! initiatization
+
+#tesb#-mining -living .002 -gem .005
+#tesb#-weather -creature TESB_AWAKENED_STORM -weather rain
+#tesb#-tribute
+#tesb#-tame-all TESB_PET_ROCK
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_ANDESITE -syndrome "andesite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_ANDESITE2 -syndrome "andesite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_BASALT -syndrome "basalt favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_BASALT2 -syndrome "basalt favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHALK -syndrome "chalk favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHALK2 -syndrome "chalk favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHERT -syndrome "chert favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CHERT2 -syndrome "chert favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CLAYSTONE -syndrome "claystone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CLAYSTONE2 -syndrome "claystone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CONGLOMERATE -syndrome "conglomerate favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_CONGLOMERATE2 -syndrome "conglomerate favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DACITE -syndrome "dacite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DACITE2 -syndrome "dacite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DIORITE -syndrome "diorite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DIORITE2 -syndrome "diorite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DOLOMITE -syndrome "dolomite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_DOLOMITE2 -syndrome "dolomite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GABBRO -syndrome "gabbro favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GABBRO2 -syndrome "gabbro favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GNEISS -syndrome "gneiss favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GNEISS2 -syndrome "gneiss favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GRANITE -syndrome "granite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_GRANITE2 -syndrome "granite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_LIMESTONE -syndrome "limestone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_LIMESTONE2 -syndrome "limestone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_MARBLE -syndrome "marble favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_MARBLE2 -syndrome "marble favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_MUDSTONE -syndrome "mudstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_MUDSTONE2 -syndrome "mudstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_PHYLLITE -syndrome "phyllite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_PHYLLITE2 -syndrome "phyllite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_QUARTZITE -syndrome "quartzite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_QUARTZITE2 -syndrome "quartzite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_RHYOLITE -syndrome "rhyolite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_RHYOLITE2 -syndrome "rhyolite favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_ROCK_SALT -syndrome "rock salt favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_ROCK_SALT2 -syndrome "rock salt favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SANDSTONE -syndrome "sandstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SANDSTONE2 -syndrome "sandstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SCHIST -syndrome "schist favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SCHIST2 -syndrome "schist favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SHALE -syndrome "shale favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SHALE2 -syndrome "shale favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SILTSTONE -syndrome "siltstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SILTSTONE2 -syndrome "siltstone favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SLATE -syndrome "slate favor"
+#modtools#/reaction-trigger -reactionName TESB_TRIBUTE_TO_SLATE2 -syndrome "slate favor"
+
+###
+
+###
+
+
+# kobold mode
+modtools/reaction-trigger -reactionName BREEDING -syndrome -command [ empregnate \\WORKER_ID ]
+modtools/reaction-trigger -reactionName WEATHER_CLEAR_KOBOLD -syndrome -command [ weather clear ]
+modtools/reaction-trigger -reactionName WEATHER_RAIN_KOBOLD -syndrome -command [ weather rain ]
+modtools/reaction-trigger -reactionName WEATHER_SNOW_KOBOLD -syndrome -command [ weather snow ]
+
+
+###
+

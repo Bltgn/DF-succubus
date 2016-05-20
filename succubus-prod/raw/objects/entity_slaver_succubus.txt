@@ -9,7 +9,7 @@ YES_CIV_ACTIVE_SUCCUBUS[OBJECT:ENTITY]
 #########################################################################################
 Additions by Meph: Just the usual GUI triggers, just like in the old version.
 
-YES_FORT_MODE_SUCCUBUS[SITE_CONTROLLABLE]
+!NO_FORT_MODE_SUCCUBUS!SITE_CONTROLLABLE]
 YES_ADV_MODE_SUCCUBUS[ALL_MAIN_POPS_CONTROLLABLE]
 
 [PERMITTED_REACTION:MATERIALS_DEFAULT]SUCCUBUS_MATERIALS
