@@ -1,4 +1,15 @@
 # Succubus Dungeon : Changelog #
+15.0
++ New workshop
+- Grave forge, gem forge and glass forge
+- Produce military equipment out of bone, gem and glass.
+
++ Decorations
+- You can now add carpets to your sites.
+- Carpets can be restyled into different angles.
+- Display cases added to feature your important items.
+- Campfires added with the ability to burn the surroundings.
+
 14.2
 - Updated dfhack into 0.42.06-stable
 
