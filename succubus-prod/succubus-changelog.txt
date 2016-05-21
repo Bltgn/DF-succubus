@@ -12,6 +12,7 @@
 
 + Other changes
 - Fixed a possible crash with the summoning portal.
+- You can make metals beds now.
 
 14.2
 - Updated dfhack into 0.42.06-stable

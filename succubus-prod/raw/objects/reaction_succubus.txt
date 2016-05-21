@@ -397,9 +397,9 @@ reaction_succubus
 	[BUILDING:STILL:CUSTOM_C]
 	[DESCRIPTION:Gather a nearby magma pool and brew it into a delicious hot drink.]
 	[DESCRIPTION: ]
-	[DESCRIPTION:One of the squares next to the still must be open to a sufficiently large pool of magma.]
+	[DESCRIPTION:One of the squares under the still must contain enough magma.]
 	[DESCRIPTION: ]
-	[DESCRIPTION:The result will not count as alcohol and only fire immune creatures like succubi will dare to drink it.]
+	[DESCRIPTION:The result will not count as alcohol and only fire immune creatures like the succubi will dare to drink it.]
 	[DESCRIPTION: ]
 	[DESCRIPTION:The usage of flammable pots would be unwise...]
 	[DESCRIPTION: ]
@@ -413,6 +413,20 @@ reaction_succubus
 		[PRODUCT_TO_CONTAINER:pot]
 		[PRODUCT_DIMENSION:150]
 	[SKILL:BREWING]
+
+// Forge
+[REACTION:METAL_BED]
+	[NAME:Forge metal bed]
+	[BUILDING:METALSMITH:CUSTOM_B]
+	[DESCRIPTION:Forge a metal bed frame with 3 bars.]
+	[DESCRIPTION: ]
+	[DESCRIPTION:Skill - Blacksmithing]
+	[REAGENT:A:450:BAR:NONE:NONE:NONE]
+		[METAL_ITEM_MATERIAL]
+	[FUEL]
+	[PRODUCT:100:1:BED:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[MAX_MULTIPLIER:1]
+	[SKILL:FORGE_FURNITURE]
 
 // Major powers
 [REACTION:LUA_HOOK_SUCCUBUS_UPGRADE_FIRE_SECRET]
@@ -765,3 +779,4 @@ reaction_succubus
 	[REAGENT:A:3:ROUGH:NONE:GLASS_CLEAR:NONE]
 	[PRODUCT:100:1:ARMOR:ITEM_ARMOR_CORSET:GET_MATERIAL_FROM_REAGENT:A:NONE]
 	[SKILL:GLASSMAKER]
+
