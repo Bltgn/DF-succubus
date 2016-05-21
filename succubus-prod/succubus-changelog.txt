@@ -6,9 +6,12 @@
 
 + Decorations
 - You can now add carpets to your sites.
-- Carpets can be restyled into different angles.
+- Carpets can be restyled into different angles (requires TWBT).
 - Display cases added to feature your important items.
 - Campfires added with the ability to burn the surroundings.
+
++ Other changes
+- Fixed a possible crash with the summoning portal.
 
 14.2
 - Updated dfhack into 0.42.06-stable
