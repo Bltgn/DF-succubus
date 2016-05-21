@@ -1,18 +1,23 @@
 # Succubus Dungeon : Changelog #
-15.0
-+ New workshop
-- Grave forge, gem forge and glass forge
-- Produce military equipment out of bone, gem and glass.
+14.3
++ New workshops
+- Grave forge, gem forge and glass forge have been added.
+- These forges produce military items out of glass, bone or gem.
+- Campfires added with the ability to burn the surroundings. 
 
 + Decorations
 - You can now add carpets to your sites.
 - Carpets can be restyled into different angles (requires TWBT).
 - Display cases added to feature your important items.
-- Campfires added with the ability to burn the surroundings.
 
 + Other changes
+- Succubi are now mortals with an extreme longevity, this should fix issues with secrets.
 - Fixed a possible crash with the summoning portal.
 - You can make metals beds now.
+- Frog demons are now intelligent and can perform labors or serve in the military.
+- Natural frog demons skills has been reduced and are slow learner, with the exception of military skills.
+- You can also play a frog demon in adventurer mode.
+- Renamed a few professions for more colorful ones.
 
 14.2
 - Updated dfhack into 0.42.06-stable

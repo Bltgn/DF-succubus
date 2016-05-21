@@ -107,7 +107,7 @@ reaction_succubus
 	[NAME:Summon a frog demon]
 	[DESCRIPTION:Spawns a frog demon in your fort.]
 	[DESCRIPTION: ]
-	[DESCRIPTION:Frog demons are strong creatures with a poisonous bite. Enemies biten will feel feverish and slow.]
+	[DESCRIPTION:Frog demons are strong creatures with a poisonous bite. They are intelligent enough to perform labors or join the military.]
 	[DESCRIPTION: ]
 	[DESCRIPTION:Skill - Animal trainer]
 	[BUILDING:SUMMONING_PORTAL:CUSTOM_F]
