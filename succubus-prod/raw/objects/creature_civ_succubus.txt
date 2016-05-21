@@ -18,6 +18,7 @@ creature_civ_succubus
 	[CREPUSCULAR]
 	[MILKABLE]
 	[MAGMA_VISION]
+	[MAXAGE:2000]
 
 	!YES_HARDERLEARNING!SKILL_LEARN_RATES:50]
 
@@ -615,9 +616,10 @@ creature_civ_succubus
 		[STATE_ADJ:LIQUID:liquid pheromones]
 		[STATE_NAME:GAS:pheromones]
 		[STATE_ADJ:GAS:pheromones]
+		[STATE_COLOR:ALL:PINK]
 		[PREFIX:NONE]
 		[SYNDROME]
-			[SYN_NAME:arousal]
+			[SYN_NAME:pheromones contact]
 			[SYN_AFFECTED_CLASS:GENERAL_POISON]
 			[SYN_IMMUNE_CLASS:SUCCUBUS]
 			[SYN_INHALED]
@@ -637,7 +639,7 @@ creature_civ_succubus
 			[CE_PARALYSIS:SEV:1000:PROB:100:RESISTABLE:SIZE_DILUTES:BP:BY_CATEGORY:TAIL:ALL:START:0:PEAK:25:END:100]
 			[CE_DIZZINESS:SEV:100:PROB:100:START:0:END:500]
 		[SYNDROME]
-			[SYN_NAME:excited mind]
+			[SYN_NAME:pheromones exposure]
 			[SYN_CONTACT]
 			[SYN_INHALED]
 			[SYN_INGESTED]

@@ -416,7 +416,7 @@ reaction_succubus
 
 // Major powers
 [REACTION:LUA_HOOK_SUCCUBUS_UPGRADE_FIRE_SECRET]
-	[NAME:Learn the secret of fire]
+	[NAME:Learn the secret of hellfire]
 	[BUILDING:SUCCUBUS_POWER:CUSTOM_F]
 	[REAGENT:slab:1:SLAB:NONE:INORGANIC:SLADE]
 	[REAGENT:ash:150:BAR:NONE:ASH:NONE]
