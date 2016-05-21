@@ -18,6 +18,7 @@
 - Natural frog demons skills has been reduced and are slow learner, with the exception of military skills.
 - You can also play a frog demon in adventurer mode.
 - Renamed a few professions for more colorful ones.
+- The succubi will bring some FUN friends when they attack another civilization.
 
 14.2
 - Updated dfhack into 0.42.06-stable

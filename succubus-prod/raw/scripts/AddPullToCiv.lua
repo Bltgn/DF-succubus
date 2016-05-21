@@ -18,7 +18,7 @@
 ]=]
 local utils=require 'utils'
 
-local function insertPet(entity,creature,caste)
+function insertPet(entity,creature,caste)
 	local exists=false
 	for k,v in pairs(df.global.world.entities.all) do
 		--ENTITY TYPES
