@@ -19,6 +19,7 @@
 - You can also play a frog demon in adventurer mode.
 - Renamed a few professions for more colorful ones.
 - The succubi will bring some FUN friends when they attack another civilization.
+- Brewing magma now properly check for liquids under the still.
 
 14.2
 - Updated dfhack into 0.42.06-stable

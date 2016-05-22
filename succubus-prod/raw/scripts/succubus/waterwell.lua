@@ -6,37 +6,16 @@ local function starts(String, Start)
 	return string.sub(String, 1, string.len(Start)) == Start
 end
 
-function usewater(reaction,unit,job,input_items,input_reagents,output_items,call_native)
+-- Check for a liquid under the workshop at this unit's location. If found, take one level and return true.
+function takeLiquid(unit, type)
 	local building = dfhack.buildings.findAtTile(unit.pos)
 	local pos = {}
-	pos.x1 = building.x1
-	pos.x2 = building.x2
-	pos.y1 = building.y1
-	pos.y2 = building.y2
-	pos.z = building.z
-	for x = pos.x1-1, pos.x2+1, 1 do
-		for y = pos.y1-1, pos.y2+1, 1 do
-			baseBlock = dfhack.maps.ensureTileBlock(x,y,pos.z)
-			liquidBlock = dfhack.maps.ensureTileBlock(x,y,pos.z-1)
-			if liquidBlock.designation[x%16][y%16].flow_size > 0 and liquidBlock.designation[x%16][y%16].liquid_type == false then
-				liquidBlock.designation[x%16][y%16].flow_size = liquidBlock.designation[x%16][y%16].flow_size - 1
-				return
-			end
-		end
-	end
-	dfhack.gui.showAnnouncement( dfhack.TranslateName(unit.name).." cancels "..reaction.name..": Needs water." , COLOR_RED, true)
-	for i=0,#input_items-1,1 do
-		input_items[i].flags.PRESERVE_REAGENT = true
-	end
-	for i=0,#reaction.products-1,1 do
-		reaction.products[i].probability = 0
-	end
-end
+	local liquidType = (type == 'magma')
 
+	if not building then
+		return false
+	end
 
-function usemagma(reaction, reaction_product, unit, input_items, input_reagents, output_items, call_native)
-	local building = dfhack.buildings.findAtTile(unit.pos)
-	local pos = {}
 	pos.x1 = building.x1
 	pos.x2 = building.x2
 	pos.y1 = building.y1
@@ -47,40 +26,61 @@ function usemagma(reaction, reaction_product, unit, input_items, input_reagents,
 		for y = pos.y1-1, pos.y2+1, 1 do
 			baseBlock = dfhack.maps.ensureTileBlock(x,y,pos.z)
 			liquidBlock = dfhack.maps.ensureTileBlock(x,y,pos.z-1)
-			if liquidBlock.designation[x%16][y%16].flow_size > 0 and liquidBlock.designation[x%16][y%16].liquid_type == true then
+			if liquidBlock.designation[x%16][y%16].flow_size > 0 and liquidBlock.designation[x%16][y%16].liquid_type == liquidType then
 				liquidBlock.designation[x%16][y%16].flow_size = liquidBlock.designation[x%16][y%16].flow_size - 1
-				return
+				return true
 			end
 		end
 	end
 
-	dfhack.gui.showAnnouncement( dfhack.TranslateName(unit.name).." cancels "..reaction.name..": Needs magma." , COLOR_RED, true)
-	for k,v in ipairs(input_reagents) do
-		input_reagents[k].flags.PRESERVE_REAGENT = true
+	return false
+end
+
+local function setReactionProducts(reaction, active)
+	local probability = 100
+	if not active then
+		probability = 0
 	end
-	for i=0,#reaction.products-1,1 do
-		reaction.products[i].probability = 0
+
+	for i=0, #reaction.products-1, 1 do
+		reaction.products[i].probability = probability
 	end
 end
 
-dfhack.onStateChange.loadUseLiquid = function(code)
-	local registered_reactions = false
-	if code==SC_MAP_LOADED then
-		--registered_reactions = {}
-		for i,reaction in ipairs(df.global.world.raws.reactions) do
-			if starts(reaction.code,'LUA_HOOK_USEWATER') then
-				eventful.registerReaction(reaction.code,usewater)
-				registered_reactions = true
-			elseif starts(reaction.code,'LUA_HOOK_USEMAGMA') then
-				eventful.registerReaction(reaction.code,usemagma)
-				registered_reactions = true
-			end
-		end
-		if registered_reactions then
-			print('Use Liquid Reactions: Loaded.')
-		end
-	elseif code==SC_MAP_UNLOADED then
+-- Try to take the liquid, if it fails, cancel the reaction. liquid should be set to 'water' or 'magma'
+local function useliquid(liquid, reaction, unit, input_reagents)
+	local i
+
+	if takeLiquid(unit, liquid) then
+		setReactionProducts(reaction, true)
+		return true
+	end
+
+	dfhack.gui.showAnnouncement( dfhack.TranslateName(unit.name).." cancels "..reaction.name..": Needs "..liquid.."." , COLOR_RED, true)
+
+	for i=0, #input_reagents-1, 1 do
+		input_reagents[i].flags.PRESERVE_REAGENT = true
+	end
+	
+	setReactionProducts(reaction, false)
+
+	return false
+end
+
+function usemagma(reaction, unit, input_reagents)
+	return useliquid('magma', reaction, unit, input_reagents)
+end
+
+function usewater(reaction, unit, input_reagents)
+	return useliquid('water', reaction, unit, input_reagents)
+end
+
+eventful.onReactionCompleting.waterwell = function(reaction, reaction_product, unit, input_items, input_reagents, output_items, call_native)
+	if starts(reaction.code,'LUA_HOOK_USEWATER') then
+		call_native = usewater(reaction, unit, input_reagents)
+	elseif starts(reaction.code,'LUA_HOOK_USEMAGMA') then
+		call_native = usemagma(reaction, unit, input_reagents)
 	end
 end
 
-if dfhack.isMapLoaded() then dfhack.onStateChange.loadUseLiquid(SC_MAP_LOADED) end
+print('Use Liquid Reactions: Loaded.')

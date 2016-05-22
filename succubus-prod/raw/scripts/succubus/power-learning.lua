@@ -109,4 +109,4 @@ eventful.onReactionComplete.succubusPower = function(reaction, reaction_product,
 	activatePower(unit, reaction.code)
 end
 
-print("Succubus power hook activated")
+print("Succubus power reactions: Loaded.")
