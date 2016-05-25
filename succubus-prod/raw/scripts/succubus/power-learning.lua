@@ -58,7 +58,7 @@ function activatePower(unit, code)
 	local synName
 
 	if code == 'LUA_HOOK_SUCCUBUS_UPGRADE_FIRE_SECRET' then
-		synName = 'Major Pyromancer (fireballs, directed ash, firejet)'
+		synName = 'Pyromaniac (fireballs, directed ash, firejet)'
 		synMessageName = 'the secrets of hellfire'
 	elseif code == 'LUA_HOOK_SUCCUBUS_UPGRADE_LUST_SECRET' then
 		synName = 'Courtesan (pheromones, entice)'
