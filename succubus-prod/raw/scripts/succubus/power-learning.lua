@@ -58,8 +58,8 @@ function activatePower(unit, code)
 	local synName
 
 	if code == 'LUA_HOOK_SUCCUBUS_UPGRADE_FIRE_SECRET' then
-		synName = 'Pyromancer (fireballs, directed ash, firejet)'
-		synMessageName = 'the secrets of fire'
+		synName = 'Major Pyromancer (fireballs, directed ash, firejet)'
+		synMessageName = 'the secrets of hellfire'
 	elseif code == 'LUA_HOOK_SUCCUBUS_UPGRADE_LUST_SECRET' then
 		synName = 'Courtesan (pheromones, entice)'
 		synMessageName = 'the secrets of lust'
@@ -109,4 +109,4 @@ eventful.onReactionComplete.succubusPower = function(reaction, reaction_product,
 	activatePower(unit, reaction.code)
 end
 
-print("Succubus power hook activated")
+print("Succubus power reactions: Loaded.")

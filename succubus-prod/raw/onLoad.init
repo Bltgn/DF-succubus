@@ -309,9 +309,9 @@ AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
 
-
 AddPetToCiv -civ MOUNTAIN -race TESB_PET_ROCK -caste GRANITE
 
+succubus/hfspets -civ SUCCUBUS
 
 succubus/waterwell
 succubus/power-learning
