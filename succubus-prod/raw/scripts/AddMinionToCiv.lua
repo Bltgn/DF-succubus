@@ -12,7 +12,7 @@
         -race <CREATURE_ID>
             The raw id of a creature
         -caste <CASTE_ID>
-            The caste's number, optional
+            The caste's raw id, optional
 
     Example : AddMinionToCiv -civ MOUNTAIN -race DOG -caste MALE
 ]=]

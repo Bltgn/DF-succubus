@@ -75,6 +75,8 @@ AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
 
+succubus/hfspets -civ SUCCUBUS
+
 succubus/waterwell
 succubus/power-learning
 # end succubus mod
