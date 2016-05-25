@@ -91,7 +91,7 @@ creature_civ_succubus
 	[PROFESSION_NAME:THRESHER:Miller:Millers]
 	[PROFESSION_NAME:ENGRAVER:Engraver:Engravers]
 	[PROFESSION_NAME:ALCHEMIST:Witch:Witches]
-	[PROFESSION_NAME:RECRUIT:Victim:Victims]
+	[PROFESSION_NAME:RECRUIT:Inductee:Inductees]
 	[PROFESSION_NAME:WRESTLER:Fighting Dame:Fighting Dames]
 	[PROFESSION_NAME:HAMMERMAN:Hammer Dame:Hammer Dames]
 	[PROFESSION_NAME:SPEARMAN:Spear Dame:Spear Dames]
