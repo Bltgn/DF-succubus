@@ -15,7 +15,7 @@
 - Fixed a possible crash with the summoning portal.
 - You can make metals beds now.
 - Frog demons are now intelligent and can perform labors or serve in the military.
-- Natural frog demons skills has been reduced and are slow learner, with the exception of military skills.
+- Natural frog demons skills has been reduced, with the exception of military skills.
 - You can also play a frog demon in adventurer mode.
 - Renamed a few professions for more colorful ones.
 - The succubi will bring some FUN friends when they attack another civilization.
