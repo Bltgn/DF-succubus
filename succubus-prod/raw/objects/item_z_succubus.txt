@@ -84,3 +84,25 @@ item_succubus
 	[MATERIAL_SIZE:2]
 	[LEATHER]
 	[STRUCTURAL_ELASTICITY_WOVEN_THREAD]
+
+// Tool
+[ITEM_TOOL:ITEM_TOOL_TABLET]
+	[NAME:tablet:tablet]
+	[DESCRIPTION:A small polished slab can be engraved or painted with text and pictures.]
+	[VALUE:10]
+	[STONE_MAT]
+	[TOOL_USE:CONTAIN_WRITING]
+	[TILE:8]
+	[SIZE:130]
+	[MATERIAL_SIZE:1]
+
+[ITEM_TOOL:ITEM_TOOL_SLIP]
+	[NAME:slip:slips]
+	[DESCRIPTION:A writing material made of long, narrows strips of a solid material, bound together by thread. Each strip contains a single column of text. The slip can be folded or rolled on itself for storage.]
+	[VALUE:15]
+	[HARD_MAT]
+	[TOOL_USE:CONTAIN_WRITING]
+	[TILE:8]
+	[SIZE:110]
+	[MATERIAL_SIZE:1]
+	[NO_DEFAULT_JOB] // Uses one mat + 1 string to produce

@@ -20,6 +20,8 @@
 - Renamed a few professions for more colorful ones.
 - The succubi will bring some FUN friends when they attack another civilization.
 - Brewing magma now properly check for liquids under the still.
+- You can now produce tablets and slips at the craftman's workshop.
+- The succubi use tablets and slip for writing.
 
 14.2
 - Updated dfhack into 0.42.06-stable
