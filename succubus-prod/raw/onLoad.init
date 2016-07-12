@@ -77,7 +77,9 @@ AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
 
 succubus/hfspets -civ SUCCUBUS
 
+succubus/init
 succubus/waterwell
 succubus/power-learning
+succubus/teleportbase
 fix/smartpets
 # end succubus mod
