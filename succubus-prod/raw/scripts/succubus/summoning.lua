@@ -153,7 +153,10 @@ function summonCreature(unitId, unitSource, num)
 		if newUnit.hist_figure_id ~= -1 then
 		    local histfig = df.historical_figure.find(newUnit.hist_figure_id)
 		    histfig.name.has_name = false
-		  end
+	  	end
+
+	  	-- Clear hostility
+	  	newUnit.civ_id = df.global.ui.civ_id
 
   		teleport.teleport(newUnit, xyz2pos(position[1], position[2] + 2, position[3]))
 	end
