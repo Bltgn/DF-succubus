@@ -10,7 +10,7 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 * Generating slade blocks to build an authentic demonic spire.
 * Generate fuel for your forges out of thin air.
 * Capture invaders and turn them into half demons.
-* Summon powerful creatures to your side.
+* Summon powerful creatures to your side, some are intelligent and can join your military.
 
 ## Installation ##
 * Install Dwarf Fortress 42.06+, using the lazy newb pack is recommended.
@@ -29,7 +29,7 @@ The following changes were done on the original DF files. Please keep them in mi
 * entity_default.txt: Added siege triggers to dwarves, made humans, elves and kobold attack faster, dwarves are no longer playable at embark.
 * creature_subterranean.txt: Added pet value to fire imps.
 
-## Magma ##
+# Magma #
 Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock.
 
 Buildings marked with a star '*' in its name must be powered by magma. You can easily provide magma to your dungeon by building a magma well. With this workshop, a pump operator can fill all nearby channels with enough magma to power buildings.
@@ -40,6 +40,33 @@ As an option, if your succubi are running out of drink and cannot find water, yo
 
 Also, remember that magma is a liquid and someone can drown in it if they cannot swim.
 
+## Magma or water used in reactions ##
+Some jobs will claim to consume magma or water. This means that it will draw one level of the liquid from a tile located one z-level below the workshop.
+
+This will also work if the liquid is located next to the workshop one z-level below (ie after channeling a canal to it).
+
+For example, those two configurations are valid :
+
++ = floor
+W = workshop
+~ = water/magma
+. = open space
+
+  Z       Z-1
++++++    +++++ 
++WWW+    +~~~+
++WWW+    +~~~+ -> 3x3 workshop built over a 3x3 reservoir
++WWW+    +~~~+
++++++    +++++
+
+
+  Z         Z-1
++++++++   +++++++ 
++WWW+++   +++++++
++WWW...   ++++~~~ -> 3x3 workshop next to a channel filled with liquid
++WWW+++   +++++++
++++++++   +++++++
+
 # Getting slade and construction materials #
 Slade can be generated at no cost in an underworld drill to help you build your spires. However, its extreme weight implies that slade projects will take more time and builders to complete. A smart usage of stockpiles and wheelbarrows is strongly recommended.
 
@@ -48,7 +75,6 @@ To get slade blocks, build the underworld drill from the furnaces menu after dis
 If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace.
 
 ## New materials ##
-
 Because the succubi wish to reshape the world in their image, you will obtain of new materials to build with:
 
 * Afelsteel: This corrupted steel is extremely dense, making it great for weaponsmithing.
@@ -75,12 +101,14 @@ If you start in a pit, you can open the regional map (shift + Q) to spot the nea
 
 Wandering around, you may also find dungeons with equipment and towers with population on its roof. If you are unable to reach the roof, try pressing alt+direction to open the hatch above your head.
 
+You can also play as a Frog Demon. Try biting people!
+
 ## Known issues ##
 * Embarking as dwarves? See "Selecting your race at the embark screen" above.
+* Changing graphics in the Lazy Newb Pack deletes the mod. You'll have to reinstall it afterwards.
 * Upon reaching your site's edge, traders will "kidnap" their own pets, this has no consequenses to your fort.
-* Changing graphics in the Lazy Newb Pack deletes the mod, you'll have to reinstall it afterwards.
-* The game treat succubi blood as magma hot. Wounded succubi are likely to cause wildfires.
-* This has been made for an alpha version of dfhack, expect bugs. Save a lot and make backups.
+* Do not reclaim sites with Embark Anywhere activated.
+* If a frog demon refuses to work or join the military, wait 3 days of game time and try again.
 
 ## Contact ##
 If you have trouble using this mod, please post a message on the mod thread in the Bay 12 forum :

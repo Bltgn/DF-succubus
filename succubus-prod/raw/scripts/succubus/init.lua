@@ -1,6 +1,8 @@
 -- Succubus Dungeon
 -- This file will run fixes and tweaks when you load your saves
 
+local debug = false
+
 -- Make sure that commands are only run if you play as a succubus
 local function isCiv(civ)
     local entity = df.historical_entity.find(df.global.ui.civ_id)
@@ -21,4 +23,8 @@ dfhack.onStateChange.loadConstructCreature = function(code)
             dfhack.gui.showAnnouncement("You can use the magma well to generate magma.", COLOR_WHITE)
         end
     end
+end
+
+if(debug) then
+    print("succubus/init: initialized")
 end
