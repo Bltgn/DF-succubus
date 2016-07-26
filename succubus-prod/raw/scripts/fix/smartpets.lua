@@ -12,7 +12,7 @@
 ]]
 
 local createUnit = dfhack.script_environment('modtools/create-unit')
-local debug = true
+local debug = false
 
 -- Create an historical figure out of an unit, related to the curent fort.
 function createHistFig(unit)
@@ -27,22 +27,35 @@ function scanForPetsWithNoNemesis()
 	for i = #unitList - 1, 0, -1 do
 		unit = unitList[i]
 
+		local raws = df.creature_raw.find(unit.race)
+		local caste = raws.caste[unit.caste]
+		local intelligent = caste.flags.CAN_LEARN or caste.flags.CAN_SPEAK
+
 		if(
-			unit.civ_id == df.global.ui.civ_id and
-			not dfhack.units.isDwarf(unit) and
-			dfhack.units.isAlive(unit) and
-			dfhack.units.isSane(unit) and
-			not dfhack.units.getNemesis(unit)
+			intelligent and -- Must have at least partial intelligence
+			not unit.flags1.merchant and -- Not a merchant
+			unit.civ_id == df.global.ui.civ_id and -- In current civ
+			not dfhack.units.isDwarf(unit) and -- Fort citizen
+			dfhack.units.isAlive(unit) and -- Alive, not zombie
+			dfhack.units.isSane(unit) and -- Not be CRAZED
+			not unit.flags2.underworld and -- Not a clown from the circus
+			not dfhack.units.getNemesis(unit) -- Have no nemesis
 		) then
 			createHistFig(unit)
 			cAffected = cAffected + 1
 		end	
 	end
 
-	if(debug and 0 < cAffected) then
-		print("smartpets: "..cAffected.." creatures fixed")
+	if(debug) then
+		print("smartpets: "..cAffected.." creature(s) fixed")
 	end
 end
 
-scanForPetsWithNoNemesis()
-dfhack.timeout(3, 'days', function() dfhack.run_script('fix/smartpets') end)
+if df.global.gamemode == df.game_mode.DWARF then
+	if(debug) then
+		print("smartpets: scanning for intelligent citizens without nemesis...")
+	end
+
+	scanForPetsWithNoNemesis()
+	dfhack.timeout(3, 'days', function() dfhack.run_script('fix/smartpets') end)
+end

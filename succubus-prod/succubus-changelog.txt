@@ -1,7 +1,18 @@
 # Succubus Dungeon : Changelog #
 15.0
++ New workshops
+- Fire shaper, produces weapons and clothing out of pure fire.
+- Glass shaper, make obsidian armor and weapons using magma and water.
+
 + Misc
 - Purchased or migrating frog demons will now be able to work or join the military withing 1-3 days of game time.
+- Frog demons can open doors.
+- Black roses can be brewed and will drop seeds.
+- Summoning frog demons and HFS is now possible.
+- Jobs with clouds of smoke (Summoning Portal, Den of Iniquity) no longer destroy buildings.
+- Summoning decay brutes has been made easier.
+- The floating glass furnace now accept sand and other glass component instead of raw glass.
+- You can now make crystal glass blocks and windows out of lead.
 
 14.3
 + New workshops

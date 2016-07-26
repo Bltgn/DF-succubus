@@ -57,7 +57,9 @@ AddPetToCiv -civ MOUNTAIN -race TESB_PET_ROCK -caste GRANITE
 
 succubus/hfspets -civ SUCCUBUS
 
+succubus/init
 succubus/waterwell
 succubus/power-learning
+succubus/teleportbase
 fix/smartpets
 # end succubus mod

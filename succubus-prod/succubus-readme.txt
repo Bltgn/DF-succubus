@@ -29,7 +29,7 @@ The following changes were done on the original DF files. Please keep them in mi
 * entity_default.txt: Added siege triggers to dwarves, made humans, elves and kobold attack faster, dwarves are no longer playable at embark.
 * creature_subterranean.txt: Added pet value to fire imps.
 
-## Magma ##
+# Magma #
 Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock.
 
 Buildings marked with a star '*' in its name must be powered by magma. You can easily provide magma to your dungeon by building a magma well. With this workshop, a pump operator can fill all nearby channels with enough magma to power buildings.
@@ -39,6 +39,33 @@ Unfortunatly the game does not allow your citizens to walk in magma. If a succub
 As an option, if your succubi are running out of drink and cannot find water, you can bring magma next to a still and turn it into a drink. You will need rock pots for this.
 
 Also, remember that magma is a liquid and someone can drown in it if they cannot swim.
+
+## Magma or water used in reactions ##
+Some jobs will claim to consume magma or water. This means that it will draw one level of the liquid from a tile located one z-level below the workshop.
+
+This will also work if the liquid is located next to the workshop one z-level below (ie after channeling a canal to it).
+
+For example, those two configurations are valid :
+
++ = floor
+W = workshop
+~ = water/magma
+. = open space
+
+  Z       Z-1
++++++    +++++ 
++WWW+    +~~~+
++WWW+    +~~~+ -> 3x3 workshop built over a 3x3 reservoir
++WWW+    +~~~+
++++++    +++++
+
+
+  Z         Z-1
++++++++   +++++++ 
++WWW+++   +++++++
++WWW...   ++++~~~ -> 3x3 workshop next to a channel filled with liquid
++WWW+++   +++++++
++++++++   +++++++
 
 # Getting slade and construction materials #
 Slade can be generated at no cost in an underworld drill to help you build your spires. However, its extreme weight implies that slade projects will take more time and builders to complete. A smart usage of stockpiles and wheelbarrows is strongly recommended.
