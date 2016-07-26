@@ -10,12 +10,8 @@ local function isCiv(civ)
 end
 
 -- When the save is loaded, check if we're playing the right civ then perform actions
-dfhack.onStateChange.loadConstructCreature = function(code)
-    if code == SC_MAP_LOADED then
-        if not isCiv('SUCCUBUS') then
-            return
-        end
-
+dfhack.onStateChange.loadSuccubusInit = function(code)
+    if code == SC_MAP_LOADED and  isCiv('SUCCUBUS') then
         -- Immediate unlocking of magma workshops + hint in the announcement log
         if df.global.gamemode == df.game_mode.DWARF then
             dfhack.run_script('succubus/feature', 'magmaWorkshops')
@@ -25,6 +21,6 @@ dfhack.onStateChange.loadConstructCreature = function(code)
     end
 end
 
-if(debug) then
+if debug then
     print("succubus/init: initialized")
 end

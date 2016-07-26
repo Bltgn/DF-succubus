@@ -977,6 +977,8 @@ reaction_succubus
 	// @todo weapon coating
 
 // Glass Shaper
+
+// Obsidian
 [REACTION:LUA_HOOK_USEWATERMAGMA_OBSIDIAN_BOULDER]
 	[NAME:Produce obsidian boulder]
 	[DESCRIPTION:Draws both water and magma nearby to create a boulder of obsidian.]
@@ -1001,7 +1003,7 @@ reaction_succubus
 
 [REACTION:LUA_HOOK_USEWATERMAGMA_OBSIDIAN_BLOCK]
 	[NAME:Produce obsidian blocks]
-	[DESCRIPTION:Draws both water and magma nearby to create 4 blocks of obsidian.]
+	[DESCRIPTION:Draws both water and magma nearby to create 3 blocks of obsidian.]
 	[DESCRIPTION: ]
 	[DESCRIPTION:There must be BOTH water and magma under the workshop.]
 	[DESCRIPTION: ]
@@ -1015,6 +1017,6 @@ reaction_succubus
 	[CATEGORY_DESCRIPTION:Both liquids must be available under the workshop.]
 	[CATEGORY_KEY:CUSTOM_O]
 	[BUILDING:GLASS_SHAPER:CUSTOM_SHIFT_B]
-	[PRODUCT:100:4:BLOCK:NONE:INORGANIC:OBSIDIAN]
+	[PRODUCT:100:3:BLOCK:NONE:INORGANIC:OBSIDIAN]
 		[PRODUCT_DIMENSION:150]
 	[SKILL:MINING]
