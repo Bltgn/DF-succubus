@@ -942,7 +942,7 @@ reaction_succubus
 
 // Glass Shaper
 // Obsidian
-[REACTION:LUA_HOOK_USEWATERMAGMA_OBSIDIAN_BOULDER]
+[REACTION:LUA_HOOK_USELIQUIDS_OBSIDIAN_BOULDER]
 	[NAME:Produce obsidian boulder]
 	[DESCRIPTION:Draws both water and magma nearby to create a boulder of obsidian.]
 	[DESCRIPTION: ]
@@ -965,7 +965,7 @@ reaction_succubus
 		[PRODUCT_DIMENSION:150]
 	[SKILL:MINING]
 
-[REACTION:LUA_HOOK_USEWATERMAGMA_OBSIDIAN_BLOCK]
+[REACTION:LUA_HOOK_USELIQUIDS_OBSIDIAN_BLOCK]
 	[NAME:Produce obsidian blocks]
 	[DESCRIPTION:Draws both water and magma nearby to create 3 blocks of obsidian.]
 	[DESCRIPTION: ]

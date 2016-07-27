@@ -43,7 +43,7 @@ end
 
 -- Perform the same search as takeLiquid but do not take it
 function hasLiquid(unit, type)
-	takeLiquid(unit, type, false)
+	return takeLiquid(unit, type, true)
 end
 
 -- Remove the results from the reaction so none is created.
@@ -95,7 +95,7 @@ end
 
 -- Use both water and magma
 function useboth(reaction, unit, input_reagents)
-	if hasLiquid(unit, 'water') and hasLiquid(unit, 'magma')
+	if hasLiquid(unit, 'water') and hasLiquid(unit, 'magma') then
 		takeLiquid(unit, 'water')
 		takeLiquid(unit, 'magma')
 		setReactionProducts(reaction, true)
@@ -113,7 +113,7 @@ eventful.onReactionCompleting.waterwell = function(reaction, reaction_product, u
 		call_native = usewater(reaction, unit, input_reagents)
 	elseif starts(reaction.code,'LUA_HOOK_USEMAGMA') then
 		call_native = usemagma(reaction, unit, input_reagents)
-	elseif starts(reaction.code,'LUA_HOOK_USEWATERMAGMA') then
+	elseif starts(reaction.code,'LUA_HOOK_USELIQUIDS') then
 		call_natice = useboth(reaction, unit, input_reagents)
 	end
 end
