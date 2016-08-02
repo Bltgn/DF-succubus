@@ -422,7 +422,7 @@ creature_sucucbus_summon
 		[CDI:WAIT_PERIOD:400]
 
 [CREATURE:TENTACLE_MONSTER] // Summon, war bodyguard, lays slime, can be milked for food or soap
-	[DESCRIPTION:A terrifying creature with many tentacles and a corrupt behaviour. Their slime is dangerous to the touch for mortal creatures, but can be gathered by a milker to serve as a substitute for oil. Their compuslive need to their owners of any contaminants earned them a terrible reputation.]
+	[DESCRIPTION:A terrifying creature with many tentacles and a corrupt behavior. Their slime is dangerous to the touch for mortal creatures, but can be gathered by a milker to serve as a substitute for oil. Their compulsive need to clean their owners of any contaminants earned them a terrible reputation.]
 	[NAME:tentacle monster:tentacle monsters:tentacle monster]
 	[CASTE_NAME:tentacle monster:tentacle monsters:tentacle monster]
 	[CHILD:3]

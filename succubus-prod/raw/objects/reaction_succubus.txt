@@ -260,7 +260,6 @@ reaction_succubus
 	[DESCRIPTION:Skill - Mining]
 	[BUILDING:DRILL_SLADE:CUSTOM_A]
 	[PRODUCT:100:2:BLOCKS:NONE:INORGANIC:SLADE]
-		[PRODUCT_DIMENSION:150]
 	[SKILL:MINING]
 
 [REACTION:SLADE_BOULDER]
@@ -1140,7 +1139,7 @@ reaction_succubus
 
 [REACTION:LUA_HOOK_USELIQUIDS_OBSIDIAN_ITEM_WEAPON_SWORD_2H]
 	[NAME:Make obsidian two-handed sword]
-		[DESCRIPTION:Draws both water and magma nearby to create an armor piece.]
+		[DESCRIPTION:Draws both water and magma nearby to create a weapon.]
 		[DESCRIPTION: ]
 		[DESCRIPTION:Uses glassmaking skill]
 	[CATEGORY:GLASS_SHAPER_OBSIDIAN]
