@@ -197,7 +197,7 @@ inorganic_succubus
 	[ITEMS_SCALED]
 	[STATE_COLOR:ALL_SOLID:DARK_GREEN]
 
-[INORGANIC:GLASS_TEMPERED] -- Metal grade but brittle, roughly bronze grade protection
+[INORGANIC:GLASS_TEMPERED] -- Do not bend brittle, roughly 90% bronze grade protection
 	[STATE_COLOR:ALL_SOLID:BLUE]
 	[STATE_NAME_ADJ:SOLID:tempered glass]
 	[STATE_COLOR:LIQUID:RED]
@@ -206,7 +206,7 @@ inorganic_succubus
 	[STATE_NAME_ADJ:GAS:boiling glass]
 	[STATE_NAME_ADJ:SOLID_POWDER:powdered glass]
 	[STATE_NAME_ADJ:SOLID_PASTE:glass paste]
-	[STATE_NAME_ADJ:SOLID_PRESSED:pressed glass]
+	[STATE_NAME_ADJ:SOLID_PRESSED:shattered glass]
 	[BASIC_COLOR:1:1]
 	[BUILD_COLOR:1:1:0]
 	[TILE_COLOR:7:7:1]
@@ -238,7 +238,7 @@ inorganic_succubus
 	[ITEMS_HARD]
 	[IS_GLASS]
 
-[INORGANIC:GLASS_LAYERED] -- Two sheet of glass glued toghether, like modern security glass, between bronze and steel grade
+[INORGANIC:GLASS_LAYERED] -- Two sheet of glass glued toghether like modern security glass, between bronze and steel grade but heavy
 	[STATE_COLOR:ALL_SOLID:BLUE]
 	[STATE_NAME_ADJ:SOLID:layered glass]
 	[STATE_COLOR:LIQUID:RED]
@@ -247,7 +247,7 @@ inorganic_succubus
 	[STATE_NAME_ADJ:GAS:boiling glass]
 	[STATE_NAME_ADJ:SOLID_POWDER:powdered glass]
 	[STATE_NAME_ADJ:SOLID_PASTE:glass paste]
-	[STATE_NAME_ADJ:SOLID_PRESSED:pressed glass]
+	[STATE_NAME_ADJ:SOLID_PRESSED:broken layered glass]
 	[BASIC_COLOR:1:1]
 	[BUILD_COLOR:1:1:0]
 	[TILE_COLOR:7:7:1]
@@ -255,7 +255,7 @@ inorganic_succubus
 	[SPEC_HEAT:600]
 	[MELTING_POINT:15600]
 	[BOILING_POINT:20000]
-	[SOLID_DENSITY:3200]
+	[SOLID_DENSITY:5200]
 	[LIQUID_DENSITY:2240]
 	[BENDING_YIELD:346000]
 	[BENDING_FRACTURE:396000]
