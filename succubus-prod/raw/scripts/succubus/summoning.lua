@@ -140,20 +140,23 @@ function summonCreature(unitId, unitSource, num)
 	end
 
 	for i = 1, num do
-		casteIndex = createUnit.getRandomCasteId(raceIndex)
-		newUnitIndex = createUnit.createUnitInFortCivAndGroup(raceIndex, casteIndex)
+		local casteIndex = createUnit.getRandomCasteId(raceIndex)
+		local newUnitIndex = createUnit.createUnitInCiv(raceIndex, casteIndex, df.global.ui.civ_id, df.global.ui.group_id)
 		createUnit.domesticate(newUnitIndex, df.global.ui.group_id)
 		
-		newUnit = df.unit.find(newUnitIndex)
+		local newUnit = df.unit.find(newUnitIndex)
 
-		-- Clear the arena mode name
-		newUnit.name.first_name = ''
+		newUnit.flags2.calculated_nerves = false
+		newUnit.flags2.calculated_bodyparts = false
+		newUnit.flags3.body_part_relsize_computed = false
+		newUnit.flags3.size_modifier_computed = false
+		newUnit.flags3.compute_health = true
+		newUnit.flags3.weight_computed = false
+
 		newUnit.name.has_name = false
-		newUnit.status.current_soul.name.has_name = false
-		if newUnit.hist_figure_id ~= -1 then
-		    local histfig = df.historical_figure.find(newUnit.hist_figure_id)
-		    histfig.name.has_name = false
-	  	end
+		if newUnit.status.current_soul then
+			newUnit.status.current_soul.name.has_name = false
+		end
 
 	  	-- Clear hostility
 	  	newUnit.civ_id = df.global.ui.civ_id
