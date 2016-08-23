@@ -612,7 +612,7 @@ creature_sucucbus_summon
 	[SKILL_LEARN_RATE:SHIELD:75]
 	[SKILL_LEARN_RATE:DISCIPLINE:200]
 
-	[PROFESSION_NAME:STANDARD:Good-to-nothing:Goods-to-nothing]
+	[PROFESSION_NAME:STANDARD:Good-for-nothing:Good-for-nothings]
 	[PROFESSION_NAME:CRAFTSMAN:Craftdemon:Craftdemons]
 	[PROFESSION_NAME:FISHERMAN:Fisherdemon:Fisherdemons]
 	[PROFESSION_NAME:FARMER:Farmworker:Farmworkers]
