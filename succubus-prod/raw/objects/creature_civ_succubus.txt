@@ -254,7 +254,7 @@ creature_civ_succubus
 	// Corrupted sentient clases (note that they usually carry their skills and personalities upon tranformsations)
 	[SELECT_CASTE:CAMBION_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:CAMBION_MALE]
-		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
+		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
 		[DESCRIPTION:A medium sized creature of great beauty who gave up nature for a life of revelry among the damned. Cambions love to stalk their prey in the shadows before striking its heart with an arrow. They are excellent ambushers and bowdemons.]
 		[CASTE_NAME:cambion:cambions:cambion]
@@ -292,7 +292,7 @@ creature_civ_succubus
 
 	[SELECT_CASTE:DEVIL_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:DEVIL_MALE]
-		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
+		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
 		[DESCRIPTION:A medium sized creature who sold their soul to fulfill their fierce ambitions. Many tales are whispered in the dark about the creatures who approach men of power and bind them with intricate contracts. Dealing with a devil is a dangerous task, and they always win their negotiations.]
 		[CASTE_NAME:devil:devils:devilish]
@@ -328,7 +328,7 @@ creature_civ_succubus
 
 	[SELECT_CASTE:FIEND_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:FIEND_MALE]
-		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2HEAD_HORN]
+		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2HEAD_HORN]
 		[POP_RATIO:1]
 		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the demonic kingdoms, shedding all thoughts of morality and decency for a life of greed, violence and infernal forges. Fiends are excellent miners, fighters and smiths.]
 		[CASTE_NAME:fiend:fiends:fiendish]
@@ -368,7 +368,7 @@ creature_civ_succubus
 
 	[SELECT_CASTE:HELLION_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:HELLION_MALE]
-		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
+		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
 		[DESCRIPTION:A medium-sized creature driven to corruption by their evil nature. A life of stealing, kidnapping and murdering brought them into the claws of greater evils who healed their disfigured features and taught them to channel their barbaric pulsions into new, refined acts of cruelty. Their evil culture gave them a strong affinity with whips.]
 		[CASTE_NAME:hellion:hellions:hellion]
@@ -409,7 +409,7 @@ creature_civ_succubus
 
 	[SELECT_CASTE:IMP_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:IMP_MALE]
-		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:3TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
+		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:3TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
 		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This tiny being has won the heart of a succubus who found it too cute to be released. Spending time with a lust demon made them stronger, and they now use their skills with daggers to protect her home.]
 		[CASTE_NAME:imp:imps:impish]
@@ -453,7 +453,7 @@ creature_civ_succubus
 
 	[SELECT_CASTE:ONI_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:ONI_MALE]
-		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:2HEAD_HORN]
+		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:2HEAD_HORN]
 		[POP_RATIO:1]
 		[DESCRIPTION:A powerful humanoid creature with violent tendencies who got intoxicated on foul wine. They since live for the thrill of battle and drinking, usually giving into both at the same time. They can learn to fight quickly unarmed or with a mace.]
 		[CASTE_NAME:oni:onis:oni]
@@ -496,7 +496,7 @@ creature_civ_succubus
 
 	[SELECT_CASTE:KORRIGAN_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:KORRIGAN_MALE]
-		[BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
+		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
 		[DESCRIPTION:A tiny, jolly humanoid creature that dwells near the lair of evil creatures. Versed in nature and technology, they make up for their diminutive size with advanced clockwork inventions. Although cautious and secretive when dealing with other races, their creativity, curiosity, and love for scientific experiment knows no ethical constraints.]
 		[CASTE_NAME:korrigan:korrigans:korrigans]
@@ -536,7 +536,7 @@ creature_civ_succubus
 		[PREFSTRING:tantalizing figure]
 		[PREFSTRING:eloquence]
 
-		[BODY:HUMANOID_NECK_HOOF:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
+		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK_HOOF:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
 		
 		[NATURAL_SKILL:CLIMBING:3]
 		[SKILL_LEARN_RATE:CLIMBING:130]
