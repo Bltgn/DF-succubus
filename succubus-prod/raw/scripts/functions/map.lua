@@ -1,19 +1,25 @@
+--map based functions, version 42.06a
+---------------------------------------------------------------------------------------
 function changeInorganic(x,y,z,inorganic,dur)
+ pos = {}
  if y == nil and z == nil then
-  pos = x
+  pos.x = x.x or x[1]
+  pos.y = x.y or x[2]
+  pos.z = x.z or x[3]
  else
-  pos = {x = x, y = y, z = z}
+  pos.x = x
+  pos.y = y
+  pos.z = z
  end
 
  local block=dfhack.maps.ensureTileBlock(pos)
  local current_inorganic = 'clear'
- for k = #block.block_events-1,0,-1 do
-   if df.block_square_event_mineralst:is_instance(block.block_events[k]) then
-    if current_inorganic == 'clear' then current_inorganic = block.block_events[k].inorganic_mat end
-    b.block_events:erase(k)
-   end
- end
  if inorganic == 'clear' then
+  for k = #block.block_events-1,0,-1 do
+   if df.block_square_event_mineralst:is_instance(block.block_events[k]) then
+    block.block_events:erase(k)
+   end
+  end
   return
  else
   if tonumber(inorganic) then
@@ -23,9 +29,9 @@ function changeInorganic(x,y,z,inorganic,dur)
   end
   ev=df.block_square_event_mineralst:new()
   ev.inorganic_mat=inorganic
-  ev.flags.vein=true
+  ev.flags.cluster_one=true
   block.block_events:insert("#",ev)
-  dfhack.maps.setTileAssignment(ev.tile_bitmask,math.fmod(pos.x,16),math.fmod(pos.y,16),true)
+  dfhack.maps.setTileAssignment(ev.tile_bitmask,pos.x%16,pos.y%16,true)
  end
 
  if dur > 0 then
@@ -34,20 +40,25 @@ function changeInorganic(x,y,z,inorganic,dur)
 end
 
 function changeTemperature(x,y,z,temperature,dur)
+ pos = {}
  if y == nil and z == nil then
-  pos = x
+  pos.x = x.x or x[1]
+  pos.y = x.y or x[2]
+  pos.z = x.z or x[3]
  else
-  pos = {x = x, y = y, z = z}
+  pos.x = x
+  pos.y = y
+  pos.z = z
  end
 
  local block = dfhack.maps.ensureTileBlock(pos)
- local current_temperature = block.temperature_2[x%16][y%16]
+ local current_temperature = block.temperature_2[pos.x%16][pos.y%16]
 
- block.temperature_1[x%16][y%16] = temperature
- if dur > 0 then
-  block.temperature_2[x%16][y%16] = temperature
+ block.temperature_1[pos.x%16][pos.y%16] = temperature
+-- if dur > 0 then
+  block.temperature_2[pos.x%16][pos.y%16] = temperature
   block.flags.update_temperature = false
- end
+-- end
 
  if dur > 0 then
   dfhack.script_environment('persistDelay').environmentDelay(dur,'functions/map','changeTemperature',{pos.x,pos.y,pos.z,current_temperature,0})
@@ -588,6 +599,64 @@ function spawnLiquid(edges,offset,depth,magma,circle,taper)
    end
   end
  end
+end
+
+function liquidSource(n)
+ local persistTable = require 'persist-table'
+ liquidTable = persistTable.GlobalTable.roses.LiquidTable
+ liquid = liquidTable[n]
+ 
+ if liquid then
+  x = tonumber(liquid.x)
+  y = tonumber(liquid.y)
+  z = tonumber(liquid.z)
+  depth = tonumber(liquid.Depth)
+  magma = liquid.Magma
+  block = dfhack.maps.ensureTileBlock(x,y,z)
+  dsgn = block.designation[x%16][y%16]
+  flow = block.liquid_flow[x%16][y%16]
+  flow.temp_flow_timer = 10
+  flow.unk_1 = 10
+  if dsgn.flow_size < depth then dsgn.flow_size = depth end
+  if magma then dsgn.liquid_type = true end
+  block.flags.update_liquid = true
+  block.flags.update_liquid_twice = true
+ 
+  dfhack.timeout(12,'ticks',
+                 function ()
+                  dfhack.script_environment('functions/map').liquidSource(n)
+                 end
+                )
+ end                
+end
+
+function liquidSink(n)
+ local persistTable = require 'persist-table'
+ liquidTable = persistTable.GlobalTable.roses.LiquidTable
+ liquid = liquidTable[n]
+ 
+ if liquid then
+  x = tonumber(liquid.x)
+  y = tonumber(liquid.y)
+  z = tonumber(liquid.z)
+  depth = tonumber(liquid.Depth)
+  magma = liquid.Magma
+  block = dfhack.maps.ensureTileBlock(x,y,z)
+  dsgn = block.designation[x%16][y%16]
+  flow = block.liquid_flow[x%16][y%16]
+  flow.temp_flow_timer = 10
+  flow.unk_1 = 10
+  if dsgn.flow_size > depth then dsgn.flow_size = depth end
+  if magma then dsgn.liquid_type = true end
+  block.flags.update_liquid = true
+  block.flags.update_liquid_twice = true
+ 
+  dfhack.timeout(12,'ticks',
+                 function ()
+                  dfhack.script_environment('functions/map').liquidSink(n)
+                 end
+                )
+ end            
 end
 
 function findLocation(search)
