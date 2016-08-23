@@ -134,7 +134,7 @@ end
 function checkClass(source,target,argument,relation)
  if type(argument) ~= 'table' then argument = {argument} end
  for i,x in ipairs(argument) do
-  selected = dfhack.script_environment('functions/unit').checkCreatureClass(target,x)
+  selected = dfhack.script_environment('functions/unit').checkClass(target,x)
   if relation == 'required' then   
    if selected then return true end
   elseif relation == 'immune' then
@@ -383,32 +383,43 @@ end
 function isSelected(source,unit,args)
  local selected = true
 
- if args.maxphysical and selected then
-  selected = checkAttribute(source,unit,args.maxphysical,'max')
+ if args.maxattribute and selected then
+  selected = checkAttribute(source,unit,args.maxattribute,'max')
  end
- if args.minphysical and selected then
-  selected = checkAttribute(source,unit,args.minphysical,'min')
+ if args.minattribute and selected then
+  selected = checkAttribute(source,unit,args.minattribute,'min')
  end
-
- if args.maxmental and selected then
-  selected = checkAttribute(source,unit,args.maxmental,'max')
+ if args.gtattribute and selected then
+  selected = checkAttribute(source,unit,args.gtattribute,'greater')
  end
- if args.minmental and selected then
-  selected = checkAttribute(source,unit,args.minmental,'min')
+ if args.ltattribute and selected then
+  selected = checkAttribute(source,unit,args.ltattribute,'less')
  end
-
+ 
  if args.maxskill and selected then
   selected = checkSkill(source,unit,args.maxskill,'max')
  end
  if args.minskill and selected then
   selected = checkSkill(source,unit,args.minskill,'min')
  end
-
+ if args.gtskill and selected then
+  selected = checkSkill(source,unit,args.gtskill,'greater')
+ end
+ if args.ltskill and selected then
+  selected = checkSkill(source,unit,args.ltskill,'less')
+ end
+ 
  if args.maxtrait and selected then
   selected = checkTrait(source,unit,args.maxtrait,'max')
  end
  if args.mintrait and selected then
   selected = checkTrait(source,unit,args.mintrait,'min')
+ end
+ if args.gttrait and selected then
+  selected = checkTrait(source,unit,args.maxtrait,'greater')
+ end
+ if args.lttrait and selected then
+  selected = checkTrait(source,unit,args.mintrait,'less')
  end
  
  if args.maxage and selected then
@@ -417,12 +428,24 @@ function isSelected(source,unit,args)
  if args.minage and selected then
   selected = checkAge(source,unit,args.minage,'min')
  end
-
+ if args.gtage and selected then
+  selected = checkAge(source,unit,args.gtage,'greater')
+ end
+ if args.ltage and selected then
+  selected = checkAge(source,unit,args.ltage,'less')
+ end
+ 
  if args.maxspeed and selected then
   selected = checkSpeed(source,unit,args.maxspeed,'max')
  end
  if args.minspeed and selected then
   selected = checkSpeed(source,unit,args.minspeed,'min')
+ end
+ if args.gtspeed and selected then
+  selected = checkSpeed(source,unit,args.gtspeed,'greater')
+ end
+ if args.ltspeed and selected then
+  selected = checkSpeed(source,unit,args.ltspeed,'less')
  end
  
  if args.rclass and selected then

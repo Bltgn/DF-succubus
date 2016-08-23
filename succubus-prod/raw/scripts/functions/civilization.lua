@@ -108,7 +108,7 @@ function checkEntity(id,method,verbose)
   entityTable = persistTable.GlobalTable.roses.EntityTable[id]
   method = civilizationTable.CurrentMethod
   chance = tonumber(civilizationTable.CurrentPercent)
-  if method == 'KILLs' then
+  if method == 'KILLS' then
    number = tonumber(entityTable.Kills.Total)
   elseif method == 'DEATHS' then
    number = tonumber(entityTable.Deaths.Total)
