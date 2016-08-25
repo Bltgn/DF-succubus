@@ -24,9 +24,10 @@
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 
 -- Dependancies
-local fov = dfhack.script_environment('modtools/fov')
-local mo = require 'makeown'
 local utils = require 'utils'
+local mo = require 'makeown'
+local fov = dfhack.script_environment('modtools/fov')
+local teleport = dfhack.script_environment('teleport')
 
 -- The range of the check FOV
 local range = 10
@@ -34,11 +35,11 @@ local range = 10
 -- Will print debug messages if set to true
 local debug = true
 
--- Announcement
+-- Announcement to help understand what happen to merchants
 local announceMerchant = false
 
 -- Misc
-local unitSource, targetRace, creatureSet
+local unitSource, targetRace, creatureSet, popId
 
 --
 -- Functions
@@ -105,6 +106,9 @@ end
 -- Erase the enemy links
 function clearEnemy(unit)
 	hf = utils.binsearch(df.global.world.history.figures, unit.hist_figure_id, 'id')
+
+	if not hf then return end
+
 	for k, v in ipairs(hf.entity_links) do
 		if df.histfig_entity_link_enemyst:is_instance(v) and
 			(v.entity_id == df.global.ui.civ_id or v.entity_id == df.global.ui.group_id)
@@ -146,8 +150,6 @@ function clearMerchant(unit)
 	unit.relations.rider_mount_id = -1
 	unit.relations.mount_type = 0
 	unit.flags1.rider = 0
-
-	
 end
 
 -- Take the creature out of its cage
@@ -155,8 +157,7 @@ function clearCage(unit)
 	local cage = dfhack.units.getContainer(unit)
 	
 	if -1 ~= cage then
-		position = xyz2pos(dfhack.units.getPosition(unit))
-		unit.pos:assign(position)
+		teleport.teleport(unit, xyz2pos(dfhack.units.getPosition(unit)))
 		unit.flags1.caged = false
 	end
 
@@ -164,6 +165,9 @@ end
 
 -- Takes down any hostility flags that mo didn't handle
 function clearHostile(unit)
+	unit.population_id = popId
+	unit.cultural_identity = -1
+	
 	unit.flags1.marauder = false
 	unit.flags1.active_invader = false
 	unit.flags1.hidden_in_ambush = false
@@ -173,48 +177,62 @@ function clearHostile(unit)
 	unit.flags1.invader_origin = false
 	unit.flags2.underworld = false
 	unit.flags2.visitor_uninvited = false
+	unit.flags2.visitor = false
 	unit.invasion_id = -1
 	unit.relations.group_leader_id = -1
 	unit.relations.last_attacker_id = -1
+
+	unit.flags2.calculated_nerves = false
+	unit.flags2.calculated_bodyparts = false
+	unit.flags3.body_part_relsize_computed = false
+	unit.flags3.size_modifier_computed = false
+	unit.flags3.compute_health = true
+	unit.flags3.weight_computed = false
+
+    unit.counters.soldier_mood_countdown = -1
+    unit.counters.death_cause = -1
+
+    unit.enemy.anon_4 = -1
+    unit.enemy.anon_5 = -1
+    unit.enemy.anon_6 = -1
 end
 
 -- Change the creature race, take down hostility and  merchant flags, free cages and trading
 function corrupt(unit)
 	local origRace = tostring(df.global.world.raws.creatures.all[unit.race].creature_id)
-	local suffix, targetCaste, position
+	local suffix
 
+	mo.make_own(unit)
+	mo.make_citizen(unit)
+
+	-- After taking the enemy to your side, transform it
+	if debug then print('origRace: '..origRace..', targetRace: '..targetRace) end
+
+	if targetRace ~= origRace then 
+		local targetCaste = creatureSet[origRace]
+		if nil ~= targetCaste then
+			if unit.sex == 1 then
+				suffix = "_MALE"
+			else
+				suffix = "_FEMALE"
+			end
+
+			targetCaste = targetCaste..suffix
+			if debug then print('selected caste: '..targetCaste) end
+
+			dfhack.run_script('modtools/transform-unit', '-unit', unit.id, '-race', targetRace, '-caste', targetCaste, '-keepInventory', 1)
+		end
+	end
 	-- Setting announcements
 	if unit.flags1.merchant == true then 
 		announceMerchant = true 
 	end
 
-	mo.make_own(unit)
-	mo.make_citizen(unit)
-
 	-- Removes all the previous behaviour
 	clearHostile(unit)
 	clearMerchant(unit)
-	clearCage(unit)
 	clearEnemy(unit)
-
-	-- After taking the enemy to your side, transform it
-	if debug then print('origRace: '..origRace..', targetRace: '..targetRace) end
-
-	if targetRace == origRace then return end
-
-	targetCaste = creatureSet[origRace]
-	if nil ~= targetCaste then
-		if unit.sex == 1 then
-			suffix = "_MALE"
-		else
-			suffix = "_FEMALE"
-		end
-
-		targetCaste = targetCaste..suffix
-		if debug then print('selected caste: '..targetCaste) end
-
-		dfhack.run_script('modtools/transform-unit', '-unit', unit.id, '-race', targetRace, '-caste', targetCaste, '-keepInventory', 1)
-	end
+	clearCage(unit)
 end
 
 --
@@ -287,4 +305,5 @@ end
 
 -- Starts the corruption process
 targetRace = df.global.world.raws.creatures.all[df.global.ui.race_id].creature_id
+popId = unitSource.population_id
 findLos(unitSource)
