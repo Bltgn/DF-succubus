@@ -13,6 +13,8 @@
 - Summoning decay brutes has been made easier.
 - The floating glass furnace now accept sand and other glass component instead of raw glass.
 - You can now make crystal glass blocks and windows out of lead.
+- Spirits of fire cannot fly anymore.
+- Fixed a few summoning crash sources.
 
 14.3
 + New workshops
