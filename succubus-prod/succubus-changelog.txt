@@ -15,6 +15,7 @@
 - You can now make crystal glass blocks and windows out of lead.
 - Spirits of fire cannot fly anymore.
 - Fixed a few summoning crash sources.
+- The den of iniquity can now use soap bars that have been used for bathing.
 
 14.3
 + New workshops
