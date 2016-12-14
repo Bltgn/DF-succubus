@@ -183,7 +183,7 @@ creature_civ_succubus
 	// Common for all castes, specific pure succubi tags are defined at the end
 	[CASTE:FEMALE]
 		[CREATURE_CLASS:SUCCUBUS_FEMALE]
-		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to spread new forms of pleasure into the world, serving her infernal master's will. The succubi are associated with lust, depravity and fire. They are agile and their artistic skills are unmatched.]
+		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to spread new forms of pleasure into the world, serving her infernal master's will. The succubi are associated with lust, depravity and fire.]
 		[FEMALE]
 		[POP_RATIO:90000] // 90%
 		[LITTERSIZE:1:2] // Higher chances to have twins, to help with early worldgen
@@ -195,9 +195,30 @@ creature_civ_succubus
 		[ORIENTATION:MALE:0:20:80] // It's important to have breeding couples for world gen, considering the ratio
 		[ORIENTATION:FEMALE:0:50:50]
 
+		// Milk (just for fun, it's useless)
+		[USE_MATERIAL_TEMPLATE:MILK:MILK_TEMPLATE]
+			[STATE_NAME:ALL_SOLID:frozen succubus milk]
+			[STATE_ADJ:ALL_SOLID:frozen succubus milk]
+			[STATE_NAME:LIQUID:succubus milk]
+			[STATE_ADJ:LIQUID:succubus milk]
+			[STATE_NAME:GAS:boiling succubus milk]
+			[STATE_ADJ:GAS:boiling succubus milk]
+			[PREFIX:delicious]
+		[MILKABLE:LOCAL_CREATURE_MAT:MILK:20000]
+		[USE_MATERIAL_TEMPLATE:CHEESE:CREATURE_CHEESE_TEMPLATE]
+			[STATE_NAME:SOLID:succubus cheese]
+			[STATE_ADJ:SOLID:succubus cheese]
+			[STATE_NAME:SOLID_POWDER:succubus cheese powder]
+			[STATE_ADJ:SOLID_POWDER:succubus cheese powder]
+			[STATE_NAME:LIQUID:melted succubus cheese]
+			[STATE_ADJ:LIQUID:melted succubus cheese]
+			[STATE_NAME:GAS:boiling succubus cheese]
+			[STATE_ADJ:GAS:boiling succubus cheese]
+			[PREFIX:NONE]
+
 	[CASTE:MALE]
 		[CREATURE_CLASS:SUCCUBUS_MALE]
-		[DESCRIPTION:A male hedonistic demon with caprinae legs twisted into humanoid form. He moves with elegance. Beware of his gentle manners. In a time before time, his kind escaped from the underworld to spread new forms of pleasure into the world, serving his infernal master's will. The incubi are associated with lust, depravity and fire. They are agile and their artistic skills are unmatched.]
+		[DESCRIPTION:A male hedonistic demon with caprinae legs twisted into humanoid form. He moves with elegance. Beware of his gentle manners. In a time before time, his kind escaped from the underworld to spread new forms of pleasure into the world, serving his infernal master's will. The incubi are associated with lust, depravity and fire.]
 		[MALE]
 		[BODY_DETAIL_PLAN:FACIAL_HAIR_TISSUE_LAYERS]
 		[POP_RATIO:10000] // 10%
@@ -251,12 +272,15 @@ creature_civ_succubus
 	[USE_CASTE:KORRIGAN_FEMALE:FEMALE] // gnome
 	[USE_CASTE:KORRIGAN_MALE:MALE]
 
-	// Corrupted sentient clases (note that they usually carry their skills and personalities upon tranformsations)
+	// Corrupted sentient clases (they carry their skills and personalities upon tranformations)
+	// They all have the same size game wise because there is more small races than big ones, and that'll make succubi equipment dwarf sized.
+
+	// elf
 	[SELECT_CASTE:CAMBION_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:CAMBION_MALE]
 		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium sized creature of great beauty who gave up nature for a life of revelry among the damned. Cambions love to stalk their prey in the shadows before striking its heart with an arrow. They are excellent ambushers and bowdemons.]
+		[DESCRIPTION:A medium sized creature of great beauty who gave up nature for a life of revelry among the damned. They are excellent ambushers and bowdemons.]
 		[CASTE_NAME:cambion:cambions:cambion]
 		[BABYNAME:cambion baby:cambion babies]
 		[CHILDNAME:cambion girl:cambion girls]
@@ -290,11 +314,12 @@ creature_civ_succubus
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
 			[BP_ADD_TYPE:GELDABLE]
 
+	// human
 	[SELECT_CASTE:DEVIL_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:DEVIL_MALE]
 		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium sized creature who sold their soul to fulfill their fierce ambitions. Many tales are whispered in the dark about the creatures who approach men of power and bind them with intricate contracts. Dealing with a devil is a dangerous task, and they always win their negotiations.]
+		[DESCRIPTION:A medium sized creature who sold their soul to fulfill their great ambitions. Dealing with a devil is a dangerous task, and they always win their negotiations.]
 		[CASTE_NAME:devil:devils:devilish]
 		[BABYNAME:devil baby:devil babies]
 		[CHILDNAME:devil girl:devil girls]
@@ -326,11 +351,12 @@ creature_civ_succubus
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
 			[BP_ADD_TYPE:GELDABLE]
 
+	// dwarf
 	[SELECT_CASTE:FIEND_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:FIEND_MALE]
 		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the demonic kingdoms, shedding all thoughts of morality and decency for a life of greed, violence and infernal forges. Fiends are excellent miners, fighters and smiths.]
+		[DESCRIPTION:A short, sturdy creature fond of drink and slaughter. This once prude dwarf joined the demonic kingdoms for a life of greed, violence and infernal forges. Fiends are excellent miners, fighters and smiths.]
 		[CASTE_NAME:fiend:fiends:fiendish]
 		[BABYNAME:fiend baby:fiend babies]
 		[CHILDNAME:fiend girl:fiend girls]
@@ -366,11 +392,12 @@ creature_civ_succubus
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
 			[BP_ADD_TYPE:GELDABLE]
 
+	// goblin
 	[SELECT_CASTE:HELLION_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:HELLION_MALE]
 		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A medium-sized creature driven to corruption by their evil nature. A life of stealing, kidnapping and murdering brought them into the claws of greater evils who healed their disfigured features and taught them to channel their barbaric pulsions into new, refined acts of cruelty. Their evil culture gave them a strong affinity with whips.]
+		[DESCRIPTION:A medium-sized creature driven to corruption by their evil nature. Their evil culture gave them a strong affinity with whips.]
 		[CASTE_NAME:hellion:hellions:hellion]
 		[BABYNAME:hellion baby:hellion babies]
 		[CHILDNAME:hellion girl:hellion girls]
@@ -407,11 +434,12 @@ creature_civ_succubus
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
 			[BP_ADD_TYPE:GELDABLE]
 
+	// kobold
 	[SELECT_CASTE:IMP_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:IMP_MALE]
 		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:3TOES:MOUTH:TONGUE:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This tiny being has won the heart of a succubus who found it too cute to be released. Spending time with a lust demon made them stronger, and they now use their skills with daggers to protect her home.]
+		[DESCRIPTION:A small, squat humanoid with long drooping ears, glowing eyes and impressive horns. This tiny being has won the heart of a succubus who found it too cute to be released. They can fight well with their daggers.]
 		[CASTE_NAME:imp:imps:impish]
 		[BABYNAME:imp pup:imp pups]
 		[CHILDNAME:imp girl:imp girls]
@@ -451,11 +479,12 @@ creature_civ_succubus
 			[EGG_SIZE:1100]
 			[CLUTCH_SIZE:1:2]
 
+	// orc
 	[SELECT_CASTE:ONI_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:ONI_MALE]
 		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A powerful humanoid creature with violent tendencies who got intoxicated on foul wine. They since live for the thrill of battle and drinking, usually giving into both at the same time. They can learn to fight quickly unarmed or with a mace.]
+		[DESCRIPTION:A powerful humanoid creature with violent tendencies who got intoxicated on foul wine. They can learn to fight quickly unarmed or with a mace.]
 		[CASTE_NAME:oni:onis:oni]
 		[BABYNAME:oni baby:oni babies]
 		[CHILDNAME:oni girl:oni girls]
@@ -494,11 +523,12 @@ creature_civ_succubus
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY]
 			[BP_ADD_TYPE:GELDABLE]
 
+	// gnome
 	[SELECT_CASTE:KORRIGAN_FEMALE]
 	[SELECT_ADDITIONAL_CASTE:KORRIGAN_MALE]
 		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:5TOES:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TAIL:2WINGS:2HEAD_HORN]
 		[POP_RATIO:1]
-		[DESCRIPTION:A tiny, jolly humanoid creature that dwells near the lair of evil creatures. Versed in nature and technology, they make up for their diminutive size with advanced clockwork inventions. Although cautious and secretive when dealing with other races, their creativity, curiosity, and love for scientific experiment knows no ethical constraints.]
+		[DESCRIPTION:A tiny, jolly humanoid creature that dwells near the lair of evil creatures. They are well versed in nature and technology.]
 		[CASTE_NAME:korrigan:korrigans:korrigans]
 		[BABYNAME:korrigan baby:korrigan babies]
 		[CHILDNAME:korrigan child:korrigan children]
@@ -536,7 +566,9 @@ creature_civ_succubus
 		[PREFSTRING:tantalizing figure]
 		[PREFSTRING:eloquence]
 
-		[CREATURE_CLASS:ALL_CREATURES] [BODY:HUMANOID_NECK_HOOF:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
+		[CREATURE_CLASS:ALL_CREATURES] 
+
+		[BODY:HUMANOID_NECK_HOOF:TAIL:2HEAD_HORN:2WINGS:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:HUMANOID_JOINTS:THROAT:NECK:SPINE:BRAIN:SKULL:5FINGERS:MOUTH:FACIAL_FEATURES:TEETH:RIBCAGE:TONGUE]
 		
 		[NATURAL_SKILL:CLIMBING:3]
 		[SKILL_LEARN_RATE:CLIMBING:130]
@@ -556,7 +588,6 @@ creature_civ_succubus
 		[PERSONALITY:VANITY:60:75:100]
 		[PERSONALITY:ART_INCLINED:60:75:100]
 		[PERSONALITY:IMMODESTY:60:75:100]
-
 		
 	[SELECT_CASTE:MALE]
 		[PREFSTRING:manly chest]
@@ -725,6 +756,13 @@ creature_civ_succubus
 		[IGNITE_POINT:NONE]
 		[IF_EXISTS_SET_MELTING_POINT:25000]
 		[IF_EXISTS_SET_BOILING_POINT:30000]
+	// Attempt at preventing fluid from burning everything, does not work...
+	[SELECT_MATERIAL:SWEAT]
+		PLUS_MATERIAL:BLOOD]
+		[PLUS_MATERIAL:TEARS]
+		[PLUS_MATERIAL:SPIT]
+		[PLUS_MATERIAL:PUS]
+			[MELTING_POINT:10000]
 
 	// Hair
 	[SET_TL_GROUP:BY_CATEGORY:HEAD:HAIR]
@@ -777,27 +815,6 @@ creature_civ_succubus
 		[TL_COLOR_MODIFIER:GREEN:1:GOLDEN_YELLOW:1:YELLOW:1:AMBER:1:GREEN:1:EMERALD:1:TEAL:1:PURPLE:1]
 		[TLCM_NOUN:eyes:PLURAL]
 
-	// Milk (just for fun, it's useless)
-	[SELECT_CASTE:FEMALE]
-		[USE_MATERIAL_TEMPLATE:MILK:MILK_TEMPLATE]
-			[STATE_NAME:ALL_SOLID:frozen succubus milk]
-			[STATE_ADJ:ALL_SOLID:frozen succubus milk]
-			[STATE_NAME:LIQUID:succubus milk]
-			[STATE_ADJ:LIQUID:succubus milk]
-			[STATE_NAME:GAS:boiling succubus milk]
-			[STATE_ADJ:GAS:boiling succubus milk]
-			[PREFIX:delicious]
-		[MILKABLE:LOCAL_CREATURE_MAT:MILK:20000]
-		[USE_MATERIAL_TEMPLATE:CHEESE:CREATURE_CHEESE_TEMPLATE]
-			[STATE_NAME:SOLID:succubus cheese]
-			[STATE_ADJ:SOLID:succubus cheese]
-			[STATE_NAME:SOLID_POWDER:succubus cheese powder]
-			[STATE_ADJ:SOLID_POWDER:succubus cheese powder]
-			[STATE_NAME:LIQUID:melted succubus cheese]
-			[STATE_ADJ:LIQUID:melted succubus cheese]
-			[STATE_NAME:GAS:boiling succubus cheese]
-			[STATE_ADJ:GAS:boiling succubus cheese]
-			[PREFIX:NONE]
 
 	// Attacks
 	[SELECT_CASTE:ALL]
