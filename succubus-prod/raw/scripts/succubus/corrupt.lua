@@ -35,8 +35,9 @@ local range = 10
 -- Will print debug messages if set to true
 local debug = true
 
--- Announcement to help understand what happen to merchants
+-- Announcement to help understand what is happenning
 local announceMerchant = false
+local announceFailure = true
 
 -- Misc
 local unitSource, targetRace, creatureSet, popId
@@ -45,14 +46,26 @@ local unitSource, targetRace, creatureSet, popId
 -- Functions
 --
 
--- Announcement a hint if you corrupted a merchant
+-- Announcement of a hint if you corrupted a merchant
 local function marchantAnnouncement()
 	if not announceMerchant then return end
 	dfhack.timeout(
 		3,
 		'ticks',
 		function() 
-			dfhack.gui.showAnnouncement("Deconstruct the trade depot to seize the merchants goods.", COLOR_WHITE) 
+			dfhack.gui.showAnnouncement("You corrupted merchants. Deconstruct the trade depot to seize the goods.", COLOR_WHITE) 
+		end
+	)
+end
+
+-- Announcement of a hint if you ran the den without targets
+local function failureAnnouncement()
+	if not announceFailure then return end
+	dfhack.timeout(
+		3,
+		'ticks',
+		function() 
+			dfhack.gui.showAnnouncement("There were no valid target for corruption.", COLOR_WHITE) 
 		end
 	)
 end
@@ -96,11 +109,13 @@ local function findLos(unitSource)
 		unitTarget = unitList[i]
 		if isSelected(unitTarget, view) then
 			corrupt(unitTarget)
+			announceFailure = false
 		end
 	end
 
 	-- Post process
 	marchantAnnouncement()
+	failureAnnouncement()
 end
 
 -- Erase the enemy links
@@ -126,6 +141,14 @@ function clearEnemy(unit)
 	if not (unit.enemy.enemy_status_slot == -1) then
 		i = unit.enemy.enemy_status_slot
 		unit.enemy.enemy_status_slot = -1
+        
+        --[[cache = df.world.enemy_status_cache
+        cache.slot_used[i] = false
+		cache.rel_map[i].map! { -1 }
+        cache.rel_map[i].map! { -1 }
+        cache.rel_map.each { |a| a[i] = -1 }
+        cache.next_slot = i if cache.next_slot > i]]
+
 		if debug then print('enemy cache removed') end
 	end
 end
@@ -158,9 +181,9 @@ function clearCage(unit)
 	
 	if -1 ~= cage then
 		teleport.teleport(unit, xyz2pos(dfhack.units.getPosition(unit)))
-		unit.flags1.caged = false
 	end
 
+	unit.flags1.caged = false
 end
 
 -- Takes down any hostility flags that mo didn't handle
@@ -175,16 +198,20 @@ function clearHostile(unit)
 	unit.flags1.invades = false
 	unit.flags1.coward = false
 	unit.flags1.invader_origin = false
+	
 	unit.flags2.underworld = false
 	unit.flags2.visitor_uninvited = false
 	unit.flags2.visitor = false
+	unit.flags2.resident = false
+	unit.flags2.calculated_nerves = false
+	unit.flags2.calculated_bodyparts = false
+
 	unit.invasion_id = -1
 	unit.relations.group_leader_id = -1
 	unit.relations.last_attacker_id = -1
 
-	unit.flags2.calculated_nerves = false
-	unit.flags2.calculated_bodyparts = false
 	unit.flags3.body_part_relsize_computed = false
+	unit.flags3.body_temp_in_range = true
 	unit.flags3.size_modifier_computed = false
 	unit.flags3.compute_health = true
 	unit.flags3.weight_computed = false
@@ -192,18 +219,29 @@ function clearHostile(unit)
     unit.counters.soldier_mood_countdown = -1
     unit.counters.death_cause = -1
 
+    unit.animal.population.region_x = -1
+    unit.animal.population.region_y = -1
+    unit.animal.population.unk_28 = -1
+    unit.animal.population.population_idx = -1
+    unit.animal.population.depth = -1
+
+    unit.counters.soldier_mood_countdown = -1
+    unit.counters.death_cause = -1
+
+    -- weird, unknown territory
     unit.enemy.anon_4 = -1
     unit.enemy.anon_5 = -1
     unit.enemy.anon_6 = -1
+	unit.enemy.anon_7 = 0
+    unit.status2.unk_7c0 = -1
+    unit.enemy.unk_v40_2_count = 11
+    --unit.unk_100 = 3
 end
 
 -- Change the creature race, take down hostility and  merchant flags, free cages and trading
 function corrupt(unit)
 	local origRace = tostring(df.global.world.raws.creatures.all[unit.race].creature_id)
 	local suffix
-
-	mo.make_own(unit)
-	mo.make_citizen(unit)
 
 	-- After taking the enemy to your side, transform it
 	if debug then print('origRace: '..origRace..', targetRace: '..targetRace) end
@@ -223,15 +261,19 @@ function corrupt(unit)
 			dfhack.run_script('modtools/transform-unit', '-unit', unit.id, '-race', targetRace, '-caste', targetCaste, '-keepInventory', 1)
 		end
 	end
+	
+	mo.make_own(unit)
+	mo.make_citizen(unit)
+
 	-- Setting announcements
 	if unit.flags1.merchant == true then 
 		announceMerchant = true 
 	end
 
 	-- Removes all the previous behaviour
+	clearEnemy(unit)
 	clearHostile(unit)
 	clearMerchant(unit)
-	clearEnemy(unit)
 	clearCage(unit)
 end
 
@@ -306,4 +348,4 @@ end
 -- Starts the corruption process
 targetRace = df.global.world.raws.creatures.all[df.global.ui.race_id].creature_id
 popId = unitSource.population_id
-findLos(unitSource)
+findLos(unitSource) 
