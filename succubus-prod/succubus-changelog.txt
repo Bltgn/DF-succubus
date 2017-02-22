@@ -253,6 +253,7 @@
 - Added the Altar of Nightmares back to the deep succubi.
 - Bloodworm spawns are now named properly.
 - Removed most reagents from prisoner conversions.
+- Fixed verious errors on the masterwork patch.
 
 6.0
 + New temples

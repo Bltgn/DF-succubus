@@ -1,62 +1,3 @@
-#carpets - overkill decoration with 20 options
-modtools/reaction-trigger -reactionName CARPET_RED_LEFT_HORIZONTAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_LEFT_HORIZONTAL ]
-modtools/reaction-trigger -reactionName CARPET_RED_CENTER_HORIZONTAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CENTER_HORIZONTAL ]
-modtools/reaction-trigger -reactionName CARPET_RED_RIGHT_HORIZONTAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_RIGHT_HORIZONTAL ]
-modtools/reaction-trigger -reactionName CARPET_RED_CENTER_VERTICAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CENTER_VERTICAL ]
-modtools/reaction-trigger -reactionName CARPET_RED_BOTTOM_VERTICAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_BOTTOM_VERTICAL ]
-modtools/reaction-trigger -reactionName CARPET_RED_CENTER_CENTER -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CENTER_CENTER ]
-modtools/reaction-trigger -reactionName CARPET_RED_CORNER_RIGHT_BOTTOM -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CORNER_RIGHT_BOTTOM ]
-modtools/reaction-trigger -reactionName CARPET_RED_CORNER_LEFT_BOTTOM -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CORNER_LEFT_BOTTOM ]
-modtools/reaction-trigger -reactionName CARPET_RED_CORNER_RIGHT_TOP -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CORNER_RIGHT_TOP ]
-modtools/reaction-trigger -reactionName CARPET_RED_CORNER_LEFT_TOP -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_CORNER_LEFT_TOP ]
-modtools/reaction-trigger -reactionName CARPET_RED_T_NES -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_T_NES ]
-modtools/reaction-trigger -reactionName CARPET_RED_T_ESW -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_T_ESW ]
-modtools/reaction-trigger -reactionName CARPET_RED_T_NSW -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_T_NSW ]
-modtools/reaction-trigger -reactionName CARPET_RED_T_WNE -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_T_WNE ]
-modtools/reaction-trigger -reactionName CARPET_RED_FABRIC -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_FABRIC ]
-modtools/reaction-trigger -reactionName CARPET_RED_TOP_OPEN -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_TOP_OPEN ]
-modtools/reaction-trigger -reactionName CARPET_RED_BOTTOM_OPEN -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_BOTTOM_OPEN ]
-modtools/reaction-trigger -reactionName CARPET_RED_LEFT_OPEN -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_LEFT_OPEN ]
-modtools/reaction-trigger -reactionName CARPET_RED_RIGHT_OPEN -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_RIGHT_OPEN ]
-modtools/reaction-trigger -reactionName CARPET_RED_TOP_VERTICAL -command [ building/subtype-change -building \\BUILDING_ID -type CARPET_RED_TOP_VERTICAL ]
-
-# Magma well
-modtools/reaction-trigger -reactionName MAGMAWELL_N_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 1 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 2 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 3 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 4 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 5 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 6 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 7 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_1 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 1 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_2 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 2 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_3 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 3 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_4 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 4 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_5 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 5 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_6 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 6 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_7 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 7 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 1 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 2 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 3 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 4 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 5 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 6 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 7 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_1 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 1 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_2 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 2 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_3 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 3 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_4 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 4 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_5 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 5 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_6 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 6 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_7 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 7 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -remove ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -remove ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -remove ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_STOP -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -remove ]
-
-modtools/reaction-trigger -reactionName STOP_SPAWN -command [ flow/source -removeAllSource ]
-#modtools/reaction-trigger -reactionName STOP_SINK -command [ flow/source -removeAllSink ]
-
 # Succubus mod
 modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "dizziness"
 modtools/reaction-trigger -reactionName CORRUPT_PRISONERS_SUCCUBUS -command [ succubus/corrupt -unit \\WORKER_ID -set succubus ]
@@ -108,6 +49,8 @@ AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
 
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
+
+AddPetToCiv -civ MOUNTAIN -race TESB_PET_ROCK -caste GRANITE
 
 succubus/hfspets -civ SUCCUBUS
 
