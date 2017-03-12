@@ -19,6 +19,7 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 * Generate a new world and select a succubus civ to play.
 
 ## IMPORTANT: Selecting your race at the embark screen ##
+* By default, only the succubi are playable, but if you add other mods, you may have several choices.
 * Press tab before embarking until seeing a list of civilization names.
 * Press + and - to chose a civ that uses the cabinet tile (π) to display its colonies on the map.
 * Pressing tab again until seeing the list of neighbors will confirm your choice, your selected race is the first one.
@@ -27,18 +28,28 @@ Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a 
 The following changes were done on the original DF files. Please keep them in mind if you combine this mod with others.
 
 * entity_default.txt: Added siege triggers to dwarves, made humans, elves and kobold attack faster, dwarves are no longer playable at embark.
-* creature_subterranean.txt: Added pet value to fire imps.
+* creature_subterranean.txt: Added a value to fire imps.
 
 # Magma #
 Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock.
 
-Buildings marked with a star '*' in its name must be powered by magma. You can easily provide magma to your dungeon by building a magma well. With this workshop, a pump operator can fill all nearby channels with enough magma to power buildings.
+Buildings marked with a star '*' in its name must be powered by magma. You can easily provide magma to your dungeon by building a magma well. With this workshop, a pump operator create a magma "aquifer".
 
-Unfortunatly the game does not allow your citizens to walk in magma. If a succubus is stuck because a puddle is in her way, you can wait for it to evaporate or dig around. Succubi inside magma will still evacuate without burning clothing or weapons but hauled items will be likely destroyed.
+To do so, channel a canal in one direction from the well and run the appropriate reaction. The same magma well can also stop all those flows anytime you wish.
 
-As an option, if your succubi are running out of drink and cannot find water, you can bring magma next to a still and turn it into a drink. You will need rock pots for this.
+Here's an example :
 
-Also, remember that magma is a liquid and someone can drown in it if they cannot swim.
+  Z       Z-1
++++++    +++++ 
++WWW+    +++++
++WWW.    ++++~ -> After channeling the east side, the well created a flow in this direction.
++WWW+    +++++
++++++    +++++
+
+
+Unfortunatly the game does not allow your citizens to walk in magma. If a succubus is stuck because a puddle is in her way, you can wait for it to evaporate or dig around. Succubi inside magma will still evacuate without burning clothing or weapons but hauled items will be likely destroyed. Also, remember that magma is a liquid and someone can drown in it.
+
+If your succubi are running out of drinks, you can dig a magma channel next to a still and turn it into a drink. You will need rock pots for this.
 
 ## Magma or water used in reactions ##
 Some jobs will claim to consume magma or water. This means that it will draw one level of the liquid from a tile located one z-level below the workshop.

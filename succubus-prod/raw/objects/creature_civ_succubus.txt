@@ -18,7 +18,7 @@ creature_civ_succubus
 	[CREPUSCULAR]
 	[MILKABLE]
 	[MAGMA_VISION]
-	[MAXAGE:6666]
+	MAXAGE:6666] // activate to allow necromancers
 
 	YES_HARDERLEARNING[SKILL_LEARN_RATES:50]
 

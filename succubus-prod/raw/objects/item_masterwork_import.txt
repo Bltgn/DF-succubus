@@ -6,6 +6,18 @@ item_masterwork_import
 	[NAME:toy:toys]
 	[HARD_MAT]
 
+[ITEM_TOY:ITEM_TOY_HANDCUFFS]
+	[NAME:handcuff:handcuffs]
+	[HARD_MAT]
+
+[ITEM_TOY:ITEM_TOY_BLINDFOLD]
+	[NAME:blindfold:blindfolds]
+	[HARD_MAT]
+
+[ITEM_TOY:ITEM_TOY_FLOGGING_WHIP]
+	[NAME:flogging whip:flogging whips]
+	[HARD_MAT]
+
 [ITEM_WEAPON:ITEM_WEAPON_MACE_TRAINING]
 	[NAME:training mace:training maces]
 	[SIZE:400]

@@ -1,5 +1,7 @@
 # Succubus Dungeon : Changelog #
 15.0
++ Updated DF to 43.03
+
 + New workshops
 - Fire shaper, produces weapons and clothing out of pure fire.
 - Glass shaper, make obsidian armor and weapons using magma and water.
@@ -9,13 +11,16 @@
 - Frog demons can open doors.
 - Black roses can be brewed and will drop seeds.
 - Summoning frog demons and HFS is now possible.
-- Jobs with clouds of smoke (Summoning Portal, Den of Iniquity) no longer destroy buildings.
+- Jobs spawning clouds of smoke no longer destroy buildings.
 - Summoning decay brutes has been made easier.
 - The floating glass furnace now accept sand and other glass component instead of raw glass.
 - You can now make crystal glass blocks and windows out of lead.
+- Glass jobs now use sand and other materials directly.
 - Spirits of fire cannot fly anymore.
 - Fixed a few summoning crash sources.
 - The den of iniquity can now use soap bars that have been used for bathing.
+- The glass forge has been removed.
+- Removed immortality from succubi as it prevented forming couples, it can be reversed in the raws (MAXAGE token).
 
 14.3
 + New workshops
