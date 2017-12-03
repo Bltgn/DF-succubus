@@ -1,23 +1,4 @@
-# Succubus mod
-modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "dizziness"
-modtools/reaction-trigger -reactionName CORRUPT_PRISONERS_SUCCUBUS -command [ succubus/corrupt -unit \\WORKER_ID -set succubus ]
-modtools/reaction-trigger -reactionName BLUE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 1 1/1/0 ]
-modtools/reaction-trigger -reactionName BLUE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 1 10/10/0 ]
-modtools/reaction-trigger -reactionName ORANGE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 2 1/1/0 ]
-modtools/reaction-trigger -reactionName ORANGE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 2 10/10/0 ]
-
-modtools/reaction-trigger -reactionName SUMMONING_NAHASH -command [ succubus/summoning -source \\WORKER_ID -race NAHASH ]
-modtools/reaction-trigger -reactionName SUMMONING_ORTHUS -command [ succubus/summoning -source \\WORKER_ID -race ORTHUS ]
-modtools/reaction-trigger -reactionName SUMMONING_NIGHTMARE -command [ succubus/summoning -source \\WORKER_ID -race NIGHTMARE ]
-modtools/reaction-trigger -reactionName SUMMONING_ELEMENTAL_PAIN -command [ succubus/summoning -source \\WORKER_ID -race ELEMENTAL_PAIN ]
-modtools/reaction-trigger -reactionName SUMMONING_IMP_FIRE -command [ succubus/summoning -source \\WORKER_ID -race IMP_FIRE ]
-modtools/reaction-trigger -reactionName SUMMONING_FROG_DEMON -command [ succubus/summoning -source \\WORKER_ID -race FROG_DEMON ]
-modtools/reaction-trigger -reactionName SUMMONING_TENTACLE_MONSTER -command [ succubus/summoning -source \\WORKER_ID -race TENTACLE_MONSTER ]
-modtools/reaction-trigger -reactionName SUMMONING_BRUTE_DECAY -command [ succubus/summoning -source \\WORKER_ID -race BRUTE_DECAY ]
-modtools/reaction-trigger -reactionName SUMMONING_SPIRIT_OF_FIRE -command [ succubus/summoning -source \\WORKER_ID -race SPIRIT_OF_FIRE ]
-modtools/reaction-trigger -reactionName SUMMONING_HFS -command [ succubus/summoning -source \\WORKER_ID -race HFS ]
-
-modtools/interaction-trigger -onAttackStr "SUCCUBUS_PHASING_ATK" -onDefendStr "SUCCUBUS_PHASING_DEF" -suppressAttack -suppressDefend -command [ succubus/phasing -source \\ATTACKER_ID -target \\DEFENDER_ID  ]
+modtools/if-entity -id "SUCCUBUS" -cmd [ script "raw/succubus_onMapLoad.txt" ]
 
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
@@ -49,17 +30,6 @@ AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
 
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
-
-AddPetToCiv -civ MOUNTAIN -race TESB_PET_ROCK -caste GRANITE
-
-succubus/hfspets -civ SUCCUBUS
-
-succubus/init
-succubus/waterwell
-succubus/power-learning
-succubus/teleportbase
-fix/smartpets
-# end succubus mod
 
 # MW import
 
@@ -312,3 +282,10 @@ modtools/reaction-trigger -reactionName STOP_SPAWN -command [ flow/source -remov
 modtools/reaction-trigger -reactionName STOP_SINK -command [ flow/source -removeAllSink ]
 
 # end MW import
+
+:lua print(' ')
+:lua print('World Initialization Complete!')
+
+
+:lua print(' ')
+:lua print('World Initialization Complete!')

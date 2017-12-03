@@ -1,0 +1,2 @@
+# This will only run init stuff for the succubus civ
+modtools/if-entity -id "SUCCUBUS" -cmd [ script "raw/succubus_onMapLoad.txt" ]
