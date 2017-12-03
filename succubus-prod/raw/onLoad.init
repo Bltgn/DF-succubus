@@ -1,36 +1,4 @@
-modtools/if-entity -id "SUCCUBUS" -cmd [ script "raw/succubus_onMapLoad.txt" ]
-
-AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
-AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
-AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
-AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
-AddPetToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
-AddPetToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
-AddPetToCiv -civ SUCCUBUS -race IMP_FIRE -caste DEFAULT
-AddPetToCiv -civ SUCCUBUS -race IMP_FIRE -caste DEFAULT
-AddPetToCiv -civ SUCCUBUS -race TENTACLE_MONSTER -caste MALE
-AddPetToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
-AddPetToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
-AddPetToCiv -civ SUCCUBUS -race BRUTE_DECAY -caste DEFAULT
-
-AddMinionToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
-AddMinionToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
-AddMinionToCiv -civ SUCCUBUS -race TENTACLE_MONSTER -caste MALE
-AddMinionToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
-AddMinionToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
-AddMinionToCiv -civ SUCCUBUS -race BRUTE_DECAY -caste DEFAULT
-
-AddMountToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
-AddMountToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
-
-AddPackToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
-AddPackToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
-AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
-AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
-
-AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
-AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
-
+modtools/if-entity -id "SUCCUBUS" -cmd [ script "raw/succubus_onLoad.txt" ]
 
 :lua print(' ')
 :lua print('World Initialization Complete!')
