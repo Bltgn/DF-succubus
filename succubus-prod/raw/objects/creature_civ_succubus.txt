@@ -18,12 +18,12 @@ creature_civ_succubus
 	[CREPUSCULAR]
 	[MILKABLE]
 	[MAGMA_VISION]
-	[MAXAGE:6666]
+	MAXAGE:6666] // Add a [ at the start to allow succubi to be necromancers.
 
-	YES_HARDERLEARNING[SKILL_LEARN_RATES:50]
+	YES_HARDERLEARNING!SKILL_LEARN_RATES:50]
 
 	[STRANGE_MOODS]
-	[OUTSIDER_CONTROLLABLE]
+	YES_ADV_MODE_SUCCUBUS[OUTSIDER_CONTROLLABLE]
 	[PRONE_TO_RAGE:5]
 	
 	// Natural skills
@@ -170,7 +170,7 @@ creature_civ_succubus
 
 	// Tiles
 	[CREATURE_TILE:'i']
-	[CREATURE_SOLDIER_TILE:'i']
+	[CREATURE_SOLDIER_TILE:'ï']
 	[COLOR:7:0:1]
 	[GLOWTILE:82]
 	[GLOWCOLOR:0:14:0]
@@ -183,7 +183,7 @@ creature_civ_succubus
 	// Common for all castes, specific pure succubi tags are defined at the end
 	[CASTE:FEMALE]
 		[CREATURE_CLASS:SUCCUBUS_FEMALE]
-		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to spread new forms of pleasure into the world, serving her infernal master's will. The succubi are associated with lust, depravity and fire.]
+		[DESCRIPTION:A female hedonistic demon with caprinae legs twisted into humanoid form. She has a charming appearance. Beware of her alluring words. In a time before time, her kind escaped from the underworld to spread new forms of pleasure into the world under their infernal master's will. The succubi are associated with lust, depravity and fire.]
 		[FEMALE]
 		[POP_RATIO:90000] // 90%
 		[LITTERSIZE:1:2] // Higher chances to have twins, to help with early worldgen
@@ -230,6 +230,7 @@ creature_civ_succubus
 		[CASTE_PROFESSION_NAME:CRAFTSMAN:Craftincubus:Craftincubi]
 		[CASTE_PROFESSION_NAME:FISHERMAN:Fisherincubus:Fisherincubi]
 		[CASTE_PROFESSION_NAME:ALCHEMIST:Witcher:Witchers]
+		[CASTE_PROFESSION_NAME:WRESTLER:Fighting Gent:Fighting Gents]
 		[CASTE_PROFESSION_NAME:HAMMERMAN:Hammer Gent:Hammer Gents]
 		[CASTE_PROFESSION_NAME:SPEARMAN:Spear Gent:Spear Gents]
 		[CASTE_PROFESSION_NAME:CROSSBOWMAN:Mark Gent:Mark Gents]
@@ -239,7 +240,7 @@ creature_civ_succubus
 		[CASTE_PROFESSION_NAME:MACEMAN:Mace Gent:Mace Gents]
 		[CASTE_PROFESSION_NAME:PIKEMAN:Pike Gent:Pike Gents]
 		[CASTE_PROFESSION_NAME:LASHER:Whip Gent:Whip Gents]
-		[CASTE_PROFESSION_NAME:MASTER_WRESTLER:Wrestler Master:Wrestler Masters]
+		[CASTE_PROFESSION_NAME:MASTER_WRESTLER:Fighting Master:Fighting Masters]
 		[CASTE_PROFESSION_NAME:MASTER_CROSSBOWMAN:Mark Master:Mark Masters]
 		[CASTE_PROFESSION_NAME:MASTER_BOWMAN:Bow Master:Bow Masters]
 		[CASTE_PROFESSION_NAME:MASTER_HAMMERMAN:Hammer Master:Hammer Masters]
