@@ -18,7 +18,7 @@ creature_civ_succubus
 	[CREPUSCULAR]
 	[MILKABLE]
 	[MAGMA_VISION]
-	MAXAGE:6666] // Add a [ at the start to allow succubi to be necromancers.
+	MAXAGE:6666] // Enable to allow necromancers
 
 	YES_HARDERLEARNING!SKILL_LEARN_RATES:50]
 
