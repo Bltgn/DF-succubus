@@ -285,7 +285,3 @@ modtools/reaction-trigger -reactionName STOP_SINK -command [ flow/source -remove
 
 :lua print(' ')
 :lua print('World Initialization Complete!')
-
-
-:lua print(' ')
-:lua print('World Initialization Complete!')

@@ -1,4 +1,9 @@
 # Succubus Dungeon : Changelog #
+15.1
++ Updated DF to 43.05
++ Intergrated changes by Amostubal in Modified Masterwork DF
++ Changed a couple of positions names and fixed typos
+
 15.0
 + Updated DF to 43.03
 

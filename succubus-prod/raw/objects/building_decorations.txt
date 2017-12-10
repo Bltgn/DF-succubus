@@ -2,9 +2,8 @@ building_decorations
 
 [OBJECT:BUILDING]
 
-
 [BUILDING_WORKSHOP:NEW_DECORATIONS_DWARF]
-   [NAME:======DECORATIONS=======]
+   [NAME:=== DECORATIONS ===]
    [NAME_COLOR:7:0:1]
 
 [BUILDING_WORKSHOP:DISPLAY_CASE]
@@ -26,7 +25,6 @@ building_decorations
 	[BUILD_ITEM:1:BLOCKS:NONE:NONE:NONE][CAN_USE_ARTIFACT]
 	[BUILD_ITEM:1:NONE:NONE:NONE:NONE][CAN_USE_ARTIFACT]
 	
-
 [BUILDING_WORKSHOP:CAMPFIRE]
 	[NAME:Campfire]
 	[NAME_COLOR:7:0:1]
@@ -1002,41 +1000,3 @@ red banner
 [COLOR:3:1:MAT:MAT:MAT]
 [COLOR:3:2:MAT:MAT:MAT]
 [COLOR:3:3:MAT:MAT:MAT]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

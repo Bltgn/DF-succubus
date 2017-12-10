@@ -5,46 +5,33 @@ YES_CIV_ACTIVE_SUCCUBUS[OBJECT:ENTITY]
 [ENTITY:SUCCUBUS]
 	[CREATURE:SUCCUBUS]
 	[TRANSLATION:SUCCUBUS]
-
-#########################################################################################
-Additions by Meph: Just the usual GUI triggers, just like in the old version.
-
-[SITE_CONTROLLABLE]
-YES_ADV_MODE_SUCCUBUS[ALL_MAIN_POPS_CONTROLLABLE]
-
-[PERMITTED_REACTION:MATERIALS_DEFAULT]SUCCUBUS_MATERIALS
+	[SITE_CONTROLLABLE]
+	[ALL_MAIN_POPS_CONTROLLABLE]
 	
-/// These two are toggled in one option, the Team. Can be "none, babysnatcher, itemthief, both". Option names are "civilized, savage, slaver, evil"
-YES_BABYSNATCHER_SUCCUBUS[BABYSNATCHER]
-!NO_ITEMTHIEF_SUCCUBUS!ITEM_THIEF]
+	[BABYSNATCHER]
+	ITEM_THIEF]
 	
-	[PROGRESS_TRIGGER_POPULATION:3]SUCCUBUS_TRADE
-	[PROGRESS_TRIGGER_PRODUCTION:3]SUCCUBUS_TRADE
-	[PROGRESS_TRIGGER_TRADE:3]SUCCUBUS_TRADE
-	[PROGRESS_TRIGGER_POP_SIEGE:1]SUCCUBUS_SIEGE
-	[PROGRESS_TRIGGER_PROD_SIEGE:1]SUCCUBUS_SIEGE
-	[PROGRESS_TRIGGER_TRADE_SIEGE:1]SUCCUBUS_SIEGE
+	[PROGRESS_TRIGGER_POPULATION:3]
+	[PROGRESS_TRIGGER_PRODUCTION:3]
+	[PROGRESS_TRIGGER_TRADE:3]
+	[PROGRESS_TRIGGER_POP_SIEGE:1]
+	[PROGRESS_TRIGGER_PROD_SIEGE:1]
+	[PROGRESS_TRIGGER_TRADE_SIEGE:1]
 	
-	/// Guards for caravans. Diplomat bodyguards dont work atm, but we might as well toggle them, maybe Toady fixes them, or dfhack does.
-	YES_BODYGUARDS_SUCCUBUS[DIPLOMAT_BODYGUARDS]
-	YES_BODYGUARDS_SUCCUBUS[MERCHANT_BODYGUARDS]
+	// Guards for caravans. Diplomat bodyguards dont work atm, but we might as well toggle them, maybe Toady fixes them, or dfhack does.
+	[DIPLOMAT_BODYGUARDS]
+	[MERCHANT_BODYGUARDS]
 	
-	/// Seasons. Can be "none; spring; summer; autumn; winter; spring+summer; spring+autumn; spring+winter; summer+autumn; summer+winter; autumn+winter;  spring+summer+autumn; spring+summer+winter; spring+autumn+winter; summer+autumn+winter; spring+summer+autumn+winter. (Wow, 16 options.) 
-	!NO_ACTIVE_SPRING_SUCCUBUS!ACTIVE_SEASON:SPRING]
-	YES_ACTIVE_SUMMER_SUCCUBUS[ACTIVE_SEASON:SUMMER]
-	!NO_ACTIVE_AUTUMN_SUCCUBUS!ACTIVE_SEASON:AUTUMN]
-	!NO_ACTIVE_WINTER_SUCCUBUS!ACTIVE_SEASON:WINTER]
+	// Seasons. Can be "none; spring; summer; autumn; winter; spring+summer; spring+autumn; spring+winter; summer+autumn; summer+winter; autumn+winter;  spring+summer+autumn; spring+summer+winter; spring+autumn+winter; summer+autumn+winter; spring+summer+autumn+winter. (Wow, 16 options.) 
+	ACTIVE_SEASON:SPRING]
+	[ACTIVE_SEASON:SUMMER]
+	ACTIVE_SEASON:AUTUMN]
+	ACTIVE_SEASON:WINTER]
 	
-	/// AI-stuff. Can be "none; ambusher; sieger; both"
-	!NO_AMBUSHER_SUCCUBUS!AMBUSHER]
-	!NO_SIEGER_SUCCUBUS!SIEGER]
+	// AI-stuff
+	AMBUSHER]
+	SIEGER]
 	
-	!NO_SKULKING_SUCCUBUS!SKULKING]
-	
-	[PERMITTED_REACTION:TAXIDERMY_FIGURINE]
-	[PERMITTED_REACTION:TAXIDERMY_STATUE] 
-#########################################################################################
-
 	// Digger
 	[DIGGER:ITEM_WEAPON_PICK]
 
@@ -437,7 +424,7 @@ YES_BABYSNATCHER_SUCCUBUS[BABYSNATCHER]
 		[NAME_FEMALE:Overlady:Overladies]
 		[NAME_MALE:Overlord:Overlords]
 		[NUMBER:1]
-		[SQUAD:10:Elite Warrior:Elite Warriors]
+		[SQUAD:10:Hell Knight:Hell Knights]
 		[APPOINTED_BY:MONARCH]
 		[RESPONSIBILITY:MILITARY_STRATEGY]
 		[RESPONSIBILITY:MILITARY_GOALS]
@@ -530,7 +517,7 @@ YES_BABYSNATCHER_SUCCUBUS[BABYSNATCHER]
 		[REQUIRED_OFFICE:250]
 		[REQUIRED_BEDROOM:250]
 	[POSITION:CAPTAIN_OF_THE_GUARD]
-		[NAME:Opressor:Opressors]
+		[NAME:Oppressor:Oppressors]
 		[SITE]
 		[NUMBER:1]
 		[RESPONSIBILITY:LAW_ENFORCEMENT]
@@ -985,7 +972,7 @@ NO_MORE_LEATHERMOD_!PERMITTED_REACTION:TAN_A_HIDE_SHEARED] /adds a reaction that
 	// Extra reactions to vanilla workshops
 	[PERMITTED_REACTION:HEAT_FORGE_SUCCUBUS]
 	[PERMITTED_REACTION:LUA_HOOK_USEMAGMA_BREW_MAGMA]
-	[PERMITTED_REACTION:METAL_BED]
+	[PERMITTED_REACTION:METAL_BED_SUCCUBUS]
 	[PERMITTED_REACTION:MAKE_CRYSTAL_ROCK]
 
 	// Floating glass (glass mass production)
@@ -1582,7 +1569,3 @@ YES_BANNER[PERMITTED_BUILDING:LIGHTS]
 	[PERMITTED_REACTION:LIGHTS_CANDLES_ON] 
 	[PERMITTED_REACTION:LIGHTS_FIREPLACE_OFF] 
 	[PERMITTED_REACTION:LIGHTS_FIREPLACE_ON] 
-
-##########################################################################
-end of signs
-##########################################################################

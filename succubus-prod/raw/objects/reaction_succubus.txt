@@ -34,7 +34,6 @@ reaction_succubus
 	[REAGENT:A:1:TOY:ITEM_TOY_FLOGGING_WHIP:NONE:NONE]
 	[SKILL:PACIFY]
 
-
 // Extra Reactions
 [REACTION:HEAT_FORGE_SUCCUBUS]
 	[NAME:Heat up the forges]
@@ -53,7 +52,7 @@ reaction_succubus
 		[PRODUCT_DIMENSION:150]
 	[SKILL:SMELT]
 
-[REACTION:METAL_BED]
+[REACTION:METAL_BED_SUCCCUBUS]
 	[NAME:Forge metal bed]
 	[BUILDING:METALSMITH:CUSTOM_B]
 	[DESCRIPTION:Forge a metal bed frame with 3 bars.]
