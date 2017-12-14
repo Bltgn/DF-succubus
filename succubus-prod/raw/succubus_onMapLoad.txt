@@ -122,10 +122,6 @@ modtools/reaction-trigger -reactionName ORANGE_TELEPORT -command [ succubus/tele
 modtools/reaction-trigger -reactionName ORANGE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 2 10/10/0 ]
 
 modtools/interaction-trigger -onAttackStr "SUCCUBUS_PHASING_ATK" -onDefendStr "SUCCUBUS_PHASING_DEF" -suppressAttack -suppressDefend -command [ succubus/phasing -source \\ATTACKER_ID -target \\DEFENDER_ID  ]
-#:lua print(' ')
-#:lua print("Don't worry about our little friends below...")
-succubus/hfspets -civ SUCCUBUS
-
 
 #################### run the succubus/init ####################
 succubus/init

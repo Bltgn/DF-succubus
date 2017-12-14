@@ -20,7 +20,7 @@ creature_civ_succubus
 	MAXAGE:6666] // Activate to allow succubi to be necromancers
 
 	[STRANGE_MOODS]
-	[OUTSIDER_CONTROLLABLE]
+	YES_ADV_MODE_SUCCUBUS[OUTSIDER_CONTROLLABLE]
 	[PRONE_TO_RAGE:5]
 	
 	[CREATURE_CLASS:GENERAL_POISON]

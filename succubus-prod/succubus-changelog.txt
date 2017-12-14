@@ -1,7 +1,19 @@
 # Succubus Dungeon : Changelog #
+16.0
++ Removed several workshop and reactions for balance and clarity
+- Gemforge, glassforge and bonforge
+- Bonecarver, gemcutter
+- Specific work item (now done through job details)
+- Extra leather working outside of MW
+- Obsidian armor
+- Afelsteel and stygium, those will come back in the future
+
++ Misc
+- Ensured that iron is available on all embarks
+
 15.1
 + Updated DF to 43.05
-+ Intergrated changes by Amostubal in Modified Masterwork DF
++ Integrated changes by Amostubal in Modified Masterwork DF
 + Changed a couple of positions names and fixed typos
 
 15.0

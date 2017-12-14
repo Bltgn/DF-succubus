@@ -1,4 +1,5 @@
-modtools/if-entity -id "SUCCUBUS" -cmd [ script "raw/succubus_onMapLoad.txt" ]
+
+### Succubus Dungeon ###
 
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
 AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
@@ -31,7 +32,11 @@ AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
 AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
 
-# MW import
+#:lua print(' ')
+#:lua print("Don't worry about our little friends below...")
+succubus/hfspets -civ SUCCUBUS
+
+### MW import
 
 base/roses-init
 
