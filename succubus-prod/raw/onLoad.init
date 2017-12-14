@@ -1,4 +1,3 @@
-
 ### Succubus Dungeon ###
 
 succubus/hfspets -civ SUCCUBUS
@@ -6,14 +5,6 @@ succubus/hfspets -civ SUCCUBUS
 ### MW import
 
 base/roses-init
-
-modtools/reaction-trigger -reactionName USE_HANDCUFFS -command [ modtools/add-syndrome -syndrome "being handcuffed in the pleasure room" -target \\WORKER_ID ]
-modtools/reaction-trigger -reactionName USE_BLINDFOLD -command [ modtools/add-syndrome -syndrome "waiting blindfolded for what will come next" -target \\WORKER_ID ]
-modtools/reaction-trigger -reactionName USE_FLOGGING_WHIP -command [ modtools/add-syndrome -syndrome "the sweet sensation of pain from flogging" -target \\WORKER_ID ]
-
-#taxidermy
-modtools/reaction-product-trigger -reactionName TAXIDERMY_STATUE -command [ taxidermy -corpse_id \\INPUT_ITEMS -statue_id \\OUTPUT_ITEMS -record_name ]
-modtools/reaction-product-trigger -reactionName TAXIDERMY_FIGURINE -command [ taxidermy -corpse_id \\INPUT_ITEMS -statue_id \\OUTPUT_ITEMS -record_name ]
 
 #garden
 modtools/reaction-trigger -reactionName GARDEN_GRASS -command [ building/subtype-change -building \\BUILDING_ID -type GARDEN_GRASS ]
@@ -216,42 +207,6 @@ modtools/reaction-trigger -reactionName LIGHTS_CANDLES_OFF -command [ building/s
 modtools/reaction-trigger -reactionName LIGHTS_CANDLES_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_CANDLES_ON ]
 modtools/reaction-trigger -reactionName LIGHTS_FIREPLACE_OFF -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_FIREPLACE_OFF ]
 modtools/reaction-trigger -reactionName LIGHTS_FIREPLACE_ON -command [ building/subtype-change -building \\BUILDING_ID -type LIGHTS_FIREPLACE_ON ]
-
-modtools/reaction-trigger -reactionName MAGMAWELL_N_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 1 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 2 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 3 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 4 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 5 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 6 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -source 7 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_1 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 1 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_2 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 2 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_3 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 3 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_4 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 4 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_5 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 5 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_6 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 6 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_7 -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -source 7 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_1 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 1 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_2 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 2 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_3 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 3 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_4 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 4 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_5 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 5 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_6 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 6 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_7 -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -source 7 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_1 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 1 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_2 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 2 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_3 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 3 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_4 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 4 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_5 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 5 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_6 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 6 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_7 -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -source 7 -magma ]
-modtools/reaction-trigger -reactionName MAGMAWELL_N_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 -2 -1 ] -remove ]
-modtools/reaction-trigger -reactionName MAGMAWELL_E_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -remove ]
-modtools/reaction-trigger -reactionName MAGMAWELL_S_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -remove ]
-modtools/reaction-trigger -reactionName MAGMAWELL_W_STOP -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -remove ]
-
-modtools/reaction-trigger -reactionName STOP_SPAWN -command [ flow/source -removeAllSource ]
-modtools/reaction-trigger -reactionName STOP_SINK -command [ flow/source -removeAllSink ]
 
 # end MW import
 
