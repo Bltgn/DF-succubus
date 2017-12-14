@@ -76,38 +76,6 @@ modtools/reaction-trigger -reactionName SUMMONING_BRUTE_DECAY -command [ succubu
 modtools/reaction-trigger -reactionName SUMMONING_SPIRIT_OF_FIRE -command [ succubus/summoning -source \\WORKER_ID -race SPIRIT_OF_FIRE ]
 modtools/reaction-trigger -reactionName SUMMONING_HFS -command [ succubus/summoning -source \\WORKER_ID -race HFS ]
 
-AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
-AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
-AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
-AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
-AddPetToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
-AddPetToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
-AddPetToCiv -civ SUCCUBUS -race IMP_FIRE -caste DEFAULT
-AddPetToCiv -civ SUCCUBUS -race IMP_FIRE -caste DEFAULT
-AddPetToCiv -civ SUCCUBUS -race TENTACLE_MONSTER -caste MALE
-AddPetToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
-AddPetToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
-AddPetToCiv -civ SUCCUBUS -race BRUTE_DECAY -caste DEFAULT
-
-AddMinionToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
-AddMinionToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
-AddMinionToCiv -civ SUCCUBUS -race TENTACLE_MONSTER -caste MALE
-AddMinionToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
-AddMinionToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
-AddMinionToCiv -civ SUCCUBUS -race BRUTE_DECAY -caste DEFAULT
-
-AddMountToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
-AddMountToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
-
-AddPackToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
-AddPackToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
-AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
-AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
-
-AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
-AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
-
-
 ################### succubus extras ###################
 #:lua print(' ')
 #:lua print('would you like us to corrupt you, make you ours? we can do that...')

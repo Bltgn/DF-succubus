@@ -2,6 +2,10 @@ creature_civ_succubus
 
 [OBJECT:CREATURE]
 
+// With the following classes
+// - SUCCUBUS: Indicating that it is part of the mod
+// - DEMON: For compatibility with mods that add interactions affecting demons
+
 [CREATURE:SUCCUBUS]
 	// Basic definitions
 	[NAME:succubus:succubi:demonic]
@@ -22,10 +26,15 @@ creature_civ_succubus
 	[STRANGE_MOODS]
 	YES_ADV_MODE_SUCCUBUS[OUTSIDER_CONTROLLABLE]
 	[PRONE_TO_RAGE:5]
+
+	// Add populations down there
+	[BIOME:SUBTERRANEAN_CHASM]
+		[UNDERGROUND_DEPTH:5:5]
 	
 	[CREATURE_CLASS:GENERAL_POISON]
 	[CREATURE_CLASS:DEMON]
 	[CREATURE_CLASS:SUCCUBUS]
+	[CREATURE_CLASS:MAMMAL]
 	[SYNDROME_DILUTION_FACTOR:INEBRIATION:130] // Avoid death by drinking, not as good as dwarves
 	[SPHERE:LUST]
 	[SPHERE:DEPRAVITY]
