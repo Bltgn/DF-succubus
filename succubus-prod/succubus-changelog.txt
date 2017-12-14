@@ -10,6 +10,8 @@
 
 + Misc
 - Ensured that iron is available on all embarks
+- Added vanilla book reactions
+- Added new display cases
 
 15.1
 + Updated DF to 43.05
