@@ -12,6 +12,8 @@
 - Ensured that iron is available on all embarks
 - Added vanilla book reactions
 - Added new display cases
+- You can set the details of the Forge metal bed job
+- Added a forge metal display case job
 
 15.1
 + Updated DF to 43.05

@@ -18,6 +18,7 @@ It has been assembled with the help of many contributions from the bay12 communi
 * Chiptune arrangements by Smoip
 * PeridexisErrant's cutting-edge pack
 * Bugfixes and various QoL maintenance work from Amostubal, thanks!
+* Extra graphics sets by Meph, Nopal and Taffer
 * And of course, Dwarf Fortress by Tarn and Zach Adams
 
 Special thanks for proof reading:

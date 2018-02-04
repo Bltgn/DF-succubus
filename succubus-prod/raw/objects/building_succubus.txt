@@ -4,7 +4,7 @@ building_succubus
 
 // Todo succubus lifestyle help when there is another thought workshop
 
-[BUILDING_WORKSHOP:PLAYROOM_SUCCUBUS]
+[BUILDING_WORKSHOP:PLAYROOM_SUCCUBUS] // Good thoughts
 	[NAME:Pleasure Room]
 	[NAME_COLOR:7:0:1]
 	[BUILD_LABOR:ARCHITECT]
@@ -74,7 +74,7 @@ building_succubus
 	[TILE:3:1:82:105:116:117:97:108:115]
 	[COLOR:3:1:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0]
 
-[BUILDING_WORKSHOP:FIRE_SHAPER]
+[BUILDING_WORKSHOP:FIRE_SHAPER] // Fire items
 	[NAME:*Fire shaper]
 	!NODIMENSION!NAME:*Fire shaper 3x3]
 	[NAME_COLOR:7:0:1]
@@ -118,7 +118,7 @@ building_succubus
 		[FIRE_BUILD_SAFE] 
 		[CAN_USE_ARTIFACT]
 
-[BUILDING_WORKSHOP:GLASS_SHAPER] // todo draw
+[BUILDING_WORKSHOP:GLASS_SHAPER] // Special glass items + armor
 	[NAME:*Glass shaper]
 	!NODIMENSION!NAME:*Glass shaper 3x3]
 	[NAME_COLOR:7:0:1]
@@ -179,7 +179,7 @@ building_succubus
 	[COLOR:3:1:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0]
 
 // Workshops
-[BUILDING_WORKSHOP:DEN_OF_INIQUITY]
+[BUILDING_WORKSHOP:DEN_OF_INIQUITY] // Creature corruption
 	[NAME:Den of iniquity]
 	!NODIMENSION!NAME:Den of iniquity 3x3]
 	[NAME_COLOR:7:0:1]
@@ -223,7 +223,7 @@ building_succubus
 		[WORTHLESS_STONE_ONLY]
 		[CAN_USE_ARTIFACT]
 
-[BUILDING_WORKSHOP:SUMMONING_PORTAL]
+[BUILDING_WORKSHOP:SUMMONING_PORTAL] // Spawns creatures
 	[NAME:*Summoning portal]
 	!NODIMENSION!NAME:*Summoning portal 5x5]
 	[WORK_LOCATION:3:1]
@@ -286,7 +286,7 @@ building_succubus
 		[FIRE_BUILD_SAFE] 
 		[CAN_USE_ARTIFACT]
 
-[BUILDING_WORKSHOP:FOOCCUBUS_EERIE]
+[BUILDING_WORKSHOP:FOOCCUBUS_EERIE] // Site wide spells
 	[NAME:*Eerie glowing canal]
 	!NODIMENSION!NAME:*Eerie glowing canal 5x5]
 	[BUILD_KEY:CUSTOM_SHIFT_E]
@@ -342,7 +342,7 @@ building_succubus
 	[BUILD_ITEM:2:STONE:NONE:INORGANIC:SLADE]
 		[CAN_USE_ARTIFACT]
 
-[BUILDING_WORKSHOP:SUCCUBUS_POWER]
+[BUILDING_WORKSHOP:SUCCUBUS_POWER] // Citizen upgrade
 	[NAME:*Altar of Sin]
 	!NODIMENSION!NAME:*Altar of sin 3x2]
 	[NAME_COLOR:7:0:1]
@@ -396,7 +396,7 @@ building_succubus
 	[TILE:3:1:82:105:116:117:97:108:115]
 	[COLOR:3:1:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0]
 
-[BUILDING_FURNACE:MAGMAWELL_SUCCUBUS]
+[BUILDING_FURNACE:MAGMAWELL_SUCCUBUS] // Magma spawner
 	[NAME:Magma Well]
 	!NODIMENSION!NAME:Magma Well 3x3]
 	[NAME_COLOR:7:0:1]
@@ -437,7 +437,7 @@ building_succubus
 		[CAN_USE_ARTIFACT]
 		[MAGMA_BUILD_SAFE]
 
-[BUILDING_FURNACE:DRILL_SLADE]
+[BUILDING_FURNACE:DRILL_SLADE] // Slade construction mat
 	[NAME:*Underworld drill]
 	!NODIMENSION!NAME:*Underworld drill 5x5]
 	[NAME_COLOR:7:0:1]
@@ -499,7 +499,7 @@ building_succubus
 		[CAN_USE_ARTIFACT]
 		[MAGMA_BUILD_SAFE]
 
-[BUILDING_FURNACE:GLASS_FLOAT]
+[BUILDING_FURNACE:GLASS_FLOAT] // Mass glass construction mat
 	[NAME:*Floating glass furnace]
 	!NODIMENSION!NAME:*Floating glass furnace 3x4]
 	[NAME_COLOR:7:0:1]
@@ -569,7 +569,7 @@ building_succubus
 	[TILE:3:1:71:76:97:68:79:83]
 	[COLOR:3:1:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0]
 
-[BUILDING_FURNACE:TELEPORT_1]
+[BUILDING_FURNACE:TELEPORT_1] // Teleport to 2
 	[NAME:Blue Teleportation Portal]
 	[NAME_COLOR:7:0:1]
 	[BUILD_LABOR:ARCHITECT]
@@ -606,7 +606,7 @@ building_succubus
 	[BUILD_ITEM:2:BLOCKS:NONE:NONE:NONE]
 		[CAN_USE_ARTIFACT]
 
-[BUILDING_FURNACE:TELEPORT_2]
+[BUILDING_FURNACE:TELEPORT_2] // Teleport to 1
 	[NAME:Red Teleportation Portal]
 	[NAME_COLOR:7:0:1]
 	[BUILD_LABOR:ARCHITECT]

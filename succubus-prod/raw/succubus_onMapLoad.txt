@@ -6,6 +6,8 @@
 :lua print('From hell the Sucubbi writhe, twisted with lust and hatred...')
 
 ################### world init and bugfixes ##################
+#:lua print(' ')
+#:lua print('Reality is weak down here...')
 succubus/power-learning
 succubus/teleportbase
 fix/smartpets
@@ -45,12 +47,11 @@ modtools/reaction-trigger -reactionName MAGMAWELL_N_STOP -command [ flow/source 
 modtools/reaction-trigger -reactionName MAGMAWELL_E_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 2 0 -1 ] -remove ]
 modtools/reaction-trigger -reactionName MAGMAWELL_S_STOP -command [ flow/source -unit \\WORKER_ID -offset [ 0 2 -1 ] -remove ]
 modtools/reaction-trigger -reactionName MAGMAWELL_W_STOP -command [ flow/source -unit \\WORKER_ID -offset [ -2 0 -1 ] -remove ]
-
-succubus/feature magmaWorkshops
-
 modtools/reaction-trigger -reactionName STOP_SPAWN -command [ flow/source -removeAllSource ]
 modtools/reaction-trigger -reactionName STOP_SINK -command [ flow/source -removeAllSink ]
 
+# Activating magma features
+succubus/feature magmaWorkshops
 succubus/waterwell
 
 ################### playroom ###################
@@ -59,8 +60,6 @@ succubus/waterwell
 modtools/reaction-trigger -reactionName USE_HANDCUFFS -command [ modtools/add-syndrome -syndrome "being handcuffed in the pleasure room" -target \\WORKER_ID ]
 modtools/reaction-trigger -reactionName USE_BLINDFOLD -command [ modtools/add-syndrome -syndrome "waiting blindfolded for what will come next" -target \\WORKER_ID ]
 modtools/reaction-trigger -reactionName USE_FLOGGING_WHIP -command [ modtools/add-syndrome -syndrome "the sweet sensation of pain from flogging" -target \\WORKER_ID ]
-
-
 
 ################### summoning ###################
 #:lua print(' ')
@@ -88,8 +87,6 @@ modtools/reaction-trigger -reactionName BLUE_TELEPORT -command [ succubus/telepo
 modtools/reaction-trigger -reactionName BLUE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 1 10/10/0 ]
 modtools/reaction-trigger -reactionName ORANGE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 2 1/1/0 ]
 modtools/reaction-trigger -reactionName ORANGE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 2 10/10/0 ]
-
-modtools/interaction-trigger -onAttackStr "SUCCUBUS_PHASING_ATK" -onDefendStr "SUCCUBUS_PHASING_DEF" -suppressAttack -suppressDefend -command [ succubus/phasing -source \\ATTACKER_ID -target \\DEFENDER_ID  ]
 
 #################### run the succubus/init ####################
 succubus/init

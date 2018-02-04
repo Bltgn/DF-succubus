@@ -1,5 +1,17 @@
 -- Test if the succubus is able to learn a power
+--[[
+	This script is uses the reaction complete job and not reaction trigger.
+	It will add extra requirements and simulate a canceled reaction if needed.
 
+	The syndromes related to the powers have either the MAJOR_POWER or MINOR_POWER class?
+	If the worker already have a syndrome of this class upon attempting to acquire a new power, the script will not add the new power.
+	Then the reagents are saved to avoid spoiling.
+
+	Ran upon map load for a succubus civ.
+
+	@requires unit/syndrome-change : https://github.com/Pheosics/roses_collection/blob/master/Scripts/raw/scripts/unit/syndrome-change.lua
+	@author Boltgun
+]]
 local eventful = require 'plugins.eventful'
 local utils = require 'utils'
 
@@ -64,7 +76,7 @@ function activatePower(unit, code)
 		synName = 'Courtesan (pheromones, entice)'
 		synMessageName = 'the secrets of lust'
 	elseif code == 'LUA_HOOK_SUCCUBUS_UPGRADE_PHASING' then
-		synName = 'Phasing'
+		synName = 'Dimensional Phasing (local teleport)]'
 		synMessageName = 'dimensional phasing'
 	end
 
@@ -82,6 +94,7 @@ function announcement(unit, synName)
 	end
 end
 
+-- Added on the reaction complete events, check for the class, cancels if found, add the syndrome otherwise
 eventful.onReactionComplete.succubusPower = function(reaction, reaction_product, unit, input_items, input_reagents, output_items, call_native)
 	local isMajor, message
 
