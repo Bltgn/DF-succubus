@@ -82,7 +82,7 @@ modtools/reaction-trigger -reactionName CORRUPT_PRISONERS_SUCCUBUS -command [ su
 
 #:lua print(' ')
 #:lua print('We think your forge is getting hot... real hot... We think you can forge that blade now...')
-modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "dizziness"
+modtools/reaction-trigger -reactionName HEAT_FORGE_SUCCUBUS -syndrome "heat exertion"
 modtools/reaction-trigger -reactionName BLUE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 1 1/1/0 ]
 modtools/reaction-trigger -reactionName BLUE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 1 10/10/0 ]
 modtools/reaction-trigger -reactionName ORANGE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 2 1/1/0 ]

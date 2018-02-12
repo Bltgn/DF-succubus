@@ -1,18 +1,27 @@
 # Succubus Dungeon : Changelog #
 16.0
++ Updated DF to 44.05
+
++ Magic powers!
+- Build the Altar of Sin and give powers to your succubi.
+- Each succubi can learn one major and one minor power.
+- Major powers: hellfire (pyromania), lust (crowd control)
+- Minor powers: phasing (teleporation), face melter (mass damage)
+
 + Removed several workshop and reactions for balance and clarity
 - Gemforge, glassforge and bonforge
 - Bonecarver, gemcutter
 - Specific work item (now done through job details)
-- Extra leather working outside of MW
+- Extra leathers for vanilla, those remain in Masterwork
 - Obsidian armor
+- Fire weapons
 - Afelsteel and stygium, those will come back in the future
 
 + Misc
 - Ensured that iron is available on all embarks
 - Added vanilla book reactions
 - Added new display cases
-- You can set the details of the Forge metal bed job
+- You can set the details of the Forge metal bed job to chose the material
 - Added a forge metal display case job
 
 15.1

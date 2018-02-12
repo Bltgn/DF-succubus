@@ -139,6 +139,7 @@ reaction_succubus
 	[BUILDING:SUMMONING_PORTAL:CUSTOM_I]
    	[REAGENT:ash:150:BAR:NONE:ASH:NONE]
 	[REAGENT:large gem:1:GEM:NONE:NONE:NONE]
+	[REAGENT:totem:1:TOTEM:NONE:NONE:NONE:NONE]
 	[PRODUCT:100:1:BOULDER:NONE:INORGANIC:SMOKE_PURPLE]
 	[SKILL:ANIMALTRAIN]
 
@@ -472,23 +473,27 @@ reaction_succubus
 // Major powers
 [REACTION:LUA_HOOK_SUCCUBUS_UPGRADE_FIRE_SECRET]
 	[NAME:Learn the secret of hellfire]
-		[DESCRIPTION:Description]
+		[DESCRIPTION:Add the ability to throw fireballs, firejets and ash at your enemies.]
 		[DESCRIPTION: ]
-		[DESCRIPTION:Description 2.]
-		[DESCRIPTION: ]
-		[DESCRIPTION:Profile/military. Use no skill.]
+		[DESCRIPTION:Use the workshop profile to define who receive the power. No skill required.]
 	[CATEGORY:SUCCUBUS_POWER_MAJOR]
 		[CATEGORY_NAME:Major Powers]
-		[CATEGORY_DESCRIPTION:Description]
+		[CATEGORY_DESCRIPTION:Learn a major secret, providing perks and powerful spells to use. Each creature can only learn one major power.]
 		[CATEGORY_KEY:CUSTOM_SHIFT_M]
 	[BUILDING:SUCCUBUS_POWER:CUSTOM_F]
 	[REAGENT:slab:1:SLAB:NONE:INORGANIC:SLADE]
 	[REAGENT:ash:150:BAR:NONE:ASH:NONE]
-	[REAGENT:large gem:1:GEM:NONE:NONE:NONE]
+	[REAGENT:large gem:2:GEM:NONE:NONE:NONE]
 	[PRODUCT:100:1:BOULDER:NONE:INORGANIC:SMOKE_PURPLE]
 
 [REACTION:LUA_HOOK_SUCCUBUS_UPGRADE_LUST_SECRET]
 	[NAME:Learn the secret of lust]
+		[DESCRIPTION:Add crowd controlling abilities, causing erratic behaviors and paralysis on enemies.]
+		[DESCRIPTION: ]
+		[DESCRIPTION:The user is also immune to fear and get a periodic power bonus.]
+		[DESCRIPTION: ]
+		[DESCRIPTION:Use the workshop profile to define who receive the power. No skill required.]
+	[CATEGORY:SUCCUBUS_POWER_MAJOR]
 	[BUILDING:SUCCUBUS_POWER:CUSTOM_L]
 	[REAGENT:slab:1:SLAB:NONE:INORGANIC:SLADE]
 	[REAGENT:toy:1:TOY:NONE:INORGANIC:GOLD]
@@ -498,19 +503,31 @@ reaction_succubus
 // Minor powers
 [REACTION:LUA_HOOK_SUCCUBUS_UPGRADE_PHASING]
 	[NAME:Learn dimensional phasing]
-		[DESCRIPTION:Description]
+		[DESCRIPTION:Give the ability to teleport the user and nearby allies towards an enemy.]
 		[DESCRIPTION: ]
-		[DESCRIPTION:Description 2.]
+		[DESCRIPTION:The teleportation work within line of sight, through obstacles if needed.]
 		[DESCRIPTION: ]
-		[DESCRIPTION:Profile/military.]
+		[DESCRIPTION:Use the workshop profile to define who receive the power. No skill required.]
 	[CATEGORY:SUCCUBUS_POWER_MINOR]
 		[CATEGORY_NAME:Minor Powers]
-		[CATEGORY_DESCRIPTION:Description]
+		[CATEGORY_DESCRIPTION:Add an utility spell to the user. Each creature can only learn one minor power.]
 		[CATEGORY_KEY:CUSTOM_M]
 	[BUILDING:SUCCUBUS_POWER:CUSTOM_P]
 	[REAGENT:slab:1:SLAB:NONE:INORGANIC:SLADE]
 	[REAGENT:instrument:1:INSTRUMENT:NONE:NONE:NONE]
 		[GLASS_MATERIAL]
+	[PRODUCT:100:1:BOULDER:NONE:INORGANIC:SMOKE_PURPLE]
+
+[REACTION:LUA_HOOK_SUCCUBUS_UPGRADE_FACE_MELTER]
+	[NAME:Learn face melter]
+		[DESCRIPTION:Give the ability to melt enemy faces, causing terror, pain and entertainment.]
+		[DESCRIPTION: ]
+		[DESCRIPTION:Use the workshop profile to define who receive the power. No skill required.]
+	[CATEGORY:SUCCUBUS_POWER_MINOR]
+	[BUILDING:SUCCUBUS_POWER:CUSTOM_F]
+	[REAGENT:slab:1:SLAB:NONE:INORGANIC:SLADE]
+	[REAGENT:instrument:1:INSTRUMENT:NONE:NONE:NONE]
+		[METAL_ITEM_MATERIAL]
 	[PRODUCT:100:1:BOULDER:NONE:INORGANIC:SMOKE_PURPLE]
 
 // Tools
@@ -525,23 +542,21 @@ reaction_succubus
 	[REAGENT:boulder:1:BOULDER:NONE:NONE:NONE]
 	[REAGENT:string:15000:THREAD:NONE:NONE:NONE]
 		[NOT_WEB]
-
 	// IMPROVEMENT only affect one item from a stack, so we needed to duplicate
 	[PRODUCT:100:1:TOOL:ITEM_TOOL_SLIP:GET_MATERIAL_FROM_REAGENT:boulder:NONE]
 		[PRODUCT_TOKEN:first slip]
 	[IMPROVEMENT:100:first slip:BANDS:GET_MATERIAL_FROM_REAGENT:string:NONE]
 	[IMPROVEMENT:100:first slip:PAGES:GET_MATERIAL_FROM_REAGENT:boulder:NONE]
-
+	// Slip number 2
 	[PRODUCT:100:1:TOOL:ITEM_TOOL_SLIP:GET_MATERIAL_FROM_REAGENT:boulder:NONE]
 		[PRODUCT_TOKEN:second slip]
 	[IMPROVEMENT:100:second slip:BANDS:GET_MATERIAL_FROM_REAGENT:string:NONE]
 	[IMPROVEMENT:100:second slip:PAGES:GET_MATERIAL_FROM_REAGENT:boulder:NONE]
-	
+	// Slip number 3
 	[PRODUCT:100:1:TOOL:ITEM_TOOL_SLIP:GET_MATERIAL_FROM_REAGENT:boulder:NONE]
 		[PRODUCT_TOKEN:third slip]
 	[IMPROVEMENT:100:third slip:BANDS:GET_MATERIAL_FROM_REAGENT:string:NONE]
 	[IMPROVEMENT:100:third slip:PAGES:GET_MATERIAL_FROM_REAGENT:boulder:NONE]
-	
 	[SKILL:BOOKBINDING]
 
 // Fire shaper, uses a "liquid fire" inorganic
