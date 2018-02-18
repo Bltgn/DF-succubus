@@ -10,7 +10,6 @@
 #:lua print('Reality is weak down here...')
 succubus/power-learning
 succubus/teleportbase
-fix/smartpets
 
 ################### waterwell ###################
 #:lua print(' ')

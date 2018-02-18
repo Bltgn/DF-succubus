@@ -8,8 +8,6 @@
     	The source unit's id.
     -race <RACE_ID>
         The raw id of the creature's race
-    -num <number>
-        The ammount of creatures to summon, defaults to 1
 
 	Uses bits of hire-guards by Kurik Amudnil
 
@@ -55,7 +53,7 @@ local function cancelReaction(reaction, unit, message)
 end
 
 -- Summon a randomly generated demon. If there isn't any, cancels the reaction.
-local function summonHfs(unit, num)
+local function summonHfs(unit)
 	local selection
 	local key = 1
 	local demonId = {}
@@ -73,7 +71,7 @@ local function summonHfs(unit, num)
 	end
 
 	selection = math.random(1, #demonId)
-	summonCreature(demonId[selection], unit, num)
+	summonCreature(demonId[selection], unit)
 end
 
 -- Return the creature's raw data, there is probably a better way to select stuff from tables
@@ -88,7 +86,7 @@ local function getRaw(creature_id)
 end
 
 -- Shows an announcement in the bottom of the screen
-local function announcement(creatureId, num)
+local function announcement(creatureId)
 	local cr = getRaw(creatureId)
 	local name = cr.name[0]
 	local letter = string.sub(name, 0, 1)
@@ -104,12 +102,7 @@ local function announcement(creatureId, num)
 		article = 'an'
 	end
 
-	if num == 1 then
-		dfhack.gui.showAnnouncement('You have summoned '..article..' '..name..'.', COLOR_WHITE)
-	else
-		name = cr.name[1]
-		dfhack.gui.showAnnouncement('You have summoned '..num..' '..name..'.', COLOR_WHITE)
-	end
+	dfhack.gui.showAnnouncement('You have summoned '..article..' '..name..'.', COLOR_WHITE)
 end
 
 function findRace(raceRawId)
@@ -124,59 +117,32 @@ function findRace(raceRawId)
 end
 
 -- Spawns a regular creature at one unit position, caste is random
-function summonCreature(unitId, unitSource, num)
-	local createUnit = dfhack.script_environment('modtools/create-unit')
-  	local teleport = dfhack.script_environment('teleport')
-
-	local position = {dfhack.units.getPosition(unitSource)}
+function summonCreature(unitId, unitSource)
+	local createUnit = dfhack.script_environment("modtools/create-unit")
 	local raceIndex = findRace(unitId)
-	local camera = xyz2pos(df.global.window_x, df.global.window_y, df.global.window_z)
+	local newUnitIndex
 
-	local casteIndex, newUnitIndex, newUnit
+	-- Moving the spawn a little further south
+	local location = {dfhack.units.getPosition(unitSource)}
+	location[2] = location[2] + 2
 
 	--Validation
 	if not raceIndex then
 		qerror("Summoning: Unknown race")
 	end
 
-	for i = 1, num do
-		local casteIndex = createUnit.getRandomCasteId(raceIndex)
-		local newUnitIndex = createUnit.createUnitInCiv(raceIndex, casteIndex, df.global.ui.civ_id, df.global.ui.group_id)
-		createUnit.domesticate(newUnitIndex, df.global.ui.group_id)
-		
-		local newUnit = df.unit.find(newUnitIndex)
+	newUnitIndex = createUnit.createUnitInFortCivAndGroup(raceIndex, createUnit.getRandomCasteId(raceIndex), location)
+	createUnit.domesticate(newUnitIndex, df.global.ui.group_id)
+	createUnit.nameUnit(newUnitIndex, df.historical_entity.find(df.global.ui.civ_id).entity_raw.code, df.global.ui.civ_id)
 
-		newUnit.flags2.calculated_nerves = false
-		newUnit.flags2.calculated_bodyparts = false
-		newUnit.flags3.body_part_relsize_computed = false
-		newUnit.flags3.size_modifier_computed = false
-		newUnit.flags3.compute_health = true
-		newUnit.flags3.weight_computed = false
-
-		newUnit.name.has_name = false
-		if newUnit.status.current_soul then
-			newUnit.status.current_soul.name.has_name = false
-		end
-
-	  	-- Clear hostility
-	  	newUnit.civ_id = df.global.ui.civ_id
-
-  		teleport.teleport(newUnit, xyz2pos(position[1], position[2] + 2, position[3]))
-	end
-
-	df.global.window_x = camera.x
-	df.global.window_y = camera.y
-	df.global.window_z = camera.z
-
-	announcement(unitId, num)
+	announcement(unitId)
 end
 
 -- Action
 validArgs = validArgs or utils.invert({
     'help',
 	'source',
-    'race',
-    'num',
+    'race'
 })
 
 local args = utils.processArgs({...}, validArgs)
@@ -190,8 +156,6 @@ arguments
     	The source unit's id.
     -race <RACE_ID>
         The raw id of the creature's race
-    -num <number>
-        The ammount of creatures to summon, defaults to 1
 ]])
 	return
 end
@@ -204,14 +168,10 @@ end
 local unitSource = df.unit.find(tonumber(args.source))
 if not unitSource then qerror('Unit not found.') end
 
-if not args.num then
-	args.num = 1
-end
-
 if not args.race then
 	qerror('No race provided for summoning!')
 elseif 'HFS' == args.race then
-	summonHfs(unitSource, args.num)
+	summonHfs(unitSource)
 else
-	summonCreature(args.race, unitSource, args.num)
+	summonCreature(args.race, unitSource)
 end

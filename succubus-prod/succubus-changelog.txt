@@ -7,6 +7,7 @@
 - Each succubi can learn one major and one minor power.
 - Major powers: hellfire (pyromania), lust (crowd control)
 - Minor powers: phasing (teleporation), face melter (mass damage)
+- More powers will be added soon
 
 + Removed several workshop and reactions for balance and clarity
 - Gemforge, glassforge and bonforge
@@ -23,6 +24,7 @@
 - Added new display cases
 - You can set the details of the Forge metal bed job to chose the material
 - Added a forge metal display case job
+- Summoned creatures now spawn with a name
 
 15.1
 + Updated DF to 43.05
