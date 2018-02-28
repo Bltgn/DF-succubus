@@ -9,22 +9,22 @@
 - Minor powers: phasing (teleporation), face melter (mass damage)
 - More powers will be added soon
 
-+ Removed several workshop and reactions for balance and clarity
-- Gemforge, glassforge and bonforge
++ Removed several workshops and reactions for balance and clarity
+- Gemforge, glassforge and boneforge
 - Bonecarver, gemcutter
 - Specific work item (now done through job details)
 - Extra leathers for vanilla, those remain in Masterwork
 - Obsidian armor
-- Fire weapons
-- Afelsteel and stygium, those will come back in the future
+- Fire weapons (replaced by spatters)
+- Afelsteel and stygium, those will come back later on
 
 + Misc
 - Ensured that iron is available on all embarks
-- Added vanilla book reactions
-- Added new display cases
+- Added vanilla book and paper reactions
+- Added vanilla and metal display cases
 - You can set the details of the Forge metal bed job to chose the material
-- Added a forge metal display case job
 - Summoned creatures now spawn with a name
+- You can now cover weapons with fire at the fire shaper
 
 15.1
 + Updated DF to 43.05

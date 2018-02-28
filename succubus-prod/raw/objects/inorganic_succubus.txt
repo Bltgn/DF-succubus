@@ -49,7 +49,7 @@ inorganic_succubus
 	[SOLID_DENSITY:20000000]
 	[DISPLAY_COLOR:5:0:1][TILE:'*']
 
-// Fire weapons and clothing, stats are copper with crap edge and impact
+// Fire weapons and clothing
 [INORGANIC:FIRE_LIQUID]
 	[SPECIAL]
 	[NO_STONE_STOCKPILE]
@@ -58,8 +58,9 @@ inorganic_succubus
 	[STATE_NAME_ADJ:ALL_SOLID:liquid fire]
 	[STATE_NAME_ADJ:LIQUID:liquid fire]
 	[STATE_NAME_ADJ:GAS:fire]
-	[SOLID_DENSITY:1000]
-	[LIQUID_DENSITY:1700]
+	[SOLID_DENSITY:100]
+	[LIQUID_DENSITY:170]
+	[MAT_FIXED_TEMP:11640]
 	[MELTING_POINT:10808]
 	[BOILING_POINT:10908]
 	[MAT_FIXED_TEMP:10708]
