@@ -1,4 +1,4 @@
-Succubus Dungeon
+﻿Succubus Dungeon
 ================
 
 Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a new evil civ. It is developed one feature at a time and new features is added regularly.
@@ -18,7 +18,7 @@ Features
 Installation
 ------------
 
-* Install Dwarf Fortress 43.05, using a starter pack is recommended.
+* Install Dwarf Fortress 44.05, using a starter pack is recommended.
 * Install dfhack for the appropriate DF version.
 * Extract the archive in your DF folder, preserving the folder structure.
 * Generate a new world and select a succubus civ to play.

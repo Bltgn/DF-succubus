@@ -1,6 +1,7 @@
 # Succubus Dungeon : Changelog #
 16.0
 + Updated DF to 44.05
+- The standalone patch also include tilesets for Meph 32x, Spacefox, Taffer and a link for Rally Ho!
 
 + Magic powers!
 - Build the Altar of Sin and give powers to your succubi.
