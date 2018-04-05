@@ -23,7 +23,7 @@
 ]]
 if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 
--- Dependancies
+-- Dependencies
 local utils = require 'utils'
 local mo = require 'makeown'
 local fov = dfhack.script_environment('modtools/fov')

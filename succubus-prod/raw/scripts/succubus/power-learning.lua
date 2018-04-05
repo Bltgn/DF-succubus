@@ -74,12 +74,18 @@ function activatePower(unit, code)
 	elseif code == 'LUA_HOOK_SUCCUBUS_UPGRADE_LUST_SECRET' then
 		synName = 'Courtesan (pheromones, crowd control)'
 		synMessageName = 'the secrets of lust'
+	elseif code == 'LUA_HOOK_SUCCUBUS_UPGRADE_DEPRAVITY_SECRET' then
+		synName = 'Debauchee (support allies)'
+		synMessageName = 'the secrets of depravity'
 	elseif code == 'LUA_HOOK_SUCCUBUS_UPGRADE_PHASING' then
 		synName = 'Dimensional Phasing (local teleport)'
 		synMessageName = 'dimensional phasing'
 	elseif code == 'LUA_HOOK_SUCCUBUS_UPGRADE_FACE_MELTER' then
 		synName = 'Face melter'
 		synMessageName = 'face melter'
+	elseif code == 'LUA_HOOK_SUCCUBUS_UPGRADE_SLAM' then
+		synName = 'PH Slam'
+		synMessageName = 'PH Slam'
 	end
 
 	dfhack.run_script('modtools/add-syndrome', '-target', unit.id, '-syndrome', synName, '-resetPolicy', 'DoNothing')
@@ -102,13 +108,15 @@ eventful.onReactionComplete.succubusPower = function(reaction, reaction_product,
 
 	if 
 		reaction.code == 'LUA_HOOK_SUCCUBUS_UPGRADE_FIRE_SECRET' or
-		reaction.code == 'LUA_HOOK_SUCCUBUS_UPGRADE_LUST_SECRET'
+		reaction.code == 'LUA_HOOK_SUCCUBUS_UPGRADE_LUST_SECRET' or
+		reaction.code == 'LUA_HOOK_SUCCUBUS_UPGRADE_DEPRAVITY_SECRET'
 	then
 		isMajor = true
 		message = 'already have a major power'
 	elseif
 		reaction.code == 'LUA_HOOK_SUCCUBUS_UPGRADE_PHASING' or
-		reaction.code == 'LUA_HOOK_SUCCUBUS_FACE_MELTER'
+		reaction.code == 'LUA_HOOK_SUCCUBUS_FACE_MELTER' or 
+		reaction.code == 'LUA_HOOK_SUCCUBUS_SLAM'
 	then
 		isMajor = false
 		message = 'already have a minor power'
@@ -119,10 +127,9 @@ eventful.onReactionComplete.succubusPower = function(reaction, reaction_product,
 
 	if hasSyndromeClass(unit, isMajor) then
 		cancelReaction(reaction, unit, input_reagents, message)
-		return
+	else
+		activatePower(unit, reaction.code)
 	end
-
-	activatePower(unit, reaction.code)
 end
 
 print("Succubus power reactions: Loaded.")

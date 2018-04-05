@@ -84,14 +84,6 @@ Slade can be generated at no cost in an underworld drill to help you build your 
 
 If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace.
 
-### New metals
-
-Because the succubi wish to reshape the world in their image, you will obtain of new materials to build with:
-* Afelsteel: This corrupted steel is extremely dense, making it great for weaponsmithing.
-* Stygium: An unaturally light bronze providing your succubi a decent protection without reducing their speed.
-
-These materials are acquired through trading.
-
 ### Summoning
 
 You can spawn pets in your fort by building a summoning portal over a magma pit. Evil pets are useful for various tasks or can be butchered for food. A description of each pets abilities will be displayed while selecting the jobs from the summoning portal itself. Some creatures summoned from the portal are also intelligent and can perform civilian tasks or join the military.
@@ -102,7 +94,17 @@ An unique feature from the succubi is their ability to twist the bodies and soul
 
 Corrupting prisoners is compatible with the Fortress Defense mod.
 
-### Adventuring as a succubus
+
+### Giving powers to your succubi
+
+TBA
+
+Major powers
+
+Minor powers
+
+Adventuring as a succubus
+-------------------------
 
 Civilizations living in dark fortresses are not as well developed than dwarven or human ones for adventure. As a result, a succubus starts at an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (Ω tiles on the world map).
 
