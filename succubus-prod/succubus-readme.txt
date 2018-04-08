@@ -92,34 +92,59 @@ You can spawn pets in your fort by building a summoning portal over a magma pit.
 
 An unique feature from the succubi is their ability to twist the bodies and souls of their guests at their image. Their victims are turned into hybrids with various abilities depending of their former race. This is done at the den of iniquity. Running the 'Corrupt prisoners' job will transform nearby sentients and have them join your civilization. This include caged invaders if their cages are visible and close enough. Merchants and their guards can also join your forces in the process, but their pack animals will flee or go insane.
 
-Corrupting prisoners is compatible with the Fortress Defense mod.
-
-
 ### Giving powers to your succubi
 
-TBA
+Building the Altar of Sin allow to give additional interactions to your succubi. Those are seperated in major and minor category, major providing several buffs and interactions while minor are a single spell. A succubus can only acquire one minor and one major spell so you will have to figure what are the best combos or spread your upgrades among the key citizens of your fort.
 
-Major powers
+To select who will get an upgrade, you must use the workshop profile (Shift + P) and restrict the usage to only one worker. If the target is in the military, you will need to put the squad off duty until the target has acquired the power.
 
-Minor powers
+#### Major powers
+
+Major powers act as secrets like necromancy does in vanilla and, in rare cases, will be researched by historical figures. While the succubi are already immortal, member from other races will be granted immortality upon acquiring one of those.
+
+The secrets of lust: a crowd control focused power. The user becomes a courtesan and become immune to fear and get the following interactions:
+* Release pheromones: Emit a cloud of pheromones that render other succubi immune to pain while stuning and paralyzing enemies.
+* Entice targets: Drop the targets strength and sometimes cause them to drop their weapons. Only work on intelligent targets.
+* Sing an alluring song: Make the enemy slow and crazey for a short time, causing them to hit each other. The target may also flee in terror afterwards. Only work on intelligent targets.
+* Draining kiss: Transfer the target's physical attributes to the user. The target may also fall asleep. The user must touch the enemy.
+* A periodic 'lusty' bonus indicated by a blinking purple question mark. The user can "Release" themselves to get a massive boost in speed and strength.
+
+The secrets of Hellfire: a purely destructive power. The user becomes a pyromaniac and become more aggressive, immune to fear and get the following interaction:
+* Breath flames: Emit a cone of fire.
+* Throw fireball: A longer range fire attack.
+* Raise cloud of ash: Help breaking lines of sight while escaping.
+* Spray dragonfire from magma: An dragon grade cone of fire, the user must stand in magma to be able to do this.
+
+The secrets of depravity: a support oriented power that empower allies at the cost of the user's own abilities. The user becomes a debauchee and lose 20% of its attributes permanently, but is immune to paralysis, pain, nausea and fever, and can perform the following:
+* Loving Caress: Touch the target and increase their attributes. The buff is contagious, meaning that the target can spread the buff to someone else for a short time and is indicated by a blinking question mark.
+* Healing Kiss: Touch the target to heal it entirely. This interaction is also contagious, meaning that the target can in turn kiss other succubi to heal them.
+* Resurrect a succubus: As it says, target a succubus corpse to bring it back to life and fully healed.
+
+#### Minor powers
+
+* Dimensional phasing: The user can teleport themselves and any nearby allies towards a combat target. This allow movement through windows and fortifications.
+* Face melter: Cause a lot of pain, terror and, well... melting to te enemies around the user.
+* Abyssal Gravity: Slam the target to the ground, causing wounds, stuns and sometimes death.
 
 Adventuring as a succubus
 -------------------------
 
-Civilizations living in dark fortresses are not as well developed than dwarven or human ones for adventure. As a result, a succubus starts at an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (Ω tiles on the world map).
+Civilizations living in dark fortresses are not as well developed than dwarven or human ones for adventure. As a result, a succubus begin their journey in an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (Ω tiles on the world map).
 
 If you start in a pit, you can open the regional map (shift + Q) to spot the nearest dark fortress then travel by foot in this direction to find people to talk to. Wandering around, you may also find dungeons with equipment and towers with population on its roof. If you are unable to reach the roof, try pressing alt+direction to open the hatch above your head.
 
 You can also play as a Frog Demon. Try biting people!
 
-### Known issues
+Known issues
+------------
 
 * Embarking as dwarves? See "Selecting your race at the embark screen" above.
 * Changing graphics in the Lazy Newb Pack deletes the mod. You'll have to reinstall it afterwards.
 * Upon reaching your site's edge, traders will "kidnap" their own pets, this has no consequenses to your fort.
 * If a frog demon refuses to work or join the military, wait 3 days of game time and try again.
 
-### Contact
+Contact
+-------
 
 If you have trouble using this mod, please post a message on the mod thread in the Bay 12 forum :
 http://www.bay12forums.com/smf/index.php?topic=124135.0

@@ -84,8 +84,8 @@ function activatePower(unit, code)
 		synName = 'Face melter'
 		synMessageName = 'face melter'
 	elseif code == 'LUA_HOOK_SUCCUBUS_UPGRADE_SLAM' then
-		synName = 'PH Slam'
-		synMessageName = 'PH Slam'
+		synName = 'Abyssal Gravity'
+		synMessageName = 'Abyssal Gravity'
 	end
 
 	dfhack.run_script('modtools/add-syndrome', '-target', unit.id, '-syndrome', synName, '-resetPolicy', 'DoNothing')

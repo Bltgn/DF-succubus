@@ -155,11 +155,11 @@ creature_civ_succubus
 	[SWIMS_LEARNED]
 
 	// Tiles
-	[CREATURE_TILE:'i'] // todo same as impa nd confusing, use ï
-	[CREATURE_SOLDIER_TILE:'ï'] // todo not working, use number for î
-	[COLOR:7:0:1]
-	[GLOWTILE:82]
-	[GLOWCOLOR:0:14:0]
+	[CREATURE_TILE:139]
+	[CREATURE_SOLDIER_TILE:140]
+	[COLOR:4:0:1]
+	[GLOWTILE:34]
+	[GLOWCOLOR:6:0:1]
 
 	// Human Sized by default
 	[BODY_SIZE:0:0:4000]
