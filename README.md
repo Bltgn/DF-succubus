@@ -1,87 +1,178 @@
-# Succubus Dungeon #
+Succubus Dungeon
+================
 
 Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a new evil civ. It is developed one feature at a time and new features is added regularly.
 
-## Features ##
+Features
+--------
+
 * A new race.
 * Fast and fire immune citizens.
 * The reintroduction of classic lore into Dwarf Fortress such as 40d demons.
-* Generate magma anywhere, make magma forge on the surface, traps, waterfalls...
+* Generate magma anywhere, make magma forges, traps, waterfalls...
 * Generating slade blocks to build an authentic demonic spire.
 * Generate fuel for your forges out of thin air.
 * Capture invaders and turn them into half demons.
-* Summon powerful creatures to your side.
+* Summon powerful creatures to your side, some are intelligent and can join your military.
 
-## Installation ##
-* Install Dwarf Fortress 42.06+, using the lazy newb pack is recommended.
-* Install dfhack for the appropriate DF version is needed.
+Installation
+------------
+
+* Install Dwarf Fortress 44.05, using a starter pack is recommended.
+* Install dfhack for the appropriate DF version.
 * Extract the archive in your DF folder, preserving the folder structure.
 * Generate a new world and select a succubus civ to play.
 
-## IMPORTANT: Selecting your race at the embark screen ##
+### IMPORTANT: Selecting your race at the embark screen
+* By default, only the succubi are playable, but if you add other mods, you may have several choices.
 * Press tab before embarking until seeing a list of civilization names.
 * Press + and - to chose a civ that uses the cabinet tile (π) to display its colonies on the map.
 * Pressing tab again until seeing the list of neighbors will confirm your choice, your selected race is the first one.
 
-## Modified vanilla files ##
-The following changes were done on the original DF files. Please keep them in mind if you combine this mod with others.
+Playing as Succubi
+------------------
 
-* entity_default.txt: Added siege triggers to dwarves, made humans, elves and kobold attack faster, dwarves are no longer playable at embark.
-* creature_subterranean.txt: Added pet value to fire imps.
+### Magma
 
-## Magma ##
-Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock.
+Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock. Buildings marked with a star in its name must be powered by magma. You can easily provide magma to your dungeon by building a magma well. With this workshop, a pump operator create a magma "aquifer". To do so, channel a canal in one direction from the well and run the appropriate reaction. The same magma well can also stop all those flows anytime you wish.
 
-Buildings marked with a star '*' in its name must be powered by magma. You can easily provide magma to your dungeon by building a magma well. With this workshop, a pump operator can fill all nearby channels with enough magma to power buildings.
+Here's an example :
+```
+  Z       Z-1
++++++    +++++ 
++WWW+    +++++
++WWW.    ++++~ -> After channeling the east side, the well created a flow in this direction.
++WWW+    +++++
++++++    +++++
+```
 
-Unfortunatly the game does not allow your citizens to walk in magma. If a succubus is stuck because a puddle is in her way, you can wait for it to evaporate or dig around. Succubi inside magma will still evacuate without burning clothing or weapons but hauled items will be likely destroyed.
+Unfortunatly the game does not allow your citizens to walk in magma. If a succubus is stuck because a puddle is in her way, you can wait for it to evaporate or dig around. Succubi inside magma will still evacuate without burning clothing or weapons but hauled items will be likely destroyed. Also, remember that magma is a liquid and someone can drown in it.
 
-As an option, if your succubi are running out of drink and cannot find water, you can bring magma next to a still and turn it into a drink. You will need rock pots for this.
+If your succubi are running out of drinks, you can dig a magma channel next to a still and create a special drink.
 
-Also, remember that magma is a liquid and someone can drown in it if they cannot swim.
+### Magma or water used in reactions
 
-# Getting slade and construction materials #
-Slade can be generated at no cost in an underworld drill to help you build your spires. However, its extreme weight implies that slade projects will take more time and builders to complete. A smart usage of stockpiles and wheelbarrows is strongly recommended.
+Some jobs will claim to consume magma or water. This means that it will draw one level of the liquid from a tile located one z-level below the workshop. This will also work if the liquid is located next to the workshop one z-level below (ie after channeling a canal to it).
 
-To get slade blocks, build the underworld drill from the furnaces menu after discovering magma. Like magma forges, it must have one of its tiles overlapping a pit with at least 4 levels of magma. A miner can then conjure slade blocks (for construction) or boulders (for craft or masonry jobs).
+For example, those two configurations are valid :
+
+```
++ = floor
+W = workshop
+~ = water/magma
+. = open space
+
+  Z       Z-1
++++++    +++++ 
++WWW+    +~~~+
++WWW+    +~~~+ -> 3x3 workshop built over a 3x3 reservoir
++WWW+    +~~~+
++++++    +++++
+
+
+  Z         Z-1
++++++++   +++++++ 
++WWW+++   +++++++
++WWW...   ++++~~~ -> 3x3 workshop next to a channel filled with liquid
++WWW+++   +++++++
++++++++   +++++++
+```
+
+### Construction materials
+
+Slade can be generated at no cost in an underworld drill to help you build your spires. However, its extreme weight implies that slade projects will take more time and builders to complete. A smart usage of stockpiles and wheelbarrows is recommended.
 
 If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace.
 
-## New materials ##
+### Summoning
 
-Because the succubi wish to reshape the world in their image, you will obtain of new materials to build with:
+You can spawn pets in your fort by building a summoning portal over a magma pit. Evil pets are useful for various tasks or can be butchered for food. A description of each pets abilities will be displayed while selecting the jobs from the summoning portal itself. Some creatures summoned from the portal are also intelligent and can perform civilian tasks or join the military.
 
-* Afelsteel: This corrupted steel is extremely dense and possess a sharper edge, making it great for weaponsmithing.
-* Octobronze: An unaturally light bronze best suited to provide your succubi with a light and solid protection.
+### Corruption
 
-## Summoning ##
-You can spawn pets in your fort by building a summoning portal over a magma pit. Evil pets are useful for various tasks or can be butchered for food.
+An unique feature from the succubi is their ability to twist the bodies and souls of their guests at their image. Their victims are turned into hybrids with various abilities depending of their former race. This is done at the den of iniquity. Running the 'Corrupt prisoners' job will transform nearby sentients and have them join your civilization. This include caged invaders if their cages are visible and close enough. Merchants and their guards can also join your forces in the process, but their pack animals will flee or go insane.
 
-Please note that spawned pets are more aggressive than natural ones and are prone to attack if they lack personal space. Isolating them or giving them large pasture zones will reduce the risks.
+### Giving powers to your succubi
 
-A description of each pets abilities will be displayed while selecting the jobs from the summoning portal itself.
+The Altar of Sin provides give additional interactions to your succubi. Those are seperated in major and minor categories with major providing several buffs and interactions and minor providing single spells. Each succubus can only acquire one minor and one major spell so you will have to discover the best combos and spread your upgrades among the key citizens of your fort.
 
-## Corruption ##
-An unique feature from the succubi is their ability to twist the bodies and souls of their guests at their image. Their victims, willingly or not, are turned into hybrids with various abilities depending of their former race.
+To select the target of an upgrade, you must use the workshop profile (Shift + P after selecting a Keeper of Secrets) and restrict the usage to only one worker. If the target is in the military, you will need to put the squad off duty until the target has acquired the power.
 
-This is done at the den of iniquity. Running the 'Corrupt prisoners' job will transform nearby sentients and have them join your civilization. This include caged invaders if their cages are visible and close enough. Merchants and their guards will also join, but their pack animal will flee or go insane.
+#### Major powers
 
-Corrupting prisoners is also compatible with the Fortress Defense mod.
+Major powers act as secrets like necromancy does in vanilla and, in rare cases, will be researched by historical figures. While the succubi are already immortal, member from other races will be granted immortality upon acquiring one of those.
 
-## Adventuring as a succubus ##
-Civilizations living in dark fortresses are not as well developed than dwarven or human ones. As a result, a succubus starts at an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (omega tiles on the world map).
+The secrets of lust: a crowd control focused power. The user becomes a courtesan and gain immununity to fear plus the following interactions:
+* Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stuning and paralyzing enemies.
+* Entice targets: Drop the targets strength and sometimes cause them to drop their weapons. Only work on intelligent targets.
+* Sing an alluring song: Make the enemy slow and crazy for a short time, causing them to hit each other for a short time. The target may also flee in terror afterwards. Only work on intelligent targets.
+* Draining kiss: Drop the target's attributes while buffing the user. The target may also fall asleep. The user must touch the enemy.
+* A periodic 'lusty' bonus is indicated by a blinking purple question mark and allow the user to "release" themselves, gaining a big boost in speed and strength.
 
-If you start in a pit, you can open the regional map (shift + Q) to spot the nearest dark fortress, then travel by foot in this direction to find people to talk to.
+The secrets of Hellfire: a destructive power. The user becomes a pyromaniac and gain immunity to fear, increased aggressiveness and the following interaction:
+* Breath flames: Emit a cone of fire.
+* Throw fireball: A longer range fire attack.
+* Raise cloud of ash: Help breaking lines of sight while escaping.
+* Spray dragonfire from magma: An cone of dragonfire, the user must stand in a square of magma that is not full to be able to do this.
 
-Wandering around, you may also find dungeons with equipment and towers with population on its roof. If you are unable to reach the roof, try pressing alt+direction to open the hatch above your head.
+The secrets of depravity: a support oriented power that empower allies at the cost of the user's own abilities. The user becomes a debauchee and lose 20% of its attributes permanently in exchange of paralysis, pain, nausea and fever immunity plus the following:
+* Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stuning and paralyzing enemies (same as the secrets of lust).
+* Loving Caress: Touch the target and increase their attributes. The buff is contagious, meaning that the target can spread the buff to someone else for a short time and is indicated by a blinking question mark.
+* Healing Kiss: Touch the target to heal it entirely. This interaction is also contagious, meaning that the target can in turn kiss other succubi to heal them.
+* Resurrect a succubus: Target a succubus corpse to bring it back to life and fully healed.
 
-## Known issues ##
+#### Minor powers
+
+* Dimensional phasing: The user can teleport themselves and any nearby allies towards a combat target. This allow movement through windows and fortifications.
+* Face melter: Cause a lot of pain, terror and, well... melting to te enemies around the user.
+* Abyssal Gravity: Slam the target to the ground, causing wounds, stuns and sometimes death.
+
+Adventuring as a succubus
+-------------------------
+
+Civilizations living in dark fortresses are not as well developed than dwarven or human ones for adventure. As a result, a succubus begin their journey in an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (Ω tiles on the world map).
+
+If you start in a pit, you can open the regional map (shift + Q) to spot the nearest dark fortress then travel by foot in this direction to find people to talk to. Wandering around, you may also find dungeons with equipment and towers with population on its roof. If you are unable to reach the roof, try pressing alt+direction to open the hatch above your head.
+
+You can also play as a Frog Demon. Try biting people!
+
+Known issues
+------------
+
 * Embarking as dwarves? See "Selecting your race at the embark screen" above.
+* Changing graphics in the Lazy Newb Pack deletes the mod. You'll have to reinstall it afterwards.
 * Upon reaching your site's edge, traders will "kidnap" their own pets, this has no consequenses to your fort.
-* Changing graphics in the Lazy Newb Pack deletes the mod, you'll have to reinstall it afterwards.
-* The game treat succubi blood as magma hot. Wounded succubi are likely to cause wildfires.
-* This has been made for an alpha version of dfhack, expect bugs. Save a lot and make backups.
+* If a frog demon refuses to work or join the military, wait 3 days of game time and try again.
 
-## Contact ##
+Contact
+-------
+
 If you have trouble using this mod, please post a message on the mod thread in the Bay 12 forum :
 http://www.bay12forums.com/smf/index.php?topic=124135.0
+
+Credits
+-------
+
+This mod has been assembled with the help of many contributions from the bay12 community:
+* Obsidian tileset and color palette
+* Phoebus color palette and creature sprite set
+* dfhack maintained by Peterix and contributors
+* K33N elves
+* Falconne's UI improvements (mousequery, hotkeys and dwarfmonitor)
+* Warmist's spawnunit script
+* Teleport by Putnam
+* Bits of Masterwork DF by Meph
+* Dwarf chocolate by SethCreiyd
+* Roses scripts and spells
+* Scripts by IndigoFenix
+* The demon mod by Naryar
+* Chiptune arrangements by Smoip
+* PeridexisErrant's cutting-edge pack
+* Bugfixes and various QoL maintenance work from Amostubal, thanks!
+* Extra graphics sets by Meph, Nopal and Taffer
+* And of course, Dwarf Fortress by Tarn and Zach Adams
+
+Special thanks for proof reading:
+* jwoodward48df
+* Meph
+* chaosfiend

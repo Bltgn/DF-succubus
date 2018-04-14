@@ -4,3 +4,4 @@ modtools/if-entity -id "SUCCUBUS" -cmd [ script "raw/succubus_onMapLoad.txt" ]
 # Global stuff that can happen wherever
 modtools/interaction-trigger -onAttackStr "SUCCUBUS_PHASING_ATK" -onDefendStr "SUCCUBUS_PHASING_DEF" -suppressAttack -suppressDefend -command [ succubus/phasing -source \\ATTACKER_ID -target \\DEFENDER_ID ]
 modtools/interaction-trigger -onDefendStr "SUCCUBUS_SLAM_DEF" -suppressDefend -command [ succubus/slam -unit \\DEFENDER_ID -velocity 40000 ]
+realcolors
