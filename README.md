@@ -103,7 +103,7 @@ To select the target of an upgrade, you must use the workshop profile (Shift + P
 Major powers act as secrets like necromancy does in vanilla and, in rare cases, will be researched by historical figures. While the succubi are already immortal, member from other races will be granted immortality upon acquiring one of those.
 
 The secrets of lust: a crowd control focused power. The user becomes a courtesan and gain immununity to fear plus the following interactions:
-* Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stuning and paralyzing enemies.
+* Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stunning and paralyzing enemies.
 * Entice targets: Drop the targets strength and sometimes cause them to drop their weapons. Only work on intelligent targets.
 * Sing an alluring song: Make the enemy slow and crazy for a short time, causing them to hit each other for a short time. The target may also flee in terror afterwards. Only work on intelligent targets.
 * Draining kiss: Drop the target's attributes while buffing the user. The target may also fall asleep. The user must touch the enemy.
@@ -116,7 +116,7 @@ The secrets of Hellfire: a destructive power. The user becomes a pyromaniac and 
 * Spray dragonfire from magma: An cone of dragonfire, the user must stand in a square of magma that is not full to be able to do this.
 
 The secrets of depravity: a support oriented power that empower allies at the cost of the user's own abilities. The user becomes a debauchee and lose 20% of its attributes permanently in exchange of paralysis, pain, nausea and fever immunity plus the following:
-* Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stuning and paralyzing enemies (same as the secrets of lust).
+* Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stunning and paralyzing enemies (same as the secrets of lust).
 * Loving Caress: Touch the target and increase their attributes. The buff is contagious, meaning that the target can spread the buff to someone else for a short time and is indicated by a blinking question mark.
 * Healing Kiss: Touch the target to heal it entirely. This interaction is also contagious, meaning that the target can in turn kiss other succubi to heal them.
 * Resurrect a succubus: Target a succubus corpse to bring it back to life and fully healed.

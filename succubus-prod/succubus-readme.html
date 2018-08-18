@@ -1,15 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
 
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {
-   color: black;
-}
-</style></head><body><h1 id="succubus-dungeon">Succubus Dungeon</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="succubus-dungeon">Succubus Dungeon</h1>
 <p>Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a new evil civ. It is developed one feature at a time and new features is added regularly.</p>
 <h2 id="features">Features</h2>
 <ul>
 <li>A new race.</li>
 <li>Fast and fire immune citizens.</li>
 <li>The reintroduction of classic lore into Dwarf Fortress such as 40d demons.</li>
-<li>Generate magma anywhere, make magma forges, traps, waterfalls...</li>
+<li>Generate magma anywhere, make magma forges, traps, waterfalls…</li>
 <li>Generating slade blocks to build an authentic demonic spire.</li>
 <li>Generate fuel for your forges out of thin air.</li>
 <li>Capture invaders and turn them into half demons.</li>
@@ -31,45 +38,47 @@
 </ul>
 <h2 id="playing-as-succubi">Playing as Succubi</h2>
 <h3 id="magma">Magma</h3>
-<p>Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock. Buildings marked with a star in its name must be powered by magma. You can easily provide magma to your dungeon by building a magma well. With this workshop, a pump operator create a magma "aquifer". To do so, channel a canal in one direction from the well and run the appropriate reaction. The same magma well can also stop all those flows anytime you wish.</p>
-<p>Here's an example :</p>
-<pre><code>  <span class="hljs-comment">Z</span>       <span class="hljs-comment">Z</span><span class="hljs-literal">-</span><span class="hljs-comment">1</span>
-<span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>    <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span> 
-<span class="hljs-literal">+</span><span class="hljs-comment">WWW</span><span class="hljs-literal">+</span>    <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>
-<span class="hljs-literal">+</span><span class="hljs-comment">WWW</span><span class="hljs-string">.</span>    <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-comment">~</span> <span class="hljs-literal">-</span>&gt; <span class="hljs-comment">After</span> <span class="hljs-comment">channeling</span> <span class="hljs-comment">the</span> <span class="hljs-comment">east</span> <span class="hljs-comment">side</span><span class="hljs-string">,</span> <span class="hljs-comment">the</span> <span class="hljs-comment">well</span> <span class="hljs-comment">created</span> <span class="hljs-comment">a</span> <span class="hljs-comment">flow</span> <span class="hljs-comment">in</span> <span class="hljs-comment">this</span> <span class="hljs-comment">direction</span><span class="hljs-string">.</span>
-<span class="hljs-literal">+</span><span class="hljs-comment">WWW</span><span class="hljs-literal">+</span>    <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>
-<span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>    <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>
-</code></pre><p>Unfortunatly the game does not allow your citizens to walk in magma. If a succubus is stuck because a puddle is in her way, you can wait for it to evaporate or dig around. Succubi inside magma will still evacuate without burning clothing or weapons but hauled items will be likely destroyed. Also, remember that magma is a liquid and someone can drown in it.</p>
+<p>Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock. Buildings marked with a star in its name must be powered by magma. You can easily provide magma to your dungeon by building a magma well. With this workshop, a pump operator create a magma “aquifer”. To do so, channel a canal in one direction from the well and run the appropriate reaction. The same magma well can also stop all those flows anytime you wish.</p>
+<p>Here’s an example :</p>
+<pre><code>  Z       Z-1
++++++    +++++ 
++WWW+    +++++
++WWW.    ++++~ -&gt; After channeling the east side, the well created a flow in this direction.
++WWW+    +++++
++++++    +++++
+</code></pre>
+<p>Unfortunatly the game does not allow your citizens to walk in magma. If a succubus is stuck because a puddle is in her way, you can wait for it to evaporate or dig around. Succubi inside magma will still evacuate without burning clothing or weapons but hauled items will be likely destroyed. Also, remember that magma is a liquid and someone can drown in it.</p>
 <p>If your succubi are running out of drinks, you can dig a magma channel next to a still and create a special drink.</p>
 <h3 id="magma-or-water-used-in-reactions">Magma or water used in reactions</h3>
 <p>Some jobs will claim to consume magma or water. This means that it will draw one level of the liquid from a tile located one z-level below the workshop. This will also work if the liquid is located next to the workshop one z-level below (ie after channeling a canal to it).</p>
 <p>For example, those two configurations are valid :</p>
-<pre><code><span class="hljs-literal">+</span> <span class="hljs-comment">=</span> <span class="hljs-comment">floor</span>
-<span class="hljs-comment">W</span> <span class="hljs-comment">=</span> <span class="hljs-comment">workshop</span>
-<span class="hljs-comment">~</span> <span class="hljs-comment">=</span> <span class="hljs-comment">water/magma</span>
-<span class="hljs-string">.</span> <span class="hljs-comment">=</span> <span class="hljs-comment">open</span> <span class="hljs-comment">space</span>
+<pre><code>+ = floor
+W = workshop
+~ = water/magma
+. = open space
 
-  <span class="hljs-comment">Z</span>       <span class="hljs-comment">Z</span><span class="hljs-literal">-</span><span class="hljs-comment">1</span>
-<span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>    <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span> 
-<span class="hljs-literal">+</span><span class="hljs-comment">WWW</span><span class="hljs-literal">+</span>    <span class="hljs-literal">+</span><span class="hljs-comment">~~~</span><span class="hljs-literal">+</span>
-<span class="hljs-literal">+</span><span class="hljs-comment">WWW</span><span class="hljs-literal">+</span>    <span class="hljs-literal">+</span><span class="hljs-comment">~~~</span><span class="hljs-literal">+</span> <span class="hljs-literal">-</span>&gt; <span class="hljs-comment">3x3</span> <span class="hljs-comment">workshop</span> <span class="hljs-comment">built</span> <span class="hljs-comment">over</span> <span class="hljs-comment">a</span> <span class="hljs-comment">3x3</span> <span class="hljs-comment">reservoir</span>
-<span class="hljs-literal">+</span><span class="hljs-comment">WWW</span><span class="hljs-literal">+</span>    <span class="hljs-literal">+</span><span class="hljs-comment">~~~</span><span class="hljs-literal">+</span>
-<span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>    <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>
+  Z       Z-1
++++++    +++++ 
++WWW+    +~~~+
++WWW+    +~~~+ -&gt; 3x3 workshop built over a 3x3 reservoir
++WWW+    +~~~+
++++++    +++++
 
 
-  <span class="hljs-comment">Z</span>         <span class="hljs-comment">Z</span><span class="hljs-literal">-</span><span class="hljs-comment">1</span>
-<span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>   <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span> 
-<span class="hljs-literal">+</span><span class="hljs-comment">WWW</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>   <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>
-<span class="hljs-literal">+</span><span class="hljs-comment">WWW</span><span class="hljs-string">.</span><span class="hljs-string">.</span><span class="hljs-string">.</span>   <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-comment">~~~</span> <span class="hljs-literal">-</span>&gt; <span class="hljs-comment">3x3</span> <span class="hljs-comment">workshop</span> <span class="hljs-comment">next</span> <span class="hljs-comment">to</span> <span class="hljs-comment">a</span> <span class="hljs-comment">channel</span> <span class="hljs-comment">filled</span> <span class="hljs-comment">with</span> <span class="hljs-comment">liquid</span>
-<span class="hljs-literal">+</span><span class="hljs-comment">WWW</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>   <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>
-<span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>   <span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span>
-</code></pre><h3 id="construction-materials">Construction materials</h3>
+  Z         Z-1
++++++++   +++++++ 
++WWW+++   +++++++
++WWW...   ++++~~~ -&gt; 3x3 workshop next to a channel filled with liquid
++WWW+++   +++++++
++++++++   +++++++
+</code></pre>
+<h3 id="construction-materials">Construction materials</h3>
 <p>Slade can be generated at no cost in an underworld drill to help you build your spires. However, its extreme weight implies that slade projects will take more time and builders to complete. A smart usage of stockpiles and wheelbarrows is recommended.</p>
 <p>If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace.</p>
 <h3 id="summoning">Summoning</h3>
 <p>You can spawn pets in your fort by building a summoning portal over a magma pit. Evil pets are useful for various tasks or can be butchered for food. A description of each pets abilities will be displayed while selecting the jobs from the summoning portal itself. Some creatures summoned from the portal are also intelligent and can perform civilian tasks or join the military.</p>
 <h3 id="corruption">Corruption</h3>
-<p>An unique feature from the succubi is their ability to twist the bodies and souls of their guests at their image. Their victims are turned into hybrids with various abilities depending of their former race. This is done at the den of iniquity. Running the 'Corrupt prisoners' job will transform nearby sentients and have them join your civilization. This include caged invaders if their cages are visible and close enough. Merchants and their guards can also join your forces in the process, but their pack animals will flee or go insane.</p>
+<p>An unique feature from the succubi is their ability to twist the bodies and souls of their guests at their image. Their victims are turned into hybrids with various abilities depending of their former race. This is done at the den of iniquity. Running the ‘Corrupt prisoners’ job will transform nearby sentients and have them join your civilization. This include caged invaders if their cages are visible and close enough. Merchants and their guards can also join your forces in the process, but their pack animals will flee or go insane.</p>
 <h3 id="giving-powers-to-your-succubi">Giving powers to your succubi</h3>
 <p>The Altar of Sin provides give additional interactions to your succubi. Those are seperated in major and minor categories with major providing several buffs and interactions and minor providing single spells. Each succubus can only acquire one minor and one major spell so you will have to discover the best combos and spread your upgrades among the key citizens of your fort.</p>
 <p>To select the target of an upgrade, you must use the workshop profile (Shift + P after selecting a Keeper of Secrets) and restrict the usage to only one worker. If the target is in the military, you will need to put the squad off duty until the target has acquired the power.</p>
@@ -77,11 +86,11 @@
 <p>Major powers act as secrets like necromancy does in vanilla and, in rare cases, will be researched by historical figures. While the succubi are already immortal, member from other races will be granted immortality upon acquiring one of those.</p>
 <p>The secrets of lust: a crowd control focused power. The user becomes a courtesan and gain immununity to fear plus the following interactions:</p>
 <ul>
-<li>Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stuning and paralyzing enemies.</li>
+<li>Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stunning and paralyzing enemies.</li>
 <li>Entice targets: Drop the targets strength and sometimes cause them to drop their weapons. Only work on intelligent targets.</li>
 <li>Sing an alluring song: Make the enemy slow and crazy for a short time, causing them to hit each other for a short time. The target may also flee in terror afterwards. Only work on intelligent targets.</li>
-<li>Draining kiss: Drop the target's attributes while buffing the user. The target may also fall asleep. The user must touch the enemy.</li>
-<li>A periodic 'lusty' bonus is indicated by a blinking purple question mark and allow the user to "release" themselves, gaining a big boost in speed and strength.</li>
+<li>Draining kiss: Drop the target’s attributes while buffing the user. The target may also fall asleep. The user must touch the enemy.</li>
+<li>A periodic ‘lusty’ bonus is indicated by a blinking purple question mark and allow the user to “release” themselves, gaining a big boost in speed and strength.</li>
 </ul>
 <p>The secrets of Hellfire: a destructive power. The user becomes a pyromaniac and gain immunity to fear, increased aggressiveness and the following interaction:</p>
 <ul>
@@ -90,9 +99,9 @@
 <li>Raise cloud of ash: Help breaking lines of sight while escaping.</li>
 <li>Spray dragonfire from magma: An cone of dragonfire, the user must stand in a square of magma that is not full to be able to do this.</li>
 </ul>
-<p>The secrets of depravity: a support oriented power that empower allies at the cost of the user's own abilities. The user becomes a debauchee and lose 20% of its attributes permanently in exchange of paralysis, pain, nausea and fever immunity plus the following:</p>
+<p>The secrets of depravity: a support oriented power that empower allies at the cost of the user’s own abilities. The user becomes a debauchee and lose 20% of its attributes permanently in exchange of paralysis, pain, nausea and fever immunity plus the following:</p>
 <ul>
-<li>Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stuning and paralyzing enemies (same as the secrets of lust).</li>
+<li>Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stunning and paralyzing enemies (same as the secrets of lust).</li>
 <li>Loving Caress: Touch the target and increase their attributes. The buff is contagious, meaning that the target can spread the buff to someone else for a short time and is indicated by a blinking question mark.</li>
 <li>Healing Kiss: Touch the target to heal it entirely. This interaction is also contagious, meaning that the target can in turn kiss other succubi to heal them.</li>
 <li>Resurrect a succubus: Target a succubus corpse to bring it back to life and fully healed.</li>
@@ -100,7 +109,7 @@
 <h4 id="minor-powers">Minor powers</h4>
 <ul>
 <li>Dimensional phasing: The user can teleport themselves and any nearby allies towards a combat target. This allow movement through windows and fortifications.</li>
-<li>Face melter: Cause a lot of pain, terror and, well... melting to te enemies around the user.</li>
+<li>Face melter: Cause a lot of pain, terror and, well… melting to te enemies around the user.</li>
 <li>Abyssal Gravity: Slam the target to the ground, causing wounds, stuns and sometimes death.</li>
 </ul>
 <h2 id="adventuring-as-a-succubus">Adventuring as a succubus</h2>
@@ -109,13 +118,13 @@
 <p>You can also play as a Frog Demon. Try biting people!</p>
 <h2 id="known-issues">Known issues</h2>
 <ul>
-<li>Embarking as dwarves? See "Selecting your race at the embark screen" above.</li>
-<li>Changing graphics in the Lazy Newb Pack deletes the mod. You'll have to reinstall it afterwards.</li>
-<li>Upon reaching your site's edge, traders will "kidnap" their own pets, this has no consequenses to your fort.</li>
+<li>Embarking as dwarves? See “Selecting your race at the embark screen” above.</li>
+<li>Changing graphics in the Lazy Newb Pack deletes the mod. You’ll have to reinstall it afterwards.</li>
+<li>Upon reaching your site’s edge, traders will “kidnap” their own pets, this has no consequenses to your fort.</li>
 <li>If a frog demon refuses to work or join the military, wait 3 days of game time and try again.</li>
 </ul>
 <h2 id="contact">Contact</h2>
-<p>If you have trouble using this mod, please post a message on the mod thread in the Bay 12 forum :
+<p>If you have trouble using this mod, please post a message on the mod thread in the Bay 12 forum :<br>
 <a href="http://www.bay12forums.com/smf/index.php?topic=124135.0">http://www.bay12forums.com/smf/index.php?topic=124135.0</a></p>
 <h2 id="credits">Credits</h2>
 <p>This mod has been assembled with the help of many contributions from the bay12 community:</p>
@@ -124,8 +133,8 @@
 <li>Phoebus color palette and creature sprite set</li>
 <li>dfhack maintained by Peterix and contributors</li>
 <li>K33N elves</li>
-<li>Falconne's UI improvements (mousequery, hotkeys and dwarfmonitor)</li>
-<li>Warmist's spawnunit script</li>
+<li>Falconne’s UI improvements (mousequery, hotkeys and dwarfmonitor)</li>
+<li>Warmist’s spawnunit script</li>
 <li>Teleport by Putnam</li>
 <li>Bits of Masterwork DF by Meph</li>
 <li>Dwarf chocolate by SethCreiyd</li>
@@ -133,7 +142,7 @@
 <li>Scripts by IndigoFenix</li>
 <li>The demon mod by Naryar</li>
 <li>Chiptune arrangements by Smoip</li>
-<li>PeridexisErrant's cutting-edge pack</li>
+<li>PeridexisErrant’s cutting-edge pack</li>
 <li>Bugfixes and various QoL maintenance work from Amostubal, thanks!</li>
 <li>Extra graphics sets by Meph, Nopal and Taffer</li>
 <li>And of course, Dwarf Fortress by Tarn and Zach Adams</li>
@@ -144,4 +153,7 @@
 <li>Meph</li>
 <li>chaosfiend</li>
 </ul>
-</body></html>
+</div>
+</body>
+
+</html>

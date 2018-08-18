@@ -1,7 +1,16 @@
 # Succubus Dungeon : Changelog #
 
+## 16.2
++ Updated to DF 0.44.12
+- Removed obsolete scripts
+- Generated better html readmes (https://stackedit.io)
+
 ## 16.1
-+ Updated to DF 44.09
++ Updated to DF 0.44.09
+
++ New powers added to the Altar of Sin
+- Depravity: A major power that drop the user's attributes to provide contagious buffs and resurrection.
+- Abyssal Gravity: A minor power that let you slam your enemies to the ground.
 
 + Misc
 - Converted the Readme and changelog in html forms for easier reading.
