@@ -106,3 +106,29 @@ item_succubus
 	[SIZE:110]
 	[MATERIAL_SIZE:1]
 	[NO_DEFAULT_JOB] // Uses one mat + 1 string to produce
+
+// Toys
+[ITEM_TOY:ITEM_TOY_HANDCUFFS]
+	[NAME:handcuff:handcuffs]
+	[HARD_MAT]
+
+[ITEM_TOY:ITEM_TOY_BLINDFOLD]
+	[NAME:blindfold:blindfolds]
+	[HARD_MAT]
+
+[ITEM_TOY:ITEM_TOY_FLOGGING_WHIP]
+	[NAME:flogging whip:flogging whips]
+	[HARD_MAT]
+
+// traps
+[ITEM_TRAPCOMP:ITEM_TRAPCOMP_BARBED_WIRE_ROLL]
+	[NAME:barbed wire:barbed wire]
+	[ADJECTIVE:roll of]
+	[SIZE:600]
+	[HITS:5]
+	[MATERIAL_SIZE:4]
+	[METAL]
+	[ATTACK:EDGE:20:100:cut:cuts:NO_SUB:500]
+		[ATTACK_PREPARE_AND_RECOVER:4:4]
+	[ATTACK:EDGE:20:100:scratch:scratches:NO_SUB:500]
+		[ATTACK_PREPARE_AND_RECOVER:4:4]

@@ -2,8 +2,7 @@ building_succubus
 
 [OBJECT:BUILDING]
 
-// Todo succubus lifestyle help when there is another thought workshop
-
+// Workshops
 [BUILDING_WORKSHOP:PLAYROOM_SUCCUBUS] // Good thoughts
 	[NAME:Pleasure Room]
 	[NAME_COLOR:7:0:1]
@@ -58,21 +57,27 @@ building_succubus
 	[COLOR:3:5:0:4:1:0:0:1:0:4:1:0:0:1:0:4:1]
   	[BUILD_ITEM:5:TOY:NONE:NONE:NONE]
 
+[BUILDING_WORKSHOP:CAMPFIRE]
+	[NAME:Campfire]
+	[NAME_COLOR:7:0:1]
+	[DIM:1:1]
+	[WORK_LOCATION:1:1]
+	[BUILD_KEY:CUSTOM_ALT_F]
+	[BLOCK:1:0]
+	[TILE:0:1:254]
+	[COLOR:0:1:0:0:1]
+	[TILE:1:1:254]
+	[COLOR:1:1:7:0:1]
+	[TILE:2:1:254]
+	[COLOR:2:1:0:0:1]
+	[TILE:3:1:254]
+	[COLOR:3:1:7:0:2]
+	[BUILD_ITEM:1:WOOD:NONE:NONE:NONE]
 
-[BUILDING_WORKSHOP:SUCCUBUS_HELP_CRAFTS] // todo draw
+[BUILDING_WORKSHOP:SUCCUBUS_HELP_CRAFTS]
 	[NAME:=== SUCCUBUS CRAFTS ===]
 	[WORK_LOCATION:1:1]
-	[NAME_COLOR:7:0:0]
-	[DIM:7:1]
-	[BLOCK:1:0:0:0:0:0:0:0]
-	[TILE:0:1:32:32:32:32:32:32:32]
-	[COLOR:0:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0]
-	[TILE:1:1:32:32:32:32:32:32:32]
-	[COLOR:1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0]
-	[TILE:2:1:32:32:32:32:32:32:32]
-	[COLOR:2:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0]
-	[TILE:3:1:82:105:116:117:97:108:115]
-	[COLOR:3:1:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0]
+	[NAME_COLOR:7:0:1]
 
 [BUILDING_WORKSHOP:FIRE_SHAPER] // Fire items
 	[NAME:*Fire shaper]
@@ -178,7 +183,6 @@ building_succubus
 	[TILE:3:1:82:105:116:117:97:108:115]
 	[COLOR:3:1:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0:7:0:0]
 
-// Workshops
 [BUILDING_WORKSHOP:DEN_OF_INIQUITY] // Creature corruption
 	[NAME:Den of iniquity]
 	!NODIMENSION!NAME:Den of iniquity 3x3]
@@ -286,7 +290,7 @@ building_succubus
 		[FIRE_BUILD_SAFE] 
 		[CAN_USE_ARTIFACT]
 
-[BUILDING_WORKSHOP:FOOCCUBUS_EERIE] // Site wide spells
+[BUILDING_WORKSHOP:FOOCCUBUS_EERIE] // Site wide spells (currently not working)
 	[NAME:*Eerie glowing canal]
 	!NODIMENSION!NAME:*Eerie glowing canal 5x5]
 	[BUILD_KEY:CUSTOM_SHIFT_E]
@@ -381,7 +385,7 @@ building_succubus
 		[CAN_USE_ARTIFACT]
 
 // Furnaces
-[BUILDING_FURNACE:SUCCUBUS_HELP_RESOURCE] // todo draw
+[BUILDING_FURNACE:SUCCUBUS_HELP_RESOURCE]
 	[NAME:=== SUCCUBUS RESOURCES ===]
 	[WORK_LOCATION:1:1]
 	[NAME_COLOR:7:0:0]

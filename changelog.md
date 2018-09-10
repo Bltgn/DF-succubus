@@ -1,5 +1,16 @@
 # Succubus Dungeon : Changelog #
 
+## 16.3
++ Fixed the summoning portal.
++ Removed training weapons.
++ Removed the old decoration workshop and their TWBT entries.
++ Imported the new brick oven from Meph's, with all their colors.
++ Imported the bone cutter from Meph's.
+
++ If installed on the Meph tileset, the following decorations and workshops will be added.
+- Carpets, garden, statues, objects, etc.
+- Icecutter
+
 ## 16.2
 + Updated to DF 0.44.12
 - Removed obsolete scripts
