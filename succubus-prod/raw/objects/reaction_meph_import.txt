@@ -1,4 +1,4 @@
-reaction_z_meph_import
+reaction_meph_import
 
 [OBJECT:REACTION]
 
@@ -27,7 +27,6 @@ reaction_z_meph_import
 	[PRODUCT:100:1:BAR:NO_SUBTYPE:ASH:NO_MATGLOSS][PRODUCT_DIMENSION:150]
 	[SKILL:WOOD_BURNING]
 
-
 // Extras
 [REACTION:MAKE_CRYSTAL_ROCK]
 [NAME:Smelt sand and lead into rough rock crystals.]
@@ -44,7 +43,6 @@ reaction_z_meph_import
 		[DOES_NOT_DETERMINE_PRODUCT_AMOUNT]
 	[PRODUCT:100:3:ROUGH:NONE:INORGANIC:CRYSTAL_ROCK]
 	[SKILL:SMELT]
-
 
 // Bonecutter
 [REACTION:BONE_BLOCKS]
@@ -189,3 +187,147 @@ reaction_z_meph_import
 		[USE_BODY_COMPONENT][ANY_BONE_MATERIAL][DOES_NOT_DETERMINE_PRODUCT_AMOUNT]
 	[PRODUCT:100:1:WEAPONRACK:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
 	[SKILL:BONECARVE]
+
+[REACTION:ICE_BLOCKS]
+	[NAME:Make blocks from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create 4 ice blocks.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_B]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:4:BLOCKS:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_ARMORSTAND]
+	[NAME:Make armorstand from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_C]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:ARMORSTAND:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_BED]
+	[NAME:Make bed from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_D]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:BED:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_CABINET]
+	[NAME:Make cabinet from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_J]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:CABINET:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_CHEST]
+	[NAME:Make chest from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_L]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:BOX:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_COFFIN]
+	[NAME:Make coffin from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_M]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:COFFIN:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_DOOR]
+	[NAME:Make door from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_N]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:DOOR:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_HATCH_COVER]
+	[NAME:Make hatch cover from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_S]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:HATCH_COVER:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_SLAB]
+	[NAME:Make slab from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_SHIFT_D]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:SLAB:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+
+[REACTION:ICE_STATUE]
+	[NAME:Make statue from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_SHIFT_F]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:STATUE:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_TABLE]
+	[NAME:Make table from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_SHIFT_G]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:TABLE:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_CHAIR]
+	[NAME:Make throne from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_SHIFT_H]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:CHAIR:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
+
+[REACTION:ICE_WEAPONRACK]
+	[NAME:Make weaponrack from an ice boulder]
+	[DESCRIPTION:Takes an ice boulder to create furniture.]
+	[DESCRIPTION:]
+	[DESCRIPTION:Uses engraving skill. Note that ice items melt if temperatures are high enough.]
+	[BUILDING:ICECUTTER:CUSTOM_SHIFT_M]
+	[REAGENT:A:1:BOULDER:NONE:WATER:NONE]
+		*
+	[PRODUCT:100:1:WEAPONRACK:NONE:GET_MATERIAL_FROM_REAGENT:A:NONE]
+	[SKILL:DETAILSTONE]
