@@ -342,9 +342,9 @@ else
   dfhack.run_command('base/persist-delay')
   dfhack.run_command('base/liquids-update')
   dfhack.run_command('base/flows-update')
-  dfhack.run_command('base/on-death')
-  dfhack.run_command('base/on-time')
-  dfhack.run_command('base/periodic-check')
+  --dfhack.run_command('base/on-death')
+  --dfhack.run_command('base/on-time')
+  --dfhack.run_command('base/periodic-check')
  end
 end
 

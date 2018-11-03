@@ -87,8 +87,6 @@ modtools/reaction-trigger -reactionName BLUE_TELEPORT_SQUAD -command [ succubus/
 modtools/reaction-trigger -reactionName ORANGE_TELEPORT -command [ succubus/teleport unit \\WORKER_ID 2 1/1/0 ]
 modtools/reaction-trigger -reactionName ORANGE_TELEPORT_SQUAD -command [ succubus/teleport unit \\WORKER_ID 2 10/10/0 ]
 
-#################### run the succubus/init ####################
-succubus/init
-
+succubus/start-announcement
 :lua print(' ')
 :lua print('Succubus Initialization complete.  Turn up the heat!')
