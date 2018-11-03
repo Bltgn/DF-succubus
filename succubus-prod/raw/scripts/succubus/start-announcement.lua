@@ -1,0 +1,2 @@
+dfhack.gui.showAnnouncement("Welcome to the succubus mode, star marked buildings are magma powered.", COLOR_WHITE)
+dfhack.gui.showAnnouncement("You can use the magma well to generate magma.", COLOR_WHITE)
