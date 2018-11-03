@@ -1,5 +1,10 @@
 # Succubus Dungeon : Changelog #
 
+## 16.4
++ Added graphics for frog demons with child and animated version.
++ Optimized performance when there is a lot of underground creatures.
++ Added extra body part back for naughty sparring logs.
+
 ## 16.3
 + Fixed the summoning portal.
 + Removed training weapons.
