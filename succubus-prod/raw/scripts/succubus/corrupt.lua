@@ -25,7 +25,7 @@ if not dfhack.isMapLoaded() then qerror('Map is not loaded.') end
 
 -- Dependencies
 local utils = require 'utils'
-local mo = require 'makeown'
+local mo = dfhack.script_environment('succubus/makeown')
 local fov = dfhack.script_environment('modtools/fov')
 local teleport = dfhack.script_environment('teleport')
 
@@ -158,20 +158,19 @@ function clearMerchant(unit)
 	local draggee
 
 	-- Free the draggee as well and makeown + tame it
-	if -1 ~= unit.relations.draggee_id then
-		dragee = utils.binsearch(df.global.world.units.active, unit.relations.draggee_id, 'id')
+	if -1 ~= unit.relationship_ids.Draggee then
+		dragee = utils.binsearch(df.global.world.units.active, unit.relationship_ids.Draggee, 'id')
 
 		if dragee then
 			mo.make_own(dragee)
-			dragee.relations.dragger_id = -1
+			dragee.relationship_ids.Dragger = -1
 			dragee.flags1.tame = true
 			dragee.training_level = df.animal_training_level.Domesticated
 		end
 	end
 
-	unit.relations.draggee_id = -1
-	unit.relations.rider_mount_id = -1
-	unit.relations.mount_type = 0
+	unit.relationship_ids.Draggee = -1
+	unit.relationship_ids.RiderMount = -1
 	unit.flags1.rider = 0
 end
 
@@ -186,7 +185,7 @@ function clearCage(unit)
 	unit.flags1.caged = false
 end
 
--- Takes down any hostility flags that mo didn't handle
+-- Takes down any hostility flags that makeown didn't handle
 function clearHostile(unit)
 	unit.population_id = popId
 	unit.cultural_identity = -1
@@ -207,8 +206,8 @@ function clearHostile(unit)
 	unit.flags2.calculated_bodyparts = false
 
 	unit.invasion_id = -1
-	unit.relations.group_leader_id = -1
-	unit.relations.last_attacker_id = -1
+	unit.relationship_ids.GroupLeader = -1
+	unit.relationship_ids.LastAttacker = -1
 
 	unit.flags3.body_part_relsize_computed = false
 	unit.flags3.body_temp_in_range = true
@@ -228,14 +227,8 @@ function clearHostile(unit)
     unit.counters.soldier_mood_countdown = -1
     unit.counters.death_cause = -1
 
-    -- weird, unknown territory
-    unit.enemy.anon_4 = -1
-    unit.enemy.anon_5 = -1
-    unit.enemy.anon_6 = -1
-	unit.enemy.anon_7 = 0
-    unit.status2.unk_7c0 = -1
-    unit.enemy.unk_v40_2_count = 11
-    --unit.unk_100 = 3
+    unit.enemy.army_controller_id = -1
+    unit.enemy.enemy_status_slot = 0
 end
 
 -- Change the creature race, take down hostility and  merchant flags, free cages and trading
@@ -263,14 +256,13 @@ function corrupt(unit)
 	end
 	
 	mo.make_own(unit)
-	mo.make_citizen(unit)
 
 	-- Setting announcements
 	if unit.flags1.merchant == true then 
 		announceMerchant = true 
 	end
 
-	-- Removes all the previous behaviour
+	-- Removes all the previous behaviours
 	clearEnemy(unit)
 	clearHostile(unit)
 	clearMerchant(unit)

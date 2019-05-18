@@ -8,7 +8,6 @@ Features
 
 * A new race.
 * Fast and fire immune citizens.
-* The reintroduction of classic lore into Dwarf Fortress such as 40d demons.
 * Generate magma anywhere, make magma forges, traps, waterfalls...
 * Generating slade blocks to build an authentic demonic spire.
 * Generate fuel for your forges out of thin air.
@@ -18,8 +17,7 @@ Features
 Installation
 ------------
 
-* Install Dwarf Fortress 44.05, using a starter pack is recommended.
-* Install dfhack for the appropriate DF version.
+* Install Dwarf Fortress 44.12 with dfhack, using a starter pack is recommended.
 * Extract the archive in your DF folder, preserving the folder structure.
 * Generate a new world and select a succubus civ to play.
 
@@ -31,6 +29,20 @@ Installation
 
 Playing as Succubi
 ------------------
+
+### Nobles and Positions
+
+Here are the administratives positions and their dwarven equivalents :
+* Dungeon matron and Spire matriarch -> Expedition Leader and Mayor
+* Keeper of Secrets -> Both Book Keeper and Manager, enable accounting and the job manager
+* Greedy Dealer -> Broker
+* Lady of Pain -> Militia commander, enable military orders
+* Battle Guide -> Militia captain
+* Enforcer and Oppressor -> Sheriff and Captain of the guard, enable justice
+* Whipper -> Hammerer, they also handle unhappy workers
+* Wound Mender -> Chief medial dwarf
+
+The civiliation nobles are as usual with a monarch, a general and priestess plus local regents who can designate champions.
 
 ### Magma
 
@@ -46,16 +58,13 @@ Here's an example :
 +++++    +++++
 ```
 
-Unfortunatly the game does not allow your citizens to walk in magma. If a succubus is stuck because a puddle is in her way, you can wait for it to evaporate or dig around. Succubi inside magma will still evacuate without burning clothing or weapons but hauled items will be likely destroyed. Also, remember that magma is a liquid and someone can drown in it.
-
-If your succubi are running out of drinks, you can dig a magma channel next to a still and create a special drink.
+The game being designed for creatures that die in magma, movement and pathing may behave strangely. Succubi may walk into magma and their clothing will not be affected, but hauled items or wagons will burn. If you construct a magma moat, it is best to fill at 6 or 7 levels deep or else caravans will got for a dip.
 
 ### Magma or water used in reactions
 
-Some jobs will claim to consume magma or water. This means that it will draw one level of the liquid from a tile located one z-level below the workshop. This will also work if the liquid is located next to the workshop one z-level below (ie after channeling a canal to it).
+Some jobs will claim to consume magma or water. This means that it will draw liquid from a tile located one z-level below or nest to the workshop.
 
-For example, those two configurations are valid :
-
+Those two configurations are valid :
 ```
 + = floor
 W = workshop
@@ -65,17 +74,17 @@ W = workshop
   Z       Z-1
 +++++    +++++ 
 +WWW+    +~~~+
-+WWW+    +~~~+ -> 3x3 workshop built over a 3x3 reservoir
++WWW+    +~~~~ -> 3x3 workshop built over a reservoir.
 +WWW+    +~~~+
 +++++    +++++
 
 
   Z         Z-1
-+++++++   +++++++ 
-+WWW+++   +++++++
-+WWW...   ++++~~~ -> 3x3 workshop next to a channel filled with liquid
-+WWW+++   +++++++
-+++++++   +++++++
+++++++   ++++++ 
++WWW++   ++++++
++WWW..   ++++~~ -> 3x3 workshop next to a channel filled with liquid
++WWW++   ++++++
+++++++   ++++++
 ```
 
 ### Construction materials
@@ -124,7 +133,7 @@ The secrets of depravity: a support oriented power that empower allies at the co
 #### Minor powers
 
 * Dimensional phasing: The user can teleport themselves and any nearby allies towards a combat target. This allow movement through windows and fortifications.
-* Face melter: Cause a lot of pain, terror and, well... melting to te enemies around the user.
+* Face melter: Cause a lot of pain, terror and melting to the enemies around the user.
 * Abyssal Gravity: Slam the target to the ground, causing wounds, stuns and sometimes death.
 
 Adventuring as a succubus
