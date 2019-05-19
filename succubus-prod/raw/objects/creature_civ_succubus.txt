@@ -784,6 +784,7 @@ creature_civ_succubus
 			[APP_MOD_IMPORTANCE:1000]
 			[APP_MOD_NOUN:teeth:PLURAL]
 			[APP_MOD_DESC_RANGE:30:60:90:110:150:190]
+	// This do not look great, let's wait and see if body descriptors improve in the future.
 	SET_BP_GROUP:BY_CATEGORY:BOOBS]
 		BP_APPEARANCE_MODIFIER:DEEP_SET:0:30:50:70:90:100:100]
 			APP_MOD_NOUN:breasts:PLURAL]
@@ -817,6 +818,7 @@ creature_civ_succubus
 			[BP_APPEARANCE_MODIFIER:BROAD_CHIN:0:70:90:100:110:130:200]
 			[BP_APPEARANCE_MODIFIER:JUTTING_CHIN:0:70:90:100:110:120:140]
 			[BP_APPEARANCE_MODIFIER:SQUARE_CHIN:0:70:90:100:110:115:140]
+		// This do not look great, let's wait and see if body descriptors improve in the future.
 		SET_BP_GROUP:BY_CATEGORY:TEET]
 			BP_APPEARANCE_MODIFIER:DEEP_SET:80:85:90:100:110:120:130]
 				APP_MOD_NOUN:nipples:PLURAL]

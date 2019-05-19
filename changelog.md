@@ -1,4 +1,5 @@
-# Succubus Dungeon : Changelog #
+Succubus Dungeon : Changelog
+============================
 
 ## 16.4
 + Added graphics child and undead frog demons sprites.
