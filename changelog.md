@@ -1,4 +1,12 @@
-# Succubus Dungeon : Changelog #
+Succubus Dungeon : Changelog
+============================
+
+## 16.4
++ Added graphics child and undead frog demons sprites.
++ Fixed stuttering for sites with many underground creatures.
++ Added a succubus-to-dwarf positions info to the readme.
++ Updated the magma well flow script to Rose's latest version.
++ Fixed errors and crashes related to the den of iniquity.
 
 ## 16.3
 + Fixed the summoning portal.

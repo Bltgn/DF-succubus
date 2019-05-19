@@ -1,30 +1,28 @@
 Succubus Dungeon
 ================
 
-Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a new evil civ. It is developed one feature at a time and new features is added regularly.
+Succubus Dungeon is a mod for vanilla and Masterwork Dwarf Fortress featuring a new evil civ.
 
 Features
 --------
 
 * A new race.
 * Fast and fire immune citizens.
-* The reintroduction of classic lore into Dwarf Fortress such as 40d demons.
 * Generate magma anywhere, make magma forges, traps, waterfalls...
 * Generating slade blocks to build an authentic demonic spire.
 * Generate fuel for your forges out of thin air.
 * Capture invaders and turn them into half demons.
 * Summon powerful creatures to your side, some are intelligent and can join your military.
+* Give magic powers to your select citizens.
 
-Installation
-------------
+Manual Installation
+-------------------
 
-* Install Dwarf Fortress 44.05, using a starter pack is recommended.
-* Install dfhack for the appropriate DF version.
+* Install Dwarf Fortress 44.12 with dfhack, using a starter pack is recommended.
 * Extract the archive in your DF folder, preserving the folder structure.
 * Generate a new world and select a succubus civ to play.
 
-### IMPORTANT: Selecting your race at the embark screen
-* By default, only the succubi are playable, but if you add other mods, you may have several choices.
+### Selecting your race at the embark screen
 * Press tab before embarking until seeing a list of civilization names.
 * Press + and - to chose a civ that uses the cabinet tile (π) to display its colonies on the map.
 * Pressing tab again until seeing the list of neighbors will confirm your choice, your selected race is the first one.
@@ -32,11 +30,25 @@ Installation
 Playing as Succubi
 ------------------
 
+### Nobles and Positions
+
+Here are the administratives positions and their dwarven equivalents:
+* Dungeon matron and Spire matriarch -> Expedition Leader and Mayor
+* Keeper of Secrets -> Both Book Keeper and Manager, enables accounting and the job manager
+* Greedy Dealer -> Broker
+* Lady of Pain -> Militia commander, enables military orders
+* Battle Guide -> Militia captain
+* Enforcer and Oppressor -> Sheriff and Captain of the guard, enables justice
+* Whipper -> Hammerer, they also handle unhappy workers
+* Wound Mender -> Chief medial dwarf
+
+The civiliation nobles are as usual with a monarch, a general and priestess plus local regents who can designate champions.
+
 ### Magma
 
 Magma is a major resource for this race. Succubi are immune to heat and many of their workshops are powered by molten rock. Buildings marked with a star in its name must be powered by magma. You can easily provide magma to your dungeon by building a magma well. With this workshop, a pump operator create a magma "aquifer". To do so, channel a canal in one direction from the well and run the appropriate reaction. The same magma well can also stop all those flows anytime you wish.
 
-Here's an example :
+Here's an example:
 ```
   Z       Z-1
 +++++    +++++ 
@@ -46,16 +58,13 @@ Here's an example :
 +++++    +++++
 ```
 
-Unfortunatly the game does not allow your citizens to walk in magma. If a succubus is stuck because a puddle is in her way, you can wait for it to evaporate or dig around. Succubi inside magma will still evacuate without burning clothing or weapons but hauled items will be likely destroyed. Also, remember that magma is a liquid and someone can drown in it.
-
-If your succubi are running out of drinks, you can dig a magma channel next to a still and create a special drink.
+The game being designed for creatures that die in magma, movement and pathing may behave strangely. Succubi may walk into magma and their clothing will not be affected, but hauled items or wagons will burn. If you construct a magma moat, it is best to fill at 6 or 7 levels deep or else caravans will got for a dip.
 
 ### Magma or water used in reactions
 
-Some jobs will claim to consume magma or water. This means that it will draw one level of the liquid from a tile located one z-level below the workshop. This will also work if the liquid is located next to the workshop one z-level below (ie after channeling a canal to it).
+Some jobs will claim to consume magma or water. This means that it will draw liquid from a tile located one z-level below or nest to the workshop.
 
-For example, those two configurations are valid :
-
+Those two configurations are valid:
 ```
 + = floor
 W = workshop
@@ -65,24 +74,24 @@ W = workshop
   Z       Z-1
 +++++    +++++ 
 +WWW+    +~~~+
-+WWW+    +~~~+ -> 3x3 workshop built over a 3x3 reservoir
++WWW+    +~~~~ -> 3x3 workshop built over a reservoir.
 +WWW+    +~~~+
 +++++    +++++
 
 
-  Z         Z-1
-+++++++   +++++++ 
-+WWW+++   +++++++
-+WWW...   ++++~~~ -> 3x3 workshop next to a channel filled with liquid
-+WWW+++   +++++++
-+++++++   +++++++
+  Z       Z-1
+++++++   ++++++ 
++WWW++   ++++++
++WWW..   ++++~~ -> 3x3 workshop next to a channel filled with liquid
++WWW++   ++++++
+++++++   ++++++
 ```
 
 ### Construction materials
 
 Slade can be generated at no cost in an underworld drill to help you build your spires. However, its extreme weight implies that slade projects will take more time and builders to complete. A smart usage of stockpiles and wheelbarrows is recommended.
 
-If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is ten times more efficient than a regular glass furnace.
+If you wish to make a glass tower instead, glass blocks can easily be produced using the Floating Glass Furnace, built using a tin bar. This workshop is more efficient than a regular glass furnace.
 
 ### Summoning
 
@@ -90,11 +99,15 @@ You can spawn pets in your fort by building a summoning portal over a magma pit.
 
 ### Corruption
 
-An unique feature from the succubi is their ability to twist the bodies and souls of their guests at their image. Their victims are turned into hybrids with various abilities depending of their former race. This is done at the den of iniquity. Running the 'Corrupt prisoners' job will transform nearby sentients and have them join your civilization. This include caged invaders if their cages are visible and close enough. Merchants and their guards can also join your forces in the process, but their pack animals will flee or go insane.
+An unique feature from the succubi is their ability to twist the bodies and souls of their guests at their image. Their victims are turned into hybrids with various abilities depending of their former race. This is done at the den of iniquity. Running the 'Corrupt foreigners' job will transform nearby sentients and have them join your civilization. This include caged invaders if their cages are visible and close enough. Merchants and their guards can also join your forces in the process, but their pack animals will flee or go insane.
+
+Results may vary if you mix this mod with others. Currently only Fortress Defense and Masterwork Dwarf Fortress are supported.
 
 ### Giving powers to your succubi
 
-The Altar of Sin provides give additional interactions to your succubi. Those are seperated in major and minor categories with major providing several buffs and interactions and minor providing single spells. Each succubus can only acquire one minor and one major spell so you will have to discover the best combos and spread your upgrades among the key citizens of your fort.
+The Altar of Sin provides give additional interactions to your succubi. Those are seperated in major and minor categories with major providing several buffs and interactions and minor providing single spells. 
+
+Each succubus can only acquire one minor and one major spell so you will have to discover the best combos and spread your upgrades among the key citizens of your fort.
 
 To select the target of an upgrade, you must use the workshop profile (Shift + P after selecting a Keeper of Secrets) and restrict the usage to only one worker. If the target is in the military, you will need to put the squad off duty until the target has acquired the power.
 
@@ -102,29 +115,29 @@ To select the target of an upgrade, you must use the workshop profile (Shift + P
 
 Major powers act as secrets like necromancy does in vanilla and, in rare cases, will be researched by historical figures. While the succubi are already immortal, member from other races will be granted immortality upon acquiring one of those.
 
-The secrets of lust: a crowd control focused power. The user becomes a courtesan and gain immununity to fear plus the following interactions:
-* Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stunning and paralyzing enemies.
-* Entice targets: Drop the targets strength and sometimes cause them to drop their weapons. Only work on intelligent targets.
-* Sing an alluring song: Make the enemy slow and crazy for a short time, causing them to hit each other for a short time. The target may also flee in terror afterwards. Only work on intelligent targets.
-* Draining kiss: Drop the target's attributes while buffing the user. The target may also fall asleep. The user must touch the enemy.
-* A periodic 'lusty' bonus is indicated by a blinking purple question mark and allow the user to "release" themselves, gaining a big boost in speed and strength.
+The secrets of lust: A crowd control focused power. The user becomes a courtesan and gain immununity to fear plus the following interactions:
+* Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain and stun enemies.
+* Entice targets: Drop the targets strength and sometimes cause them to drop their weapons.
+* Alluring song: Make the enemy slow and crazy for a short time, causing them to hit each other. The target may also flee in terror afterwards.
+* Draining kiss: A close combat atttack that drop the target's attributes while buffing the user. The target may also fall asleep.
+* A periodic 'lusty' bonus is indicated by a blinking purple question mark and allow the user to "release" themselves, gaining a boost in speed and strength.
 
-The secrets of Hellfire: a destructive power. The user becomes a pyromaniac and gain immunity to fear, increased aggressiveness and the following interaction:
+The secrets of Hellfire: A destructive power. The user becomes a pyromaniac and gain immunity to fear, increased aggressiveness and the following interactions:
 * Breath flames: Emit a cone of fire.
 * Throw fireball: A longer range fire attack.
 * Raise cloud of ash: Help breaking lines of sight while escaping.
-* Spray dragonfire from magma: An cone of dragonfire, the user must stand in a square of magma that is not full to be able to do this.
+* Spray dragonfire from magma: An cone of dragonfire, the user must stand in a square of magma.
 
-The secrets of depravity: a support oriented power that empower allies at the cost of the user's own abilities. The user becomes a debauchee and lose 20% of its attributes permanently in exchange of paralysis, pain, nausea and fever immunity plus the following:
-* Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain while stunning and paralyzing enemies (same as the secrets of lust).
-* Loving Caress: Touch the target and increase their attributes. The buff is contagious, meaning that the target can spread the buff to someone else for a short time and is indicated by a blinking question mark.
+The secrets of depravity: A support oriented power that empower allies at the cost of the user's own abilities. The user becomes a debauchee and lose 20% of their attributes in exchange of paralysis, pain, nausea and fever immunity plus the following interactions:
+* Release pheromones: Emit a cloud of pheromones that render nearby succubi immune to pain and stun enemies.
+* Loving Caress: Touch the target and increase their attributes. The buff is contagious, meaning that the target can spread the buff to someone else for a short time.
 * Healing Kiss: Touch the target to heal it entirely. This interaction is also contagious, meaning that the target can in turn kiss other succubi to heal them.
-* Resurrect a succubus: Target a succubus corpse to bring it back to life and fully healed.
+* Resurrect a succubus: Target a succubus corpse to bring it back to life and fully healed. The debauchee tend to only resurrect succubi when in danger so it will not work during peace time, unless you set this up.
 
 #### Minor powers
 
 * Dimensional phasing: The user can teleport themselves and any nearby allies towards a combat target. This allow movement through windows and fortifications.
-* Face melter: Cause a lot of pain, terror and, well... melting to te enemies around the user.
+* Face melter: Cause a lot of pain, terror and melting to the enemies around the user.
 * Abyssal Gravity: Slam the target to the ground, causing wounds, stuns and sometimes death.
 
 Adventuring as a succubus
@@ -132,7 +145,7 @@ Adventuring as a succubus
 
 Civilizations living in dark fortresses are not as well developed than dwarven or human ones for adventure. As a result, a succubus begin their journey in an empty pit without the ability to fast travel. It is recommended that you start playing as a succubus assimilated into another civilization, preferably human (# tiles on the world map) or dwarven (Ω tiles on the world map).
 
-If you start in a pit, you can open the regional map (shift + Q) to spot the nearest dark fortress then travel by foot in this direction to find people to talk to. Wandering around, you may also find dungeons with equipment and towers with population on its roof. If you are unable to reach the roof, try pressing alt+direction to open the hatch above your head.
+If you start in a pit, you can open the regional map (shift + Q) to spot the nearest dark fortress then travel by foot in this direction to find people to talk to. Wandering around, you may also find dungeons with equipment and towers with population on its roof. To reach the roof of a tower, press alt+direction to open the hatch above your head.
 
 You can also play as a Frog Demon. Try biting people!
 
