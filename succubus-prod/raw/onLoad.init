@@ -1,6 +1,229 @@
+masterwork-version
+
+:lua print(' ')
+:lua print('Running World Initialization.')
+
+#################### Liquid-initiation ###################
+:lua print(' ')
+:lua print('Initializing water, pay the bills.')
+base/roses-init
+
+#################### embark points and embark group ####################
+:lua print(' ')
+:lua print('Initializing embark settings.')
+points 1274
+startdwarf 7
+embark-tools anywhere
+removefirewood
+#addwood
+
+
+
+#################### add creatures to civs ####################
+:lua print(' ')
+:lua print('Add pets to their respective civs.')
+AddMinionToCiv
+AddMountToCiv
+#AddPackToCiv
+#AddPullToCiv
+AddPetToCiv
+
+AddPetToCiv -civ KOBOLD -race SHALSWAR -caste MALE
+AddPetToCiv -civ KOBOLD -race SHALSWAR -caste FEMALE
+AddPetToCiv -civ KOBOLD -race RAT_KOBOLD -caste MALE
+AddPetToCiv -civ KOBOLD -race RAT_KOBOLD -caste FEMALE
+AddPetToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste MALE
+AddPetToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste FEMALE
+AddPetToCiv -civ KOBOLD -race BIRD_KEA -caste MALE
+AddPetToCiv -civ KOBOLD -race BIRD_KEA -caste FEMALE
+AddPetToCiv -civ KOBOLD -race HONEY_BADGER -caste MALE
+AddPetToCiv -civ KOBOLD -race HONEY_BADGER -caste FEMALE
+AddPetToCiv -civ KOBOLD -race AARDVARK -caste MALE
+AddPetToCiv -civ KOBOLD -race AARDVARK -caste FEMALE
+AddPetToCiv -civ KOBOLD -race LEMMING -caste MALE
+AddPetToCiv -civ KOBOLD -race LEMMING -caste FEMALE
+AddPetToCiv -civ KOBOLD -race HELMET_SNAKE -caste MALE
+AddPetToCiv -civ KOBOLD -race HELMET_SNAKE -caste FEMALE
+AddPetToCiv -civ KOBOLD -race ADDER -caste MALE
+AddPetToCiv -civ KOBOLD -race ADDER -caste FEMALE
+AddPetToCiv -civ KOBOLD -race GIANT_BARK_SCORPION -caste MALE
+AddPetToCiv -civ KOBOLD -race GIANT_BARK_SCORPION -caste FEMALE
+AddPetToCiv -civ KOBOLD -race SPIDER_CAVE_GIANT -caste MALE
+AddPetToCiv -civ KOBOLD -race SPIDER_CAVE_GIANT -caste FEMALE
+
+AddPullToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste MALE
+AddPullToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste FEMALE
+
+AddPackToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste MALE
+AddPackToCiv -civ KOBOLD -race RAT_KOBOLD_GIANT -caste FEMALE
+
+AddMountToCiv -civ KOBOLD -race GIANT_BARK_SCORPION -caste MALE
+AddMountToCiv -civ KOBOLD -race GIANT_BARK_SCORPION -caste FEMALE
+
+AddMinionToCiv -civ KOBOLD -race OGRE -caste MALE
+AddMinionToCiv -civ KOBOLD -race OGRE -caste FEMALE
+
+AddPetToCiv -civ ORC -race SQUIG -caste FEMALE
+AddPetToCiv -civ ORC -race SQUIG -caste WOOLY
+AddPetToCiv -civ ORC -race SQUIG -caste MALE
+AddPetToCiv -civ ORC -race SQUIG -caste GROWLER
+AddPetToCiv -civ ORC -race SQUIG -caste TERRIER
+AddPetToCiv -civ ORC -race TAIGA_SABRECAT -caste FEMALE
+AddPetToCiv -civ ORC -race TAIGA_SABRECAT -caste MALE
+AddPetToCiv -civ ORC -race ARCTIC_CONDOR -caste FEMALE
+AddPetToCiv -civ ORC -race ARCTIC_CONDOR -caste MALE
+AddPetToCiv -civ ORC -race STEPPE_AUROCHS -caste FEMALE
+AddPetToCiv -civ ORC -race STEPPE_AUROCHS -caste MALE
+AddPetToCiv -civ ORC -race SHAGGY_MUMAK -caste FEMALE
+AddPetToCiv -civ ORC -race SHAGGY_MUMAK -caste MALE
+AddPetToCiv -civ ORC -race DIRE_WOLF_ORC -caste FEMALE
+AddPetToCiv -civ ORC -race DIRE_WOLF_ORC -caste MALE
+AddPetToCiv -civ ORC -race WILD_BOAR -caste MALE
+AddPetToCiv -civ ORC -race WILD_BOAR -caste FEMALE
+AddPetToCiv -civ ORC -race BIRD_RAVEN -caste MALE
+AddPetToCiv -civ ORC -race BIRD_RAVEN -caste FEMALE
+
+AddPackToCiv -civ ORC -race STEPPE_AUROCHS -caste MALE
+AddPackToCiv -civ ORC -race STEPPE_AUROCHS -caste FEMALE
+
+AddMountToCiv -civ ORC -race DIRE_WOLF_ORC -caste MALE
+AddMountToCiv -civ ORC -race DIRE_WOLF_ORC -caste FEMALE
+AddMountToCiv -civ ORC -race TAIGA_SABRECAT -caste MALE
+AddMountToCiv -civ ORC -race TAIGA_SABRECAT -caste FEMALE
+AddMountToCiv -civ ORC -race GIANT_WILD_BOAR -caste MALE
+AddMountToCiv -civ ORC -race GIANT_WILD_BOAR -caste FEMALE
+
+AddPullToCiv -civ ORC -race SHAGGY_MUMAK -caste MALE
+AddPullToCiv -civ ORC -race SHAGGY_MUMAK -caste FEMALE
+AddPullToCiv -civ ORC -race STEPPE_AUROCHS -caste MALE
+AddPullToCiv -civ ORC -race STEPPE_AUROCHS -caste FEMALE
+
+AddMinionToCiv -civ ORC -race TAIGA_SABRECAT -caste FEMALE
+AddMinionToCiv -civ ORC -race TAIGA_SABRECAT -caste MALE
+AddMinionToCiv -civ ORC -race SQUIG -caste GROWLER
+AddMinionToCiv -civ ORC -race SHAGGY_MUMAK -caste MALE
+AddMinionToCiv -civ ORC -race SHAGGY_MUMAK -caste FEMALE
+
+AddPetToCiv -civ SUCCUBUS -race NAHASH -caste MALE
+AddPetToCiv -civ SUCCUBUS -race NAHASH -caste FEMALE
+AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
+AddPetToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
+AddPetToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
+AddPetToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
+AddPetToCiv -civ SUCCUBUS -race IMP_FIRE -caste DEFAULT
+AddPetToCiv -civ SUCCUBUS -race IMP_FIRE -caste DEFAULT
+AddPetToCiv -civ SUCCUBUS -race TENTACLE_MONSTER -caste MALE
+AddPetToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
+AddPetToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
+AddPetToCiv -civ SUCCUBUS -race BRUTE_DECAY -caste DEFAULT
+
+AddMinionToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
+AddMinionToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
+AddMinionToCiv -civ SUCCUBUS -race TENTACLE_MONSTER -caste MALE
+AddMinionToCiv -civ SUCCUBUS -race ORTHUS -caste MALE
+AddMinionToCiv -civ SUCCUBUS -race ORTHUS -caste FEMALE
+AddMinionToCiv -civ SUCCUBUS -race BRUTE_DECAY -caste DEFAULT
+
+AddMountToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
+AddMountToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
+
+AddPackToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
+AddPackToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
+AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste MALE
+AddPackToCiv -civ SUCCUBUS -race FROG_DEMON -caste FEMALE
+
+AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste MALE
+AddPullToCiv -civ SUCCUBUS -race NIGHTMARE -caste FEMALE
+
+AddPetToCiv -civ MOUNTAIN -race TESB_PET_ROCK -caste GRANITE
+
+#################### THE EARTH STRIKES BACK! ####################
+:lua print(' ')
+#tesb-job-monitor#living .002 -gem .005
+tesb-weather -creature TESB_AWAKENED_STORM -weather rain
+tesb-add-pets -race TESB_PET_ROCK -entity MOUNTAIN -sort
+#modtools/reaction-trigger#reactionName TESB_DECONSTRUCT_TRIBUTE -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+#modtools/reaction-trigger#reactionName TESB_DECONSTRUCT_ALTAR -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+#modtools/reaction-trigger#reactionName TESB_DECONSTRUCT_ALTAR_FLUX -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+#modtools/reaction-trigger#reactionName TESB_DECONSTRUCT_ALTAR_IGNEOUS_EXT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+#modtools/reaction-trigger#reactionName TESB_DECONSTRUCT_ALTAR_IGNEOUS_INT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+#modtools/reaction-trigger#reactionName TESB_DECONSTRUCT_ALTAR_METAMORPHIC -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+#modtools/reaction-trigger#reactionName TESB_DECONSTRUCT_ALTAR_ROCK_SALT -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+#modtools/reaction-trigger#reactionName TESB_DECONSTRUCT_ALTAR_SEDIMENTARY -command [ modtools/anonymous-script "dfhack.buildings.deconstruct(df.building.find(tonumber(args[1])))" \\BUILDING_ID ]
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_ANDESITE -syndrome "andesite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_ANDESITE2 -syndrome "andesite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_BASALT -syndrome "basalt favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_BASALT2 -syndrome "basalt favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_CHALK -syndrome "chalk favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_CHALK2 -syndrome "chalk favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_CHERT -syndrome "chert favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_CHERT2 -syndrome "chert favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_CLAYSTONE -syndrome "claystone favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_CLAYSTONE2 -syndrome "claystone favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_CONGLOMERATE -syndrome "conglomerate favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_CONGLOMERATE2 -syndrome "conglomerate favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_DACITE -syndrome "dacite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_DACITE2 -syndrome "dacite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_DIORITE -syndrome "diorite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_DIORITE2 -syndrome "diorite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_DOLOMITE -syndrome "dolomite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_DOLOMITE2 -syndrome "dolomite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_GABBRO -syndrome "gabbro favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_GABBRO2 -syndrome "gabbro favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_GNEISS -syndrome "gneiss favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_GNEISS2 -syndrome "gneiss favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_GRANITE -syndrome "granite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_GRANITE2 -syndrome "granite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_LIMESTONE -syndrome "limestone favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_LIMESTONE2 -syndrome "limestone favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_MARBLE -syndrome "marble favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_MARBLE2 -syndrome "marble favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_MUDSTONE -syndrome "mudstone favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_MUDSTONE2 -syndrome "mudstone favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_PHYLLITE -syndrome "phyllite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_PHYLLITE2 -syndrome "phyllite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_QUARTZITE -syndrome "quartzite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_QUARTZITE2 -syndrome "quartzite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_RHYOLITE -syndrome "rhyolite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_RHYOLITE2 -syndrome "rhyolite favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_ROCK_SALT -syndrome "rock salt favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_ROCK_SALT2 -syndrome "rock salt favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_SANDSTONE -syndrome "sandstone favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_SANDSTONE2 -syndrome "sandstone favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_SCHIST -syndrome "schist favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_SCHIST2 -syndrome "schist favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_SHALE -syndrome "shale favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_SHALE2 -syndrome "shale favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_SILTSTONE -syndrome "siltstone favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_SILTSTONE2 -syndrome "siltstone favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_SLATE -syndrome "slate favor"
+#modtools/reaction-trigger#reactionName TESB_TRIBUTE_TO_SLATE2 -syndrome "slate favor"
+
+:lua print(' ')
+:lua print('World Initialization Complete!')
+
 ### Succubus Dungeon ###
 
 succubus/hfspets -civ SUCCUBUS
 
-:lua print(' ')
-:lua print('World Initialization Complete!')
+###############################################################################
+#A- this is a tag corruption defeater line, there should be 5 of them below ###
+# Here all of them should be 80 '#' characters long.  If they are not, then ###
+# please fix them - Amostubal. ################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+###############################################################################
+
+
+
+
+
+
+
+
+
+
+
+
