@@ -1,6 +1,4 @@
 ### Succubus Dungeon ###
-
+base/roses-init
 succubus/hfspets -civ SUCCUBUS
-
-:lua print(' ')
 :lua print('World Initialization Complete!')

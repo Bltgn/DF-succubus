@@ -1,6 +1,9 @@
 Succubus Dungeon : Changelog
 ============================
 
+## 16.5
++ The magma well is working again.
+
 ## 16.4
 + Added graphics child and undead frog demons sprites.
 + Fixed stuttering for sites with many underground creatures.
