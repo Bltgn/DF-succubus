@@ -347,7 +347,7 @@ modtools/reaction-trigger -reactionName ALPHABET_Y -command [ building/subtype-c
 modtools/reaction-trigger -reactionName ALPHABET_Z -command [ building/subtype-change -building \\BUILDING_ID -type ALPHABET_Z ]
 
 ### Succubus Dungeon ###
-
+base/roses-init
 succubus/hfspets -civ SUCCUBUS
 :lua print(' ')
 :lua print('World Initialization Complete!')

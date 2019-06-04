@@ -1,9 +1,7 @@
 # succubus_script.txt
 # This file runs from the main onLoad.init, if you load an embark with Succubus.
 # A- if its an init command that involves Succubus add it in here.
-
-:lua print(' ')
-:lua print('From hell the Sucubbi writhe, twisted with lust and hatred...')
+:lua print('From hell the Succubi writhe, twisted with lust and hatred...')
 
 ################### world init and bugfixes ##################
 #:lua print(' ')
