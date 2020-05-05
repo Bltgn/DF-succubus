@@ -2198,6 +2198,7 @@ language_SUCCUBUS
 	[T_WORD:REASON:orimaraxouece]
 	[T_WORD:SQUAT:lirdice]
 	[T_WORD:FESTIVAL:geudmisoreargue]
+	[T_WORD:COMPANY:mossliare]
 
 FLOWERY = esu-
 NATURE = ale-

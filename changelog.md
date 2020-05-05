@@ -1,5 +1,18 @@
 Succubus Dungeon : Changelog
 ============================
+## 17.0
++ Updated to DF 0.47.04
++ The brick oven has been removed if you do not use Meph's tileset
++ Added a missing definition file for the Taffer tileset
+
++ Simplified the mod a bit
+- Removed "Heat up the forges".
+- Replaced the water drawing effect from the glass shaper with potash.
+- Removed stone slips.
+
++ Known issues
+- The summoning portal cause the screen to blink. If it stays dark, tab tab a few times.
+- The civ temporarly use Dwarven style forts because dark forts crash the game in world gen.
 
 ## 16.5
 + The magma well is working again.

@@ -107,30 +107,17 @@ end
 
 -- Spawns a regular creature at one unit position, caste is random
 function summonCreature(raceRawName, unitSource)
-	local createUnit = dfhack.script_environment("modtools/create-unit")
-	local entityName = df.historical_entity.find(df.global.ui.civ_id).entity_raw.code
-	local newUnitIndex, race, raceIndex
-
-	for i, v in ipairs(df.global.world.raws.creatures.all) do
-		if v.creature_id == raceRawName then
-			race = v
-			raceIndex = i
-			break
-		end
-	end
-
-	-- Moving the spawn a little further south
-	local location = {dfhack.units.getPosition(unitSource)}
+	local location = {dfhack.units.getPosition(unitSource)} -- Moving the spawn a little further south
 	location[2] = location[2] + 2
 
-	--Validation
-	if not race then
-		qerror("Summoning: Unknown race")
-	end
-	
-	newUnitIndex = createUnit.createUnitInCiv(raceIndex, createUnit.getRandomCasteId(race), df.global.ui.civ_id, df.global.ui.group_id, location, entityName)
-	createUnit.domesticate(newUnitIndex, df.global.ui.group_id)
-	createUnit.nameUnit(newUnitIndex, entityName)
+	dfhack.run_script(
+		'modtools/create-unit',
+		'-race', raceRawName,
+		'-domesticate',
+		'-setUnitToFort',
+		'-location', '[', location[1], location[2], location[3], ']',
+		'-name', df.historical_entity.find(df.global.ui.civ_id).entity_raw.code
+	)
 
 	announcement(raceRawName)
 end

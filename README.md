@@ -18,7 +18,7 @@ Features
 Manual Installation
 -------------------
 
-* Install Dwarf Fortress 44.12 with dfhack, using a starter pack is recommended.
+* Install Dwarf Fortress with dfhack, using a starter pack is recommended.
 * Extract the archive in your DF folder, preserving the folder structure.
 * Generate a new world and select a succubus civ to play.
 
@@ -33,9 +33,9 @@ Playing as Succubi
 ### Nobles and Positions
 
 Here are the administratives positions and their dwarven equivalents:
-* Dungeon matron and Spire matriarch -> Expedition Leader and Mayor
+* Matron and Matriarch -> Expedition Leader and Mayor
 * Keeper of Secrets -> Both Book Keeper and Manager, enables accounting and the job manager
-* Greedy Dealer -> Broker
+* Dealer -> Broker
 * Lady of Pain -> Militia commander, enables military orders
 * Battle Guide -> Militia captain
 * Enforcer and Oppressor -> Sheriff and Captain of the guard, enables justice
@@ -59,33 +59,6 @@ Here's an example:
 ```
 
 The game being designed for creatures that die in magma, movement and pathing may behave strangely. Succubi may walk into magma and their clothing will not be affected, but hauled items or wagons will burn. If you construct a magma moat, it is best to fill at 6 or 7 levels deep or else caravans will got for a dip.
-
-### Magma or water used in reactions
-
-Some jobs will claim to consume magma or water. This means that it will draw liquid from a tile located one z-level below or nest to the workshop.
-
-Those two configurations are valid:
-```
-+ = floor
-W = workshop
-~ = water/magma
-. = open space
-
-  Z       Z-1
-+++++    +++++ 
-+WWW+    +~~~+
-+WWW+    +~~~~ -> 3x3 workshop built over a reservoir.
-+WWW+    +~~~+
-+++++    +++++
-
-
-  Z       Z-1
-++++++   ++++++ 
-+WWW++   ++++++
-+WWW..   ++++~~ -> 3x3 workshop next to a channel filled with liquid
-+WWW++   ++++++
-++++++   ++++++
-```
 
 ### Construction materials
 
@@ -156,6 +129,7 @@ Known issues
 * Changing graphics in the Lazy Newb Pack deletes the mod. You'll have to reinstall it afterwards.
 * Upon reaching your site's edge, traders will "kidnap" their own pets, this has no consequenses to your fort.
 * If a frog demon refuses to work or join the military, wait 3 days of game time and try again.
+* The summoning portal may cause some flickering or turn the screen black, press tab a few times to recover.
 
 Contact
 -------
