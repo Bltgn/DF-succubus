@@ -96,17 +96,6 @@ item_succubus
 	[SIZE:130]
 	[MATERIAL_SIZE:1]
 
-[ITEM_TOOL:ITEM_TOOL_SLIP]
-	[NAME:slip:slips]
-	[DESCRIPTION:A writing material made of long, narrows strips of a solid material, bound together by thread. Each strip contains a single column of text. The slip can be folded or rolled on itself for storage.]
-	[VALUE:15]
-	[HARD_MAT]
-	[TOOL_USE:CONTAIN_WRITING]
-	[TILE:8]
-	[SIZE:110]
-	[MATERIAL_SIZE:1]
-	[NO_DEFAULT_JOB] // Uses one mat + 1 string to produce
-
 // Toys
 [ITEM_TOY:ITEM_TOY_HANDCUFFS]
 	[NAME:handcuff:handcuffs]
@@ -114,11 +103,9 @@ item_succubus
 
 [ITEM_TOY:ITEM_TOY_BLINDFOLD]
 	[NAME:blindfold:blindfolds]
-	[HARD_MAT]
 
 [ITEM_TOY:ITEM_TOY_FLOGGING_WHIP]
 	[NAME:flogging whip:flogging whips]
-	[HARD_MAT]
 
 // traps
 [ITEM_TRAPCOMP:ITEM_TRAPCOMP_BARBED_WIRE_ROLL]

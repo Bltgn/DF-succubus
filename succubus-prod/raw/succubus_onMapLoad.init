@@ -49,7 +49,6 @@ modtools/reaction-trigger -reactionName STOP_SINK -command [ map/flow-source -re
 
 # Activating magma features
 succubus/feature magmaWorkshops
-succubus/waterwell
 
 ################### playroom ###################
 #:lua print(' ')
