@@ -1,5 +1,9 @@
 Succubus Dungeon : Changelog
 ============================
+## 17.1
++ Simplified civ values a bit and added variations
++ Made the civ more likely to generate guilds
+
 ## 17.0
 + Updated to DF 0.47.04
 + The brick oven has been removed if you do not use Meph's tileset
