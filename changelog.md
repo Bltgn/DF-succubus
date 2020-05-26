@@ -4,7 +4,7 @@ Succubus Dungeon : Changelog
 + Simplified civ values a bit and added variations
 + Made the civ more likely to generate guilds
 + Fixed the magma well initialization.
-+ Abyssal Gravity users can now propel enemies, in addition to slamming to the ground.
++ Abyssal Gravity users now propel enemies away, in single and multi target versions.
 
 + New creature to summon: Lost Souls and Pain elementals! Inspired by Doom.
 - Old Pain Elementals has been renamed tormented souls.
