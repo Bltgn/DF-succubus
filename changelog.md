@@ -2,14 +2,14 @@ Succubus Dungeon : Changelog
 ============================
 ## 17.1
 + Simplified civ values a bit and added variations
-+ Made the civ more likely to generate guilds
-+ Fixed the magma well initialization.
-+ Abyssal Gravity users now propel enemies away, in single and multi target versions.
++ The civ is now more likely to generate guilds
++ Made the magma well initialization more reliable.
++ Abyssal Gravity users now propel enemies away, in a strong single and weaker multi target versions.
 
 + New creature to summon: Lost Souls and Pain elementals! Inspired by Doom.
 - Old Pain Elementals has been renamed tormented souls.
 - Lost Soul fly at good speed and bite the enemy.
-- Pain elementals are slow and bulky. They can spit both type of souls for more chaos.
+- Pain elementals are slow and bulky. They can spit both types of souls for more chaos.
 
 ## 17.0
 + Updated to DF 0.47.04
