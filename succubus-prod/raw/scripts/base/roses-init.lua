@@ -44,6 +44,7 @@ if not loaded then
 end
 ]]
 
+print('Rose init')
 
 -- Misc Tables (Populated by miscellanious things in game and scripts) These are persistant tables
 local persistTable = require 'persist-table'
